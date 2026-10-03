@@ -1,84 +1,84 @@
 {
- "essence": "essAdept",
- "stone": "stoneSloth",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Unhurried Finish",
-   "template": "sunderStrike",
-   "element": "slashing",
-   "role": "long",
-   "base": 34,
-   "cooldown": 90,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "guaranteedCrit": true,
-   "sunder": {
-    "amount": 0.15,
-    "duration": 8
-   },
-   "desc": "A slow, certain hook of the claws that deals 34 damage as a critical hit and leaves the target 15% easier to wound for 8 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Heavy Hang",
-   "template": "imbueStrike",
-   "element": "slashing",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 16,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "debuff": {
-    "key": "speedDown",
-    "chance": 1,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "spreadAfflictions": 112,
-   "desc": "A dragging claw strike that deals 12 damage, makes the target [Bleeding] for 2 damage a second for 5 seconds and leaves it [Leaden] for 6 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "All the Time Needed",
-   "kind": "active",
-   "category": "buff",
-   "template": "timeFreeze",
-   "element": "physical",
-   "freezeDuration": 3,
-   "freezeRadius": 160,
-   "aoeBand": "large",
-   "castTime": 1.5,
-   "cooldown": 90,
-   "desc": "After 1.5 seconds, holds every creature within 5 tiles in place for 3 seconds."
-  },
-  {
-   "name": "Eventually",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.25,
-    "duration": 4
-   },
-   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 25% for 4 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essAdept",
+  "stone": "stoneSloth",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Unhurried Finish",
+      "template": "sunderStrike",
+      "element": "slashing",
+      "role": "long",
+      "base": 34,
+      "cooldown": 90,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "guaranteedCrit": true,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 8
+      },
+      "desc": "A slow, certain hook of the claws that deals 34 damage as a critical hit and leaves the target 15% easier to wound for 8 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Heavy Hang",
+      "template": "imbueStrike",
+      "element": "slashing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "debuff": {
+        "key": "speedDown",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A dragging claw strike that deals 12 damage, stuns the target for 1.2 seconds, makes it [Bleeding] for 2 damage a second for 5 seconds and leaves it [Leaden] for 6 seconds.",
+      "stunOnHit": 1.2
+    },
+    {
+      "name": "All the Time Needed",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "physical",
+      "freezeDuration": 3,
+      "freezeRadius": 160,
+      "aoeBand": "large",
+      "castTime": 1.5,
+      "cooldown": 90,
+      "desc": "After 1.5 seconds, holds every creature within 5 tiles in place for 3 seconds."
+    },
+    {
+      "name": "Eventually",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.25,
+        "duration": 4
+      },
+      "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 25% for 4 seconds. Once every 10 seconds."
+    }
+  ]
 }
