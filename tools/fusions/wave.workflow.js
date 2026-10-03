@@ -7,7 +7,7 @@ export const meta = {
   ],
 }
 
-const REPO = 'REPO_ROOT'
+const REPO = '/home/user/Authored-abilities'
 const AUTHOR_SCHEMA = {
   type: 'object',
   properties: { pairsWritten: { type: 'number' }, validatorPasses: { type: 'boolean' }, notes: { type: 'string' } },

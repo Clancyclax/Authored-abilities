@@ -204,6 +204,6 @@ Nine reviewed runs rewrote between 5 and 50 fusions each. Avoid these from the s
 ## Files and process
 
 1. Write each pair to `tools/fusions/out/<essenceId>/<stoneId>.json` as `{"essence":"<essenceId>","stone":"<stoneId>","fusions":[#0,#1,#2,#3]}`.
-2. Run `node tools/fusions/validate.mjs <essenceId> <stoneId> <stoneId> ...` from the repo root, `REPO_ROOT`, listing **your** stones. It checks those files, including names already used by this essence's other files, and prints what fails.
+2. Run `node tools/fusions/validate.mjs <essenceId> <stoneId> <stoneId> ...` from the repo root, `/home/user/Authored-abilities`, listing **your** stones. It checks those files, including names already used by this essence's other files, and prints what fails.
 3. Fix and re-run until it reports `"failed": {}` and no duplicate names.
 4. Do not edit any other file in the repo.
