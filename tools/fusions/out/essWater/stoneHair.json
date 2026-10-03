@@ -1,0 +1,75 @@
+{
+ "essence": "essWater",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Drowning Tangle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "speed": 300,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a sodden mass of strands that deals 14 damage to the first enemy it meets, stuns it for 1 second and has a 50% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Strand Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "desc": "Whips a fan of wet strands 4 tiles ahead, dealing 7 damage to everything in it. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Kelp Curtain",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 25,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "desc": "Hangs a curtain of dripping strands 5 tiles long across the ground ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Knotting Current",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land knots a stack onto that enemy, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

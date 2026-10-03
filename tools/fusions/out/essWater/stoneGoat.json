@@ -1,0 +1,76 @@
+{
+ "essence": "essWater",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Ram the Rapids",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "knockback": 96,
+   "desc": "A ramming charge carried by a surge of water that deals 16 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Crag Spill",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "guaranteedCrit": true,
+   "desc": "Tips a torrent down from the heights onto a target up to 8 tiles away that deals 30 damage, hitting harder the further it travels, up to 2 times at full reach. It is always a critical hit."
+  },
+  {
+   "name": "Stand in the Spate",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "resist": {
+    "element": "water",
+    "amount": 0.15
+   },
+   "desc": "Your armour rises by 25% and your water resistance by 15% for 12 seconds."
+  },
+  {
+   "name": "Hold the Ledge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 12,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When your health falls below 40%, a film of water shields you for 15% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

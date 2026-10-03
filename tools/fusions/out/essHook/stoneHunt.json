@@ -1,0 +1,82 @@
+{
+ "essence": "essHook",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "End of the Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Throws a gaff at a fleeing enemy that deals 20 piercing damage. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Marking Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A quick gaff that deals 4 piercing damage and leaves the target 5% easier to wound for 3 seconds. Each hit has a 30% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Closing In",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "piercing",
+   "cooldown": 45,
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 25% for 12 seconds, and you move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Fresh Scent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your critical hit chance rises 20% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

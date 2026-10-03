@@ -1,0 +1,80 @@
+{
+ "essence": "essHook",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Pull to the Anvil",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 120,
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Hauls the target down onto a crushing blow that deals 32 blunt damage plus 5% of a boss's or elite's maximum health, leaving it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Flattening Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1.2,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Drags the target off its feet with a strike that deals 12 blunt damage, stuns it for 1.2 seconds and leaves it [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Nailed Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "blunt",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 80,
+   "aoeBand": "small",
+   "castTime": 0.3,
+   "desc": "Holds every creature within 2.5 tiles in place for 2 seconds."
+  },
+  {
+   "name": "Ringing Strike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "essence": "essHook",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Ride-By Snag",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "chargeTo": 224,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "You charge up to 7 tiles at an enemy and snag it in passing, dealing 13 damage, rising to 1.5 times that at full reach."
+  },
+  {
+   "name": "Wheeling Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Wheels the haft around you, dealing 4 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Tireless Stride",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 25,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "desc": "Restores 4 stamina a second for 6 seconds."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

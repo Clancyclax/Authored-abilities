@@ -1,0 +1,88 @@
+{
+ "essence": "essHook",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Darkened Sky",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 14,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "castTime": 0.3,
+   "spreadAfflictions": 112,
+   "desc": "Looses 5 barbs at once in a wide spread, each dealing 4 piercing damage. Your afflictions on the enemies they hit spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Stripping Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargesMax": 5,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A gnawing strike that deals 7 damage and leaves the target 10% easier to wound for 4 seconds and [Bleeding] for 1 damage a second for 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Loosed Plague",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 2,
+   "summonDuration": 8,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "desc": "Releases a swarm for 8 seconds that strikes enemies within 4 tiles for 2 damage every second."
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -24,7 +24,7 @@
     "slowPct": 0.15,
     "duration": 1.5
    },
-   "desc": "TBD"
+   "desc": "Grips the target and stings it 2 times, a strike that deals 4 damage, leaves it [Poisoned] for 1 damage a second for 4 seconds and slows it 15% for 1.5 seconds."
   },
   {
    "kind": "active",
@@ -40,6 +40,7 @@
    "rangeBand": "melee",
    "stackMult": 1.5,
    "requiresTargetBelow": 0.25,
+   "executeLadder": true,
    "debuff": {
     "key": "pinned",
     "chance": 1,
@@ -47,25 +48,19 @@
     "stacks": 1,
     "potency": 1
    },
-   "desc": "TBD"
+   "desc": "Seizes a target at or below 25% health; the blow deals 22 damage plus 1.5 times the remaining damage of every affliction on it, which is used up, and leaves it [Pinned] for 2 seconds."
   },
   {
-   "name": "Collared",
+   "name": "Plucked Clean",
    "kind": "active",
-   "category": "defensive",
-   "template": "tauntPull",
+   "category": "restore",
+   "template": "cleanse",
    "element": "poison",
-   "tauntRadius": 160,
-   "tauntMax": 3,
-   "tauntDuration": 4,
-   "threatMult": 1,
-   "cooldown": 18,
-   "escort": {
-    "dmg": 4,
-    "interval": 1.4,
-    "duration": 6
-   },
-   "desc": "TBD"
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Plucks up to 2 conditions off you and restores 10 health."
   },
   {
    "name": "Steady Fingers",
@@ -78,7 +73,7 @@
     "crit"
    ],
    "rerollCooldown": 10,
-   "desc": "TBD"
+   "desc": "Once every 10 seconds, a strike that did not crit is rolled again, and the second roll stands."
   }
  ]
 }

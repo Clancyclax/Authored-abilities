@@ -1,0 +1,84 @@
+{
+ "essence": "essWater",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A stampede of water rolls out from you, dealing 28 damage to every enemy within 3.5 tiles. If it hits, every ally near you deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Spattered Cud",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a wad of wet cud that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Damped] for 4 seconds."
+  },
+  {
+   "name": "Drinking Circle",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 30,
+   "healAmount": 12,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Restores 12 health to you and every ally within 4 tiles, and more the faster you cast. Its healing rises 10% for each ally near you (max 40%)."
+  },
+  {
+   "name": "Chewing the Cud",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "regenPerSec": 0.5,
+   "desc": "Each time you regain health, you restore 4 stamina. Once every 5 seconds. You regenerate 0.5 health a second."
+  }
+ ]
+}

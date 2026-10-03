@@ -1,0 +1,71 @@
+{
+ "essence": "essHook",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Arcane Grapnel",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Hurls a grapnel of raw arcana that deals 30 arcane damage to the first enemy it meets and bursts for 80% of that to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Snatched Incantation",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "arcane",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 18,
+   "range": 192,
+   "lockSeconds": 3,
+   "knockback": 64,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Silences one enemy within 6 tiles for 3 seconds and deals 8 arcane damage, taking its next action away and knocking it back 2 tiles."
+  },
+  {
+   "name": "Reeled-In Ley",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 25,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "desc": "Restores 4 mana a second for 6 seconds."
+  },
+  {
+   "name": "Gathered Charge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you spend mana, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

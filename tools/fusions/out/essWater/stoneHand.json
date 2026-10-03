@@ -1,0 +1,78 @@
+{
+ "essence": "essWater",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Hold Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1,
+   "executeLadder": false,
+   "requiresTargetBelow": 0.3,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Usable only on an enemy at or below 30% health. A grip of water holds the target under and deals 20 damage, using up every affliction you have on it, adding their remaining damage and dealing 60% more damage for each."
+  },
+  {
+   "name": "Grasping Splash",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.15,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a grasping splash of water that deals 4 damage to the first enemy it meets, with a 15% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Cupped Palms",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 20,
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 6 seconds."
+  },
+  {
+   "name": "Wringing Grip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "Each time you inflict a condition, you regain 3 health a second for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "essence": "essHook",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Crossed Lines",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxTargets": 2,
+   "confuseDuration": 4,
+   "duration": 4,
+   "confuseDamageFrac": 1,
+   "confuseDamagePct": 1,
+   "spreadAfflictions": 112,
+   "desc": "Snags up to 2 enemies within 4 tiles, deals 10 damage to each and turns them against each other for 4 seconds. Your afflictions on them spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Light Fingers",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Throws a snatching barb that needs one of your afflictions on the target and uses it up, dealing 8 damage. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Lure in the Reeds",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds, and you move 15% faster while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Bait Taken",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying one of your afflictions, your damage rises by 10%."
+  }
+ ]
+}

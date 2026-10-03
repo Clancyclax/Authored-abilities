@@ -1,0 +1,87 @@
+{
+ "essence": "essWater",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Wading Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A kick carried by river water that deals 8 damage and leaves the target 10% easier to wound for 4 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%). Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Boot Full of River",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a cone of cold, muddy water 4 tiles ahead, dealing 4 damage to everything in it, with a 35% chance to leave each target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Cool Footbath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Mile by Mile",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "Every 6 tiles you cover, you regain 3 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

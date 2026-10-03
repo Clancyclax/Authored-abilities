@@ -1,93 +1,86 @@
 {
- "essence": "essEye",
- "stone": "stoneLocust",
- "fusions": [
-  {
-   "name": "Cloud Burst",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "nature",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 128,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "marked",
-    "chance": 0.2,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Looses a cloud of locusts in a cone 4 tiles ahead, dealing 3 damage to everything in it, with a 20% chance per hit to leave it [Marked] for 6 seconds."
-  },
-  {
-   "name": "Stripped Bare",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "nature",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "leech": 0.2,
-   "debuff": {
-    "key": "marked",
-    "chance": 1,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "spreadAfflictions": 112,
-   "speed": 360,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Sends a locust that deals 12 damage to the first enemy it meets, heals you for 20% of the damage dealt and leaves the target [Marked] for 8 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "Gnawing Cloud",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "nature",
-   "cooldown": 45,
-   "summonKind": "swarm",
-   "summonDmg": 3,
-   "summonDuration": 12,
-   "summonInterval": 1,
-   "summonRange": 192,
-   "castTime": 0.5,
-   "lifeOnKill": 4,
-   "debuff": {
-    "key": "marked",
-    "chance": 0.3,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Takes 0.5 seconds to loose a cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second, each bite with a 30% chance to leave the target [Marked] for 5 seconds. Each kill you make while it is out restores 4 health."
-  },
-  {
-   "name": "Strip the Field",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "nature",
-   "stackShape": "boon",
-   "stackBuild": "kill",
-   "stackPay": "power",
-   "stackCap": 6,
-   "stackDecay": 10,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 0.6,
-   "stackIcon": "stackFortune",
-   "desc": "Every kill builds a stack on you, up to 6. When you reach 6, they all spend at once: you deal 4% more damage per stack (22% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneLocust",
+  "fusions": [
+    {
+      "name": "Thousand Facets",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "nature",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "enervate",
+        "chance": 0.25,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses a cloud of locusts in a cone 4 tiles ahead, dealing 3 damage to everything in it, with a 25% chance per hit to leave it [Enervated] for 4 seconds, its health, mana and stamina recovering slower."
+    },
+    {
+      "name": "Stripped Bare",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "nature",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "leech": 0.2,
+      "spreadAfflictions": 112,
+      "speed": 360,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Sends a locust that deals 12 damage to the first enemy it meets and heals you for 20% of the damage dealt. Your afflictions on the target spread to every enemy within 3.5 tiles."
+    },
+    {
+      "name": "Gnawing Cloud",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "nature",
+      "cooldown": 45,
+      "summonKind": "swarm",
+      "summonDmg": 3,
+      "summonDuration": 12,
+      "summonInterval": 1,
+      "summonRange": 192,
+      "castTime": 0.5,
+      "lifeOnKill": 4,
+      "debuff": {
+        "key": "marked",
+        "chance": 0.3,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Takes 0.5 seconds to loose a cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second, each bite with a 30% chance to leave the target [Marked] for 5 seconds. Each kill you make while it is out restores 4 health."
+    },
+    {
+      "name": "Picked Clean",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "nature",
+      "stackShape": "boon",
+      "stackBuild": "kill",
+      "stackPay": "power",
+      "stackCap": 6,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.6,
+      "stackIcon": "stackFortune",
+      "desc": "Every kill builds a stack on you, up to 6. When you reach 6, they all spend at once: you deal 4% more damage per stack (22% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
 }

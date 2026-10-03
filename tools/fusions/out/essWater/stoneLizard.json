@@ -1,0 +1,76 @@
+{
+ "essence": "essWater",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Basker's Ambush",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "castTime": 1,
+   "guaranteedCrit": true,
+   "desc": "Takes 1 second of stillness, then spits a cold jet that deals 30 damage to the first enemy it meets. It is always a critical hit."
+  },
+  {
+   "name": "Chill Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Spits cold water at a target up to 6 tiles away that deals 7 damage, hitting harder the further it travels, up to 1.5 times at full reach, with a 30% chance to leave it [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Shed and Regrow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Riverbank Sunning",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "resist": {
+    "element": "water",
+    "amount": 0.08
+   },
+   "desc": "During the day, your damage rises by 10%. You carry 8% water resistance."
+  }
+ ]
+}

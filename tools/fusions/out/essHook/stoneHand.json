@@ -1,0 +1,76 @@
+{
+ "essence": "essHook",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Wring It Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "requiresTargetBelow": 0.3,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Grips a faltering enemy and wrenches, dealing 20 damage and leaving it [Bleeding] for 2 damage a second for 3 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Grasping Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Throws a grasping barb that deals 7 damage, with a 30% chance to leave the target [Pinned] for 1.5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Come Hither",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Tightening Grip",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy at low health, your damage rises by 12%."
+  }
+ ]
+}

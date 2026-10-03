@@ -1,0 +1,76 @@
+{
+ "essence": "essHook",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Tongue Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 0.9,
+   "chargesMax": 4,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Lashes out at an enemy up to 6 tiles away, dealing 6 water damage, rising to 1.5 times that at full reach, and slowing it by 25% for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Sudden Splashdown",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 192,
+   "desc": "You spring up to 6 tiles onto an enemy, then deal 12 water damage to every enemy within 2 tiles of you."
+  },
+  {
+   "name": "Snapped Fly",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "self",
+   "critChance": 0.05,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 14 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Squat Lookout",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "aquatic",
+   "familiarCreatureName": "Bullfrog",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded bullfrog sits with you, lashing its tongue at enemies within 4 tiles for 3 damage every 1.2 seconds and leaving them [Poisoned] for 1 damage a second for 3 seconds."
+  }
+ ]
+}

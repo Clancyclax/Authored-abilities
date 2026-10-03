@@ -1,84 +1,78 @@
 {
- "essence": "essEye",
- "stone": "stoneHeidel",
- "fusions": [
-  {
-   "name": "Run Them Down",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.0,
-   "spammable": true,
-   "chargesMax": 4,
-   "scaleOn": "targetStamina",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "speed": 400,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Fires a bolt that deals 8 damage to the first enemy it meets. Its damage rises 5% for every tenth of its health the target still has (max 25%). Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Stamping Ground",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "marked",
-    "chance": 0.25,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Every enemy within 3 tiles takes 3 damage, each with a 25% chance to be [Marked] for 6 seconds."
-  },
-  {
-   "name": "Second Wind",
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "element": "physical",
-   "cooldown": 30,
-   "resource": "stamina",
-   "overTime": true,
-   "restorePerSec": 4,
-   "restoreDuration": 8,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 4
-   },
-   "desc": "Restores 4 stamina a second for 8 seconds. Your movement speed rises 15% for 4 seconds after you use it."
-  },
-  {
-   "name": "Long Wind",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "trigger": {
-    "on": "emptyStamina",
-    "cooldown": 30
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 4,
-    "duration": 4
-   },
-   "desc": "When your stamina runs out, you restore 4 stamina a second for 4 seconds. Once every 30 seconds."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneHeidel",
+  "fusions": [
+    {
+      "name": "Tells of Fatigue",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "chargesMax": 4,
+      "scaleOn": "targetStamina",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "speed": 400,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Fires a bolt that deals 8 damage to the first enemy it meets. Its damage rises 5% for every tenth of its health the target still has (max 25%). Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Point the Way",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "role": "long",
+      "element": "physical",
+      "base": 26,
+      "cooldown": 90,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 6
+      },
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 15
+      },
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "desc": "A blow that deals 26 damage and leaves the target 12% easier to wound for 6 seconds. When it lands, your allies deal 20% more damage for 15 seconds."
+    },
+    {
+      "name": "Tireless Watch",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 45,
+      "buffStat": "regenStamina",
+      "buffAmount": 0.4,
+      "buffDuration": 15,
+      "desc": "Increases your stamina recovery by 40% for 15 seconds."
+    },
+    {
+      "name": "Never Winded",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.2,
+        "strikes": 1
+      },
+      "desc": "Each time your stamina is full, your crit chance rises by 20% for your next strike. Once every 12 seconds."
+    }
+  ]
 }

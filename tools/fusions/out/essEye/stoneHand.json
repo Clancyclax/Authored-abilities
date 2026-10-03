@@ -1,72 +1,78 @@
 {
- "essence": "essEye",
- "stone": "stoneHand",
- "fusions": [
-  {
-   "name": "Closed Grip",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "physical",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.0,
-   "spammable": true,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "consumeAffliction": true,
-   "bindOnHit": {
-    "slowPct": 0.3,
-    "duration": 2
-   },
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "desc": "A seizing strike that deals 8 damage, leaves the target [Bleeding] for 1 damage a second for 4 seconds and moves it 30% slower for 2 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
-  },
-  {
-   "name": "Final Grip",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 12,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "maxMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "desc": "A steady strike that deals 16 damage to a target at or below 25% health, up to 1.5 times that at its maximum reach of 6 tiles."
-  },
-  {
-   "name": "Steady Hands",
-   "kind": "active",
-   "category": "buff",
-   "template": "selfCritBuff",
-   "element": "physical",
-   "cooldown": 45,
-   "critChanceBonus": 0.25,
-   "buffDuration": 12,
-   "desc": "Increases your critical hit chance by 25% for 12 seconds."
-  },
-  {
-   "name": "Sure Aim",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "physical",
-   "buffKind": "crit",
-   "amount": 0.1,
-   "armorBonus": 0.05,
-   "desc": "Your critical strike chance rises by 10%. Your armour also rises by 5%."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneHand",
+  "fusions": [
+    {
+      "name": "Seizing Hold",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "consumeAffliction": true,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "desc": "A seizing strike that deals 8 damage, leaves the target [Bleeding] for 1 damage a second for 4 seconds and [Pinned] for 1.5 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up.",
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 1.5,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Steadied Aim",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 12,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "requiresTargetBelow": 0.25,
+      "desc": "A steady strike that deals 16 damage to a target at or below 25% health, up to 1.5 times that at its maximum reach of 6 tiles."
+    },
+    {
+      "name": "Caught Mid-Air",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 20,
+      "shieldStrikes": 3,
+      "shieldDuration": 6,
+      "desc": "Raises a barrier for 6 seconds that absorbs 20 damage."
+    },
+    {
+      "name": "Practised Fingers",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveBuff",
+      "element": "physical",
+      "buffKind": "crit",
+      "amount": 0.1,
+      "desc": "Your critical strike chance rises by 10%."
+    }
+  ]
 }

@@ -1,0 +1,74 @@
+{
+ "essence": "essHook",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Shove Off the Ledge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A butting blow that deals 18 rock damage and leaves the target 15% easier to wound for 6 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Ledge Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.07,
+   "scaleCap": 0.35,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "A reaching jab from sure footing at an enemy up to 5 tiles away that deals 4 damage, rising to 1.5 times that at full reach. Its damage rises 7% for every 10% of your health already gone (max 35%)."
+  },
+  {
+   "name": "Unshiftable Footing",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "rock",
+   "cooldown": 60,
+   "immunityDuration": 4,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Last Foothold",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 30%, a shield worth 25% of your maximum health closes over you for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

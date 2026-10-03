@@ -1,0 +1,72 @@
+{
+ "essence": "essWater",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Eddy",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "wallKind": "pull",
+   "wallLength": 128,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 0.8,
+   "desc": "Twists a hooked eddy 4 tiles long ahead of you for 4 seconds that drags every enemy near it inward, dealing 10 damage and stunning each for 0.8 seconds."
+  },
+  {
+   "name": "Set the Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A barbed strike with a wet edge deals 7 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Reel In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "water",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Hooks up to 4 enemies within 6 tiles and pulls them onto you for 5 seconds. A current of water fights beside you for 8 seconds, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Caught Fast",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying one of your conditions, your damage rises by 10%."
+  }
+ ]
+}

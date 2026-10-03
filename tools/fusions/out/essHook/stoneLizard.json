@@ -1,0 +1,70 @@
+{
+ "essence": "essHook",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Sunlit Ambush",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "guaranteedCrit": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A strike from total stillness that deals 28 damage, is always a critical hit and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Tail Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "desc": "Whips the haft around you, dealing 7 damage to every enemy within 2 tiles, at a cost of 4% of your maximum health."
+  },
+  {
+   "name": "Drop the Tail",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 3 conditions from you, and you move 25% faster for 4 seconds after."
+  },
+  {
+   "name": "Warm Stones",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "In daylight, your damage rises by 10%."
+  }
+ ]
+}

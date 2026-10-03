@@ -1,78 +1,78 @@
 {
- "essence": "essEye",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "name": "Focused Beam",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "long",
-   "base": 36,
-   "cooldown": 100,
-   "ignoreResist": true,
-   "scaleOn": "targetAfflictions",
-   "scalePer": 0.08,
-   "scaleCap": 0.4,
-   "speed": 480,
-   "radius": 6,
-   "reachUnits": 416,
-   "rangeBand": "long",
-   "desc": "Fires a beam that deals 36 damage to the first enemy it meets, ignoring its resistances. Its damage rises 8% for each affliction on the target (max 40%)."
-  },
-  {
-   "name": "Fanned Lens",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "arcane",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.0,
-   "spammable": true,
-   "chargesMax": 4,
-   "range": 160,
-   "coneAngle": 0.5,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "marked",
-    "chance": 0.3,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Fans a narrow beam 5 tiles ahead that deals 8 damage to everything in it, with a 30% chance per hit to leave it [Marked] for 6 seconds. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Held Focus",
-   "kind": "active",
-   "category": "buff",
-   "template": "selfPower",
-   "element": "arcane",
-   "cooldown": 60,
-   "powerMult": 1.3,
-   "buffDuration": 15,
-   "desc": "Increases your damage by 30% for 15 seconds."
-  },
-  {
-   "name": "Charged Lens",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.25,
-    "charges": 1
-   },
-   "desc": "Each time you spend mana, your next spell deals 25% more damage. Once every 8 seconds."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "name": "Focused Beam",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "long",
+      "base": 36,
+      "cooldown": 100,
+      "ignoreResist": true,
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "speed": 480,
+      "radius": 6,
+      "reachUnits": 416,
+      "rangeBand": "long",
+      "desc": "Fires a beam that deals 36 damage to the first enemy it meets, ignoring its resistances. Its damage rises 8% for each affliction on the target (max 40%)."
+    },
+    {
+      "name": "Fanned Glare",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "arcane",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "chargesMax": 4,
+      "range": 160,
+      "coneAngle": 0.5,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "expose",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fans a narrow beam 5 tiles ahead that deals 8 damage to everything in it, with a 30% chance per hit to leave it [Exposed] for 6 seconds, its elemental resistances lowered. Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Narrowed Mind",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "arcane",
+      "cooldown": 60,
+      "powerMult": 1.3,
+      "buffDuration": 15,
+      "desc": "Increases your damage by 30% for 15 seconds."
+    },
+    {
+      "name": "Gathered Glow",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 1
+      },
+      "desc": "Each time you spend mana, your next spell deals 25% more damage. Once every 8 seconds."
+    }
+  ]
 }

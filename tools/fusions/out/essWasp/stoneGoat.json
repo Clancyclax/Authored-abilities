@@ -22,7 +22,7 @@
    "scaleOn": "selfDepletion",
    "scalePer": 0.08,
    "scaleCap": 0.4,
-   "desc": "TBD"
+   "desc": "A headbutt that deals 5 damage and leaves the target 5% easier to wound for 4 seconds. Its damage rises 8% for every tenth of your health already gone, up to 40%."
   },
   {
    "kind": "active",
@@ -44,20 +44,25 @@
     "stacks": 1,
     "potency": 1
    },
-   "desc": "TBD"
+   "desc": "Bucks every enemy within 2.5 tiles in a blow that deals 12 damage and knocks them back 3 tiles, with a 50% chance to leave each one [Poisoned] for 5 seconds."
   },
   {
    "name": "Stand the Crag",
    "kind": "active",
    "category": "defensive",
-   "template": "reflectWard",
+   "template": "tauntPull",
    "element": "rock",
-   "reflectKind": "damage",
-   "reflectFrac": 0.3,
-   "buffDuration": 8,
-   "cooldown": 30,
-   "armorBonus": 0.15,
-   "desc": "TBD"
+   "tauntRadius": 128,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "threatMult": 1,
+   "cooldown": 20,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Draws up to 4 enemies within 4 tiles onto you for 5 seconds. An escort of stingers fights beside you, striking for 4 every 1.4 seconds for 8 seconds."
   },
   {
    "name": "Won't Be Moved",
@@ -77,7 +82,7 @@
     "duration": 5
    },
    "armorBonus": 0.06,
-   "desc": "TBD"
+   "desc": "When anything but fire hurts you, your physical damage rises 25% for 5 seconds. Once every 8 seconds. Your armour rises by 6%."
   }
  ]
 }

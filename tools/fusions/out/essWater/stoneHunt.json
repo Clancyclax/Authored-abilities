@@ -1,0 +1,80 @@
+{
+ "essence": "essWater",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Closing Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on an enemy at or below 25% health. Sends a closing tide at a target up to 7 tiles away that deals 24 damage, hitting harder the further it travels, up to 1.4 times at full reach."
+  },
+  {
+   "name": "Scent in the Current",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a thread of water that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Silent Wading",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Your critical hit chance rises by 20% for 12 seconds, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Smell of the Kill",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises by 30% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

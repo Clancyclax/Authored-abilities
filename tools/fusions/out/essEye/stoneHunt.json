@@ -1,84 +1,89 @@
 {
- "essence": "essEye",
- "stone": "stoneHunt",
- "fusions": [
-  {
-   "name": "Quarry's End",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 20,
-   "cooldown": 14,
-   "range": 90,
-   "reachUnits": 90,
-   "rangeBand": "melee",
-   "stackMult": 1.6,
-   "requiresTargetBelow": 0.3,
-   "executeLadder": true,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "A strike that deals 20 damage to a target at or below 30% health, consuming every affliction on it and adding 1.6 times their remaining damage to the blow. You move 20% faster for 4 seconds afterwards."
-  },
-  {
-   "name": "Quarry Glint",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "debuff": {
-    "key": "marked",
-    "chance": 0.5,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "scaleOn": "targetAfflictions",
-   "scalePer": 0.08,
-   "scaleCap": 0.4,
-   "speed": 420,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Sends a bolt into the first enemy it meets, dealing 4 damage with a 50% chance to leave it [Marked] for 8 seconds. Its damage rises 8% for each affliction on the target (max 40%)."
-  },
-  {
-   "name": "Closing Leap",
-   "kind": "active",
-   "category": "movement",
-   "template": "teleport",
-   "element": "physical",
-   "cooldown": 20,
-   "teleportRange": 192,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Steps you instantly to a point up to 6 tiles away. Using it increases your movement speed by 20% for 4 seconds."
-  },
-  {
-   "name": "Closing In",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "physical",
-   "stackShape": "mark",
-   "stackBuild": "hit",
-   "stackPay": "haste",
-   "stackCap": 6,
-   "stackDecay": 4,
-   "stackSpend": "full",
-   "stackOn": "enemy",
-   "stackScale": 1,
-   "stackIcon": "stackEye",
-   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. When it reaches 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneHunt",
+  "fusions": [
+    {
+      "name": "Trophy Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "role": "long",
+      "element": "piercing",
+      "base": 32,
+      "cooldown": 100,
+      "guaranteedCrit": true,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 10,
+        "stacks": 1,
+        "potency": 1
+      },
+      "speed": 440,
+      "radius": 6,
+      "reachUnits": 384,
+      "rangeBand": "long",
+      "desc": "Fires a shot that deals 32 damage to the first enemy it meets. It always lands as a critical hit and leaves the target [Marked] for 10 seconds."
+    },
+    {
+      "name": "Blood Trail",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "spammable": true,
+      "debuff": {
+        "key": "marked",
+        "chance": 0.5,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "desc": "A cut that deals 7 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 50% chance to leave it [Marked] for 8 seconds. Holds 4 charges; each use spends one, and each kill restores one.",
+      "chargesMax": 4,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "range": 86
+    },
+    {
+      "name": "Run to Ground",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "physical",
+      "cooldown": 30,
+      "speedMult": 1.35,
+      "buffDuration": 8,
+      "dodgeBonus": 0.06,
+      "desc": "Increases your movement speed by 35% for 8 seconds. You have +6% dodge chance for it."
+    },
+    {
+      "name": "Closing In",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "haste",
+      "stackCap": 6,
+      "stackDecay": 4,
+      "stackSpend": "full",
+      "stackOn": "enemy",
+      "stackScale": 1,
+      "stackIcon": "stackEye",
+      "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. When it reaches 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+    }
+  ]
 }

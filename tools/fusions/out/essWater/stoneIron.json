@@ -1,0 +1,82 @@
+{
+ "essence": "essWater",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Rust Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Corroding"
+   },
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Your weapon runs with rusting water for one strike that deals 30 damage, ignores the target's armour, leaves it [Corroding] for 3 damage a second for 5 seconds and leaves it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Corroding Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. Sprays a cone of rust-laden water 4 tiles ahead, dealing 7 damage to everything in it, with a 40% chance to leave each [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Quenched Bulwark",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "desc": "Raises a barrier of quenched iron that absorbs the next 24 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Cold Ballast",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "armor",
+   "amount": 0.1,
+   "resist": {
+    "element": "water",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 10%, and you carry 10% water resistance."
+  }
+ ]
+}

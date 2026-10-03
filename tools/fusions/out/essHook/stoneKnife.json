@@ -1,0 +1,70 @@
+{
+ "essence": "essHook",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Gutting Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "consumeAfflictionsPer": 0.6,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A gutting stroke that deals 16 slashing damage and uses up every affliction you have on the target, with 60% more damage for each one used up. The wound is left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Up the Sleeve",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Flicks a hidden barb that deals 4 piercing damage, with 50% more critical chance against an enemy that has not yet been wounded."
+  },
+  {
+   "name": "Whetted Point",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "castTime": 0.3,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Between the Rings",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "piercing",
+   "pierceElement": "piercing",
+   "armorIgnore": 0.12,
+   "desc": "Your piercing attacks ignore 12% of the target's armour."
+  }
+ ]
+}

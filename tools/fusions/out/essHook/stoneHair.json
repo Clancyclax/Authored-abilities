@@ -1,0 +1,73 @@
+{
+ "essence": "essHook",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Strand Net",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a net of fine strands ahead of you, dealing 9 damage to everything in a cone 4 tiles long, with a 40% chance per hit to leave the target [Pinned] for 2 seconds. Your afflictions on them spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Strangling Filament",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "range": 192,
+   "maxMult": 1.4,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Whips a weighted filament at an enemy up to 6 tiles away, dealing 22 damage, rising to 1.4 times that at full reach. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Prickling Mane",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Strand by Strand",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. The next ability you use spends them all: you deal 5% more damage per stack (38% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

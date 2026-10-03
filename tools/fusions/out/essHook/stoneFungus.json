@@ -1,0 +1,77 @@
+{
+ "essence": "essHook",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore-Laced Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A barbed jab that deals 4 poison damage and leaves spores in the wound: [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Uproot the Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAfflictionsPer": 0.6,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "desc": "Tears the growth out of the target, dealing 18 poison damage and using up every affliction on it, adding 1.2 times their remaining damage and 60% more damage for each one used up."
+  },
+  {
+   "name": "Hyphal Mat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "poison",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spreads a mat of threads 5 tiles long for 6 seconds that drags nearby enemies toward it and leaves those it catches [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Gets Into Everything",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "regenPerSec": 0.5,
+   "desc": "Your afflictions take hold on an enemy that is immune to them, and you regenerate 0.5 health a second."
+  }
+ ]
+}

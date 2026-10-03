@@ -1,0 +1,76 @@
+{
+ "essence": "essWater",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Nudging Bump",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 3
+   },
+   "desc": "A slow shove of water that deals 4 damage and leaves the target 8% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Wallowing Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rolls over in a slow heave of water that deals 28 damage to every enemy within 3.5 tiles. Every hit is a critical hit and has a 60% chance to leave the target [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Drift Off",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Unbothered",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (56% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

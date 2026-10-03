@@ -1,0 +1,76 @@
+{
+ "essence": "essHook",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Harpoon Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "range": 288,
+   "maxMult": 1.5,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Fires a barbed harpoon at an enemy up to 9 tiles away that deals 30 piercing damage, rising to 1.5 times that at full reach, ignoring armour."
+  },
+  {
+   "name": "Barbshot Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a spray of barbs that deals 4 piercing damage to everything in a cone 5 tiles long. Each hit has a 25% chance to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Long Barrel",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 80,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "castTime": 0.5,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Primed Chamber",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.35,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next ability deals 35% more damage. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essHook",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Branching Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 3,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 1.0
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 1.0,
+   "desc": "Throws a two-pronged barb that deals 7 piercing damage to the first enemy it meets and splits to 1 more within 3 tiles for the full amount. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Two-Tined Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Strikes 2 times, one with each prong, each strike dealing 10 piercing damage and leaving the target [Bleeding] for 1 damage a second for 3 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Pronged Palisade",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Plants a row of prongs 5 tiles long that blocks enemies for 6 seconds. Anything that strikes it moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Other Prong",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

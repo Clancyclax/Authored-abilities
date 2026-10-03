@@ -1,83 +1,91 @@
 {
- "essence": "essEye",
- "stone": "stoneHair",
- "fusions": [
-  {
-   "name": "Tangled Spread",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "physical",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "spreadAfflictions": 128,
-   "bindOnHit": {
-    "slowPct": 0.25,
-    "duration": 3
-   },
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "desc": "A lashing strand that deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles. Anything struck moves 25% slower for 3 seconds."
-  },
-  {
-   "name": "Fine Net",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "pinned",
-    "chance": 0.25,
-    "duration": 2,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Every enemy within 3 tiles takes 3 damage, each with a 25% chance to be [Pinned] for 2 seconds."
-  },
-  {
-   "name": "Barbed Strands",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "physical",
-   "cooldown": 30,
-   "thornsFrac": 0.5,
-   "buffDuration": 8,
-   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
-  },
-  {
-   "name": "Pulled Tight",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "physical",
-   "stackShape": "mark",
-   "stackBuild": "hit",
-   "stackPay": "burst",
-   "stackCap": 5,
-   "stackDecay": 4,
-   "stackSpend": "crit",
-   "stackOn": "enemy",
-   "stackScale": 1,
-   "stackIcon": "stackEye",
-   "desc": "Every hit you land ties a strand to that enemy, up to 5. Your next critical hit on it spends them all: the strands pull tight and strike it for 34% of your weapon damage per strand (170% at full). Unfed, a strand fades every 4 seconds."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneHair",
+  "fusions": [
+    {
+      "name": "Tangled Spread",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "spreadAfflictions": 128,
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 3
+      },
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "desc": "A lashing strand that deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles. Anything struck moves 25% slower for 3 seconds."
+    },
+    {
+      "name": "Fine Net",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Every enemy within 3 tiles takes 3 damage, each with a 25% chance to be [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Lash Tripwire",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "physical",
+      "cooldown": 90,
+      "summonKind": "trap",
+      "summonDuration": 30,
+      "summonDmg": 14,
+      "summonRange": 64,
+      "summonInterval": 0,
+      "summonCharges": 1,
+      "summonBlast": 64,
+      "summonArmDelay": 0.5,
+      "trapDelivery": "spawned",
+      "castTime": 0.5,
+      "desc": "Takes 0.5 seconds to set a tripwire that stays armed for 30 seconds. The first enemy to come within 2 tiles of it sets it off, and it deals 14 damage to every enemy within 2 tiles."
+    },
+    {
+      "name": "Pulled Tight",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "burst",
+      "stackCap": 5,
+      "stackDecay": 4,
+      "stackSpend": "crit",
+      "stackOn": "enemy",
+      "stackScale": 1,
+      "stackIcon": "stackEye",
+      "desc": "Every hit you land ties a strand to that enemy, up to 5. Your next critical hit on it spends them all: the strands pull tight and strike it for 34% of your weapon damage per strand (170% at full). Unfed, a strand fades every 4 seconds."
+    }
+  ]
 }

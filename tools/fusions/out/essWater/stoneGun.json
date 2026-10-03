@@ -1,0 +1,72 @@
+{
+ "essence": "essWater",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Burst Main",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "speed": 560,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "knockback": 112,
+   "desc": "Fires a high-pressure slug of water that deals 16 damage to the first enemy it meets and knocks it back 3.5 tiles."
+  },
+  {
+   "name": "Hydrostatic Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "ignoreArmor": true,
+   "desc": "Fires a crushing round of compressed water at a target up to 10 tiles away that deals 32 damage, ignores its armour and hits harder the further it travels, up to 1.5 times at full reach."
+  },
+  {
+   "name": "Recoil Jet",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 8,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Fires a jet of water behind you that throws you 4 tiles forward, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Building Pressure",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

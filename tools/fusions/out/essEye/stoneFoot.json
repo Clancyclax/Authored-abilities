@@ -1,82 +1,81 @@
 {
- "essence": "essEye",
- "stone": "stoneFoot",
- "fusions": [
-  {
-   "name": "Long Road",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "ignoreArmor": true,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Hurls a bolt that deals 30 damage to the first enemy it meets, ignoring its armour. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
-  },
-  {
-   "name": "Heel Nick",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.9,
-   "spammable": true,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "debuff": {
-    "key": "marked",
-    "chance": 0.25,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "bindOnHit": {
-    "slowPct": 0.15,
-    "duration": 2
-   },
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "desc": "A cut that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance to leave it [Marked] for 6 seconds. Anything struck moves 15% slower for 2 seconds."
-  },
-  {
-   "name": "Quiet Tread",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "physical",
-   "cooldown": 30,
-   "stealthDuration": 8,
-   "stealthAlpha": 0.35,
-   "aggroMult": 0.4,
-   "stealthSpeedPct": 25,
-   "stealthScope": "self",
-   "desc": "Veils you for 8 seconds and you move 25% faster while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Long Stride",
-   "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
-   "element": "physical",
-   "moveSpeedPct": 0.12,
-   "desc": "Your movement speed is permanently increased by 12%."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneFoot",
+  "fusions": [
+    {
+      "name": "Milestone Sighting",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "ignoreArmor": true,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Hurls a bolt that deals 30 damage to the first enemy it meets, ignoring its armour. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+    },
+    {
+      "name": "Heel Nick",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 1,
+        "stacks": 1,
+        "potency": 1
+      },
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "desc": "A cut at the heel that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance to leave it [Pinned] for 1 second."
+    },
+    {
+      "name": "Already There",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "physical",
+      "cooldown": 18,
+      "teleportRange": 224,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 4
+      },
+      "desc": "Steps you instantly to a point up to 7 tiles away. Using it increases your movement speed by 15% for 4 seconds."
+    },
+    {
+      "name": "Roadside Vigil",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "onRoads",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "cooldownReduction": 0.05,
+      "desc": "On paved ground, you deal 12% more damage. Your other abilities' cooldowns are 5% shorter."
+    }
+  ]
 }

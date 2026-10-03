@@ -1,0 +1,83 @@
+{
+ "essence": "essHook",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Leaping Latch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "You leap up to 7 tiles onto the target and latch on with a strike that deals 12 damage, leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Host to Host",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a barb that deals 4 damage to the first enemy it meets, then jumps to 2 more within 3 tiles for 50% of that."
+  },
+  {
+   "name": "Bound Within Reach",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 10,
+   "teleportRange": 256,
+   "dodgeBonus": 0.1,
+   "desc": "Springs you to a point up to 8 tiles away, with +10% dodge chance."
+  },
+  {
+   "name": "Latched Feeder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "When you strike an enemy, you heal for 15% of the damage you deal for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

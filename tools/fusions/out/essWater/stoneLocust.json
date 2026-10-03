@@ -1,0 +1,80 @@
+{
+ "essence": "essWater",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Plague Rain",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 8,
+   "cooldown": 90,
+   "volleyCount": 6,
+   "volleySpread": 0.5,
+   "speed": 340,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "ignoreResist": true,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Gorging"
+   },
+   "desc": "Looses a cloud of 6 driving raindrops, spread apart, each dealing 8 damage and ignoring resistances. 15% of the damage it deals comes back to you as healing over the following 6 seconds."
+  },
+  {
+   "name": "Strip the Stalk",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A gnawing jet of water deals 18 damage to the first enemy it meets, using up every affliction you have on it and dealing 60% more damage for each."
+  },
+  {
+   "name": "Devouring Squall",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a stinging squall for 10 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Stripped Fields",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 3,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 3. At 3 they all spend at once: you are healed for 5% of your maximum health per stack (15% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

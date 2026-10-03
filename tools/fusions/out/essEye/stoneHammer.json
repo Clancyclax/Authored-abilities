@@ -1,78 +1,85 @@
 {
- "essence": "essEye",
- "stone": "stoneHammer",
- "fusions": [
-  {
-   "name": "Levelling Pulse",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "long",
-   "base": 30,
-   "cooldown": 120,
-   "range": 128,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreArmor": true,
-   "debuff": {
-    "key": "pinned",
-    "chance": 0.5,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Brings a flattening pulse down on every enemy within 4 tiles, dealing 30 damage and ignoring armour, with a 50% chance to leave each [Pinned] for 3 seconds."
-  },
-  {
-   "name": "Tack Down",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.1,
-   "spammable": true,
-   "chargesMax": 4,
-   "sunder": {
-    "amount": 0.08,
-    "duration": 4
-   },
-   "debuff": {
-    "key": "pinned",
-    "chance": 0.2,
-    "duration": 2,
-    "stacks": 1,
-    "potency": 1
-   },
-   "range": 80,
-   "reachUnits": 80,
-   "rangeBand": "melee",
-   "desc": "A tapping blow that deals 8 damage and leaves the target 8% easier to wound for 4 seconds, with a 20% chance to leave it [Pinned] for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Plumb Line",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "blunt",
-   "cooldown": 60,
-   "buffStat": "critDamage",
-   "buffAmount": 0.4,
-   "buffDuration": 15,
-   "desc": "Increases your critical damage by 40% for 15 seconds."
-  },
-  {
-   "name": "Flat Out",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
-   "element": "blunt",
-   "pierceElement": "blunt",
-   "armorIgnore": 0.2,
-   "cooldownReduction": 0.04,
-   "desc": "Your blunt attacks ignore 20% of the target's armour, and your other abilities come round 4% sooner."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneHammer",
+  "fusions": [
+    {
+      "name": "Levelling Pulse",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 120,
+      "range": 128,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.5,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Brings a flattening pulse down on every enemy within 4 tiles, dealing 30 damage and ignoring armour, with a 50% chance to leave each [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Nail Set",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1.1,
+      "spammable": true,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.2,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "range": 80,
+      "reachUnits": 80,
+      "rangeBand": "melee",
+      "desc": "A tapping blow that deals 8 damage and leaves the target 8% easier to wound for 4 seconds, with a 20% chance to leave it [Pinned] for 2 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up.",
+      "consumeAffliction": true
+    },
+    {
+      "name": "Square and Plumb",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "blunt",
+      "cooldown": 60,
+      "buffStat": "critDamage",
+      "buffAmount": 0.4,
+      "buffDuration": 15,
+      "desc": "Increases your critical damage by 40% for 15 seconds."
+    },
+    {
+      "name": "Struck True",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "isTriggered": true,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 4
+      },
+      "desc": "When you land a critical hit, your physical damage rises by 30% for 4 seconds. Once every 10 seconds."
+    }
+  ]
 }

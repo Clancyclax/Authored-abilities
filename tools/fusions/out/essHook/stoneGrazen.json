@@ -1,0 +1,80 @@
+{
+ "essence": "essHook",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Crook the Stray",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "A sweeping crook blow that deals 26 damage and leaves the target [Bleeding] for 2 damage a second for 3 seconds. On a hit, every ally in your party deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Drive the Flock",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives the haft in a wide sweep ahead of you, dealing 10 damage to everything in a cone 4 tiles long and knocking it back 3 tiles. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Into the Fold",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Thick Winter Coat",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "maxHp",
+   "amount": 0.1,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 10%, and you regenerate 0.5 health a second."
+  }
+ ]
+}
