@@ -1,0 +1,80 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Slash in Passing",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Slashes as you pass, dealing 8 damage and leaving the target [Bleeding] for 2 damage a second for 4 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Hidden Spur",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "desc": "Drives a hidden spur into the target, dealing 28 damage, always as a critical hit, and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Low in the Saddle",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 40,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Increases your dodge chance by 20% for 12 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Edge Keeps the Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "When you land a critical hit, you regain 10 stamina. Once every 5 seconds."
+  }
+ ]
+}

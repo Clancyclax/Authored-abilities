@@ -1,0 +1,69 @@
+{
+ "essence": "essShield",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Vaulting Bash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 10,
+   "range": 86,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Leaps up to 7 tiles onto the target and brings your shield down on it, dealing 13 damage and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Skyfall Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "Springs impossibly high and lands shield-first, dealing 30 damage to every enemy within 3.5 tiles. A boss or elite hit also loses 5% of its maximum health."
+  },
+  {
+   "name": "Hop to Cover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "Hops 3 tiles and raises your guard as you land, increasing your armour by 20% for 10 seconds and freeing you of every root, freeze and slow."
+  },
+  {
+   "name": "Landing Guard",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

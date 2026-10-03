@@ -1,0 +1,80 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Line Played Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 260,
+   "maxMult": 1.8,
+   "rangeBand": "long",
+   "reachUnits": 260,
+   "requiresTargetBelow": 0.25,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "A barbed cast that deals 18 damage, hitting harder the further it travels, up to 1.8 times at maximum range. It only strikes a target at or below 25% health. Anything struck moves 20% slower for 3 seconds."
+  },
+  {
+   "name": "Snagging Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.1,
+    "duration": 2
+   },
+   "desc": "A barbed strike that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 3 seconds. Anything struck moves 10% slower for 2 seconds."
+  },
+  {
+   "name": "Deep-Calling Song",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "resonating",
+   "cooldown": 24,
+   "tauntRadius": 290,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A song that pulls up to 5 enemies within 9 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Barbs Set Deep",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land sets a barb in that enemy, up to 5. Your next critical hit on it tears them all out, striking it for 34% of your weapon damage per barb (170% at full). Unfed, a barb falls out every 4 seconds."
+  }
+ ]
+}

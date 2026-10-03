@@ -1,0 +1,91 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Splitting Flight",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "spreadAfflictions": 128,
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.7
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.7,
+   "desc": "Sends a knot of locusts into the first enemy it meets, dealing 12 damage, then splits off to 1 more enemy within 3.5 tiles for 70% of the damage. Your afflictions on the first target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Two Ways at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "volleyCount": 2,
+   "volleySpread": 0.7,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 8,
+   "range": 240,
+   "reachUnits": 240,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 2 swarms that part wide from each other, each one dealing 7 damage, with a 30% chance per hit to leave the target [Poisoned] for 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Divided Host",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "poison",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "You split the swarm among every ally within 5 tiles: they strike 15% harder for 10 seconds and fight with 1 more power."
+  },
+  {
+   "name": "Branching Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "desc": "When you strike an enemy, a locust splits away to the nearest enemy within 5 tiles, dealing 5 damage. Once every 4 seconds."
+  }
+ ]
+}

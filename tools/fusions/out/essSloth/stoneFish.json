@@ -1,0 +1,80 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Silver Needles",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a shoal of 3 silver needles, spread apart, and each one deals 3 damage. Each hit has a 25% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Played Out",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Casts a line at an enemy within 7 tiles that is at or below 25% health and deals 26 damage, up to 1.5 times as much at the end of its reach."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Let It Slide",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to slide off and land on whoever laid it instead."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Slick Hide",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 5. At 5 they all spend at once: you gain a shield of 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Sown in the Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "A bite that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Rot Takes the Laggard",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A bite that deals 18 damage, leaves the target 10% easier to wound for 5 seconds and uses up every affliction you have on it, dealing 60% more damage for each."
+  },
+  {
+   "name": "Marked Territory",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 60,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 20,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to mark a patch of ground beside you for 20 seconds. Spores rise from it onto an enemy within 4 tiles for 3 damage every 1.5 seconds."
+  },
+  {
+   "name": "Carcass Bloom",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 20,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 20 seconds."
+  }
+ ]
+}

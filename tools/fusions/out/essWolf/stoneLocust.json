@@ -1,0 +1,74 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping the Field",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "desc": "Bites into everything close, which deals 7 damage to every enemy within 3 tiles. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Descending Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "leech": 0.15,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "speed": 420,
+   "radius": 8,
+   "desc": "A bounding leap that deals 28 damage to the first enemy it meets and 80% of that to every enemy within 3.5 tiles of it. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Famine Follows",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a devouring cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Stripped to the Bone",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Kicked-Up Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks venom across the 3 tiles ahead of you, dealing 13 poison damage to everything in the cone and knocking each target back 2.5 tiles, with a 50% chance to leave each [Fatigued] for 8 seconds."
+  },
+  {
+   "name": "Ran to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 95,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "scaleOn": "targetStamina",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A bite that deals 28 poison damage plus 5% of a boss's or elite's maximum health and leaves the target 20% easier to wound for 8 seconds. Its damage rises 10% for every tenth of health the target still has, up to 40%."
+  },
+  {
+   "name": "Warmed by the Ride",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.25,
+   "buffDuration": 15,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "castTime": 0.5,
+   "cooldown": 60,
+   "desc": "Increases your damage by 25% for 15 seconds, and your movement speed rises 15% for 5 seconds."
+  },
+  {
+   "name": "Cold Blood Keeps Going",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you restore 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

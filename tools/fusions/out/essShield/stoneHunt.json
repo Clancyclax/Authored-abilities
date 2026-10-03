@@ -1,0 +1,69 @@
+{
+ "essence": "essShield",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Bring to Bay",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 10,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws your shield at the first enemy in its path, dealing 11 damage, stunning it for 1 second and leaving it [Marked] for 10 seconds."
+  },
+  {
+   "name": "Flush the Covert",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "Sweeps your shield through a cone 3 tiles ahead, dealing 8 damage to everything in it. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Stalking Cover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you behind your shield for 5 seconds: enemies notice you far later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Quarry at Bay",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "armorBonus": 0.05,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions. Your armour is 5% higher."
+  }
+ ]
+}

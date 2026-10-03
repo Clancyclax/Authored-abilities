@@ -1,0 +1,88 @@
+{
+ "essence": "essIron",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Bristle Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 iron bristles at once, spread apart, each dealing 3 damage, with a 20% chance to leave the target [Sundered] for 3 seconds."
+  },
+  {
+   "name": "Garrotte Wire",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.2,
+   "executeLadder": false,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Loops an iron wire around a wounded enemy's throat, dealing 22 damage, consuming every affliction on it to add 1.2 times their remaining damage, and leaving it [Pinned] for 2 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Wire Snarl",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "slashing",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Strings a 5-tile tangle of iron wire ahead of you for 8 seconds. It blocks enemies, and anything that touches it moves 25% slower for 2 seconds."
+  },
+  {
+   "name": "Thousandfold Weave",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "slashing",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 8%, and you have 12% slashing resistance."
+  }
+ ]
+}

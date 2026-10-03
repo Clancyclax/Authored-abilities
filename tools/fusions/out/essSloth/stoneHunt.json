@@ -1,0 +1,81 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cold Trail",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A thrown jab at an enemy within 7 tiles that deals 5 damage and slows it by 15% for 2 seconds. Each hit has a 30% chance to leave it [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Ground",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Strikes a target at or below 25% health for 20 damage and uses up every affliction on it, adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Lying in Wait",
+   "template": "statBuff",
+   "element": "piercing",
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "You hold still and watch: your critical chance rises by 20% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "name": "Scent Taken",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

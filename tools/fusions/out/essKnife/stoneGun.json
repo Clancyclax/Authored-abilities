@@ -1,0 +1,69 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Spring-Loaded Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "speed": 700,
+   "radius": 5,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "desc": "Fires the blade from its hilt, dealing 8 damage to the first enemy it meets. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Shrapnel Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "desc": "Blasts a cone of steel splinters 4 tiles ahead, dealing 12 damage to everything in it and knocking it back 2.5 tiles."
+  },
+  {
+   "name": "Quick Draw",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "desc": "Increases your attack speed by 30% for 10 seconds."
+  },
+  {
+   "name": "Chambered",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you kill an enemy, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

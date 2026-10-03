@@ -1,0 +1,80 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Bowled Over",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "You crash into everything close, which deals 12 damage to every enemy within 3 tiles and stuns them for 1 second. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "name": "Big Game Brought Low",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "A full-weight blow that deals 32 damage and leaves the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Full Weight Forward",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "blunt",
+   "cooldown": 50,
+   "powerMult": 1.25,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Packmate",
+   "desc": "Increases your damage by 25% for 15 seconds. A packmate fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Level Ground",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

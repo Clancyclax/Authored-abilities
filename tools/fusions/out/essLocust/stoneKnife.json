@@ -1,0 +1,80 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Edge in the Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A hidden cut that deals 18 damage, consuming every affliction you have on the target and dealing 60% more for each one, then leaves it [Bleeding] for 3 damage a second for 3 seconds."
+  },
+  {
+   "name": "Thousand Small Cuts",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "isAoe": true,
+   "speed": 420,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 razor-winged locusts at once, spread apart, each one dealing 3 damage, with a 25% chance per hit to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Lost in the Swarm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "slashing",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds, moving 10% faster. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Unseen Mandibles",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "slashing",
+   "buffKind": "crit",
+   "amount": 0.1,
+   "desc": "Your critical hit chance rises by 10%."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essShip",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Breakers Thunder In",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "isAoe": true,
+   "range": 128,
+   "coneAngle": 0.9,
+   "aoeBand": "large",
+   "guaranteedCrit": true,
+   "desc": "Drives a thundering wall of surf in a cone 4 tiles long ahead of you that deals 30 damage to everything in it, and every hit is a critical hit."
+  },
+  {
+   "name": "Lance at Full Tilt",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "chargesMax": 3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Throws a lance at an enemy up to 7 tiles away; it deals 7 damage, rising to 2 times that at full range, and 5% more for every 100 paces you have run since you last used it (max +30%). It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Riding the Breakers",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "water",
+   "cooldown": 30,
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "desc": "Your movement speed rises by 35% for 8 seconds, and you start it 2 tiles from where you stood."
+  },
+  {
+   "name": "Hoofbeat Headway",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "After you cover enough ground, your physical damage rises by 25% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

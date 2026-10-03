@@ -1,0 +1,74 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scatter the Herd",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "knockback": 96,
+   "range": 110,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "desc": "Charges into the pack, dealing 11 damage to every enemy within 3.5 tiles and knocking each back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cull the Weakest",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A blow that deals 18 damage and leaves the target 10% easier to wound for 5 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Downwind Among Them",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "nature",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.4,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 0,
+   "stealthScope": "party",
+   "cooldown": 40,
+   "desc": "Veils you and your nearby allies for 8 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Graze Between Kills",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 stamina a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

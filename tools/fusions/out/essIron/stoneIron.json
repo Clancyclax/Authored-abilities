@@ -1,0 +1,68 @@
+{
+ "essence": "essIron",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Unwarded Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "ignoreResist": true,
+   "desc": "Strikes an enemy with cold iron, dealing 30 damage that ignores its resistances and making it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Unbending Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "frost",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "Thrusts forward with your whole cold weight, dealing 11 damage to every enemy in a cone 3 tiles ahead and leaving each [Stunned] for 1 second."
+  },
+  {
+   "name": "Spurn the Spell",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.3,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, 30% of the elemental damage you take is sent back to whoever dealt it."
+  },
+  {
+   "name": "Cold to the Core",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.12,
+   "resist": {
+    "element": "arcane",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 12%, and you have 10% arcane resistance."
+  }
+ ]
+}

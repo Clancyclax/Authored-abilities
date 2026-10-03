@@ -1,0 +1,93 @@
+{
+ "essence": "essShark",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Long-Ridden Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "desc": "A weapon strike that deals 28 damage, plus 5% of a boss's or elite's maximum health, and leaves the target [Bleeding] for 3 damage a second for 5 seconds. You move 20% faster for 5 seconds after."
+  },
+  {
+   "name": "Dust-Cloud Trample",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Tramples through a short cone ahead of you, dealing 6 damage to everything in it, with a 30% chance to leave each one [Slowed] for 3 seconds. Its damage rises 8% for each affliction already on the target (max 32%). Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Warm From the Ride",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "healOnUse": 6,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "Restores 4 stamina a second for 6 seconds and 6 health at once. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Never Unsaddled",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, you regain 2 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

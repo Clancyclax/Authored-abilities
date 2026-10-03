@@ -1,0 +1,71 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Lowing Note",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 8,
+   "rangeBand": "long",
+   "reachUnits": 360,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a low note that deals 5 damage to the first enemy it meets. Each hit has a 25% chance of [Damped] for 4 seconds."
+  },
+  {
+   "name": "Rallying Bellow",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Bellows to the pod, dealing 28 damage to every enemy within 4 tiles of you. When it hits, every ally strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Huddle Warmth",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 14,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "rangeBand": "melee",
+   "reachUnits": 128,
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Warm Flank",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "life",
+   "cooldownReduction": 0.06,
+   "regenPerSec": 0.5,
+   "desc": "Every ability you have comes round 6% sooner. It also regenerates 0.5 health a second, permanently."
+  }
+ ]
+}

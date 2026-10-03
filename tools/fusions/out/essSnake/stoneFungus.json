@@ -1,0 +1,79 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Puffball Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A cloud of venom spores bursts around you: every enemy within 3.5 tiles takes 26 poison damage, ignoring resistance, and becomes [Poisoned] for 3 damage a second for 8 seconds."
+  },
+  {
+   "name": "Fruiting Body",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Usable only on an enemy at or below 25% health, a threshold that rises with each rank. The bite deals 18 poison damage, consumes every affliction on the target, adding 1.5 times their remaining damage, and leaves it [Poisoned] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Mound of Spores",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 96,
+   "castTime": 0.8,
+   "cooldown": 40,
+   "desc": "Raises a spore mound where you stand for 12 seconds. It puffs venom at an enemy within 3 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Under the Skin",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. Your poison resistance rises by 8%."
+  }
+ ]
+}

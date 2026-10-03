@@ -1,0 +1,70 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Crushing Coil",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "hpCostPct": 0.05,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Costs 5% of your maximum health. Your coils crush the target for 9 blunt damage and leave it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Dropped From the Rafters",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 110,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You drop your full weight onto the ground: every enemy within 3 tiles takes 30 blunt damage and becomes [Poisoned] for 3 damage a second for 5 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Weighted Coils",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "buffStat": "dmg_blunt",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Increases your blunt damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Final Squeeze",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "blunt",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies at low health, you deal 12% more damage."
+  }
+ ]
+}

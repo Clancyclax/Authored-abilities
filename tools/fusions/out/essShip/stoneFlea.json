@@ -1,0 +1,76 @@
+{
+ "essence": "essShip",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Boarding Leap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 224,
+   "desc": "You leap up to 7 tiles onto an enemy and strike it, which deals 13 damage and leaves it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Long Hop Pike",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2.2,
+   "chargesMax": 4,
+   "desc": "Hurls a boarding pike in a long hop at an enemy up to 8 tiles away; it deals 7 damage, rising to 2.2 times that at full range. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Rail to Rail",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 12,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you instantly to a point up to 7 tiles away, and you move 20% faster for 4 seconds after."
+  },
+  {
+   "name": "Next Deck Over",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "dodgeBonus": 0.04,
+   "desc": "When you kill an enemy, you regain 15 stamina for the next jump. Once every 6 seconds. Your dodge chance is 4% higher."
+  }
+ ]
+}

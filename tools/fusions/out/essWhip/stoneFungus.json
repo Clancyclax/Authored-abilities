@@ -1,0 +1,91 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore-Shaking Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "speed": 460,
+   "radius": 7,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Lashes the first enemy in reach for 10 damage and leaves it [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Ring of Puffballs",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cracks the lash in a circle that deals 26 damage to every enemy within 3.5 tiles, ignoring their resistances, with a 50% chance to leave each [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Spore Line Laid",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "nature",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallThickness": 26,
+   "wallDuration": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lays a 6-tile line of spores along the lash's path for 8 seconds. Enemies who cross it are [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Fruiting Welts",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1.0,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land plants a stack on the enemy, up to 5. When it reaches 5, they all burst at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

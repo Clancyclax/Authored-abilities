@@ -1,0 +1,79 @@
+{
+ "essence": "essWind",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Unseen Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on a target at or below 25% health: an unseen edge of wind deals 24 damage and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Shaving Breeze",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shaves a narrow fan of razor air 3 tiles ahead, which deals 4 damage to everything in it. Each hit has a 25% chance to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Edge Turned Out",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your critical damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Next Throat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your critical hit chance rises by 25% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

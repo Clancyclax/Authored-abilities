@@ -1,0 +1,78 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Languid Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 1.0,
+   "range": 80,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays tainted water across the 2.5 tiles ahead of you, dealing 4 water damage to everything in the cone, with a 40% chance to leave each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Drifts Into the Blood",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "strikes": 1,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 12,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A slow bite that deals 25 poison damage, ignoring resistance, and leaves the target [Poisoned] for 3 damage a second for 12 seconds."
+  },
+  {
+   "name": "Unhurried Under Pressure",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Reduces the damage you take by 20% for 12 seconds."
+  },
+  {
+   "name": "Slow to Feel It",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 12,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you heal 5% of your maximum health per stack (30% at full). Unfed, the stacks fade."
+  }
+ ]
+}

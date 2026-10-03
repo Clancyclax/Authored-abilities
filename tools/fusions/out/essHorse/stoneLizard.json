@@ -1,0 +1,72 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "From a Dead Stop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 3
+   },
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bursts from stillness into a kick that deals 8 damage and leaves the target 10% easier to wound for 3 seconds, with a 30% chance to leave it [Hindered] for 4 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Sudden Uncoiling",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Uncoils into a bucking spin, dealing 30 damage to every enemy within 3.5 tiles, always as a critical hit."
+  },
+  {
+   "name": "Shed and Bolt",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "earth",
+   "cooldown": 60,
+   "immunityDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 5
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 30% for 5 seconds after you use it."
+  },
+  {
+   "name": "Sun-Warmed Flanks",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "During the day, your damage rises by 12%."
+  }
+ ]
+}

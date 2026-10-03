@@ -1,0 +1,68 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Strike From Stillness",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A strike that deals 30 damage, always lands as a critical hit, and leaves the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tail Lash",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "desc": "A lash of the tail that deals 4 damage and leaves the target 5% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Sun-Warmed Muscle",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Increases your attack speed by 30% for 10 seconds."
+  },
+  {
+   "name": "Daylight Stalker",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "By day, you deal 10% more damage."
+  }
+ ]
+}

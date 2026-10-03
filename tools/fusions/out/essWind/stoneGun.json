@@ -1,0 +1,67 @@
+{
+ "essence": "essWind",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Pressure Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "long",
+   "base": 34,
+   "cooldown": 80,
+   "speed": 700,
+   "radius": 6,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "desc": "Fires a compressed round of air into the first enemy in its path, dealing 34 damage plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Report Shockwave",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "A sudden crack of air bursts from you, dealing 11 damage to every enemy within 3 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Extended Bore",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "wind",
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 30% further."
+  },
+  {
+   "name": "Primed Chamber",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next ability deals 25% more damage. Once every 10 seconds."
+  }
+ ]
+}

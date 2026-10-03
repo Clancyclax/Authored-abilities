@@ -1,0 +1,74 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Spurred Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Wheels the lash around you, dealing 7 damage to every enemy within 3.5 tiles. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Riding Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "desc": "You charge up to 6 tiles to an enemy and lash it for 14 damage, leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Tireless Rein",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When your stamina runs out, you restore 20 stamina. Once every 20 seconds."
+  }
+ ]
+}

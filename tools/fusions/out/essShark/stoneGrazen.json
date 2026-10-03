@@ -1,0 +1,78 @@
+{
+ "essence": "essShark",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Straggler Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A darting nip at a target up to 6 tiles away that deals 7 damage, rising to 1.3 times that at full reach, and leaves it [Bleeding] for 1 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Circling the Herd",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.06,
+   "scaleCap": 0.24,
+   "desc": "A full circuit that deals 26 damage to every enemy within 3.5 tiles of you. When it hits, you and your allies deal 20% more damage for 15 seconds. Its damage rises 6% for each ally near you (max 24%)."
+  },
+  {
+   "name": "Warm Flank",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "healScope": "party",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 10
+   },
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you and your allies for 8 seconds. A circling escort fights beside you for 10 seconds, striking for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Well-Fed Calm",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cylinder Turns",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 0.9,
+   "chargesMax": 5,
+   "speed": 520,
+   "radius": 5,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Fires a shot that deals 8 damage to the first enemy it meets. It holds 5 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fanned Hammer",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "volleyCount": 4,
+   "volleySpread": 0.45,
+   "speed": 480,
+   "radius": 5,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "isAoe": true,
+   "stunOnHit": 0.8,
+   "desc": "Fires 4 shots in a spread, each dealing 10 damage and stunning what it hits for 0.8 seconds."
+  },
+  {
+   "name": "Spin the Chamber",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "castTime": 0,
+   "cooldown": 60,
+   "desc": "Increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "name": "Next Chamber Loaded",
+   "element": "piercing",
+   "desc": "When you go too long without a critical hit, your critical hit chance rises by 20% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

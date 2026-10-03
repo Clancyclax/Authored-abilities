@@ -1,0 +1,84 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lingering Cloud",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 12,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Gnawed"
+   },
+   "spreadAfflictions": 128,
+   "desc": "A cloud settles over every enemy within 3.5 tiles, dealing 10 damage and gnawing at each for 1 damage a second for 12 seconds. Your afflictions on them spread to enemies within 4 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Strip to the Stalk",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Sends a bite at the first enemy it meets, using up one of your afflictions on it to deal 8 damage. You heal for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "name": "Settling Plague",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "cooldown": 50,
+   "debuff": {
+    "key": "speedDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 0.5 seconds to loose a swarm for 15 seconds that bites an enemy within 5 tiles for 3 damage every 1.5 seconds. Each bite has a 30% chance to leave the target [Leaden] for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Gorge by Degrees",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land builds a stack on that enemy, up to 6. At 6 they all spend at once and you are healed for 4% of your maximum health per stack (24% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

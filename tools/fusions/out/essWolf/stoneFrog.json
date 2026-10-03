@@ -1,0 +1,85 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Out of the Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "speed": 420,
+   "radius": 8,
+   "desc": "You rush up to 6 tiles to the target first, then strike for 14 damage and leave it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Dusk Chorus",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A croaking howl fills a cone 4 tiles ahead of you, which deals 6 damage to everything caught in it, each with a 25% chance of [Hindered] for 4 seconds. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Spring From Cover",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 8,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A sudden spring that carries you 5 tiles forward. Your movement speed rises 20% for 3 seconds after you use it."
+  },
+  {
+   "name": "Coiled and Waiting",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

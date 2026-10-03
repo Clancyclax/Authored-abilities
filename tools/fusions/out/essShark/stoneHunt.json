@@ -1,0 +1,78 @@
+{
+ "essence": "essShark",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Closing Distance",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 500,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.2,
+   "desc": "Looses a bolt that deals 18 damage to the first enemy it meets and draws out every affliction you have on it, dealing 60% more damage for each one drawn. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Tracking Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A quick bite that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. You move 10% faster for 2 seconds after."
+  },
+  {
+   "name": "Quarry in Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 60,
+   "desc": "Increases your damage by 25% for 12 seconds, and your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Marked for the Chase",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land marks that enemy, up to 5. At 5 they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a mark fades every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Saddle Javelin",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "desc": "A javelin thrown from the saddle that deals 7 damage, rising to 1.5 times that at its full reach of 7 tiles. It holds 3 charges, and every kill you make gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Loosed at the Gallop",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Looses 3 arrows at once, spread apart, each dealing 3 damage. Your movement speed rises 10% for 2 seconds after you use it."
+  },
+  {
+   "name": "Long Rein",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "desc": "Increases your stamina recovery by 50% for 20 seconds."
+  },
+  {
+   "name": "Fresh Legs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When your stamina runs out, you regain 20 stamina. Once every 30 seconds."
+  }
+ ]
+}

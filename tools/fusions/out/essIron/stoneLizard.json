@@ -1,0 +1,76 @@
+{
+ "essence": "essIron",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpid Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "frost",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes an enemy with chilled iron, dealing 12 damage, [Poisoned] for 2 damage a second for 4 seconds, [Stunned] for 1 second and [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Chilled Spittle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "speed": 320,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Spits cold, metallic venom that deals 7 damage. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Shed and Regrow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 30,
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   },
+   "desc": "Restores 3 health a second to you for 8 seconds, raises your physical resistance by 10%, and lifts 1 condition from you."
+  },
+  {
+   "name": "Sun-Warmed Plate",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "By day, your armour rises by 12%."
+  }
+ ]
+}

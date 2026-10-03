@@ -1,0 +1,78 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Scattershot Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "volleyCount": 6,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 560,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 64,
+   "desc": "Fires 6 locusts in a wide spray, each one dealing 11 damage and knocking its target back 2 tiles."
+  },
+  {
+   "name": "The Last Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 640,
+   "radius": 6,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Fires a single locust fast into the first enemy it meets, dealing 18 damage, consuming every affliction you have on it and dealing 60% more for each one."
+  },
+  {
+   "name": "Rattling Volleys",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.2,
+    "duration": 10
+   },
+   "desc": "Increases your attack speed by 30% for 12 seconds. For 10 seconds, an escort of locusts fights beside you, striking for 4 damage every 1.2 seconds."
+  },
+  {
+   "name": "Next Round Chambered",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, your next strike has 20% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

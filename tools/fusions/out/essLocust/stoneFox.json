@@ -1,0 +1,80 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Misleading Buzz",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "shadow",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a single feinting locust into the first enemy it meets, dealing 4 damage, with a 30% chance to leave it [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Last Kernel Stolen",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "shadow",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "leech": 0.2,
+   "desc": "Strikes an enemy at or below 25% health for 22 damage, adding 1.5 times the remaining damage of every affliction on it and consuming them. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Gone to Chaff",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 6 seconds, moving 15% faster. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Skimmed Off the Top",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "shadow",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 6
+   },
+   "desc": "When you inflict a condition on an enemy, you skim 6 mana from it. Once every 5 seconds."
+  }
+ ]
+}

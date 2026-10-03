@@ -1,0 +1,89 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thickened Air",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes thick arcana in a cone 4 tiles ahead, using up one of your afflictions on each target to deal 7 damage. Each hit has a 40% chance to leave the target [Stalled] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spell Left Simmering",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "ignoreResist": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "scaleDelay": 6,
+   "desc": "Lays a spell on an enemy within 7 tiles that deals 30 damage, ignoring resistance, 6 seconds later. Its damage rises 10% for each affliction the target carries by then, up to 50%."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Everything Waits",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "small",
+   "castTime": 1,
+   "cooldown": 120,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 1 second to cast, then holds every creature within 4 tiles in place for 3 seconds. Afterwards each one is [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "name": "Steady Trickle",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you spend mana, you restore 2 mana a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

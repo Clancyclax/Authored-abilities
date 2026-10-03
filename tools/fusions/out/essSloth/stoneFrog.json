@@ -1,0 +1,78 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sticky Tongue",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 160,
+   "rangeBand": "short",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks your tongue at the first enemy in reach and deals 4 damage. Each hit has a 20% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heavy Landing",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "speedDown",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You drop your full weight onto the ground, dealing 14 damage to every enemy within 3 tiles and knocking them 3 tiles back. Each has a 50% chance to be [Leaden] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Buried in Mud",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 4,
+   "cooldown": 120,
+   "desc": "You sink still into the mud. For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Coiled Haunches",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every ability you use builds a stack on you, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

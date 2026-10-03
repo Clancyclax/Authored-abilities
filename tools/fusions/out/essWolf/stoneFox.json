@@ -1,0 +1,66 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Feint, Then Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "A feint draws the target's guard, then you bite for 12 damage, leave it 10% easier to wound for 4 seconds and stun it for 1 second."
+  },
+  {
+   "name": "Stolen Kill",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.3,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on an enemy at or below 25% health. Darts in to snatch it, which deals 24 damage, rising to 1.3 times that at its full reach of 6 tiles."
+  },
+  {
+   "name": "False Trail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds: enemies notice you 60% later, and you move 15% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Easy Mark",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage."
+  }
+ ]
+}

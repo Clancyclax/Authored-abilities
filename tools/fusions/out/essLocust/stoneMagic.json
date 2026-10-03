@@ -1,0 +1,83 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Spellgnaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a crackling locust into the first enemy it meets, dealing 4 damage, with a 30% chance to leave it [Muddled] for 4 seconds."
+  },
+  {
+   "name": "Unravelled Glyphs",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "shocked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "The swarm tears at every enemy within 3 tiles, dealing 12 damage with a 50% chance to leave them [Shocked] for 6 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Swallowed Spells",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, the swarm swallows 30% of the elemental damage you take and returns it to whoever dealt it."
+  },
+  {
+   "name": "Crumbs of Spent Power",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 4
+   },
+   "desc": "When you spend mana, the swarm gathers back 4 of it. Once every 6 seconds."
+  }
+ ]
+}

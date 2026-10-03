@@ -1,0 +1,81 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Wrung Dry",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Usable only on an enemy at or below 25% health, a threshold that rises with each rank. You grip and bite for 22 poison damage, consuming every affliction on the target and adding 1.5 times their remaining damage."
+  },
+  {
+   "name": "Grip and Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A held bite that deals 5 poison damage and leaves the target [Poisoned] for 1 damage a second for 3 seconds, with a 20% chance to leave it [Pinned] for 1 second."
+  },
+  {
+   "name": "Steady on the Fang",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your critical damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Patient Grip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you have gone a while without a critical hit, your critical hit chance rises 25% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

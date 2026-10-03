@@ -1,0 +1,79 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drifting Mouthful",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.2,
+   "speed": 160,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a slow drift of locusts into the first enemy it meets, dealing 8 damage, with a 40% chance to leave it [Slowed] for 4 seconds. Holds up to 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Becalming Drift",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "The swarm settles over every enemy within 3 tiles, dealing 12 damage and stunning them for 1.2 seconds."
+  },
+  {
+   "name": "Unhurried Mending",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 16,
+   "healScope": "self",
+   "critChance": 0.05,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you, rising 8% for every 10% of your health already gone, up to 40% more."
+  },
+  {
+   "name": "Nothing Is Urgent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "desc": "When your health falls below 35%, you regain 4 health a second for 6 seconds. Once every 40 seconds."
+  }
+ ]
+}

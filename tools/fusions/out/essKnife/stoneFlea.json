@@ -1,0 +1,77 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Across the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 10,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "Leaps up to 7 tiles onto the target and stabs it, dealing 12 damage and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Pinhole Bites",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A quick nip with the knife-tip that deals 7 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Hop and Nick",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "You spring 3 tiles forward and gain 25% critical hit chance for 10 seconds."
+  },
+  {
+   "name": "Restless Legs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your next strike gains 15% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

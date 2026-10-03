@@ -1,0 +1,81 @@
+{
+ "essence": "essShield",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snare Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1,
+   "stunOnHit": 1,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Casts a line of strands from your shield's rim at an enemy up to 6 tiles away, dealing 11 damage, binding it for 1 second, and slowing it by 30% for 3 seconds."
+  },
+  {
+   "name": "Bristling Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 5,
+   "range": 160,
+   "castTime": 0,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes your shield and looses 5 stiffened strands, spread apart, each dealing 3 damage with a 25% chance to leave the target [Pinned] for 2 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Curtain of Locks",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Draws a curtain of strands around you and your allies for 6 seconds: enemies notice you far later, you move 10% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Woven Layers",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. When you reach 10, they all spend at once: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

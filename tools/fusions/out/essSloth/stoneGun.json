@@ -1,0 +1,84 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Took My Time",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 40,
+   "cooldown": 90,
+   "castTime": 2,
+   "speed": 700,
+   "radius": 5,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "Takes 2 seconds to aim, then fires a shot that deals 40 damage to the first enemy it meets. It is always a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Muzzle Flash",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A blast of smoke and sparks that deals 10 damage to everything in a cone 4 tiles ahead, stuns each one for 1 second and leaves it [Muddled] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "name": "Long Fuse",
+   "template": "activeSummon",
+   "element": "fire",
+   "summonKind": "trap",
+   "summonDmg": 24,
+   "summonDuration": 12,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 96,
+   "summonArmDelay": 3,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 40,
+   "desc": "Takes 1 second to set a charge at the nearest enemy. It arms after 3 seconds and waits up to 12 seconds; the first enemy within 2 tiles sets it off, and it deals 24 damage in a blast around it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "name": "Waited for the Shot",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you have gone a while without a critical hit, your critical chance rises by 25% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

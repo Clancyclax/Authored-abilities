@@ -1,0 +1,93 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hop Along",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a biting speck that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles for 50% of that damage. Each hit has a 30% chance to leave the target [Fatigued] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Long Way Down",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You spring up to 7 tiles onto the target and land with your whole weight, dealing 16 damage, leaving it 15% easier to wound for 6 seconds and [Leaden] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Itch and Jink",
+   "template": "statBuff",
+   "element": "piercing",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "blinkOnUse": 96,
+   "desc": "You hop 3 tiles from where you stood and settle there, with your dodge chance raised by 20% for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "summon",
+   "name": "Fur Tenants",
+   "template": "summonBonded",
+   "element": "piercing",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1,
+   "familiarFamily": "insect",
+   "familiarCreatureName": "Leapling",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A colony living in your fur leaps out at enemies within 4 tiles, biting for 3 damage every second. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

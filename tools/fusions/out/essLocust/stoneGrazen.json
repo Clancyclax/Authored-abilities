@@ -1,0 +1,76 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Nibbled Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "leech": 0.2,
+   "desc": "Sends a grazing locust at an enemy up to 6 tiles away, dealing 4 damage, up to 1.5 times that at full reach. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Warm Flank Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "The swarm surges round you as one herd, dealing 28 damage to every enemy within 3.5 tiles. Every ally then strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Huddle of Wings",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 14,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healAmount": 14,
+   "healScope": "party",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 3
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. For 3 seconds after, you move 10% faster."
+  },
+  {
+   "name": "Slow Fattening",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 5. At 5 they all spend at once, healing you for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

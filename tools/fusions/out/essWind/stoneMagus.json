@@ -1,0 +1,67 @@
+{
+ "essence": "essWind",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Spoken Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 460,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "desc": "Speaks a bolt of wind into being that strikes the first enemy it meets, dealing 28 damage that ignores resistances."
+  },
+  {
+   "name": "Hushing Word",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "wind",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 18,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "lockSeconds": 3,
+   "knockback": 80,
+   "desc": "Silences one enemy within 7 tiles for 3 seconds and deals 9 damage, taking its next action away and knocking it back 2.5 tiles."
+  },
+  {
+   "name": "Quickened Diction",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your casting speed by 25% for 15 seconds."
+  },
+  {
+   "name": "Practised Cadence",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

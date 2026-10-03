@@ -1,0 +1,80 @@
+{
+ "essence": "essWind",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snag and Reel",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargeTo": 224,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "Snags a target up to 7 tiles away with a barbed gust that deals 12 damage, rising to 1.3 times that at full reach, and reels you up to 7 tiles to it. The target moves 20% slower for 3 seconds."
+  },
+  {
+   "name": "Barbed Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 barbed gusts at once, spread apart, each dealing 6 damage, with a 30% chance to leave the target [Bleeding] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Bristling Catch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "wind",
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it. You move 15% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Caught Fast",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "wind",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "cooldownReduction": 0.05,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

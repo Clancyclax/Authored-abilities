@@ -1,0 +1,78 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snagging Filament",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Flicks a strand-trailing locust at an enemy up to 6 tiles away, dealing 4 damage, up to 1.4 times that at full reach. It moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Ten Thousand Snares",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a net of strands and swarm over every enemy within 3.5 tiles, dealing 28 damage that ignores armour, with a 40% chance per hit to leave them [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Matted Screen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "nature",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "desc": "Raises a felted wall of locusts 6 tiles long for 6 seconds that blocks enemies."
+  },
+  {
+   "name": "Thread Count",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 10. At 10 they all spend at once: you move and attack 5% faster per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

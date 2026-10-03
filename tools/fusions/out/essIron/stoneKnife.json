@@ -1,0 +1,67 @@
+{
+ "essence": "essIron",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Under the Gorget",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 72,
+   "maxMult": 1,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "desc": "Slips a blade into the gap of a wounded enemy's guard, dealing 22 damage. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Flurry From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "guaranteedCrit": true,
+   "desc": "Lunges from behind your guard in a flurry of cuts, dealing 26 damage to every enemy in a cone 3 tiles ahead. Every hit is a critical hit."
+  },
+  {
+   "name": "Hidden Spikes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Edge Behind the Plate",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying one of your afflictions, your damage rises by 12%."
+  }
+ ]
+}

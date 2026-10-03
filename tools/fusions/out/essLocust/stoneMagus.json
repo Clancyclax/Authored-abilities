@@ -1,0 +1,72 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Called Plague",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 9,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "castTime": 1.5,
+   "ignoreResist": true,
+   "desc": "After a 1.5 second incantation, looses 5 swarms in a spread, each one dealing 26 damage that ignores resistances."
+  },
+  {
+   "name": "Recited Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargesMax": 4,
+   "desc": "Sends a single named locust at an enemy up to 7 tiles away, dealing 7 damage, up to 1.3 times that at full reach. Holds up to 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Spoken Again",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "cooldown": 90,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Prepared Syllables",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When your mana is full, your next ability deals 25% more damage. Once every 12 seconds."
+  }
+ ]
+}

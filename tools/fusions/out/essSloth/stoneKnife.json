@@ -1,0 +1,90 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Behind the Knee",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "A low cut that deals 12 damage, leaves the target [Bleeding] for 2 damage a second for 6 seconds and [Slowed] for 6 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tucked Blades",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Flicks a hidden blade at an enemy within 6 tiles that deals 6 damage and leaves it [Bleeding] for 1 damage a second for 10 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Whetted in Idle Hours",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Your critical hits deal 30% more damage for 15 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "weapon summon",
+   "name": "Retracted Claws",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a set of long claws. They increase your weapon damage by 12% and your maximum health by 10, and every strike with them leaves the target [Bleeding] for 1 damage a second for 4 seconds."
+  }
+ ]
+}

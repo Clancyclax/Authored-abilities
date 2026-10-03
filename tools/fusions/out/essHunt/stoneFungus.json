@@ -1,0 +1,81 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Seeded Wound",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A strike that deals 4 damage, leaves the target [Poisoned] for 1 damage a second for 6 seconds, and has a 25% chance to leave it [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rotting Lure",
+   "template": "corpseMine",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 60,
+   "range": 300,
+   "corpse": true,
+   "explodeRadius": 115,
+   "mineSeconds": 30,
+   "desc": "Seeds up to 3 bodies in reach with spores for 30 seconds. Each bursts for 26 damage the moment an enemy comes within 2 tiles of it."
+  },
+  {
+   "name": "Spore Shroud",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "poison",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.35,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you in spores for 8 seconds and raises your movement speed by 10%. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Spores Move On",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "desc": "When a condition you inflicted runs out, spores burst to the nearest enemy within 5 tiles, dealing 6 damage. Once every 4 seconds."
+  }
+ ]
+}

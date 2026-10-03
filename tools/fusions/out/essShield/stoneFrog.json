@@ -1,0 +1,73 @@
+{
+ "essence": "essShield",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Spring Into Guard",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 192,
+   "chargeTo": 192,
+   "maxMult": 1.4,
+   "desc": "Springs up to 6 tiles at the target behind your shield, dealing 12 damage, up to 1.4 times as much from the far end of its reach."
+  },
+  {
+   "name": "Splashdown",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hops and lands on the edge of your shield, dealing 7 damage to every enemy within 2 tiles, with a 50% chance to leave each [Slowed] for 3 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Spring Clear",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 60,
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "desc": "Springs 3 tiles behind your raised shield, and for 2 seconds blows that reach you deal no damage and no condition can take hold of you. It breaks 1 root, freeze or slow on you."
+  },
+  {
+   "name": "Coiled Retreat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   },
+   "dodgeBonus": 0.06,
+   "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 5 seconds. Once every 30 seconds. You have +6% dodge chance."
+  }
+ ]
+}

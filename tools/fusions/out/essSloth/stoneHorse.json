@@ -1,0 +1,75 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Long Run-Up",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "knockback": 96,
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A hoof-driven blow within 8 tiles that deals 10 damage, up to 2 times as much at its farthest reach. It knocks the target 3 tiles back and leaves it [Leaden] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thunder Underfoot",
+   "template": "barrierWall",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "wallKind": "burn",
+   "wallLength": 128,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Pounds a 4-tile track of hoofbeats ahead of you for 4 seconds. It deals 4 damage to each enemy that crosses it and slows it by 20% for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Barded Plod",
+   "template": "armorBuff",
+   "element": "blunt",
+   "armorBonus": 0.25,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Raises your armour by 25% for 15 seconds. Your movement speed rises 20% for 6 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Kept to the Road",
+   "template": "passiveConditional",
+   "element": "blunt",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "On paved ground, your armour rises by 12%."
+  }
+ ]
+}

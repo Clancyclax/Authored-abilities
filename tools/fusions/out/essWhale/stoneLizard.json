@@ -1,0 +1,68 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Cold-Water Ambush",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "frost",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "range": 220,
+   "maxMult": 1.6,
+   "rangeBand": "medium",
+   "reachUnits": 220,
+   "desc": "A thrown blow that deals 8 damage, hitting harder the further it travels, up to 1.6 times at maximum range. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Sun-Warmed Exhale",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Spouts a cone of sun-heated breath, dealing 26 damage to everything caught in it and leaving them [Burning] for 3 damage a second for 5 seconds. It ignores armour."
+  },
+  {
+   "name": "Basking Float",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Sunlit Stillness",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "By day, your armour rises by 10%."
+  }
+ ]
+}

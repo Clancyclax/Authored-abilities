@@ -1,0 +1,80 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Clearing Bound",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "chargeTo": 224,
+   "desc": "Leaps onto an enemy up to 7 tiles away, dealing 12 damage, up to 2 times that at full range."
+  },
+  {
+   "name": "Nipping Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A biting kick that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds. Your movement speed rises 10% for 2 seconds after you use it."
+  },
+  {
+   "name": "Over the Hedge",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 12,
+   "teleportRange": 224,
+   "dodgeBonus": 0.1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you instantly to a point up to 7 tiles away, with +10% dodge chance. Your movement speed rises 20% for 4 seconds after you land."
+  },
+  {
+   "name": "High Landing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "After you cover enough ground, your physical damage rises 30% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

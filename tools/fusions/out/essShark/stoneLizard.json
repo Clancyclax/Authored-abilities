@@ -1,0 +1,69 @@
+{
+ "essence": "essShark",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Tail Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "A whipping turn that deals 12 damage to every enemy within 3 tiles of you and knocks them back 3 tiles."
+  },
+  {
+   "name": "Cold Snap Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "speed": 480,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "leech": 0.2,
+   "desc": "Snaps out at the first enemy ahead of you at or below 30% health, which deals 22 damage and heals you for 20% of the damage dealt. It can only strike a target that low."
+  },
+  {
+   "name": "Basking Stillness",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "medium",
+   "cooldown": 60,
+   "desc": "Holds every creature within 5 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Shed and Regrow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls low, you regain 4 health a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

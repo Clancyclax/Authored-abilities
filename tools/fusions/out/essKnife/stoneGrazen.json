@@ -1,0 +1,74 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Safety in Numbers",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Throws a knife that deals 4 damage to the first enemy it meets. Its damage rises 10% for each ally near you, up to 40%."
+  },
+  {
+   "name": "Circling the Fold",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Slashes in a wide circle, dealing 26 damage to every enemy within 3 tiles. When it hits, your party's damage rises by 20% for 15 seconds."
+  },
+  {
+   "name": "Hidden in the Herd",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "party",
+   "desc": "Veils you and your party for 6 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Long Graze",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 12,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 8. When you reach 8, they all spend at once: you are healed for 3% of your maximum health per stack (24% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

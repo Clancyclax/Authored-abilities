@@ -1,0 +1,86 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore Puff",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes a cone of spore-laden locusts 4 tiles ahead of you, dealing 3 damage to everything in it, with a 30% chance per hit to leave them [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Mycelial Gut-Rot",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "ignoreResist": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "desc": "A bite that seeds rot inside one enemy, dealing 30 damage that ignores its resistances and leaving it 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Fruiting Husk",
+   "kind": "active",
+   "category": "affliction",
+   "template": "corpseMiasma",
+   "element": "poison",
+   "cooldown": 18,
+   "base": 4,
+   "corpse": true,
+   "range": 300,
+   "explodeRadius": 128,
+   "miasmaSeconds": 8,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "The nearest body sprouts a spore cloud for 8 seconds; every enemy within 4 tiles of it is [Diseased], taking 4 damage a second for 3 seconds."
+  },
+  {
+   "name": "Colonies Ripen",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.75,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you land a hit, a spore stack builds on that enemy, up to 8. At 8 they all burst at once, striking that enemy for 26% of your weapon damage per stack (204% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

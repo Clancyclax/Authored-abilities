@@ -1,0 +1,80 @@
+{
+ "essence": "essWind",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Springing Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "wind",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Leaps up to 7 tiles onto a target and deals 13 damage, leaving it 12% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Bounding Squalls",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Every enemy within 2.5 tiles of you is caught by a gust that deals 7 damage, and you move 15% faster for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Over the Table",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "teleportRange": 256,
+   "cooldown": 6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 8 tiles away, and you move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Height of the Hop",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "Every 6 tiles you cover, your next ability deals 20% more damage. Once every 5 seconds."
+  }
+ ]
+}

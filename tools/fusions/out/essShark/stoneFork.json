@@ -1,0 +1,88 @@
+{
+ "essence": "essShark",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Feed",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "leech": 0.15,
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a snap of water that deals 7 damage to the first enemy it meets, then branches to 1 more enemy within 3.5 tiles for 60% of the damage. You heal for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Two Currents",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 128,
+   "desc": "A raking pass that deals 12 damage to every enemy within 3 tiles of you and leaves them [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on each one spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Other Flank",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "minion",
+   "summonDmg": 4,
+   "summonInterval": 1.2,
+   "summonDuration": 12,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "cooldown": 45,
+   "desc": "Takes 0.5 seconds to call a circling double that fights beside you for 12 seconds, striking for 4 damage every 1.2 seconds. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "desc": "When you land a critical hit, a strike forks to the nearest enemy within 5 tiles and deals 6 damage. Once every 3 seconds."
+  }
+ ]
+}

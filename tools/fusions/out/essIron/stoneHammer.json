@@ -1,0 +1,79 @@
+{
+ "essence": "essIron",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Dropped Anvil",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 100,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "speed": 260,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Heaves an anvil that deals 32 damage to the first enemy it meets and bursts on impact, dealing 80% of that to every other enemy within 3.5 tiles."
+  },
+  {
+   "name": "Forge Tap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "desc": "Taps an enemy with a forge-hot smith's stroke, dealing 5 damage, setting it [Burning] for 1 damage a second for 3 seconds and leaving it 5% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Work-Hardened",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "blunt",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "resist": {
+    "element": "blunt",
+    "amount": 0.1
+   },
+   "desc": "Raises your armour by 25% and your blunt resistance by 10% for 12 seconds."
+  },
+  {
+   "name": "Blow Upon Blow",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. When you reach 5, they all spend at once: a blow strikes that enemy for 20% of your weapon damage per stack (102% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

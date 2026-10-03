@@ -1,0 +1,75 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wring Out",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Squeezes the target, using up one of your afflictions on it to deal 8 damage and leave it 8% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Never Let Go",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "short",
+   "maxMult": 1,
+   "requiresTargetBelow": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.4,
+    "duration": 3
+   },
+   "desc": "Reaches out up to 4 tiles to an enemy at or below 30% health and deals 26 damage. It moves 40% slower for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Hang and Rest",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 10,
+   "cooldown": 40,
+   "desc": "You hang by your grip and rest, restoring 3 stamina a second for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Tightening Grip",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 5,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you deal 3% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

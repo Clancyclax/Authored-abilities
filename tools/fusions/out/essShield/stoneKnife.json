@@ -1,0 +1,75 @@
+{
+ "essence": "essShield",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Knives from Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 420,
+   "radius": 5,
+   "range": 192,
+   "castTime": 0,
+   "desc": "Looses 3 knives from behind your shield, spread apart, each dealing 3 damage."
+  },
+  {
+   "name": "Counterstab",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 60,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Stabs past the edge of your shield, dealing 28 damage as a critical hit and leaving the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Hidden Edges",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "cooldown": 24,
+   "buffDuration": 8,
+   "thornsFrac": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 25% of the damage you take is dealt back to whoever dealt it, and blades behind your shield leave them [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Edge Behind the Guard",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "You deal 12% more damage to enemies below half health. Your armour is 5% higher."
+  }
+ ]
+}

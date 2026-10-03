@@ -1,0 +1,75 @@
+{
+ "essence": "essShip",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Rot in the Timbers",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A weapon strike that deals 11 damage and leaves the target [Diseased] for 2 damage a second for 6 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Hull Gives Way",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Sends a bolt into the first enemy it meets that deals 18 damage and uses up every affliction you have on it, adding 60% more damage for each one."
+  },
+  {
+   "name": "Caulked with Mycelium",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "plant",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.05,
+   "desc": "Raises a barrier that absorbs the next 18 damage and holds for 8 seconds, and raises your armour by 5%."
+  },
+  {
+   "name": "Spreading Through the Hold",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land adds a stack to the target, up to 6. At 6 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

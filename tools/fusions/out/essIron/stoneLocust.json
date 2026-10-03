@@ -1,0 +1,85 @@
+{
+ "essence": "essIron",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Filings",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 5,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.2,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a swirl of iron filings that deals 6 damage to every enemy within 2.5 tiles, with a 20% chance to leave each [Sundered] for 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Sends a knot of iron filings into an enemy, dealing 18 damage and using up every affliction you have on it for 60% more damage for each one."
+  },
+  {
+   "name": "Cloud of Filings",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 0.5 seconds to loose a cloud of iron filings for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each bite has a 25% chance to leave it [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Stripped to Plate",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

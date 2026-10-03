@@ -1,0 +1,76 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Twist the Blade",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Twists a blade into a target carrying one of your afflictions, using it up to deal 9 damage and leave the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spun Blade Fan",
+   "template": "volley",
+   "element": "slashing",
+   "role": "long",
+   "base": 25,
+   "cooldown": 75,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 440,
+   "radius": 6,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "isAoe": true,
+   "guaranteedCrit": true,
+   "desc": "Flings 4 spinning knives in a spread, each dealing 25 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Grindstone Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your slashing damage by 25% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackScale": 1,
+   "name": "Edge Comes Round",
+   "element": "slashing",
+   "stackShape": "ledger",
+   "stackBuild": "crit",
+   "stackPay": "burst",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackOn": "self",
+   "stackIcon": "stackKarma",
+   "desc": "Every critical hit you land builds a stack on you, up to 4. At 4 they all spend at once: a blow strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack (136% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

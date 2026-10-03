@@ -1,0 +1,84 @@
+{
+ "essence": "essShield",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Puffball Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Slams your shield down in a burst of spores, dealing 10 damage to every enemy within 3 tiles and leaving each [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Mould on the Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "A strike with the mould-grown rim of your shield that deals 4 damage and leaves the target [Diseased] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Spore Coat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "cooldown": 26,
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "For 8 seconds, 30% of the damage you take is dealt back to whoever dealt it, and spores off your shield leave them [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Slow Fruiting",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "boon",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "regenPerSec": 0.5,
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you are healed for 3% of your maximum health per stack (20% at full). Unfed, a stack fades every 6 seconds. You also regenerate 0.5 health a second."
+  }
+ ]
+}

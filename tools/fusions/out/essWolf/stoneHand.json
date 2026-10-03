@@ -1,0 +1,67 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Held for the Others",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A clamping bite that deals 12 damage, stuns the target for 1 second and leaves it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Wrench Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A twisting bite that deals 9 damage and leaves it 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Hauled by the Scruff",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "party",
+   "desc": "Removes up to 2 conditions from you and every ally near you."
+  },
+  {
+   "name": "Never Lets Go",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

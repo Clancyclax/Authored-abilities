@@ -1,0 +1,84 @@
+{
+ "essence": "essShark",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silver Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 320,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 4,
+    "label": "Reprieve"
+   },
+   "desc": "Looses 4 darting slivers of water at once, spread apart, each of which deals 3 damage. 20% of the damage dealt comes back to you as healing over 4 seconds."
+  },
+  {
+   "name": "Cut From the School",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.25,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A bite that deals 24 damage to an enemy at or below 25% health and leaves it 10% easier to wound for 4 seconds. It can only strike a target that low. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Through the Fingers",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "water",
+   "speedMult": 1.3,
+   "buffDuration": 6,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.12,
+   "cooldown": 24,
+   "desc": "Increases your movement speed by 30% for 6 seconds. You finish it 2 tiles from where you stood, with +12% dodge chance for it."
+  },
+  {
+   "name": "Wriggled Free",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you avoid builds a stack on you, up to 5. At 5 they all spend at once: you are healed for 4% of your maximum health per stack (20% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

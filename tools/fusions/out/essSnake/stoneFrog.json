@@ -1,0 +1,89 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sprung From Still Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "speed": 440,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You spring a venom-laced bolt that deals 14 water damage, knocks the target back 2.5 tiles and leaves it [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Slick Skin Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays toxic slime across the 2.5 tiles ahead of you, dealing 4 poison damage to everything in the cone, with a 40% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Toxic Skin",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "cooldown": 28,
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Long Crouch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next ability deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

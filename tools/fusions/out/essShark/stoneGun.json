@@ -1,0 +1,89 @@
+{
+ "essence": "essShark",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "First Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "speed": 700,
+   "radius": 6,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Fires a shot that deals 32 damage to the first enemy it meets, ignoring armour, and leaves it [Bleeding] for 3 damage a second for 5 seconds. Against a target that has not been hurt yet, its critical chance is 50% higher."
+  },
+  {
+   "name": "Scattershot Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Blasts a short cone of shot ahead of you that deals 3 damage to everything in it, with a 25% chance to leave each one [Bleeding] for 4 seconds. Its damage rises 8% for each affliction already on the target (max 32%)."
+  },
+  {
+   "name": "Cocked and Waiting",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "healOnUse": 6,
+   "cooldown": 60,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds and restores 6 health."
+  },
+  {
+   "name": "Hangfire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 30% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

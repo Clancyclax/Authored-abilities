@@ -1,0 +1,82 @@
+{
+ "essence": "essWind",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Razor Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike threaded with razor strands of air that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Tangling Gale",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "slowPct": 0.25,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips a tangle of strands on the wind around every enemy within 3 tiles, dealing 10 damage, stripping 12% armour for 6 seconds and slowing each by 25%. Each hit has a 25% chance to leave the target [Pinned] for 2 seconds, and your afflictions on each spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Woven Shelter",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "wind",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Weaves a barrier of streaming strands that absorbs the next 18 damage and holds for 6 seconds. You move 15% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Finer Than Mail",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "pierceElement": "slashing",
+   "armorIgnore": 0.12,
+   "desc": "Your slashing attacks ignore 12% of the target's armour."
+  }
+ ]
+}

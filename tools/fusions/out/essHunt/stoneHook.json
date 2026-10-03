@@ -1,0 +1,77 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reel Yourself In",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "chargeTo": 224,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Casts a barbed line at the target and hauls you up to 7 tiles to it. The barb deals 11 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snagging Sweep",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "aoeBand": "small",
+   "isAoe": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sweep of barbs that deals 4 damage to everything in a cone 3 tiles ahead of you, with a 20% chance per hit to leave each [Pinned] for 1 second."
+  },
+  {
+   "name": "Haul the Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 20,
+   "desc": "Casts a barbed line 5 tiles long ahead of you for 5 seconds, dragging every enemy near it inward."
+  },
+  {
+   "name": "Snagged Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage."
+  }
+ ]
+}

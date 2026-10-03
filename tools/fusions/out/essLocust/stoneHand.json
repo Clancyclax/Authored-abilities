@@ -1,0 +1,86 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Wrung Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "strikes": 1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A thousand clinging feet close on an enemy at or below 30% health, dealing 24 damage and leaving it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Passed Along",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Sends a locust into the first enemy it meets, dealing 7 damage, then on to 3 more enemies within 3 tiles for 50% of the damage. Holds up to 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Held Fast",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 45,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Holds every enemy within 4 tiles in place for 3 seconds. For 8 seconds, an escort of locusts fights beside you, striking for 4 damage every 1.4 seconds. Held enemies move 30% slower for 3 seconds after they are let go."
+  },
+  {
+   "name": "Many Hands, Light Work",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "cooldownReduction": 0.08,
+   "desc": "Every ability you have comes round 8% sooner."
+  }
+ ]
+}

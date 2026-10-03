@@ -1,0 +1,82 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Strike That Shoves",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A braced strike that deals 15 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds, with a 60% chance to leave it [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Will Not Wash Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bite that deals 26 poison damage plus 5% of a boss's or elite's maximum health, and leaves the target [Poisoned] for 3 damage a second for 10 seconds."
+  },
+  {
+   "name": "Rooted Coils",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Raises your armour by 25% for 12 seconds."
+  },
+  {
+   "name": "Dig In and Coil",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 8
+   },
+   "desc": "When your health falls below a third, you gain a shield worth 25% of your maximum health for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

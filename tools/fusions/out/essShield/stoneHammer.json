@@ -1,0 +1,80 @@
+{
+ "essence": "essShield",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Pinned Flat",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 80,
+   "hpCostPct": 0.05,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 4
+   },
+   "desc": "Hammers your shield into the target at a cost of 5% of your maximum health, dealing 9 damage and leaving it 12% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Level the Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings your shield down flat, dealing 28 damage to every enemy within 3.5 tiles. Every hit is a critical hit, and each enemy hit is [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Anvil Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "blunt",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "Sets your shield as an anvil that absorbs the next 24 damage across up to 4 blows and holds for 8 seconds. Your armour rises by 10% while it holds."
+  },
+  {
+   "name": "Beaten Back",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When a blow from anything but fire lands on you, your physical damage rises by 30% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Itching Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "desc": "A quick bite that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Bounding Plague",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 224,
+   "desc": "You spring up to 7 tiles onto your target, and the swarm bursts out around you, dealing 14 damage to every enemy within 3 tiles."
+  },
+  {
+   "name": "Sixfold Spring",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 6,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Launches you 5 tiles forward. For 3 seconds after, you move 20% faster."
+  },
+  {
+   "name": "Landing Feed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "After you cover ground, your attacks heal you for 15% of the damage they deal for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

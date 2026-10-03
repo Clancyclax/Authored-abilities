@@ -1,0 +1,76 @@
+{
+ "essence": "essIron",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Rust Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 300,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Spits a gob of rust-water that deals 4 damage, with a 25% chance to leave the target [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Sudden Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "desc": "Springs at a wounded enemy and deals 18 damage, consuming every affliction on it to add 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Leap Into Brace",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "Springs you 3 tiles and raises your armour by 20% for 10 seconds. Enemies more than 3 tiles away lose track of you."
+  },
+  {
+   "name": "Coiled Under Plate",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.05,
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 3% faster per stack (16% at full) for 6 seconds. Unfed, a stack fades every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

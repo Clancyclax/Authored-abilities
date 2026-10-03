@@ -1,0 +1,71 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Streaking Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "ignoreResist": true,
+   "desc": "Charges in a streak of raw arcana at an enemy up to 7 tiles away, dealing 30 damage, up to 1.5 times that at full range, and ignoring its resistances."
+  },
+  {
+   "name": "Flaring Hoofstrike",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "desc": "Stamps out a flare of raw arcana, dealing 7 damage to every enemy within 3 tiles. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Worked to a Lather",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "restoreAmount": 20,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 20 mana. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Spell-Fed Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you spend mana, you regain 8 stamina. Once every 6 seconds."
+  }
+ ]
+}

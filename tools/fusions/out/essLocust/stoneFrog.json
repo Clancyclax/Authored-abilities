@@ -1,0 +1,74 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Snapped Up",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 160,
+   "rangeBand": "short",
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Lashes out at the first enemy in reach for 9 damage, using up one of your afflictions on it. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Burst from the Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "The swarm erupts from the wet ground around you, dealing 14 damage to every enemy within 3 tiles and knocking them back 3 tiles, with a 50% chance to leave them [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Gone in a Glance",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "cooldown": 8,
+   "teleportRange": 192,
+   "dodgeBonus": 0.1,
+   "desc": "Springs you instantly to a point up to 6 tiles away, with 10% more dodge chance."
+  },
+  {
+   "name": "Skimming the Marsh",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you skim water faster than you walk ground"
+    }
+   ],
+   "desc": "You and the swarm cross water and swamp as on solid ground."
+  }
+ ]
+}

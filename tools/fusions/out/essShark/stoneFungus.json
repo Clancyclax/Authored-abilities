@@ -1,0 +1,80 @@
+{
+ "essence": "essShark",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mouldered Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "A weapon strike that deals 7 damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and 8% easier to wound for 4 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Bloom of Rot",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "healOnUse": 8,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 1,
+    "spreadsLeft": 2
+   },
+   "desc": "Every enemy within 3.5 tiles of you takes a burst of spores that deals 26 damage, plus 5% of a boss's or elite's maximum health, and is [Diseased], so healing does less for it, for 8 seconds. [Diseased] is catching: it passes to up to 2 more enemies within 4 tiles. You restore 8 health."
+  },
+  {
+   "name": "Digesting Rot",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 10,
+   "cooldown": 40,
+   "desc": "Removes up to 3 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Threaded Through",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "regenPerSec": 0.5,
+   "desc": "Your afflictions take hold on enemies that are immune to them. You regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

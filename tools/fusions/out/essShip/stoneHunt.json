@@ -1,0 +1,79 @@
+{
+ "essence": "essShip",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Whaler's Harpoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 9,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a harpoon into the first enemy it meets that deals 28 damage plus 5% of a boss's or elite's maximum health, and leaves it [Marked] for 10 seconds."
+  },
+  {
+   "name": "Running Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A quick strike that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and has a 25% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "General Chase",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "cooldown": 36,
+   "speedMult": 1.3,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08,
+   "desc": "Your movement speed rises by 30% for 10 seconds, with 8% more dodge chance while it lasts."
+  },
+  {
+   "name": "Blood in the Wake",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against a target carrying any condition, your damage rises by 10%."
+  }
+ ]
+}

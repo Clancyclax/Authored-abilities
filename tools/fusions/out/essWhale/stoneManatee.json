@@ -1,0 +1,74 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drifting Nudge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bruised"
+   },
+   "desc": "A slow, heavy push that deals 12 damage, knocks the target 3 tiles back and leaves it [Bruised] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Unhurried End",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "range": 220,
+   "maxMult": 1.5,
+   "rangeBand": "medium",
+   "reachUnits": 220,
+   "requiresTargetBelow": 0.3,
+   "desc": "A thrown blow that deals 20 damage, hitting harder the further it travels, up to 1.5 times at maximum range. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Slow Mending",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.05,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you. Its healing rises 8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Soft Bulk",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once and heal you for 5% of your maximum health per stack (40% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essIron",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Hobnailed Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 10,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Kicks an enemy with an iron-shod boot, dealing 12 damage, making it [Bleeding] for 1 damage a second for 4 seconds, knocking it 3 tiles back and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Road's Last Mile",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Brings the whole road behind you down in one stamp, dealing 30 damage to every enemy within 3.5 tiles, plus 5% of a boss's or elite's maximum health. Its damage rises 5% for each stretch you have travelled, up to 30%."
+  },
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 12
+   },
+   "desc": "For 12 seconds, you take 20% less damage, move 20% faster, and are freed of every root, freeze and slow."
+  },
+  {
+   "name": "Mile-Hardened",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "moveSpeedPct": 0.08,
+   "resist": {
+    "element": "physical",
+    "amount": 0.08
+   },
+   "desc": "Your movement speed is permanently 8% higher, and you have 8% physical resistance."
+  }
+ ]
+}

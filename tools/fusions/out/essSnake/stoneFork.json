@@ -1,0 +1,85 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Tongue",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.7
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.7,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits venom that deals 5 poison damage to the first enemy it meets, then leaps to 1 more enemy within 3.5 tiles for 70% of that, with a 25% chance to leave each [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Venom Takes Both Roads",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Every enemy within 3 tiles of you takes 12 poison damage and becomes [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Both Ways at Once",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each affliction laid on you has a 50% chance to be sent back to whoever laid it."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essShield",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Two-Way Rebound",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Throws your shield at the first enemy it meets, dealing 4 damage, and it rebounds to 1 more enemy within 3 tiles for 50% of the original damage."
+  },
+  {
+   "name": "Tine Catch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 80,
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Catches the target's weapon in the forked edge of your guard and wrenches it, dealing 11 damage, stunning it for 1 second and leaving it 10% easier to wound for 5 seconds. It is [Hindered] for 6 seconds."
+  },
+  {
+   "name": "Split the Blow",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 20,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 2,
+   "shieldDuration": 6,
+   "armorBonus": 0.05,
+   "desc": "Raises a forked guard that absorbs the next 20 damage across up to 2 blows, holding for 6 seconds. Your armour rises by 5% while it holds."
+  },
+  {
+   "name": "Either Way",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, a blow you failed to dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

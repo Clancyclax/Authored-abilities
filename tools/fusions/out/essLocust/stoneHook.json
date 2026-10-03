@@ -1,0 +1,86 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snag and Tear",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Barbed legs catch and rip an enemy for 8 damage, using up one of your afflictions on it, and leave it [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Barbed Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 340,
+   "radius": 8,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "desc": "Casts 4 barbed knots of locusts in a spread, each one dealing 11 damage. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Reeled to the Cloud",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "slashing",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 4
+   },
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you for 6 seconds. For 4 seconds, an escort of locusts fights beside you, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Barbs Hold, Mouths Feed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.12,
+    "duration": 3
+   },
+   "desc": "When you strike an enemy, your attacks heal you for 12% of the damage they deal for 3 seconds. Once every 10 seconds."
+  }
+ ]
+}

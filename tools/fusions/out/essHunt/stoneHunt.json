@@ -1,0 +1,81 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quarry Named",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "stunOnHit": 1,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrown spear that deals 12 damage, rising to 1.6 times that at its full reach of 7 tiles. It stuns the target for 1 second and leaves it [Marked] for 10 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "End of the Chase",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A finishing strike that deals 16 damage, leaves the target [Bleeding] for 2 damage a second for 4 seconds, and uses up every affliction you have on the target, dealing 60% more damage for each one."
+  },
+  {
+   "name": "Scent Taken",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 25% for 12 seconds. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Run Down",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 5. When you reach 5, they all spend at once: a blow strikes that enemy for 20% of your weapon damage per stack (102% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

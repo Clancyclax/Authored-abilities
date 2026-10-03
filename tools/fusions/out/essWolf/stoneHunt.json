@@ -1,0 +1,78 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "End of the Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Usable only on an enemy at or below 30% health. A closing bite that deals 24 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Run It Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "chargeTo": 224,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "speed": 420,
+   "radius": 8,
+   "desc": "You rush up to 7 tiles to the target first, then strike for 14 damage and leave it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Scent Found",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 25% for 15 seconds."
+  },
+  {
+   "name": "Quarry After Quarry",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 15,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every kill you make builds a stack on you, up to 5. The next ability you use spends them all: you deal 5% more damage per stack (23% at full) for 6 seconds. Unfed, a stack fades every 15 seconds."
+  }
+ ]
+}

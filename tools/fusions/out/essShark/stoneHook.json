@@ -1,0 +1,85 @@
+{
+ "essence": "essShark",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Gaff Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "leech": 0.15,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Casts a barbed line that deals 12 damage to the first enemy it meets, stuns it for 1 second and leaves it [Bleeding] for 2 damage a second for 4 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Reel It In",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "requiresTargetBelow": 0.25,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Snags a target up to 6 tiles away at or below 25% health and deals 20 damage, rising to 1.3 times that at full reach, and slows it by 25% for 2 seconds. It can only strike a target that low."
+  },
+  {
+   "name": "Line and Lure",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "cooldown": 20,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you for 5 seconds. A circling escort fights beside you for 8 seconds, striking for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Barbs Torn Loose",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 0.8,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land sets a barb in that enemy, up to 5. Your next critical hit on it tears them all out: you are healed for 4% of your maximum health per barb (20% at full). Unfed, a barb fades every 4 seconds."
+  }
+ ]
+}

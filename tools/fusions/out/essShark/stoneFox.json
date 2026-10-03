@@ -1,0 +1,86 @@
+{
+ "essence": "essShark",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Flicker of Teeth",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "confuse": true,
+   "confuseChance": 0.2,
+   "confuseDuration": 2,
+   "desc": "Snaps a bolt of water that deals 4 damage to the first enemy it meets, with 30% more critical chance against a target that has not been hurt yet and a 20% chance to turn it against its allies for 2 seconds."
+  },
+  {
+   "name": "Grin Before the Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon strike that deals 30 damage and always lands as a critical hit. It leaves the target [Bleeding] for 3 damage a second for 6 seconds and [Blunted], its critical hit chance lowered, for 6 seconds."
+  },
+  {
+   "name": "Doubled-Back Trail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you for 6 seconds, and you move 20% faster while veiled. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Bait Taken",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "requiresTargetBelow": 0.3,
+   "reachPct": 0.5,
+   "speed": 380,
+   "radius": 8,
+   "rangeBand": "long",
+   "reachUnits": 360,
+   "desc": "Sends a ringing pulse that deals 20 damage to the first enemy it meets. It only strikes a target at or below 30% health. Its reach is 50% longer."
+  },
+  {
+   "name": "Tracking Click",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 240,
+   "maxMult": 1.6,
+   "rangeBand": "medium",
+   "reachUnits": 240,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "A thrown click that deals 5 damage, hitting harder the further it travels, up to 1.6 times at maximum range. Its damage rises 6% per affliction the target carries (max +30%)."
+  },
+  {
+   "name": "Closing Sweep",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "resonating",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "castTime": 0.5,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Blood in the Water",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against enemies below 50% health."
+  }
+ ]
+}

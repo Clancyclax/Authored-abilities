@@ -1,0 +1,81 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Exhaustion",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "enervate",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A spear thrust that deals 26 damage plus 5% of a boss's or elite's maximum health. The target is left [Bleeding] for 2 damage a second for 6 seconds and [Enervated] for 8 seconds, so its health, mana and stamina crawl back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heavy Tread",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "aoeBand": "small",
+   "isAoe": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps the ground, dealing 4 damage to every enemy within 2.5 tiles, with a 25% chance per hit to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Marching Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 10,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Restores 3 stamina a second for 10 seconds. Your movement speed rises 15% for 5 seconds after you use it."
+  },
+  {
+   "name": "Ground Eaten Up",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "moveSpeedPct": 0.1,
+   "desc": "Your movement speed is permanently increased by 10%."
+  }
+ ]
+}

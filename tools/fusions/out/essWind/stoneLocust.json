@@ -1,0 +1,81 @@
+{
+ "essence": "essWind",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Updraft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 440,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "leech": 0.15,
+   "chargesMax": 4,
+   "desc": "Sends a gnawing gust into the first enemy it meets, dealing 7 damage and healing you for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Stripped Fields",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 192,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a devouring cloud on the wind across a cone 6 tiles ahead, dealing 28 damage plus 4% of a boss's or elite's maximum health to everything in it. Each hit has a 50% chance to leave the target [Enervated] for 6 seconds."
+  },
+  {
+   "name": "Swarm at Your Back",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "wind",
+   "powerMult": 1.25,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "escort": {
+    "dmg": 3,
+    "interval": 1,
+    "duration": 10
+   },
+   "desc": "Increases your damage by 25% for 15 seconds. For 10 seconds, a swarm rides the wind beside you, striking for 3 every 1 second."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Each time you afflict something, 15% of the damage you deal heals you for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

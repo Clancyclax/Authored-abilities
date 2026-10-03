@@ -1,0 +1,74 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Thundering Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreArmor": true,
+   "desc": "Cuts through a cone 5 tiles ahead, dealing 26 damage to everything in it and ignoring armour."
+  },
+  {
+   "name": "Ride Them Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "stackMult": 1,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "Strikes a target at or below 30% health, dealing 20 damage plus the remaining damage of every affliction on it, which this blow uses up. Your movement speed rises 25% for 5 seconds after."
+  },
+  {
+   "name": "Full Gallop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "dodgeBonus": 0.05,
+   "desc": "Increases your movement speed by 35% for 8 seconds, with +5% dodge chance for it."
+  },
+  {
+   "name": "Gathered Charge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "After you cover enough ground, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

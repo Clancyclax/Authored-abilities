@@ -1,0 +1,75 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Thousand-Mile Descent",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "Brings the migration down on one enemy up to 8 tiles away, dealing 30 damage plus 5% of its maximum health if it is a boss or elite. Its damage rises 5% for every 100 paces you run between uses, up to 40% more."
+  },
+  {
+   "name": "Hopper Band",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "desc": "A marching band of wingless hoppers tramples every enemy within 2.5 tiles of you, dealing 8 damage. Holds up to 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 20,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 40% for 20 seconds. For 5 seconds after you use it, you move 15% faster."
+  },
+  {
+   "name": "Miles Become Mouths",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "After you cover ground, your next ability deals 25% more damage. Once every 10 seconds."
+  }
+ ]
+}

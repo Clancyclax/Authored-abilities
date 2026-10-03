@@ -1,0 +1,81 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Wire Around the Throat",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Loops a blade-fine strand around a target at or below 25% health, dealing 24 damage and leaving it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Ten Thousand Nicks",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.2,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes a fan of fine cutting strands 3 tiles ahead, dealing 3 damage to everything in it. Each hit has a 20% chance to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Tripwire",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "cooldown": 30,
+   "summonKind": "trap",
+   "summonDuration": 10,
+   "summonDmg": 16,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0,
+   "desc": "Strings a knife-lined wire at the nearest enemy. It waits 10 seconds, and the first 2 enemies to come within 3 tiles take 16 damage in a blast around it."
+  },
+  {
+   "name": "Narrow Miss",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, a blow that would have hit you is rolled again, and the second roll stands."
+  }
+ ]
+}

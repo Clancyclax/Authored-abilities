@@ -1,0 +1,85 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unyielding Thrust",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "ignoreArmor": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A cold thrust that deals 28 damage, ignores armour, leaves the target 15% easier to wound for 8 seconds and [Suppressed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Jaws Spring Shut",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "stunOnHit": 1,
+   "range": 80,
+   "aoeBand": "small",
+   "isAoe": true,
+   "desc": "Snaps shut around you, dealing 10 damage to every enemy within 2.5 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Set the Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "cooldown": 90,
+   "summonDmg": 16,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to set iron jaws by the nearest enemy. They stay armed for 30 seconds, and the first enemy to come within 3 tiles and everything within 2 tiles of the jaws take 16 damage."
+  },
+  {
+   "name": "Grim Persistence",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

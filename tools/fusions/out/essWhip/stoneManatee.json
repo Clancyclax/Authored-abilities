@@ -1,0 +1,83 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lazy Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "An unhurried lash deals 5 damage and leaves the target 5% easier to wound for 3 seconds, with a 40% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Slow Wide Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "aoeBand": "large",
+   "coneAngle": 1.0,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A long, wide sweep deals 26 damage to everything in a cone 6 tiles ahead, and on a hit every ally strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Everything Drifts",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 120,
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Holds every creature within 5 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Blubber Buffer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you are healed for 5% of your maximum health per stack (30% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Firm Rein Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "A guided charge at an enemy up to 7 tiles away that deals 30 damage, up to 1.5 times that at full range. It is always a critical hit."
+  },
+  {
+   "name": "Grip and Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.04,
+    "duration": 2
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.15,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grips the target and kicks, dealing 5 damage and leaving it 4% easier to wound for 2 seconds, with a 15% chance to leave it [Pinned] for 1 second."
+  },
+  {
+   "name": "Leg Up",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 35,
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 10,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Light on the Reins",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

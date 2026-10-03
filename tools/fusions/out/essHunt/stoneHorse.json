@@ -1,0 +1,75 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thundering Front",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "knockback": 112,
+   "range": 128,
+   "coneAngle": 0.9,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "desc": "Drives forward at a gallop, dealing 12 damage to everything in a cone 4 tiles ahead of you and knocking each back 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lance at Full Tilt",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "bossPct": 0.05,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.48,
+   "desc": "A charging lance blow that deals 28 damage plus 5% of a boss's or elite's maximum health, and leaves the target 10% easier to wound for 6 seconds. Its damage rises 6% per 100 paces you have run since you last used it, up to 48%."
+  },
+  {
+   "name": "Full Gallop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 40% for 8 seconds, with +8% dodge chance for it."
+  },
+  {
+   "name": "Gathered Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover in pursuit, your physical damage rises 30% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

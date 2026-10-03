@@ -1,0 +1,78 @@
+{
+ "essence": "essIron",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Wrung Dry",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 72,
+   "maxMult": 1,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Seizes an enemy in a mailed grip and squeezes, dealing 16 damage and using up every affliction you have on it for 50% more damage for each one."
+  },
+  {
+   "name": "Knuckle Rap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Raps an enemy with mailed knuckles, dealing 5 damage and making it [Bleeding] for 1 damage a second for 3 seconds, with a 25% chance to leave it [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Hold the Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "desc": "Locks your grip and your stance: for 12 seconds, you take 20% less damage."
+  },
+  {
+   "name": "Gauntlet That Fits",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.08
+    }
+   ],
+   "desc": "Conjures a fitted iron gauntlet: your armour rises by 8%, your critical chance rises by 4%, your critical hits deal 0.1x more, and each kill returns 3 health."
+  }
+ ]
+}

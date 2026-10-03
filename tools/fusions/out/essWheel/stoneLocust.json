@@ -1,0 +1,76 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swirling Swarm",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "desc": "Whips a swarm around you that deals 11 damage to every enemy within 3 tiles. Your afflictions on each enemy hit spread to every enemy within 4 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stripped to the Stalk",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A devouring strike that deals 28 damage, plus 5% of a boss's or elite's maximum health, and leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Plague Year Turns",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 2,
+   "summonDuration": 14,
+   "summonInterval": 0.5,
+   "summonRange": 96,
+   "summonMoves": true,
+   "castTime": 0.3,
+   "cooldown": 45,
+   "desc": "After a 0.3 second cast, summons a swarm that rolls along with you for 14 seconds. Twice a second it bites an enemy within 3 tiles and deals 2 damage."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "name": "Next Field Over",
+   "element": "nature",
+   "desc": "When you kill an enemy, 15% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

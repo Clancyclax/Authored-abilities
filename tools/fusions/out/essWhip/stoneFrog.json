@@ -1,0 +1,78 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sticky Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "strikes": 1,
+   "stunOnHit": 1.0,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A lash that sticks and deals 12 damage, [Stuns] the target for 1 second and leaves it [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Bog-Spray Crack",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "coneAngle": 0.7,
+   "consumeAffliction": true,
+   "desc": "A spraying crack deals 8 damage to every enemy in a cone 5 tiles ahead. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Spring Off the Coil",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 6,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Springs you 4 tiles forward. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Coiled Haunches",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 5. When you reach 5, they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

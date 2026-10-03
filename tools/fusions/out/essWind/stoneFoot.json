@@ -1,0 +1,76 @@
+{
+ "essence": "essWind",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "A Mile's Worth",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.6,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.04,
+   "scaleCap": 0.4,
+   "desc": "Sends a blade of wind at a target up to 8 tiles away that deals 30 damage, rising to 1.6 times that at full reach, plus 5% of a boss's or elite's maximum health. Its damage rises 4% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Road Grit Flung",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a fan of grit on the wind 4 tiles ahead, which deals 4 damage to everything in it. Each hit has a 25% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Easy Stride",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 50% for 20 seconds, and you move 15% faster for 5 seconds."
+  },
+  {
+   "name": "Paved and Pacing",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "wind",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "On paved ground, you deal 12% more damage. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

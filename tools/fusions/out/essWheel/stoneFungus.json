@@ -1,0 +1,91 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spore Pod Spiral",
+   "template": "volley",
+   "element": "poison",
+   "role": "long",
+   "base": 25,
+   "cooldown": 80,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 240,
+   "radius": 9,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "castTime": 0.5,
+   "isAoe": true,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "After a 0.5 second cast, looses 3 spore pods in a spread, each dealing 25 damage that ignores resistances and leaving the target [Poisoned] for 2 damage a second for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rolled Puffball",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Rolls a puffball at a target up to 6 tiles away. It deals 7 damage, rising to 1.5 times that at maximum range, and leaves the target [Poisoned] for 1 damage a second for 4 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Fairy Ring",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Raises a ring of mushrooms where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "name": "Rot Returns to Root",
+   "element": "plant",
+   "desc": "When one of your conditions on an enemy runs out, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

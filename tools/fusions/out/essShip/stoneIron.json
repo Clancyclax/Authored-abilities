@@ -1,0 +1,71 @@
+{
+ "essence": "essShip",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Cold Ram",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "ignoreResist": true,
+   "desc": "A ramming strike that deals 30 damage, ignores the target's resistances and leaves it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Anchor Dropped",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Drops a heavy weight where you stand: every enemy within 3 tiles takes a blow that deals 14 damage and is [Stunned] for 1.2 seconds."
+  },
+  {
+   "name": "Plate Over the Strakes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "rock",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 25,
+   "shieldStrikes": 5,
+   "shieldDuration": 10,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier that absorbs the next 25 damage and holds for 10 seconds, and raises your armour by 10%."
+  },
+  {
+   "name": "Unbending Hull",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "rock",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "arcane",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 8%, and you carry 10% arcane resistance."
+  }
+ ]
+}

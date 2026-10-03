@@ -1,0 +1,92 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Undertow",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "wallKind": "pull",
+   "wallLength": 128,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 24,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Lays a 4-tile current ahead of you for 4 seconds that drags nearby enemies inward. It deals 6 damage to each one it catches and slows it by 25% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lazy Bubble",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 200,
+   "radius": 10,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Blows a drifting bubble that deals 4 damage to the first enemy it meets. Each hit has a 30% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Warm Shallows",
+   "template": "selfHot",
+   "element": "water",
+   "healScope": "party",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "cooldown": 40,
+   "desc": "Restores 3 health a second to you and your party for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "movement",
+   "name": "Buoyant Bulk",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you drift across it without effort"
+    },
+    {
+     "rank": "silver",
+     "stat": "manaRegen",
+     "amount": 0.3,
+     "text": "and floating there gives something back"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.1,
+     "text": "and blows slide off your bulk"
+    }
+   ],
+   "desc": "You float and paddle across water and swamp as easily as solid ground."
+  }
+ ]
+}

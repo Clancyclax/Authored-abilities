@@ -1,0 +1,78 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Dead Until It Isn't",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "From a feigned stillness you bite, dealing 16 poison damage, stunning the target for 1.2 seconds and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Misdirected Fangs",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "confuse": {
+    "chance": 0.15,
+    "duration": 2
+   },
+   "desc": "Spits 3 fangs in a spread; each deals 4 poison damage to the first enemy it meets and has a 15% chance to turn it against its own side for 2 seconds."
+  },
+  {
+   "name": "Feigned Stillness",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 4,
+   "cooldown": 90,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Pocketed the Change",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 6
+   },
+   "desc": "When you inflict a condition on an enemy, you restore 6 mana. Once every 6 seconds."
+  }
+ ]
+}

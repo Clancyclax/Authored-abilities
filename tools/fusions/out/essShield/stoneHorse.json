@@ -1,0 +1,72 @@
+{
+ "essence": "essShield",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Thunder In",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 256,
+   "desc": "Gallops up to 8 tiles to the target and rears behind your shield, dealing 12 damage to every enemy within 3 tiles."
+  },
+  {
+   "name": "Run Them Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 84,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "consumeAfflictionsPer": 0.6,
+   "stackMult": 1,
+   "desc": "Rides down a target at or below 30% health with your shield, dealing 24 damage and consuming every affliction on it for 60% more damage each."
+  },
+  {
+   "name": "Lead the Charge",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Gathered Speed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "armorBonus": 0.05,
+   "desc": "Every few paces you cover, your physical damage rises by 25% for 4 seconds. Once every 8 seconds. Your armour is 5% higher."
+  }
+ ]
+}

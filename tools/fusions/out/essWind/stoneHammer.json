@@ -1,0 +1,76 @@
+{
+ "essence": "essWind",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Downburst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings a downdraught crashing onto every enemy within 4 tiles, dealing 32 damage that ignores armour. Every hit leaves the target [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Level Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "stunOnHit": 1.2,
+   "desc": "Flattens the target with a pressing blow of air that deals 14 damage, using up every affliction on it to add 1.2 times their remaining damage, and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Air Beaten Flat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "wind",
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 30,
+   "desc": "Beats the air flat into a wall 6 tiles long ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Anvil Rhythm",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. At 5 they all spend at once: a gust slams it for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

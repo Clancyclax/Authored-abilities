@@ -1,0 +1,69 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "False Echo",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "confuse": true,
+   "confuseChance": 0.3,
+   "confuseDuration": 3,
+   "desc": "Sings a misleading cone ahead of you, dealing 12 damage to everything caught in it and stunning them for 1 second. Each hit has a 30% chance to turn the target against its allies for 3 seconds."
+  },
+  {
+   "name": "Rise from Beneath",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "rangeBand": "melee",
+   "reachUnits": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Rises under the target, dealing 20 damage and consuming every affliction on it, adding 1.5 times their remaining damage to this blow. It only strikes a target at or below 25% health. 50% more critical chance against a target that has not yet bled."
+  },
+  {
+   "name": "Thrown-Back Echo",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "resonating",
+   "cooldown": 25,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 7,
+   "desc": "For 7 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead."
+  },
+  {
+   "name": "Played for Fools",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against enemies carrying a condition."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Feinting Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "confuse": {
+    "chance": 0.15,
+    "duration": 2
+   },
+   "desc": "Flicks a knife that deals 4 damage to the first enemy it meets, with a 15% chance to turn it against its allies for 2 seconds."
+  },
+  {
+   "name": "Behind the Smile",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "ignoreArmor": true,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "A stab that deals 28 damage, ignores armour and leaves the target 15% easier to wound for 6 seconds. Your movement speed rises 25% for 5 seconds after."
+  },
+  {
+   "name": "Card Up the Sleeve",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Loaded Odds",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Poleaxe",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "stunOnHit": 1.4,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "A crushing blow that deals 15 damage, stuns the target for 1.4 seconds and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Beating the Brush",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "ignoreArmor": true,
+   "range": 128,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hammers the ground, dealing 28 damage to every enemy within 4 tiles, ignoring armour, and leaves each [Marked] for 10 seconds."
+  },
+  {
+   "name": "Measured Backswing",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "buffStat": "critDamage",
+   "buffAmount": 0.35,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Increases your critical damage by 35% for 15 seconds."
+  },
+  {
+   "name": "Follow-Through",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your physical damage rises 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

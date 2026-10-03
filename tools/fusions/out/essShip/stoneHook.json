@@ -1,0 +1,63 @@
+{
+ "essence": "essShip",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Grappling Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "Throws a grapnel into the first enemy it meets that deals 13 damage, and you rush up to 7 tiles to it."
+  },
+  {
+   "name": "Gaffed Aboard",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Strikes only a target at or below 25% health, a threshold that rises with rank: it deals 22 damage and consumes every affliction on the target, adding 1.4 times their remaining damage."
+  },
+  {
+   "name": "Haul Them Alongside",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Barb in the Gunwale",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against a target below half health, your damage rises by 12%."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hush",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Speaks a word at the first enemy in reach that deals 12 damage, stuns it for 1 second and leaves it [Suppressed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Droning Lecture",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A monotone recitation that deals 3 damage to every enemy within 3 tiles. Each hit has a 25% chance to leave the target [Damped] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Recited at Leisure",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 40,
+   "desc": "Restores 4 mana a second for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Spoken Ward",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a stack on you, up to 5. At 5 they all spend at once and you gain a shield of 6% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

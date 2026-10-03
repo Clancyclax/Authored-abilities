@@ -1,0 +1,87 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Brow Shove",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "desc": "Leans your forehead into the target, dealing 14 damage, knocking it 3 tiles back and leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pinned to the Rock",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A horned strike that deals 32 damage, ignoring armour, leaves the target [Bleeding] for 2 damage a second for 6 seconds and [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Won't Budge",
+   "template": "statBuff",
+   "element": "earth",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "taunt": true,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "tauntRadius": 160,
+   "desc": "You plant yourself: the damage you take falls by 30% for 12 seconds, and up to 4 enemies within 5 tiles turn on you for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "name": "Dig In",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls low, you gain a shield of 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

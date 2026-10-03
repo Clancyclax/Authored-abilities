@@ -1,0 +1,79 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swarm Upon It",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "spreadAfflictions": 128,
+   "speed": 300,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Sends a knot of locusts into the first enemy it meets, dealing 9 damage and leaving it [Bleeding] for 1 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stripping Cloud",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 128,
+   "coneAngle": 0.9,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "desc": "Breathes out a cloud of locusts that deals 6 damage to everything in a cone 4 tiles ahead of you. It holds 4 charges, and every kill you make gives one back."
+  },
+  {
+   "name": "Loosed Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonDuration": 12,
+   "summonRange": 160,
+   "cooldown": 45,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to loose a swarm for 12 seconds that bites an enemy within 5 tiles for 3 damage every second."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

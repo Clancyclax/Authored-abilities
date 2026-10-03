@@ -1,0 +1,69 @@
+{
+ "essence": "essShip",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Heaving Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "Hurls a weighted line at an enemy up to 8 tiles away; it deals 28 damage, rising to 1.5 times that at full range, and is always a critical hit."
+  },
+  {
+   "name": "Wrench at the Helm",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up: a wrenching grip that deals 8 damage and leaves it 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Every Crew Pulling",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles deals 15% more damage for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Steady at the Wheel",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

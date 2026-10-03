@@ -1,0 +1,77 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Crop-Stripping Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "leech": 0.15,
+   "desc": "Strips everything within 4 tiles with the lash for 26 damage that always lands as a critical hit, and you heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Chewing Snaps",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargesMax": 4,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A gnawing snap deals 7 damage and leaves the target 10% easier to wound for 5 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Loosed Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "desc": "Cracks the lash and looses a devouring swarm for 10 seconds. Every second it bites an enemy within 4 tiles for 4 damage."
+  },
+  {
+   "name": "Gorge and Move On",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

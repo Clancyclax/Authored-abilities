@@ -1,0 +1,76 @@
+{
+ "essence": "essShip",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Butting Prow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 112,
+   "desc": "Rams an enemy so it deals 16 damage, knocks it back 3.5 tiles and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Tramping the Deck",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "isAoe": true,
+   "range": 64,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps all around you: every enemy within 2 tiles takes a blow that deals 4 damage, with a 25% chance to be [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Unshakeable Footing",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "rock",
+   "cooldown": 90,
+   "immunityDuration": 4,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Won't Be Shifted",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below half, you gain a ward worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

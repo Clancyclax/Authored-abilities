@@ -1,0 +1,82 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Puffball Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Stamps the ground, dealing 10 damage to every enemy within 3.5 tiles and leaving each [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each one spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Rotted Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A heavy kick that uses up every affliction you have on the target and deals 18 damage, 60% more for each one consumed, and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Sown Underfoot",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonRange": 64,
+   "summonBlast": 64,
+   "summonCharges": 2,
+   "summonDuration": 12,
+   "summonInterval": 0,
+   "summonArmDelay": 0.5,
+   "castTime": 0,
+   "desc": "Treads a spore pod into the ground that lasts 12 seconds. The first 2 enemies to come within 2 tiles set it off, and it deals 18 damage in a burst around it."
+  },
+  {
+   "name": "Thrush",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Each hit you land builds a stack on the target, up to 5. At 5 they all spend at once in a blow against that enemy. Unfed, the stacks fade."
+  }
+ ]
+}

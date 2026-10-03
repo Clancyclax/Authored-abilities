@@ -1,0 +1,74 @@
+{
+ "essence": "essWind",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Headlong Butt",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "wind",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 112,
+   "desc": "Butts the target with a gust behind the blow, dealing 14 damage, leaving it 15% easier to wound for 6 seconds and knocking it back 3.5 tiles."
+  },
+  {
+   "name": "Over the Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "wind",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1,
+   "executeLadder": false,
+   "desc": "Rams a target at or below 25% health on a driving gust, dealing 22 damage and using up every affliction on it to add 1 times their remaining damage to the blow."
+  },
+  {
+   "name": "Planted Hooves",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "wind",
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "resist": {
+    "element": "wind",
+    "amount": 0.15
+   },
+   "desc": "Raises your armour by 25% and your wind resistance by 15% for 10 seconds."
+  },
+  {
+   "name": "Weathered Crag",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "wind",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essShip",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snared in the Shrouds",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1.0,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "A lashing strike that deals 12 damage, leaves the target [Bleeding] for 1 damage a second for 4 seconds and [Stunned] for 1 second, then slows it by 25% for 3 seconds."
+  },
+  {
+   "name": "Plaited Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a plaited line into the first enemy it meets; it deals 7 damage with a 30% chance to leave it [Slowed] for 3 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Strung Rigging",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "desc": "Strings a wall of cordage 6 tiles long in front of you for 6 seconds, blocking enemies from passing."
+  },
+  {
+   "name": "Woven Hawser",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds, up to 8. At 8 they all spend at once on a shield worth 7% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

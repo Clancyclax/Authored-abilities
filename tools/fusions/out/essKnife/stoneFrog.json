@@ -1,0 +1,75 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Slick Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A quick stab with a venom-slicked knife that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Bank to Bank",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargeTo": 192,
+   "desc": "Springs up to 6 tiles onto the target and drives the knife in, dealing 14 damage, up to 1.3 times harder from the far end of that reach."
+  },
+  {
+   "name": "Sudden Spring",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 12,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Springs 4 tiles forward. Your movement speed rises 15% for 4 seconds after."
+  },
+  {
+   "name": "Lie in Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 3
+   },
+   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 30% for 3 seconds. Once every 10 seconds."
+  }
+ ]
+}

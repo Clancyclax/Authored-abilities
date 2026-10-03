@@ -1,0 +1,73 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Drumming Hooves",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Drums the water around you, dealing 7 damage to every enemy within 3 tiles. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Long-Ridden Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bruised"
+   },
+   "desc": "A strike that always lands as a critical hit, dealing 30 damage and leaving the target [Bruised] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "The Long Haul",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 50,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "desc": "Increases your stamina recovery by 50% for 15 seconds."
+  },
+  {
+   "name": "Tireless Swim",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, you regain 2 stamina a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

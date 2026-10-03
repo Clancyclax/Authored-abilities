@@ -1,0 +1,78 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Cloud of Blades",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 12,
+   "volleyCount": 5,
+   "volleySpread": 0.8,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "isAoe": true,
+   "spreadAfflictions": 112,
+   "desc": "Looses 5 knives in a wide spread, each dealing 5 damage. Your afflictions on a target it hits spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Gnawing Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "leech": 0.2,
+   "desc": "Flicks a knife that deals 4 damage to the first enemy it meets and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Stripping Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "cooldown": 30,
+   "summonKind": "swarm",
+   "summonDuration": 8,
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0,
+   "desc": "Looses a swarm of tiny blades for 8 seconds. Every second it strikes an enemy within 4 tiles for 3 damage."
+  },
+  {
+   "name": "Field Stripped Bare",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 20% of the damage you deal for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

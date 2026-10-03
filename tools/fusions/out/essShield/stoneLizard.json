@@ -1,0 +1,70 @@
+{
+ "essence": "essShield",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Still, Then Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 28,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 10,
+   "requiresTargetBelow": 0.25,
+   "desc": "Throws your shield at a target at or below 25% health, dealing 28 damage."
+  },
+  {
+   "name": "Sunflash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "light",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Turns the sun off the face of your shield through a cone 3 tiles ahead, dealing 10 damage, stunning everything in it for 1 second and leaving it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Bask Behind the Guard",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 24,
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "Restores 4 health a second to you for 6 seconds and lifts 1 condition from you. You have 10% fire resistance while it lasts."
+  },
+  {
+   "name": "Sunlit Bulwark",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "By day, your armour rises by 12%."
+  }
+ ]
+}

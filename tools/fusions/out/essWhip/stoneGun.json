@@ -1,0 +1,71 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Report at the Tip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "speed": 760,
+   "radius": 6,
+   "ignoreArmor": true,
+   "desc": "The tip breaks the sound barrier and deals 34 damage to the first enemy in a 10-tile line, ignoring its armour."
+  },
+  {
+   "name": "Deafening Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "coneAngle": 0.6,
+   "stunOnHit": 1.0,
+   "desc": "A crack that deals 10 damage to everything in a cone 4 tiles ahead and [Stuns] each for 1 second."
+  },
+  {
+   "name": "Hair Trigger",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "desc": "Increases your critical hit chance by 25% for 15 seconds."
+  },
+  {
+   "name": "Chambered Round",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next attack deals 40% more damage. Once every 8 seconds."
+  }
+ ]
+}

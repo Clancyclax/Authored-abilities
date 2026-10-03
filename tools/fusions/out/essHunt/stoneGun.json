@@ -1,0 +1,68 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clean Kill Shot",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "desc": "A shot that deals 34 damage, rising to 1.5 times that at its full reach of 10 tiles. It always lands as a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Startling Report",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "stunOnHit": 1,
+   "range": 160,
+   "coneAngle": 0.8,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "desc": "A deafening report that deals 10 damage to everything in a cone 5 tiles ahead of you and stuns each for 1 second."
+  },
+  {
+   "name": "Sighting In",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "You sight in on your quarry: for 15 seconds, your attacks and spells reach 54% further."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you go a while without a critical hit, your critical hit chance rises 25% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

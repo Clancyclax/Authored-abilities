@@ -1,0 +1,75 @@
+{
+ "essence": "essIron",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Ferrous Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Fires a spark of magnetised iron that deals 8 damage, with a 25% chance to leave the target [Muddled] for 3 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Grounding Pulse",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Earths the raw magic around you through cold iron, dealing 28 damage that ignores resistances to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Earth the Charge",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "arcane",
+   "cooldown": 45,
+   "healScope": "self",
+   "cleanseCount": 3,
+   "healOnUse": 12,
+   "desc": "Removes up to 3 conditions from you and restores 12 health."
+  },
+  {
+   "name": "Charge Into Plate",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 5
+   },
+   "desc": "Each time you spend mana, you gain a shield worth 8% of your maximum health for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

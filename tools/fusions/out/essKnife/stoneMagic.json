@@ -1,0 +1,72 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Wild Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Hurls a knife wrapped in raw arcana that deals 28 damage to the first enemy it meets, then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Spilled Arcana",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "desc": "Spills raw arcana off the blade, dealing 8 damage to every enemy within 2 tiles. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Floating Dagger",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "cooldown": 40,
+   "summonKind": "turret",
+   "summonDuration": 10,
+   "summonDmg": 4,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0,
+   "desc": "Sets a dagger floating beside you for 10 seconds. Every second it strikes an enemy within 6 tiles for 4 damage."
+  },
+  {
+   "name": "Stray Edges",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "desc": "When you spend mana, a crackling bolt leaps to the nearest enemy within 6 tiles, dealing 6 lightning damage. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essShark",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Unrelenting Jaws",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "A grinding bite that deals 30 damage, always lands as a critical hit and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Grinding Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A grinding turn that deals 7 damage to every enemy within 2.5 tiles of you, with a 30% chance to leave each one [Sundered] for 5 seconds. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Cold Plating",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Grey Hide",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.1,
+   "regenPerSec": 0.5,
+   "desc": "Your armour rises by 10%. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

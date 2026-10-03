@@ -1,0 +1,86 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ricochet Pellet",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "desc": "Flicks a pellet that deals 4 damage to the first enemy it meets, then bounces on to 2 more enemies within 3 tiles, each hit dealing 70% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Long Hop Landing",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 224,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Leaps you to a target up to 7 tiles away and bites it, dealing 13 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds. Its damage rises 6% for every 100 paces you have travelled since you last used it (max 30%)."
+  },
+  {
+   "name": "Gone in a Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 192,
+   "cooldown": 6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you instantly to a point up to 6 tiles away. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "name": "Next Host Waiting",
+   "element": "physical",
+   "desc": "When you kill an enemy, your next strike has 15% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Throat Grip",
+   "template": "abilityLock",
+   "element": "physical",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 18,
+   "stunOnHit": 1,
+   "range": 64,
+   "reachUnits": 64,
+   "rangeBand": "melee",
+   "lockSeconds": 3,
+   "desc": "Grabs one enemy within 2 tiles by the throat, dealing 9 damage, stunning it for 1 second and silencing it for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wring the Neck",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "requiresTargetBelow": 0.2,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "desc": "A twisting grip that deals 22 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to it. Usable only on an enemy at or below 20% health."
+  },
+  {
+   "name": "Unshaking Aim",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to steady yourself, then increases your critical hit chance by 20% for 10 seconds."
+  },
+  {
+   "name": "Closing Grip",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies below 50% health, you deal 10% more damage."
+  }
+ ]
+}

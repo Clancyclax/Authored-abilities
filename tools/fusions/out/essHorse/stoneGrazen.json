@@ -1,0 +1,91 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Running With the Herd",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Leads a stampede around you, dealing 28 damage to every enemy within 4 tiles. If it hits, every ally deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Shoulder to Shoulder",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A shouldering kick that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. Its damage rises 10% for each ally near you (max +40%)."
+  },
+  {
+   "name": "Barn Warmth",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 35,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Settles a warm patch where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Wintering Calm",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "nature",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "regenStamina",
+     "amount": 0.08,
+     "text": "the herd's pace never quite wears you out"
+    },
+    {
+     "rank": "silver",
+     "stat": "regenHealth",
+     "amount": 0.05,
+     "text": "and warmth comes back to you between fights"
+    },
+    {
+     "rank": "gold",
+     "stat": "damageReduction",
+     "amount": 0.05,
+     "text": "and you weather blows like the herd weathers winter"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1."
+  }
+ ]
+}

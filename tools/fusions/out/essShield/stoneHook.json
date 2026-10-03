@@ -1,0 +1,78 @@
+{
+ "essence": "essShield",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Catch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 0.8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Snags the target on the barbed rim of your shield, dealing 10 damage, stunning it for 0.8 seconds and leaving it [Bleeding] for 2 damage a second for 5 seconds. It moves 30% slower for 3 seconds."
+  },
+  {
+   "name": "Haul to the Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bossPct": 0.04,
+   "desc": "Casts a hooked line 6 tiles long ahead of you for 4 seconds, dragging every enemy near it in toward your shield and dealing 26 damage to each. A boss or elite caught also loses 4% of its maximum health."
+  },
+  {
+   "name": "Snag the Bolt",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "piercing",
+   "cooldown": 24,
+   "reflectKind": "spell",
+   "reflectFrac": 0.3,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, your shield catches elemental attacks: 30% of the elemental damage you take is sent back to whoever dealt it."
+  },
+  {
+   "name": "Caught and Covered",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Unseen First Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "speed": 420,
+   "radius": 6,
+   "desc": "A snap that deals 5 damage to the first enemy it meets, with 50% more critical chance against an enemy that has not been hurt yet."
+  },
+  {
+   "name": "Flank Opened",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "A slash from the side that deals 30 damage, is always a critical hit, and leaves the target 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Teeth Bared Late",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.35,
+   "buffDuration": 12,
+   "desc": "Increases your critical damage by 35% for 12 seconds."
+  },
+  {
+   "name": "Waiting Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you go a while without a critical hit, your critical hit chance rises by 20% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

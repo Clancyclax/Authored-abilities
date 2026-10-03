@@ -1,0 +1,73 @@
+{
+ "essence": "essShield",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Fling and Catch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.3,
+   "chargesMax": 3,
+   "desc": "Flings your shield at an enemy up to 6 tiles away and catches it on the return, dealing 8 damage, up to 1.3 times as much at full reach. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Final Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "range": 80,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "powerDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grips a target at or below 25% health behind your shield and wrenches it, dealing 26 damage, leaving it 10% easier to wound for 5 seconds and [Weakened] for 6 seconds."
+  },
+  {
+   "name": "Pull Clear",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "party",
+   "desc": "Removes 2 conditions from you and from every ally near you."
+  },
+  {
+   "name": "Steady Gauntlet",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 12
+    }
+   ],
+   "armorBonus": 0.06,
+   "desc": "Conjures a gauntlet for your shield hand: your maximum health rises by 12, your armour by 6% and your critical chance by 4%, your critical hits deal 0.1x more, and each kill returns 3 health."
+  }
+ ]
+}

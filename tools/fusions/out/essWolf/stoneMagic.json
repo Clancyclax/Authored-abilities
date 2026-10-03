@@ -1,0 +1,80 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Conjured Loper",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "escort": {
+    "dmg": 2,
+    "interval": 1.2,
+    "duration": 3
+   },
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Loper",
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "speed": 380,
+   "radius": 6,
+   "desc": "Sends a loping shape of arcane force that deals 4 damage to the first enemy it meets. It stays beside you for 3 seconds, striking for 2 every 1.2 seconds."
+  },
+  {
+   "name": "Light-Bending Howl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "A howl that deals 30 damage to every enemy within 4 tiles of you and ignores resistances."
+  },
+  {
+   "name": "Called From Candlelight",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "cooldown": 50,
+   "summonKind": "minion",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.4,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Packmate",
+   "desc": "Takes 0.5 seconds to call a packmate of arcane light that fights beside you for 15 seconds, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Arc to the Nearest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 224
+   },
+   "desc": "Each time you spend mana, a bolt leaps to the nearest enemy within 7 tiles, dealing 6 damage. Once every 3 seconds."
+  }
+ ]
+}

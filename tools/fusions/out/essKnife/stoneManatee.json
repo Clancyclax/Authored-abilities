@@ -1,0 +1,86 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Unhurried Nick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lazy cut that deals 5 damage and leaves the target 5% easier to wound for 4 seconds. Each hit has a 25% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Slow to Close",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "speed": 320,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 12,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Throws a knife that deals 10 damage to the first enemy it meets and leaves it [Bleeding] for 1 damage a second for 12 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Drift and Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Lingering Wake",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions runs out, you regain 2 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

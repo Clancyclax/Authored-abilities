@@ -1,0 +1,86 @@
+{
+ "essence": "essShark",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Miles of Hunger",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A thrown strike that deals 28 damage, rising to 1.5 times that at full reach, plus 5% of a boss's or elite's maximum health, and leaves the target [Bleeding] for 3 damage a second for 5 seconds. Its damage rises 6% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Stamping Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "A stamping turn that deals 4 damage to every enemy within 2.5 tiles of you, and you move 15% faster for 2 seconds after."
+  },
+  {
+   "name": "Ceaseless Stride",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 50% for 15 seconds, and your movement speed by 15% for the first 5 seconds."
+  },
+  {
+   "name": "Road-Fed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "Each time you cover enough ground, your damage heals you for 12% of what it deals for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

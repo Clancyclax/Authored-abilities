@@ -1,0 +1,75 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trample Round",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 72,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Circles you on pounding hooves, dealing 7 damage to every enemy within 2.5 tiles. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ridden Down",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "Rushes you to a target up to 7 tiles away and deals 15 damage, leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Never Short of Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.6,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 60% for 15 seconds. Your movement speed rises 15% for 5 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "name": "Another Lap Left",
+   "element": "physical",
+   "desc": "When your stamina runs out, you regain 20 stamina. Once every 30 seconds."
+  }
+ ]
+}

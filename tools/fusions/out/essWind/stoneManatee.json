@@ -1,0 +1,86 @@
+{
+ "essence": "essWind",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Unhurried Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rolls a slow swell of air outward, dealing 28 damage to every enemy within 4 tiles and leaving each [Slowed] for 5 seconds. When it hits, you and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Lazy Swirl",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 260,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a slow swirl of air into the first enemy it meets, dealing 4 damage. Each hit has a 30% chance to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Drifting Calm",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "hotPerSec": 2,
+   "hotDuration": 10,
+   "healScope": "party",
+   "cooldown": 35,
+   "desc": "Restores 2 health a second to you and your allies for 10 seconds."
+  },
+  {
+   "name": "Sink and Surface",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, you regain 4 health a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

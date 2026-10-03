@@ -1,0 +1,79 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Flushing Crack",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 192,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sharp report fills a cone 6 tiles ahead of you, which deals 12 damage to everything caught in it and stuns them for 1 second. Each has a 50% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Bead on the Straggler",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "speed": 600,
+   "radius": 6,
+   "desc": "Usable only on an enemy at or below 30% health. A shot that deals 26 damage to the first enemy it meets."
+  },
+  {
+   "name": "Off at the Shot",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Smoke Still Hanging",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your critical hit chance rises by 15% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

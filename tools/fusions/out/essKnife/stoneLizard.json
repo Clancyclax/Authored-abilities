@@ -1,0 +1,74 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Strike From Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A strike that deals 28 damage, always lands as a critical hit, and leaves the target [Poisoned] for 2 damage a second for 5 seconds and [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Cold Needle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 5,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up. Throws a chilled needle that deals 8 damage to the first enemy it meets."
+  },
+  {
+   "name": "Stock Still",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.2,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Basking Point",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "During the day, your damage rises by 10%."
+  }
+ ]
+}

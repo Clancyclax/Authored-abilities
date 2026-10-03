@@ -1,0 +1,82 @@
+{
+ "essence": "essShark",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lazy Mouthful",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 240,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Lobs a slow bubble that deals 4 damage to the first enemy it meets. 25% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "name": "Heavy Drift",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "knockback": 80,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "A weapon strike that deals 12 damage, knocks the target back 2.5 tiles, slows it by 25% for 3 seconds and leaves it [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Unhurried Mending",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "cooldown": 24,
+   "desc": "Restores 4 health a second to you for 6 seconds."
+  },
+  {
+   "name": "Thick Blubber",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When something other than fire hurts you, a shield worth 15% of your maximum health covers you for 4 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Venom Cloud Descends",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 25,
+   "cooldown": 100,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 4 tiles of you takes 25 poison damage, ignoring armour, and becomes [Diseased] for 10 seconds."
+  },
+  {
+   "name": "Swallow What's Left",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Spits venom that deals 18 poison damage to the first enemy it meets and uses up every affliction you have on it, dealing 60% more damage for each one."
+  },
+  {
+   "name": "Plague of Fangs",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "Releases a swarm of biting snakes for 10 seconds that strikes enemies within 3 tiles for 3 damage every second."
+  },
+  {
+   "name": "Strip the Field",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

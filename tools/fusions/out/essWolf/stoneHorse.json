@@ -1,0 +1,76 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Thunder Arrives",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "You crash in among them, which deals 28 damage to every enemy within 3.5 tiles and is always a critical hit. Its damage rises 5% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Snapping at the Gallop",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "chargesMax": 3,
+   "desc": "A running bite that deals 7 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds. Your movement speed rises 15% for 3 seconds after you use it. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Hoofbeats in Time",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Packmate",
+   "desc": "Increases your attack speed by 25% for 12 seconds. A packmate runs beside you for 8 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Long-Legged Stride",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "moveSpeedPct": 0.1,
+   "desc": "Your movement speed is permanently increased by 10%."
+  }
+ ]
+}

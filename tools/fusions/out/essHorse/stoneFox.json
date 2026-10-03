@@ -1,0 +1,72 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Feint Through the Ranks",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "shadow",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 24,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "confuseDuration": 4,
+   "duration": 4,
+   "maxTargets": 3,
+   "confuseDamageFrac": 1,
+   "confuseDamagePct": 1,
+   "desc": "Rushes up to 6 tiles into the enemy line, dealing 10 damage and turning up to 3 enemies within 3.5 tiles against each other for 4 seconds."
+  },
+  {
+   "name": "Doubling Back",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "stackMult": 1.5,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Wheels back on an enemy at or below 25% health, a threshold that rises with rank, and deals 20 damage, using up every affliction on it to add 1.5 times their remaining damage. It has 30% more critical chance against a target that has not yet bled."
+  },
+  {
+   "name": "Laid False Trail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and raises your movement speed by 20% while it holds. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Moonlit Jinking",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "shadow",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "At night, your dodge chance rises by 12%. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

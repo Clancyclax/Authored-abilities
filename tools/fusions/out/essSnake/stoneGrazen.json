@@ -1,0 +1,68 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Rouse the Herd",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A bite at an enemy up to 6 tiles away that deals 28 poison damage, rising to 1.4 times that at full reach. When it hits, every ally near you deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Strike From Among Them",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Every enemy within 2.5 tiles of you takes 7 poison damage. Its damage rises 8% for each ally near you, up to 32%. Holds 3 charges; each kill gives one back."
+  },
+  {
+   "name": "Hidden in the Herd",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "nature",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "cooldown": 36,
+   "desc": "Veils you and your nearby allies for 6 seconds, moving 10% faster. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Borrowed Body Heat",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%, and you regenerate 0.5 health a second."
+  }
+ ]
+}

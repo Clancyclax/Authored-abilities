@@ -1,0 +1,71 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drop-Forge Rhythm",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "desc": "A quick downstroke that deals 5 damage and leaves the target 5% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pressed Flat",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Rolls a crushing weight out around you that deals 32 damage to every enemy within 3 tiles, ignoring their armour."
+  },
+  {
+   "name": "Full Swing Wound Up",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your critical damage by 30% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "name": "Each Blow Drives On",
+   "element": "blunt",
+   "desc": "When you land a critical hit, your physical damage rises by 25% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

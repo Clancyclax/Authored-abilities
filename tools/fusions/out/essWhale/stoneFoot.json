@@ -1,0 +1,81 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Herald of the Route",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "resonating",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 300,
+   "maxMult": 2,
+   "reachPct": 0.5,
+   "rangeBand": "long",
+   "reachUnits": 300,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A thrown call that deals 30 damage and hits harder the further it travels, up to 2 times its damage at maximum range. Its reach is 50% longer. When it hits, every ally strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Wake Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 120,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a short wave ahead of you, dealing 4 damage to everything in the cone. Its damage rises 5% for every 100 paces you run before using it (max +30%). Each hit has a 25% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Measured Breathing",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "cooldown": 45,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 10,
+   "allyScaling": {
+    "per": 0.09,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Restores 4 stamina a second for 10 seconds. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Migratory Stride",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "water",
+   "moveSpeedPct": 0.1,
+   "desc": "Your movement speed is permanently increased by 10%."
+  }
+ ]
+}

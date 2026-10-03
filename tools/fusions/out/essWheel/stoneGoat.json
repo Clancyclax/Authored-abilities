@@ -1,0 +1,80 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lowered-Horn Spin",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Spins with your horns lowered, dealing 14 damage to every enemy within 2.5 tiles and knocking each one back 3 tiles. Its damage rises 6% for every 100 paces you have travelled since you last used it (max 30%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Steady Headbutts",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.08,
+    "duration": 2
+   },
+   "desc": "Butts the target with your horns for 5 damage and leaves it [Bleeding] for 1 damage a second for 3 seconds. Your movement speed rises 8% for 2 seconds after each butt."
+  },
+  {
+   "name": "Sure Footing at Speed",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Raises your armour by 25% for 10 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackScale": 1,
+   "name": "Rolls With It",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackOn": "self",
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

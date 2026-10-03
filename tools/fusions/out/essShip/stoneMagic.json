@@ -1,0 +1,69 @@
+{
+ "essence": "essShip",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Ley Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "isAoe": true,
+   "range": 64,
+   "aoeBand": "small",
+   "desc": "Your wake flares with raw arcana: every enemy within 2 tiles of you takes a pulse that deals 4 damage."
+  },
+  {
+   "name": "Spellbound Ballista",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "speed": 380,
+   "radius": 10,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "desc": "Fires an arcane bolt into the first enemy it meets that deals 30 damage and ignores its resistances."
+  },
+  {
+   "name": "Sails Full of Mana",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 40,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 mana a second for 8 seconds."
+  },
+  {
+   "name": "Arcane Ballast",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When you spend mana, you gain a ward worth 15% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

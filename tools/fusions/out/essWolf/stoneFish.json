@@ -1,0 +1,77 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Snatch at the Ford",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.06,
+   "scaleCap": 0.24,
+   "desc": "A snap into the shallows that deals 5 damage, rising to 1.5 times that at its full reach of 5 tiles. Its damage rises 6% for each ally within 5.5 tiles of you (max 24%)."
+  },
+  {
+   "name": "Wheeling Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "confuse": {
+    "chance": 0.25,
+    "duration": 3
+   },
+   "desc": "The pack wheels around you as one school, which deals 12 damage to every enemy within 3 tiles and knocks them back 2.5 tiles. Each has a 25% chance to turn on its neighbours for 3 seconds."
+  },
+  {
+   "name": "Slick as the Shallows",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Increases your dodge chance by 25% for 10 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Silver Flicker",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 8. The next ability you use spends them all: you move and attack 3% faster per stack (22% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

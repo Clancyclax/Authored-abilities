@@ -1,0 +1,77 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Every Step Stings",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "cursedMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A bite that deals 7 poison damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and lays [Cursed Step] on it for 6 seconds, so every step it takes costs it blood. Holds 4 charges; each kill gives one back."
+  },
+  {
+   "name": "Followed for Miles",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 9,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Spits a long venom shot that deals 28 poison damage and ignores armour. Its damage rises 10% for every 100 paces you have run since you last used it, up to 50%."
+  },
+  {
+   "name": "Shed the Road Dust",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "You shed your worn outer skin: you regain 10 health at once and restore 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Warm Road Basking",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "On paved ground, you deal 12% more damage."
+  }
+ ]
+}
