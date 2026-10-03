@@ -1,0 +1,76 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Hopping Rivet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a rivet that deals 4 damage to the first enemy it meets, then hops to 2 more enemies within 3 tiles, each hop dealing 50% of the original damage."
+  },
+  {
+   "name": "Floor-Shaking Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "desc": "Drops your full weight onto the ground, dealing 13 damage to every enemy within 3 tiles and knocking them back 3 tiles."
+  },
+  {
+   "name": "Landing Brace",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "blunt",
+   "cooldown": 30,
+   "armorBonus": 0.25,
+   "buffDuration": 8,
+   "blinkOnUse": 96,
+   "desc": "You hop 3 tiles forward and land braced, raising your armour by 25% for 8 seconds."
+  },
+  {
+   "name": "Height Into Weight",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "Each time you cover enough ground, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

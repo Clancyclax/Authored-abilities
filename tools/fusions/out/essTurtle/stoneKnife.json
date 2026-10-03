@@ -1,0 +1,69 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Edge Under the Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hpCostPct": 0.04,
+   "desc": "Draws an edge from under the rim of your shell for a strike that deals 8 damage and leaves the target [Bleeding] for 1 damage a second for 5 seconds. Each use costs 4% of your maximum health."
+  },
+  {
+   "name": "From Inside the Shell",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "speed": 480,
+   "radius": 5,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "desc": "Flicks a blade from inside your shell that deals 24 damage to the first enemy it meets. It only lands on a target at or below 25% health."
+  },
+  {
+   "name": "Bait the Lunge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 15,
+   "taunt": true,
+   "tauntDuration": 5,
+   "tauntMax": 3,
+   "tauntRadius": 128,
+   "desc": "Your critical damage rises by 40% for 15 seconds, and up to 3 enemies within 4 tiles are drawn onto you for 5 seconds."
+  },
+  {
+   "name": "Edge Kept Sheathed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "slashing",
+   "buffKind": "crit",
+   "amount": 0.08,
+   "armorBonus": 0.06,
+   "desc": "Your critical strike chance rises by 8%. Your armour rises by 6%."
+  }
+ ]
+}

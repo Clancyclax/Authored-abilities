@@ -1,83 +1,82 @@
 {
- "essence": "essHair",
- "stone": "stoneFish",
- "fusions": [
-  {
-   "name": "Darting Skein",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "water",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "volleyCount": 4,
-   "volleySpread": 0.5,
-   "isAoe": true,
-   "speed": 300,
-   "radius": 7,
-   "range": 220,
-   "reachUnits": 292,
-   "rangeBand": "medium",
-   "hasteOnUse": {
-    "pct": 0.1,
-    "duration": 2
-   },
-   "desc": "Looses 4 strands at once, spread apart; each deals 3 damage. You move 10% faster for 2 seconds after using it."
-  },
-  {
-   "name": "Landed Catch",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "water",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 12,
-   "range": 224,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "stunOnHit": 1.0,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.6,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "maxMult": 1.5,
-   "desc": "Casts a line that deals 14 damage to one enemy within 7 tiles and stuns it for 1 second. Each hit has a 60% chance of [Slowed] for 4 seconds. Deals up to 1.5 times as much at maximum range."
-  },
-  {
-   "name": "Slipped Knot",
-   "kind": "active",
-   "category": "defensive",
-   "template": "reflectWard",
-   "element": "water",
-   "cooldown": 30,
-   "reflectKind": "debuff",
-   "reflectFrac": 0.2,
-   "reflectChance": 0.5,
-   "buffDuration": 8,
-   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
-  },
-  {
-   "name": "Silver Skein",
-   "kind": "passive",
-   "category": "summon",
-   "template": "summonBonded",
-   "element": "water",
-   "familiarDmg": 3,
-   "familiarRange": 150,
-   "familiarInterval": 1.2,
-   "familiarFamily": "slime",
-   "familiarCreatureName": "Shoalmate",
-   "bindOnHit": {
-    "slowPct": 0.15,
-    "duration": 2
-   },
-   "desc": "Calls a bonded familiar of water that fights beside you, striking for 3 damage every 1.2 seconds. Anything it strikes moves 15% slower for 2 seconds."
-  }
- ]
+  "essence": "essHair",
+  "stone": "stoneFish",
+  "fusions": [
+    {
+      "name": "Drawn Seine",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 160,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 1.5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Hauls a net of strands through a cone ahead of you that deals 4 damage to everything caught in it. Each hit has a 25% chance to leave the target [Pinned] for 1.5 seconds."
+    },
+    {
+      "name": "Landed Catch",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 12,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.6,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "maxMult": 1.5,
+      "desc": "Casts a line of hair that deals 14 damage to one enemy within 7 tiles and stuns it for 1 second, rising to 1.5 times that at full reach. Each hit has a 60% chance of [Slowed] for 4 seconds."
+    },
+    {
+      "name": "Slipped Knot",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "water",
+      "cooldown": 30,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.5,
+      "buffDuration": 7,
+      "desc": "For 7 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+    },
+    {
+      "name": "Tangled Minnow",
+      "kind": "passive",
+      "category": "summon",
+      "template": "summonBonded",
+      "element": "water",
+      "familiarDmg": 3,
+      "familiarRange": 160,
+      "familiarInterval": 1.2,
+      "familiarFamily": "fish",
+      "familiarCreatureName": "Strandfin",
+      "bindOnHit": {
+        "slowPct": 0.15,
+        "duration": 2
+      },
+      "desc": "A bonded fish woven from your strands swims beside you, striking an enemy within 5 tiles for 3 damage every 1.2 seconds. Anything it strikes moves 15% slower for 2 seconds."
+    }
+  ]
 }

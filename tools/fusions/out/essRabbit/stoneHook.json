@@ -1,0 +1,79 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Reel and Rip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Hooks the target with a barbed line and rips it free, dealing 16 piercing damage and using up every affliction you have on it for 60% more damage each. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Barbed Scratch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.1,
+    "duration": 2
+   },
+   "desc": "A scratch that deals 4 piercing damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and slows it by 10% for 2 seconds."
+  },
+  {
+   "name": "Snare Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Lays a snare line 5 tiles long for 5 seconds that drags every enemy near it inward. You move 20% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Wrong End of It",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying one of your afflictions, your dodge chance rises by 10%."
+  }
+ ]
+}

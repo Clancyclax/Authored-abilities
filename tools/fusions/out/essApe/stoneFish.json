@@ -46,37 +46,42 @@
    "desc": "Flicks a bolt of water into the first enemy it meets, dealing 4 damage. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage. Its reach is 40% longer."
   },
   {
-   "name": "Sent Back",
+   "name": "Wriggle Free",
    "kind": "active",
-   "category": "defensive",
-   "template": "reflectWard",
+   "category": "restore",
+   "template": "cleanse",
    "element": "water",
-   "cooldown": 24,
-   "reflectKind": "debuff",
-   "reflectFrac": 0.2,
-   "reflectChance": 0.5,
-   "buffDuration": 8,
-   "desc": "Each affliction laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "party",
+   "cleanseTag": "control",
+   "desc": "Frees you and every ally within 5 tiles from up to 2 control conditions each."
   },
   {
-   "name": "Slick Retreat",
+   "name": "Shoal Closes Ranks",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",
    "element": "water",
    "isTriggered": true,
-   "cooldown": 20,
+   "cooldown": 30,
    "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 20
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
    },
    "effect": {
     "kind": "wardBurst",
     "frac": 0.2,
     "duration": 5
    },
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
    "dodgeBonus": 0.05,
-   "desc": "When anything but fire hurts you, a shield worth 20% of your maximum health covers you for 5 seconds. Once every 20 seconds. You have 5% more dodge chance."
+   "desc": "When your health falls below 35%, a shield worth 20% of your maximum health covers you for 5 seconds and a shoal escort fights beside you for 8 seconds, striking for 3 damage every 1.2 seconds. Once every 30 seconds. You have 5% more dodge chance."
   }
  ]
 }

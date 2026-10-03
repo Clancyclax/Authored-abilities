@@ -1,0 +1,81 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Rotted Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Usable only on an enemy at or below 30% health. A strike that deals 16 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Riffled Spores",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Riffles open a mildewed volume, releasing spores in a cone 5 tiles ahead that deals 26 damage to everything in it, ignores resistances and leaves each target [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Mouldering Stack",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 15,
+   "castTime": 0.5,
+   "cooldown": 50,
+   "desc": "Takes 0.5 seconds to set down a mouldering stack of books beside you for 15 seconds. It sheds spores on enemies within 4 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Spotted Endpapers",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land leaves a spot of mould on that enemy, up to 8. At 8 they all burst at once: a blow strikes that enemy for 27% of your weapon damage per spot (218% at full). Unfed, a spot fades every 4 seconds."
+  }
+ ]
+}

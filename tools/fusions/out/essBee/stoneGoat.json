@@ -1,81 +1,97 @@
 {
- "essence": "essBee",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Headbutt Ring",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "medium",
-   "knockback": 112,
-   "base": 14,
-   "cooldown": 16,
-   "range": 110,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "scaleOn": "alliesNear",
-   "scalePer": 0.08,
-   "scaleCap": 0.32,
-   "desc": "Every enemy within 3.5 tiles takes 14 damage and is knocked back 3.5 tiles. Its damage rises 8% for each ally nearby (max +32%)."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Sheer Thrust",
-   "template": "sunderStrike",
-   "element": "piercing",
-   "role": "long",
-   "bossPct": 0.05,
-   "base": 28,
-   "cooldown": 100,
-   "range": 90,
-   "reachUnits": 90,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.15,
-    "duration": 8
-   },
-   "desc": "A heavy stab that deals 28 damage plus 5% of a boss or elite maximum health, and leaves the target 15% easier to wound for 8 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "name": "Stand Fast",
-   "element": "rock",
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "cooldown": 30,
-   "shieldAmount": 20,
-   "shieldStrikes": 4,
-   "shieldDuration": 8,
-   "armorBonus": 0.06,
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 12
-   },
-   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds, and hardens your armour by 6%. Stingers fight beside you for 12 seconds, striking for 3 every 1.4 seconds."
-  },
-  {
-   "kind": "passive",
-   "name": "Footing Held",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "rock",
-   "stackShape": "ledger",
-   "stackBuild": "taken",
-   "stackPay": "ward",
-   "stackCap": 6,
-   "stackDecay": 10,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 0.8,
-   "stackIcon": "stackWard",
-   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (34% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
-  }
- ]
+  "essence": "essBee",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Headbutt Ring",
+      "template": "aoeRing",
+      "element": "piercing",
+      "role": "medium",
+      "knockback": 112,
+      "base": 14,
+      "cooldown": 16,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "A butting rush of stings deals 14 damage to every enemy within 3.5 tiles, knocks them back 3.5 tiles and makes them [Poisoned] for 2 damage a second for 4 seconds.",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      }
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Stubborn Barb",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "long",
+      "bossPct": 0.05,
+      "base": 28,
+      "cooldown": 100,
+      "range": 90,
+      "reachUnits": 90,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 8
+      },
+      "desc": "A horned sting that deals 28 damage plus 5% of a boss or elite maximum health, makes the target [Poisoned] for 3 damage a second for 6 seconds and leaves it 15% easier to wound for 8 seconds.",
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      }
+    },
+    {
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "name": "Stand Fast",
+      "element": "rock",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "cooldown": 30,
+      "shieldAmount": 20,
+      "shieldStrikes": 4,
+      "shieldDuration": 8,
+      "armorBonus": 0.06,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.4,
+        "duration": 12
+      },
+      "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds, and hardens your armour by 6%. Stingers fight beside you for 12 seconds, striking for 3 every 1.4 seconds."
+    },
+    {
+      "kind": "passive",
+      "name": "Footing Held",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "rock",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "ward",
+      "stackCap": 6,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.8,
+      "stackIcon": "stackWard",
+      "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (34% at full) before your health takes damage. Unfed, a stack fades every 10 seconds. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4.",
+      "allyScaling": {
+        "per": 0.11,
+        "max": 4,
+        "range": 180
+      }
+    }
+  ]
 }

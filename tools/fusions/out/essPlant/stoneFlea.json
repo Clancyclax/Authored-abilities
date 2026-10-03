@@ -1,0 +1,71 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Hitchhiker Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "leech": 0.2,
+   "desc": "Flicks a hooked seed that leaps onto the first enemy it meets and deals 4 damage. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Mistletoe Latch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "A parasitic shoot latches onto one enemy and deals 18 damage, using up every affliction you have on it; each one used up adds 60% more damage. The target is left 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Sprung Pod",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "plant",
+   "cooldown": 6,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "A seed pod bursts beneath you and flings you to a point up to 7 tiles away. Your movement speed rises 15% for 4 seconds afterwards."
+  },
+  {
+   "name": "Host Hopping",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 15% of the damage you deal for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

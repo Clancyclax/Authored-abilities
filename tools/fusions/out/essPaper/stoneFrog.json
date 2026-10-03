@@ -1,0 +1,89 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Jumping Fold",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Flicks a folded jumper that springs into the first enemy it meets and deals 7 damage. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Pulp Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits wet pulp in a narrow cone 4 tiles ahead that deals 3 damage to everything in it, with a 30% chance to leave each target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Sprung Crease",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 160,
+   "cooldown": 7,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Springs you 5 tiles forward off a folded crease. Your movement speed rises 15% for 3 seconds afterward."
+  },
+  {
+   "name": "Lily-Pad Leaves",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you skip across it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and you are off the leaf before the blow lands"
+    },
+    {
+     "rank": "gold",
+     "stat": "manaRegen",
+     "amount": 0.3,
+     "text": "and the damp feeds the ink"
+    }
+   ],
+   "desc": "Your pages hold you up: you walk on water and swamp as on solid ground."
+  }
+ ]
+}

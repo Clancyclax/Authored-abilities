@@ -1,0 +1,74 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Ley Spore Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 360,
+   "radius": 8,
+   "range": 224,
+   "isAoe": true,
+   "ignoreResist": true,
+   "desc": "Looses 5 spores of raw mana at once, spread apart, each dealing 26 damage that ignores resistances."
+  },
+  {
+   "name": "Mana Thorn",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "spiritDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a thorn of mana at one enemy up to 5 tiles away, dealing 4 damage, more the further it flies, up to 1.5 times, with a 30% chance to leave it [Dimmed] for 4 seconds."
+  },
+  {
+   "name": "Forced Bloom",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "plant",
+   "cooldown": 90,
+   "resetCount": 1,
+   "desc": "Forces one of your other abilities into early flower, clearing its cooldown; it is chosen at random from those still waiting."
+  },
+  {
+   "name": "Ley-Fed Roots",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 3
+   },
+   "desc": "Each time you spend mana, you regain 2 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

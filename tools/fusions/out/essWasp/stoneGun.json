@@ -1,0 +1,88 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Single Report",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "speed": 700,
+   "radius": 5,
+   "reachUnits": 400,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "TBD"
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Buckshot Swarm",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "range": 150,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Sighted In",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 0,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Hang Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 3
+   },
+   "desc": "TBD"
+  }
+ ]
+}

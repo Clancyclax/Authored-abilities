@@ -1,0 +1,87 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Final Syllable",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "castTime": 1.2,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "isAoe": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "TBD"
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Recited Dose",
+   "template": "imbueStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "strikes": 2,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Quickened Tongue",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Rehearsed Line",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "TBD"
+  }
+ ]
+}

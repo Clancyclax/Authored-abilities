@@ -1,0 +1,84 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Arcane Hum",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "range": 140,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "TBD"
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unwarded Venom",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Spell Returned",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 0.4,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "TBD"
+  },
+  {
+   "name": "Mana From Welts",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 4
+   },
+   "desc": "TBD"
+  }
+ ]
+}

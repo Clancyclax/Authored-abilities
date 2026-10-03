@@ -1,0 +1,71 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Lignum Vitae",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A blow with dense, iron-hard wood that deals 30 damage, ignores armour, and leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Rustleaf Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes rust-coloured spores across a cone 3.5 tiles long, dealing 4 damage with a 40% chance to leave each enemy [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Petrified Bark",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "rock",
+   "cooldown": 120,
+   "immunityDuration": 6,
+   "healOnUse": 12,
+   "desc": "For 6 seconds, blows that reach you deal no damage and no condition can take hold of you; transcendent damage still lands. You restore 12 health."
+  },
+  {
+   "name": "Slow-Grown Grain",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "plant",
+   "cooldownReduction": 0.05,
+   "armorBonus": 0.1,
+   "regenPerSec": 0.5,
+   "desc": "Your armour rises by 10%, every ability you have comes round 5% sooner, and you regenerate 0.5 health a second."
+  }
+ ]
+}

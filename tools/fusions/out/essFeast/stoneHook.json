@@ -1,78 +1,85 @@
 {
- "essence": "essFeast",
- "stone": "stoneHook",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "name": "Barbed Draw",
-   "element": "piercing",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "maxMult": 1.6,
-   "consumeAffliction": true,
-   "leech": 0.3,
-   "bindOnHit": {
-    "slowPct": 0.3,
-    "duration": 2
-   },
-   "desc": "A barbed cast on a target up to 6 tiles away that deals 8 damage, rising to 1.6 times that at the end of its reach, and slows it by 30% for 2 seconds. You heal for 30% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "name": "Landing the Big One",
-   "element": "piercing",
-   "role": "long",
-   "base": 26,
-   "cooldown": 90,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "bossPct": 0.06,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 6
-   },
-   "leech": 0.2,
-   "desc": "A heavy hooked blow that deals 26 damage and leaves the target 10% easier to wound for 6 seconds. Against a boss or an elite it also deals 6% of their maximum health. You heal for 20% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "name": "Barbed Welcome",
-   "element": "piercing",
-   "cooldown": 30,
-   "buffDuration": 8,
-   "thornsFrac": 0.6,
-   "lifeOnKill": 5,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it, leaving them [Bleeding] for 2 damage a second for 4 seconds. Each kill you make while it is active restores 5 health."
-  },
-  {
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "name": "Caught Fast",
-   "element": "piercing",
-   "condition": "vsDebuffed",
-   "bonusKind": "dmg",
-   "amount": 0.15,
-   "regenPerSec": 0.5,
-   "desc": "Against an enemy carrying an affliction, your damage rises by 15%. You also regenerate 0.5 health a second, permanently."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneHook",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "name": "Snag and Reel",
+      "element": "piercing",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.6,
+      "consumeAffliction": true,
+      "leech": 0.3,
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 2
+      },
+      "desc": "A barbed cast on a target up to 6 tiles away that deals 8 damage, rising to 1.6 times that at the end of its reach, and slows it by 30% for 2 seconds. You heal for 30% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "name": "Landing the Big One",
+      "element": "piercing",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "bossPct": 0.06,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 6
+      },
+      "leech": 0.2,
+      "desc": "A heavy hooked blow that deals 26 damage and leaves the target 10% easier to wound for 6 seconds. Against a boss or an elite it also deals 6% of their maximum health. You heal for 20% of the damage dealt."
+    },
+    {
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "name": "Hung to Drain",
+      "element": "piercing",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.6,
+      "lifeOnKill": 5,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it, leaving them [Bleeding] for 2 damage a second for 4 seconds. Each kill you make while it is active restores 5 health."
+    },
+    {
+      "name": "Line Taut",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "element": "piercing",
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.2,
+        "duration": 4
+      },
+      "desc": "Each time you afflict an enemy, 20% of the damage you deal heals you for 4 seconds. Once every 10 seconds."
+    }
+  ]
 }

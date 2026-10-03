@@ -1,0 +1,78 @@
+{
+ "essence": "essGun",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Close Ranks",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Fires a round that deals 7 damage, 10% more for each ally near you (max +40%). It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Rallying Blast",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 176,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Fires a broad blast ahead of you, dealing 30 damage to everything in it. If it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Pass the Cartridges",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Rested Aim",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When your stamina is full, your critical hit chance rises by 20% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

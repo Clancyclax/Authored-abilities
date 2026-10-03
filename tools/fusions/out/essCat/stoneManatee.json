@@ -1,80 +1,76 @@
 {
- "essence": "essCat",
- "stone": "stoneManatee",
- "fusions": [
-  {
-   "name": "Lazy Slap",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "water",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.8,
-   "spammable": true,
-   "isAoe": true,
-   "range": 64,
-   "aoeBand": "small",
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.35,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A slow slap that deals 3 damage to every enemy within 2 tiles, with a 35% chance to leave each [Slowed] for 4 seconds."
-  },
-  {
-   "name": "Gentle Nudge",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "knockback": 64,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 3
-   },
-   "desc": "A nudge of water that deals 12 damage and pushes the target back 2 tiles. You move 15% faster for 3 seconds after using it."
-  },
-  {
-   "name": "Slow Current",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "water",
-   "cooldown": 55,
-   "buffStat": "regenStamina",
-   "buffAmount": 0.5,
-   "buffDuration": 18,
-   "desc": "Increases your stamina recovery by 50% for 18 seconds."
-  },
-  {
-   "name": "Unhurried Ease",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "fullHealth",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 2,
-    "duration": 6
-   },
-   "desc": "When your health is full, you regain 2 stamina a second for 6 seconds. Once every 15 seconds."
-  }
- ]
+  "essence": "essCat",
+  "stone": "stoneManatee",
+  "fusions": [
+    {
+      "name": "Lazy Slap",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "isAoe": true,
+      "range": 64,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.35,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A slow slap that deals 3 damage to every enemy within 2 tiles, with a 35% chance to leave each [Slowed] for 4 seconds."
+    },
+    {
+      "name": "Gentle Nudge",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "knockback": 64,
+      "desc": "A nudge of water that deals 12 damage and pushes the target back 2 tiles."
+    },
+    {
+      "name": "Afternoon Doze",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "water",
+      "cooldown": 40,
+      "desc": "Restores 2 health a second to you for 12 seconds.",
+      "hotPerSec": 2,
+      "hotDuration": 12,
+      "healScope": "self"
+    },
+    {
+      "name": "Unhurried Ease",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "fullHealth",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 2,
+        "duration": 6
+      },
+      "desc": "When your health is full, you regain 2 stamina a second for 6 seconds. Once every 15 seconds."
+    }
+  ]
 }

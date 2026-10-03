@@ -1,0 +1,71 @@
+{
+ "essence": "essHand",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Tagged Quarry",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "maxMult": 1.2,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A light touch on one enemy up to 3 tiles away that deals 4 damage, rising to 1.2 times that at full reach, with a 30% chance to leave the target [Marked] for 8 seconds."
+  },
+  {
+   "name": "Throat Grab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Closes your grip on a fleeing enemy's throat, dealing 26 damage and leaving it 10% easier to wound for 5 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Close for the Kill",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 50,
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your critical damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Scent of Weakness",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies at low health, you deal 12% more damage."
+  }
+ ]
+}

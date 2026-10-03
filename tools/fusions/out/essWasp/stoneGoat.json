@@ -1,0 +1,83 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Butt Out of Spite",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.9,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "TBD"
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ledge Clearing",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Stand the Crag",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "rock",
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "armorBonus": 0.15,
+   "desc": "TBD"
+  },
+  {
+   "name": "Won't Be Moved",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "armorBonus": 0.06,
+   "desc": "TBD"
+  }
+ ]
+}

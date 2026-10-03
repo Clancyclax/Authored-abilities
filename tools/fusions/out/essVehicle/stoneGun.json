@@ -1,0 +1,81 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Turret Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Fires one round from the gun mounted on your ride into the first enemy in its path. It deals 30 damage and ignores armour."
+  },
+  {
+   "name": "Drive-By Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 480,
+   "radius": 5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Sprays 3 shots at once, spread apart; each deals 3 damage. You move 10% faster for 2 seconds after."
+  },
+  {
+   "name": "Limbered Cannon",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 60,
+   "summonKind": "turret",
+   "summonDmg": 6,
+   "summonInterval": 1.5,
+   "summonDuration": 15,
+   "summonRange": 224,
+   "castTime": 0,
+   "desc": "Unhitches a cannon beside you for 15 seconds. It fires at enemies within 7 tiles and deals 6 damage every 1.5 seconds."
+  },
+  {
+   "name": "Backfiring Exhaust",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 256
+   },
+   "desc": "Each time you spend stamina, your engine backfires at the nearest enemy within 8 tiles; it deals 7 damage. Once every 4 seconds."
+  }
+ ]
+}

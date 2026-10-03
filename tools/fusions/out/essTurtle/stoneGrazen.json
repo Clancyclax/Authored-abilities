@@ -1,0 +1,80 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd at Your Back",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Leads a shove into the cone ahead of you, which deals 10 damage to everything in it and knocks it back 2.5 tiles. Its damage rises 8% for each ally near you (max +32%)."
+  },
+  {
+   "name": "Lead Beast's Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A slow, heavy blow that deals 30 damage and leaves the target 15% easier to wound for 8 seconds. Every ally strikes 20% harder for 12 seconds after it lands."
+  },
+  {
+   "name": "Huddle for Warmth",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Chewing the Cud",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you regain health, you also restore 6 stamina. Once every 8 seconds."
+  }
+ ]
+}

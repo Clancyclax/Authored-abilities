@@ -1,0 +1,75 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Spiked Back",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A quick blow with the spike on your weapon's back that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Thrown From the Sleeve",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "A hidden throw that deals 30 damage, rising to 1.5 times that at its full 7-tile reach, and always lands as a critical hit."
+  },
+  {
+   "name": "Under the Apron",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 5 seconds; enemies notice you far later and you move 15% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Edge Then Weight",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

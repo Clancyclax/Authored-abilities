@@ -1,0 +1,84 @@
+{
+ "essence": "essTree",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Canopy Tongue",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "maxMult": 1.2,
+   "reachPct": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 1.5
+   },
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "desc": "A sticky lash from high in your branches that deals 4 damage and reaches 30% further. Anything struck moves 15% slower for 1.5 seconds."
+  },
+  {
+   "name": "Shaken Rain",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the rain out of your canopy, dealing 12 damage to every enemy within 3 tiles, knocking them back 2.5 tiles and leaving them [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Rain-Rinsed Leaves",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Rinses up to 2 conditions off you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Lodger in the Crook",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 160,
+   "familiarInterval": 1.4,
+   "familiarFamily": "aquatic",
+   "familiarCreatureName": "Bark Peeper",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded familiar lives in the crook of your branches and leaps at enemies within 5 tiles, striking for 3 damage and leaving them [Poisoned] for 1 damage a tick for 4 ticks."
+  }
+ ]
+}

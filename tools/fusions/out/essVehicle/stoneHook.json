@@ -1,0 +1,70 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Kedge Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Fires a barbed hook into the first enemy in its path and winches you up to 7 tiles to it. It deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Gaff in Passing",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Gaffs the target as you pass. It deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Grapple Swing",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 8,
+   "dashDist": 224,
+   "desc": "Snags a hold ahead and swings you 7 tiles forward."
+  },
+  {
+   "name": "Caught in the Spokes",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying one of your afflictions, your damage rises by 10%."
+  }
+ ]
+}

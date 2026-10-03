@@ -1,0 +1,72 @@
+{
+ "essence": "essRat",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Shot From the Skirting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 70,
+   "speed": 600,
+   "radius": 6,
+   "ignoreArmor": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Fires from cover at one enemy, dealing 34 damage that ignores armour."
+  },
+  {
+   "name": "Report and Rout",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "A sharp crack sends your swarm bolting forward in a cone 4 tiles long; it deals 12 damage to each enemy in it and knocks each 3 tiles back."
+  },
+  {
+   "name": "Reload on the Run",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds."
+  },
+  {
+   "name": "Scurry, Then Shoot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Each time you spend stamina, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

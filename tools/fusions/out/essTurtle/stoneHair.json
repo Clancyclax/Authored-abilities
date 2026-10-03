@@ -1,0 +1,75 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snarl of Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 128,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 1,
+   "desc": "Casts a snarl of strands 4 tiles long ahead of you for 5 seconds that drags every enemy near it inward. Enemies it catches take 10 damage and are stunned for 1 second."
+  },
+  {
+   "name": "Lashing Fringe",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxMult": 1.4,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes a fringe of strands at an enemy up to 4 tiles away, which deals 4 damage, rising to 1.4 times that at full reach. Each hit has a 30% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Combed Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Removes up to 3 conditions from you and heals you for 12 health."
+  },
+  {
+   "name": "Counted Strand by Strand",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land builds a stack on you, up to 10. At 10 they all spend at once and you gain a shield that soaks 4% of your maximum health per stack (35% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

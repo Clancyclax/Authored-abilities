@@ -1,0 +1,81 @@
+{
+ "essence": "essSceptre",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quarry Named",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrust that deals 8 damage and leaves the target 8% easier to wound for 4 seconds, with a 30% chance to leave it [Marked] for 6 seconds. Needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kill Ordained",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "consumeAfflictionsPer": 0.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "A thrust that deals 18 damage and consumes every affliction you have on the target, dealing 60% more damage for each. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Eye on the Prize",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "critChanceBonus": 0.2,
+   "buffDuration": 15,
+   "castTime": 0.5,
+   "desc": "Increases your critical hit chance by 20% for 15 seconds."
+  },
+  {
+   "name": "Blooded Huntsman",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.1,
+    "duration": 6
+   },
+   "element": "piercing",
+   "desc": "When you kill an enemy, your critical hit chance rises by 10% for your next strike within 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

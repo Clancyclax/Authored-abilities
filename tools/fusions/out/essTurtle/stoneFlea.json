@@ -1,0 +1,76 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Sprung Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "desc": "Springs your jaws out at an enemy up to 5 tiles away, which deals 4 damage, rising to 1.6 times that at full reach."
+  },
+  {
+   "name": "Fall From a Height",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "stunOnHit": 1.2,
+   "desc": "You leap high and come down shell-first where you stood, which deals 30 damage to every enemy within 3 tiles and stuns them for 1.2 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Infested Challenge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "summonAnimal": "flea",
+   "escort": {
+    "dmg": 3,
+    "interval": 1,
+    "duration": 9
+   },
+   "desc": "Pulls up to 5 enemies within 5 tiles onto you for 6 seconds. Fleas pour out of your shell and fight beside you for 9 seconds, striking for 3 every 1 second."
+  },
+  {
+   "name": "Bite Back Harder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, 25% of the damage you deal heals you for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

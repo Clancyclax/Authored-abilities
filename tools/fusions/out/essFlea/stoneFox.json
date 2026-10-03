@@ -10,7 +10,7 @@
    "element": "physical",
    "role": "resource",
    "base": 7,
-   "cooldown": 1.0,
+   "cooldown": 1,
    "speed": 380,
    "radius": 8,
    "reachUnits": 224,
@@ -35,7 +35,7 @@
    "confuse": true,
    "confuseChance": 0.4,
    "confuseDuration": 4,
-   "desc": "Every enemy within 3.5 tiles takes 12 damage and is knocked back 2 tiles. Each hit has a 40% chance to turn the target against its allies for 4 seconds."
+   "desc": "A burst that deals 12 damage to every enemy within 3.5 tiles and knocks them back 2 tiles. Each hit has a 40% chance to turn the target against its allies for 4 seconds."
   },
   {
    "name": "Vanishing Trick",
@@ -52,7 +52,7 @@
    "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. Your movement speed rises 25% for 4s after you use it."
   },
   {
-   "name": "Fortune's Favour",
+   "name": "Lucky Mouthful",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",
@@ -60,15 +60,15 @@
    "isTriggered": true,
    "cooldown": 10,
    "trigger": {
-    "on": "critDrought",
+    "on": "crit",
     "cooldown": 10
    },
    "effect": {
-    "kind": "critChance",
-    "amount": 0.3,
-    "duration": 5
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 4
    },
-   "desc": "When you go without a critical hit for a while, your critical hit chance rises by 30% for 5 seconds. Once every 10 seconds."
+   "desc": "When you land a critical hit, you heal for 25% of all damage you deal for 4 seconds. Once every 10 seconds."
   }
  ]
 }

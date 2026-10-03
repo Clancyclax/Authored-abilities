@@ -1,70 +1,79 @@
 {
- "essence": "essDeer",
- "stone": "stoneFrog",
- "fusions": [
-  {
-   "name": "Snapped Up",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "water",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 224,
-   "maxMult": 1.5,
-   "desc": "Snaps at an enemy up to 7 tiles away and deals 4 water damage, rising to 1.5 times that at 7 tiles."
-  },
-  {
-   "name": "Springboard",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "water",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 14,
-   "range": 86,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "knockback": 96,
-   "desc": "Pushes off the ground into an enemy and deals 13 water damage, throwing it 3 tiles back and leaving it 10% easier to wound for 5 seconds."
-  },
-  {
-   "name": "Vanishing Ripple",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "water",
-   "cooldown": 24,
-   "stealthDuration": 5,
-   "stealthAlpha": 0.35,
-   "aggroMult": 0.4,
-   "stealthSpeedPct": 20,
-   "stealthScope": "self",
-   "desc": "Veils you for 5 seconds: enemies notice you 60% later, you move 20% faster, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Coiled Spring",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "fullStamina",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.2,
-    "duration": 5
-   },
-   "desc": "The moment your stamina is full, your next strike gains 20% critical chance. Once every 10 seconds."
-  }
- ]
+  "essence": "essDeer",
+  "stone": "stoneFrog",
+  "fusions": [
+    {
+      "name": "Still-Pond Snap",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 500,
+      "radius": 7,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "openerCrit": {
+        "amount": 0.5
+      },
+      "desc": "Snaps at an enemy up to 6 tiles away and deals 4 water damage, with 50% more critical hit chance against an enemy that is still unhurt."
+    },
+    {
+      "name": "Springboard",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "water",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 86,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "knockback": 96,
+      "desc": "Pushes off an enemy with both feet and deals 13 water damage, throwing it 3 tiles back and leaving it 10% easier to wound for 5 seconds. Then your movement speed rises by 25% for 3 seconds.",
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 3
+      }
+    },
+    {
+      "name": "Vanishing Ripple",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "water",
+      "cooldown": 24,
+      "stealthDuration": 5,
+      "stealthAlpha": 0.35,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 20,
+      "stealthScope": "self",
+      "desc": "Veils you for 5 seconds: enemies notice you 60% later, you move 20% faster, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Crouched Ready",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.2,
+        "duration": 5
+      },
+      "desc": "The moment your stamina is full, your next strike gains 20% critical hit chance. Once every 10 seconds."
+    }
+  ]
 }

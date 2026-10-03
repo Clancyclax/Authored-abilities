@@ -1,78 +1,89 @@
 {
- "essence": "essEarth",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "name": "Sleight of Gravel",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "earth",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "volleyCount": 3,
-   "volleySpread": 0.36,
-   "speed": 380,
-   "radius": 7,
-   "range": 224,
-   "isAoe": true,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "confuse": true,
-   "confuseChance": 0.2,
-   "confuseDuration": 3,
-   "desc": "Flicks out 3 pebbles at once, spread apart. Each pebble deals 3 damage, with a 20% chance to turn its target against its allies for 3 seconds."
-  },
-  {
-   "name": "Pulled Rug",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "rock",
-   "role": "long",
-   "base": 36,
-   "cooldown": 90,
-   "range": 256,
-   "maxMult": 1.5,
-   "reachUnits": 256,
-   "rangeBand": "long",
-   "guaranteedCrit": true,
-   "desc": "Hurls a boulder that deals 36 damage, rising to 1.5 times that at its full reach of 8 tiles. It is always a critical hit."
-  },
-  {
-   "name": "Counterfeit Ward",
-   "kind": "active",
-   "category": "defensive",
-   "template": "reflectWard",
-   "element": "earth",
-   "reflectKind": "debuff",
-   "reflectFrac": 0.2,
-   "reflectChance": 0.5,
-   "buffDuration": 8,
-   "cooldown": 30,
-   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
-  },
-  {
-   "name": "Played Dead",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "earth",
-   "isTriggered": true,
-   "cooldown": 40,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 40,
-    "frac": 0.3
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.3,
-    "duration": 6
-   },
-   "desc": "When your health falls below 30%, you gain a shield worth 30% of your maximum health for 6 seconds. Once every 40 seconds."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Sleight of Gravel",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "earth",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.36,
+      "speed": 380,
+      "radius": 7,
+      "range": 224,
+      "isAoe": true,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "confuse": true,
+      "confuseChance": 0.2,
+      "confuseDuration": 3,
+      "desc": "Flicks out 3 pebbles at once, spread apart. Each pebble deals 3 damage, with a 20% chance to turn its target against its allies for 3 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Pulled Rug",
+      "template": "sunderStrike",
+      "element": "earth",
+      "role": "long",
+      "base": 32,
+      "cooldown": 80,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.2,
+        "duration": 8
+      },
+      "guaranteedCrit": true,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Opens the ground under one enemy, dealing 32 damage, leaving it [Pinned] for 2 seconds and 20% easier to wound for 8 seconds. It is always a critical hit."
+    },
+    {
+      "kind": "active",
+      "category": "defensive",
+      "name": "Bolt-Hole",
+      "template": "stealthVeil",
+      "element": "earth",
+      "cooldown": 24,
+      "stealthDuration": 6,
+      "stealthAlpha": 0.35,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 10,
+      "stealthScope": "self",
+      "desc": "Veils you for 6 seconds: enemies notice you far later and you move 11% faster. The veil breaks the moment you attack."
+    },
+    {
+      "name": "Played Dead",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 40,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 40,
+        "frac": 0.3
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.3,
+        "duration": 6
+      },
+      "desc": "When your health falls below 30%, you gain a shield worth 30% of your maximum health for 6 seconds. Once every 40 seconds."
+    }
+  ]
 }

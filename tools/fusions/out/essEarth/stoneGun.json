@@ -1,77 +1,67 @@
 {
- "essence": "essEarth",
- "stone": "stoneGun",
- "fusions": [
-  {
-   "name": "Grit Scatter",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "rock",
-   "role": "medium",
-   "base": 8,
-   "cooldown": 14,
-   "volleyCount": 4,
-   "volleySpread": 0.5,
-   "speed": 380,
-   "radius": 7,
-   "range": 192,
-   "isAoe": true,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "knockback": 80,
-   "desc": "Looses 4 shards of gravel at once, spread apart, each dealing 8 damage and knocking its target back 2.5 tiles."
-  },
-  {
-   "name": "Dense Slug",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "earth",
-   "role": "long",
-   "base": 40,
-   "cooldown": 90,
-   "range": 352,
-   "maxMult": 2,
-   "reachUnits": 352,
-   "rangeBand": "long",
-   "ignoreArmor": true,
-   "desc": "Fires a dense stone slug that deals 40 damage, rising to twice that at its full reach of 11 tiles. It ignores armour."
-  },
-  {
-   "name": "Firing Pit",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "earth",
-   "cooldown": 45,
-   "summonKind": "turret",
-   "summonDuration": 12,
-   "summonDmg": 5,
-   "summonInterval": 1.2,
-   "summonRange": 192,
-   "castTime": 0.5,
-   "desc": "Takes 0.5 seconds to raise a stone emplacement that lasts 12 seconds and fires on an enemy within 6 tiles for 5 damage every 1.2 seconds."
-  },
-  {
-   "name": "Held Fire",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "earth",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 8,
-    "seconds": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.4,
-    "strikes": 1
-   },
-   "desc": "When 8 seconds pass without a critical hit, your next strike has 40% more critical chance. Once every 8 seconds."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneGun",
+  "fusions": [
+    {
+      "name": "Grit Scatter",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "earth",
+      "role": "medium",
+      "base": 8,
+      "cooldown": 14,
+      "volleyCount": 4,
+      "volleySpread": 0.5,
+      "speed": 380,
+      "radius": 7,
+      "range": 192,
+      "isAoe": true,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "knockback": 80,
+      "desc": "Looses 4 shards of gravel at once, spread apart, each dealing 8 damage and knocking its target back 2.5 tiles."
+    },
+    {
+      "name": "Dense Slug",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "earth",
+      "role": "long",
+      "base": 40,
+      "cooldown": 90,
+      "range": 352,
+      "maxMult": 2,
+      "reachUnits": 352,
+      "rangeBand": "long",
+      "ignoreArmor": true,
+      "desc": "Fires a dense stone slug that deals 40 damage, rising to twice that at its full reach of 11 tiles. It ignores armour."
+    },
+    {
+      "name": "Firing Pit",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "earth",
+      "cooldown": 45,
+      "summonKind": "turret",
+      "summonDuration": 12,
+      "summonDmg": 5,
+      "summonInterval": 1.2,
+      "summonRange": 192,
+      "castTime": 0.5,
+      "desc": "Takes 0.5 seconds to raise a stone emplacement that lasts 12 seconds and fires on an enemy within 6 tiles for 5 damage every 1.2 seconds."
+    },
+    {
+      "kind": "passive",
+      "name": "Rifled Bore",
+      "category": "passive buff",
+      "template": "elementPierce",
+      "element": "earth",
+      "pierceElement": "physical",
+      "armorIgnore": 0.15,
+      "desc": "Your physical attacks ignore 15% of the target's armour."
+    }
+  ]
 }

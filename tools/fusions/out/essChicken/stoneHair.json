@@ -1,77 +1,80 @@
 {
- "essence": "essChicken",
- "stone": "stoneHair",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Plucked Strand",
-   "template": "projectileBall",
-   "element": "slashing",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.3,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "speed": 400,
-   "radius": 6,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "desc": "Flicks a plucked strand that hits the first enemy in its path for 4 damage, with a 30% chance to leave it [Slowed] for 3 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Gossamer Thread",
-   "template": "breathCone",
-   "element": "physical",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "chargesMax": 4,
-   "range": 96,
-   "coneAngle": 0.7,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "desc": "Looses a fan of fine strands in a cone 3 tiles long, dealing 7 damage to everything in it. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Plumage Screen",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "physical",
-   "cooldown": 40,
-   "wallKind": "block",
-   "wallLength": 192,
-   "wallDuration": 8,
-   "wallThickness": 26,
-   "desc": "Spreads a screen of braided plumage 6 tiles long that blocks enemies for 8 seconds."
-  },
-  {
-   "name": "Fluffed Up",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 20,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 20
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.2,
-    "duration": 6
-   },
-   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 20% of your maximum health for 6 seconds. Once every 20 seconds."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneHair",
+  "fusions": [
+    {
+      "name": "Snagging Quill",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "maxMult": 1.3,
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      },
+      "range": 128,
+      "reachUnits": 128,
+      "rangeBand": "short",
+      "desc": "Lashes out a strand that deals 4 damage, up to 1.3 times that at its full 4 tiles, and slows the target by 20% for 2 seconds."
+    },
+    {
+      "name": "Bristling Ruff",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "slashing",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 16,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.4,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "You puff out every strand at once, dealing 11 damage to every enemy within 2.5 tiles and knocking them back 2 tiles, each with a 40% chance to be [Pinned] for 2 seconds.",
+      "knockback": 64
+    },
+    {
+      "name": "Plumage Screen",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "cooldown": 40,
+      "wallKind": "block",
+      "wallLength": 192,
+      "wallDuration": 8,
+      "wallThickness": 26,
+      "desc": "Spreads a screen of braided plumage 6 tiles long that blocks enemies for 8 seconds."
+    },
+    {
+      "name": "Fluffed Up",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 6
+      },
+      "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 20% of your maximum health for 7 seconds. Once every 20 seconds."
+    }
+  ]
 }

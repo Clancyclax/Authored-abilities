@@ -1,0 +1,91 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Three-Shell Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 8,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "knockback": 80,
+   "confuse": true,
+   "confuseChance": 0.3,
+   "confuseDuration": 3,
+   "desc": "Throws 3 weights at once, spread apart, each dealing 9 damage and knocking what it hits back 2.5 tiles. Each hit has a 30% chance to turn the target against its allies for 3 seconds."
+  },
+  {
+   "name": "Blindside",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "A blow that deals 34 damage, always lands as a critical hit and leaves the target 15% easier to wound for 6 seconds. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Deadfall",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "blunt",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 20,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 96,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Sets a deadfall on the nearest enemy that waits 20 seconds; the first enemy to come within 3 tiles of it is crushed, and it deals 20 damage in a blast around it."
+  },
+  {
+   "name": "Opening Exploited",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you inflict a condition, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

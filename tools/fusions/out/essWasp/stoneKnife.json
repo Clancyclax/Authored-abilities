@@ -1,0 +1,85 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tucked Blade",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 7,
+   "strikes": 1,
+   "cooldown": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "TBD"
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Between the Ribs",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "guaranteedCrit": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "TBD"
+  },
+  {
+   "name": "Out of Sight",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "TBD"
+  },
+  {
+   "name": "Twist After",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "TBD"
+  }
+ ]
+}

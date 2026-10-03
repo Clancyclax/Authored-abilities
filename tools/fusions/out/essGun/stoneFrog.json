@@ -1,0 +1,85 @@
+{
+ "essence": "essGun",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Venom Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 1.2,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Fires a dart that deals 4 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Bellowing Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lets off a booming report in a cone ahead of you, dealing 11 damage to everything in it, knocking each back 3 tiles and leaving it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Recoil Spring",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 8,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Fires into the ground and springs you 4 tiles forward, then you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Still Pond",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 25% for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

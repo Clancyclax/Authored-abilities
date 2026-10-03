@@ -1,0 +1,82 @@
+{
+ "essence": "essSceptre",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Split Ruling",
+   "element": "lightning",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 3,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a bolt that deals 7 damage to the first enemy it meets, then branches to 1 more enemy within 3 tiles for 60% of the damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Two Roads Decreed",
+   "template": "volley",
+   "element": "lightning",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "ignoreArmor": true,
+   "volleyCount": 2,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 8,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 2 bolts at once, spread apart, each of which deals 26 damage and ignores armour."
+  },
+  {
+   "name": "Either Course Allowed",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "lightning",
+   "cooldown": 90,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Bident of Office",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "piercing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 2,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a two-pronged weapon of office: your weapon damage rises by 12% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a tick for 2 ticks."
+  }
+ ]
+}

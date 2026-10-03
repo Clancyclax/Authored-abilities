@@ -1,0 +1,72 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Horn-First Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "You rush an enemy up to 6 tiles away and ram it, dealing 14 damage and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Won't Be Moved",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Plants your feet and slams the ground, dealing 30 damage to every enemy within 3.5 tiles and ignoring armour. Its damage rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Cliff-Edge Stand",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "earth",
+   "cooldown": 120,
+   "immunityDuration": 4,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Dug-In Heels",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a ward worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

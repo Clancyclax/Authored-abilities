@@ -3,7 +3,7 @@
  "stone": "stoneKnife",
  "fusions": [
   {
-   "name": "Blind-Side Cut",
+   "name": "Gore from Hiding",
    "kind": "active",
    "category": "attack",
    "template": "imbueStrike",
@@ -20,35 +20,40 @@
     "critChance": 0.05,
     "label": "Bleeding"
    },
-   "desc": "Slips a hidden blade into the target, dealing 40 damage and leaving it [Bleeding] for 3 damage a second for 5 seconds. The hit always lands as a critical hit."
+   "desc": "Drives a concealed blade in with a head-down rush, dealing 40 damage and leaving the target [Bleeding] for 3 damage a second for 5 seconds. The hit always lands as a critical hit."
   },
   {
-   "name": "Flick Blade",
    "kind": "active",
    "category": "attack",
-   "template": "projectileBall",
+   "name": "Short Lunge",
+   "template": "rangeStrike",
    "element": "piercing",
    "role": "basic",
+   "spammable": true,
    "base": 4,
    "cooldown": 0.8,
-   "spammable": true,
-   "speed": 360,
-   "radius": 8,
-   "openerCrit": {
-    "amount": 0.5
+   "range": 128,
+   "maxMult": 1.3,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
    },
-   "desc": "Flicks a hidden blade at the first enemy in its path, dealing 4 damage. It has 50% more critical chance against an enemy that has not been wounded yet."
+   "desc": "Lunges at a target up to 4 tiles away and deals 4 damage, rising to 1.3 times that from the full 4 tiles. The target is left [Bleeding] for 1 damage a second for 3 seconds."
   },
   {
-   "name": "Sharpened Resolve",
+   "name": "Whetted Points",
    "kind": "active",
    "category": "buff",
-   "template": "selfCritBuff",
-   "element": "physical",
-   "critChanceBonus": 0.25,
-   "buffDuration": 10,
-   "cooldown": 40,
-   "desc": "Increases your critical hit chance by 25% for 10 seconds."
+   "template": "statBuff",
+   "element": "piercing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your critical damage by 30% for 15 seconds."
   },
   {
    "name": "Sleeve Edge",

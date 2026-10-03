@@ -1,0 +1,83 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Trodden Toes",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A raking stamp that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and slows its movement by 15% for 2 seconds. You move 10% faster for 2 seconds after you use it."
+  },
+  {
+   "name": "Last Mile",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A heel strike that deals 32 damage, always crits and leaves the target 15% easier to wound for 6 seconds. Its damage rises 8% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Marching Lungs",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 20,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 40% for 20 seconds, and you move 15% faster for 5 seconds after you use it."
+  },
+  {
+   "name": "Shorter Roads",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "On paved ground, your dodge chance rises by 10%."
+  }
+ ]
+}

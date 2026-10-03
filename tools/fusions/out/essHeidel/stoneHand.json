@@ -1,0 +1,72 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Halter Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "lockSeconds": 3,
+   "knockback": 64,
+   "desc": "Takes hold of one enemy within 3 tiles and deals 10 damage, taking its next action away for 3 seconds and knocking it back 2 tiles."
+  },
+  {
+   "name": "Leg Up",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A driving kick at a target up to 4 tiles away that deals 28 damage, rising to 1.3 times that at full range. On a hit, every ally strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Steady Under Load",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "desc": "Reduces the damage you take by 20% for 12 seconds."
+  },
+  {
+   "name": "Calm Before the Leap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your next strike gains 15% critical hit chance. Once every 12 seconds."
+  }
+ ]
+}

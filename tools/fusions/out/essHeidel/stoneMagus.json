@@ -1,0 +1,75 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Dressage Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "arcane",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Unravelling"
+   },
+   "desc": "A measured strike at a target at or below 25% health that deals 20 damage and leaves it [Unravelling] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Pirouette on the Haunches",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "slowPct": 0.2,
+   "chargesMax": 3,
+   "desc": "You turn on your haunches, dealing 7 damage to every enemy within 3 tiles, stripping 10% armour for 4 seconds and slowing each by 20%. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Drilled Cadence",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 40,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Your casting speed rises 25% for 12 seconds."
+  },
+  {
+   "name": "Counted Paces",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 10. The next ability you use spends them all: you deal 3% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

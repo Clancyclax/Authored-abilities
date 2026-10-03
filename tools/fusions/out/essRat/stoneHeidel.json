@@ -1,0 +1,71 @@
+{
+ "essence": "essRat",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Trample Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Your swarm surges forward in a cone 3.5 tiles long and deals 4 damage to everything in it."
+  },
+  {
+   "name": "Carried on the Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "desc": "Your swarm carries you up to 6 tiles to one enemy, where you strike for 14 damage and leave it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Borne Along",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 40,
+   "speedMult": 1.35,
+   "buffDuration": 10,
+   "dodgeBonus": 0.06,
+   "desc": "Increases your movement speed by 35% for 10 seconds, with +6% dodge chance."
+  },
+  {
+   "name": "Second Wind Beneath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 4
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 4 seconds. Once every 20 seconds."
+  }
+ ]
+}

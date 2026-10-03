@@ -1,0 +1,78 @@
+{
+ "essence": "essGun",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Arcane Discharge",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target: fires a raw arcane charge that deals 9 damage, consuming every affliction on it and adding half their remaining damage, with a 30% chance to leave the target [Exposed] for 5 seconds."
+  },
+  {
+   "name": "Unbound Detonation",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Fires every charged chamber at once in a ring, dealing 28 damage to every enemy within 3.5 tiles and ignoring their resistances."
+  },
+  {
+   "name": "Mana Primer",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 mana a second for 8 seconds."
+  },
+  {
+   "name": "Stray Arcana",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "desc": "Each time you spend mana, a bolt leaps to the nearest enemy within 8 tiles, dealing 6 damage. Once every 3 seconds."
+  }
+ ]
+}

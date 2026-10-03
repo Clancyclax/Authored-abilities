@@ -1,0 +1,73 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Unhurried Settle",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "A slow, heavy press of the trowel that deals 28 damage plus 5% of a boss's or elite's maximum health and leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Lazy Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "desc": "Rolls a wave of slurry out around you, dealing 12 damage to every enemy within 3 tiles and knocking them back 3 tiles."
+  },
+  {
+   "name": "Drifting Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Heals you and every ally within 4 tiles for 14 health, plus 1% more for each 1% of your cast speed."
+  },
+  {
+   "name": "Slow to Bruise",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you take non-fire damage, you regain 2 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

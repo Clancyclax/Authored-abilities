@@ -1,0 +1,79 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Mana Exhaust",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 360,
+   "radius": 8,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "knockback": 80,
+   "desc": "Vents 3 bolts of raw mana from your exhaust at once, spread apart; each deals 9 damage and knocks what it hits back 2.5 tiles."
+  },
+  {
+   "name": "Unspent Fuel",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Fires the arcana left in your tank into the first enemy in its path. It deals 20 damage and uses up every affliction you have on the target for 60% more damage each."
+  },
+  {
+   "name": "Topping the Tank",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 3 mana a second for 8 seconds, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Mana-Fed Engine",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Each time you spend mana, you regain 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

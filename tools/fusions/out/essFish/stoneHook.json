@@ -1,71 +1,72 @@
 {
- "essence": "essFish",
- "stone": "stoneHook",
- "fusions": [
-  {
-   "name": "Gaff Finish",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "water",
-   "role": "execute",
-   "base": 14,
-   "cooldown": 14,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "consumeAfflictionsPer": 0.6,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 14 damage. It only strikes a target at or below 25% health. For 4 seconds afterwards you move 20% faster."
-  },
-  {
-   "name": "Reel In",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "speed": 420,
-   "radius": 8,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "chargeTo": 160,
-   "desc": "Casts a barbed line that deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. You rush up to 5 tiles to the target."
-  },
-  {
-   "name": "Haul Line",
-   "kind": "active",
-   "category": "defensive",
-   "template": "tauntPull",
-   "element": "water",
-   "cooldown": 40,
-   "tauntRadius": 256,
-   "tauntDuration": 6,
-   "tauntMax": 5,
-   "threatMult": 1,
-   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
-  },
-  {
-   "name": "Barbed Current",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
-   "element": "water",
-   "pierceElement": "water",
-   "armorIgnore": 0.2,
-   "cooldownReduction": 0.05,
-   "desc": "Your water attacks ignore 20% of the target's armour. It also reduces the cooldown of every other ability you have by 5%."
-  }
- ]
+  "essence": "essFish",
+  "stone": "stoneHook",
+  "fusions": [
+    {
+      "name": "Gaff Finish",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "water",
+      "role": "execute",
+      "base": 14,
+      "cooldown": 14,
+      "range": 84,
+      "stackMult": 1.5,
+      "requiresTargetBelow": 0.25,
+      "executeLadder": true,
+      "consumeAfflictionsPer": 0.6,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 14 damage. It only strikes a target at or below 25% health. For 4 seconds afterwards you move 20% faster."
+    },
+    {
+      "name": "Reel In",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "speed": 420,
+      "radius": 8,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "chargeTo": 160,
+      "desc": "Casts a barbed line that deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. You rush up to 5 tiles to the target."
+    },
+    {
+      "name": "Haul Line",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "water",
+      "cooldown": 40,
+      "tauntRadius": 256,
+      "tauntDuration": 6,
+      "tauntMax": 5,
+      "threatMult": 1,
+      "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+    },
+    {
+      "kind": "passive",
+      "category": "passive buff",
+      "name": "Set the Barb",
+      "template": "passiveConditional",
+      "element": "water",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.1,
+      "armorBonus": 0.06,
+      "desc": "Against a target carrying one of your afflictions, you deal 10% more damage. Your armour rises by 6%."
+    }
+  ]
 }

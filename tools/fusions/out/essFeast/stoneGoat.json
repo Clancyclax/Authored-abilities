@@ -1,77 +1,76 @@
 {
- "essence": "essFeast",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "name": "Head-On Clash",
-   "element": "physical",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 14,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "chargeTo": 160,
-   "sunder": {
-    "amount": 0.12,
-    "duration": 5
-   },
-   "leech": 0.15,
-   "desc": "Rushes you to a target up to 5 tiles away, then a blow that deals 14 damage and leaves it 12% easier to wound for 5 seconds. You heal for 15% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "name": "Dig In",
-   "element": "physical",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "maxMult": 1.5,
-   "hpCostPct": 0.05,
-   "leech": 0.3,
-   "scaleOn": "selfDepletion",
-   "scalePer": 0.08,
-   "scaleCap": 0.4,
-   "desc": "Costs 5% of your maximum health. A hurled blow on a target up to 6 tiles away that deals 8 damage, rising to 1.5 times that at the end of its reach, and heals you for 30% of the damage dealt. Its damage rises 8% for every 10% of your health already gone (max 40%)."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "template": "immunityBuff",
-   "name": "Not Today",
-   "element": "physical",
-   "cooldown": 150,
-   "immunityDuration": 5,
-   "healOnUse": 12,
-   "desc": "For 5 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. You restore 12 health when you use it."
-  },
-  {
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "isTriggered": true,
-   "name": "Unmoved",
-   "element": "physical",
-   "cooldown": 15,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.12,
-    "duration": 6
-   },
-   "regenPerSec": 0.5,
-   "desc": "When anything but fire hurts you, a shield worth 12% of your maximum health covers you for 6 seconds. Once every 15 seconds. You regenerate 0.5 health a second."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "name": "Head-On Clash",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "chargeTo": 160,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "leech": 0.15,
+      "desc": "Rushes you to a target up to 5 tiles away, then a blow that deals 14 damage and leaves it 12% easier to wound for 5 seconds. You heal for 15% of the damage dealt."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "name": "Dig In",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "hpCostPct": 0.05,
+      "leech": 0.3,
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Costs 5% of your maximum health. A hurled blow on a target up to 6 tiles away that deals 8 damage, rising to 1.5 times that at the end of its reach, and heals you for 30% of the damage dealt. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+    },
+    {
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "name": "Not Today",
+      "element": "physical",
+      "cooldown": 150,
+      "immunityDuration": 5,
+      "healOnUse": 12,
+      "desc": "For 5 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. You restore 12 health when you use it."
+    },
+    {
+      "name": "Second Stomach",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "element": "physical",
+      "cooldown": 12,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 5
+      },
+      "desc": "Each time a condition on you wears off, you regain 3 health a second for 5 seconds. Once every 12 seconds."
+    }
+  ]
 }

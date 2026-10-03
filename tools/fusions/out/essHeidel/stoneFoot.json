@@ -1,0 +1,74 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Mile in the Legs",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.5,
+   "desc": "A kick at a target up to 5 tiles away that deals 30 damage, rising to 1.3 times that at full range, and always lands as a critical hit. Its damage rises 5% for every 100 paces you have run since you last used it (max +50%)."
+  },
+  {
+   "name": "Road Grit",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scuffs a cone of road grit up to 4 tiles ahead, dealing 7 damage to everything in it, with a 30% chance per hit to leave the target [Blunted] for 5 seconds. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "March Together",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Milestone Counter",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "On paved ground, you deal 12% more damage."
+  }
+ ]
+}

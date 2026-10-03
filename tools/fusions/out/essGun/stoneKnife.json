@@ -1,0 +1,81 @@
+{
+ "essence": "essGun",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Razor Load",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 256,
+   "maxMult": 1.2,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Fires a bladed round at a target carrying one of your afflictions, using it up to deal 9 damage and leave the target [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Fan of Edges",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "long",
+   "base": 6,
+   "cooldown": 60,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Fires 5 bladed rounds in a fan, each dealing 6 damage and ignoring armour."
+  },
+  {
+   "name": "Quick Draw",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Underbarrel Blade",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a blade fixed beneath your barrel: your weapon damage rises by 10% and you attack 5% faster, and every strike leaves [Bleeding] for 2 damage a tick for 3 ticks."
+  }
+ ]
+}

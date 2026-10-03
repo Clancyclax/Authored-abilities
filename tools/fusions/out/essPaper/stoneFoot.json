@@ -1,0 +1,90 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Courier's Dispatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Throws a weighted dispatch that deals 4 damage, rising to 1.5 times that at its full reach of 6 tiles. Its damage rises 5% for each stretch of ground you have travelled, up to 30%."
+  },
+  {
+   "name": "Postmark Stomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "knockback": 96,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps down on the target, which deals 13 damage, knocks it back 3 tiles and leaves it 12% easier to wound for 6 seconds and [Marked] for 8 seconds."
+  },
+  {
+   "name": "Wrapped Puttees",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "cooldown": 30,
+   "desc": "Wraps your legs in layered pages that absorb up to 18 damage for 8 seconds, and your movement speed rises 20% for 5 seconds."
+  },
+  {
+   "name": "Annotated Mile",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Each time you cover a long stretch of ground, you note it down: your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

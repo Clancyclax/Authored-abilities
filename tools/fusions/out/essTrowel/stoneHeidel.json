@@ -1,0 +1,82 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Unflagging Strokes",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "chargesMax": 5,
+   "desc": "A strike that deals 7 damage and leaves the target 5% easier to wound for 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Trampled Footings",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 112,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Tramples through the footings ahead of you, dealing 14 damage to every enemy within 3.5 tiles in front, knocking them back 3 tiles and leaving them [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Hauling Team",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "earth",
+   "cooldown": 45,
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles deals 15% more damage and fights with 1 more power for 12 seconds."
+  },
+  {
+   "name": "Second Haul",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When your stamina runs out, you restore 20 stamina. Once every 30 seconds."
+  }
+ ]
+}

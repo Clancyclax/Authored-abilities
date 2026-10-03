@@ -1,0 +1,78 @@
+{
+ "essence": "essGun",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Branching Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Fires a round that deals 4 damage, then forks to 1 more enemy within 3 tiles for 50% of the damage."
+  },
+  {
+   "name": "Parting Pair",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 14,
+   "cooldown": 75,
+   "volleyCount": 2,
+   "volleySpread": 0.7,
+   "isAoe": true,
+   "speed": 360,
+   "radius": 9,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "bossPct": 0.04,
+   "desc": "Fires 2 heavy rounds that split apart, each dealing 14 damage plus 4% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Spare Muzzle",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDuration": 12,
+   "summonDmg": 5,
+   "summonInterval": 1.2,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to set a second loaded piece on a rest beside you for 12 seconds. Every 1.2 seconds it fires on an enemy within 6 tiles for 5 damage."
+  },
+  {
+   "name": "Either Way",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a shot that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

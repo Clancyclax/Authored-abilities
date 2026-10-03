@@ -1,0 +1,75 @@
+{
+ "essence": "essTree",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Splinter to the Heart",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 13,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Slides a hidden splinter into a target at or below 25% of its health, dealing 18 damage and using up every affliction on it to add 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Shed Bark Blades",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Pays 5% of your maximum health to shed edged bark around you, dealing 8 damage to every enemy within 2.5 tiles and leaving them [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Whetted Grain",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "slashing",
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "cooldown": 50,
+   "desc": "You strop your grain to an edge: your damage rises by 25% for 12 seconds."
+  },
+  {
+   "name": "Sap on the Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you land a critical hit, you heal for 15% of the damage you deal for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

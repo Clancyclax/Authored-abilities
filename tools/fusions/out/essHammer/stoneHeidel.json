@@ -1,0 +1,80 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Shoe Pitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 320,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Pitches 3 horseshoes at once, spread apart, each dealing 3 damage."
+  },
+  {
+   "name": "Ridden Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "stackMult": 1.5,
+   "desc": "Only strikes a target at or below 25% health, and that threshold rises with each rank. The blow deals 24 damage and uses up every affliction on the target for 1.5 times the damage they had left to deal."
+  },
+  {
+   "name": "Breath Between Blows",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "blunt",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Unflagging Arm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 2,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 2
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "Each blow you land restores 3 stamina. Once every 2 seconds."
+  }
+ ]
+}

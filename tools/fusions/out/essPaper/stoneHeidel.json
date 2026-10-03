@@ -1,0 +1,72 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Hoofprint Seal",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "chargeTo": 224,
+   "desc": "You rush up to 7 tiles to the target and stamp a seal on it that deals 13 damage and leaves it 10% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Relay Post",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 5,
+   "desc": "Sends a sealed letter into the first enemy it meets that deals 7 damage. Holds 5 charges, and kills give charges back."
+  },
+  {
+   "name": "Stage Ticket",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.3,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "Increases your movement speed by 30% for 10 seconds."
+  },
+  {
+   "name": "Remount Chit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

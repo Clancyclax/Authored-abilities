@@ -1,0 +1,84 @@
+{
+ "essence": "essRat",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snagging Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weapon strike that snags the target, dealing 4 damage, leaving it [Bleeding] for 1 damage a second for 3 seconds and slowing it by 20% for 2 seconds."
+  },
+  {
+   "name": "Drag to the Hole",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "wallKind": "pull",
+   "wallLength": 128,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 1.0,
+   "desc": "Opens a burrow mouth ahead of you for 4 seconds that drags every nearby enemy inward. It deals 12 damage and stuns each enemy it catches for 1 second."
+  },
+  {
+   "name": "Reeled to the Warren",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "cooldown": 24,
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 4
+   },
+   "desc": "Pulls up to 5 enemies within 7 tiles onto you for 6 seconds. For 4 seconds, an escort of rats fights beside you, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Something on the Line",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Each time you afflict an enemy, you heal for 15% of the damage you deal for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

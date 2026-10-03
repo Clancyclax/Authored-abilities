@@ -1,0 +1,76 @@
+{
+ "essence": "essRat",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Strip the Stores",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 7,
+   "range": 192,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Gorged"
+   },
+   "desc": "Looses 4 rats at once, each dealing 3 damage. 15% of the damage dealt comes back to you as healing over the following 6 seconds."
+  },
+  {
+   "name": "Picked Bare",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 160,
+   "maxMult": 1.2,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Darts at one enemy up to 5 tiles away and deals 18 damage, rising to 1.2 times that at full reach, using up every affliction you have on it for 50% more damage each."
+  },
+  {
+   "name": "Granary Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a cloud of rats and locusts for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Fat Years",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

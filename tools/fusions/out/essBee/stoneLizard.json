@@ -1,94 +1,89 @@
 {
- "essence": "essBee",
- "stone": "stoneLizard",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Cold Snap",
-   "template": "breathCone",
-   "element": "frost",
-   "role": "medium",
-   "stunOnHit": 1,
-   "base": 12,
-   "cooldown": 20,
-   "range": 180,
-   "coneAngle": 0.7,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.5,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Looses a cone of cold ahead of you, dealing 12 damage to everything caught in it and stunning it for 1 second. Each hit has a 50% chance of [Slowed] for 5 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Heat-Drunk Jab",
-   "template": "rangeStrike",
-   "element": "frost",
-   "role": "resource",
-   "chargesMax": 3,
-   "base": 8,
-   "maxMult": 1.8,
-   "cooldown": 1,
-   "range": 200,
-   "reachUnits": 200,
-   "rangeBand": "medium",
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.35,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A thrown stinger that deals 8 damage, rising to 1.8 times that at maximum range. It has a 35% chance of [Slowed] for 4 seconds. Holds up to 3 charges, and each kill gives one back."
-  },
-  {
-   "kind": "active",
-   "category": "healing",
-   "template": "selfHot",
-   "name": "Basking",
-   "element": "nature",
-   "cooldown": 40,
-   "hotPerSec": 3,
-   "hotDuration": 10,
-   "healScope": "self",
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 12
-   },
-   "desc": "Restores 3 health a second to you for 10 seconds. Stingers fight beside you for 12 seconds, striking for 3 every 1.4 seconds."
-  },
-  {
-   "kind": "passive",
-   "name": "Left Behind",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "frost",
-   "isTriggered": true,
-   "cooldown": 60,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 60,
-    "frac": 0.3
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 4,
-    "duration": 5
-   },
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 8
-   },
-   "desc": "When your health falls below 30%, you regain 4 health a second for 5 seconds, and decoy stingers fight beside you for 8 seconds, striking for 3 every 1.4 seconds. Once every 60 seconds."
-  }
- ]
+  "essence": "essBee",
+  "stone": "stoneLizard",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Torpor Cloud",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "medium",
+      "stunOnHit": 1,
+      "base": 12,
+      "cooldown": 20,
+      "range": 180,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.5,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Breathes a cone of numbing venom ahead of you, dealing 12 damage to everything caught in it and stunning it for 1 second. Each hit has a 50% chance of [Hindered] for 5 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Dropped Tail",
+      "template": "rangeStrike",
+      "element": "poison",
+      "role": "resource",
+      "base": 9,
+      "maxMult": 1.8,
+      "cooldown": 1,
+      "range": 200,
+      "reachUnits": 200,
+      "rangeBand": "medium",
+      "desc": "Costs 5% of your maximum health. A thrown stinger that deals 9 damage, rising to 1.8 times that at maximum range, and makes the target [Poisoned] for 1 damage a second for 4 seconds.",
+      "hpCostPct": 0.05,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      }
+    },
+    {
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "name": "Shared Sun",
+      "element": "life",
+      "cooldown": 40,
+      "hotPerSec": 3,
+      "hotDuration": 10,
+      "healScope": "party",
+      "desc": "Restores 3 health a second to you and your allies for 10 seconds."
+    },
+    {
+      "kind": "passive",
+      "name": "Left Behind",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "frost",
+      "isTriggered": true,
+      "cooldown": 60,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 60,
+        "frac": 0.3
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 4,
+        "duration": 5
+      },
+      "escort": {
+        "dmg": 3,
+        "interval": 1.4,
+        "duration": 8
+      },
+      "desc": "When your health falls below 30%, you regain 4 health a second for 5 seconds, and decoy stingers fight beside you for 8 seconds, striking for 3 every 1.4 seconds. Once every 60 seconds."
+    }
+  ]
 }

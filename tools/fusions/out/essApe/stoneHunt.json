@@ -3,14 +3,14 @@
  "stone": "stoneHunt",
  "fusions": [
   {
-   "name": "Quarry Mark",
+   "name": "Marking Stone",
    "kind": "active",
    "category": "attack",
    "template": "projectileBall",
    "element": "physical",
    "role": "resource",
    "base": 7,
-   "cooldown": 1.0,
+   "cooldown": 1,
    "spammable": true,
    "chargesMax": 4,
    "debuff": {
@@ -24,7 +24,10 @@
    "radius": 7,
    "reachUnits": 288,
    "rangeBand": "medium",
-   "desc": "Flings a stone that deals 7 damage to the first enemy it meets, with a 50% chance to leave it [Marked] for 8 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+   "desc": "Flings a stone that deals 7 damage to the first enemy it meets, with a 50% chance to leave it [Marked] for 8 seconds. Its damage rises +8% per ally within 5 tiles (max +32%). Holds 4 charges; each use spends one, and each kill restores one.",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32
   },
   {
    "name": "Closing Snatch",
@@ -44,17 +47,21 @@
    "desc": "A snatching blow that deals 16 damage, draws out every affliction you have on the target and deals 50% more damage for each one. It leaves the target 8% easier to wound for 4 seconds."
   },
   {
-   "name": "Run-Down Stride",
+   "name": "Ring the Prey",
    "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
+   "category": "buff",
+   "template": "statBuff",
    "element": "physical",
-   "cooldown": 40,
-   "speedMult": 1.3,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
    "buffDuration": 12,
-   "blinkOnUse": 96,
-   "dodgeBonus": 0.1,
-   "desc": "Increases your movement speed by 30% for 12 seconds. You finish it 3 tiles from where you stood, with +10% dodge chance for it."
+   "cooldown": 40,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Increases your dodge chance by 20% for 12 seconds. A troop escort hunts beside you for 8 seconds, striking for 4 damage every 1.4 seconds."
   },
   {
    "name": "Scent Trail",

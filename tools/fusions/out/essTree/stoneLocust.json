@@ -1,0 +1,79 @@
+{
+ "essence": "essTree",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Strip the Canopy",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "coneAngle": 0.7,
+   "range": 150,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pays 5% of your maximum health to shed your leaves in a devouring cone, dealing 8 damage to everything in it, with a 25% chance to leave each [Weakened] for 5 seconds."
+  },
+  {
+   "name": "Grub-Bored Cone",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "spreadAfflictions": 112,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Throws a cone hollowed by grubs that deals 12 damage to the first enemy it meets. Your afflictions on it spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Leaf Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "plant",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonDuration": 12,
+   "summonRange": 96,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "Looses a swarm of chewing leaves for 12 seconds that strikes enemies within 3 tiles for 3 damage every second."
+  },
+  {
+   "name": "Regrowth After Ruin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 15% of the damage you deal for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

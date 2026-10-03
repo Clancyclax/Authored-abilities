@@ -1,0 +1,81 @@
+{
+ "essence": "essSceptre",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quiet Deposition",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "A cut that deals 20 damage and consumes every affliction on the target, adding 1.5 times their remaining damage. It has 40% more critical chance against an enemy that has not yet bled. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Under the Robe",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 72,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A slash that deals 7 damage to every enemy within 2 tiles and leaves each [Bleeding] for 2 damage a second for 3 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Out of the Light",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 5 seconds, and you move 20% faster while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Blade Kept Sheathed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "element": "slashing",
+   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 15% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

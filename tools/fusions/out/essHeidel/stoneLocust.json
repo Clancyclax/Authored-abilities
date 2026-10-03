@@ -1,0 +1,81 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Chaff Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 300,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 128,
+   "desc": "Your hooves kick up 3 bursts of chaff at once, spread apart, each dealing 10 damage. Your afflictions on each target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Strip to the Stalk",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "desc": "Flings a biting knot of locusts from your hooves at the first enemy in line, dealing 8 damage and healing you for 20% of it. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Following Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Takes 0.5 seconds to loose a swarm that runs with you for 12 seconds, biting an enemy within 6 tiles for 3 damage every second. It draws the attention of the last enemy you struck, and you move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Eat and Move On",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

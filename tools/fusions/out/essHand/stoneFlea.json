@@ -1,0 +1,83 @@
+{
+ "essence": "essHand",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Pounce to Pinch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "desc": "You leap up to 6 tiles onto the target and pinch, dealing 12 damage and leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Flicked Biter",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a flea off your fingertip that deals 4 damage to the first enemy it meets, then hops on to 2 more enemies within 3 tiles, each hop dealing 50% of the original damage."
+  },
+  {
+   "name": "Scratch the Itch",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "You rake your nails over your skin and remove 2 conditions from yourself. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Twitchy Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.12,
+    "duration": 3
+   },
+   "desc": "Every few paces you cover, your next strike gains 12% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

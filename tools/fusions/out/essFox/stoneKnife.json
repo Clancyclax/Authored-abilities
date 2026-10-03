@@ -1,78 +1,78 @@
 {
- "essence": "essFox",
- "stone": "stoneKnife",
- "fusions": [
-  {
-   "name": "Slip Behind",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "slashing",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 12,
-   "strikes": 1,
-   "chargeTo": 160,
-   "dot": {
-    "dmgPerTick": 3,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Slips you up to a target within 5 tiles, then cuts for 13 damage and makes it [Bleeding] for 3 damage a second for 5 seconds."
-  },
-  {
-   "name": "Spare Blade",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "slashing",
-   "role": "resource",
-   "base": 6,
-   "cooldown": 1,
-   "spammable": true,
-   "speed": 420,
-   "radius": 6,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "chargesMax": 4,
-   "openerCrit": {
-    "amount": 0.4
-   },
-   "desc": "Throws a spare blade that deals 6 damage to the first enemy it meets, with 40% more critical chance against a target that has not been hurt yet. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Edge from Nowhere",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "slashing",
-   "buffStat": "critDamage",
-   "buffAmount": 0.4,
-   "buffDuration": 12,
-   "cooldown": 45,
-   "blinkOnUse": 96,
-   "desc": "Increases your critical damage by 40% for 12 seconds and slips you 3 tiles from where you stood."
-  },
-  {
-   "name": "Back in Hand",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "slashing",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.3,
-    "duration": 5
-   },
-   "desc": "When you kill an enemy, your critical chance rises by 30% for 5 seconds. Once every 6 seconds."
-  }
- ]
+  "essence": "essFox",
+  "stone": "stoneKnife",
+  "fusions": [
+    {
+      "name": "Slip Behind",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "slashing",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 12,
+      "strikes": 1,
+      "chargeTo": 160,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Slips you up to a target within 5 tiles, then cuts for 13 damage and makes it [Bleeding] for 3 damage a second for 5 seconds."
+    },
+    {
+      "name": "Palmed Fan",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "slashing",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "volleyCount": 3,
+      "volleySpread": 0.35,
+      "speed": 420,
+      "radius": 6,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "consumeAffliction": true,
+      "desc": "Looses 3 palmed blades at once, spread apart, each dealing 6 damage. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+    },
+    {
+      "name": "Edge from Nowhere",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "slashing",
+      "buffStat": "critDamage",
+      "buffAmount": 0.4,
+      "buffDuration": 12,
+      "cooldown": 45,
+      "blinkOnUse": 96,
+      "desc": "Increases your critical damage by 40% for 12 seconds and slips you 3 tiles from where you stood."
+    },
+    {
+      "name": "Back in Hand",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "slashing",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.3,
+        "duration": 5
+      },
+      "desc": "When you kill an enemy, your critical chance rises by 30% for 5 seconds. Once every 6 seconds."
+    }
+  ]
 }

@@ -1,0 +1,79 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Sandbox Pod",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "speed": 420,
+   "radius": 9,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Fires a ripe seed pod that bursts on the first enemy it meets, dealing 34 damage, and 80% of that to every other enemy within 3.5 tiles."
+  },
+  {
+   "name": "Seed Buckshot",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "plant",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 420,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 3,
+    "label": "Taken Up"
+   },
+   "desc": "Fires 3 hard seeds at once, spread apart, each dealing 3 damage. 15% of the damage dealt comes back to you as healing over the following 3 seconds."
+  },
+  {
+   "name": "Pod Battery",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "plant",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDuration": 12,
+   "summonDmg": 5,
+   "summonInterval": 1.2,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to grow a seed-spitting pod beside you for 12 seconds. Every 1.2 seconds it fires on an enemy within 6 tiles for 5 damage."
+  },
+  {
+   "name": "Swelling Seedcase",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

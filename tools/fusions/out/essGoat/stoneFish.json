@@ -3,79 +3,88 @@
  "stone": "stoneFish",
  "fusions": [
   {
-   "name": "Cascade Stamp",
    "kind": "active",
    "category": "attack",
-   "template": "aoeRing",
+   "name": "Up the Falls",
+   "template": "rangeStrike",
    "element": "water",
    "role": "medium",
    "base": 14,
    "cooldown": 14,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "small",
-   "knockback": 96,
+   "range": 192,
+   "maxMult": 1.4,
+   "chargeTo": 192,
    "debuff": {
     "key": "wet",
-    "chance": 0.6,
+    "chance": 1,
     "duration": 6,
     "stacks": 1,
     "potency": 1
    },
-   "desc": "Stamps down in the shallows, dealing 14 damage to every enemy within 3 tiles and knocking them 3 tiles back. Each hit has a 60% chance to leave the target [Soaked] for 6 seconds."
+   "desc": "Rushes you onto a target up to 6 tiles away and deals 14 damage, rising to 1.4 times that from the full 6 tiles. The target is left [Soaked] for 6 seconds."
   },
   {
-   "name": "Skittering Butt",
    "kind": "active",
    "category": "attack",
+   "name": "Slick-Rock Ram",
    "template": "sunderStrike",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 86,
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "consumeAffliction": true,
    "sunder": {
-    "amount": 0.05,
-    "duration": 3
+    "amount": 0.12,
+    "duration": 5
    },
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 2
-   },
-   "desc": "Butts the target for 4 damage and leaves it 5% easier to wound for 3 seconds. You move 15% faster for 2 seconds after using it."
+   "desc": "Rams a target carrying one of your afflictions and uses that affliction up. The ram deals 8 damage and leaves the target 12% easier to wound for 5 seconds."
   },
   {
-   "name": "Silver Slip",
+   "name": "Wriggle Free",
    "kind": "active",
    "category": "restore",
    "template": "cleanse",
    "element": "water",
-   "cleanseCount": 4,
+   "cleanseCount": 3,
+   "cleanseTag": "control",
    "healScope": "self",
-   "cooldown": 40,
+   "cooldown": 30,
    "hasteOnUse": {
     "pct": 0.2,
-    "duration": 5
+    "duration": 4
    },
-   "desc": "Removes up to 4 conditions from you. You move 20% faster for 5 seconds after you use it."
+   "desc": "Removes up to 3 control conditions from you. You move 20% faster for 4 seconds after you use it."
   },
   {
-   "name": "Shoal Cover",
+   "name": "Riverstone Stride",
    "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
+   "category": "movement",
+   "template": "waterWalk",
    "element": "water",
-   "stackShape": "boon",
-   "stackBuild": "dodge",
-   "stackPay": "ward",
-   "stackCap": 5,
-   "stackDecay": 6,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 0.8,
-   "stackIcon": "stackWard",
-   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. When you reach 5, they all spend at once: you gain a shield that soaks 5% of your maximum health per stack (26% at full). Unfed, a stack fades every 6 seconds."
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you cross it faster than you cross rock"
+    },
+    {
+     "rank": "silver",
+     "stat": "manaRegen",
+     "amount": 0.2,
+     "text": "and the current feeds you as you cross"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.1,
+     "text": "and nothing that has to swim can pin you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 12% faster over it, from silver your mana recovers 20% faster, and from gold your dodge chance rises by 10%."
   }
  ]
 }

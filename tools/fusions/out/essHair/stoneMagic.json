@@ -1,77 +1,77 @@
 {
- "essence": "essHair",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "name": "Charged Strand",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "debuff": {
-    "key": "expose",
-    "chance": 0.3,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Casts a charged strand that deals 4 damage to the first enemy it meets. Each hit has a 30% chance of [Exposed] for 6 seconds."
-  },
-  {
-   "name": "Severed Thread",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "arcane",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 15,
-   "range": 224,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "consumeAfflictionsPer": 0.5,
-   "maxMult": 1.5,
-   "desc": "Cuts through one enemy within 7 tiles for 16 damage and draws out every affliction you have on it, dealing 50% more damage for each one drawn. Deals up to 1.5 times as much at maximum range."
-  },
-  {
-   "name": "Ley Draw",
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "element": "arcane",
-   "cooldown": 40,
-   "resource": "mana",
-   "overTime": true,
-   "restorePerSec": 3,
-   "restoreDuration": 8,
-   "desc": "Restores 3 mana a second for 8 seconds."
-  },
-  {
-   "name": "Stored Charge",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.2,
-    "charges": 1
-   },
-   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds."
-  }
- ]
+  "essence": "essHair",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "name": "Charged Strand",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "debuff": {
+        "key": "expose",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Casts a charged strand that deals 4 damage to the first enemy it meets. Each hit has a 30% chance of [Exposed] for 6 seconds."
+    },
+    {
+      "name": "Severed Thread",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "arcane",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 15,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "consumeAfflictionsPer": 0.5,
+      "maxMult": 1.5,
+      "desc": "Cuts through one enemy within 7 tiles for 16 damage and draws out every affliction you have on it, dealing 50% more damage for each one drawn. Deals up to 1.5 times as much at maximum range."
+    },
+    {
+      "name": "Spell-Snaring Weave",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "arcane",
+      "cooldown": 30,
+      "reflectKind": "spell",
+      "reflectChance": 0.4,
+      "reflectFrac": 0.4,
+      "buffDuration": 6,
+      "desc": "For 6 seconds, 40% of the elemental damage you take is turned aside and sent back to whoever dealt it."
+    },
+    {
+      "name": "Stored Charge",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.2,
+        "charges": 1
+      },
+      "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds."
+    }
+  ]
 }

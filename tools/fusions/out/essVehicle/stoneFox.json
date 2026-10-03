@@ -1,0 +1,79 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Decoy Cart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "confuse": true,
+   "confuseChance": 0.5,
+   "confuseDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Rolls an empty decoy cart into the first enemy in its path. It deals 12 damage, knocks the target back 2.5 tiles and has a 50% chance to turn it against its allies for 3 seconds. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Dust in Their Eyes",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spins your wheels to throw dust through a cone 3 tiles long. It deals 7 damage, with a 40% chance to leave each enemy [Blunted] for 5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "False Trail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 25,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and moves you 25% faster while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Already Down the Road",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, an attack that would hit you rolls your dodge a second time, and the second roll stands."
+  }
+ ]
+}

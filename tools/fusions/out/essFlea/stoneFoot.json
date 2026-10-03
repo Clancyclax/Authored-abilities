@@ -3,25 +3,28 @@
  "stone": "stoneFoot",
  "fusions": [
   {
-   "name": "Stride Sting",
+   "name": "Hobbling Nip",
    "kind": "active",
    "category": "attack",
    "template": "projectileBall",
    "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
    "speed": 380,
    "radius": 8,
    "reachUnits": 224,
    "rangeBand": "medium",
-   "spammable": true,
    "leech": 0.15,
-   "hasteOnUse": {
-    "pct": 0.1,
-    "duration": 3
-   },
-   "desc": "Sends a bite at the first enemy it meets, dealing 4 damage. You heal for 15% of the damage dealt and move 10% faster for 3 seconds."
+   "desc": "Sends a bite at the first enemy it meets, dealing 7 damage and leaving it [Slowed] for 3 seconds. You heal for 15% of the damage dealt. It holds 3 charges, and kills give charges back.",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
   },
   {
    "name": "Journey's End",
@@ -46,20 +49,16 @@
    "desc": "A heavy blow that deals 28 damage, ignoring armour, and leaves the target 20% easier to wound for 8 seconds. Its damage rises +5% per 100 paces you have run since you last used it (max +50%)."
   },
   {
-   "name": "Long Haul",
+   "name": "Forced March",
    "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
+   "category": "movement",
+   "template": "movementHaste",
    "element": "physical",
    "cooldown": 60,
-   "buffStat": "regenStamina",
-   "buffAmount": 0.5,
-   "buffDuration": 18,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 5
-   },
-   "desc": "Increases your stamina recovery by 50% for 18 seconds. You move 15% faster for 5s after using it."
+   "speedMult": 1.25,
+   "buffDuration": 20,
+   "blinkOnUse": 96,
+   "desc": "Increases your movement speed by 25% for 20 seconds. You finish it 3 tiles from where you stood."
   },
   {
    "name": "Mile Eater",

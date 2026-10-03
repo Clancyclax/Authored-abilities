@@ -3,10 +3,10 @@
  "stone": "stoneFish",
  "fusions": [
   {
-   "name": "Shoal Swell",
+   "name": "Shoal Wake",
    "kind": "active",
    "category": "attack",
-   "template": "aoeRing",
+   "template": "projectileBall",
    "element": "water",
    "role": "basic",
    "base": 4,
@@ -22,42 +22,42 @@
    "scaleOn": "alliesNear",
    "scalePer": 0.08,
    "scaleCap": 0.32,
-   "range": 64,
-   "isAoe": true,
-   "aoeBand": "small",
-   "desc": "Surges a wave out from you, dealing 4 damage to every enemy within 2 tiles, with a 30% chance to leave each [Slowed] for 3 seconds. Its damage rises 8% for each ally within 5.5 tiles (max 32%)."
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "desc": "Sends a jet of river water into the first enemy it meets, dealing 4 damage with a 30% chance to leave it [Slowed] for 3 seconds. Its damage rises 8% for each ally within 5.5 tiles (max 32%)."
   },
   {
-   "name": "Slipstream Gore",
    "kind": "active",
    "category": "attack",
-   "template": "imbueStrike",
+   "name": "Ford Crossing",
+   "template": "breathCone",
    "element": "water",
    "role": "medium",
-   "base": 14,
+   "base": 12,
    "cooldown": 14,
-   "strikes": 1,
-   "chargeTo": 192,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
+   "knockback": 96,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
    },
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Rushes up to 6 tiles to an enemy and gores it, which deals 14 damage and makes it [Bleeding] for 2 damage a second for 5 seconds. You then move 20% faster for 4 seconds."
+   "desc": "Drives a cone of river water 3 tiles ahead of you, dealing 12 damage to everything in it, knocking each back 3 tiles and leaving it [Soaked] for 6 seconds."
   },
   {
-   "name": "Slick Hide",
+   "name": "Slippery Bulk",
    "kind": "active",
    "category": "buff",
    "template": "statBuff",
    "element": "water",
-   "cooldown": 50,
+   "cooldown": 54,
    "buffStat": "dodgeChance",
    "buffAmount": 0.2,
    "buffDuration": 15,
@@ -68,22 +68,22 @@
    "desc": "Increases your dodge chance by 20% for 15 seconds. It also pulls up to 4 enemies within 6 tiles onto you for 4 seconds."
   },
   {
-   "name": "Reading the Current",
+   "name": "Silvered Scales",
    "kind": "passive",
    "category": "stacking",
    "template": "stacking",
    "element": "water",
    "stackShape": "boon",
    "stackBuild": "dodge",
-   "stackPay": "haste",
+   "stackPay": "ward",
    "stackCap": 5,
    "stackDecay": 6,
    "stackSpend": "full",
    "stackOn": "self",
    "stackScale": 1,
-   "stackIcon": "stackEye",
+   "stackIcon": "stackWard",
    "armorBonus": 0.06,
-   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. When you reach 5, they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds. It also hardens your armour by 6% at all times."
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. When you reach 5, they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full). Unfed, a stack fades every 6 seconds. It also hardens your armour by 6% at all times."
   }
  ]
 }

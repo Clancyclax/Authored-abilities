@@ -15,22 +15,18 @@
    "radius": 8,
    "reachUnits": 320,
    "rangeBand": "long",
-   "guaranteedCrit": true,
-   "debuff": {
-    "key": "pinned",
-    "chance": 1,
-    "duration": 2,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Looses a shot from the waterline that deals 30 damage to the first enemy it meets. It is always a critical hit and leaves the target [Pinned] for 2 seconds."
+   "desc": "Looses a shot from the waterline that deals 30 damage to the first enemy it meets and ignores its armour. It has 50% more critical chance against a target that has not been hurt yet.",
+   "ignoreArmor": true,
+   "openerCrit": {
+    "amount": 0.5
+   }
   },
   {
-   "name": "Pellet Spread",
+   "name": "Gizzard Grapeshot",
    "kind": "active",
    "category": "attack",
    "template": "volley",
-   "element": "piercing",
+   "element": "blunt",
    "role": "medium",
    "base": 6,
    "cooldown": 12,
@@ -43,31 +39,37 @@
    "rangeBand": "medium",
    "isAoe": true,
    "knockback": 64,
-   "openerCrit": {
-    "amount": 0.4
-   },
-   "desc": "Looses 5 pellets at once, spread apart, each dealing 6 damage and knocking its target back 2 tiles. They have 40% more critical chance against a target that has not been hurt yet."
+   "desc": "Spits 5 swallowed stones at once, spread apart, each dealing 6 damage and knocking its target back 2 tiles."
   },
   {
    "name": "Held Breath",
    "kind": "active",
    "category": "buff",
-   "template": "selfCritBuff",
+   "template": "rangeBuff",
    "element": "piercing",
-   "critChanceBonus": 0.3,
+   "rangeMult": 1.3,
    "buffDuration": 15,
    "cooldown": 60,
-   "desc": "Increases your critical hit chance by 30% for 15 seconds."
+   "desc": "Your abilities reach 43% further for 15 seconds."
   },
   {
-   "name": "Past the Armour",
+   "name": "Long Wait",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "piercing",
-   "pierceElement": "piercing",
-   "armorIgnore": 0.15,
-   "desc": "Your piercing attacks ignore 15% of the target's armour."
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After a run of strikes with no critical hit, your next strike has 40% more critical chance. Once every 10 seconds."
   }
  ]
 }

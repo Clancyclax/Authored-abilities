@@ -1,71 +1,70 @@
 {
- "essence": "essCat",
- "stone": "stoneMagus",
- "fusions": [
-  {
-   "name": "Corrected Spelling",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "arcane",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1.0,
-   "spammable": true,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "maxMult": 1.5,
-   "consumeAffliction": true,
-   "desc": "A pounce that uses up one of your afflictions on the target, dealing 9 damage, up to 1.5 times at maximum range."
-  },
-  {
-   "name": "Whispered Incantation",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "ignoreResist": true,
-   "desc": "A bolt of arcana that deals 30 damage and ignores the target's resistances."
-  },
-  {
-   "name": "Pause the Room",
-   "kind": "active",
-   "category": "buff",
-   "template": "timeFreeze",
-   "element": "arcane",
-   "cooldown": 90,
-   "freezeDuration": 3,
-   "freezeRadius": 128,
-   "aoeBand": "medium",
-   "castTime": 0.5,
-   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
-  },
-  {
-   "name": "Overflowing Syllable",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "fullMana",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "boltNearest",
-    "damage": 9,
-    "range": 224
-   },
-   "desc": "When your mana is full, a bolt of arcana strikes the nearest enemy within 7 tiles for 9 damage. Once every 15 seconds."
-  }
- ]
+  "essence": "essCat",
+  "stone": "stoneMagus",
+  "fusions": [
+    {
+      "name": "Corrected Spelling",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "arcane",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "consumeAffliction": true,
+      "desc": "A pounce that uses up one of your afflictions on the target, dealing 9 damage, up to 1.5 times at maximum range."
+    },
+    {
+      "name": "Whispered Incantation",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "ignoreResist": true,
+      "desc": "A bolt of arcana that deals 30 damage and ignores the target's resistances."
+    },
+    {
+      "name": "Pause the Room",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "arcane",
+      "cooldown": 90,
+      "freezeDuration": 3,
+      "freezeRadius": 128,
+      "aoeBand": "medium",
+      "castTime": 0.5,
+      "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+    },
+    {
+      "name": "Poised Word",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "fullMana",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.3
+      },
+      "desc": "When your mana is full, your next strike has 30% more critical chance. Once every 15 seconds."
+    }
+  ]
 }

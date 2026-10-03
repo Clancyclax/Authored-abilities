@@ -1,86 +1,79 @@
 {
- "essence": "essCoral",
- "stone": "stoneKnife",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "name": "Slipped Edge",
-   "element": "piercing",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 420,
-   "radius": 5,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "openerCrit": {
-    "amount": 0.5
-   },
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 3,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Flicks a sliver of reef that deals 4 damage to the first enemy it meets and makes it [Bleeding] for 1 damage a second for 3 seconds. 50% more critical chance until something has bled."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Under the Plate",
-   "template": "rangeStrike",
-   "element": "piercing",
-   "role": "long",
-   "base": 28,
-   "cooldown": 90,
-   "range": 224,
-   "maxMult": 2,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "bossPct": 0.05,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 6,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Throws a thin blade at a target up to 7 tiles away that deals 28 damage, rising to twice that at full reach, and makes it [Bleeding] for 2 damage a second for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "name": "Hidden Stingers",
-   "template": "statBuff",
-   "element": "piercing",
-   "buffStat": "critChance",
-   "buffAmount": 0.25,
-   "buffDuration": 12,
-   "cooldown": 45,
-   "escort": {
-    "dmg": 3,
-    "interval": 1.2,
-    "duration": 8
-   },
-   "desc": "Increases your critical hit chance by 25% for 12 seconds. A line of stingers fights beside you for 8 seconds, striking for 3 every 1.2 seconds."
-  },
-  {
-   "kind": "passive",
-   "category": "passive buff",
-   "name": "Second Look",
-   "template": "fateReroll",
-   "element": "piercing",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 10,
-   "armorBonus": 0.05,
-   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands. Your armour rises by 5%."
-  }
- ]
+  "essence": "essCoral",
+  "stone": "stoneKnife",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "name": "Slipped Edge",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 420,
+      "radius": 5,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "openerCrit": {
+        "amount": 0.5
+      },
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Flicks a sliver of reef that deals 4 damage to the first enemy it meets and makes it [Bleeding] for 1 damage a second for 3 seconds. 50% more critical chance until something has bled."
+    },
+    {
+      "name": "Opened Seam",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 14,
+      "range": 72,
+      "reachUnits": 72,
+      "rangeBand": "melee",
+      "stackMult": 1.8,
+      "requiresTargetBelow": 0.25,
+      "desc": "A hidden cut that deals 18 damage and consumes every affliction on the target, adding 1.8 times their remaining damage to the blow. Usable only on an enemy at or below 25% health, a threshold that rises with each rank.",
+      "executeLadder": true
+    },
+    {
+      "kind": "active",
+      "category": "buff",
+      "name": "Hidden Stingers",
+      "template": "statBuff",
+      "element": "piercing",
+      "buffStat": "critChance",
+      "buffAmount": 0.25,
+      "buffDuration": 12,
+      "cooldown": 45,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.2,
+        "duration": 8
+      },
+      "desc": "Increases your critical hit chance by 25% for 12 seconds. A line of stingers fights beside you for 8 seconds, striking for 3 every 1.2 seconds."
+    },
+    {
+      "kind": "passive",
+      "category": "passive buff",
+      "name": "Second Look",
+      "template": "fateReroll",
+      "element": "piercing",
+      "rerollKind": "crit",
+      "rerollKinds": [
+        "crit"
+      ],
+      "rerollCooldown": 10,
+      "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+    }
+  ]
 }

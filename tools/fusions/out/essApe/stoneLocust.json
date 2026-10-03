@@ -3,7 +3,7 @@
  "stone": "stoneLocust",
  "fusions": [
   {
-   "name": "Gnawing Swarm",
+   "name": "Fistful Feast",
    "kind": "active",
    "category": "attack",
    "template": "aoeRing",
@@ -52,17 +52,24 @@
    "desc": "Releases a swarm that stays for 14 seconds and strikes an enemy within 5 tiles for 3 damage every 1.2 seconds."
   },
   {
-   "name": "Gleaning Kin",
+   "name": "Gorge on the Fallen",
    "kind": "passive",
-   "category": "summon",
-   "template": "summonBonded",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "nature",
-   "familiarDmg": 3,
-   "familiarRange": 160,
-   "familiarInterval": 1.2,
-   "familiarFamily": "bee",
-   "familiarCreatureName": "Gnawer",
-   "desc": "Calls a bonded swarm that fights beside you, striking for 3 damage every 1.2 seconds within 5 tiles."
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "armorBonus": 0.05,
+   "desc": "Each time you kill an enemy, you regain 3 health a second for 5 seconds. Once every 10 seconds. Your armour rises by 5%."
   }
  ]
 }

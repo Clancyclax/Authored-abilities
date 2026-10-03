@@ -1,90 +1,91 @@
 {
- "essence": "essChicken",
- "stone": "stoneLizard",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Drowsy Hiss",
-   "template": "breathCone",
-   "element": "nature",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.9,
-   "spammable": true,
-   "debuff": {
-    "key": "slowAttack",
-    "chance": 0.4,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "range": 128,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "desc": "A slow hiss in a 4-tile cone that deals 4 damage to everything in it, with a 40% chance per hit to leave it [Hindered] for 5 seconds, its attacks slowed."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Sunbaked Lunge",
-   "template": "imbueStrike",
-   "element": "nature",
-   "role": "long",
-   "base": 28,
-   "cooldown": 90,
-   "strikes": 1,
-   "guaranteedCrit": true,
-   "dot": {
-    "dmgPerTick": 3,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "allyScaling": {
-    "per": 0.08,
-    "max": 4,
-    "range": 176
-   },
-   "allyRange": 176,
-   "allyMax": 4,
-   "desc": "A strike from stillness that deals 28 damage as a critical hit and leaves the target [Bleeding] for 3 damage a second for 4 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
-  },
-  {
-   "name": "Dropped Tail",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "nature",
-   "cooldown": 30,
-   "stealthDuration": 5,
-   "stealthAlpha": 0.3,
-   "aggroMult": 0.3,
-   "stealthSpeedPct": 20,
-   "stealthScope": "self",
-   "desc": "Veils you for 5 seconds. Enemies notice you far later, you move 20% faster while veiled, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Regrown Plume",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "nature",
-   "isTriggered": true,
-   "cooldown": 45,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 45,
-    "frac": 0.4
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 4,
-    "duration": 6
-   },
-   "desc": "When your health falls below 40%, you regain 4 health a second for 6 seconds. Once every 45 seconds."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneLizard",
+  "fusions": [
+    {
+      "name": "Sluggish Spit",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "nature",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "speed": 360,
+      "radius": 6,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "desc": "Spits a cold glob that deals 4 damage to the first enemy in its path, with a 30% chance to leave it [Slowed] for 3 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Sunbaked Lunge",
+      "template": "imbueStrike",
+      "element": "nature",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "strikes": 1,
+      "guaranteedCrit": true,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "allyScaling": {
+        "per": 0.08,
+        "max": 4,
+        "range": 176
+      },
+      "allyRange": 176,
+      "allyMax": 4,
+      "desc": "A strike from stillness that deals 28 damage as a critical hit and leaves the target [Bleeding] for 3 damage a second for 4 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+    },
+    {
+      "name": "Shed Tailfeathers",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "nature",
+      "cooldown": 16,
+      "teleportRange": 128,
+      "dodgeBonus": 0.1,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Steps you instantly to a point up to 4 tiles away with +10% dodge chance. Your movement speed rises by 20% for 4 seconds."
+    },
+    {
+      "name": "Regrown Plume",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "nature",
+      "isTriggered": true,
+      "cooldown": 45,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 45,
+        "frac": 0.4
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 4,
+        "duration": 6
+      },
+      "desc": "When your health falls below 40%, you regain 4 health a second for 7 seconds. Once every 45 seconds."
+    }
+  ]
 }

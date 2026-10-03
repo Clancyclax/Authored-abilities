@@ -1,78 +1,74 @@
 {
- "essence": "essFork",
- "stone": "stoneGrazen",
- "fusions": [
-  {
-   "name": "Herd Jab",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "spammable": true,
-   "scaleOn": "alliesNear",
-   "scalePer": 0.08,
-   "scaleCap": 0.32,
-   "desc": "Thrusts the fork at the first enemy it meets, dealing 4 damage. Its damage rises 8% for each ally within 5.5 tiles (max +32%)."
-  },
-  {
-   "name": "Drovers' Push",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "long",
-   "base": 28,
-   "cooldown": 100,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.12,
-    "duration": 8
-   },
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 12
-   },
-   "desc": "Drives the target back with a heavy thrust that deals 28 damage and leaves it 12% easier to wound for 8 seconds. When it hits, you and your allies deal 20% more damage for 12 seconds."
-  },
-  {
-   "name": "Warm Fodder",
-   "kind": "active",
-   "category": "healing",
-   "template": "selfHot",
-   "element": "nature",
-   "cooldown": 30,
-   "hotPerSec": 3,
-   "hotDuration": 8,
-   "healScope": "ally",
-   "desc": "Restores 3 health a second to the ally who needs it most, for 8 seconds."
-  },
-  {
-   "name": "Steady Grazing",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "nature",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendStamina",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 2,
-    "duration": 4
-   },
-   "desc": "Each time you spend stamina, you regain 2 health a second for 4 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essFork",
+  "stone": "stoneGrazen",
+  "fusions": [
+    {
+      "name": "Shoulder to Shoulder",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "spammable": true,
+      "scaleOn": "alliesNear",
+      "scalePer": 0.08,
+      "scaleCap": 0.32,
+      "desc": "Thrusts the fork at the first enemy it meets, dealing 4 damage. Its damage rises 8% for each ally within 5.5 tiles (max +32%)."
+    },
+    {
+      "name": "Bringing In the Drove",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "long",
+      "base": 26,
+      "cooldown": 100,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "desc": "Sweeps the fork round you, dealing 26 damage to every enemy within 3 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+    },
+    {
+      "name": "Warm Fodder",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "nature",
+      "cooldown": 30,
+      "hotPerSec": 3,
+      "hotDuration": 8,
+      "healScope": "ally",
+      "desc": "Restores 3 health a second to the ally who needs it most, for 8 seconds."
+    },
+    {
+      "name": "Steady Grazing",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "nature",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 2,
+        "duration": 4
+      },
+      "desc": "Each time you spend stamina, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+    }
+  ]
 }

@@ -1,65 +1,73 @@
 {
- "essence": "essChain",
- "stone": "stoneFoot",
- "fusions": [
-  {
-   "name": "Long Haul",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "maxMult": 1.5,
-   "chargesMax": 3,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.04,
-   "scaleCap": 0.4,
-   "desc": "Swings a chain at an enemy up to 6 tiles away that deals 7 damage, up to 1.5 times that at full reach. Its damage rises 4% per 100 paces run since you last used it, up to 40%. Holds 3 charges, and kills give charges back."
-  },
-  {
-   "name": "Coffle Drag",
-   "kind": "active",
-   "category": "attack",
-   "template": "barrierWall",
-   "element": "physical",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 16,
-   "wallKind": "pull",
-   "wallLength": 192,
-   "wallDuration": 4,
-   "wallThickness": 26,
-   "stunOnHit": 1,
-   "desc": "Stretches a 6-tile line of links ahead of you for 4 seconds that drags nearby enemies inward. It deals 10 damage to each one it catches and stuns it for 1 second.",
-   "pullForce": 30
-  },
-  {
-   "name": "Forced Pace",
-   "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
-   "element": "physical",
-   "cooldown": 30,
-   "speedMult": 1.25,
-   "buffDuration": 10,
-   "blinkOnUse": 64,
-   "desc": "Increases your movement speed by 25% for 10 seconds. You finish it 2 tiles from where you stood."
-  },
-  {
-   "name": "Waymarker Stance",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "physical",
-   "condition": "onRoads",
-   "bonusKind": "armor",
-   "amount": 0.15,
-   "desc": "On paved ground, your armour rises by 15%."
-  }
- ]
+  "essence": "essChain",
+  "stone": "stoneFoot",
+  "fusions": [
+    {
+      "name": "Long Haul",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "chargesMax": 3,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.04,
+      "scaleCap": 0.4,
+      "desc": "Swings a chain at an enemy up to 6 tiles away that deals 7 damage, up to 1.5 times that at full reach. Its damage rises 4% per 100 paces run since you last used it, up to 40%. Holds 3 charges, and kills give charges back."
+    },
+    {
+      "name": "Coffle Drag",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "physical",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 16,
+      "wallKind": "pull",
+      "wallLength": 192,
+      "wallDuration": 4,
+      "wallThickness": 26,
+      "stunOnHit": 1,
+      "desc": "Stretches a 6-tile line of links ahead of you for 4 seconds that drags nearby enemies inward. It deals 10 damage to each one it catches and stuns it for 1 second.",
+      "pullForce": 30
+    },
+    {
+      "name": "Forced Pace",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "physical",
+      "cooldown": 30,
+      "speedMult": 1.25,
+      "buffDuration": 10,
+      "blinkOnUse": 64,
+      "desc": "Increases your movement speed by 25% for 10 seconds. You finish it 2 tiles from where you stood."
+    },
+    {
+      "name": "Mile-Forged Mail",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 5
+      },
+      "desc": "Each long stretch of ground you cover wraps you in links that shield you for 10% of your maximum health for 5 seconds. Once every 15 seconds."
+    }
+  ]
 }

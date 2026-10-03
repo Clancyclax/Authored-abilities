@@ -1,0 +1,74 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd Trample",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "healOnUse": 12,
+   "desc": "The herd crosses the meadow around you, dealing 26 damage to every enemy within 3.5 tiles. When it hits, every ally deals 20% more damage for 15 seconds. You restore 12 health."
+  },
+  {
+   "name": "Clover Bolus",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 320,
+   "radius": 8,
+   "chargesMax": 4,
+   "leech": 0.15,
+   "desc": "Lobs a chewed wad of clover that deals 7 damage to the first enemy it meets and heals you for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Hayloft Warmth",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "plant",
+   "cooldown": 36,
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 10,
+   "range": 160,
+   "healOnUse": 10,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds and fights with 1 more power while it holds. You restore 10 health."
+  },
+  {
+   "name": "Winter Fodder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 5,
+    "duration": 5
+   },
+   "desc": "When your health falls below 35%, you regain 5 health a second for 5 seconds. Once every 40 seconds."
+  }
+ ]
+}

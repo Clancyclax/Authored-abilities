@@ -1,0 +1,80 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Fine-Line Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A slicing page edge that deals 4 damage and leaves the target 5% easier to wound for 3 seconds, with a 25% chance to leave it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Sewn Into the Spine",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Lashes binding thread around you that deals 12 damage to every enemy within 3 tiles and stuns them for 1.2 seconds."
+  },
+  {
+   "name": "Strand-Laid Sheets",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Laces your pages with strands that raise your armour by 20% for 12 seconds."
+  },
+  {
+   "name": "Calligrapher's Brush",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a calligrapher's brush with an edge. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

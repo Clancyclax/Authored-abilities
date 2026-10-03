@@ -1,92 +1,99 @@
 {
- "essence": "essFish",
- "stone": "stoneKnife",
- "fusions": [
-  {
-   "name": "Palmed Blade",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 420,
-   "radius": 7,
-   "openerCrit": {
-    "amount": 0.5
-   },
-   "desc": "Throws a blade that deals 5 damage. It has 50% more critical chance until something has bled."
-  },
-  {
-   "name": "Gutting Slip",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 14,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "consumeAfflictionsPer": 0.5,
-   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 16 damage. It only strikes a target at or below 25% health."
-  },
-  {
-   "name": "Hidden Edge",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "water",
-   "cooldown": 90,
-   "summonKind": "trap",
-   "summonDuration": 30,
-   "summonDmg": 20,
-   "summonRange": 96,
-   "summonInterval": 0,
-   "summonCharges": 2,
-   "summonBlast": 88,
-   "summonArmDelay": 0.1,
-   "trapDelivery": "spawned",
-   "castTime": 1,
-   "allyScaling": {
-    "per": 0.11,
-    "max": 4,
-    "range": 180
-   },
-   "allyGrant": {
-    "power": 1,
-    "dmgPct": 0.33
-   },
-   "perAllyGain": {
-    "resistPct": 0.22,
-    "dotChancePct": 0.22
-   },
-   "allyRange": 180,
-   "allyMax": 4,
-   "desc": "Conjures a hidden trap of jaws onto the nearest enemy. It waits 30 seconds, and the first 2 enemies to come within 3 tiles take 20 damage in a blast around it. Its effect increases by 11% for each ally within 5.5 tiles, up to 4 allies."
-  },
-  {
-   "name": "Cut and Cover",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 12,
-   "trigger": {
-    "on": "crit",
-    "cooldown": 12
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.1,
-    "duration": 5
-   },
-   "desc": "When you land a critical hit, you gain a ward worth 10% of your maximum health for 5 seconds. Once every 12 seconds."
-  }
- ]
+  "essence": "essFish",
+  "stone": "stoneKnife",
+  "fusions": [
+    {
+      "name": "Palmed Blade",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 420,
+      "radius": 7,
+      "openerCrit": {
+        "amount": 0.5
+      },
+      "desc": "Throws a blade that deals 5 damage. It has 50% more critical chance until something has bled."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Filleting Sweep",
+      "template": "breathCone",
+      "element": "slashing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 80,
+      "coneAngle": 1.2,
+      "isAoe": true,
+      "aoeBand": "small",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "spreadAfflictions": 96,
+      "desc": "Sweeps your blade through a cone 2.5 tiles long, dealing 12 damage to everything in it and leaving it [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on a target spread to every enemy within 3 tiles of it."
+    },
+    {
+      "name": "Hidden Edge",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "water",
+      "cooldown": 90,
+      "summonKind": "trap",
+      "summonDuration": 30,
+      "summonDmg": 20,
+      "summonRange": 96,
+      "summonInterval": 0,
+      "summonCharges": 2,
+      "summonBlast": 88,
+      "summonArmDelay": 0.1,
+      "trapDelivery": "spawned",
+      "castTime": 1,
+      "allyScaling": {
+        "per": 0.11,
+        "max": 4,
+        "range": 180
+      },
+      "allyGrant": {
+        "power": 1,
+        "dmgPct": 0.33
+      },
+      "perAllyGain": {
+        "resistPct": 0.22,
+        "dotChancePct": 0.22
+      },
+      "allyRange": 180,
+      "allyMax": 4,
+      "desc": "Conjures a hidden trap of jaws onto the nearest enemy. It waits 30 seconds, and the first 2 enemies to come within 3 tiles take 20 damage in a blast around it. Its effect increases by 11% for each ally within 5.5 tiles, up to 4 allies."
+    },
+    {
+      "kind": "passive",
+      "category": "triggered",
+      "name": "Opened Seam",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "duration": 4
+      },
+      "desc": "When you inflict a condition on an enemy, your next strike has 15% more critical hit chance. Once every 10 seconds."
+    }
+  ]
 }

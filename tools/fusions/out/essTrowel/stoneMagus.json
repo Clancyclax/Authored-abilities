@@ -1,0 +1,78 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Recited Courses",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Speaks a measured line ahead of you, dealing 8 damage to every enemy within 3 tiles in front, with a 30% chance to leave each one [Muddled] for 3 seconds. It needs one of your afflictions on the target, and uses it up."
+  },
+  {
+   "name": "Last Letter Struck",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "arcane",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "A strike at a target at or below 25% of its health that deals 22 damage and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Corrected Script",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 0.4,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is sent back to whoever dealt it."
+  },
+  {
+   "name": "Rehearsed Lines",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every ability you use builds a stack on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

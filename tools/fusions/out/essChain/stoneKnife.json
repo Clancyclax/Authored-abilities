@@ -1,80 +1,78 @@
 {
- "essence": "essChain",
- "stone": "stoneKnife",
- "fusions": [
-  {
-   "name": "Sleeved Link",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "slashing",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "openerCrit": {
-    "amount": 0.5
-   },
-   "desc": "Flicks a link at the first enemy it meets that deals 4 damage, with 50% more critical chance until something has bled."
-  },
-  {
-   "name": "Cut the Cord",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "slashing",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 16,
-   "range": 84,
-   "reachUnits": 84,
-   "rangeBand": "melee",
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.3,
-   "executeLadder": true,
-   "consumeAfflictionsPer": 0.6,
-   "desc": "Strikes an enemy at or below 30% health for 22 damage, using up every affliction on it to add 1.5 times their remaining damage to the blow."
-  },
-  {
-   "name": "Edge Ready",
-   "kind": "active",
-   "category": "buff",
-   "template": "selfCritBuff",
-   "element": "slashing",
-   "cooldown": 40,
-   "critChanceBonus": 0.25,
-   "buffDuration": 12,
-   "desc": "Increases your critical hit chance by 25% for 12 seconds."
-  },
-  {
-   "name": "Opened Seam",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "slashing",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "crit",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "physicalDamageMult",
-    "amount": 0.2,
-    "duration": 4
-   },
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "When you land a critical hit, your physical damage rises 20% for 4 seconds and the enemy is [Bleeding] for 2 damage a second for 4 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essChain",
+  "stone": "stoneKnife",
+  "fusions": [
+    {
+      "name": "Sleeved Link",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "slashing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "openerCrit": {
+        "amount": 0.5
+      },
+      "desc": "Flicks a link at the first enemy it meets that deals 4 damage, with 50% more critical chance until something has bled."
+    },
+    {
+      "name": "Cut the Cord",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 16,
+      "range": 160,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "maxMult": 1.4,
+      "consumeAfflictionsPer": 0.6,
+      "desc": "Lashes a bladed chain at an enemy up to 5 tiles away that deals 18 damage, up to 1.4 times that at full reach. It uses up every affliction you have on the target, dealing 60% more for each one."
+    },
+    {
+      "name": "Edge Ready",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfCritBuff",
+      "element": "slashing",
+      "cooldown": 40,
+      "critChanceBonus": 0.25,
+      "buffDuration": 12,
+      "desc": "Increases your critical hit chance by 25% for 12 seconds."
+    },
+    {
+      "name": "Opened Seam",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "slashing",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.2,
+        "duration": 4
+      },
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "When you land a critical hit, your physical damage rises 20% for 4 seconds and the enemy is [Bleeding] for 2 damage a second for 4 seconds. Once every 8 seconds."
+    }
+  ]
 }

@@ -1,0 +1,69 @@
+{
+ "essence": "essRake",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Correcting Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Strikes a target carrying one of your afflictions and uses it up, dealing 8 damage and leaving it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Recited Furrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.8,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "castTime": 0.8,
+   "bossPct": 0.05,
+   "desc": "After a 0.8 second recital, drags a cone of arcana 4 tiles ahead of you that deals 26 damage to everything in it. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Second Recitation",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "cooldown": 120,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Practiced Gathering",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 6. The next ability you use spends them all: you deal 3% more damage per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

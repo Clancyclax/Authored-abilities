@@ -1,81 +1,74 @@
 {
- "essence": "essFish",
- "stone": "stoneHand",
- "fusions": [
-  {
-   "name": "Closing Grip",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 14,
-   "speed": 340,
-   "radius": 8,
-   "debuff": {
-    "key": "pinned",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "spreadAfflictions": 96,
-   "desc": "Sends a grasping current that deals 10 damage and leaves the target [Pinned] for 3 seconds. Your afflictions on it spread to enemies within 3 tiles."
-  },
-  {
-   "name": "Squeeze Out",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 15,
-   "cooldown": 16,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "consumeAfflictionsPer": 0.5,
-   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 15 damage. It only strikes a target at or below 25% health."
-  },
-  {
-   "name": "Loosened Grip",
-   "kind": "active",
-   "category": "restore",
-   "template": "cleanse",
-   "element": "water",
-   "cooldown": 60,
-   "cleanseCount": 2,
-   "healScope": "self",
-   "allyScaling": {
-    "per": 0.11,
-    "max": 4,
-    "range": 180
-   },
-   "allyGrant": {
-    "power": 1,
-    "dmgPct": 0.33
-   },
-   "perAllyGain": {
-    "resistPct": 0.22,
-    "dotChancePct": 0.22
-   },
-   "allyRange": 180,
-   "allyMax": 4,
-   "desc": "Removes 2 conditions from you. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4."
-  },
-  {
-   "name": "Steady Shoal",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "water",
-   "buffKind": "crit",
-   "amount": 0.06,
-   "armorBonus": 0.12,
-   "regenPerSec": 1,
-   "desc": "Your critical hit chance rises by 6%. It also hardens your armour by 12% and regenerates 1 health a second, permanently."
-  }
- ]
+  "essence": "essFish",
+  "stone": "stoneHand",
+  "fusions": [
+    {
+      "name": "Closing Grip",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 14,
+      "speed": 340,
+      "radius": 8,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "spreadAfflictions": 96,
+      "desc": "Sends a grasping current that deals 10 damage and leaves the target [Pinned] for 3 seconds. Your afflictions on it spread to enemies within 3 tiles."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Passed Along the Line",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 224,
+      "maxMult": 1.5,
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 15
+      },
+      "scaleOn": "alliesNear",
+      "scalePer": 0.06,
+      "scaleCap": 0.3,
+      "desc": "A thrown blow that deals 28 damage, up to 1.5 times as much at maximum range. When it lands, your allies strike 20% harder for 15 seconds. Its damage rises 6% for each ally within 5.5 tiles, up to 30%."
+    },
+    {
+      "kind": "active",
+      "category": "restore",
+      "name": "Wriggle Free",
+      "template": "cleanse",
+      "element": "water",
+      "cooldown": 40,
+      "cleanseCount": 2,
+      "healScope": "self",
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Removes 2 conditions from you. Your movement speed rises 25% for 4 seconds after you use it."
+    },
+    {
+      "kind": "passive",
+      "category": "passive buff",
+      "name": "Landing the Catch",
+      "template": "passiveConditional",
+      "element": "water",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "dodgeBonus": 0.05,
+      "desc": "Against a target below half health, you deal 12% more damage. Your dodge chance rises by 5%."
+    }
+  ]
 }

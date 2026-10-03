@@ -1,0 +1,79 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Moonshot Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "desc": "Leaps onto a target up to 8 tiles away and deals 30 damage, up to 2 times that at the far end of the leap. It also deals 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Ricochet Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "desc": "Pings a pellet that deals 7 damage, then hops to 2 more enemies within 4 tiles for 60% of that. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Across the Table",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 12,
+   "teleportRange": 256,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 8 tiles away, and you move 25% faster for 4 seconds after."
+  },
+  {
+   "name": "Landing Bite",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Every stretch of ground you cover makes your next ability deal 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

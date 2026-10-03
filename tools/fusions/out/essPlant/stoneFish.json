@@ -1,0 +1,83 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Shoaling Seeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "plant",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "chargesMax": 4,
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 4,
+    "label": "Taken Up"
+   },
+   "desc": "Looses 3 seeds that swim out in a spread, each one that hits dealing 6 damage. 20% of the damage dealt comes back to you as healing over the following 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Kelp Undertow",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You slip up to 6 tiles to the target and strike it for 13 damage, wrapping it in stinging kelp that leaves it [Poisoned] for 2 damage a second for 3 seconds and 25% slower for 3 seconds."
+  },
+  {
+   "name": "Mucilage Coat",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "plant",
+   "cooldown": 40,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "desc": "Coats you in slick plant slime for 12 seconds, raising your dodge chance by 25%. You restore 10 health."
+  },
+  {
+   "name": "Eelgrass Bed",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.2,
+   "stackIcon": "stackWard",
+   "desc": "Every attack you dodge builds a stack on you, up to 4. At 4 stacks they all spend at once and heal you for 6% of your maximum health per stack (24% in all). A stack fades every 8 seconds if none is added."
+  }
+ ]
+}

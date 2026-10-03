@@ -1,0 +1,78 @@
+{
+ "essence": "essGun",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Trotting Snapshot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Fires a quick round that deals 5 damage, and you move 10% faster for 2 seconds."
+  },
+  {
+   "name": "Cavalry Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 150,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 224,
+   "desc": "You ride up to 7 tiles at the target, then fire a cone of shot ahead of you, dealing 13 damage to everything caught in it."
+  },
+  {
+   "name": "Mounted Fire",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 8
+   },
+   "desc": "Increases your attack speed by 20% for 10 seconds, and you move 20% faster for 8 seconds after you use it."
+  },
+  {
+   "name": "Second Mount",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

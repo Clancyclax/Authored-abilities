@@ -1,0 +1,73 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Unyielding Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "knockback": 96,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "A strike with your weapon that deals 12 damage, knocks the target back 3 tiles and leaves it [Bleeding] for 1 damage a second for 6 seconds. Anything struck moves 20% slower for 3 seconds."
+  },
+  {
+   "name": "Cold Grey Breath",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "ice",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "desc": "Breathes the cold off your shell into the cone ahead of you, which deals 28 damage to everything in it and ignores resistances."
+  },
+  {
+   "name": "Cold and Unmoved",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 120,
+   "immunityDuration": 4,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Grey Carapace",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.12,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.04
+    }
+   ],
+   "thornsFrac": 0.08,
+   "desc": "Conjures cold iron over your shell: every hit you take is 2 lower, your armour rises by 12%, and 8% of the damage you take goes back to whoever dealt it. Your armour rises by a further 4%."
+  }
+ ]
+}

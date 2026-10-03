@@ -1,0 +1,90 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Braided Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1.0,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "Swings a braided, weighted cord that deals 12 damage, stuns the target for 1 second and leaves it [Bleeding] for 2 damage a second for 3 seconds. Anything struck moves 25% slower for 3 seconds."
+  },
+  {
+   "name": "Pillars Pulled Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 36,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "Brings down everything around you, dealing 36 damage to every enemy within 3.5 tiles plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Matted Padding",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "desc": "Beats loose strands into felt around you, which absorbs the next 20 damage and holds for 6 seconds."
+  },
+  {
+   "name": "Uncut Locks",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "physicalDamage",
+     "amount": 0.05,
+     "text": "every blow lands with more behind it"
+    },
+    {
+     "rank": "silver",
+     "stat": "maxHp",
+     "amount": 0.05,
+     "text": "and you carry more before you break"
+    },
+    {
+     "rank": "gold",
+     "stat": "critDamage",
+     "amount": 0.1,
+     "text": "and the heaviest blows land heavier still"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1."
+  }
+ ]
+}

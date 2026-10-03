@@ -10,7 +10,7 @@
    "element": "physical",
    "role": "resource",
    "base": 8,
-   "cooldown": 1.0,
+   "cooldown": 1,
    "range": 86,
    "reachUnits": 86,
    "rangeBand": "melee",
@@ -38,7 +38,7 @@
    "range": 224,
    "reachUnits": 224,
    "rangeBand": "medium",
-   "maxMult": 2.0,
+   "maxMult": 2,
    "guaranteedCrit": true,
    "bindOnHit": {
     "slowPct": 0.3,
@@ -62,15 +62,23 @@
    "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
   },
   {
-   "name": "Practiced Touch",
+   "name": "Never Lets Go",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "buffKind": "crit",
-   "amount": 0.08,
-   "cooldownReduction": 0.05,
-   "desc": "Your critical strike chance rises by 8%. Every ability you have comes round 5% sooner."
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 3
+   },
+   "desc": "Each weapon strike makes you heal for 15% of all damage you deal for 3 seconds. Once every 8 seconds."
   }
  ]
 }

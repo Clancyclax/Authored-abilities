@@ -36,7 +36,7 @@
    "base": 28,
    "cooldown": 90,
    "range": 128,
-   "coneAngle": 1.0,
+   "coneAngle": 1,
    "isAoe": true,
    "aoeBand": "medium",
    "ignoreResist": true,
@@ -54,30 +54,26 @@
    "overTime": true,
    "restorePerSec": 4,
    "restoreDuration": 8,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Restores 4 mana a second for 8 seconds. Your movement speed rises 20% for 4s after you use it."
+   "desc": "Restores 4 mana a second for 8 seconds."
   },
   {
-   "name": "Overflow",
+   "name": "Spell Between Leaps",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",
    "element": "arcane",
    "isTriggered": true,
-   "cooldown": 6,
+   "cooldown": 8,
    "trigger": {
-    "on": "spendMana",
-    "cooldown": 6
+    "on": "moveDistance",
+    "cooldown": 8
    },
    "effect": {
     "kind": "nextSpellDamage",
     "amount": 0.3,
     "charges": 1
    },
-   "desc": "Each time you spend mana, your next spell deals 30% more damage. Once every 6 seconds."
+   "desc": "Every few paces you cover, your next spell deals 30% more damage. Once every 8 seconds."
   }
  ]
 }

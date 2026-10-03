@@ -19,21 +19,32 @@
    "range": 200,
    "castTime": 0,
    "isAoe": true,
-   "desc": "Looses a shoal of 4 thread-trailing spindles in a wide fan, each dealing 3 damage."
+   "desc": "Looses 4 weighted spindles in a wide fan, each dealing 3 damage, with a 25% chance per hit to leave the target [Slowed] for 2 seconds.",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
   },
   {
-   "name": "Weighted Cast",
+   "name": "Weighted Seine",
    "kind": "active",
    "category": "attack",
    "template": "rangeStrike",
-   "element": "water",
+   "element": "physical",
    "role": "medium",
    "base": 14,
    "cooldown": 14,
    "range": 224,
    "maxMult": 1.4,
    "stunOnHit": 1.2,
-   "desc": "Casts a weighted line at an enemy up to 7 tiles away, dealing 14 damage, up to 1.4 times as much at full reach, and stunning it for 1.2 seconds."
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Casts a weighted net at an enemy up to 7 tiles away, dealing 14 damage, up to 1.4 times as much at full reach. It stuns the target for 1.2 seconds and slows it by 30% for 3 seconds."
   },
   {
    "name": "Oiled Selvage",
@@ -48,23 +59,21 @@
    "desc": "Raises your armour by 20% and your dodge chance by 25% for 10 seconds."
   },
   {
-   "name": "Fumbled Catch",
+   "name": "Slipped Mesh",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "stacking",
+   "template": "stacking",
    "element": "water",
-   "isTriggered": true,
-   "cooldown": 40,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 40
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.15,
-    "duration": 5
-   },
-   "desc": "Once your health falls below 50%, you slip free and gain a shield worth 15% of your maximum health for 5 seconds. Once every 40 seconds."
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every blow you avoid builds a stack on you, up to 4. At 4 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
   }
  ]
 }

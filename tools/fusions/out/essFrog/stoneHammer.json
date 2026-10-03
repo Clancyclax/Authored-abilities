@@ -1,78 +1,80 @@
 {
- "essence": "essFrog",
- "stone": "stoneHammer",
- "fusions": [
-  {
-   "name": "Drop Flat",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 14,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 96,
-   "debuff": {
-    "key": "dampen",
-    "chance": 1,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "You come down on the ground, dealing 13 damage to every enemy within 3 tiles, knocking them back 3 tiles and leaving them [Damped] for 5 seconds, which lowers their damage."
-  },
-  {
-   "name": "Final Press",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "execute",
-   "base": 26,
-   "cooldown": 15,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "requiresTargetBelow": 0.25,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 4
-   },
-   "desc": "Usable only on an enemy at or below 25% health: you come down on it for 26 damage and leave it 10% easier to wound for 4 seconds."
-  },
-  {
-   "name": "Dead Weight",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "blunt",
-   "cooldown": 60,
-   "buffStat": "dmg_blunt",
-   "buffAmount": 0.3,
-   "buffDuration": 15,
-   "desc": "Increases your blunt damage by 30% for 15 seconds."
-  },
-  {
-   "name": "Tamped Flat",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "blunt",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "physicalDamageMult",
-    "amount": 0.25,
-    "duration": 4
-   },
-   "desc": "When you kill something, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essFrog",
+  "stone": "stoneHammer",
+  "fusions": [
+    {
+      "name": "Drop Flat",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "debuff": {
+        "key": "dampen",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "You leap up to 5 tiles and come down on the ground, dealing 13 damage to every enemy within 3 tiles, knocking them back 3 tiles and leaving them [Damped] for 5 seconds, which lowers their damage.",
+      "chargeTo": 160
+    },
+    {
+      "name": "Final Press",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "execute",
+      "base": 26,
+      "cooldown": 15,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "requiresTargetBelow": 0.25,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "desc": "Usable only on an enemy at or below 25% health: you come down on it for 26 damage and leave it 10% easier to wound for 4 seconds."
+    },
+    {
+      "name": "Coiled Drop",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "blunt",
+      "cooldown": 60,
+      "buffStat": "dmg_blunt",
+      "buffAmount": 0.3,
+      "buffDuration": 15,
+      "desc": "You hop 3 tiles, and your blunt damage rises by 30% for 15 seconds.",
+      "blinkOnUse": 96
+    },
+    {
+      "name": "Level Ground",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.25,
+        "duration": 4
+      },
+      "desc": "When you kill something, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+    }
+  ]
 }

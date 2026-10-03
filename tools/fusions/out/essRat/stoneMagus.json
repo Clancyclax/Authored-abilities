@@ -1,0 +1,70 @@
+{
+ "essence": "essRat",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Squeaked Incantation",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 320,
+   "radius": 8,
+   "chargesMax": 4,
+   "desc": "Your familiar rat carries a practised word to the first enemy it meets, dealing 7 damage. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Whispered Hex",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "curse",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Hexed"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A weapon strike your familiar whispers a hex onto: it deals 12 damage and leaves the target [Hexed] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Prompted From the Shoulder",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 50,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your cast speed by 25% for 15 seconds. For 10 seconds, an escort of rats fights beside you, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Apprentice in the Pocket",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "arcane",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Spellwise Rat",
+   "desc": "Calls a bonded rat familiar that fights beside you, striking for 4 damage every 1.2 seconds at enemies within 5 tiles."
+  }
+ ]
+}

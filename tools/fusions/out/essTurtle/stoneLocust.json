@@ -1,0 +1,73 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Swarm Spat Back",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "leech": 0.2,
+   "desc": "Spits a knot of locusts that deals 6 damage to the first enemy it meets and heals you for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Strip the Field",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 192,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.05,
+   "desc": "Looses a devouring cloud into the cone ahead of you, which deals 26 damage to everything in it, plus 5% of its maximum health to a boss or elite."
+  },
+  {
+   "name": "Cloud Kept Close",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDuration": 10,
+   "summonDmg": 3,
+   "summonRange": 128,
+   "summonInterval": 1,
+   "castTime": 0.5,
+   "desc": "Calls a swarm that circles you for 10 seconds, striking enemies within 4 tiles for 3 damage every 1 second."
+  },
+  {
+   "name": "Gorged and Mended",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, healing you receive rises by 30% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

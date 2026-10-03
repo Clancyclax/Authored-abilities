@@ -1,0 +1,68 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Percussion Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "speed": 700,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Strikes a cap and fires a ball that deals 34 damage to the first enemy it meets, ignoring armour."
+  },
+  {
+   "name": "Muzzle Clap",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "desc": "Strikes a charge that bursts through a cone 4 tiles long, dealing 12 damage to everything in it and stunning each for 1 second."
+  },
+  {
+   "name": "Half-Cock to Full",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "fire",
+   "cooldown": 50,
+   "powerMult": 1.35,
+   "buffDuration": 10,
+   "desc": "Increases your damage by 35% for 10 seconds."
+  },
+  {
+   "name": "Second Report",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 224
+   },
+   "desc": "When you land a critical hit, a shot cracks out at the nearest enemy within 7 tiles and deals 8 damage. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essTree",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Fine-Root Wrap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A strike wound with fine root filaments that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds. Anything struck moves 15% slower for 2 seconds."
+  },
+  {
+   "name": "Needle Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 320,
+   "radius": 5,
+   "range": 220,
+   "isAoe": true,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "desc": "Combs out 4 strands of pine needles at once, spread apart, each dealing 6 damage. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Felted Bark",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "plant",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0,
+   "cooldown": 30,
+   "desc": "Mats moss and fibre over your bark into a barrier that absorbs the next 20 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Root Hairs Drink",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once and heal you for 5% of your maximum health per stack (30% at full). Unfed, the stacks fade."
+  }
+ ]
+}

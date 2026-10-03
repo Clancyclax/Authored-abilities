@@ -1,79 +1,81 @@
 {
- "essence": "essChicken",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Raw Spark",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "hpCostPct": 0.04,
-   "scaleOn": "alliesNear",
-   "scalePer": 0.08,
-   "scaleCap": 0.32,
-   "speed": 420,
-   "radius": 7,
-   "reachUnits": 256,
-   "rangeBand": "long",
-   "desc": "Fires a bolt of raw arcana that hits the first enemy in its path for 9 damage. Each use costs 4% of your maximum health. Its damage rises 8% for each ally beside you, up to 32%."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Wild Burst",
-   "template": "aoeRing",
-   "element": "arcane",
-   "role": "long",
-   "base": 26,
-   "cooldown": 70,
-   "ignoreResist": true,
-   "range": 112,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "allyScaling": {
-    "per": 0.08,
-    "max": 4,
-    "range": 176
-   },
-   "allyRange": 176,
-   "allyMax": 4,
-   "desc": "A burst of raw arcana that deals 26 damage that ignores resistances to every enemy within 3.5 tiles. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
-  },
-  {
-   "name": "Bent Candlelight",
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "element": "arcane",
-   "cooldown": 40,
-   "resource": "mana",
-   "overTime": true,
-   "restorePerSec": 3,
-   "restoreDuration": 8,
-   "desc": "Restores 3 mana a second for 8 seconds."
-  },
-  {
-   "name": "Quickened Mind",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.2,
-    "charges": 1
-   },
-   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Raw Spark",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "hpCostPct": 0.04,
+      "scaleOn": "alliesNear",
+      "scalePer": 0.08,
+      "scaleCap": 0.32,
+      "speed": 420,
+      "radius": 7,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "desc": "Fires a bolt of raw arcana that deals 9 damage to the first enemy in its path. Each use costs 4% of your maximum health. Its damage rises 8% for each ally beside you, up to 32%."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Wild Burst",
+      "template": "aoeRing",
+      "element": "arcane",
+      "role": "long",
+      "base": 26,
+      "cooldown": 70,
+      "ignoreResist": true,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "allyScaling": {
+        "per": 0.08,
+        "max": 4,
+        "range": 176
+      },
+      "allyRange": 176,
+      "allyMax": 4,
+      "desc": "A burst of raw arcana that deals 26 damage that ignores resistances to every enemy within 3.5 tiles. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+    },
+    {
+      "name": "Hen's Charm",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "arcane",
+      "cooldown": 40,
+      "range": 160,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "buffDuration": 10,
+      "partyPower": 1,
+      "partyDmgPct": 0.15,
+      "desc": "Every ally within 5 tiles strikes 15% harder for 11 seconds, and fights with 1 more power while it holds."
+    },
+    {
+      "name": "Quickened Mind",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.2,
+        "charges": 1
+      },
+      "desc": "Each time you spend mana, your next spell deals 22% more damage. Once every 8 seconds."
+    }
+  ]
 }

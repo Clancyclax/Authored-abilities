@@ -1,75 +1,78 @@
 {
- "essence": "essEarth",
- "stone": "stoneHand",
- "fusions": [
-  {
-   "name": "Wringing Clasp",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "earth",
-   "role": "long",
-   "base": 30,
-   "cooldown": 120,
-   "range": 80,
-   "sunder": {
-    "amount": 0.2,
-    "duration": 8
-   },
-   "bossPct": 0.05,
-   "desc": "A crushing grip that deals 30 damage and leaves the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
-  },
-  {
-   "name": "Grapple Finish",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "earth",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 14,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": false,
-   "debuff": {
-    "key": "dodgeDown",
-    "chance": 1,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A grappling hold that deals 22 damage, consumes every affliction on the target and adds 1.5 times their remaining damage to the hit, and leaves it [Leaden] for 5 seconds. Usable only on an enemy at or below 25% health."
-  },
-  {
-   "name": "Steadying Hold",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "earth",
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "cooldown": 40,
-   "shieldAmount": 24,
-   "shieldStrikes": 4,
-   "shieldDuration": 10,
-   "armorBonus": 0.1,
-   "desc": "Sets a firm barrier that absorbs the next 24 damage and holds for 10 seconds. Your armour rises by 10% while it holds."
-  },
-  {
-   "name": "Unslipping Grasp",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "earth",
-   "buffKind": "crit",
-   "amount": 0.08,
-   "resist": {
-    "element": "earth",
-    "amount": 0.08
-   },
-   "desc": "Your critical strike chance rises by 8%. You have 8% earth resistance."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneHand",
+  "fusions": [
+    {
+      "name": "Wringing Clasp",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "earth",
+      "role": "long",
+      "base": 30,
+      "cooldown": 120,
+      "range": 80,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 8
+      },
+      "bossPct": 0.05,
+      "desc": "A crushing grip that deals 30 damage and leaves the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Grasping Loam",
+      "template": "aoeRing",
+      "element": "earth",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Hands of earth rise around you, dealing 12 damage to every enemy within 3 tiles, stunning each for 1 second and leaving it [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Steadying Hold",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "earth",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "cooldown": 40,
+      "shieldAmount": 24,
+      "shieldStrikes": 4,
+      "shieldDuration": 10,
+      "armorBonus": 0.1,
+      "desc": "Sets a firm barrier that absorbs the next 24 damage and holds for 10 seconds. Your armour rises by 10% while it holds."
+    },
+    {
+      "kind": "passive",
+      "name": "Signet of Granite",
+      "category": "gear summon",
+      "template": "summonGear",
+      "element": "earth",
+      "critChance": 0.05,
+      "critDamage": 0.15,
+      "lifeOnKill": 2,
+      "itemBuffs": [
+        {
+          "stat": "armor",
+          "amount": 0.04
+        }
+      ],
+      "desc": "Conjures a granite signet: your critical chance rises by 5%, your critical hits deal 0.15x more, each kill returns 2 health, and your armour rises by 4%."
+    }
+  ]
 }

@@ -1,72 +1,75 @@
 {
- "essence": "essDog",
- "stone": "stoneHorse",
- "fusions": [
-  {
-   "name": "Thunderous Charge",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "blunt",
-   "role": "long",
-   "base": 30,
-   "cooldown": 80,
-   "strikes": 1,
-   "range": 96,
-   "guaranteedCrit": true,
-   "dot": {
-    "dmgPerTick": 3,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Charges into the target for 30 damage and makes it [Bleeding] for 3 damage a second for 4 seconds. Every hit is a critical hit."
-  },
-  {
-   "name": "Kicked Up",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 80,
-   "isAoe": true,
-   "aoeBand": "small",
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.3,
-   "desc": "Kicks out at every enemy within 2.5 tiles for 4 damage. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
-  },
-  {
-   "name": "Pack Gallop",
-   "kind": "active",
-   "category": "movement",
-   "template": "dash",
-   "element": "blunt",
-   "cooldown": 8,
-   "dashDist": 160,
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 4
-   },
-   "desc": "Carries you 5 tiles forward. Your movement speed rises 25% for 4 seconds afterward."
-  },
-  {
-   "name": "Hoofbeat Heart",
-   "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
-   "element": "blunt",
-   "moveSpeedPct": 0.12,
-   "resist": {
-    "element": "physical",
-    "amount": 0.08
-   },
-   "desc": "You move 12% faster and have 8% physical resistance."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneHorse",
+  "fusions": [
+    {
+      "name": "Cavalry Fangs",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 80,
+      "strikes": 1,
+      "range": 96,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A galloping bite that deals 30 damage and makes the target [Bleeding] for 3 damage a second for 4 seconds. When it lands, every ally near you deals 15% more damage for 12 seconds.",
+      "partyBuffOnHit": {
+        "pct": 0.15,
+        "dur": 12
+      }
+    },
+    {
+      "name": "Kicked Up",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.3,
+      "desc": "Kicks out at every enemy within 2.5 tiles for 4 damage. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+    },
+    {
+      "name": "Breakaway Gallop",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "blunt",
+      "cooldown": 8,
+      "dashDist": 160,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Carries you 5 tiles forward. Your movement speed rises 25% for 4 seconds afterward."
+    },
+    {
+      "name": "Hoofbeat Heart",
+      "kind": "passive",
+      "category": "movement",
+      "template": "passiveMove",
+      "element": "blunt",
+      "moveSpeedPct": 0.12,
+      "resist": {
+        "element": "physical",
+        "amount": 0.08
+      },
+      "desc": "You move 12% faster and have 8% physical resistance."
+    }
+  ]
 }

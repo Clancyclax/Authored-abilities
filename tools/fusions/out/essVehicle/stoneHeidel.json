@@ -1,0 +1,78 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Trampling Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Your mount tramples through a cone 3 tiles long. It deals 4 damage to everything in it."
+  },
+  {
+   "name": "Ridden Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "Rides the target down under your hooves. It deals 28 damage, always lands as a critical hit and leaves the target [Bleeding] for 2 damage a second for 4 seconds. You move 25% faster for 5 seconds after."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds, and you move 15% faster for 5 seconds."
+  },
+  {
+   "name": "Long-Ridden Steed",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 5,
+   "familiarRange": 96,
+   "familiarInterval": 1.6,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Trail Steed",
+   "mount": true,
+   "mountFamily": "beast",
+   "desc": "A bonded trail steed walks at your side and fights for you, striking for 5 damage every 1.6 seconds. You can ride it."
+  }
+ ]
+}

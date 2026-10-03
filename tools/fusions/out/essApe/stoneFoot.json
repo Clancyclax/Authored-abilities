@@ -42,36 +42,32 @@
    "desc": "Stamps the ground, dealing 26 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
   },
   {
-   "name": "Marching Plate",
+   "name": "Forced March",
    "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
+   "category": "buff",
+   "template": "statBuff",
    "element": "physical",
-   "cooldown": 36,
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 22,
-   "shieldStrikes": 4,
-   "shieldDuration": 8,
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 6
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
    },
-   "desc": "Raises a barrier that absorbs the next 22 damage and holds for 8 seconds. For 6 seconds after using it, you move 25% faster."
+   "desc": "Increases your stamina recovery by 40% for 15 seconds. A troop escort marches beside you for 10 seconds, striking for 4 damage every 1.4 seconds."
   },
   {
-   "name": "Hard Road",
+   "name": "Road-Hardened Knuckles",
    "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
+   "category": "passive buff",
+   "template": "passiveConditional",
    "element": "physical",
-   "moveSpeedPct": 0.12,
-   "resist": {
-    "element": "physical",
-    "amount": 0.08
-   },
-   "desc": "You move 12% faster and have 8% physical resistance."
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "On paved ground, your armour rises by 12%."
   }
  ]
 }

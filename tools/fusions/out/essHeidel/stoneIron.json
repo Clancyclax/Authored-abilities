@@ -1,0 +1,71 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Cold-Shoe Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.2,
+   "desc": "A shod kick at a target at or below 20% health that deals 20 damage and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Grey Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "You plough through a cone up to 5 tiles ahead, dealing 28 damage that ignores resistances to everything in it."
+  },
+  {
+   "name": "Cold-Forged Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.3,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, 30% of the elemental damage you take is turned back on whoever dealt it."
+  },
+  {
+   "name": "Unbowed Stance",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.1,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.05,
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 8% of your maximum health per stack (62% at full) before your health takes damage. Unfed, a stack fades every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

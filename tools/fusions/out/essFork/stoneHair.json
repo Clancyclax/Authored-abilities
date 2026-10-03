@@ -1,80 +1,84 @@
 {
- "essence": "essFork",
- "stone": "stoneHair",
- "fusions": [
-  {
-   "name": "Snared Strand",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1.0,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "consumeAffliction": true,
-   "debuff": {
-    "key": "pinned",
-    "chance": 0.5,
-    "duration": 2,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Casts a strand at the first enemy it meets that deals 9 damage. It needs one of your afflictions on the target and uses it up, with a 50% chance to leave the target [Pinned] for 2 seconds."
-  },
-  {
-   "name": "Loom Curtain",
-   "kind": "active",
-   "category": "attack",
-   "template": "barrierWall",
-   "element": "physical",
-   "role": "medium",
-   "base": 11,
-   "cooldown": 18,
-   "wallKind": "burn",
-   "wallLength": 160,
-   "wallDuration": 6,
-   "wallThickness": 28,
-   "stunOnHit": 0.8,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 1,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Hangs a curtain of strands 5 tiles long for 6 seconds. It deals 11 damage to each enemy that crosses it, stuns it for 0.8 seconds and leaves it [Slowed] for 4 seconds."
-  },
-  {
-   "name": "Woven Guard",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "physical",
-   "cooldown": 30,
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 20,
-   "shieldStrikes": 4,
-   "shieldDuration": 8,
-   "armorBonus": 0.08,
-   "desc": "Weaves a barrier that absorbs the next 20 damage for 8 seconds, and your armour rises by 8% while it holds."
-  },
-  {
-   "name": "Split Ends",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "physical",
-   "condition": "vsDebuffed",
-   "bonusKind": "dmg",
-   "amount": 0.1,
-   "armorBonus": 0.04,
-   "desc": "Against enemies carrying your afflictions, you deal 10% more damage. Your armour rises by 4%."
-  }
- ]
+  "essence": "essFork",
+  "stone": "stoneHair",
+  "fusions": [
+    {
+      "name": "Snared Strand",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "consumeAffliction": true,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.5,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Casts a strand at the first enemy it meets that deals 9 damage. It needs one of your afflictions on the target and uses it up, with a 50% chance to leave the target [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Loom Curtain",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "physical",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 18,
+      "wallKind": "burn",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 28,
+      "stunOnHit": 0.8,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Hangs a curtain of strands 5 tiles long for 6 seconds. It deals 11 damage to each enemy that crosses it, stuns it for 0.8 seconds and leaves it [Slowed] for 4 seconds."
+    },
+    {
+      "name": "Ten Thousand Snares",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "physical",
+      "freezeDuration": 2,
+      "freezeRadius": 96,
+      "aoeBand": "medium",
+      "castTime": 0.3,
+      "cooldown": 30,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Holds every creature within 3 tiles in place for 2 seconds and leaves each [Pinned]."
+    },
+    {
+      "name": "Split Ends",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.1,
+      "armorBonus": 0.04,
+      "desc": "Against enemies carrying your afflictions, you deal 10% more damage. Your armour rises by 4%."
+    }
+  ]
 }

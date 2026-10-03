@@ -1,0 +1,75 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd Through the Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Drives the herd ahead of your wagon through a cone 4 tiles long. It deals 28 damage to everything in it, and when it hits, every ally deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Drover's Pebble",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Flicks a pebble from the driver's bench at a target up to 6 tiles away. It deals 4 damage, up to 1.5 times that at the far end of its reach, and 10% more for each ally near you (max 30%)."
+  },
+  {
+   "name": "Barn on Wheels",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 30,
+   "healScope": "party",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "desc": "Restores 3 health a second to you and every ally in your party for 8 seconds."
+  },
+  {
+   "name": "Circle the Wagons",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -38,34 +38,26 @@
    "desc": "Hauls the target onto a thread hook for 28 damage that ignores resistances, leaving it 20% easier to wound for 8 seconds."
   },
   {
-   "name": "Barbed Binding",
+   "name": "Snagging Lining",
    "kind": "active",
    "category": "defensive",
    "template": "thornsBuff",
    "element": "piercing",
    "cooldown": 30,
-   "buffDuration": 8,
+   "buffDuration": 7,
    "thornsFrac": 0.5,
    "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
   },
   {
-   "name": "Catch-All Fringe",
+   "name": "Snagged Quarry",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "passive buff",
+   "template": "passiveConditional",
    "element": "piercing",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "boltNearest",
-    "damage": 6,
-    "range": 192
-   },
-   "desc": "Each time you afflict something, a barbed thread leaps to the nearest other enemy within 6 tiles, dealing 6 lightning damage. Once every 8 seconds."
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage."
   }
  ]
 }

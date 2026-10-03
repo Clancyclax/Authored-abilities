@@ -35,7 +35,7 @@
    "desc": "Drops a heavy bolt of cloth that deals 30 damage to the first enemy it meets and 80% of that to every enemy within 3 tiles of it."
   },
   {
-   "name": "Felted Padding",
+   "name": "Anvil Apron",
    "kind": "active",
    "category": "defensive",
    "template": "armorBuff",
@@ -46,14 +46,21 @@
    "desc": "Raises your armour by 20% for 12 seconds."
   },
   {
-   "name": "Calender Roll",
+   "name": "Fulled Felt",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
+   "category": "stacking",
+   "template": "stacking",
    "element": "blunt",
-   "pierceElement": "blunt",
-   "armorIgnore": 0.15,
-   "desc": "Your blunt attacks ignore 15% of the target's armour."
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (56% at full). Unfed, a stack fades every 10 seconds."
   }
  ]
 }

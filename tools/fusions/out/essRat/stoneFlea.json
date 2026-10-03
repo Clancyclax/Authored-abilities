@@ -1,0 +1,73 @@
+{
+ "essence": "essRat",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Plague Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Plague"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Sends a flea-ridden rat leaping onto one enemy, where it deals 12 damage and leaves it [Plague] for 2 damage a second for 6 seconds. Your afflictions on the target then jump to every enemy within 4 tiles."
+  },
+  {
+   "name": "Itch and Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes a cloud of fleas from your fur in a cone 4 tiles long that deals 7 damage to each enemy in it, with a 50% chance to leave each [Diseased] for 8 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Over Their Heads",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 8,
+   "teleportRange": 256,
+   "dodgeBonus": 0.1,
+   "desc": "Leaps you instantly to a point up to 8 tiles away, with +10% dodge chance."
+  },
+  {
+   "name": "Carrier of the Pest",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You have 8% poison resistance."
+  }
+ ]
+}

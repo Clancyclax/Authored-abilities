@@ -1,0 +1,82 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Offshoot Thorn",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 7,
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a thorn that deals 8 damage to the first enemy it meets, then branches to 2 more enemies within 3.5 tiles, each taking 60% of the damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Ramifying Briar",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Grows a branching briar across a cone 5 tiles long, dealing 12 damage and leaving every enemy hit [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each enemy hit spread to enemies within 4 tiles of it."
+  },
+  {
+   "name": "Divided Sap",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "plant",
+   "cooldown": 14,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "desc": "Splits your sap between you and every ally within 3.5 tiles, restoring 14 health to each, and more the faster you cast."
+  },
+  {
+   "name": "Sideshoot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "desc": "When you land a critical hit, a thorn branches off toward the nearest enemy within 8 tiles and deals 6 damage. Once every 4 seconds."
+  }
+ ]
+}

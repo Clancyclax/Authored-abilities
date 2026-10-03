@@ -1,0 +1,80 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sticky Tendril",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "plant",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Flicks a sticky tendril at one enemy up to 5 tiles away, dealing 4 damage, more the further it reaches, up to 1.5 times. Anything struck moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Bulrush Spring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You spring up and land in the reeds, dealing 13 damage to every enemy within 3 tiles, knocking each back 3 tiles and leaving it [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Algal Jelly",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "desc": "Wraps you in a jelly of algae that absorbs the next 18 damage and holds for 6 seconds."
+  },
+  {
+   "name": "Coiled Stem",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When your stamina becomes full, your physical damage rises by 30% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Puddle Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "You spring up to 7 tiles onto the target and deal 16 water damage, leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Belly-Flop Splash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "A splash that deals 30 water damage, ignoring armour, to every enemy within 3.5 tiles and leaves them [Slowed] for 4 seconds. Its damage rises 6% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Glanced Away",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 45,
+   "immunityDuration": 2,
+   "blinkOnUse": 64,
+   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you; transcendent damage still lands. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Damp Springs",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "water",
+   "moveSpeedPct": 0.1,
+   "resist": {
+    "element": "water",
+    "amount": 0.08
+   },
+   "desc": "Your movement speed is permanently increased by 10%, and you carry 8% water resistance."
+  }
+ ]
+}

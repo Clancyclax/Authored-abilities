@@ -1,92 +1,90 @@
 {
- "essence": "essFox",
- "stone": "stoneFlea",
- "fusions": [
-  {
-   "name": "Pounce Unseen",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "piercing",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "range": 86,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "chargeTo": 224,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Rushes you to a target up to 7 tiles away, then deals 12 damage, leaves it 10% easier to wound for 5 seconds and makes it [Bleeding] for 2 damage a second for 5 seconds."
-  },
-  {
-   "name": "Skip Along",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "resource",
-   "base": 6,
-   "cooldown": 1,
-   "spammable": true,
-   "speed": 400,
-   "radius": 7,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "chargesMax": 4,
-   "chain": {
-    "count": 3,
-    "radius": 110,
-    "frac": 0.7
-   },
-   "chainCount": 3,
-   "chainRange": 110,
-   "chainDamagePct": 0.7,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 3
-   },
-   "desc": "Sends a bounding dart that deals 6 damage to the first enemy it meets, then hops to 3 more enemies within 3.5 tiles, each hit dealing 70% of the original damage. Holds 4 charges; each use spends one, and each kill restores one. For 3 seconds after using it, you move 20% faster."
-  },
-  {
-   "name": "Leap Away",
-   "kind": "active",
-   "category": "movement",
-   "template": "teleport",
-   "element": "physical",
-   "cooldown": 10,
-   "teleportRange": 256,
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 3
-   },
-   "desc": "Steps you instantly to a point up to 8 tiles away. Using it increases your movement speed by 25% for 3 seconds."
-  },
-  {
-   "name": "Springing Habit",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "spendStamina",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.25,
-    "duration": 4
-   },
-   "desc": "When you spend stamina, your critical chance rises by 25% for 4 seconds. Once every 6 seconds."
-  }
- ]
+  "essence": "essFox",
+  "stone": "stoneFlea",
+  "fusions": [
+    {
+      "name": "Pounce Unseen",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 86,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "chargeTo": 224,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Rushes you to a target up to 7 tiles away, then deals 12 damage, leaves it 10% easier to wound for 5 seconds and makes it [Bleeding] for 2 damage a second for 5 seconds."
+    },
+    {
+      "name": "Skip Along",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "spammable": true,
+      "speed": 400,
+      "radius": 7,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "chargesMax": 4,
+      "chain": {
+        "count": 3,
+        "radius": 110,
+        "frac": 0.7
+      },
+      "chainCount": 3,
+      "chainRange": 110,
+      "chainDamagePct": 0.7,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Sends a bounding dart that deals 6 damage to the first enemy it meets, then hops to 3 more enemies within 3.5 tiles, each hit dealing 70% of the original damage. Holds 4 charges; each use spends one, and each kill restores one. For 3 seconds after using it, you move 20% faster."
+    },
+    {
+      "name": "Leap Away",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "physical",
+      "cooldown": 10,
+      "teleportRange": 256,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 3
+      },
+      "desc": "Steps you instantly to a point up to 8 tiles away. Using it increases your movement speed by 25% for 3 seconds."
+    },
+    {
+      "name": "Never Where It Lands",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "boon",
+      "stackBuild": "dodge",
+      "stackPay": "haste",
+      "stackCap": 4,
+      "stackDecay": 8,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackFortune",
+      "desc": "Every time you avoid a blow, a stack builds on you, up to 4. When you reach 4, they all spend at once: you move and attack 5% faster per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
 }

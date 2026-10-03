@@ -1,0 +1,88 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Ponderous Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bruised"
+   },
+   "knockback": 96,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A slow, heavy blow that deals 14 damage, knocks the target back 3 tiles and leaves it [Bruised] for 2 damage a second for 5 seconds. Anything struck moves 30% slower for 3 seconds."
+  },
+  {
+   "name": "Lazy Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrown blow that deals 5 damage, rising to 1.3 times that at its full 6-tile reach, with a 30% chance to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Unhurried Bulk",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 45,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "taunt": true,
+   "tauntDuration": 4,
+   "tauntMax": 3,
+   "tauntRadius": 160,
+   "desc": "Reduces the damage you take by 25% for 12 seconds, and up to 3 enemies within 5 tiles turn on you for 4 seconds."
+  },
+  {
+   "name": "Slow to Land",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When you have gone a while without a critical hit, your critical chance rises by 25% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

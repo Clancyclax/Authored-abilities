@@ -1,73 +1,87 @@
 {
- "essence": "essChain",
- "stone": "stoneFish",
- "fusions": [
-  {
-   "name": "Silver Skein",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "long",
-   "base": 28,
-   "cooldown": 90,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "explodeRadius": 96,
-   "splashFrac": 0.8,
-   "isAoe": true,
-   "desc": "Casts a weighted net at the first enemy it meets that deals 28 damage, then bursts into a shoal of links that deal 80% of that to every enemy within 3 tiles."
-  },
-  {
-   "name": "Scattered School",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "water",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "range": 96,
-   "coneAngle": 1.0,
-   "isAoe": true,
-   "aoeBand": "small",
-   "chargesMax": 4,
-   "desc": "Flicks a fan of loose links ahead of you that deals 7 damage to everything within 3 tiles. Holds 4 charges, and kills give charges back."
-  },
-  {
-   "name": "Wriggle Free",
-   "kind": "active",
-   "category": "restore",
-   "template": "cleanse",
-   "element": "water",
-   "cooldown": 40,
-   "cleanseCount": 3,
-   "cleanseTag": "control",
-   "healScope": "self",
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 5
-   },
-   "desc": "Removes up to 3 control conditions from you, and you move 25% faster for 5 seconds."
-  },
-  {
-   "name": "Counter-Current",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "water",
-   "stackShape": "boon",
-   "stackBuild": "dodge",
-   "stackPay": "haste",
-   "stackCap": 5,
-   "stackDecay": 6,
-   "stackSpend": "nextCast",
-   "stackOn": "self",
-   "stackScale": 1,
-   "stackIcon": "stackFortune",
-   "desc": "Each blow you dodge builds a stack on you, up to 5. The next ability you use spends them all: you move and attack 5% faster per stack, 23% in all at 5 stacks, for 6 seconds. Unfed, a stack fades every 6 seconds."
-  }
- ]
+  "essence": "essChain",
+  "stone": "stoneFish",
+  "fusions": [
+    {
+      "name": "Silver Skein",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "explodeRadius": 96,
+      "splashFrac": 0.8,
+      "isAoe": true,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Casts a weighted net at the first enemy it meets that deals 28 damage and leaves it [Pinned] for 2 seconds. Every other enemy within 3 tiles of it takes 80% of that damage."
+    },
+    {
+      "name": "Darting Links",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "chargesMax": 4,
+      "chain": {
+        "count": 2,
+        "radius": 96,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 96,
+      "chainDamagePct": 0.6,
+      "desc": "Whirls a ring of links around you that deals 6 damage to every enemy within 2.5 tiles, and each hit darts on to 2 more enemies within 3 tiles for 60% of that. Holds 4 charges, and kills give charges back."
+    },
+    {
+      "name": "Wriggle Free",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "water",
+      "cooldown": 40,
+      "cleanseCount": 3,
+      "cleanseTag": "control",
+      "healScope": "self",
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 5
+      },
+      "desc": "Removes up to 3 control conditions from you, and you move 25% faster for 5 seconds."
+    },
+    {
+      "name": "Counter-Current",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "water",
+      "stackShape": "boon",
+      "stackBuild": "dodge",
+      "stackPay": "haste",
+      "stackCap": 5,
+      "stackDecay": 6,
+      "stackSpend": "nextCast",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackFortune",
+      "desc": "Each blow you dodge builds a stack on you, up to 5. The next ability you use spends them all: you move and attack 5% faster per stack, 23% in all at 5 stacks, for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
 }

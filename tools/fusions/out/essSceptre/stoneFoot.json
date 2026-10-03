@@ -1,0 +1,84 @@
+{
+ "essence": "essSceptre",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cadence Stamp",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Stamps the rod down, dealing 4 damage to every enemy within 2 tiles. Using it increases your movement speed by 10% for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "End of the Road",
+   "template": "stackStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "Brings the rod down for a blow that deals 22 damage and consumes every affliction on the target, adding 1.5 times their remaining damage. Its damage rises 5% for distance you have travelled (max 40%). Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Halt and Water",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "earth",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 6,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 160
+   },
+   "allyRange": 160,
+   "allyMax": 4,
+   "desc": "Restores 3 stamina a second for 6 seconds. Its effect increases by 8% for each ally within 5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Mile-Hardened",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "element": "earth",
+   "desc": "Once you have covered enough ground, you gain a ward worth 10% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

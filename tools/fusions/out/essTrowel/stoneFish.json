@@ -1,0 +1,80 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Shoal of Slurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 gobs of wet mortar in a spread; each deals 4 damage and has a 30% chance to leave the target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Slipped Load",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "maxMult": 1.3,
+   "knockback": 96,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Skims a slick load of mortar off the trowel at a target up to 6 tiles away, which deals 12 damage, rising to 1.3 times that at full reach, and knocks it back 3 tiles."
+  },
+  {
+   "name": "Slick Render",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "cooldown": 35,
+   "armorBonus": 0.2,
+   "dodgeBonus": 0.12,
+   "buffDuration": 10,
+   "desc": "Coats you in wet render that raises your armour by 20% and your dodge chance by 12% for 10 seconds."
+  },
+  {
+   "name": "Skim-Coat Slip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "After you move a set distance, a skin of wet mortar wards you, absorbing damage equal to 12% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

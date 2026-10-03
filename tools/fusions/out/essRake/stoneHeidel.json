@@ -1,0 +1,83 @@
+{
+ "essence": "essRake",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Kicked-Up Clods",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 360,
+   "radius": 7,
+   "isAoe": true,
+   "chargesMax": 3,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Looses 3 clods from the turned soil at once, spread apart, each dealing 6 damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Harrow's Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "desc": "Drags the tines through the target with your full weight behind them, dealing 28 damage, making it [Bleeding] for 2 damage a second for 4 seconds and leaving it 15% easier to wound for 6 seconds. It is always a critical hit."
+  },
+  {
+   "name": "Up the Rows",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "earth",
+   "cooldown": 30,
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "dodgeBonus": 0.05,
+   "desc": "Increases your movement speed by 30% for 8 seconds, with +5% dodge chance for it."
+  },
+  {
+   "name": "Second Furrow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,76 +1,76 @@
 {
- "essence": "essDuck",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "name": "Wing Flash",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "range": 86,
-   "stunOnHit": 1.2,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "desc": "Flares a wing in the target's eyes, dealing 12 damage, stunning it for 1.2 seconds and leaving it 10% easier to wound for 5 seconds."
-  },
-  {
-   "name": "Dropped Purse",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "execute",
-   "base": 20,
-   "cooldown": 14,
-   "requiresTargetBelow": 0.3,
-   "confuse": {
-    "chance": 1,
-    "duration": 4
-   },
-   "speed": 380,
-   "radius": 8,
-   "desc": "Flicks a lure at a target at or below 30% health, dealing 20 damage and turning it against its allies for 4 seconds."
-  },
-  {
-   "name": "Playing Wounded",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "physical",
-   "cooldown": 40,
-   "buffStat": "dodgeChance",
-   "buffAmount": 0.2,
-   "buffDuration": 12,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Increases your dodge chance by 20% for 12 seconds. You move 20% faster for 4 seconds after you use it."
-  },
-  {
-   "name": "Overdue Windfall",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.25,
-    "duration": 5
-   },
-   "desc": "Each time you afflict something, your critical hit chance rises by 25% for 5 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essDuck",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Wing Flash",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 86,
+      "stunOnHit": 1.2,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "desc": "Flares a wing in the target's eyes, dealing 12 damage, stunning it for 1.2 seconds and leaving it 10% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Dropped Purse",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 14,
+      "requiresTargetBelow": 0.3,
+      "confuse": {
+        "chance": 1,
+        "duration": 4
+      },
+      "speed": 380,
+      "radius": 8,
+      "desc": "Flicks a lure at a target at or below 30% health, dealing 20 damage and turning it against its allies for 4 seconds."
+    },
+    {
+      "name": "Playing Wounded",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "buffStat": "dodgeChance",
+      "buffAmount": 0.2,
+      "buffDuration": 12,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Increases your dodge chance by 20% for 12 seconds. You move 20% faster for 4 seconds after you use it."
+    },
+    {
+      "name": "Overdue Windfall",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.25,
+        "strikes": 1
+      },
+      "desc": "Each time you afflict something, your next strike has 25% more critical hit chance. Once every 10 seconds."
+    }
+  ]
 }

@@ -1,67 +1,74 @@
 {
- "essence": "essEarth",
- "stone": "stoneHammer",
- "fusions": [
-  {
-   "name": "Anvil Beat",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1.1,
-   "spammable": true,
-   "range": 80,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "hpCostPct": 0.05,
-   "desc": "A heavy, even blow that deals 9 damage and leaves the target 10% easier to wound for 5 seconds. Also costs 5% of your maximum health."
-  },
-  {
-   "name": "Flattening Finish",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "earth",
-   "role": "execute",
-   "base": 28,
-   "cooldown": 16,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.3,
-   "executeLadder": false,
-   "desc": "A finishing blow that deals 28 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
-  },
-  {
-   "name": "Seasoned Plate",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "earth",
-   "armorBonus": 0.25,
-   "buffDuration": 12,
-   "cooldown": 45,
-   "desc": "Raises your armour by 25% for 12 seconds."
-  },
-  {
-   "name": "Compounding Blows",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "earth",
-   "stackShape": "boon",
-   "stackBuild": "hit",
-   "stackPay": "power",
-   "stackCap": 6,
-   "stackDecay": 6,
-   "stackSpend": "nextCast",
-   "stackOn": "self",
-   "stackScale": 0.8,
-   "stackIcon": "stackFortune",
-   "desc": "Every time you land a hit, a stack builds on you, up to 6. The next ability you use spends them all: you deal 5% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneHammer",
+  "fusions": [
+    {
+      "name": "Anvil Beat",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1.1,
+      "spammable": true,
+      "range": 80,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "hpCostPct": 0.05,
+      "desc": "A heavy, even blow that deals 9 damage and leaves the target 10% easier to wound for 5 seconds. Also costs 5% of your maximum health."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Levelling Stroke",
+      "template": "aoeRing",
+      "element": "earth",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "sunder",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Brings the hammer down on the ground, dealing 30 damage to every enemy within 3.5 tiles, ignoring their armour, and leaves each [Sundered] for 6 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "defensive",
+      "name": "Ringing Rebound",
+      "template": "thornsBuff",
+      "element": "earth",
+      "buffDuration": 8,
+      "thornsFrac": 0.5,
+      "cooldown": 30,
+      "desc": "For 9 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+    },
+    {
+      "name": "Compounding Blows",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "earth",
+      "stackShape": "boon",
+      "stackBuild": "hit",
+      "stackPay": "power",
+      "stackCap": 6,
+      "stackDecay": 6,
+      "stackSpend": "nextCast",
+      "stackOn": "self",
+      "stackScale": 0.8,
+      "stackIcon": "stackFortune",
+      "desc": "Every time you land a hit, a stack builds on you, up to 6. The next ability you use spends them all: you deal 5% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
 }

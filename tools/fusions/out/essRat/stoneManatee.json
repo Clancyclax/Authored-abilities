@@ -1,0 +1,85 @@
+{
+ "essence": "essRat",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drifting Raft",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Your swarm drifts over every enemy within 3 tiles, dealing 6 damage and leaving each [Slowed] for 3 seconds. It needs one of your afflictions on a target and uses it up."
+  },
+  {
+   "name": "Unhurried Wallow",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 120,
+   "radius": 12,
+   "projectileLife": 4,
+   "guaranteedCrit": true,
+   "desc": "Sets a raft of rats drifting slowly toward one enemy; when it arrives it deals 30 damage, and the hit is always a critical hit."
+  },
+  {
+   "name": "Warm Raft",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 8 seconds."
+  },
+  {
+   "name": "Floating Colony",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "the colony carries you along"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.06,
+     "text": "and there is always a body to slip behind"
+    },
+    {
+     "rank": "gold",
+     "stat": "manaRegen",
+     "amount": 0.3,
+     "text": "and nothing feels urgent out on the water"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground."
+  }
+ ]
+}

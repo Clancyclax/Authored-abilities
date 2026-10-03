@@ -1,69 +1,73 @@
 {
- "essence": "essArmour",
- "stone": "stoneHunt",
- "fusions": [
-  {
-   "name": "Quarry Mark",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "basic",
-   "desc": "Fires a bolt that deals 4 damage, with a 40% chance to leave the target [Marked] for 6 seconds.",
-   "cooldown": 0.8,
-   "spammable": true,
-   "debuff": {
-    "key": "marked",
-    "chance": 0.4,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "base": 4,
-   "speed": 360,
-   "radius": 8
-  },
-  {
-   "name": "Run to Ground",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "execute",
-   "desc": "Usable only on a target at or below 25% health: a closing blow that deals 22 damage and leaves it 15% easier to wound for 5 seconds.",
-   "base": 22,
-   "cooldown": 15,
-   "range": 84,
-   "sunder": {
-    "amount": 0.15,
-    "duration": 5
-   },
-   "requiresTargetBelow": 0.25
-  },
-  {
-   "name": "Stalking Cover",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "physical",
-   "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 10% faster, and the veil breaks the moment you attack.",
-   "stealthDuration": 8,
-   "stealthAlpha": 0.35,
-   "aggroMult": 0.4,
-   "stealthSpeedPct": 10,
-   "stealthScope": "self",
-   "cooldown": 30
-  },
-  {
-   "name": "Scent of Weakness",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "physical",
-   "desc": "Against an enemy carrying one of your afflictions, your armour rises by 15%.",
-   "condition": "vsDebuffed",
-   "bonusKind": "armor",
-   "amount": 0.15
-  }
- ]
+  "essence": "essArmour",
+  "stone": "stoneHunt",
+  "fusions": [
+    {
+      "name": "Quarry Mark",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "desc": "Fires a bolt that deals 4 damage, with a 40% chance to leave the target [Marked] for 6 seconds.",
+      "cooldown": 0.8,
+      "spammable": true,
+      "debuff": {
+        "key": "marked",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "base": 4,
+      "speed": 360,
+      "radius": 8
+    },
+    {
+      "name": "Run to Ground",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "execute",
+      "desc": "Usable only on a target at or below 25% health: a closing blow that deals 22 damage and leaves it 15% easier to wound for 5 seconds.",
+      "base": 22,
+      "cooldown": 15,
+      "range": 84,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 5
+      },
+      "requiresTargetBelow": 0.25
+    },
+    {
+      "name": "At Bay",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "physical",
+      "tauntRadius": 192,
+      "tauntDuration": 6,
+      "tauntMax": 4,
+      "threatMult": 1,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 9
+      },
+      "cooldown": 30,
+      "desc": "Pulls up to 4 enemies within 6 tiles onto you for 6 seconds. A hound fights beside you for 9 seconds, striking for 4 damage every 1.4 seconds."
+    },
+    {
+      "name": "Scent of Weakness",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "desc": "Against an enemy carrying one of your afflictions, your armour rises by 15%.",
+      "condition": "vsDebuffed",
+      "bonusKind": "armor",
+      "amount": 0.15
+    }
+  ]
 }

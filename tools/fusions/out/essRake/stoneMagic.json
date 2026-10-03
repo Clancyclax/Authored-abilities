@@ -1,0 +1,69 @@
+{
+ "essence": "essRake",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Arcane Chaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Flicks a scrap of loose arcana that deals 4 damage to the first enemy it meets."
+  },
+  {
+   "name": "Gathered Static",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Releases the arcana gathered on the tines, dealing 28 damage to every enemy within 3.5 tiles. It ignores resistances."
+  },
+  {
+   "name": "Glean the Leylines",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 mana a second for 8 seconds."
+  },
+  {
+   "name": "Residue of Spells",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 4
+   },
+   "desc": "Each time you spend mana, 4 mana comes back to you. Once every 8 seconds."
+  }
+ ]
+}

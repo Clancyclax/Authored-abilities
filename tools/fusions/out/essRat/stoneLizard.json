@@ -1,0 +1,69 @@
+{
+ "essence": "essRat",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Still, Then Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 160,
+   "maxMult": 1.2,
+   "stunOnHit": 1.2,
+   "desc": "You hold still, then dart at one enemy up to 5 tiles away, dealing 13 damage, rising to 1.2 times that at full reach, and stunning it for 1.2 seconds."
+  },
+  {
+   "name": "Sluggish Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 260,
+   "radius": 8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a cold, slow rat at the first enemy in line, where it deals 4 damage with a 30% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Grow It Back",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "cooldown": 30,
+   "healAmount": 18,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you. Its healing rises 8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Dropped Tail",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead."
+  }
+ ]
+}

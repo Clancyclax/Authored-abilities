@@ -1,0 +1,71 @@
+{
+ "essence": "essRake",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Covering Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Rushes you to a target up to 6 tiles away, then drives the tines in, dealing 13 damage and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Mile's End Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 112,
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "Swings the haft in a full circle, dealing 28 damage that ignores armour to every enemy within 3.5 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Walking Staff",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 20,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Leans your weight on the haft: your stamina recovery rises 40% for 20 seconds, and your movement speed rises 15% for 5 seconds after you use it."
+  },
+  {
+   "name": "Swept Gravel Path",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "cooldownReduction": 0.05,
+   "desc": "On paved ground, your damage rises by 10%. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

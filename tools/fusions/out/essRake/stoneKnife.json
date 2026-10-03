@@ -1,0 +1,83 @@
+{
+ "essence": "essRake",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Tine in the Straw",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A quick jab that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Blind-Side Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "guaranteedCrit": true,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "A thrust from where it was not looking that deals 28 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. It is always a critical hit."
+  },
+  {
+   "name": "Blades in the Leaves",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Takes 1 second to bury a blade under raked leaves at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles sets it off: it deals 22 damage in a blast around it."
+  },
+  {
+   "name": "Edge Kept Keen",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 30% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

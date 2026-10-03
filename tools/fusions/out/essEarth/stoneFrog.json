@@ -1,67 +1,76 @@
 {
- "essence": "essEarth",
- "stone": "stoneFrog",
- "fusions": [
-  {
-   "name": "Bog Boom",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "earth",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 16,
-   "range": 160,
-   "coneAngle": 0.7,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "stunOnHit": 1,
-   "desc": "A deep croak sends a shockwave 5 tiles ahead of you that deals 12 damage to everything in it and stuns them for 1 second."
-  },
-  {
-   "name": "Mire Snare",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "earth",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1,
-   "spammable": true,
-   "consumeAffliction": true,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Flicks a glob of mud that deals 8 damage to the first enemy it meets and leaves it [Slowed] for 3 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
-  },
-  {
-   "name": "Dry-Season Sleep",
-   "kind": "active",
-   "category": "buff",
-   "template": "immunityBuff",
-   "element": "earth",
-   "immunityDuration": 4,
-   "cooldown": 240,
-   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
-  },
-  {
-   "name": "Boggy Constitution",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "earth",
-   "buffKind": "maxHp",
-   "amount": 12,
-   "regenPerSec": 0.5,
-   "desc": "Your maximum health rises by 12. It also regenerates 0.5 health a second, permanently."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneFrog",
+  "fusions": [
+    {
+      "name": "Bog Boom",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "earth",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 160,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "desc": "A deep croak sends a shockwave 5 tiles ahead of you that deals 12 damage to everything in it and stuns them for 1 second."
+    },
+    {
+      "name": "Mire Snare",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "earth",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "consumeAffliction": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Flicks a glob of mud that deals 8 damage to the first enemy it meets and leaves it [Slowed] for 3 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+    },
+    {
+      "name": "Dry-Season Sleep",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "earth",
+      "immunityDuration": 4,
+      "cooldown": 240,
+      "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+    },
+    {
+      "kind": "passive",
+      "name": "Squat and Spring",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.2,
+        "duration": 4
+      },
+      "armorBonus": 0.06,
+      "desc": "When your stamina is full, your next strike gains 20% critical hit chance. Once every 12 seconds. Your armour rises by 6% at all times."
+    }
+  ]
 }

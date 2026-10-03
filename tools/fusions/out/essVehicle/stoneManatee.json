@@ -1,0 +1,72 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Barge Into",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 4
+   },
+   "desc": "Drifts the whole weight of your ride into a target up to 6 tiles away. It deals 26 damage, up to 1.5 times that at the far end of its reach, plus 5% of a boss's or elite's maximum health, and slows the target by 30% for 4 seconds."
+  },
+  {
+   "name": "Lazy Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drifts a heavy wake over every enemy within 3 tiles. It deals 6 damage, with a 50% chance to leave each [Slowed] for 4 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Dead in the Water",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 60,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Slow Water Living",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "maxHp",
+   "amount": 15,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 15. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

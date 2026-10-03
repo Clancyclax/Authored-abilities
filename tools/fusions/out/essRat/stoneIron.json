@@ -1,0 +1,85 @@
+{
+ "essence": "essRat",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Through the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "Your swarm gnaws into one enemy's armour, dealing 30 damage that ignores armour and leaving it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Rust-Mouthed Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 7,
+   "range": 192,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 rats at once, each dealing 6 damage with a 30% chance to leave the target [Sundered] for 6 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Behind the Grate",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 20,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 6 seconds, and your armour rises by 6%. Your movement speed rises 15% for 3 seconds after you use it."
+  },
+  {
+   "name": "Gnaw-Scarred Plating",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.04
+    }
+   ],
+   "thornsFrac": 0.1,
+   "desc": "Conjures scavenged armour: every hit you take is 2 lower, your armour rises by 10%, and 10% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

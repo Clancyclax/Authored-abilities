@@ -3,24 +3,26 @@
  "stone": "stoneHair",
  "fusions": [
   {
-   "name": "Tangling Snare",
+   "name": "Weed Snarl",
    "kind": "active",
    "category": "attack",
-   "template": "weakenRing",
-   "element": "physical",
+   "template": "aoeRing",
+   "element": "plant",
    "role": "medium",
-   "base": 10,
+   "base": 12,
    "cooldown": 16,
-   "sunder": {
-    "amount": 0.15,
-    "duration": 6
-   },
-   "slowPct": 0.3,
-   "stunOnHit": 1,
    "range": 96,
-   "reachUnits": 96,
-   "rangeBand": "melee",
-   "desc": "Snags every enemy within 3 tiles, dealing 10 damage, stripping 15% of their armour and slowing them by 30% for 6 seconds, then stuns each for 1 second."
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws out strands of weed that deal 12 damage to every enemy within 3 tiles, stun each for 1 second and leave it [Pinned] for 3 seconds."
   },
   {
    "name": "Matted Rip",
@@ -60,30 +62,24 @@
    "shieldDuration": 12,
    "armorBonus": 0.06,
    "cooldown": 40,
-   "desc": "Raises a barrier that absorbs up to 20 damage for 12 seconds, and raises your armour by 6% while it holds."
+   "desc": "Raises a barrier that absorbs 20 damage for 12 seconds, and raises your armour by 6% while it holds."
   },
   {
-   "name": "Knotted Whip",
+   "name": "Knot by Knot",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "strike",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "boltNearest",
-    "damage": 4,
-    "range": 128
-   },
-   "bindOnHit": {
-    "slowPct": 0.25,
-    "duration": 2
-   },
-   "desc": "Each time you strike, a snare lashes the nearest enemy within 4 tiles for 4 damage and slows it by 25% for 2 seconds. Once every 6 seconds."
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
   }
  ]
 }

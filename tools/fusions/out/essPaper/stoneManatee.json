@@ -1,0 +1,81 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drifting Leaf",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a page drifting into the target that deals 4 damage, rising to 1.4 times that at its full reach of 6 tiles, with a 25% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Waterlogged Ream",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings a waterlogged ream around you that deals 12 damage to every enemy within 3 tiles, knocks each one 2 tiles back and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Bookmarked Moment",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "Takes 0.5 seconds to mark the page: holds every creature within 5 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Blotting Calm",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, it soaks in like ink into a blotter, up to 6. At 6 they all spend at once: you heal 5% of your maximum health per blot (30% at full). Unfed, a blot fades every 10 seconds."
+  }
+ ]
+}

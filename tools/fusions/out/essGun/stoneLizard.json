@@ -1,0 +1,74 @@
+{
+ "essence": "essGun",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Numbing Pellet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "stunOnHit": 1.0,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a chilled pellet that deals 12 damage, stuns the target for 1 second and leaves it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Long Bask",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Fires a single shot that deals 30 damage, always lands as a critical hit and leaves the target 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Cold Blood",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "frost",
+   "cooldown": 60,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Removes 2 conditions from you, and you move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Daylight Marksman",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "light",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "In daylight, you deal 10% more damage."
+  }
+ ]
+}

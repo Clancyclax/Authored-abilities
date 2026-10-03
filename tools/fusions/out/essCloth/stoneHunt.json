@@ -53,28 +53,26 @@
    "template": "rangeBuff",
    "element": "physical",
    "cooldown": 90,
-   "rangeMult": 1.4,
+   "rangeMult": 1.27,
    "buffDuration": 20,
    "desc": "For 20 seconds, your attacks and spells reach 40% further."
   },
   {
-   "name": "On the Scent",
+   "name": "Reeling In",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "stacking",
+   "template": "stacking",
    "element": "physical",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.2,
-    "duration": 6
-   },
-   "desc": "When you kill an enemy, your critical hit chance rises by 20% for 6 seconds. Once every 10 seconds."
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
   }
  ]
 }

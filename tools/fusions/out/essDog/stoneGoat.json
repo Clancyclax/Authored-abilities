@@ -1,80 +1,83 @@
 {
- "essence": "essDog",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Lowered Head",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 12,
-   "range": 80,
-   "sunder": {
-    "amount": 0.12,
-    "duration": 5
-   },
-   "stunOnHit": 1.2,
-   "desc": "Butts the target for 14 damage, leaves it 12% easier to wound for 5 seconds, and stuns it for 1.2 seconds."
-  },
-  {
-   "name": "Scree Kick",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "rock",
-   "role": "resource",
-   "base": 4,
-   "cooldown": 1.1,
-   "volleyCount": 3,
-   "volleySpread": 0.3,
-   "speed": 360,
-   "radius": 6,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "isAoe": true,
-   "chargesMax": 4,
-   "scaleOn": "alliesNear",
-   "scalePer": 0.08,
-   "scaleCap": 0.32,
-   "desc": "Kicks 3 stones loose in a spread, each of which deals 4 rock damage. Its damage rises 8% for each ally near you (max 32%). Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Dig In and Draw",
-   "kind": "active",
-   "category": "defensive",
-   "template": "tauntPull",
-   "element": "physical",
-   "cooldown": 24,
-   "tauntRadius": 192,
-   "tauntDuration": 6,
-   "tauntMax": 4,
-   "threatMult": 1,
-   "desc": "Pulls up to 4 enemies within 6 tiles onto you and holds their attention for 6 seconds."
-  },
-  {
-   "name": "Dug In",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 30,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 30,
-    "frac": 0.3,
-    "rearmAbove": 0.6
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.25,
-    "duration": 6
-   },
-   "desc": "Once your health falls below 30%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Lowered Head",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 12,
+      "range": 80,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "stunOnHit": 1.2,
+      "desc": "Butts the target for 14 damage, leaves it 12% easier to wound for 5 seconds, and stuns it for 1.2 seconds."
+    },
+    {
+      "name": "Scree Kick",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "rock",
+      "role": "resource",
+      "base": 4,
+      "cooldown": 1.1,
+      "volleyCount": 3,
+      "volleySpread": 0.3,
+      "speed": 360,
+      "radius": 6,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "chargesMax": 4,
+      "scaleOn": "alliesNear",
+      "scalePer": 0.08,
+      "scaleCap": 0.32,
+      "desc": "Kicks 3 stones loose in a spread, each of which deals 4 rock damage. Its damage rises 8% for each ally near you (max 32%). Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Hold the Ledge",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 36,
+      "buffStat": "damageReduction",
+      "buffAmount": 0.2,
+      "buffDuration": 10,
+      "taunt": true,
+      "tauntRadius": 128,
+      "tauntMax": 3,
+      "tauntDuration": 4,
+      "desc": "Reduces the damage you take by 20% for 10 seconds, and pulls up to 3 enemies within 4 tiles onto you for 4 seconds."
+    },
+    {
+      "name": "Won't Be Moved",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 30,
+        "frac": 0.3,
+        "rearmAbove": 0.6
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 6
+      },
+      "desc": "Once your health falls below 30%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
+    }
+  ]
 }

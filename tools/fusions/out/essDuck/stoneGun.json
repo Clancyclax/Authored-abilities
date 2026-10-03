@@ -1,70 +1,73 @@
 {
- "essence": "essDuck",
- "stone": "stoneGun",
- "fusions": [
-  {
-   "name": "Flushed Shot",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "guaranteedCrit": true,
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 4
-   },
-   "speed": 460,
-   "radius": 8,
-   "desc": "Fires a shot that deals 30 damage to the first enemy it meets and is always a critical hit. You move 25% faster for 4 seconds after firing."
-  },
-  {
-   "name": "Clean Finish",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "piercing",
-   "role": "execute",
-   "base": 20,
-   "cooldown": 14,
-   "range": 160,
-   "stackMult": 1.2,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "desc": "Takes a shot at a target at or below 25% health, dealing 20 damage and adding 1.2 times the remaining damage of every affliction on it. The health threshold rises with each rank."
-  },
-  {
-   "name": "Held Breath",
-   "kind": "active",
-   "category": "buff",
-   "template": "selfCritBuff",
-   "element": "wind",
-   "cooldown": 45,
-   "critChanceBonus": 0.3,
-   "buffDuration": 12,
-   "desc": "Increases your critical hit chance by 30% for 12 seconds."
-  },
-  {
-   "name": "Long Held Fire",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "wind",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 8,
-    "seconds": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.4,
-    "strikes": 1
-   },
-   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds."
-  }
- ]
+  "essence": "essDuck",
+  "stone": "stoneGun",
+  "fusions": [
+    {
+      "name": "Dawn Report",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "guaranteedCrit": true,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "speed": 460,
+      "radius": 8,
+      "desc": "Fires a shot that deals 30 damage to the first enemy it meets and is always a critical hit. You move 25% faster for 4 seconds after firing."
+    },
+    {
+      "name": "Clean Finish",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 14,
+      "range": 160,
+      "stackMult": 1.2,
+      "requiresTargetBelow": 0.25,
+      "executeLadder": true,
+      "desc": "Takes a shot at a target at or below 25% health, dealing 20 damage and adding 1.2 times the remaining damage of every affliction on it. The health threshold rises with each rank."
+    },
+    {
+      "name": "Burst From Cover",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "wind",
+      "cooldown": 12,
+      "dashDist": 160,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Bursts you 5 tiles forward. You move 25% faster for 4 seconds after it."
+    },
+    {
+      "name": "Reed-Blind Vigil",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 8,
+        "seconds": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.4,
+        "strikes": 1
+      },
+      "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds."
+    }
+  ]
 }

@@ -1,0 +1,77 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Bog Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You come down hard on all four feet, dealing 30 damage to every enemy within 3.5 tiles as a critical hit and leaving each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Spring From Still",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "desc": "A springing kick at a target up to 6 tiles away, dealing 8 damage, rising to 1.5 times that at full range. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Sudden Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 10,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Springs you 5 tiles forward, and you move 15% faster for 3 seconds after."
+  },
+  {
+   "name": "Snap From the Reeds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you have gone a while without a critical hit, your next strike gains 20% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

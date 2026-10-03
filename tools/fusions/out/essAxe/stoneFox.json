@@ -57,23 +57,17 @@
    "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it, and each such blow has a 40% chance to confuse them for 3 seconds."
   },
   {
-   "name": "Played Hurt",
+   "name": "Recounted Swing",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "passive buff",
+   "template": "fateReroll",
    "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.4,
-    "strikes": 1
-   },
-   "desc": "When anything other than fire hurts you, your critical hit chance rises by 40% for your next strike. Once every 6 seconds."
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
   }
  ]
 }

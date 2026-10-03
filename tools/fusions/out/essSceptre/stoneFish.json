@@ -1,0 +1,90 @@
+{
+ "essence": "essSceptre",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flicker of Scales",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Looses 3 darting bolts of water at once, spread apart, each of which deals 3 damage. Their damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "School Turns as One",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Sends a bolt of water that deals 28 damage to the first enemy it meets, then leaps to 3 more enemies within 3 tiles, each hit dealing 60% of the original damage. When it hits, every ally deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Into the Silver",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 6 seconds, and you move 15% faster while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Slips the Grasp",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "water",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 160
+   },
+   "allyRange": 160,
+   "allyMax": 4,
+   "desc": "Once every 12 seconds, a blow you failed to dodge is rolled a second time, and the second roll stands. Its effect increases by 8% for each ally within 5 tiles, up to 4 allies."
+  }
+ ]
+}

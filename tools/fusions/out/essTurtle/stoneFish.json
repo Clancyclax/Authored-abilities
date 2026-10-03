@@ -1,0 +1,91 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Fry From the Underside",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 6,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Looses 3 silver fry from the shelter under your shell, spread apart, each one dealing 3 damage. 15% of the damage they deal comes back to you as healing over the following 6 seconds."
+  },
+  {
+   "name": "Slick Glide",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You glide shell-first along a slick of scales to an enemy up to 6 tiles away and it deals 14 damage, rising to 1.3 times that at full reach. The target is [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Slips the Net",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Raises a slick shell barrier that absorbs the next 18 damage and holds for 6 seconds. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Slip, Then Settle",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every blow you dodge builds a stack on you, up to 5. At 5 they all spend at once and you settle into a shield that soaks 6% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

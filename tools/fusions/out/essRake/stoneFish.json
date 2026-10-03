@@ -1,0 +1,79 @@
+{
+ "essence": "essRake",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silver Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "isAoe": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Flicks 3 slick scales up off the tines at once, spread apart, each dealing 4 damage, with a 30% chance per hit to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Landed Catch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "maxMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Reaches out to a target up to 6 tiles away and deals 18 damage, rising to 1.6 times that at full reach. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Seine Haul",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "water",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Drags the tines through the shoal: up to 5 enemies within 6 tiles are pulled onto you and held there for 6 seconds."
+  },
+  {
+   "name": "Netful",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. The next ability you use spends them all: you move and attack 3% faster per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

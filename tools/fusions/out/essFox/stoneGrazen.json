@@ -1,81 +1,86 @@
 {
- "essence": "essFox",
- "stone": "stoneGrazen",
- "fusions": [
-  {
-   "name": "Pebble Under Cover",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "nature",
-   "role": "basic",
-   "spammable": true,
-   "base": 4,
-   "cooldown": 0.8,
-   "speed": 360,
-   "radius": 7,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "scaleOn": "alliesNear",
-   "scalePer": 0.1,
-   "scaleCap": 0.4,
-   "leech": 0.15,
-   "desc": "Flings a pebble into the first enemy it meets, dealing 4 damage, and heals you for 15% of the damage dealt. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%)."
-  },
-  {
-   "name": "Startled Stampede",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "nature",
-   "role": "long",
-   "base": 26,
-   "cooldown": 90,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 15
-   },
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 4
-   },
-   "desc": "Bursts out, dealing 26 damage to every enemy within 3 tiles. When it hits, you and your allies deal 20% more damage for 15 seconds. For 4 seconds after using it, you move 25% faster."
-  },
-  {
-   "name": "Hide the Herd",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "nature",
-   "cooldown": 40,
-   "stealthDuration": 6,
-   "stealthAlpha": 0.3,
-   "aggroMult": 0.5,
-   "stealthSpeedPct": 10,
-   "stealthScope": "party",
-   "desc": "Veils you and your allies for 6 seconds. Enemies notice you 50% later, you move 10% faster, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Patient Pounce",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "nature",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "fullStamina",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.3,
-    "duration": 6
-   },
-   "desc": "The moment your stamina is full, your critical chance rises by 30% for 6 seconds. Once every 15 seconds."
-  }
- ]
+  "essence": "essFox",
+  "stone": "stoneGrazen",
+  "fusions": [
+    {
+      "name": "Pebble Under Cover",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "nature",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 360,
+      "radius": 7,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "scaleOn": "alliesNear",
+      "scalePer": 0.1,
+      "scaleCap": 0.4,
+      "leech": 0.15,
+      "desc": "Flings a pebble into the first enemy it meets, dealing 4 damage, and heals you for 15% of the damage dealt. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%)."
+    },
+    {
+      "name": "Startled Stampede",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "nature",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 15
+      },
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Bursts out, dealing 26 damage to every enemy within 3 tiles. When it hits, you and your allies deal 20% more damage for 15 seconds. For 4 seconds after using it, you move 25% faster."
+    },
+    {
+      "name": "Hide the Herd",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "nature",
+      "cooldown": 40,
+      "stealthDuration": 6,
+      "stealthAlpha": 0.3,
+      "aggroMult": 0.5,
+      "stealthSpeedPct": 10,
+      "stealthScope": "party",
+      "desc": "Veils you and your allies for 6 seconds. Enemies notice you 50% later, you move 10% faster, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Warm Flank",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "nature",
+      "stackShape": "ledger",
+      "stackBuild": "dodge",
+      "stackPay": "heal",
+      "stackCap": 5,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.6,
+      "stackIcon": "stackWard",
+      "allyScaling": {
+        "per": 0.08,
+        "max": 4,
+        "range": 180
+      },
+      "allyRange": 180,
+      "allyMax": 4,
+      "desc": "Every time you avoid a blow, a stack builds on you, up to 5. When you reach 5, they all spend at once: you heal 3% of your maximum health per stack (15% at full). Its effect increases by 8% for each ally within 5.5 tiles, up to 4 allies; unfed, a stack fades every 10 seconds."
+    }
+  ]
 }

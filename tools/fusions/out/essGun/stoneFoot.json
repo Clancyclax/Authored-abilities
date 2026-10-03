@@ -1,0 +1,75 @@
+{
+ "essence": "essGun",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Mile-Earned Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 320,
+   "maxMult": 1.6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.5,
+   "desc": "Fires a long shot that deals 30 damage, up to 1.6 times that at its full reach of 10 tiles, and ignores armour. Its damage rises 5% per 100 paces you have run since you last used it (max +50%)."
+  },
+  {
+   "name": "Heel Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Plants your boot on a target at or below 25% health and fires point-blank, dealing 22 damage and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Shorter Road",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "rangeMult": 1.35,
+   "buffDuration": 20,
+   "castTime": 0.5,
+   "desc": "For 20 seconds, your attacks and spells reach 35% further."
+  },
+  {
+   "name": "Marching Powder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Each time you cover a long stretch on foot, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

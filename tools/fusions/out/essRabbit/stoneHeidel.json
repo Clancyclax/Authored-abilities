@@ -1,0 +1,78 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Drumming Feet",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "desc": "A rapid kick that deals 8 damage and leaves the target 8% easier to wound for 4 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Trampled Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "You run through the enemies ahead, dealing 14 damage to everything in a cone 5 tiles long and knocking them 3 tiles back."
+  },
+  {
+   "name": "Easy Lope",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds, and you move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

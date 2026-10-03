@@ -1,0 +1,79 @@
+{
+ "essence": "essGun",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Sly Pop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "confuse": true,
+   "confuseChance": 0.15,
+   "confuseDuration": 2,
+   "desc": "Fires a quick round that deals 4 damage, with 50% more critical chance against an unwounded target and a 15% chance to turn the target against its allies for 2 seconds."
+  },
+  {
+   "name": "Blank Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "confuse": true,
+   "confuseChance": 0.5,
+   "confuseDuration": 4,
+   "desc": "A blank charge goes off around you, dealing 12 damage to every enemy within 3 tiles and stunning them for 0.8 seconds, with a 50% chance each to turn against its allies for 4 seconds."
+  },
+  {
+   "name": "Gone to Ground",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and you move 15% faster. Enemies notice you far later, and the veil breaks the moment you fire."
+  },
+  {
+   "name": "Cheap Trick",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition on an enemy, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

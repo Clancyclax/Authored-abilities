@@ -1,64 +1,69 @@
 {
- "essence": "essChain",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Drop Anchor",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 16,
-   "cooldown": 14,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.15,
-    "duration": 6
-   },
-   "knockback": 96,
-   "desc": "Drives a heavy anchor into an enemy that deals 16 damage, knocks it back 3 tiles and leaves it 15% easier to wound for 6 seconds."
-  },
-  {
-   "name": "Rally Round",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "range": 112,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 12
-   },
-   "desc": "Slams the chain down in a ring that deals 30 damage to every enemy within 3.5 tiles. On a hit, every ally gains 20% damage for 12 seconds."
-  },
-  {
-   "name": "Staked Down",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "physical",
-   "cooldown": 40,
-   "armorBonus": 0.3,
-   "buffDuration": 10,
-   "desc": "Raises your armour by 30% for 10 seconds."
-  },
-  {
-   "name": "Unmoved",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "physical",
-   "buffKind": "maxHp",
-   "amount": 12,
-   "desc": "Your maximum health rises by 12."
-  }
- ]
+  "essence": "essChain",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Drop Anchor",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "knockback": 96,
+      "desc": "Drives a heavy anchor into an enemy that deals 16 damage, knocks it back 3 tiles and leaves it 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Ledge Hurl",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "bossPct": 0.05,
+      "desc": "Hurls the anchor on its chain at an enemy up to 6 tiles away that deals 26 damage plus 5% of a boss's or elite's maximum health, up to 1.5 times that at full reach."
+    },
+    {
+      "name": "Staked Down",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "armorBonus": 0.3,
+      "buffDuration": 10,
+      "desc": "Raises your armour by 30% for 10 seconds."
+    },
+    {
+      "name": "Footing Held",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "ward",
+      "stackCap": 4,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackWard",
+      "desc": "Each time you take damage, a stack builds on you, up to 4. When you reach 4, they all spend at once: you gain a shield worth 7% of your maximum health per stack, 28% in all at 4 stacks. Unfed, a stack fades every 10 seconds."
+    }
+  ]
 }

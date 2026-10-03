@@ -1,0 +1,95 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Gavel Ruling",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A gavel blow that deals 14 damage, stuns the target for 1.2 seconds, leaves it 10% easier to wound for 6 seconds and [Muddled] for 5 seconds."
+  },
+  {
+   "name": "Press Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings a printing press down around you, dealing 30 damage to every enemy within 3.5 tiles that ignores armour, and leaves each one [Marked] for 10 seconds."
+  },
+  {
+   "name": "Case Dismissed",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "radiant",
+   "cleanseCount": 2,
+   "healScope": "party",
+   "cooldown": 45,
+   "desc": "Strikes the charges from the record: removes up to 2 conditions from you and every ally."
+  },
+  {
+   "name": "Pressman's Arms",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "blunt",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "attackSpeed",
+     "amount": 0.05,
+     "text": "the press comes down faster every shift"
+    },
+    {
+     "rank": "silver",
+     "stat": "critDamage",
+     "amount": 0.1,
+     "text": "and every impression is sharper"
+    },
+    {
+     "rank": "gold",
+     "stat": "maxHp",
+     "amount": 0.05,
+     "text": "and the long runs no longer tire you"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1."
+  }
+ ]
+}

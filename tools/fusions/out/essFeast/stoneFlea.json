@@ -1,88 +1,87 @@
 {
- "essence": "essFeast",
- "stone": "stoneFlea",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "name": "Bounding Draw",
-   "element": "piercing",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 14,
-   "strikes": 1,
-   "chargeTo": 192,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "leech": 0.15,
-   "desc": "Rushes you to a target up to 6 tiles away, then a bite that deals 10 damage and leaves it [Bleeding] for 2 damage a second for 5 seconds. You heal for 15% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "name": "Quick Nip",
-   "element": "piercing",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.8,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "spammable": true,
-   "sunder": {
-    "amount": 0.05,
-    "duration": 3
-   },
-   "debuff": {
-    "key": "disease",
-    "chance": 0.3,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "leech": 0.2,
-   "desc": "A quick bite that deals 3 damage, with a 30% chance to leave the target [Diseased] for 6 seconds, and heals you for 20% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "name": "Skip the Queue",
-   "element": "physical",
-   "cooldown": 40,
-   "buffStat": "regenHealth",
-   "buffAmount": 0.5,
-   "buffDuration": 10,
-   "blinkOnUse": 96,
-   "healOnUse": 12,
-   "desc": "Leaps you 3 tiles forward and restores 12 health to you, then increases your health recovery by 50% for 10 seconds."
-  },
-  {
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "isTriggered": true,
-   "name": "Springing Reserve",
-   "element": "physical",
-   "cooldown": 10,
-   "trigger": {
-    "on": "moveDistance",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 3,
-    "duration": 4
-   },
-   "dodgeBonus": 0.05,
-   "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 10 seconds. You have 5% more dodge chance."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneFlea",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "name": "Bounding Draw",
+      "element": "piercing",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 14,
+      "strikes": 1,
+      "chargeTo": 192,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "leech": 0.15,
+      "desc": "Rushes you to a target up to 6 tiles away, then bites it, which deals 10 damage and leaves it [Bleeding] for 2 damage a second for 5 seconds. You heal for 15% of the damage dealt."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "name": "Quick Nip",
+      "element": "piercing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "debuff": {
+        "key": "disease",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "leech": 0.2,
+      "desc": "A quick bite that deals 3 damage and leaves the target 5% easier to wound for 3 seconds, with a 30% chance to leave it [Diseased] for 6 seconds. You heal for 20% of the damage dealt.",
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.05,
+        "duration": 3
+      }
+    },
+    {
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "name": "Skip the Queue",
+      "element": "physical",
+      "cooldown": 40,
+      "buffStat": "regenHealth",
+      "buffAmount": 0.5,
+      "buffDuration": 10,
+      "blinkOnUse": 96,
+      "healOnUse": 12,
+      "desc": "Leaps you 3 tiles forward and restores 12 health to you, then increases your health recovery by 50% for 10 seconds."
+    },
+    {
+      "name": "New Host",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "element": "blood",
+      "cooldown": 10,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.25,
+        "duration": 5
+      },
+      "desc": "Each time you make a kill, 25% of the damage you deal heals you for 5 seconds. Once every 10 seconds."
+    }
+  ]
 }

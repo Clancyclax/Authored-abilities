@@ -1,0 +1,74 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Usable only on a target at or below 30% health. The blow deals 22 damage and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Beating the Brush",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Beats the ground ahead of you, dealing 4 damage to everything in a cone 3 tiles long with a 30% chance to leave each [Marked] for 6 seconds."
+  },
+  {
+   "name": "Beaters' Cry",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "blunt",
+   "cooldown": 40,
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 10,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Wounded Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "blunt",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against a target carrying one of your afflictions, your damage rises by 10%."
+  }
+ ]
+}

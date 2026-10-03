@@ -1,76 +1,76 @@
 {
- "essence": "essEarth",
- "stone": "stoneHeidel",
- "fusions": [
-  {
-   "name": "Kicked Turf",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "earth",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 160,
-   "maxMult": 1.4,
-   "reachUnits": 160,
-   "rangeBand": "medium",
-   "desc": "Kicks a clod of turf that deals 3 damage, rising to 1.4 times that at its full reach of 5 tiles."
-  },
-  {
-   "name": "Trampling Drive",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "earth",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 16,
-   "range": 128,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 96,
-   "desc": "Drives forward through a wide cone 4 tiles long, dealing 13 damage to everything in it and knocking it back 3 tiles."
-  },
-  {
-   "name": "Steady Pace",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "earth",
-   "buffStat": "damageReduction",
-   "buffAmount": 0.15,
-   "buffDuration": 8,
-   "cooldown": 30,
-   "blinkOnUse": 96,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Reduces the damage you take by 15% for 8 seconds and carries you 3 tiles from where you stood. Your movement speed rises 20% for 4 seconds after you use it."
-  },
-  {
-   "name": "Fresh Legs",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "earth",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendStamina",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 2,
-    "duration": 4
-   },
-   "dodgeBonus": 0.06,
-   "desc": "Each time you spend stamina, you regain 2 stamina a second for 4 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneHeidel",
+  "fusions": [
+    {
+      "name": "Hoof-Flung Clod",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "earth",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 160,
+      "maxMult": 1.4,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "desc": "Kicks a clod of turf that deals 3 damage, rising to 1.4 times that at its full reach of 5 tiles."
+    },
+    {
+      "name": "Trampling Drive",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "earth",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 16,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "desc": "Drives forward through a wide cone 4 tiles long, dealing 13 damage to everything in it and knocking it back 3 tiles."
+    },
+    {
+      "name": "Even Canter",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "earth",
+      "buffStat": "damageReduction",
+      "buffAmount": 0.15,
+      "buffDuration": 8,
+      "cooldown": 30,
+      "blinkOnUse": 96,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Reduces the damage you take by 15% for 9 seconds and carries you 3 tiles from where you stood. Your movement speed rises 20% for 4 seconds after you use it."
+    },
+    {
+      "kind": "passive",
+      "name": "Second Furlong",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 3,
+        "duration": 5
+      },
+      "armorBonus": 0.08,
+      "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 20 seconds. Your armour rises by 8% at all times."
+    }
+  ]
 }

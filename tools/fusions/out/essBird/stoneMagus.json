@@ -1,76 +1,72 @@
 {
- "essence": "essBird",
- "stone": "stoneMagus",
- "fusions": [
-  {
-   "name": "Cut-Off Call",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "resonating",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 380,
-   "radius": 6,
-   "debuff": {
-    "key": "slowCast",
-    "chance": 0.3,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Throws a sharp cry into the first enemy it meets for 4 damage, with a 30% chance of leaving the target [Muddled] for 3 seconds."
-  },
-  {
-   "name": "Dawn Chorus",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "resonating",
-   "role": "long",
-   "base": 24,
-   "cooldown": 90,
-   "isAoe": true,
-   "range": 112,
-   "aoeBand": "medium",
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 15
-   },
-   "desc": "Sings out in a ring, dealing 24 damage to every enemy within 3.5 tiles. If it hits, every ally near you strikes 20% harder for 15 seconds."
-  },
-  {
-   "name": "Perfect Pitch",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "resonating",
-   "cooldown": 45,
-   "buffStat": "castSpeed",
-   "buffAmount": 0.3,
-   "buffDuration": 12,
-   "desc": "Increases your casting speed by 30% for 12 seconds."
-  },
-  {
-   "name": "Rehearsed Verse",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "resonating",
-   "isTriggered": true,
-   "cooldown": 12,
-   "trigger": {
-    "on": "fullMana",
-    "cooldown": 12
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.3,
-    "charges": 1
-   },
-   "desc": "The moment your mana is full, your next spell deals 30% more damage. Once every 12 seconds."
-  }
- ]
+  "essence": "essBird",
+  "stone": "stoneMagus",
+  "fusions": [
+    {
+      "name": "Exact Syllable",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "long",
+      "base": 28,
+      "cooldown": 80,
+      "speed": 400,
+      "radius": 7,
+      "ignoreResist": true,
+      "desc": "Speaks a word into the first enemy it meets that deals 28 damage. The blow ignores its resistances."
+    },
+    {
+      "name": "Interrupting Squawk",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "resonating",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "isAoe": true,
+      "range": 64,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "slowCast",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Squawks at every enemy within 2 tiles, dealing 3 damage to each with a 30% chance of leaving it [Muddled] for 3 seconds."
+    },
+    {
+      "name": "Carrying Voice",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "resonating",
+      "cooldown": 60,
+      "rangeMult": 1.5,
+      "buffDuration": 15,
+      "desc": "For 15 seconds, your attacks and spells reach 65% further."
+    },
+    {
+      "name": "Rehearsed Verse",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "resonating",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "fullMana",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.3,
+        "charges": 1
+      },
+      "desc": "The moment your mana is full, your next spell deals 30% more damage. Once every 12 seconds."
+    }
+  ]
 }

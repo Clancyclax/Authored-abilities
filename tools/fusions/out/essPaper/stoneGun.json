@@ -1,0 +1,73 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Rolled Cartridge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "speed": 720,
+   "radius": 6,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "Fires a ball from a paper cartridge into the first enemy it meets that deals 32 damage and always lands as a critical hit."
+  },
+  {
+   "name": "Burning Wadding",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "fire",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 420,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Fires 3 scraps of burning wadding at once, spread apart; each deals 3 damage."
+  },
+  {
+   "name": "Firing Table",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "castTime": 0.5,
+   "cooldown": 60,
+   "desc": "Consults a printed firing table: for 15 seconds, your attacks and spells reach 30% further."
+  },
+  {
+   "name": "Filed Report",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 256
+   },
+   "desc": "Each critical hit sends a bolt to the nearest enemy within 8 tiles that deals 8 damage. Once every 4 seconds."
+  }
+ ]
+}

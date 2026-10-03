@@ -1,0 +1,86 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Gallop Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 112,
+   "desc": "A blow at full gallop that deals 15 damage, knocks the target 3.5 tiles back and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Hoofbeat Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 192,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A shockwave from your stride deals 28 damage, ignoring armour, to everything in a cone 6 tiles long. Its damage rises 8% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Breakneck Pace",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 40% for 8 seconds, with +8% dodge chance for it."
+  },
+  {
+   "name": "Long-Legged Stride",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "the ground goes by faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and you are gone before the blow lands"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.08,
+     "text": "and your kicks keep the same pace"
+    }
+   ],
+   "desc": "Raises your Speed by 1, and your Speed ceiling by 1."
+  }
+ ]
+}

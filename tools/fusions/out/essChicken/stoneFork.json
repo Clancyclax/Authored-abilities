@@ -1,94 +1,106 @@
 {
- "essence": "essChicken",
- "stone": "stoneFork",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Twin Scratch",
-   "template": "sunderStrike",
-   "element": "piercing",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "sunder": {
-    "amount": 0.06,
-    "duration": 3
-   },
-   "range": 72,
-   "reachUnits": 72,
-   "rangeBand": "melee",
-   "chain": {
-    "count": 1,
-    "radius": 96,
-    "frac": 0.5
-   },
-   "chainCount": 1,
-   "chainRange": 96,
-   "chainDamagePct": 0.5,
-   "desc": "A two-pronged scratch that deals 5 damage, leaves the target 6% easier to wound for 3 seconds and leaps to 1 more enemy within 3 tiles for 50% of that damage."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Hay Hurl",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 14,
-   "consumeAfflictionsPer": 0.6,
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "desc": "Hurls a hay fork that hits the first enemy in its path for 16 damage and uses up every affliction you have on it, dealing 60% more damage for each one."
-  },
-  {
-   "name": "Upright Tines",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "piercing",
-   "cooldown": 180,
-   "summonKind": "trap",
-   "summonDuration": 60,
-   "summonDmg": 16,
-   "summonRange": 96,
-   "summonInterval": 0,
-   "summonCharges": 2,
-   "summonBlast": 80,
-   "summonArmDelay": 0.5,
-   "trapDelivery": "spawned",
-   "castTime": 1,
-   "allyScaling": {
-    "per": 0.08,
-    "max": 4,
-    "range": 176
-   },
-   "allyRange": 176,
-   "allyMax": 4,
-   "desc": "Sets a pitchfork upright by the nearest enemy. It waits 60 seconds, and the first 2 enemies to come within 3 tiles take 16 damage in a blast around it. Its effect increases by 8% for each ally within 5.5 tiles, up to 4 allies."
-  },
-  {
-   "name": "Second Prong",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "piercing",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "strike",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "boltNearest",
-    "damage": 5,
-    "range": 96
-   },
-   "desc": "Each time you strike, a second bolt hits the next nearest enemy within 3 tiles and deals 5 damage. Once every 6 seconds."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneFork",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Twin Scratch",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "sunder": {
+        "amount": 0.06,
+        "duration": 3
+      },
+      "range": 72,
+      "reachUnits": 72,
+      "rangeBand": "melee",
+      "chain": {
+        "count": 1,
+        "radius": 96,
+        "frac": 0.5
+      },
+      "chainCount": 1,
+      "chainRange": 96,
+      "chainDamagePct": 0.5,
+      "desc": "A two-pronged scratch that deals 5 damage, leaves the target 6% easier to wound for 3 seconds and leaps to 1 more enemy within 3 tiles for 50% of that damage."
+    },
+    {
+      "name": "Branching Rally",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "long",
+      "base": 26,
+      "cooldown": 80,
+      "chain": {
+        "count": 2,
+        "radius": 96,
+        "frac": 0.5
+      },
+      "chainCount": 2,
+      "chainRange": 96,
+      "chainDamagePct": 0.5,
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "desc": "Hurls a pronged bolt that deals 26 damage to the first enemy in its path and splits to 2 more enemies within 3 tiles for 50% of that damage. If it hits, every ally strikes 20% harder for 12 seconds."
+    },
+    {
+      "name": "Upright Tines",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "piercing",
+      "cooldown": 180,
+      "summonKind": "trap",
+      "summonDuration": 60,
+      "summonDmg": 16,
+      "summonRange": 96,
+      "summonInterval": 0,
+      "summonCharges": 2,
+      "summonBlast": 80,
+      "summonArmDelay": 0.5,
+      "trapDelivery": "spawned",
+      "castTime": 1,
+      "allyScaling": {
+        "per": 0.08,
+        "max": 4,
+        "range": 176
+      },
+      "allyRange": 176,
+      "allyMax": 4,
+      "desc": "Sets a pitchfork upright by the nearest enemy. It waits 60 seconds, and the first 2 enemies to come within 3 tiles take 16 damage in a blast around it. Its effect increases by 8% for each ally within 5.5 tiles, up to 4 allies."
+    },
+    {
+      "name": "Other Path",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "piercing",
+      "rerollKind": "crit",
+      "rerollKinds": [
+        "crit"
+      ],
+      "rerollCooldown": 10,
+      "allyScaling": {
+        "per": 0.08,
+        "max": 4,
+        "range": 176
+      },
+      "allyRange": 176,
+      "allyMax": 4,
+      "desc": "Once every 10 seconds, a strike that fails to crit is rolled a second time, and the second roll stands. Its effect increases by 8% for each ally within 5.5 tiles, up to 4 allies."
+    }
+  ]
 }

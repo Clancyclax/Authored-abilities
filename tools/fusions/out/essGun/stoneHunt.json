@@ -1,0 +1,73 @@
+{
+ "essence": "essGun",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 288,
+   "maxMult": 1.5,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "desc": "Fires at a target at or below 30% health, dealing 24 damage, up to 1.5 times that at its full reach of 9 tiles."
+  },
+  {
+   "name": "Flush and Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You close up to 7 tiles on the target and fire point-blank, dealing 14 damage, leaving it 12% easier to wound for 6 seconds and [Marked] for 8 seconds."
+  },
+  {
+   "name": "Stalking Party",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 8 seconds, moving 10% faster. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Closing In",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

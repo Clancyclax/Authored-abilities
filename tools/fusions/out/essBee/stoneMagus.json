@@ -1,90 +1,100 @@
 {
- "essence": "essBee",
- "stone": "stoneMagus",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Recited Verse",
-   "template": "projectileBall",
-   "element": "resonating",
-   "role": "resource",
-   "chargesMax": 5,
-   "base": 7,
-   "cooldown": 1,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "debuff": {
-    "key": "vibrantEcho",
-    "chance": 0.5,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "chain": {
-    "count": 1,
-    "radius": 110,
-    "frac": 0.7
-   },
-   "chainCount": 1,
-   "chainRange": 110,
-   "chainDamagePct": 0.7,
-   "desc": "Sends a stinger of sound that deals 7 damage, then leaps to 1 more enemy within 3.5 tiles for 70% of the original damage. Each hit has a 50% chance of [Vibrant Echo] for 6 seconds. Holds up to 5 charges, and each kill gives one back."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Cascading Refrain",
-   "template": "aoeRing",
-   "element": "resonating",
-   "role": "medium",
-   "spreadAfflictions": 128,
-   "base": 12,
-   "cooldown": 16,
-   "range": 100,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "radiantEcho",
-    "chance": 0.4,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Every enemy within 3 tiles takes 12 damage, with a 40% chance of [Radiant Echo] for 6 seconds. Your afflictions on a target spread to every enemy within 4 tiles."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "name": "Well-Rehearsed",
-   "element": "resonating",
-   "cooldown": 60,
-   "buffStat": "castSpeed",
-   "buffAmount": 0.3,
-   "buffDuration": 15,
-   "escort": {
-    "dmg": 3,
-    "interval": 1.2,
-    "duration": 12
-   },
-   "desc": "Increases your cast speed by 30% for 15 seconds. A chorus of stingers fights beside you for 12 seconds, striking for 3 every 1.2 seconds."
-  },
-  {
-   "kind": "passive",
-   "name": "Corrected Draft",
-   "category": "passive buff",
-   "template": "cooldownPassive",
-   "element": "resonating",
-   "cooldownReduction": 0.1,
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 10
-   },
-   "desc": "Every ability you have comes round 10% sooner. A chorus of stingers fights beside you, striking for 3 every 1.4 seconds for 10 seconds."
-  }
- ]
+  "essence": "essBee",
+  "stone": "stoneMagus",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Recited Verse",
+      "template": "projectileBall",
+      "element": "resonating",
+      "role": "resource",
+      "chargesMax": 5,
+      "base": 7,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "debuff": {
+        "key": "vibrantEcho",
+        "chance": 0.5,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "chain": {
+        "count": 1,
+        "radius": 110,
+        "frac": 0.7
+      },
+      "chainCount": 1,
+      "chainRange": 110,
+      "chainDamagePct": 0.7,
+      "desc": "Sends a stinger of sound that deals 7 damage, then leaps to 1 more enemy within 3.5 tiles for 70% of the original damage. Each hit has a 50% chance of [Vibrant Echo] for 6 seconds. Holds up to 5 charges, and each kill gives one back."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Cascading Refrain",
+      "template": "aoeRing",
+      "element": "resonating",
+      "role": "medium",
+      "spreadAfflictions": 128,
+      "base": 12,
+      "cooldown": 16,
+      "range": 100,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "radiantEcho",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A ringing verse deals 12 damage to every enemy within 3 tiles, with a 40% chance of [Radiant Echo] for 6 seconds. Your afflictions on a target spread to every enemy within 4 tiles."
+    },
+    {
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "name": "Well-Rehearsed",
+      "element": "resonating",
+      "cooldown": 60,
+      "buffStat": "castSpeed",
+      "buffAmount": 0.3,
+      "buffDuration": 15,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.2,
+        "duration": 12
+      },
+      "desc": "Increases your cast speed by 30% for 15 seconds. A chorus of stingers fights beside you for 12 seconds, striking for 3 every 1.2 seconds."
+    },
+    {
+      "name": "Choral Practice",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "resonating",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "strikes": 1
+      },
+      "allyScaling": {
+        "per": 0.11,
+        "max": 4,
+        "range": 180
+      },
+      "desc": "When you spend mana, your next strike has 15% more critical chance. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4. Once every 10 seconds."
+    }
+  ]
 }

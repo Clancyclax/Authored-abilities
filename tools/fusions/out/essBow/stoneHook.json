@@ -1,76 +1,82 @@
 {
- "essence": "essBow",
- "stone": "stoneHook",
- "fusions": [
-  {
-   "name": "Tear-Out Barb",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.0,
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "consumeAffliction": true,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Fires a barbed arrow that deals 8 damage to the first enemy it meets and makes it [Bleeding] for 2 damage a second for 4 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
-  },
-  {
-   "name": "Reeling Line",
-   "kind": "active",
-   "category": "attack",
-   "template": "barrierWall",
-   "element": "piercing",
-   "role": "medium",
-   "base": 11,
-   "cooldown": 20,
-   "wallKind": "pull",
-   "wallLength": 160,
-   "wallDuration": 5,
-   "wallThickness": 26,
-   "pullForce": 32,
-   "stunOnHit": 1,
-   "desc": "Strings a 5-tile line of barbed cord ahead of you for 5 seconds that drags nearby enemies inward. It deals 11 damage to each one it catches and stuns it for 1 second."
-  },
-  {
-   "name": "Long Cast",
-   "kind": "active",
-   "category": "buff",
-   "template": "rangeBuff",
-   "element": "piercing",
-   "cooldown": 60,
-   "rangeMult": 1.3,
-   "buffDuration": 15,
-   "desc": "For 15 seconds, your attacks and spells reach 40% further."
-  },
-  {
-   "name": "Barb Retrieval",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "piercing",
-   "isTriggered": true,
-   "cooldown": 3,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 3
-   },
-   "effect": {
-    "kind": "restoreResource",
-    "resource": "stamina",
-    "amount": 4
-   },
-   "desc": "Each time you afflict something, you regain 4 stamina. Once every 3 seconds."
-  }
- ]
+  "essence": "essBow",
+  "stone": "stoneHook",
+  "fusions": [
+    {
+      "name": "Tear-Out Barb",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 224,
+      "maxMult": 1.5,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "consumeAffliction": true,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Looses a barbed arrow at a target up to 7 tiles away that deals 8 damage, rising to 1.5 times that at full reach, and makes it [Bleeding] for 2 damage a second for 4 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+    },
+    {
+      "name": "Snagline",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fires a barbed arrow on a line that deals 12 damage to the first enemy it meets, stuns it for 1 second and leaves it [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Long Cast",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "piercing",
+      "cooldown": 60,
+      "rangeMult": 1.27,
+      "buffDuration": 15,
+      "desc": "For 15 seconds, your attacks and spells reach 40% further."
+    },
+    {
+      "name": "Barb Retrieval",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 3,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 3
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 4
+      },
+      "desc": "Each time you afflict something, you regain 4 stamina. Once every 3 seconds."
+    }
+  ]
 }

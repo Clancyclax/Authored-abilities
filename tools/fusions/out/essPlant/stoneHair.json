@@ -1,0 +1,75 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Rootlet Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.4,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.6,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts ten thousand fine root hairs over one enemy up to 6 tiles away, dealing 12 damage, more the further they reach, up to 1.4 times, with a 60% chance to leave it [Pinned] for 2 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Tangled Filaments",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "plant",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "slowPct": 0.15,
+   "desc": "Throws a mesh of filaments over every enemy within 3 tiles, dealing 4 damage, stripping 6% armour for 3 seconds and slowing each by 15%."
+  },
+  {
+   "name": "Bast Wrapping",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "plant",
+   "cooldown": 36,
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "desc": "Binds you in strips of bark fibre, raising your armour by 20% for 12 seconds."
+  },
+  {
+   "name": "Felted Root Mat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "When you take damage from anything but fire, a shield worth 12% of your maximum health closes over you for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

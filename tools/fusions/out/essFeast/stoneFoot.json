@@ -1,70 +1,79 @@
 {
- "essence": "essFeast",
- "stone": "stoneFoot",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "name": "Tramping Round",
-   "element": "physical",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 14,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "range": 96,
-   "knockback": 64,
-   "healOnUse": 8,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "desc": "Stamps down in a ring, dealing 10 damage to every enemy within 3 tiles and knocking each back 2 tiles. You restore 8 health. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "name": "Last Mile",
-   "element": "physical",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "maxMult": 1.8,
-   "hpCostPct": 0.05,
-   "leech": 0.3,
-   "desc": "Costs 5% of your maximum health. A lunging strike on a target up to 6 tiles away that deals 9 damage, rising to 1.8 times that at the end of its reach, and heals you for 30% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "name": "Roadside Rest",
-   "element": "physical",
-   "cooldown": 40,
-   "resource": "stamina",
-   "overTime": true,
-   "restorePerSec": 3,
-   "restoreDuration": 8,
-   "healOnUse": 14,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 5
-   },
-   "desc": "Restores 3 stamina a second for 8 seconds and 14 health to you. Your movement speed rises 20% for 5 seconds after you use it."
-  },
-  {
-   "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
-   "name": "Provisioned Stride",
-   "element": "physical",
-   "moveSpeedPct": 0.08,
-   "regenPerSec": 0.5,
-   "desc": "Your movement speed is permanently increased by 8%. You also regenerate 0.5 health a second, permanently."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneFoot",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "name": "Hobnail Stamp",
+      "element": "physical",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 14,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "range": 96,
+      "knockback": 64,
+      "healOnUse": 8,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "desc": "Stamps down in a ring, dealing 10 damage to every enemy within 3 tiles and knocking each back 2 tiles. You restore 8 health. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "name": "Last Mile",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.8,
+      "hpCostPct": 0.05,
+      "leech": 0.3,
+      "desc": "Costs 5% of your maximum health. A lunging strike on a target up to 6 tiles away that deals 9 damage, rising to 1.8 times that at the end of its reach, and heals you for 30% of the damage dealt."
+    },
+    {
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "name": "Roadside Rest",
+      "element": "physical",
+      "cooldown": 40,
+      "resource": "stamina",
+      "overTime": true,
+      "restorePerSec": 3,
+      "restoreDuration": 8,
+      "healOnUse": 14,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 5
+      },
+      "desc": "Restores 3 stamina a second for 8 seconds and 14 health to you. Your movement speed rises 20% for 5 seconds after you use it."
+    },
+    {
+      "name": "Trail Rations",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "element": "physical",
+      "cooldown": 10,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 4
+      },
+      "desc": "Each stretch of ground you cover makes you regain 3 health a second for 4 seconds. Once every 10 seconds."
+    }
+  ]
 }

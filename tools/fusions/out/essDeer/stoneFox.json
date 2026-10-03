@@ -1,72 +1,82 @@
 {
- "essence": "essDeer",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "name": "Feint and Flush",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 15,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 64,
-   "confuse": true,
-   "confuseChance": 0.5,
-   "confuseDuration": 4,
-   "desc": "Bursts around you, dealing 10 damage to every enemy within 3 tiles and knocking them 2 tiles back. Each has a 50% chance to turn against its allies for 4 seconds."
-  },
-  {
-   "name": "Crooked Edge",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "physical",
-   "role": "long",
-   "base": 28,
-   "cooldown": 90,
-   "strikes": 1,
-   "ignoreResist": true,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Your next weapon strike deals 28 damage, ignores the target's resistances and leaves it [Bleeding] for 2 damage a second for 4 seconds."
-  },
-  {
-   "name": "Turned Tables",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "physical",
-   "buffDuration": 8,
-   "thornsFrac": 0.5,
-   "cooldown": 30,
-   "confuse": {
-    "chance": 0.3,
-    "duration": 3
-   },
-   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and each such blow has a 30% chance to turn the attacker against its allies for 3 seconds."
-  },
-  {
-   "name": "Lucky Break",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
-   "element": "physical",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 10,
-   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
-  }
- ]
+  "essence": "essDeer",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Out of the Brush",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 15,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 64,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 3
+      },
+      "desc": "Bursts out around you, dealing 10 damage to every enemy within 3 tiles and knocking them 2 tiles back. Then your movement speed rises by 25% for 3 seconds."
+    },
+    {
+      "name": "Sly Flick",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "chargesMax": 3,
+      "speed": 400,
+      "radius": 8,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "confuse": true,
+      "confuseChance": 0.25,
+      "confuseDuration": 3,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 2
+      },
+      "desc": "Flicks a stone at an enemy up to 7 tiles away that deals 7 damage, with a 25% chance to turn it against its allies for 3 seconds, and your movement speed rises by 15% for 2 seconds. You hold 3 charges, and kills give them back."
+    },
+    {
+      "name": "Shifted Blame",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "physical",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.5,
+      "reflectChance": 0.5,
+      "buffDuration": 6,
+      "cooldown": 24,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "For 6 seconds, each affliction laid on you has a 50% chance to be sent back to whoever laid it, and your movement speed rises by 20% for 4 seconds."
+    },
+    {
+      "name": "Made a Fool Of",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "boon",
+      "stackBuild": "dodge",
+      "stackPay": "power",
+      "stackCap": 4,
+      "stackDecay": 6,
+      "stackSpend": "nextCast",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackFortune",
+      "desc": "Every time you avoid a blow, a stack builds on you, up to 4. The next ability you use spends them all: you deal 6% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
 }

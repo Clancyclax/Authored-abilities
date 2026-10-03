@@ -1,0 +1,69 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Sun-Still Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 80,
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Snaps at one enemy from stillness, dealing 13 damage, stunning it for 1 second and leaving it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Frill Flare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 112,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Spends 4% of your maximum health to flare a frill of sun-warmed petals across a cone 3.5 tiles long, dealing 8 damage and setting every enemy hit [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Shed and Regrow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 6 seconds."
+  },
+  {
+   "name": "Noon Basking",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "plant",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "During the day, you deal 12% more damage."
+  }
+ ]
+}

@@ -1,77 +1,79 @@
 {
- "essence": "essFrog",
- "stone": "stoneIron",
- "fusions": [
-  {
-   "name": "Hardened Reeds",
-   "kind": "active",
-   "category": "attack",
-   "template": "weakenRing",
-   "element": "piercing",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 16,
-   "range": 96,
-   "reachUnits": 96,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.15,
-    "duration": 6
-   },
-   "slowPct": 0.2,
-   "knockback": 64,
-   "desc": "Stiffens the reeds around you into spikes: they deal 10 damage to every enemy within 3 tiles, strip 15% armour for 6 seconds, slow each by 20% and knock each back 2 tiles."
-  },
-  {
-   "name": "Cold Tap",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 72,
-   "reachUnits": 72,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.08,
-    "duration": 3
-   },
-   "desc": "A tapping hop that deals 5 damage and leaves the target 8% easier to wound for 3 seconds."
-  },
-  {
-   "name": "Bitter Hide",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "poison",
-   "cooldown": 30,
-   "buffDuration": 8,
-   "thornsFrac": 0.5,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Poisoned"
-   },
-   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and they are left [Poisoned] for 2 damage a second for 4 seconds."
-  },
-  {
-   "name": "Sealed Pores",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "poison",
-   "buffKind": "armor",
-   "amount": 0.12,
-   "resist": {
-    "element": "poison",
-    "amount": 0.15
-   },
-   "desc": "Your armour rises by 12%, and your poison resistance rises by 15%."
-  }
- ]
+  "essence": "essFrog",
+  "stone": "stoneIron",
+  "fusions": [
+    {
+      "name": "Bristling Skin",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 64,
+      "debuff": {
+        "key": "sunder",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Your skin hardens into spines that deal 12 damage to every enemy within 3 tiles, knock each back 2 tiles and leave each [Sundered] for 6 seconds, which shatters its armour."
+    },
+    {
+      "name": "Cold Tap",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 72,
+      "reachUnits": 72,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.08,
+        "duration": 3
+      },
+      "desc": "A tapping hop that deals 5 damage and leaves the target 8% easier to wound for 3 seconds."
+    },
+    {
+      "name": "Bitter Hide",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "poison",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.5,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and they are left [Poisoned] for 2 damage a second for 4 seconds."
+    },
+    {
+      "name": "Sealed Pores",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveBuff",
+      "element": "poison",
+      "buffKind": "armor",
+      "amount": 0.12,
+      "resist": {
+        "element": "poison",
+        "amount": 0.15
+      },
+      "desc": "Your armour rises by 12%, and your poison resistance rises by 15%."
+    }
+  ]
 }

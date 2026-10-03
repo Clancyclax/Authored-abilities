@@ -1,0 +1,82 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Snatched From the Bank",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxMult": 1,
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs at an enemy up to 4 tiles away and snaps it in your jaws, which deals 22 damage and leaves it [Soaked] for 6 seconds. It only lands on a target at or below 25% health."
+  },
+  {
+   "name": "Belly-First Splash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You spring up and land in a splash, which deals 12 damage to every enemy within 3 tiles and knocks them back 2.5 tiles. Each hit has a 50% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Plop and Pull In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "cooldown": 32,
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "You spring 3 tiles and pull into your shell, raising your armour by 25% for 10 seconds."
+  },
+  {
+   "name": "Cool Mud Skin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When something other than fire hurts you, your damp skin draws it off and you regain 3 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

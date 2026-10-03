@@ -1,0 +1,80 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Raking Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A raking pull of the trowel point that deals 4 damage and leaves the target 5% easier to wound for 3 seconds, with a 30% chance to make it [Bleeding] for 3 seconds."
+  },
+  {
+   "name": "Wall-Tie Snag",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "maxMult": 1.3,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Casts a barbed wall-tie at a target up to 6 tiles away that deals 13 damage, rising to 1.3 times that at full reach, and stuns it for 1 second."
+  },
+  {
+   "name": "Snag and Haul",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "cooldown": 25,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Hauls up to 4 enemies within 6 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Caught Fast",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "When you inflict a condition, your next strike has 15% more critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

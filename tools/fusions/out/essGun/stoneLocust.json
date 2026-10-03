@@ -1,0 +1,79 @@
+{
+ "essence": "essGun",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Plague Pellets",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 5,
+   "volleySpread": 0.7,
+   "isAoe": true,
+   "speed": 360,
+   "radius": 5,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Fires 5 small pellets in a wide spread, each dealing 2 damage."
+  },
+  {
+   "name": "Stripping Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "leech": 0.2,
+   "desc": "Fires a round that bursts into a devouring cloud, dealing 28 damage to the target and 80% of that to every enemy within 3.5 tiles. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Darkened Sky",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you kill an enemy, you regain 8 stamina. Once every 4 seconds."
+  }
+ ]
+}

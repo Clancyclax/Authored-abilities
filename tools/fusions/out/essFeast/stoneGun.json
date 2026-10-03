@@ -1,79 +1,79 @@
 {
- "essence": "essFeast",
- "stone": "stoneGun",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "name": "Starting Shot",
-   "element": "piercing",
-   "role": "long",
-   "base": 40,
-   "cooldown": 120,
-   "speed": 600,
-   "radius": 8,
-   "reachUnits": 480,
-   "rangeBand": "long",
-   "ignoreArmor": true,
-   "leech": 0.2,
-   "desc": "Fires a slug that deals 40 piercing damage to the first enemy it meets and ignores armour. You heal for 20% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "name": "Scatter Round",
-   "element": "piercing",
-   "role": "resource",
-   "base": 5,
-   "cooldown": 1,
-   "volleyCount": 3,
-   "volleySpread": 0.36,
-   "isAoe": true,
-   "speed": 300,
-   "radius": 7,
-   "range": 220,
-   "reachUnits": 220,
-   "rangeBand": "medium",
-   "chargesMax": 5,
-   "leechOverTime": {
-    "frac": 0.15,
-    "duration": 4,
-    "label": "Reprieve"
-   },
-   "desc": "Looses 3 pellets at once, spread apart, each dealing 5 damage. 15% of the damage dealt comes back to you as healing over 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "template": "rangeBuff",
-   "name": "Longer Pull",
-   "element": "piercing",
-   "cooldown": 90,
-   "rangeMult": 1.5,
-   "buffDuration": 20,
-   "healOnUse": 12,
-   "desc": "Your attacks and spells reach 50% further for 20 seconds. You restore 12 health when you use it."
-  },
-  {
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "isTriggered": true,
-   "name": "Powder Burn",
-   "element": "piercing",
-   "cooldown": 8,
-   "trigger": {
-    "on": "crit",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "lifedrainBuff",
-    "amount": 0.15,
-    "duration": 4
-   },
-   "desc": "When you land a critical hit, 15% of the damage you deal heals you for 4 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneGun",
+  "fusions": [
+    {
+      "name": "Bagged for the Pot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "execute",
+      "base": 28,
+      "cooldown": 15,
+      "speed": 600,
+      "radius": 8,
+      "reachUnits": 480,
+      "rangeBand": "long",
+      "requiresTargetBelow": 0.3,
+      "leech": 0.4,
+      "desc": "Usable only on an enemy at or below 30% health. Fires a slug that deals 28 piercing damage to the first enemy it meets, and you heal for 40% of the damage dealt."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "name": "Scatter Round",
+      "element": "piercing",
+      "role": "resource",
+      "base": 5,
+      "cooldown": 1,
+      "volleyCount": 3,
+      "volleySpread": 0.36,
+      "isAoe": true,
+      "speed": 300,
+      "radius": 7,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "chargesMax": 5,
+      "leechOverTime": {
+        "frac": 0.15,
+        "duration": 4,
+        "label": "Reprieve"
+      },
+      "desc": "Looses 3 pellets at once, spread apart, each dealing 5 damage. 15% of the damage dealt comes back to you as healing over 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "name": "Longer Pull",
+      "element": "piercing",
+      "cooldown": 90,
+      "rangeMult": 1.5,
+      "buffDuration": 20,
+      "healOnUse": 12,
+      "desc": "Your attacks and spells reach 65% further for 20 seconds. You restore 12 health when you use it."
+    },
+    {
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "name": "Powder Burn",
+      "element": "piercing",
+      "cooldown": 8,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.15,
+        "duration": 4
+      },
+      "desc": "When you land a critical hit, 15% of the damage you deal heals you for 4 seconds. Once every 8 seconds."
+    }
+  ]
 }

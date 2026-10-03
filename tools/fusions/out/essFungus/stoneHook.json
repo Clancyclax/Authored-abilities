@@ -3,14 +3,14 @@
  "stone": "stoneHook",
  "fusions": [
   {
-   "name": "Barbed Draw",
+   "name": "Catchbarb Jab",
    "kind": "active",
    "category": "attack",
    "template": "imbueStrike",
    "element": "poison",
    "role": "resource",
    "base": 9,
-   "cooldown": 1.0,
+   "cooldown": 1,
    "strikes": 1,
    "chargesMax": 4,
    "bindOnHit": {
@@ -27,25 +27,28 @@
    "desc": "Holds 4 charges, and kills give charges back. A barbed strike that deals 9 damage, slows the target by 30% for 2 seconds and leaves it [Poisoned] for 1 damage a second for 4 seconds."
   },
   {
-   "name": "Snagging Pod",
+   "name": "Hyphal Trawl",
    "kind": "active",
    "category": "attack",
-   "template": "projectileBall",
+   "template": "barrierWall",
    "element": "plant",
    "role": "medium",
-   "base": 14,
-   "cooldown": 20,
-   "chargeTo": 224,
+   "base": 12,
+   "cooldown": 16,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 30,
+   "stunOnHit": 1,
    "dot": {
     "dmgPerTick": 2,
-    "ticks": 5,
+    "ticks": 4,
     "tickMs": 1000,
     "critChance": 0.05,
     "label": "Poisoned"
    },
-   "speed": 360,
-   "radius": 8,
-   "desc": "Rushes up to 7 tiles to the target and hurls a barbed spore that deals 14 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds."
+   "desc": "Strings a 5-tile line of barbed filaments ahead of you for 5 seconds that drags nearby enemies inward. It deals 12 damage to each one it catches, stuns it for 1 second and leaves it [Poisoned] for 2 damage a second for 4 seconds."
   },
   {
    "name": "Haul In",
@@ -66,7 +69,7 @@
    "desc": "Pulls up to 5 enemies within 8 tiles onto you for 6 seconds. A cloud of spores fights beside you for 10 seconds, striking for 4 damage every 1.4 seconds."
   },
   {
-   "name": "Barb Tithe",
+   "name": "Snag Tithe",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",

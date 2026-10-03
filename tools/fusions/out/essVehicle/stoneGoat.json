@@ -1,0 +1,79 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Uphill Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "You rush up to 6 tiles to the target and butt it. It deals 15 damage and leaves the target 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Over the Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Butts a target at or below 25% health off its footing. It deals 26 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the blow. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Roadblock",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "rock",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntDuration": 4,
+   "tauntMax": 4,
+   "tauntRadius": 128,
+   "desc": "Reduces the damage you take by 25% for 10 seconds, and pulls up to 4 enemies within 4 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Keeps Climbing",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "rock",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

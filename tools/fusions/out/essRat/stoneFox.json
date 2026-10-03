@@ -1,0 +1,75 @@
+{
+ "essence": "essRat",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Light Fingers",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 150,
+   "maxMult": 1.2,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Darts in at one enemy up to 5 tiles away and deals 7 damage, rising to 1.2 times that at full reach, with a 40% chance to leave it [Weakened] for 6 seconds. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Between Their Legs",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "confuse": true,
+   "confuseChance": 0.4,
+   "confuseDuration": 3,
+   "spreadAfflictions": 112,
+   "desc": "Your swarm runs between the legs of every enemy within 3 tiles and deals 10 damage, with a 40% chance to turn each against its neighbours for 3 seconds. Your afflictions on each enemy hit spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Not Mine, Yours",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "shadow",
+   "cooldown": 24,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, each debuff laid on you has a 50% chance to be sent back to whoever cast it instead."
+  },
+  {
+   "name": "Short-Changed",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "shadow",
+   "stackShape": "boon",
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -51,27 +51,25 @@
    "reflectKind": "debuff",
    "reflectFrac": 0.25,
    "reflectChance": 0.5,
-   "buffDuration": 8,
+   "buffDuration": 7,
    "desc": "Turns your pockets out: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
   },
   {
-   "name": "Pocketed Spoils",
+   "name": "Turncoat Cloak",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "armor summon",
+   "template": "summonArmor",
    "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "restoreResource",
-    "resource": "mana",
-    "amount": 6
-   },
-   "desc": "When you kill an enemy, you pocket 6 mana. Once every 6 seconds."
+   "armorBonus": 0.06,
+   "damageReduction": 1,
+   "thornsFrac": 0.06,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.08
+    }
+   ],
+   "desc": "Conjures a reversible cloak: every hit you take is 1 lower, your armour rises by 6%, your dodge chance by 8%, and 6% of the damage you take goes back to whoever dealt it."
   }
  ]
 }

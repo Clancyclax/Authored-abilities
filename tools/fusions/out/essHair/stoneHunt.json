@@ -1,72 +1,81 @@
 {
- "essence": "essHair",
- "stone": "stoneHunt",
- "fusions": [
-  {
-   "name": "Closing Loop",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "piercing",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 12,
-   "range": 84,
-   "reachUnits": 84,
-   "rangeBand": "melee",
-   "stackMult": 1.8,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "desc": "Deals 16 damage and consumes every affliction on the target, adding 1.8 times their remaining damage to this blow. It only strikes a target at or below 25% health."
-  },
-  {
-   "name": "Quarry's Tag",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "long",
-   "base": 40,
-   "cooldown": 120,
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "bossPct": 0.05,
-   "debuff": {
-    "key": "marked",
-    "chance": 1.0,
-    "duration": 12,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Throws a strand that deals 40 damage to the first enemy it meets and leaves it [Marked] for 12 seconds. Against a boss or an elite it also deals 5% of their maximum health."
-  },
-  {
-   "name": "Pack Cry",
-   "kind": "active",
-   "category": "buff",
-   "template": "partyBuff",
-   "element": "piercing",
-   "cooldown": 45,
-   "range": 160,
-   "reachUnits": 160,
-   "rangeBand": "medium",
-   "buffDuration": 12,
-   "partyPower": 0,
-   "partyDmgPct": 0.2,
-   "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds."
-  },
-  {
-   "name": "Closing In",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "piercing",
-   "condition": "targetLowHp",
-   "bonusKind": "dmg",
-   "amount": 0.15,
-   "desc": "Against enemies below half health, you deal 15% more damage."
-  }
- ]
+  "essence": "essHair",
+  "stone": "stoneHunt",
+  "fusions": [
+    {
+      "name": "Run to Ground",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "chargeTo": 224,
+      "desc": "Rushes you along a strand to a target up to 7 tiles away, then deals 12 damage, leaves it [Slowed] for 3 seconds and 10% easier to wound for 5 seconds.",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Quarry's Tag",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "long",
+      "base": 40,
+      "cooldown": 120,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "bossPct": 0.05,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 12,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Throws a strand that deals 40 damage to the first enemy it meets and leaves it [Marked] for 12 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+    },
+    {
+      "name": "Pack Cry",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "piercing",
+      "cooldown": 45,
+      "range": 160,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "buffDuration": 12,
+      "partyPower": 0,
+      "partyDmgPct": 0.2,
+      "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds."
+    },
+    {
+      "name": "Run Down",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "piercing",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.15,
+      "desc": "Against enemies below half health, you deal 15% more damage."
+    }
+  ]
 }

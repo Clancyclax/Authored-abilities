@@ -1,83 +1,90 @@
 {
- "essence": "essBee",
- "stone": "stoneHeidel",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Hoofbeat Run",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "medium",
-   "chargeTo": 224,
-   "base": 15,
-   "cooldown": 20,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "chain": {
-    "count": 2,
-    "radius": 110,
-    "frac": 0.6
-   },
-   "chainCount": 2,
-   "chainRange": 110,
-   "chainDamagePct": 0.6,
-   "desc": "You rush up to 7 tiles toward the target and hurl a stinger that deals 15 damage, then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Flung Clod",
-   "template": "rangeStrike",
-   "element": "earth",
-   "role": "resource",
-   "chargesMax": 4,
-   "base": 8,
-   "maxMult": 2,
-   "cooldown": 1,
-   "range": 220,
-   "reachUnits": 220,
-   "rangeBand": "medium",
-   "desc": "A thrown clod that deals 8 damage, rising to 2 times that at maximum range. Holds up to 4 charges, and each kill gives one back."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "name": "Long Haul",
-   "element": "physical",
-   "cooldown": 60,
-   "buffStat": "regenStamina",
-   "buffAmount": 0.5,
-   "buffDuration": 20,
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 12
-   },
-   "desc": "Increases your stamina recovery by 50% for 20 seconds. A herd of stingers fights beside you for 12 seconds, striking for 3 every 1.4 seconds."
-  },
-  {
-   "kind": "passive",
-   "name": "Never Winded",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "spendStamina",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 2,
-    "duration": 5
-   },
-   "desc": "When you spend stamina, you regain 2 stamina a second for 5 seconds. Once every 6 seconds."
-  }
- ]
+  "essence": "essBee",
+  "stone": "stoneHeidel",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Hoofbeat Run",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "medium",
+      "chargeTo": 224,
+      "base": 15,
+      "cooldown": 20,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "chain": {
+        "count": 2,
+        "radius": 110,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 110,
+      "chainDamagePct": 0.6,
+      "desc": "You rush up to 7 tiles toward the target and hurl a stinger that deals 15 damage, then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Trailing Barb",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "resource",
+      "chargesMax": 4,
+      "base": 8,
+      "maxMult": 2,
+      "cooldown": 1,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "desc": "A stinger flung from the run that deals 8 damage, rising to 2 times that at maximum range, and makes the target [Poisoned] for 1 damage a second for 4 seconds. Holds up to 4 charges, and each kill gives one back.",
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      }
+    },
+    {
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "name": "Long Haul",
+      "element": "physical",
+      "cooldown": 60,
+      "buffStat": "regenStamina",
+      "buffAmount": 0.5,
+      "buffDuration": 20,
+      "desc": "Increases your stamina recovery by 50% for 20 seconds."
+    },
+    {
+      "kind": "passive",
+      "name": "Never Winded",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 2,
+        "duration": 5
+      },
+      "desc": "When you spend stamina, you regain 2 stamina a second for 5 seconds. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4. Once every 6 seconds.",
+      "allyScaling": {
+        "per": 0.11,
+        "max": 4,
+        "range": 180
+      }
+    }
+  ]
 }

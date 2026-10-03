@@ -1,73 +1,79 @@
 {
- "essence": "essFox",
- "stone": "stoneMagus",
- "fusions": [
-  {
-   "name": "Rehearsed Bolt",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "spammable": true,
-   "speed": 400,
-   "radius": 7,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "chargesMax": 5,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 2
-   },
-   "desc": "Fires a bolt that deals 7 arcane damage to the first enemy it meets. For 2 seconds after using it, you move 15% faster. Holds 5 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Garbled Syllable",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "arcane",
-   "role": "long",
-   "base": 26,
-   "cooldown": 90,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreResist": true,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Speaks a garbled word that deals 26 arcane damage to every enemy within 3 tiles and ignores resistances. For 4 seconds after using it, you move 20% faster."
-  },
-  {
-   "name": "Encore Reading",
-   "kind": "active",
-   "category": "buff",
-   "template": "cooldownReset",
-   "element": "arcane",
-   "cooldown": 120,
-   "resetCount": 1,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
-  },
-  {
-   "name": "Corrected Proof",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
-   "element": "arcane",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 10,
-   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
-  }
- ]
+  "essence": "essFox",
+  "stone": "stoneMagus",
+  "fusions": [
+    {
+      "name": "Misread Rune",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "spammable": true,
+      "speed": 400,
+      "radius": 7,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "chargesMax": 3,
+      "debuff": {
+        "key": "cooldownSlow",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fires a misdrawn rune that deals 7 arcane damage to the first enemy it meets, with a 30% chance to leave it [Stalled] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Garbled Syllable",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "arcane",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreResist": true,
+      "desc": "Speaks a garbled word that deals 26 arcane damage to every enemy within 3 tiles, ignores resistances and leaves each [Muddled] for 6 seconds.",
+      "debuff": {
+        "key": "slowCast",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Encore Reading",
+      "kind": "active",
+      "category": "buff",
+      "template": "cooldownReset",
+      "element": "arcane",
+      "cooldown": 120,
+      "resetCount": 1,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
+    },
+    {
+      "name": "Corrected Proof",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "arcane",
+      "rerollKind": "crit",
+      "rerollKinds": [
+        "crit"
+      ],
+      "rerollCooldown": 10,
+      "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+    }
+  ]
 }

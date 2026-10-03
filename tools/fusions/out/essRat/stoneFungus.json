@@ -1,0 +1,78 @@
+{
+ "essence": "essRat",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mould-Matted Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 260,
+   "radius": 7,
+   "range": 192,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 spore-dusted rats at once, each dealing 3 damage with a 25% chance to leave the target [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Ripe for Gnawing",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Gnaws into one rotting enemy and deals 18 damage, using up every affliction you have on it for 60% more damage each, and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Mould Bed",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "healScope": "party",
+   "desc": "Spreads a bed of mould where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Fruiting Bodies",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1.0,
+   "stackIcon": "stackVenom",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "desc": "Every hit you land builds a stack of spores on that enemy, up to 6. At 6 they all burst at once: a blow strikes that enemy for 34% of your weapon damage per stack (204% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

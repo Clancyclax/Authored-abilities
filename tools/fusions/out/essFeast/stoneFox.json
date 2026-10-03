@@ -1,80 +1,80 @@
 {
- "essence": "essFeast",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "name": "Sleight of Plate",
-   "element": "physical",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "chargesMax": 4,
-   "confuse": {
-    "chance": 0.25,
-    "duration": 3
-   },
-   "leech": 0.2,
-   "desc": "Flicks a coin that deals 7 damage to the first enemy it meets, with a 25% chance to turn it against its allies for 3 seconds, and heals you for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "name": "Skimmed Off the Top",
-   "element": "physical",
-   "role": "long",
-   "base": 28,
-   "cooldown": 80,
-   "strikes": 1,
-   "ignoreResist": true,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "leech": 0.3,
-   "desc": "A slipped blow that deals 28 damage, ignores resistances and leaves the target [Bleeding] for 2 damage a second for 5 seconds. You heal for 30% of the damage dealt."
-  },
-  {
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "name": "Shell Game",
-   "element": "physical",
-   "cooldown": 45,
-   "buffStat": "dodgeChance",
-   "buffAmount": 0.3,
-   "buffDuration": 10,
-   "healOnUse": 10,
-   "desc": "Increases your dodge chance by 30% for 10 seconds. You restore 10 health when you use it."
-  },
-  {
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "isTriggered": true,
-   "name": "Cooked Books",
-   "element": "physical",
-   "cooldown": 12,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 12
-   },
-   "effect": {
-    "kind": "lifedrainBuff",
-    "amount": 0.2,
-    "duration": 5
-   },
-   "desc": "Each time you are hurt by anything other than fire, 20% of the damage you deal heals you for 5 seconds. Once every 12 seconds."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "name": "Sleight of Plate",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "chargesMax": 4,
+      "confuse": {
+        "chance": 0.25,
+        "duration": 3
+      },
+      "leech": 0.2,
+      "desc": "Flicks a coin that deals 7 damage to the first enemy it meets, with a 25% chance to turn it against its allies for 3 seconds, and heals you for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "name": "Skimmed Off the Top",
+      "element": "physical",
+      "role": "long",
+      "base": 28,
+      "cooldown": 80,
+      "strikes": 1,
+      "ignoreResist": true,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "leech": 0.3,
+      "desc": "A slipped blow that deals 28 damage, ignores resistances and leaves the target [Bleeding] for 2 damage a second for 5 seconds. You heal for 30% of the damage dealt."
+    },
+    {
+      "name": "Pie Off the Sill",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "physical",
+      "cooldown": 30,
+      "stealthDuration": 6,
+      "stealthAlpha": 0.3,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 20,
+      "stealthScope": "self",
+      "healOnUse": 12,
+      "desc": "Veils you for 6 seconds. Enemies notice you 60% later, you move 22% faster, and the veil breaks the moment you attack. You restore 12 health when you cast it."
+    },
+    {
+      "name": "Cooked Books",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "hit",
+      "stackPay": "heal",
+      "stackCap": 6,
+      "stackDecay": 10,
+      "stackScale": 0.6,
+      "stackIcon": "stackFortune",
+      "stackSpend": "full",
+      "stackOn": "self",
+      "desc": "Every hit you land builds a stack, up to 6. At 6 they all spend at once and heal you for 3% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+    }
+  ]
 }

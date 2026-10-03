@@ -1,71 +1,67 @@
 {
- "essence": "essFoot",
- "stone": "stoneHammer",
- "fusions": [
-  {
-   "name": "Roll Flat",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 16,
-   "cooldown": 14,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.2,
-    "duration": 6
-   },
-   "stunOnHit": 1.2,
-   "chargeTo": 160,
-   "desc": "Rushes you to a target up to 5 tiles away, then stamps on it for 16 damage, leaving it 20% easier to wound for 6 seconds and stunned for 1.2 seconds."
-  },
-  {
-   "name": "Pile Driver",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreArmor": true,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "desc": "Brings your full weight down, dealing 30 damage to every enemy within 3 tiles. It ignores armour. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
-  },
-  {
-   "name": "Anvil Stance",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "blunt",
-   "thornsFrac": 0.5,
-   "buffDuration": 8,
-   "cooldown": 36,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 4
-   },
-   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. You move 15% faster for 4 seconds after using it."
-  },
-  {
-   "name": "Finishing Weight",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "blunt",
-   "condition": "targetLowHp",
-   "bonusKind": "dmg",
-   "amount": 0.15,
-   "dodgeBonus": 0.05,
-   "desc": "You deal 15% more damage to enemies at low health, and your dodge chance rises by 5%."
-  }
- ]
+  "essence": "essFoot",
+  "stone": "stoneHammer",
+  "fusions": [
+    {
+      "name": "Roll Flat",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.2,
+        "duration": 6
+      },
+      "stunOnHit": 1.2,
+      "chargeTo": 160,
+      "desc": "Rushes you to a target up to 5 tiles away, then stamps on it for 16 damage, leaving it 20% easier to wound for 6 seconds and stunned for 1.2 seconds."
+    },
+    {
+      "name": "Pile Driver",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "desc": "Brings your full weight down, dealing 30 damage to every enemy within 3 tiles. It ignores armour."
+    },
+    {
+      "name": "Planted Anvil",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "blunt",
+      "thornsFrac": 0.5,
+      "buffDuration": 8,
+      "cooldown": 36,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 4
+      },
+      "desc": "For 9 seconds, 50% of the damage you take is dealt back to whoever dealt it. You move 15% faster for 4 seconds after using it."
+    },
+    {
+      "name": "Level Ground",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "blunt",
+      "condition": "onRoads",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "On paved ground, you deal 12% more damage."
+    }
+  ]
 }

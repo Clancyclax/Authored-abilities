@@ -1,77 +1,75 @@
 {
- "essence": "essArmour",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "name": "Unstitching Bolt",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "basic",
-   "desc": "Fires a bolt of raw force that deals 4 damage, with a 40% chance to leave the target [Exposed] for 6 seconds.",
-   "cooldown": 0.8,
-   "spammable": true,
-   "debuff": {
-    "key": "expose",
-    "chance": 0.4,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "base": 4,
-   "speed": 360,
-   "radius": 8
-  },
-  {
-   "name": "Force Pulse",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "arcane",
-   "role": "medium",
-   "desc": "A pulse of raw force that deals 12 damage to every enemy within 3 tiles and stuns them for 1 second.",
-   "base": 12,
-   "cooldown": 16,
-   "stunOnHit": 1,
-   "isAoe": true,
-   "range": 96,
-   "aoeBand": "medium"
-  },
-  {
-   "name": "Raised Ward",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "arcane",
-   "desc": "Raises a barrier that absorbs up to 30 damage for 8 seconds and raises your armour by 10% while it holds.",
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 30,
-   "shieldStrikes": 4,
-   "shieldDuration": 8,
-   "armorBonus": 0.1,
-   "cooldown": 30
-  },
-  {
-   "name": "Mana Plating",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds.",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.2,
-    "charges": 1
-   }
-  }
- ]
+  "essence": "essArmour",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "name": "Unstitching Bolt",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "basic",
+      "desc": "Fires a bolt of raw force that deals 4 damage, with a 40% chance to leave the target [Exposed] for 6 seconds.",
+      "cooldown": 0.8,
+      "spammable": true,
+      "debuff": {
+        "key": "expose",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "base": 4,
+      "speed": 360,
+      "radius": 8
+    },
+    {
+      "name": "Force Pulse",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "arcane",
+      "role": "medium",
+      "desc": "A pulse of raw force that deals 12 damage to every enemy within 3 tiles and stuns them for 1 second.",
+      "base": 12,
+      "cooldown": 16,
+      "stunOnHit": 1,
+      "isAoe": true,
+      "range": 96,
+      "aoeBand": "medium"
+    },
+    {
+      "name": "Raised Ward",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "arcane",
+      "desc": "Raises a barrier that absorbs up to 30 damage for 8 seconds and raises your armour by 10% while it holds.",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 30,
+      "shieldStrikes": 4,
+      "shieldDuration": 8,
+      "armorBonus": 0.1,
+      "cooldown": 30
+    },
+    {
+      "name": "Spellwoven Layers",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "arcane",
+      "stackShape": "boon",
+      "stackBuild": "cast",
+      "stackPay": "ward",
+      "stackCap": 5,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.75,
+      "stackIcon": "stackWard",
+      "desc": "Every ability you use builds a stack on you, up to 5. At 5 they spend at once and you gain a shield worth 5% of your maximum health per stack (26% at full). Unfed, a stack fades every 6 seconds."
+    }
+  ]
 }

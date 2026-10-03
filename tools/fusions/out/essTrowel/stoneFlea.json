@@ -1,0 +1,82 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Scaffold Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 224,
+   "desc": "Leaps 7 tiles to the target and slams the trowel flat, which deals 12 damage to every enemy within 3 tiles."
+  },
+  {
+   "name": "Hopping Grit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a pinch of quick-setting grit that deals 4 damage, then hops to 1 more enemy within 3 tiles for 60% of that. Each hit has a 25% chance to leave the enemy [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Spring and Brace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 8,
+   "blinkOnUse": 96,
+   "desc": "Springs you 3 tiles away and braces you: the damage you take is reduced by 20% for 8 seconds."
+  },
+  {
+   "name": "Mortar-Crusted Biter",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "rock",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "familiarFamily": "insect",
+   "familiarCreatureName": "Mortar Flea",
+   "desc": "A fist-sized flea crusted in mortar fights beside you, striking for 4 damage; anything it hits moves 20% slower for 2 seconds."
+  }
+ ]
+}

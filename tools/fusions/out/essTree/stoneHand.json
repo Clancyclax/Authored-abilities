@@ -1,0 +1,73 @@
+{
+ "essence": "essTree",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Reaching Limb",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 9,
+   "stunOnHit": 1.2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "A limb reaches out to grab the first enemy in its path, dealing 12 damage and stunning it for 1.2 seconds."
+  },
+  {
+   "name": "Uprooting Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "plant",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "maxMult": 1.3,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "desc": "Grips a target at or below 25% of its health and wrenches it out, dealing 24 damage, up to 1.3 times that at full reach."
+  },
+  {
+   "name": "Linked Branches",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "plant",
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles takes hold of your branches and strikes 15% harder for 10 seconds, with 1 more power while it holds."
+  },
+  {
+   "name": "Steady Limbs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.12,
+    "duration": 4
+   },
+   "armorBonus": 0.05,
+   "desc": "When you strike, your grip settles: your next strike has 12% more critical hit chance. Once every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

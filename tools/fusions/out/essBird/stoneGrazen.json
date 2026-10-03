@@ -1,73 +1,70 @@
 {
- "essence": "essBird",
- "stone": "stoneGrazen",
- "fusions": [
-  {
-   "name": "Flock Volley",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "wind",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.8,
-   "spammable": true,
-   "isAoe": true,
-   "volleyCount": 3,
-   "volleySpread": 0.3,
-   "speed": 320,
-   "radius": 6,
-   "range": 224,
-   "scaleOn": "alliesNear",
-   "scalePer": 0.08,
-   "scaleCap": 0.32,
-   "desc": "Looses 3 feathers in a spread, each dealing 3 damage. Their damage rises 8% for each ally within 5 tiles (max 32%)."
-  },
-  {
-   "name": "Warning Cry",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "resonating",
-   "role": "long",
-   "base": 26,
-   "cooldown": 90,
-   "range": 288,
-   "maxMult": 1.8,
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 15
-   },
-   "desc": "Strikes from a height for 26 damage, up to 1.8 times that at the full 9 tiles. If it hits, every ally near you strikes 20% harder for 15 seconds."
-  },
-  {
-   "name": "Brooding Warmth",
-   "kind": "active",
-   "category": "healing",
-   "template": "aoeHealPulse",
-   "element": "life",
-   "cooldown": 25,
-   "healAmount": 14,
-   "healScope": "party",
-   "range": 112,
-   "desc": "Restores 14 health to you and every ally within 3.5 tiles."
-  },
-  {
-   "name": "Insulating Down",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "life",
-   "stackShape": "ledger",
-   "stackBuild": "taken",
-   "stackPay": "heal",
-   "stackCap": 5,
-   "stackDecay": 10,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 0.8,
-   "stackIcon": "stackKarma",
-   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they all spend at once: you are healed for 4% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
-  }
- ]
+  "essence": "essBird",
+  "stone": "stoneGrazen",
+  "fusions": [
+    {
+      "name": "Flocking Feather",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "wind",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 360,
+      "radius": 6,
+      "scaleOn": "alliesNear",
+      "scalePer": 0.08,
+      "scaleCap": 0.32,
+      "desc": "Flings a feather into the first enemy it meets that deals 4 damage. Its damage rises 8% for each ally within 5 tiles (max 32%)."
+    },
+    {
+      "name": "Warning Cry",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "resonating",
+      "role": "long",
+      "base": 24,
+      "cooldown": 90,
+      "isAoe": true,
+      "range": 112,
+      "aoeBand": "medium",
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 15
+      },
+      "desc": "Raises the alarm in a ring that deals 24 damage to every enemy within 3.5 tiles. If it hits, every ally near you strikes 20% harder for 15 seconds."
+    },
+    {
+      "name": "Brooding Warmth",
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "element": "life",
+      "cooldown": 25,
+      "healAmount": 14,
+      "healScope": "party",
+      "range": 112,
+      "desc": "Restores 14 health to you and every ally within 3.5 tiles."
+    },
+    {
+      "name": "Insulating Down",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "life",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "heal",
+      "stackCap": 5,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.8,
+      "stackIcon": "stackKarma",
+      "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they all spend at once: you are healed for 4% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+    }
+  ]
 }

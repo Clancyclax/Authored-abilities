@@ -1,0 +1,71 @@
+{
+ "essence": "essRake",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Turned Leaf Mould",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Turns the mould around you, dealing 11 damage to every enemy within 3 tiles and making them [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Spent Caps",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "A finishing blow that deals 20 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Mouldering Heap",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 60,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 15,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to rake up a mouldering heap beside you for 15 seconds. It sheds spores on enemies within 4 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Grows Overnight",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying a condition, your damage rises by 10%."
+  }
+ ]
+}

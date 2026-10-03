@@ -58,23 +58,21 @@
    "desc": "Calls a cloud of moths woven from thread for 14 seconds. It strikes an enemy within 6 tiles every second for 3 damage."
   },
   {
-   "name": "Hollowed Stores",
+   "name": "Moth-Eaten Hem",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "restoreResource",
-    "resource": "stamina",
-    "amount": 6
-   },
-   "desc": "When you kill an enemy, you restore 6 stamina. Once every 6 seconds."
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 5,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
   }
  ]
 }

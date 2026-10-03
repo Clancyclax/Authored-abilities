@@ -1,97 +1,93 @@
 {
- "essence": "essBee",
- "stone": "stoneFish",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Silverlings",
-   "template": "volley",
-   "element": "water",
-   "role": "basic",
-   "spammable": true,
-   "volleyCount": 3,
-   "volleySpread": 0.3,
-   "base": 3,
-   "isAoe": true,
-   "speed": 300,
-   "radius": 7,
-   "range": 220,
-   "rangeBand": "medium",
-   "reachUnits": 220,
-   "cooldown": 0.8,
-   "debuff": {
-    "key": "wet",
-    "chance": 0.25,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Looses 3 stingers of water in a fan, each dealing 3 damage. Each hit has a 25% chance of [Soaked] for 6 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Undercurrent",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 14,
-   "knockback": 96,
-   "speed": 340,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "chain": {
-    "count": 2,
-    "radius": 110,
-    "frac": 0.6
-   },
-   "chainCount": 2,
-   "chainRange": 110,
-   "chainDamagePct": 0.6,
-   "desc": "Hurls a stinger of water that deals 14 damage and knocks the target back 3 tiles. It then darts to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
-  },
-  {
-   "kind": "active",
-   "category": "healing",
-   "template": "aoeHealPulse",
-   "name": "Shoal Cover",
-   "element": "water",
-   "cooldown": 24,
-   "range": 110,
-   "reachUnits": 110,
-   "rangeBand": "melee",
-   "healAmount": 14,
-   "healScope": "party",
-   "dodgeBonus": 0.1,
-   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and raises your dodge chance by 10%."
-  },
-  {
-   "kind": "passive",
-   "name": "Closing Ranks",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 60,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 60,
-    "frac": 0.4
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.25,
-    "duration": 8
-   },
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 10
-   },
-   "desc": "When your health falls below 40%, you gain a ward that soaks 25% of your maximum health for 8 seconds, and a shoal of stingers fights beside you for 10 seconds, striking for 3 every 1.4 seconds. Once every 60 seconds."
-  }
- ]
+  "essence": "essBee",
+  "stone": "stoneFish",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Silverlings",
+      "template": "volley",
+      "element": "water",
+      "role": "basic",
+      "spammable": true,
+      "volleyCount": 4,
+      "volleySpread": 0.3,
+      "base": 3,
+      "isAoe": true,
+      "speed": 300,
+      "radius": 7,
+      "range": 220,
+      "rangeBand": "medium",
+      "reachUnits": 220,
+      "cooldown": 0.8,
+      "desc": "Looses 4 stingers of water in a fan, each dealing 3 damage. Its damage rises 5% for each ally near you (max +20%).",
+      "scaleOn": "alliesNear",
+      "scalePer": 0.05,
+      "scaleCap": 0.2
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Undercurrent",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "knockback": 96,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "chain": {
+        "count": 2,
+        "radius": 110,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 110,
+      "chainDamagePct": 0.6,
+      "desc": "Hurls a stinger of water that deals 14 damage and knocks the target back 3 tiles. It then darts to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+    },
+    {
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "name": "Shoal Cover",
+      "element": "water",
+      "cooldown": 24,
+      "range": 110,
+      "reachUnits": 110,
+      "rangeBand": "melee",
+      "healAmount": 14,
+      "healScope": "party",
+      "dodgeBonus": 0.1,
+      "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. It raises your dodge chance by 10%."
+    },
+    {
+      "kind": "passive",
+      "name": "Closing Ranks",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 60,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 60,
+        "frac": 0.4
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 8
+      },
+      "escort": {
+        "dmg": 3,
+        "interval": 1.4,
+        "duration": 10
+      },
+      "desc": "When your health falls below 40%, you gain a ward that soaks 25% of your maximum health for 8 seconds, and a shoal of stingers fights beside you for 10 seconds, striking for 3 every 1.4 seconds. Once every 60 seconds."
+    }
+  ]
 }

@@ -1,0 +1,71 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Clutching Tendril",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "stunOnHit": 1.2,
+   "desc": "Throws a grasping tendril that closes on the first enemy it meets, dealing 12 damage and stunning it for 1.2 seconds."
+  },
+  {
+   "name": "Uprooting Wrench",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 16,
+   "range": 80,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "Grips one enemy at or below 25% health and wrenches it up by the roots, dealing 26 damage and leaving it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Green Thumb",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "plant",
+   "cooldown": 12,
+   "healAmount": 18,
+   "critChance": 0.1,
+   "healScope": "self",
+   "desc": "Tends your own wounds, restoring 18 health to you with a 10% chance to heal critically."
+  },
+  {
+   "name": "Briar Haft",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "plant",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Grows a briar weapon into your grip. It increases your weapon damage by 12% and your attack speed by 5%, and every strike with it leaves the target [Poisoned] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

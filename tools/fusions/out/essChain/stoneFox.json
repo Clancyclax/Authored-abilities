@@ -1,77 +1,75 @@
 {
- "essence": "essChain",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "name": "Lifted Purse",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "consumeAffliction": true,
-   "debuff": {
-    "key": "dampen",
-    "chance": 1,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Casts a hooked link at the first enemy it meets that deals 9 damage. It needs one of your afflictions on the target and uses it up, and leaves the target [Damped] for 6 seconds."
-  },
-  {
-   "name": "Crossed Wires",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 20,
-   "range": 112,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 64,
-   "debuff": {
-    "key": "marked",
-    "chance": 0.4,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Snaps a ring of links around you that deals 10 damage to every enemy within 3.5 tiles and knocks each back 2 tiles, with a 40% chance to leave each [Marked] for 5 seconds."
-  },
-  {
-   "name": "Slipped Leash",
-   "kind": "active",
-   "category": "defensive",
-   "template": "reflectWard",
-   "element": "physical",
-   "cooldown": 30,
-   "reflectKind": "debuff",
-   "reflectFrac": 0.25,
-   "reflectChance": 0.6,
-   "buffDuration": 8,
-   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 60% chance to be sent back to its source instead, for 8 seconds."
-  },
-  {
-   "name": "Second Guess",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
-   "element": "physical",
-   "rerollKind": "dodge",
-   "rerollCooldown": 10,
-   "rerollKinds": [
-    "dodge"
-   ],
-   "desc": "Once every 10 seconds, a blow that would have landed on you is rolled a second time to dodge, and the second roll stands."
-  }
- ]
+  "essence": "essChain",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Lifted Purse",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "consumeAffliction": true,
+      "debuff": {
+        "key": "dampen",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Casts a hooked link at the first enemy it meets that deals 9 damage. It needs one of your afflictions on the target and uses it up, and leaves the target [Damped] for 6 seconds."
+    },
+    {
+      "name": "Crossed Wires",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 20,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 64,
+      "debuff": {
+        "key": "marked",
+        "chance": 0.4,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Snaps a ring of links around you that deals 10 damage to every enemy within 3.5 tiles and knocks each back 2 tiles, with a 40% chance to leave each [Marked] for 5 seconds."
+    },
+    {
+      "name": "Slipped Leash",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "physical",
+      "cooldown": 30,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.25,
+      "reflectChance": 0.6,
+      "buffDuration": 8,
+      "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 60% chance to be sent back to its source instead, for 9 seconds."
+    },
+    {
+      "name": "Tangled Feint",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "vsDebuffed",
+      "bonusKind": "dodge",
+      "amount": 0.1,
+      "desc": "Against an enemy that carries one of your afflictions, your chance to dodge rises by 10%."
+    }
+  ]
 }

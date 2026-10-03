@@ -1,0 +1,79 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Hidden Heel-Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "A heel strike at a target at or below 25% health that deals 20 damage and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Scything Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sweeping kick that deals 4 damage to everything in a cone up to 3 tiles ahead, with a 25% chance per hit to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Edge Turned Out",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 40,
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Your critical hits deal 30% more damage for 12 seconds."
+  },
+  {
+   "name": "Unseen Approach",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Every 6 tiles you cover, your next ability deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

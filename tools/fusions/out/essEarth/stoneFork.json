@@ -1,81 +1,75 @@
 {
- "essence": "essEarth",
- "stone": "stoneFork",
- "fusions": [
-  {
-   "name": "Pronged Verdict",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "earth",
-   "role": "execute",
-   "base": 24,
-   "cooldown": 14,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": false,
-   "debuff": {
-    "key": "pinned",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A finishing blow with two prongs that deals 24 damage, consumes every affliction on the target and adds 1.5 times their remaining damage to the hit, and leaves it [Pinned] for 3 seconds. Usable only on an enemy at or below 25% health."
-  },
-  {
-   "name": "Crossing Cracks",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "earth",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 16,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 96,
-   "chain": {
-    "count": 2,
-    "radius": 95,
-    "frac": 0.6
-   },
-   "chainCount": 2,
-   "chainRange": 95,
-   "chainDamagePct": 0.6,
-   "desc": "Cracks the ground around you, dealing 12 damage to every enemy within 3 tiles and knocking them back 3 tiles. It then forks to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
-  },
-  {
-   "name": "Parting Wall",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "earth",
-   "cooldown": 30,
-   "wallKind": "block",
-   "wallLength": 128,
-   "wallDuration": 8,
-   "wallThickness": 24,
-   "desc": "Raises a wall of stone 4 tiles long ahead of you for 8 seconds. Nothing crosses it."
-  },
-  {
-   "name": "Tines Converge",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "earth",
-   "stackShape": "mark",
-   "stackBuild": "hit",
-   "stackPay": "burst",
-   "stackCap": 4,
-   "stackDecay": 6,
-   "stackSpend": "full",
-   "stackOn": "enemy",
-   "stackScale": 0.6,
-   "stackIcon": "stackEye",
-   "desc": "Every hit you land builds a stack on that enemy, up to 4. When you reach 4, they all spend at once: a blow strikes it for 20% of your weapon damage per stack (82% at full). Unfed, a stack fades every 4 seconds."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneFork",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Split Shard",
+      "template": "projectileBall",
+      "element": "earth",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "stunOnHit": 1,
+      "chain": {
+        "count": 1,
+        "radius": 112,
+        "frac": 0.8
+      },
+      "chainCount": 1,
+      "chainRange": 112,
+      "chainDamagePct": 0.8,
+      "speed": 380,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "desc": "Hurls a two-pronged shard that deals 14 damage to the first enemy it meets and stuns it for 1 second, then forks to 1 more enemy within 3.5 tiles for 80% of the damage."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Crossing Cracks",
+      "template": "aoeRing",
+      "element": "earth",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "guaranteedCrit": true,
+      "desc": "Cracks the ground in two crossing lines around you, dealing 26 damage to every enemy within 3 tiles. Every hit is a critical hit."
+    },
+    {
+      "name": "Parting Wall",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "earth",
+      "cooldown": 30,
+      "wallKind": "block",
+      "wallLength": 128,
+      "wallDuration": 8,
+      "wallThickness": 24,
+      "desc": "Raises a wall of stone 4 tiles long ahead of you for 8 seconds. Nothing crosses it."
+    },
+    {
+      "name": "Tines Converge",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "earth",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "burst",
+      "stackCap": 4,
+      "stackDecay": 6,
+      "stackSpend": "full",
+      "stackOn": "enemy",
+      "stackScale": 0.6,
+      "stackIcon": "stackEye",
+      "desc": "Every hit you land builds a stack on that enemy, up to 4. When you reach 4, they all spend at once: a blow strikes it for 20% of your weapon damage per stack (82% at full). Unfed, a stack fades every 4 seconds."
+    }
+  ]
 }

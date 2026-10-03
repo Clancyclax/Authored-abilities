@@ -1,0 +1,81 @@
+{
+ "essence": "essHand",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mouldering Touch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A touch that deals 10 poison damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Squeezed Puffball",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Squeezes a puffball in your fist, dealing 7 poison damage to everything in a cone 4 tiles long, with a 40% chance to leave each [Diseased] for 6 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Pressed into Loam",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 50,
+   "summonKind": "totem",
+   "summonDmg": 2,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.6,
+   "desc": "You press a handful of spores into the ground: a ring of mushrooms stands for 15 seconds and deals 2 poison damage every second to an enemy within 3 tiles."
+  },
+  {
+   "name": "Overnight Growth",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land plants a stack on the target, up to 6. At 6 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (204% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

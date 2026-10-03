@@ -1,0 +1,76 @@
+{
+ "essence": "essGun",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Hopping Slug",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "chain": {
+    "count": 3,
+    "radius": 128,
+    "frac": 0.5
+   },
+   "chainCount": 3,
+   "chainRange": 128,
+   "chainDamagePct": 0.5,
+   "desc": "Fires a slug that deals 7 damage, then hops to 3 more enemies within 4 tiles, each hit dealing 50% of the damage. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Landing Salvo",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "desc": "You leap up to 6 tiles to the target and fire all around you as you land, dealing 12 damage to every enemy within 3 tiles."
+  },
+  {
+   "name": "Impossible Angle",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 12,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 7 tiles away, and you move 15% faster for 4 seconds after you land."
+  },
+  {
+   "name": "Itch to Fire",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 5% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

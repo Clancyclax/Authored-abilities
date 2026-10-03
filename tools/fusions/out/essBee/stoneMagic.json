@@ -1,95 +1,83 @@
 {
- "essence": "essBee",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Raw Motes",
-   "template": "breathCone",
-   "element": "arcane",
-   "role": "basic",
-   "spammable": true,
-   "base": 4,
-   "cooldown": 0.8,
-   "range": 180,
-   "coneAngle": 0.6,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "expose",
-    "chance": 0.3,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Looses a narrow cone of raw arcana ahead of you, dealing 4 damage to everything caught in it. Each hit has a 30% chance of [Exposed] for 6 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Arcane Relay",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "long",
-   "ignoreResist": true,
-   "base": 32,
-   "cooldown": 100,
-   "speed": 400,
-   "radius": 8,
-   "reachUnits": 360,
-   "rangeBand": "long",
-   "chain": {
-    "count": 3,
-    "radius": 110,
-    "frac": 0.5
-   },
-   "chainCount": 3,
-   "chainRange": 110,
-   "chainDamagePct": 0.5,
-   "desc": "Fires a stinger of arcana that deals 32 damage and ignores resistances. It then leaps to 3 more enemies within 3.5 tiles, each hit dealing 50% of the original damage."
-  },
-  {
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "name": "Dowsing Draught",
-   "element": "arcane",
-   "resource": "mana",
-   "overTime": true,
-   "cooldown": 40,
-   "restorePerSec": 3,
-   "restoreDuration": 10,
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 14
-   },
-   "desc": "Restores 3 mana a second for 10 seconds. Motes of arcana fight beside you for 14 seconds, striking for 3 every 1.4 seconds."
-  },
-  {
-   "kind": "passive",
-   "name": "Change Returned",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "restoreResource",
-    "resource": "mana",
-    "amount": 4
-   },
-   "escort": {
-    "dmg": 3,
-    "interval": 1.4,
-    "duration": 8
-   },
-   "desc": "When you spend mana, you regain 4 mana, and motes of arcana fight beside you for 8 seconds, striking for 3 every 1.4 seconds. Once every 6 seconds."
-  }
- ]
+  "essence": "essBee",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Raw Motes",
+      "template": "breathCone",
+      "element": "arcane",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.8,
+      "range": 180,
+      "coneAngle": 0.6,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "expose",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses a narrow cone of raw arcana ahead of you, dealing 4 damage to everything caught in it. Each hit has a 30% chance of [Exposed] for 6 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Arcane Relay",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "long",
+      "ignoreResist": true,
+      "base": 32,
+      "cooldown": 100,
+      "speed": 400,
+      "radius": 8,
+      "reachUnits": 360,
+      "rangeBand": "long",
+      "chain": {
+        "count": 3,
+        "radius": 110,
+        "frac": 0.5
+      },
+      "chainCount": 3,
+      "chainRange": 110,
+      "chainDamagePct": 0.5,
+      "desc": "Fires a stinger of arcana that deals 32 damage and ignores resistances. It then leaps to 3 more enemies within 3.5 tiles, each hit dealing 50% of the original damage."
+    },
+    {
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "name": "Dowsing Draught",
+      "element": "arcane",
+      "resource": "mana",
+      "overTime": true,
+      "cooldown": 40,
+      "restorePerSec": 3,
+      "restoreDuration": 10,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.4,
+        "duration": 14
+      },
+      "desc": "Restores 3 mana a second for 10 seconds. Motes of arcana fight beside you for 14 seconds, striking for 3 every 1.4 seconds."
+    },
+    {
+      "name": "Venom Past Wards",
+      "kind": "passive",
+      "category": "affliction",
+      "template": "virulence",
+      "element": "arcane",
+      "resist": {
+        "element": "arcane",
+        "amount": 0.08
+      },
+      "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 8% arcane resistance."
+    }
+  ]
 }

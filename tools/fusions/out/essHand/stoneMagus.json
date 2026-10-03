@@ -1,0 +1,73 @@
+{
+ "essence": "essHand",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Sign of Halting",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "castTime": 0.3,
+   "desc": "You trace a sign of halting with two fingers, dealing 12 arcane damage to everything in a cone 4 tiles long and stunning each for 1 second."
+  },
+  {
+   "name": "Benediction Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "radiant",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Presses a blessing written on your palm onto one enemy up to 5 tiles away, dealing 30 radiant damage, rising to 1.3 times that at full reach. When it hits, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Fluent Fingers",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 50,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your casting speed by 30% for 15 seconds."
+  },
+  {
+   "name": "Rehearsed Gesture",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "When you spend mana, your critical hit chance rises by 10% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

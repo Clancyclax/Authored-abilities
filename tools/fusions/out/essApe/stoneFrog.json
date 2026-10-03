@@ -3,21 +3,27 @@
  "stone": "stoneFrog",
  "fusions": [
   {
-   "name": "Tongue Snap",
+   "name": "Throat-Sac Howl",
    "kind": "active",
    "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
+   "template": "breathCone",
+   "element": "resonating",
    "role": "medium",
    "base": 12,
-   "cooldown": 12,
-   "stunOnHit": 1.0,
-   "reachPct": 0.4,
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 396,
-   "rangeBand": "long",
-   "desc": "Snaps out a tongue that deals 12 damage to the first enemy it meets and stuns it for 1 second. Its reach is 40% longer."
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Howls in a cone out to 5 tiles, dealing 12 damage to everything caught in it and stunning it for 1 second, with a 50% chance to leave each target [Slowed] for 3 seconds."
   },
   {
    "name": "Slick Palm",
@@ -41,19 +47,19 @@
    "desc": "A bare-fisted strike that deals 7 damage and makes the target [Poisoned] for 2 damage a second for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
   },
   {
-   "name": "Marsh Wash",
+   "name": "Puff-Chest Spring",
    "kind": "active",
-   "category": "restore",
-   "template": "cleanse",
+   "category": "defensive",
+   "template": "armorBuff",
    "element": "water",
-   "cooldown": 30,
-   "cleanseCount": 3,
-   "healScope": "party",
-   "cleanseTag": "poison",
-   "desc": "Removes up to 3 poison conditions from you and every ally within 5 tiles."
+   "cooldown": 36,
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "desc": "Raises your armour by 25% for 11 seconds. You finish it 2 tiles from where you stood."
   },
   {
-   "name": "Pond Reflex",
+   "name": "Snap Reflex",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",
@@ -65,12 +71,12 @@
     "cooldown": 8
    },
    "effect": {
-    "kind": "regenBurst",
-    "perSec": 3,
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
     "duration": 4
    },
    "dodgeBonus": 0.06,
-   "desc": "Each time you are hurt by anything other than fire, you regain 3 health a second for 4 seconds. Once every 8 seconds. You have 6% more dodge chance."
+   "desc": "Each time anything but fire hurts you, your physical damage rises 25% for 4 seconds. Once every 8 seconds. You have 6% more dodge chance."
   }
  ]
 }

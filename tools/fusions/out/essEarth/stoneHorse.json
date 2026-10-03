@@ -1,67 +1,74 @@
 {
- "essence": "essEarth",
- "stone": "stoneHorse",
- "fusions": [
-  {
-   "name": "Cavalry Pass",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1,
-   "spammable": true,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.1,
-    "duration": 4
-   },
-   "chargesMax": 3,
-   "desc": "A trampling blow that deals 8 damage and leaves the target 10% easier to wound for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Thunder Stampede",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "earth",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "range": 110,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreResist": true,
-   "desc": "Pounds the ground, dealing 30 damage to every enemy within 3.5 tiles and ignoring their resistances."
-  },
-  {
-   "name": "Charging Lunge",
-   "kind": "active",
-   "category": "buff",
-   "template": "immunityBuff",
-   "element": "earth",
-   "immunityDuration": 2,
-   "blinkOnUse": 96,
-   "cooldown": 60,
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 4
-   },
-   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you leap 3 tiles from where you stood. Your movement speed rises 25% for 4 seconds after you use it."
-  },
-  {
-   "name": "Hardpan Gait",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "earth",
-   "condition": "onRoads",
-   "bonusKind": "armor",
-   "amount": 0.15,
-   "desc": "On paved ground, your armour rises by 15%."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneHorse",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Clattering Stamp",
+      "template": "sunderStrike",
+      "element": "earth",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "chargesMax": 3,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 3
+      },
+      "desc": "A stamping blow that deals 8 damage and leaves the target 10% easier to wound for 4 seconds. Your movement speed rises 15% for 3 seconds after you use it. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Rolling Thunder",
+      "template": "aoeRing",
+      "element": "earth",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreResist": true,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.06,
+      "scaleCap": 0.3,
+      "desc": "Pounds the ground, dealing 28 damage to every enemy within 3.5 tiles and ignoring their resistances. Its damage rises 6% for every 100 paces you have run since you last used it (max 30%)."
+    },
+    {
+      "name": "Charging Lunge",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "earth",
+      "immunityDuration": 2,
+      "blinkOnUse": 96,
+      "cooldown": 60,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you leap 3 tiles from where you stood. Your movement speed rises 25% for 4 seconds after you use it."
+    },
+    {
+      "name": "Hardpan Gait",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "earth",
+      "condition": "onRoads",
+      "bonusKind": "armor",
+      "amount": 0.15,
+      "desc": "On paved ground, your armour rises by 15%."
+    }
+  ]
 }

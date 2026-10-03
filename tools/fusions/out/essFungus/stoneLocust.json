@@ -3,27 +3,28 @@
  "stone": "stoneLocust",
  "fusions": [
   {
-   "name": "Gnawing Bite",
+   "name": "Chewing Rot",
    "kind": "active",
    "category": "attack",
-   "template": "sunderStrike",
+   "template": "imbueStrike",
    "element": "poison",
    "role": "resource",
    "base": 7,
-   "cooldown": 1.0,
-   "range": 86,
-   "sunder": {
-    "amount": 0.08,
-    "duration": 4
-   },
+   "cooldown": 1,
+   "strikes": 1,
    "hpCostPct": 0.04,
    "leech": 0.3,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "desc": "Costs 4% of your maximum health. A bite that deals 7 damage and leaves the target 8% easier to wound for 4 seconds, and you heal for 30% of the damage dealt."
+   "desc": "Costs 4% of your maximum health. A bite that deals 7 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds, and you heal for 30% of the damage dealt.",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   }
   },
   {
-   "name": "Creeping Cloud",
+   "name": "Blight Swarm",
    "kind": "active",
    "category": "attack",
    "template": "breathCone",
@@ -46,20 +47,21 @@
    "desc": "A cloud deals 12 damage to everything in a cone 6 tiles long and leaves it [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on each target then spread to every enemy within 4 tiles."
   },
   {
-   "name": "Feeding Frenzy",
+   "name": "Picked Clean",
    "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "life",
-   "buffStat": "attackSpeed",
-   "buffAmount": 0.25,
-   "buffDuration": 12,
-   "healOnUse": 10,
-   "cooldown": 45,
-   "desc": "Increases your attack speed by 25% for 12 seconds and restores 10 health."
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "necrotic",
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 256,
+   "cooldown": 20,
+   "desc": "Strips every body within 8 tiles, up to 5; each gives back 7% of your health."
   },
   {
-   "name": "Gorged Cells",
+   "name": "Glutted Brood",
    "kind": "passive",
    "category": "stacking",
    "template": "stacking",

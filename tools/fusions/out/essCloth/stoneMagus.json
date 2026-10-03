@@ -3,25 +3,25 @@
  "stone": "stoneMagus",
  "fusions": [
   {
-   "name": "Muted Phrase",
+   "name": "Sewn Lips",
    "kind": "active",
    "category": "attack",
    "template": "projectileBall",
    "element": "arcane",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
    "speed": 400,
-   "radius": 5,
+   "radius": 6,
+   "stunOnHit": 0.8,
    "debuff": {
     "key": "slowCast",
-    "chance": 0.3,
-    "duration": 3,
+    "chance": 1,
+    "duration": 4,
     "stacks": 1,
     "potency": 1
    },
-   "desc": "Spits a knotted thread that deals 4 damage to the first enemy it meets, with a 30% chance per hit to leave it [Muddled] for 3 seconds."
+   "desc": "Spits a knotted thread that deals 10 damage to the first enemy it meets, stuns it for 0.8 seconds and leaves it [Muddled] for 4 seconds."
   },
   {
    "name": "Marginal Gloss",
@@ -49,23 +49,21 @@
    "desc": "Strikes out 1 condition on you and on every ally."
   },
   {
-   "name": "Rehearsed Verse",
+   "name": "Annotated Robe",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "armor summon",
+   "template": "summonArmor",
    "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.15,
-    "charges": 1
-   },
-   "desc": "Whenever you spend mana, your next spell deals 15% more damage. Once every 10 seconds."
+   "armorBonus": 0.06,
+   "damageReduction": 1,
+   "thornsFrac": 0,
+   "itemBuffs": [
+    {
+     "stat": "manaRegen",
+     "amount": 0.15
+    }
+   ],
+   "desc": "Conjures a robe stitched with spell marks: every hit you take is 1 lower, your armour rises by 6% and your mana regeneration by 15%."
   }
  ]
 }

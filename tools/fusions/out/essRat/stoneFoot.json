@@ -1,0 +1,78 @@
+{
+ "essence": "essRat",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Footsore Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 3
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "A nip that deals 4 damage and leaves the target 8% easier to wound for 3 seconds. Its damage rises 5% for each stretch of ground you have covered (max +40%)."
+  },
+  {
+   "name": "Column on the Move",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 192,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.05,
+   "desc": "Your marching column of rats tramples through a cone 6 tiles long, and deals 28 damage to everything in it plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Keep the Pack Moving",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds, and your movement speed rises 15% for 4 seconds."
+  },
+  {
+   "name": "Miles Mend Bites",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover, you regain 2 health a second for 4 seconds. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Puffball Tread",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Each step releases spores that deal 6 poison damage to every enemy within 2.5 tiles and leave them [Poisoned] for 2 damage a second for 4 seconds. It costs 4% of your maximum health."
+  },
+  {
+   "name": "Burst Caps",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A stamp that deals 18 poison damage, uses up every affliction you have on the target for 60% more damage each, and leaves it [Poisoned] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Burrow Bedding",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Grows a bed of moss where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Breeding Colony",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1.0,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land plants a stack on that enemy, up to 6. At 6 they all burst at once, striking it for 34% of your weapon damage per stack, 204% at full. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

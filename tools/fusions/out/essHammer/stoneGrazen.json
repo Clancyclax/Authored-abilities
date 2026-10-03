@@ -1,0 +1,77 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Drover's Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bruised"
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A heavy blow that deals 28 damage and leaves the target [Bruised] for 3 damage a second for 4 seconds. When it hits, every ally near you deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Close-Packed Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Stamps the ground, dealing 4 damage to every enemy within 3 tiles. Its damage rises 10% for each ally near you, up to 40%."
+  },
+  {
+   "name": "Lead Bull's Stand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "blunt",
+   "cooldown": 18,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 5 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Grazing Count",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you land builds a stack on you, up to 6. At 6, they all spend at once and heal you for 5% of your maximum health per stack."
+  }
+ ]
+}

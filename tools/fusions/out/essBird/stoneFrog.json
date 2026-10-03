@@ -1,78 +1,75 @@
 {
- "essence": "essBird",
- "stone": "stoneFrog",
- "fusions": [
-  {
-   "name": "Heron's Lunge",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "piercing",
-   "role": "execute",
-   "base": 20,
-   "cooldown": 15,
-   "range": 224,
-   "maxMult": 1.8,
-   "requiresTargetBelow": 0.25,
-   "desc": "Usable only on a target at or below 25% health. Lunges from cover for 20 damage, up to 1.8 times that at the full 7 tiles."
-  },
-  {
-   "name": "Barbed Spray",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "poison",
-   "role": "resource",
-   "base": 6,
-   "cooldown": 1,
-   "isAoe": true,
-   "range": 80,
-   "coneAngle": 0.7,
-   "aoeBand": "small",
-   "chargesMax": 3,
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Poisoned"
-   },
-   "desc": "Sprays a cone of barbs 2.5 tiles long, dealing 6 damage to everything in it and leaving each [Poisoned] for 1 damage a second for 4 seconds. It holds 3 charges, and each kill gives one back."
-  },
-  {
-   "name": "Reed to Reed",
-   "kind": "active",
-   "category": "movement",
-   "template": "teleport",
-   "element": "water",
-   "cooldown": 14,
-   "teleportRange": 224,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 3
-   },
-   "desc": "Steps you instantly to a point up to 7 tiles away. You move 15% faster for 3 seconds after you use it."
-  },
-  {
-   "name": "Startled Rise",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 45,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 45,
-    "frac": 0.3,
-    "rearmAbove": 0.5
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.25,
-    "duration": 5
-   },
-   "desc": "Once your health falls below 30%, a ward worth 25% of your maximum health closes over you for 5 seconds. Once every 45 seconds."
-  }
- ]
+  "essence": "essBird",
+  "stone": "stoneFrog",
+  "fusions": [
+    {
+      "name": "Heron's Lunge",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 15,
+      "range": 224,
+      "maxMult": 1.8,
+      "requiresTargetBelow": 0.25,
+      "desc": "Usable only on a target at or below 25% health. Lunges from cover for 20 damage, up to 1.8 times that at the full 7 tiles."
+    },
+    {
+      "name": "Barbed Spray",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "isAoe": true,
+      "range": 80,
+      "coneAngle": 0.7,
+      "aoeBand": "small",
+      "chargesMax": 3,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Sprays a cone of barbs 2.5 tiles long, dealing 6 damage to everything in it and leaving each [Poisoned] for 1 damage a second for 4 seconds. It holds 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "Reed to Reed",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "water",
+      "cooldown": 40,
+      "immunityDuration": 2,
+      "blinkOnUse": 96,
+      "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you; transcendent damage still lands. You finish it 3 tiles from where you stood."
+    },
+    {
+      "name": "Startled Rise",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 45,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 45,
+        "frac": 0.3,
+        "rearmAbove": 0.5
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 5
+      },
+      "desc": "Once your health falls below 30%, a ward worth 25% of your maximum health closes over you for 5 seconds. Once every 45 seconds."
+    }
+  ]
 }

@@ -1,0 +1,73 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mycelial Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 7,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Sends a thread of mycelium into one enemy carrying one of your afflictions, using that affliction up; it deals 9 damage and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Rot in the Roots",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Exhales a cloud of spores across a cone 5 tiles long, dealing 30 damage that ignores resistances and leaving every enemy hit [Poisoned] for 4 damage a second for 6 seconds."
+  },
+  {
+   "name": "Mycorrhizal Share",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "plant",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "party",
+   "healOnUse": 10,
+   "desc": "Removes up to 2 conditions from you and every ally near you, and restores 10 health to you."
+  },
+  {
+   "name": "Hyphal Mat",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a stack on you, up to 6. At 6 stacks they all spend at once: you gain a shield that soaks 5% of your maximum health per stack (30% in all). A stack fades every 10 seconds if none is added."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essHand",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Thumb-Edge Nick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A quick nick that deals 4 damage, leaves the target 5% easier to wound for 3 seconds, and has a 25% chance to leave it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Sleeve Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.5,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Draws a blade from your sleeve and buries it for 18 damage, leaving the target [Bleeding] for 3 damage a second for 4 seconds. It uses up every affliction you have on the target and deals 50% more damage for each one."
+  },
+  {
+   "name": "Always Within Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Clean Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you kill an enemy, your next ability deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,65 +1,72 @@
 {
- "essence": "essChain",
- "stone": "stoneIron",
- "fusions": [
-  {
-   "name": "Ballast Cast",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "blunt",
-   "role": "medium",
-   "base": 16,
-   "cooldown": 16,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "stunOnHit": 1.2,
-   "desc": "Casts a heavy link at the first enemy it meets that deals 16 damage and stuns it for 1.2 seconds."
-  },
-  {
-   "name": "Cold Toll",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "hpCostPct": 0.06,
-   "debuff": {
-    "key": "sunder",
-    "chance": 0.5,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Slams a ring of cold links around you that deals 9 damage to every enemy within 3 tiles, with a 50% chance to leave each [Sundered] for 5 seconds. Costs 6% of your maximum health."
-  },
-  {
-   "name": "Cold Return",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "physical",
-   "cooldown": 30,
-   "buffDuration": 8,
-   "thornsFrac": 0.6,
-   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it."
-  },
-  {
-   "name": "Unbowed",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "physical",
-   "buffKind": "armor",
-   "amount": 0.15,
-   "desc": "Your armour is permanently increased by 15%. You are never without it."
-  }
- ]
+  "essence": "essChain",
+  "stone": "stoneIron",
+  "fusions": [
+    {
+      "name": "Grey Fetter",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "blunt",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 16,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "stunOnHit": 1.2,
+      "debuff": {
+        "key": "slowCast",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Casts a cold iron shackle at the first enemy it meets that deals 16 damage, stuns it for 1.2 seconds and leaves it [Muddled] for 5 seconds."
+    },
+    {
+      "name": "Cold Toll",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "hpCostPct": 0.06,
+      "debuff": {
+        "key": "sunder",
+        "chance": 0.5,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Slams a ring of cold links around you that deals 9 damage to every enemy within 3 tiles, with a 50% chance to leave each [Sundered] for 5 seconds. Costs 6% of your maximum health."
+    },
+    {
+      "name": "Rebuke in Kind",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "physical",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.6,
+      "desc": "For 9 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+    },
+    {
+      "name": "Unbowed",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveBuff",
+      "element": "physical",
+      "buffKind": "armor",
+      "amount": 0.15,
+      "desc": "Your armour is permanently increased by 15%."
+    }
+  ]
 }

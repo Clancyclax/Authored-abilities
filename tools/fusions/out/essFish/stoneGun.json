@@ -1,65 +1,65 @@
 {
- "essence": "essFish",
- "stone": "stoneGun",
- "fusions": [
-  {
-   "name": "Spitting Shot",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "water",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1.0,
-   "range": 256,
-   "maxMult": 2.0,
-   "chargesMax": 3,
-   "desc": "A jet of water that deals 7 damage, up to 2 times as much at maximum range. It holds 3 charges, and each kill gives one back."
-  },
-  {
-   "name": "Deep Charge",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "long",
-   "base": 35,
-   "cooldown": 120,
-   "speed": 300,
-   "radius": 10,
-   "explodeRadius": 112,
-   "splashFrac": 0.8,
-   "desc": "Fires a charge that detonates on the first enemy it meets, dealing 35 damage to it and 80% of that to every enemy within 3.5 tiles of it."
-  },
-  {
-   "name": "Long Pressure",
-   "kind": "active",
-   "category": "buff",
-   "template": "rangeBuff",
-   "element": "water",
-   "cooldown": 90,
-   "rangeMult": 1.4,
-   "buffDuration": 20,
-   "desc": "For 20 seconds, your attacks and spells reach 40% further."
-  },
-  {
-   "name": "Pressure Release",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.15,
-    "duration": 5
-   },
-   "desc": "When you are hurt by anything but fire, you gain a ward worth 15% of your maximum health for 5 seconds. Once every 15 seconds."
-  }
- ]
+  "essence": "essFish",
+  "stone": "stoneGun",
+  "fusions": [
+    {
+      "name": "Spitting Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 256,
+      "maxMult": 2,
+      "chargesMax": 3,
+      "desc": "A jet of water that deals 7 damage, up to 2 times as much at maximum range. It holds 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "Deep Charge",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "long",
+      "base": 35,
+      "cooldown": 120,
+      "speed": 300,
+      "radius": 10,
+      "explodeRadius": 112,
+      "splashFrac": 0.8,
+      "desc": "Fires a charge that detonates on the first enemy it meets, dealing 35 damage to it and 80% of that to every enemy within 3.5 tiles of it."
+    },
+    {
+      "name": "Long Pressure",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "water",
+      "cooldown": 90,
+      "rangeMult": 1.4,
+      "buffDuration": 20,
+      "desc": "For 20 seconds, your attacks and spells reach 54% further."
+    },
+    {
+      "kind": "passive",
+      "category": "triggered",
+      "name": "Held Breath",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "fullMana",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.3,
+        "charges": 1
+      },
+      "desc": "When your mana is full, your next spell deals 30% more damage. Once every 10 seconds."
+    }
+  ]
 }

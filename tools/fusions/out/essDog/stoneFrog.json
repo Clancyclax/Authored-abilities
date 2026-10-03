@@ -1,73 +1,72 @@
 {
- "essence": "essDog",
- "stone": "stoneFrog",
- "fusions": [
-  {
-   "name": "Marsh Pounce",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "water",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "range": 160,
-   "maxMult": 1.5,
-   "reachUnits": 160,
-   "rangeBand": "medium",
-   "consumeAffliction": true,
-   "desc": "Springs at a target up to 5 tiles away and deals 9 water damage, up to 1.5 times that at full reach. Usable only on a target carrying one of your afflictions, and uses one of them up."
-  },
-  {
-   "name": "Thundering Croak",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "resonating",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 18,
-   "range": 160,
-   "coneAngle": 0.6,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "stunOnHit": 1,
-   "desc": "Looses a narrow blast of sound 5 tiles ahead that deals 12 resonating damage to everything in it and stuns them for 1 second."
-  },
-  {
-   "name": "Marsh Hop",
-   "kind": "active",
-   "category": "buff",
-   "template": "immunityBuff",
-   "element": "water",
-   "cooldown": 60,
-   "immunityDuration": 2,
-   "blinkOnUse": 96,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you leap 3 tiles from where you stood. Your movement speed rises 20% for 4 seconds after you use it."
-  },
-  {
-   "name": "Second Wind",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 20,
-   "trigger": {
-    "on": "emptyStamina",
-    "cooldown": 20
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 4,
-    "duration": 5
-   },
-   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneFrog",
+  "fusions": [
+    {
+      "name": "Marsh Pounce",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 160,
+      "maxMult": 1.5,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "consumeAffliction": true,
+      "desc": "Springs at a target up to 5 tiles away and deals 9 water damage, up to 1.5 times that at full reach. Usable only on a target carrying one of your afflictions, and uses one of them up."
+    },
+    {
+      "name": "Bullfrog Bark",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "resonating",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 160,
+      "coneAngle": 0.6,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "desc": "Barks a narrow blast of sound 5 tiles ahead that deals 12 resonating damage to everything in it and stuns them for 1 second."
+    },
+    {
+      "name": "Lily-Pad Vault",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "water",
+      "cooldown": 60,
+      "immunityDuration": 2,
+      "blinkOnUse": 96,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you leap 3 tiles from where you stood. Your movement speed rises 20% for 4 seconds after you use it."
+    },
+    {
+      "name": "Coiled Haunches",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 1
+      },
+      "desc": "When your stamina is full, your next spell deals 25% more damage. Once every 10 seconds."
+    }
+  ]
 }

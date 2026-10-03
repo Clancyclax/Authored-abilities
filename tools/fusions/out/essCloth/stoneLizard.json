@@ -3,25 +3,28 @@
  "stone": "stoneLizard",
  "fusions": [
   {
-   "name": "Torpor Dart",
+   "name": "Cold Compress",
    "kind": "active",
    "category": "attack",
-   "template": "projectileBall",
+   "template": "imbueStrike",
    "element": "frost",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 380,
-   "radius": 5,
-   "debuff": {
-    "key": "slowAttack",
-    "chance": 0.3,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Frostbite"
    },
-   "desc": "Flicks a chilled thread that deals 4 damage to the first enemy it meets, with a 30% chance per hit to leave it [Hindered] for 3 seconds."
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Your next strike deals 7 damage, gives the target [Frostbite] for 1 damage a second for 4 seconds and slows it by 20% for 2 seconds. It holds 4 charges, and a kill gives one back."
   },
   {
    "name": "Sullen Chill",

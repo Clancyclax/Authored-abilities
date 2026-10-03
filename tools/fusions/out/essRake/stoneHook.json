@@ -1,0 +1,74 @@
+{
+ "essence": "essRake",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbs in the Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 400,
+   "radius": 6,
+   "isAoe": true,
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Costs 5% of your maximum health. Looses 3 barbs at once, spread apart, each dealing 6 damage, with a 40% chance per hit to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Rip It Free",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Tears the barbs back out of the target, dealing 22 damage and making it [Bleeding] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Snag and Reel",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "piercing",
+   "cooldown": 8,
+   "teleportRange": 192,
+   "desc": "Catches the tines on a point up to 6 tiles away and puts you there instantly."
+  },
+  {
+   "name": "Barb Sets Deep",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy below half health, your damage rises by 12%."
+  }
+ ]
+}

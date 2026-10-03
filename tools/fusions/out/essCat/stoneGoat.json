@@ -1,67 +1,69 @@
 {
- "essence": "essCat",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Ledge Shove",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 14,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "stunOnHit": 1.0,
-   "desc": "A head-butt that deals 14 damage, leaves the target [Bleeding] for 2 damage a second for 4 seconds and stuns it for 1 second."
-  },
-  {
-   "name": "Scrabbling Kicks",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "isAoe": true,
-   "range": 64,
-   "aoeBand": "small",
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 3
-   },
-   "desc": "Kicks out in every direction, dealing 4 damage to every enemy within 2 tiles. You move 15% faster for 3 seconds after using it."
-  },
-  {
-   "name": "Planted Paws",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "blunt",
-   "cooldown": 45,
-   "armorBonus": 0.25,
-   "buffDuration": 12,
-   "dodgeBonus": 0.08,
-   "desc": "Raises your armour by 25% for 12 seconds and your dodge chance by 8% while it lasts."
-  },
-  {
-   "name": "Sure Perch",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "cooldownPassive",
-   "element": "blunt",
-   "cooldownReduction": 0.06,
-   "armorBonus": 0.08,
-   "desc": "Every ability you have comes round 6% sooner. Your armour rises by 8%."
-  }
- ]
+  "essence": "essCat",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Ledge Shove",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "stunOnHit": 1,
+      "desc": "A head-butt that deals 14 damage, stuns the target for 1 second and leaves it 10% easier to wound for 5 seconds.",
+      "range": 80,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      }
+    },
+    {
+      "name": "Bunny Kicks",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "isAoe": true,
+      "range": 64,
+      "aoeBand": "small",
+      "desc": "Kicks out in every direction, dealing 4 damage to every enemy within 2 tiles."
+    },
+    {
+      "name": "Cliffside Stance",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "blunt",
+      "cooldown": 45,
+      "armorBonus": 0.25,
+      "buffDuration": 12,
+      "dodgeBonus": 0.08,
+      "desc": "Raises your armour by 25% for 12 seconds and your dodge chance by 8% while it lasts."
+    },
+    {
+      "name": "Always Upright",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "desc": "When you take non-fire damage, you gain a ward that absorbs 15% of your maximum health for 4 seconds. Once every 20 seconds.",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.15,
+        "duration": 4
+      }
+    }
+  ]
 }

@@ -1,0 +1,72 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Sawgrass Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Whips razor-edged grass around you, dealing 7 damage to every enemy within 3 tiles and leaving each [Bleeding] for 2 damage a second for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Pruning Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 12,
+   "range": 80,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "stackMult": 1.2,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "A clean cut at one enemy at or below 25% health (the threshold rises with rank) that deals 24 damage and consumes every affliction on it, adding 1.2 times their remaining damage. You have 50% more critical chance against a target that has not yet bled."
+  },
+  {
+   "name": "Undergrowth Lurk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "plant",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "healOnUse": 8,
+   "desc": "Veils you in leaves for 6 seconds, moving 10% faster; enemies notice you far later, and the veil breaks the moment you attack. You restore 8 health."
+  },
+  {
+   "name": "Thorn in the Wound",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "plant",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying an affliction."
+  }
+ ]
+}

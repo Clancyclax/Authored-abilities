@@ -1,81 +1,83 @@
 {
- "essence": "essCat",
- "stone": "stoneGun",
- "fusions": [
-  {
-   "name": "Startling Report",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 20,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "stunOnHit": 1.2,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 3
-   },
-   "desc": "A sudden shot that deals 14 damage and stuns the target for 1.2 seconds. You move 20% faster for 3 seconds after using it."
-  },
-  {
-   "name": "Scatter Load",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "piercing",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1.1,
-   "spammable": true,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "range": 128,
-   "coneAngle": 1.0,
-   "chargesMax": 4,
-   "debuff": {
-    "key": "critChanceDown",
-    "chance": 0.3,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Looses a wide spread of shot that deals 7 damage to everything caught in it, with a 30% chance to leave each [Blunted] for 5 seconds. You hold 4 charges and each kill gives one back."
-  },
-  {
-   "name": "Steady Aim",
-   "kind": "active",
-   "category": "buff",
-   "template": "selfCritBuff",
-   "element": "piercing",
-   "cooldown": 60,
-   "critChanceBonus": 0.3,
-   "buffDuration": 15,
-   "desc": "Increases your critical hit chance by 30% for 15 seconds."
-  },
-  {
-   "name": "Held Fire",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "piercing",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 8,
-    "seconds": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.4,
-    "strikes": 1
-   },
-   "desc": "If 8 seconds pass without a critical hit, your next strike has 40% more critical chance. Once every 8 seconds."
-  }
- ]
+  "essence": "essCat",
+  "stone": "stoneGun",
+  "fusions": [
+    {
+      "name": "Report From the Reeds",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 20,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "stunOnHit": 1.2,
+      "desc": "Fires a shot that deals 14 damage and stuns the target for 1.2 seconds, with 50% more critical chance against an enemy nothing has wounded yet.",
+      "openerCrit": {
+        "amount": 0.5
+      }
+    },
+    {
+      "name": "Scatter Load",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "piercing",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1.1,
+      "spammable": true,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "range": 128,
+      "coneAngle": 1,
+      "chargesMax": 4,
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 0.3,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses a wide spread of shot that deals 7 damage to everything caught in it, with a 30% chance to leave each [Blunted] for 5 seconds. You hold 4 charges and each kill gives one back."
+    },
+    {
+      "name": "Bolt at the Bang",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "physical",
+      "cooldown": 10,
+      "desc": "Darts you 5 tiles forward and increases your movement speed by 30% for 3 seconds.",
+      "dashDist": 160,
+      "hasteOnUse": {
+        "pct": 0.3,
+        "duration": 3
+      }
+    },
+    {
+      "name": "Held Fire",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 8,
+        "seconds": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.4,
+        "strikes": 1
+      },
+      "desc": "If 8 seconds pass without a critical hit, your next strike has 40% more critical chance. Once every 8 seconds."
+    }
+  ]
 }

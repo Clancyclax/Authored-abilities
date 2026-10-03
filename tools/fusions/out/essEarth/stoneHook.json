@@ -1,73 +1,77 @@
 {
- "essence": "essEarth",
- "stone": "stoneHook",
- "fusions": [
-  {
-   "name": "Barbed Cast",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "earth",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "bindOnHit": {
-    "slowPct": 0.2,
-    "duration": 2
-   },
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Casts a stone-weighted barb that deals 4 damage to the first enemy it meets and slows it by 20% for 2 seconds."
-  },
-  {
-   "name": "Gaff Strike",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "earth",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 14,
-   "range": 84,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": false,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A hooked blow that deals 22 damage, consumes every affliction on the target and adds 1.5 times their remaining damage to the hit, and leaves it [Slowed] for 3 seconds. Usable only on an enemy at or below 25% health."
-  },
-  {
-   "name": "Hauled Close",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "earth",
-   "cooldown": 30,
-   "wallKind": "pull",
-   "wallLength": 160,
-   "wallDuration": 6,
-   "wallThickness": 26,
-   "pullForce": 32,
-   "desc": "Collapses a point of earth ahead of you for 6 seconds, dragging every enemy near it inward."
-  },
-  {
-   "name": "Burr Coat",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "earth",
-   "condition": "vsDebuffed",
-   "bonusKind": "armor",
-   "amount": 0.1,
-   "desc": "Against an enemy carrying one of your afflictions, your armour rises by 10%."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneHook",
+  "fusions": [
+    {
+      "name": "Barbed Cast",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "earth",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      },
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Casts a stone-weighted barb that deals 4 damage to the first enemy it meets and slows it by 20% for 2 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Gaff Strike",
+      "template": "sunderStrike",
+      "element": "earth",
+      "role": "execute",
+      "base": 24,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "requiresTargetBelow": 0.3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A hooked blow that deals 24 damage, leaves the target 10% easier to wound for 4 seconds and [Pinned] for 3 seconds. Usable only on an enemy at or below 30% health."
+    },
+    {
+      "name": "Hauled Close",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "earth",
+      "cooldown": 30,
+      "wallKind": "pull",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "pullForce": 32,
+      "desc": "Collapses a point of earth ahead of you for 6 seconds, dragging every enemy near it inward."
+    },
+    {
+      "name": "Burr Coat",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "earth",
+      "condition": "vsDebuffed",
+      "bonusKind": "armor",
+      "amount": 0.1,
+      "desc": "Against an enemy carrying one of your afflictions, your armour rises by 10%."
+    }
+  ]
 }

@@ -1,79 +1,78 @@
 {
- "essence": "essCat",
- "stone": "stoneHunt",
- "fusions": [
-  {
-   "name": "Run Down",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 15,
-   "range": 224,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "maxMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "debuff": {
-    "key": "marked",
-    "chance": 1,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A pounce that deals 22 damage, up to 1.5 times at maximum range, to an enemy at or below 25% health and leaves it [Marked] for 8 seconds."
-  },
-  {
-   "name": "Singled Out",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "long",
-   "base": 28,
-   "cooldown": 120,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "bossPct": 0.05,
-   "desc": "A strike that deals 28 damage, plus 5% of a boss's or elite's maximum health."
-  },
-  {
-   "name": "Marked for the Pack",
-   "kind": "active",
-   "category": "buff",
-   "template": "partyBuff",
-   "element": "physical",
-   "cooldown": 45,
-   "range": 160,
-   "reachUnits": 160,
-   "rangeBand": "medium",
-   "buffDuration": 12,
-   "partyPower": 1,
-   "partyDmgPct": 0.2,
-   "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds, and fights with 1 more power while it holds."
-  },
-  {
-   "name": "Taste for the Chase",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 4,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 4
-   },
-   "effect": {
-    "kind": "physicalDamageMult",
-    "amount": 0.25,
-    "duration": 5
-   },
-   "desc": "When you kill an enemy, your physical damage rises 25% for 5 seconds. Once every 4 seconds."
-  }
- ]
+  "essence": "essCat",
+  "stone": "stoneHunt",
+  "fusions": [
+    {
+      "name": "Run Down",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 22,
+      "cooldown": 15,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "requiresTargetBelow": 0.25,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A pounce that deals 22 damage, up to 1.5 times at maximum range, to an enemy at or below 25% health and leaves it [Marked] for 8 seconds."
+    },
+    {
+      "name": "Singled Out",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "long",
+      "base": 28,
+      "cooldown": 120,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "bossPct": 0.05,
+      "desc": "A strike that deals 28 damage, plus 5% of a boss's or elite's maximum health."
+    },
+    {
+      "name": "Low in the Grass",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "physical",
+      "cooldown": 36,
+      "desc": "Veils you for 10 seconds. Enemies notice you far later, you move 10% faster, and the veil breaks the moment you attack.",
+      "stealthDuration": 10,
+      "stealthAlpha": 0.2,
+      "aggroMult": 0.25,
+      "stealthSpeedPct": 10,
+      "stealthScope": "self"
+    },
+    {
+      "name": "Taste for the Chase",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 4,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 4
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.25,
+        "duration": 5
+      },
+      "desc": "When you kill an enemy, your physical damage rises 25% for 5 seconds. Once every 4 seconds."
+    }
+  ]
 }

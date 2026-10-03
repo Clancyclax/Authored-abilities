@@ -1,0 +1,86 @@
+{
+ "essence": "essSceptre",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bound to the Accused",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "You leap up to 7 tiles onto the target and strike it with the rod, dealing 14 damage and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "name": "Nipping Distraction",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.7,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a speck at the first enemy in line that deals 4 damage, with a 25% chance to leave it [Muddled] for 3 seconds."
+  },
+  {
+   "name": "Hold Court",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "summonAnimal": "flea",
+   "tauntRadius": 224,
+   "tauntDuration": 5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1,
+    "duration": 8
+   },
+   "desc": "A challenge that pulls up to 5 enemies within 7 tiles onto you for 5 seconds. An escort of fleas fights beside you for 8 seconds, striking for 3 every second."
+  },
+  {
+   "name": "Distance Is No Excuse",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "element": "physical",
+   "desc": "Once you have covered enough ground, your next spell deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

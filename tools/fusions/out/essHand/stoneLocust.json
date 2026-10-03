@@ -1,0 +1,67 @@
+{
+ "essence": "essHand",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Grasping Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "desc": "A cloud of locusts pours from your open hands and strips everything within 3.5 tiles, dealing 28 damage to each enemy. Against a boss or an elite it also deals 4% of their maximum health."
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 1,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Strips one of your afflictions off the target for 9 damage, adding 1.2 times its remaining damage to the hit. Usable only on a target carrying one of your afflictions."
+  },
+  {
+   "name": "Gleaner's Fistful",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 30,
+   "resource": "stamina",
+   "restoreAmount": 25,
+   "desc": "You strip a fistful of the crops nearby and eat it, restoring 25 stamina."
+  },
+  {
+   "name": "Never Full",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 6. At 6 they all spend at once: you heal for 4% of your maximum health per stack (24% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

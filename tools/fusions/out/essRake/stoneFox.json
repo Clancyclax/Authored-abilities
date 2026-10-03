@@ -1,0 +1,73 @@
+{
+ "essence": "essRake",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Sleight Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "shadow",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 4,
+   "confuse": true,
+   "confuseChance": 0.25,
+   "confuseDuration": 3,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Tosses a pocketed pebble that deals 7 damage to the first enemy it meets, with a 25% chance to confuse it for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Baited Leavings",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "shadow",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 288,
+   "corpse": true,
+   "explodeRadius": 112,
+   "mineSeconds": 30,
+   "desc": "Primes up to 3 bodies within 9 tiles for 30 seconds. Each bursts the moment an enemy comes within 2 tiles of it and deals 26 damage to everything within 3.5 tiles."
+  },
+  {
+   "name": "Under the Leaf Pile",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and raises your movement speed by 10%. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Skimmed Off the Top",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "shadow",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you regain 6 mana. Once every 5 seconds."
+  }
+ ]
+}

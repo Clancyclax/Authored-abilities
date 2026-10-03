@@ -1,0 +1,76 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Tine",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "leech": 0.1,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a two-pronged barb that deals 7 damage to the first enemy it meets, then leaps to 1 more enemy within 3.5 tiles for 60% of that. You heal for 10% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Branching Rot",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A strike with your weapon that deals 10 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Glanced Both Ways",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, 30% of the damage that reaches your shell is turned back on whoever dealt it."
+  },
+  {
+   "name": "The Other Road",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you is refused and leaves you at 1 health."
+  }
+ ]
+}

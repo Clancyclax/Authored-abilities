@@ -1,0 +1,91 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shoal of Needles",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 6,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Looses 3 stings in a spread, each one that deals 3 damage with a 30% chance to leave the target [Poisoned] for 5 seconds. You move 10% faster for 2 seconds after."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Through the School",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "A thrown sting that deals 12 damage, up to 1.5 times that at full reach, and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target then spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Slick Scales",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each debuff laid on you has a 50% chance to slide off and be sent back to whoever laid it."
+  },
+  {
+   "name": "Missed Then Stung",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 4,
+   "stackDecay": 8,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "TBD"
+  }
+ ]
+}

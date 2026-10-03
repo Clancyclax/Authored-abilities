@@ -47,23 +47,21 @@
    "desc": "Raises your armour by 25% for 12 seconds."
   },
   {
-   "name": "Dug-In Grudge",
+   "name": "Stubborn Tally",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "stacking",
+   "template": "stacking",
    "element": "physical",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "physicalDamageMult",
-    "amount": 0.25,
-    "duration": 4
-   },
-   "desc": "Each time anything other than fire hurts you, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+   "stackShape": "boon",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. The next ability you use spends them all: you deal 4% more damage per stack (22% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
   }
  ]
 }

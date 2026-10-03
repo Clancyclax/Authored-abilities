@@ -1,73 +1,75 @@
 {
- "essence": "essEarth",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "name": "Crystal Shard",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "spammable": true,
-   "chargesMax": 4,
-   "speed": 420,
-   "radius": 6,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Fires a crystal shard of raw force that deals 7 arcane damage to the first enemy it meets. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Geode Burst",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "arcane",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 16,
-   "range": 160,
-   "coneAngle": 0.7,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "stunOnHit": 1,
-   "desc": "Looses a resonant burst 5 tiles ahead of you that deals 14 arcane damage to everything in it and stuns them for 1 second."
-  },
-  {
-   "name": "Ley Draw",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "arcane",
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "cooldown": 40,
-   "shieldAmount": 26,
-   "shieldStrikes": 4,
-   "shieldDuration": 10,
-   "desc": "Raises a barrier of crystal that absorbs the next 26 damage and holds for 10 seconds."
-  },
-  {
-   "name": "Charged Core",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.2,
-    "charges": 1
-   },
-   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Humming Crystal",
+      "template": "rangeStrike",
+      "element": "arcane",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "chargesMax": 4,
+      "range": 224,
+      "maxMult": 1.5,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "expose",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Throws a raw crystal that deals 7 damage, rising to 1.5 times that at its full reach of 7 tiles, with a 30% chance of leaving the target [Exposed] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Geode Burst",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "arcane",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "range": 160,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "desc": "Looses a resonant burst 5 tiles ahead of you that deals 14 arcane damage to everything in it and stuns them for 1 second."
+    },
+    {
+      "kind": "active",
+      "category": "restore",
+      "name": "Ley Draw",
+      "template": "resourceRestore",
+      "element": "earth",
+      "resource": "mana",
+      "overTime": true,
+      "restorePerSec": 3,
+      "restoreDuration": 8,
+      "cooldown": 30,
+      "desc": "Draws on the ground beneath you, restoring 3 mana a second for 8 seconds."
+    },
+    {
+      "kind": "passive",
+      "name": "Lodestone Heart",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "earth",
+      "stackShape": "ledger",
+      "stackBuild": "cast",
+      "stackPay": "ward",
+      "stackCap": 6,
+      "stackDecay": 8,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackWard",
+      "desc": "Every time you use an ability, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+    }
+  ]
 }

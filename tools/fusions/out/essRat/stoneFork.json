@@ -1,0 +1,78 @@
+{
+ "essence": "essRat",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split at the Junction",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a rat at the first enemy in line, where it deals 4 damage, then splits off to 1 more enemy within 3 tiles for 60% of that."
+  },
+  {
+   "name": "Both Tunnels at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.9,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 8,
+   "range": 224,
+   "stunOnHit": 1.0,
+   "desc": "Two rats burst out on diverging paths, each dealing 11 damage and stunning what it hits for 1 second."
+  },
+  {
+   "name": "Ambush at Every Turn",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDuration": 20,
+   "summonDmg": 14,
+   "summonRange": 80,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 80,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to plant a rat nest on the nearest enemy. It waits 20 seconds, and deals 14 damage in a blast 2.5 tiles across to the first 2 enemies that come within 2.5 tiles of it."
+  },
+  {
+   "name": "Other Way Round",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

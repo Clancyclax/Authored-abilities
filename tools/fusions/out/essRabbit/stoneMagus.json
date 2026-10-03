@@ -1,0 +1,80 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Rattled Syllable",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits out one quick word of force that deals 4 arcane damage, with a 20% chance to leave the target [Muddled] for 3 seconds."
+  },
+  {
+   "name": "Clipped Verses",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 7,
+   "range": 224,
+   "isAoe": true,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Looses 3 bolts of clipped verse in a spread; each deals 6 arcane damage. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Breathless Recital",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 40,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your casting speed by 30% for 12 seconds."
+  },
+  {
+   "name": "Words on the Run",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you spend mana, you regain 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

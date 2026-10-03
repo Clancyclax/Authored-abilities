@@ -1,0 +1,76 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Hushing Bramble",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "plant",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 224,
+   "lockSeconds": 3,
+   "spreadAfflictions": 112,
+   "desc": "Brambles close over the mouth of one enemy within 7 tiles, dealing 10 damage and taking its next action away for 3 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Ogham Stave",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 84,
+   "chargesMax": 4,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A strike with a stave cut with tree-letters that deals 8 damage, leaves the target 5% easier to wound for 3 seconds and has a 30% chance to leave it [Muddled] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Leafbound Recital",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "plant",
+   "cooldown": 45,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "healOnUse": 8,
+   "desc": "Increases your cast speed by 30% for 15 seconds. You restore 8 health."
+  },
+  {
+   "name": "Pressed Verse",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Each time your mana becomes full, your next spell deals 30% more damage. Once every 20 seconds."
+  }
+ ]
+}

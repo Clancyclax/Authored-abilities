@@ -1,0 +1,76 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Unhurried Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "maxMult": 1.2,
+   "bossPct": 0.05,
+   "desc": "A slow, full-weight kick at a target up to 3 tiles away that deals 30 damage, rising to 1.2 times that at full range. Bosses and elites also lose 5% of their maximum health."
+  },
+  {
+   "name": "Wallowing Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You wallow forward, dealing 3 damage to everything in a cone up to 3 tiles ahead, with a 30% chance per hit to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Easy Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "desc": "Increases your stamina recovery by 50% for 20 seconds."
+  },
+  {
+   "name": "Nothing Urgent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 6
+   },
+   "desc": "The moment your health is full, you gain a shield worth 12% of your maximum health for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,76 +1,84 @@
 {
- "essence": "essDuck",
- "stone": "stoneHair",
- "fusions": [
-  {
-   "name": "Drifting Down",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "wind",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 128,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.25,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Puffs a cone of loose down 4 tiles long, dealing 3 damage to everything in it, each hit with a 25% chance to leave the target [Slowed] for 3 seconds."
-  },
-  {
-   "name": "Plucked Pinion",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "wind",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "hpCostPct": 0.05,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "speed": 360,
-   "radius": 8,
-   "desc": "Plucks a feather loose and flicks it, dealing 9 damage and leaving the target [Slowed] for 3 seconds. Also costs 5% of your maximum health."
-  },
-  {
-   "name": "Combed Oil",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "water",
-   "cooldown": 36,
-   "armorBonus": 0.15,
-   "buffDuration": 12,
-   "resist": {
-    "element": "water",
-    "amount": 0.3
-   },
-   "desc": "Raises your armour by 15% and your water resistance by 30% for 12 seconds."
-  },
-  {
-   "name": "Snarled Prey",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "wind",
-   "condition": "vsDebuffed",
-   "bonusKind": "dmg",
-   "amount": 0.12,
-   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
-  }
- ]
+  "essence": "essDuck",
+  "stone": "stoneHair",
+  "fusions": [
+    {
+      "name": "Loosed Fluff",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "wind",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.25,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Puffs a cone of loose down 4 tiles long, dealing 3 damage to everything in it, each hit with a 25% chance to leave the target [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Plucked Pinion",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "wind",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "hpCostPct": 0.05,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "speed": 360,
+      "radius": 8,
+      "desc": "Plucks a feather loose and flicks it, dealing 9 damage and leaving the target [Slowed] for 3 seconds. Also costs 5% of your maximum health."
+    },
+    {
+      "name": "Combed Oil",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "water",
+      "cooldown": 36,
+      "armorBonus": 0.15,
+      "buffDuration": 12,
+      "resist": {
+        "element": "water",
+        "amount": 0.3
+      },
+      "desc": "Raises your armour by 15% and your water resistance by 30% for 12 seconds."
+    },
+    {
+      "name": "Insulating Down",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "desc": "When something other than fire hurts you, a shield worth 10% of your maximum health covers you for 4 seconds. Once every 20 seconds."
+    }
+  ]
 }

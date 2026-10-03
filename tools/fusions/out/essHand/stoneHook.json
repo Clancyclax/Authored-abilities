@@ -1,0 +1,71 @@
+{
+ "essence": "essHand",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snagged Flesh",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes one of your afflictions out of the target with crooked fingers, dealing 8 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds. Usable only on a target carrying one of your afflictions, which it uses up."
+  },
+  {
+   "name": "Gaff Through Gaps",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "desc": "Works a barbed finger between the target's plates, dealing 30 damage that ignores armour and leaving it 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Reeled In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Casts a barbed line and hauls up to 4 enemies within 6 tiles onto you, holding their attention for 5 seconds."
+  },
+  {
+   "name": "Caught on Something",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 60,
+   "desc": "Once every 60 seconds, a blow that would have killed you snags short instead and leaves you at 1 health."
+  }
+ ]
+}

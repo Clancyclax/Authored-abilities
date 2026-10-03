@@ -1,72 +1,79 @@
 {
- "essence": "essDog",
- "stone": "stoneHeidel",
- "fusions": [
-  {
-   "name": "Hoof and Fang",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "physical",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "strikes": 1,
-   "range": 86,
-   "chargesMax": 4,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "A bite that deals 7 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Trample Through",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 64,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.04,
-   "scaleCap": 0.2,
-   "desc": "Tramples every enemy within 3 tiles for 12 damage and knocks each back 2 tiles. Its damage rises 4% for every 100 paces you have run since you last used it (max 20%)."
-  },
-  {
-   "name": "Tireless Lope",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "physical",
-   "cooldown": 55,
-   "buffStat": "regenStamina",
-   "buffAmount": 0.5,
-   "buffDuration": 18,
-   "desc": "Increases your stamina recovery by 50% for 18 seconds."
-  },
-  {
-   "name": "Saddle-Warm Hound",
-   "kind": "passive",
-   "category": "summon",
-   "template": "summonBonded",
-   "element": "physical",
-   "familiarDmg": 5,
-   "familiarRange": 96,
-   "familiarInterval": 1.8,
-   "familiarFamily": "beast",
-   "familiarCreatureName": "Heidel",
-   "mount": true,
-   "mountFamily": "beast",
-   "desc": "A bonded heidel fights beside you, striking enemies within 3 tiles for 5 damage every 1.8 seconds. You can ride it."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneHeidel",
+  "fusions": [
+    {
+      "name": "Hoof and Fang",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "strikes": 1,
+      "range": 86,
+      "chargesMax": 4,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A bite that deals 7 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Trample Through",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 64,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.04,
+      "scaleCap": 0.2,
+      "desc": "Tramples every enemy within 3 tiles for 12 damage and knocks each back 2 tiles. Its damage rises 4% for every 100 paces you have run since you last used it (max 20%)."
+    },
+    {
+      "name": "Relay Runners",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 55,
+      "buffStat": "regenStamina",
+      "buffAmount": 0.5,
+      "buffDuration": 18,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.4,
+        "duration": 8
+      },
+      "familiarFamily": "dog",
+      "familiarCreatureName": "Relay Hound",
+      "desc": "Increases your stamina recovery by 50% for 18 seconds. While it lasts, a relay hound fights beside you for 8 seconds, striking for 3 every 1.4 seconds."
+    },
+    {
+      "name": "Saddled Packmate",
+      "kind": "passive",
+      "category": "summon",
+      "template": "summonBonded",
+      "element": "physical",
+      "familiarDmg": 5,
+      "familiarRange": 96,
+      "familiarInterval": 1.8,
+      "familiarFamily": "dog",
+      "familiarCreatureName": "Draught Hound",
+      "mount": true,
+      "mountFamily": "beast",
+      "desc": "A bonded draught hound fights beside you, striking enemies within 3 tiles for 5 damage every 1.8 seconds. You can ride it."
+    }
+  ]
 }

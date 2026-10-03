@@ -3,11 +3,11 @@
  "stone": "stoneGrazen",
  "fusions": [
   {
-   "name": "Cud Spit",
+   "name": "Flung Sod",
    "kind": "active",
    "category": "attack",
    "template": "projectileBall",
-   "element": "nature",
+   "element": "earth",
    "role": "basic",
    "base": 4,
    "cooldown": 0.8,
@@ -17,12 +17,14 @@
     "duration": 4,
     "label": "Reprieve"
    },
-   "reachPct": 0.4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
    "speed": 380,
    "radius": 7,
-   "reachUnits": 396,
-   "rangeBand": "long",
-   "desc": "Spits a glob that deals 4 damage to the first enemy it meets. 15% of the damage dealt comes back to you as healing over 4 seconds. Its reach is 40% longer."
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Throws a clod that deals 4 damage to the first enemy it meets. 15% of the damage dealt comes back to you as healing over 4 seconds. Its damage rises +8% per ally within 5 tiles (max +32%)."
   },
   {
    "name": "Leaning Crush",
@@ -39,10 +41,10 @@
     "duration": 8
    },
    "bossPct": 0.05,
+   "desc": "A slow, leaning blow that deals 28 damage and leaves the target 15% easier to wound for 8 seconds, plus 5% of a boss's or elite's maximum health. Its damage rises +8% per ally within 5 tiles (max +32%).",
    "scaleOn": "alliesNear",
    "scalePer": 0.08,
-   "scaleCap": 0.32,
-   "desc": "A slow, leaning blow that deals 28 damage and leaves the target 15% easier to wound for 8 seconds, plus 5% of a boss's or elite's maximum health. Its damage rises +8% per ally within 5 tiles (max +32%)."
+   "scaleCap": 0.32
   },
   {
    "name": "Barn Warmth",
@@ -57,24 +59,25 @@
    "desc": "Restores 3 health a second to you and every ally within 5 tiles, for 10 seconds."
   },
   {
-   "name": "Patient Chew",
+   "name": "Huddle In",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",
    "element": "nature",
    "isTriggered": true,
-   "cooldown": 20,
+   "cooldown": 30,
    "trigger": {
-    "on": "fullStamina",
-    "cooldown": 20
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.4
    },
    "effect": {
     "kind": "regenBurst",
-    "perSec": 2,
+    "perSec": 4,
     "duration": 6
    },
-   "armorBonus": 0.05,
-   "desc": "When your stamina is full, you regain 2 health a second for 6 seconds. Once every 20 seconds. Your armour rises by 5%."
+   "armorBonus": 0.06,
+   "desc": "When your health falls below 40%, you regain 4 health a second for 6 seconds. Once every 30 seconds. Your armour rises by 6%."
   }
  ]
 }

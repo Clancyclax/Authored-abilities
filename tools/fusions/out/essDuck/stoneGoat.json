@@ -1,68 +1,67 @@
 {
- "essence": "essDuck",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Downhill Ram",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "physical",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "range": 192,
-   "maxMult": 2,
-   "knockback": 112,
-   "desc": "A running ram from up to 6 tiles away that deals 12 damage, rising to twice that at full reach, and knocks the target back 3.5 tiles."
-  },
-  {
-   "name": "Headlong Butt",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "range": 80,
-   "hpCostPct": 0.05,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 4
-   },
-   "desc": "A hard blow that deals 9 damage and leaves the target 10% easier to wound for 4 seconds. Also costs 5% of your maximum health."
-  },
-  {
-   "name": "Stiff Neck",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "physical",
-   "cooldown": 30,
-   "buffDuration": 8,
-   "thornsFrac": 0.5,
-   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
-  },
-  {
-   "name": "Planted Feet",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 40,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 40,
-    "frac": 0.5
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.15,
-    "duration": 6
-   },
-   "desc": "Once your health falls below 50%, a shield worth 15% of your maximum health closes over you for 6 seconds. Once every 40 seconds."
-  }
- ]
+  "essence": "essDuck",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Downhill Ram",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 192,
+      "maxMult": 2,
+      "knockback": 112,
+      "desc": "A running ram from up to 6 tiles away that deals 12 damage, rising to twice that at full reach, and knocks the target back 3.5 tiles."
+    },
+    {
+      "name": "Headlong Butt",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 80,
+      "hpCostPct": 0.05,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "desc": "A hard blow that deals 9 damage and leaves the target 10% easier to wound for 4 seconds. Also costs 5% of your maximum health."
+    },
+    {
+      "name": "Unshaken Perch",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "physical",
+      "immunityDuration": 4,
+      "cooldown": 120,
+      "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+    },
+    {
+      "name": "Planted Feet",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 40,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 40,
+        "frac": 0.5
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.15,
+        "duration": 6
+      },
+      "desc": "Once your health falls below 50%, a shield worth 15% of your maximum health closes over you for 6 seconds. Once every 40 seconds."
+    }
+  ]
 }

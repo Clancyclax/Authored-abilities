@@ -1,0 +1,86 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silverside Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "isAoe": true,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Flicks 3 darting water bolts in a spread as you run; each deals 4 damage. You move 10% faster for 2 seconds after you use it."
+  },
+  {
+   "name": "Slick Rebound",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A kick that skids off the target, deals 14 water damage, drives it 3 tiles back and leaves it [Soaked] for 5 seconds. It hits harder the farther away the target is, up to 1.6 times at 6 tiles."
+  },
+  {
+   "name": "Wriggle Loose",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 20,
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 conditions that hold or stop you, and you move 30% faster for 4 seconds."
+  },
+  {
+   "name": "Never Quite Caught",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you avoid builds a stack on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack, 23% at full, for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

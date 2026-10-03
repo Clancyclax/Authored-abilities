@@ -1,0 +1,73 @@
+{
+ "essence": "essRake",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripped Rows",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.15,
+   "desc": "Strips every enemy within 2.5 tiles for 3 damage, and you heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Swarm Off the Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "speed": 360,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Flings a knot of the swarm that deals 26 damage to the first enemy it meets and bursts to hit everything within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Cloud Over the Field",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to loose a cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second."
+  },
+  {
+   "name": "Nothing Left Standing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 15% of the damage you deal for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

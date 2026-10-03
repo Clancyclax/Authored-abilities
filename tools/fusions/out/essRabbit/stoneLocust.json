@@ -1,0 +1,82 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Strip the Stalk",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A gnawing bite that deals 7 damage and leaves the target [Bleeding] for 2 damage a second for 3 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Chewing Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 280,
+   "radius": 7,
+   "range": 192,
+   "isAoe": true,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "desc": "Looses 5 bolts of swarming insects in a spread; each deals 10 damage. Your afflictions on each target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Cloud of Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 8,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Calls a swarm that fights for 8 seconds, striking for 3 every second. You move 20% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Next Field Over",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 4. At 4 they all spend at once: you move and attack 5% faster per stack, 18% at full, for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Thrown From the Seat",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Throws a blade from your seat at the first enemy in its path. It deals 6 damage, with 50% more critical chance against a target that has not yet been hurt. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Running Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A cut as you pass that deals 18 damage, uses up every affliction you have on the target for 60% more damage each, and leaves it [Bleeding] for 3 damage a second for 4 seconds. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Edge in the Lap",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 60,
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 15,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your critical damage by 40% for 15 seconds, and you move 15% faster for the first 5 seconds."
+  },
+  {
+   "name": "Drawn on the Move",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each time you have travelled far enough, your next strike gains 25% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

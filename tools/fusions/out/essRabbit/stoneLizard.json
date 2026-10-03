@@ -1,0 +1,72 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Still, Then Gone",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "frost",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "A sudden strike at a target up to 7 tiles away that deals 32 frost damage and always crits, up to 1.5 times that at full reach."
+  },
+  {
+   "name": "Darting Chill",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Flicks a cold bolt that deals 4 frost damage, with a 20% chance to leave the target [Slowed] for 2 seconds. You move 10% faster for 2 seconds after."
+  },
+  {
+   "name": "Sunning Pause",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "radiant",
+   "cooldown": 24,
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 6 seconds."
+  },
+  {
+   "name": "Basking Watch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "radiant",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "In daylight, your dodge chance rises by 10%."
+  }
+ ]
+}

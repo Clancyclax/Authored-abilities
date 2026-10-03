@@ -1,0 +1,75 @@
+{
+ "essence": "essTree",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Capsule Crack",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 540,
+   "radius": 5,
+   "reachUnits": 420,
+   "rangeBand": "long",
+   "desc": "A seed capsule bursts open and fires a seed that deals 5 damage to the first enemy it meets."
+  },
+  {
+   "name": "Splinter Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "coneAngle": 0.6,
+   "range": 160,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Your bark bursts outward in a cone of splinters, dealing 14 damage to everything in it and knocking it back 3 tiles, with a 30% chance to leave each [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Seasoned Stock",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "plant",
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Your grain dries and hardens to a gunstock's: your critical hit chance rises by 25% for 15 seconds."
+  },
+  {
+   "name": "Primed Resin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, resin primes in your bark and your next ability deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

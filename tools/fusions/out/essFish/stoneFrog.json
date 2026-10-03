@@ -1,62 +1,71 @@
 {
- "essence": "essFish",
- "stone": "stoneFrog",
- "fusions": [
-  {
-   "name": "Tongue Lash",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "water",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 160,
-   "maxMult": 1.5,
-   "desc": "A lashing blow that deals 4 damage, up to 1.5 times as much at maximum range."
-  },
-  {
-   "name": "Chorus Croak",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "water",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 16,
-   "range": 192,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "stunOnHit": 1.2,
-   "scaleOn": "alliesNear",
-   "scalePer": 0.06,
-   "scaleCap": 0.3,
-   "desc": "Booms a cone 6 tiles long that deals 12 damage to everything in it and stuns it for 1.2 seconds. Its damage rises 6% for each ally within 5.5 tiles, up to 30%."
-  },
-  {
-   "name": "Sudden Spring",
-   "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
-   "element": "water",
-   "cooldown": 24,
-   "speedMult": 1.4,
-   "buffDuration": 6,
-   "blinkOnUse": 96,
-   "dodgeBonus": 0.1,
-   "desc": "Increases your movement speed by 40% for 6 seconds. You finish it 3 tiles from where you stood, with +10% dodge chance for it."
-  },
-  {
-   "name": "Pond Patience",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "cooldownPassive",
-   "element": "water",
-   "cooldownReduction": 0.1,
-   "armorBonus": 0.08,
-   "desc": "Every ability you have comes round 10% sooner. Your armour rises by 8%."
-  }
- ]
+  "essence": "essFish",
+  "stone": "stoneFrog",
+  "fusions": [
+    {
+      "name": "Tongue Lash",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 160,
+      "maxMult": 1.5,
+      "desc": "A lashing blow that deals 4 damage, up to 1.5 times as much at maximum range."
+    },
+    {
+      "name": "Chorus Croak",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 192,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1.2,
+      "scaleOn": "alliesNear",
+      "scalePer": 0.06,
+      "scaleCap": 0.3,
+      "desc": "Booms a cone 6 tiles long that deals 12 damage to everything in it and stuns it for 1.2 seconds. Its damage rises 6% for each ally within 5.5 tiles, up to 30%."
+    },
+    {
+      "name": "Sudden Spring",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "water",
+      "cooldown": 24,
+      "speedMult": 1.4,
+      "buffDuration": 6,
+      "blinkOnUse": 96,
+      "dodgeBonus": 0.1,
+      "desc": "Increases your movement speed by 40% for 6 seconds. You finish it 3 tiles from where you stood, with +10% dodge chance for it."
+    },
+    {
+      "kind": "passive",
+      "category": "triggered",
+      "name": "Coiled Haunches",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 4
+      },
+      "desc": "When your stamina is full, your physical damage rises 30% for 4 seconds. Once every 12 seconds."
+    }
+  ]
 }

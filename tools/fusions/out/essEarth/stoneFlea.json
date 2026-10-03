@@ -1,76 +1,82 @@
 {
- "essence": "essEarth",
- "stone": "stoneFlea",
- "fusions": [
-  {
-   "name": "Bounding Slam",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "earth",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 14,
-   "range": 80,
-   "isAoe": true,
-   "aoeBand": "small",
-   "chargeTo": 192,
-   "desc": "Springs you to a target up to 6 tiles away, then deals 14 damage to every enemy within 2.5 tiles of you."
-  },
-  {
-   "name": "Pestering Chips",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "rock",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 3,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "speed": 380,
-   "radius": 7,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Flicks a sharp chip that deals 4 damage to the first enemy it meets and makes it [Bleeding] for 1 damage a second for 3 seconds."
-  },
-  {
-   "name": "Springboard Slab",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "earth",
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "cooldown": 30,
-   "shieldAmount": 18,
-   "shieldStrikes": 4,
-   "shieldDuration": 8,
-   "hasteOnUse": {
-    "pct": 0.3,
-    "duration": 4
-   },
-   "desc": "Packs grit into a barrier that absorbs the next 18 damage and holds for 8 seconds. Your movement speed rises 30% for 4 seconds after you use it."
-  },
-  {
-   "name": "Hard Landings",
-   "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
-   "element": "earth",
-   "moveSpeedPct": 0.12,
-   "resist": {
-    "element": "earth",
-    "amount": 0.08
-   },
-   "desc": "Your movement speed is permanently increased by 12%. You have 8% earth resistance."
-  }
- ]
+  "essence": "essEarth",
+  "stone": "stoneFlea",
+  "fusions": [
+    {
+      "name": "Bounding Slam",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "earth",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "chargeTo": 192,
+      "desc": "Springs you to a target up to 6 tiles away, then deals 14 damage to every enemy within 2.5 tiles of you."
+    },
+    {
+      "name": "Pestering Chips",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "rock",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Flicks a sharp chip that deals 4 damage to the first enemy it meets and makes it [Bleeding] for 1 damage a second for 3 seconds."
+    },
+    {
+      "name": "Springboard Slab",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "earth",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "cooldown": 30,
+      "shieldAmount": 18,
+      "shieldStrikes": 4,
+      "shieldDuration": 8,
+      "hasteOnUse": {
+        "pct": 0.3,
+        "duration": 4
+      },
+      "desc": "Packs grit into a barrier that absorbs the next 18 damage and holds for 8 seconds. Your movement speed rises 30% for 4 seconds after you use it."
+    },
+    {
+      "kind": "passive",
+      "name": "Hard Landings",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "desc": "Each time you spend stamina, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+    }
+  ]
 }

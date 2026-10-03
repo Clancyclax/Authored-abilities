@@ -1,0 +1,78 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Lime in the Eyes",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 0.8,
+   "confuse": true,
+   "confuseChance": 0.4,
+   "confuseDuration": 3,
+   "desc": "Throws a fistful of lime dust around you, which deals 10 damage to every enemy within 3 tiles and stuns them for 0.8 seconds, with a 40% chance to confuse each one for 3 seconds."
+  },
+  {
+   "name": "Pulled Keystone",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "A sly knock at a target at or below 25% of its health that deals 22 damage. It uses up every affliction on the target, adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Loose Paver",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "rock",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.5-second cast, lays a loose paving stone at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles sets it off: it deals 18 damage and leaves the enemy [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Mischief in the Mix",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 12%."
+  }
+ ]
+}

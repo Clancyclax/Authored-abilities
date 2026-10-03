@@ -1,63 +1,79 @@
 {
- "essence": "essHair",
- "stone": "stoneFoot",
- "fusions": [
-  {
-   "name": "Paced Lash",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "physical",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.0,
-   "spammable": true,
-   "range": 224,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "chargesMax": 4,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "maxMult": 1.5,
-   "desc": "Pays out a strand that deals 8 damage to one enemy within 7 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%). Holds 4 charges; each use spends one, and each kill restores one. Deals up to 1.5 times as much at maximum range."
-  },
-  {
-   "name": "Tripline",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "physical",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "range": 192,
-   "coneAngle": 0.75,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "stunOnHit": 1.0,
-   "desc": "Sweeps a cone of strands along the ground ahead of you, dealing 12 damage to everything caught in it and stunning each for 1 second."
-  },
-  {
-   "name": "Pacing Line",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "physical",
-   "cooldown": 60,
-   "buffStat": "regenStamina",
-   "buffAmount": 0.4,
-   "buffDuration": 18,
-   "desc": "Increases your stamina recovery by 40% for 18 seconds."
-  },
-  {
-   "name": "Worn Path",
-   "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
-   "element": "physical",
-   "moveSpeedPct": 0.12,
-   "desc": "Your movement speed is permanently increased by 12%."
-  }
- ]
+  "essence": "essHair",
+  "stone": "stoneFoot",
+  "fusions": [
+    {
+      "name": "Paced Lash",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "chargesMax": 4,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "maxMult": 1.5,
+      "desc": "Pays out a strand that deals 8 damage to one enemy within 7 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%). Holds 4 charges; each use spends one, and each kill restores one. Deals up to 1.5 times as much at maximum range."
+    },
+    {
+      "name": "Tripline",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 192,
+      "coneAngle": 0.75,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "desc": "Sweeps a cone of strands along the ground ahead of you, dealing 12 damage to everything caught in it and stunning each for 1 second."
+    },
+    {
+      "name": "Snare Underfoot",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "physical",
+      "cooldown": 40,
+      "summonKind": "trap",
+      "summonDmg": 18,
+      "summonDuration": 30,
+      "summonInterval": 0,
+      "summonRange": 64,
+      "summonCharges": 1,
+      "summonBlast": 64,
+      "summonArmDelay": 1,
+      "trapDelivery": "spawned",
+      "castTime": 1,
+      "desc": "Takes 1 second to set a snare of strands at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles springs it, which deals 18 damage in a blast around it."
+    },
+    {
+      "name": "Cordwain Soles",
+      "kind": "passive",
+      "category": "gear summon",
+      "template": "summonGear",
+      "element": "physical",
+      "itemBuffs": [
+        {
+          "stat": "moveSpeed",
+          "amount": 0.08
+        },
+        {
+          "stat": "staminaRegen",
+          "amount": 0.12
+        }
+      ],
+      "desc": "Conjures soles of braided strands: your movement speed rises 8% and your stamina recovers 12% faster."
+    }
+  ]
 }

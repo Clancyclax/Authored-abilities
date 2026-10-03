@@ -1,77 +1,81 @@
 {
- "essence": "essCat",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "name": "Misdirected Swat",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1.0,
-   "spammable": true,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "chargesMax": 4,
-   "confuse": true,
-   "confuseChance": 0.35,
-   "confuseDuration": 3,
-   "desc": "Flicks a bolt that deals 7 damage, with a 35% chance to turn the target against its allies for 3 seconds. You hold 4 charges and each kill gives one back."
-  },
-  {
-   "name": "Pilfering Finish",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 15,
-   "range": 80,
-   "sunder": {
-    "amount": 0.08,
-    "duration": 4
-   },
-   "requiresTargetBelow": 0.25,
-   "consumeAfflictionsPer": 0.6,
-   "desc": "A strike that deals 16 damage to an enemy at or below 25% health and leaves it 8% easier to wound for 4 seconds. It uses up every affliction you have on the target for 60% more damage each."
-  },
-  {
-   "name": "Now You Don't",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "physical",
-   "cooldown": 30,
-   "stealthDuration": 8,
-   "stealthAlpha": 0.25,
-   "aggroMult": 0.3,
-   "stealthSpeedPct": 20,
-   "stealthScope": "self",
-   "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 20% faster, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Ill-Gotten Edge",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.3,
-    "strikes": 1
-   },
-   "desc": "When you inflict a condition on an enemy, your next strike has 30% more critical chance. Once every 6 seconds."
-  }
- ]
+  "essence": "essCat",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Feinting Swat",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "spammable": true,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "chargesMax": 4,
+      "desc": "Flicks a feinting swat that deals 7 damage, with a 40% chance to leave the target [Exposed] for 5 seconds. You hold 4 charges and each kill gives one back.",
+      "debuff": {
+        "key": "expose",
+        "chance": 0.4,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Pilfering Finish",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 15,
+      "range": 80,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "requiresTargetBelow": 0.25,
+      "consumeAfflictionsPer": 0.6,
+      "desc": "A strike that deals 16 damage to an enemy at or below 25% health and leaves it 8% easier to wound for 4 seconds. It uses up every affliction you have on the target for 60% more damage each."
+    },
+    {
+      "name": "Now You Don't",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "physical",
+      "cooldown": 30,
+      "stealthDuration": 8,
+      "stealthAlpha": 0.25,
+      "aggroMult": 0.3,
+      "stealthSpeedPct": 20,
+      "stealthScope": "self",
+      "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 20% faster, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Playing Wounded",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 30,
+        "frac": 0.4
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.5
+      },
+      "desc": "When your health falls below 40%, your next strike has 50% more critical chance. Once every 30 seconds."
+    }
+  ]
 }

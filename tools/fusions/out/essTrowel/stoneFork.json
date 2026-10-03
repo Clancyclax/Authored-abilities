@@ -1,0 +1,76 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Bat",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flings half a brick that deals 7 damage, then forks to 1 more enemy within 3 tiles for 50% of that. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Both Ways Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 9,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "desc": "Swings the trowel both ways, sending 2 clods of spoil out spread wide; each deals 11 damage and knocks the enemy it hits back 2.5 tiles."
+  },
+  {
+   "name": "Diverted Blow",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "damage",
+   "reflectFrac": 0.25,
+   "buffDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "For 8 seconds, 25% of the damage you take is turned back on whoever dealt it, and your armour rises by 10%."
+  },
+  {
+   "name": "Either Side of It",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, a blow aimed at you that would have landed is rolled for dodge a second time, and the second roll stands."
+  }
+ ]
+}

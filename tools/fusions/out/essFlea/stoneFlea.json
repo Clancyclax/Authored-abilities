@@ -43,7 +43,7 @@
    "scaleOn": "distanceTravelled",
    "scalePer": 0.08,
    "scaleCap": 0.4,
-   "desc": "Every enemy within 3.5 tiles takes 14 damage and is knocked back 2.5 tiles. Its damage rises +8% per 100 paces you have run since you last used it (max +40%)."
+   "desc": "Your landing deals 14 damage to every enemy within 3.5 tiles and knocks them back 2.5 tiles. Its damage rises +8% per 100 paces you have run since you last used it (max +40%)."
   },
   {
    "name": "Boundless Leap",
@@ -60,17 +60,23 @@
    "desc": "A short burst of movement that carries you 6 tiles forward. Using it increases your movement speed by 25% for 3s."
   },
   {
-   "name": "Lucky Landing",
+   "name": "Blood Between Bounds",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "rerollKind": "crit",
-   "rerollCooldown": 8,
-   "rerollKinds": [
-    "crit"
-   ],
-   "desc": "Once every 8s, a strike that failed to crit is rolled a second time, and the second roll stands."
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you heal for 20% of all damage you deal for 4 seconds. Once every 10 seconds."
   }
  ]
 }

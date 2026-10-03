@@ -1,0 +1,88 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Rot in the Joints",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "spreadAfflictions": 112,
+   "desc": "A strike into the mortar joints that deals 12 damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and 10% easier to wound for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Dry Rot Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bursts the rot through the stonework around you, dealing 28 damage to every enemy within 3.5 tiles, ignoring armour, with a 50% chance to leave each one [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Damp Pillar",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "plant",
+   "cooldown": 45,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.5-second cast, sets up a mould-furred pillar for 12 seconds. Every 1.5 seconds it fires spores at an enemy within 5 tiles and deals 4 damage, with a 30% chance to leave the target [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Mycelial Mortar",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 14,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 14, and you regenerate 0.5 health a second, permanently."
+  }
+ ]
+}
