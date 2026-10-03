@@ -1,73 +1,68 @@
 {
- "essence": "essOctopus",
- "stone": "stoneHair",
- "fusions": [
-  {
-   "name": "Garotte Thread",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 14,
-   "range": 90,
-   "stackMult": 1.6,
-   "executeLadder": true,
-   "requiresTargetBelow": 0.25,
-   "consumeAfflictionsPer": 0.6,
-   "desc": "Cinches fine filaments around a target at or below 25% health, dealing 16 damage and using up every affliction you have on it for 60% more damage each."
-  },
-  {
-   "name": "Spun Spray",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "water",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 160,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.35,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Sprays a cone of sticky threads 5 tiles ahead, dealing 4 damage to everything in it, with a 35% chance to leave each target [Slowed] for 4 seconds."
-  },
-  {
-   "name": "Mantle of Strands",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "physical",
-   "cooldown": 40,
-   "armorBonus": 0.2,
-   "buffDuration": 12,
-   "desc": "Weaves your arms into a mantle that raises your armour by 20% for 12 seconds."
-  },
-  {
-   "name": "Strand upon Strand",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "physical",
-   "stackShape": "mark",
-   "stackBuild": "hit",
-   "stackPay": "burst",
-   "stackCap": 6,
-   "stackDecay": 4,
-   "stackSpend": "full",
-   "stackOn": "enemy",
-   "stackScale": 0.8,
-   "stackIcon": "stackKarma",
-   "desc": "Every hit you land lays a strand on the target, up to 6. When it reaches 6 they all spend at once as a burst of damage. Unfed, a strand frays every 4 seconds."
-  }
- ]
+  "essence": "essOctopus",
+  "stone": "stoneHair",
+  "fusions": [
+    {
+      "name": "Garotte Thread",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 14,
+      "range": 90,
+      "stackMult": 1.6,
+      "executeLadder": true,
+      "requiresTargetBelow": 0.25,
+      "consumeAfflictionsPer": 0.6,
+      "desc": "Cinches fine filaments around a target at or below 25% health, dealing 16 damage and using up every affliction you have on it for 60% more damage each."
+    },
+    {
+      "name": "Binding Strand",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 3
+      },
+      "desc": "Wraps a sticky strand around the target, dealing 4 damage and slowing it by 25% for 3 seconds.",
+      "speed": 380,
+      "radius": 8
+    },
+    {
+      "name": "Mantle of Strands",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "armorBonus": 0.2,
+      "buffDuration": 12,
+      "desc": "Weaves your arms into a mantle that raises your armour by 20% for 12 seconds."
+    },
+    {
+      "name": "Strand upon Strand",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "burst",
+      "stackCap": 6,
+      "stackDecay": 4,
+      "stackSpend": "full",
+      "stackOn": "enemy",
+      "stackScale": 0.8,
+      "stackIcon": "stackKarma",
+      "desc": "Every hit you land lays a strand on the target, up to 6. When it reaches 6 they all spend at once as a burst of damage. Unfed, a strand frays every 4 seconds."
+    }
+  ]
 }

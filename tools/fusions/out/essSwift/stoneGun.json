@@ -1,65 +1,77 @@
 {
- "essence": "essSwift",
- "stone": "stoneGun",
- "fusions": [
-  {
-   "name": "Snap Shot",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 900,
-   "radius": 5,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Fires a fast shot that deals 5 damage to the first enemy it meets."
-  },
-  {
-   "name": "Emptied Cylinder",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "piercing",
-   "role": "long",
-   "base": 8,
-   "cooldown": 80,
-   "volleyCount": 6,
-   "volleySpread": 0.25,
-   "speed": 900,
-   "radius": 5,
-   "range": 288,
-   "reachUnits": 288,
-   "rangeBand": "long",
-   "isAoe": true,
-   "guaranteedCrit": true,
-   "desc": "Fires 6 shots in one burst, fanned slightly apart, each of which deals 8 damage. Every hit is a critical hit."
-  },
-  {
-   "name": "Itchy Trigger Finger",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "piercing",
-   "buffStat": "attackSpeed",
-   "buffAmount": 0.3,
-   "buffDuration": 10,
-   "cooldown": 45,
-   "desc": "Increases your attack speed by 30% for 10 seconds."
-  },
-  {
-   "name": "Muzzle Velocity",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
-   "element": "piercing",
-   "pierceElement": "piercing",
-   "armorIgnore": 0.12,
-   "cooldownReduction": 0.06,
-   "desc": "Your piercing attacks ignore 12% of the target's armour, and your other abilities come round 6% sooner."
-  }
- ]
+  "essence": "essSwift",
+  "stone": "stoneGun",
+  "fusions": [
+    {
+      "name": "Snap Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 900,
+      "radius": 5,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Fires a fast shot that deals 5 damage to the first enemy it meets."
+    },
+    {
+      "name": "Emptied Cylinder",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "long",
+      "base": 8,
+      "cooldown": 80,
+      "volleyCount": 6,
+      "volleySpread": 0.25,
+      "speed": 900,
+      "radius": 5,
+      "range": 288,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "isAoe": true,
+      "guaranteedCrit": true,
+      "desc": "Fires 6 shots in one burst, fanned slightly apart, each of which deals 8 damage. Every hit is a critical hit."
+    },
+    {
+      "name": "Itchy Trigger Finger",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "piercing",
+      "buffStat": "attackSpeed",
+      "buffAmount": 0.3,
+      "buffDuration": 10,
+      "cooldown": 45,
+      "desc": "Increases your attack speed by 30% for 10 seconds, and you move 20% faster for 5 seconds.",
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 5
+      }
+    },
+    {
+      "name": "Shot on the Run",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.2,
+        "duration": 3
+      },
+      "desc": "Each time you cover a long stretch of ground, your critical hit chance rises by 20% for 3 seconds. Once every 8 seconds."
+    }
+  ]
 }

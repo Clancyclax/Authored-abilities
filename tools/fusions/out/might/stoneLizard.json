@@ -1,66 +1,73 @@
 {
- "essence": "might",
- "stone": "stoneLizard",
- "fusions": [
-  {
-   "name": "Tail Lash",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 14,
-   "range": 128,
-   "reachUnits": 128,
-   "rangeBand": "medium",
-   "maxMult": 1.3,
-   "stunOnHit": 1.2,
-   "desc": "Whips your weight around to hit a target up to 4 tiles away, which deals 13 damage, rising to 1.3 times that at full range, and stuns it for 1.2 seconds."
-  },
-  {
-   "name": "Long-Awaited Crunch",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "blunt",
-   "role": "execute",
-   "base": 24,
-   "cooldown": 16,
-   "range": 84,
-   "reachUnits": 84,
-   "rangeBand": "melee",
-   "requiresTargetBelow": 0.25,
-   "executeLadder": false,
-   "stackMult": 1,
-   "desc": "A bite that strikes only a target at or below 25% health. It deals 24 damage and uses up every affliction on the target, adding the damage they had left."
-  },
-  {
-   "name": "Sunned Hide",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "physical",
-   "cooldown": 30,
-   "shieldAmount": 22,
-   "shieldDuration": 8,
-   "shieldStrikes": 0,
-   "armorBonus": 0.1,
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "desc": "Raises a barrier that absorbs the next 22 damage and holds for 8 seconds, and your armour rises by 10%."
-  },
-  {
-   "name": "Warm-Blooded Hours",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "physical",
-   "condition": "day",
-   "bonusKind": "dmg",
-   "amount": 0.12,
-   "desc": "In daylight, you deal 12% more damage."
-  }
- ]
+  "essence": "might",
+  "stone": "stoneLizard",
+  "fusions": [
+    {
+      "name": "Tail Lash",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 128,
+      "reachUnits": 128,
+      "rangeBand": "medium",
+      "maxMult": 1.3,
+      "stunOnHit": 1.2,
+      "desc": "Whips your weight around to hit a target up to 4 tiles away, which deals 13 damage, rising to 1.3 times that at full range, and stuns it for 1.2 seconds."
+    },
+    {
+      "name": "Slow Clamp",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "strikes": 1,
+      "chargesMax": 3,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 3
+      },
+      "desc": "A bite that deals 8 damage, leaves the target [Bleeding] for 2 damage a second for 4 seconds and slows it by 30% for 3 seconds. Holds 3 charges, and kills give charges back."
+    },
+    {
+      "name": "Sunned Hide",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 30,
+      "shieldAmount": 22,
+      "shieldDuration": 8,
+      "shieldStrikes": 0,
+      "armorBonus": 0.1,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "desc": "Raises a barrier that absorbs the next 22 damage and holds for 8 seconds, and your armour rises by 10%."
+    },
+    {
+      "name": "Warm-Blooded Hours",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "day",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "In daylight, you deal 12% more damage."
+    }
+  ]
 }

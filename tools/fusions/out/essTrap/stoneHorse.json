@@ -51,13 +51,23 @@
    "partyDmgPct": 0.2
   },
   {
-   "name": "Drumming Pace",
+   "name": "Gallop Primer",
    "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "desc": "Your movement speed is permanently increased by 12%.",
-   "moveSpeedPct": 0.12
+   "desc": "When you cover a long stretch of ground, your next spell deals 30% more damage. Once every 10 seconds.",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   }
   }
  ]
 }

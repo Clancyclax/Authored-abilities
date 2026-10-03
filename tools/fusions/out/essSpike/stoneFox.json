@@ -1,78 +1,78 @@
 {
- "essence": "essSpike",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Misleading Prick",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "basic",
-   "spammable": true,
-   "base": 4,
-   "cooldown": 0.8,
-   "speed": 420,
-   "radius": 6,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "confuse": true,
-   "confuseChance": 0.15,
-   "confuseDuration": 2,
-   "desc": "Flicks a spine that deals 4 damage to the first enemy it meets within 7 tiles, with a 15% chance to turn it against its allies for 2 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Set Them Snapping",
-   "template": "confuseTurn",
-   "element": "piercing",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 20,
-   "range": 114,
-   "reachUnits": 114,
-   "rangeBand": "melee",
-   "confuseDuration": 5,
-   "maxTargets": 2,
-   "confuseDamageFrac": 1,
-   "confuseDamagePct": 1,
-   "duration": 5,
-   "stunOnHit": 1,
-   "desc": "Jabs up to 2 enemies within 3.5 tiles, dealing 10 damage to each and stunning them for 1 second, then turns them against each other for 5 seconds."
-  },
-  {
-   "name": "Doubled Back",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "shadow",
-   "stealthDuration": 6,
-   "stealthAlpha": 0.35,
-   "aggroMult": 0.4,
-   "stealthSpeedPct": 15,
-   "stealthScope": "self",
-   "cooldown": 24,
-   "desc": "Veils you for 6 seconds and raises your movement speed by 15% while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Biding the Opening",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "piercing",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.3,
-    "duration": 4
-   },
-   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 30% for 4 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essSpike",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Misleading Prick",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 420,
+      "radius": 6,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "confuse": true,
+      "confuseChance": 0.15,
+      "confuseDuration": 2,
+      "desc": "Flicks a spine that deals 4 damage to the first enemy it meets within 7 tiles, with a 15% chance to turn it against its allies for 2 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Set Them Snapping",
+      "template": "confuseTurn",
+      "element": "piercing",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 20,
+      "range": 114,
+      "reachUnits": 114,
+      "rangeBand": "melee",
+      "confuseDuration": 5,
+      "maxTargets": 2,
+      "confuseDamageFrac": 1,
+      "confuseDamagePct": 1,
+      "duration": 5,
+      "stunOnHit": 1,
+      "desc": "Jabs up to 2 enemies within 3.5 tiles, dealing 10 damage to each and stunning them for 1 second, then turns them against each other for 5 seconds."
+    },
+    {
+      "name": "Doubled Back",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "shadow",
+      "stealthDuration": 6,
+      "stealthAlpha": 0.35,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 15,
+      "stealthScope": "self",
+      "cooldown": 24,
+      "desc": "Veils you for 6 seconds and raises your movement speed by 15% while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Short-Changed",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 3
+      },
+      "desc": "When you inflict a condition on an enemy, you regain 3 stamina. Once every 8 seconds."
+    }
+  ]
 }

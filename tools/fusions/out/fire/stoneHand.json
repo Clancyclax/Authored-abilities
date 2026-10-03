@@ -1,81 +1,80 @@
 {
- "essence": "fire",
- "stone": "stoneHand",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "element": "fire",
-   "name": "Scalding Clasp",
-   "template": "imbueStrike",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 14,
-   "strikes": 1,
-   "stunOnHit": 1.2,
-   "dot": {
-    "dmgPerTick": 3,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Burning"
-   },
-   "desc": "Seizes the target in a burning grip that deals 13 damage, stuns it for 1.2 seconds and sets it [Burning] for 3 damage a second for 4 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "element": "fire",
-   "name": "Steady Pour",
-   "template": "breathCone",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "chargesMax": 4,
-   "range": 96,
-   "coneAngle": 0.35,
-   "isAoe": true,
-   "aoeBand": "small",
-   "debuff": {
-    "key": "burn",
-    "chance": 0.5,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Pours a narrow, steady stream of flame that deals 7 damage to everything within 3 tiles ahead of you, with a 50% chance to set each [Burning] for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "kind": "active",
-   "category": "restore",
-   "element": "fire",
-   "name": "Cauterizing Touch",
-   "template": "cleanse",
-   "cleanseCount": 2,
-   "healScope": "self",
-   "healOnUse": 12,
-   "cooldown": 30,
-   "desc": "Removes up to 2 conditions from you and restores 12 health."
-  },
-  {
-   "name": "Unshaking Aim",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "fire",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 8,
-    "seconds": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.4,
-    "strikes": 1
-   },
-   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
-  }
- ]
+  "essence": "fire",
+  "stone": "stoneHand",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "element": "fire",
+      "name": "Scalding Clasp",
+      "template": "imbueStrike",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "strikes": 1,
+      "stunOnHit": 1.2,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "Seizes the target in a burning grip that deals 13 damage, stuns it for 1.2 seconds and sets it [Burning] for 3 damage a second for 4 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "element": "fire",
+      "name": "Steady Pour",
+      "template": "breathCone",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "chargesMax": 4,
+      "range": 96,
+      "coneAngle": 0.35,
+      "isAoe": true,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "burn",
+        "chance": 0.5,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Pours a narrow, steady stream of flame that deals 7 damage to everything within 3 tiles ahead of you, with a 50% chance to set each [Burning] for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "kind": "active",
+      "category": "restore",
+      "element": "fire",
+      "name": "Cauterizing Touch",
+      "template": "cleanse",
+      "cleanseCount": 2,
+      "healScope": "self",
+      "healOnUse": 12,
+      "cooldown": 30,
+      "desc": "Removes up to 2 conditions from you and restores 12 health."
+    },
+    {
+      "name": "Held Flame",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "fire",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 4
+      },
+      "desc": "Each time you afflict an enemy, you regain 4 stamina. Once every 6 seconds."
+    }
+  ]
 }

@@ -3,7 +3,7 @@
  "stone": "stoneHook",
  "fusions": [
   {
-   "name": "Barbed Back-Edge",
+   "name": "Barbed Backstroke",
    "kind": "active",
    "category": "attack",
    "template": "imbueStrike",
@@ -27,21 +27,27 @@
    "desc": "A cut drawn back on the barb that deals 4 damage, slows the target by 25% for 2 seconds and leaves it [Bleeding] for 1 damage a second for 3 seconds."
   },
   {
-   "name": "Gaff the Weakened",
+   "name": "Snag and Stay",
    "kind": "active",
    "category": "attack",
-   "template": "stackStrike",
+   "template": "projectileBall",
    "element": "piercing",
-   "role": "execute",
-   "base": 18,
-   "cooldown": 15,
-   "range": 96,
-   "reachUnits": 96,
-   "rangeBand": "melee",
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.3,
-   "executeLadder": false,
-   "desc": "A finishing cut that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a barbed blade at the first enemy within 6 tiles, dealing 12 damage and leaving it [Pinned] for 2 seconds. Your afflictions on it spread to every enemy within 3 tiles of it.",
+   "spreadAfflictions": 96
   },
   {
    "name": "Drawn onto the Point",

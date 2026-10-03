@@ -1,79 +1,85 @@
 {
- "essence": "essStaff",
- "stone": "stoneFork",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Two Ways at Once",
-   "template": "volley",
-   "element": "piercing",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "volleyCount": 2,
-   "volleySpread": 0.5,
-   "speed": 380,
-   "radius": 7,
-   "range": 128,
-   "reachUnits": 128,
-   "rangeBand": "melee",
-   "isAoe": true,
-   "castTime": 0,
-   "desc": "You thrust the forked head of the staff so both tines strike at once, sending 2 jabs out to 4 tiles, spread apart. Each deals 3 damage."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Pinned in the Crotch",
-   "template": "sunderStrike",
-   "element": "piercing",
-   "role": "execute",
-   "base": 26,
-   "cooldown": 14,
-   "range": 96,
-   "reachUnits": 96,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.1,
-    "duration": 4
-   },
-   "requiresTargetBelow": 0.25,
-   "debuff": {
-    "key": "pinned",
-    "chance": 1,
-    "duration": 2,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "You drive the fork down over an enemy within 3 tiles at or below 25% health, dealing 26 damage. It is [Pinned] for 2 seconds and left 10% easier to wound for 4 seconds."
-  },
-  {
-   "name": "Split Palisade",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "physical",
-   "wallKind": "block",
-   "wallLength": 160,
-   "wallDuration": 6,
-   "wallThickness": 26,
-   "cooldown": 24,
-   "desc": "You plant the staff and a forked palisade branches out from it, a wall 5 tiles long that blocks enemies for 6 seconds."
-  },
-  {
-   "name": "Second Tine",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
-   "element": "physical",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 10,
-   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again for the staff's other tine, and the second roll stands."
-  }
- ]
+  "essence": "essStaff",
+  "stone": "stoneFork",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Two Ways at Once",
+      "template": "volley",
+      "element": "piercing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "volleyCount": 2,
+      "volleySpread": 0.5,
+      "speed": 380,
+      "radius": 7,
+      "range": 128,
+      "reachUnits": 128,
+      "rangeBand": "melee",
+      "isAoe": true,
+      "castTime": 0,
+      "desc": "You thrust the forked head of the staff so both tines strike at once, sending 2 jabs out to 4 tiles, spread apart. Each deals 3 damage."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Tines Astride",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 26,
+      "cooldown": 14,
+      "range": 96,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "requiresTargetBelow": 0.25,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "You drive the fork down over an enemy within 3 tiles at or below 25% health, dealing 26 damage. It is [Pinned] for 2 seconds and left 10% easier to wound for 4 seconds."
+    },
+    {
+      "name": "Split Palisade",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "wallKind": "block",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "cooldown": 24,
+      "desc": "You plant the staff and a forked palisade branches out from it, a wall 5 tiles long that blocks enemies for 6 seconds."
+    },
+    {
+      "name": "Other Tine Follows",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "desc": "When you land a critical hit, the second tine jabs the nearest enemy within 4 tiles for 6 damage. Once every 6 seconds.",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 6,
+        "range": 128
+      }
+    }
+  ]
 }

@@ -1,70 +1,77 @@
 {
- "essence": "essMouse",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Ram From Below",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 15,
-   "range": 72,
-   "chargeTo": 192,
-   "sunder": {
-    "amount": 0.12,
-    "duration": 6
-   },
-   "desc": "Rushes up to 6 tiles to the target and rams it for 13 damage, leaving it 12% easier to wound for 6 seconds."
-  },
-  {
-   "name": "Won't Let Go",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "piercing",
-   "role": "execute",
-   "base": 20,
-   "cooldown": 16,
-   "range": 72,
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": false,
-   "desc": "Usable only on an enemy at or below 25% health: a clinging bite deals 20 damage and consumes every affliction on the target, adding 1.5 times their remaining damage."
-  },
-  {
-   "name": "Dig In",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "earth",
-   "armorBonus": 0.2,
-   "buffDuration": 10,
-   "cooldown": 40,
-   "dodgeBonus": 0.08,
-   "desc": "Raises your armour by 20% for 10 seconds and gives you 8% more dodge chance."
-  },
-  {
-   "name": "Will Not Budge",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "earth",
-   "isTriggered": true,
-   "cooldown": 30,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 30
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.25,
-    "duration": 6
-   },
-   "dodgeBonus": 0.04,
-   "desc": "When your health falls below 40%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds. Your dodge chance rises by 4%."
-  }
- ]
+  "essence": "essMouse",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Ram From Below",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 15,
+      "range": 72,
+      "chargeTo": 192,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 6
+      },
+      "desc": "Rushes up to 6 tiles to the target and rams it for 13 damage, leaving it 12% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Scree Kick",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "earth",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 380,
+      "radius": 6,
+      "reachUnits": 128,
+      "debuff": {
+        "key": "critDamageDown",
+        "chance": 0.25,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Kicks up a loose stone that deals 4 damage, with a 25% chance to leave the target [Dulled] for 4 seconds."
+    },
+    {
+      "name": "Dig In",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "earth",
+      "armorBonus": 0.2,
+      "buffDuration": 10,
+      "cooldown": 40,
+      "dodgeBonus": 0.08,
+      "desc": "Raises your armour by 20% for 10 seconds and gives you 8% more dodge chance."
+    },
+    {
+      "name": "Will Not Budge",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 6
+      },
+      "dodgeBonus": 0.04,
+      "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds. Your dodge chance rises by 4%."
+    }
+  ]
 }
