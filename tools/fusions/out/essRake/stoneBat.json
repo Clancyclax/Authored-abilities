@@ -1,0 +1,83 @@
+{
+ "essence": "essRake",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Echo Down the Haft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a pulse of sound that deals 4 damage, then leaps to 2 more enemies within 3 tiles for 60% of that. Each hit has a 40% chance to leave the target [Marked] for 6 seconds.",
+   "spammable": true
+  },
+  {
+   "name": "Night Gleaning",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "dark",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A reaching strike on a target up to 5 tiles away that deals 18 damage, rising to 1.5 times that at full reach. It uses up every affliction you have on the target and deals 60% more damage for each."
+  },
+  {
+   "name": "Ranging Cry",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "dark",
+   "cooldown": 45,
+   "rangeMult": 1.2,
+   "buffDuration": 12,
+   "desc": "For 12 seconds, your attacks and spells reach 1.2 times as far."
+  },
+  {
+   "name": "Lapped Dry",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your hits heal you for 20% of their damage for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

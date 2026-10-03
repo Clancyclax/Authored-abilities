@@ -1,0 +1,81 @@
+{
+ "essence": "essShip",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Beaked Prow",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Rams the target for 30 damage that ignores armour, leaving it 20% easier to wound for 8 seconds. Its damage rises 6% for every 100 paces you have covered since you last used it (max 30%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shields Along the Rail",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "Slams a wall of shields through a cone 3 tiles long, dealing 13 damage to everything in it and stunning each enemy for 1 second."
+  },
+  {
+   "name": "Double Hull",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 26,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 4
+   },
+   "desc": "Absorbs the next 26 damage you take, for up to 8 seconds. Your armour rises by 10% while it holds, and you move 12% faster for the first 4 seconds."
+  },
+  {
+   "name": "Copper Sheathing",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.06,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Every hit you take is 2 lower, your armour rises by 10%, you move 4% faster, and 6% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

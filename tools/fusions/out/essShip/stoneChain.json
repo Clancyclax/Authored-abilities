@@ -1,0 +1,89 @@
+{
+ "essence": "essShip",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dismasting Shot",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws two weights joined by links into the first enemy it meets for 7 damage, then on to 2 more enemies within 3 tiles for 60% of that. Each hit has a 40% chance to leave its target [Slowed] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Let Go the Bower",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops your anchor at your feet, dealing 14 damage to every enemy within 2.5 tiles and stunning each for 1 second, with a 50% chance to leave each [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Boom Across the Mouth",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "desc": "Hauls a harbour boom of heavy links 6 tiles long across the ground ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Paying Out Cable",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you land a hit, a link builds on that enemy, up to 5. At 5 they all spend at once: the cable snaps taut and strikes that enemy for 27% of your weapon damage per link. Unfed, a link fades every 4 seconds."
+  }
+ ]
+}

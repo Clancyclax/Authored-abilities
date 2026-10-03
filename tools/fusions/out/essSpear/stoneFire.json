@@ -1,0 +1,93 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Pitch-Wrapped Javelin",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Throws a burning javelin that deals 28 fire damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Flame-Tube Discharge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Discharges a tube lashed below the blade through a cone 4 tiles long that deals 12 fire damage to everything in it and leaves each enemy [Burning] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Heated Rebuke",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are set [Burning] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Tempered Point",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "resist_fire",
+     "amount": 0.1
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a shaft with a charred, hardened tip. It increases your weapon damage by 10% and your fire resistance by 10%, and every strike with it sets the target [Burning] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

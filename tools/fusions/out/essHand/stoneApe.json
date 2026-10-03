@@ -1,0 +1,89 @@
+{
+ "essence": "essHand",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Skinned Knuckles",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "range": 86,
+   "desc": "A bare-knuckle punch that costs 4% of your maximum health, deals 9 damage and leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Silverback Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings both fists down on the ground, dealing 28 damage to every enemy within 3 tiles. Every hit is a critical hit and leaves the target [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Bough Swing",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 8,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Swings you 5 tiles forward. Your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "name": "Thick Wrists",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "maxHp",
+     "amount": 10,
+     "text": "your maximum health rises"
+    },
+    {
+     "rank": "silver",
+     "stat": "attackSpeed",
+     "amount": 0.05,
+     "text": "you attack faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "armor",
+     "amount": 0.05,
+     "text": "your armour rises"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank your maximum health rises by 10, from silver you attack 5% faster, and from gold your armour rises by 5%."
+  }
+ ]
+}

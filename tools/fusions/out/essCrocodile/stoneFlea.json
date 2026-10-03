@@ -1,0 +1,86 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Springing Clamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 224,
+   "maxMult": 1.8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Leaps at a target up to 7 tiles away and deals 12 damage, rising to 1.8 times that at full reach. It stuns the target for 1 second and leaves it [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "Skipping Snaps",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Snaps at every enemy within 2 tiles, dealing 3 damage, then leaps to 2 more enemies within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Hop the Bank",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "cooldown": 20,
+   "desc": "Steps you instantly to a point up to 7 tiles away. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Gathered Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "armorBonus": 0.06,
+   "desc": "Every 6 tiles you cover, your crit chance rises by 30% for your next strike. Once every 8 seconds. Your armour rises by 6%."
+  }
+ ]
+}

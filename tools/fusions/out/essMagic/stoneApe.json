@@ -1,0 +1,73 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 12,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Grasp of Force",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "stunOnHit": 1.2,
+   "desc": "Throws out a hand of force that seizes the first enemy it meets, dealing 12 damage and stunning it for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Troop Thunder",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Releases a burst of arcana that deals 26 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Long-Armed Haul",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "arcane",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 30,
+   "desc": "Lays a line of force 5 tiles long ahead of you for 5 seconds that drags every enemy near it inward."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "name": "Knuckles Alight",
+   "element": "arcane",
+   "desc": "Each time you spend mana, your physical damage rises by 30% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

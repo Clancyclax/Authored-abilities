@@ -1,0 +1,84 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Scalding Steam",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes steam in a 4-tile cone ahead of you, dealing 26 damage to everything in it and leaving each target [Burning] for 5 seconds. It ignores armour."
+  },
+  {
+   "name": "Boiling Bead",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Flicks a bead of boiling water that deals 7 damage and scalds the target, leaving it [Burning] for 2 damage a second for 4 seconds. It holds 3 charges and kills give charges back."
+  },
+  {
+   "name": "Veil of Vapour",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "dodgeBonus": 0.1,
+   "cooldown": 45,
+   "desc": "Turns the water on your feathers to steam: your fire damage rises by 25% for 12 seconds, with 10% more dodge chance."
+  },
+  {
+   "name": "Pressure Vent",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "fire",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackKarma",
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "Every time you take damage, a stack of steam builds on you, up to 6. At 6 they all vent at once on the nearest enemy within 8 tiles, for 20% of your weapon damage per stack (122% at full). Unfed, a stack fades every 10 seconds. You take 10% less fire damage."
+  }
+ ]
+}

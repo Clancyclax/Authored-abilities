@@ -1,0 +1,75 @@
+{
+ "essence": "essBear",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spat Venom",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits venom that deals 8 damage to the first enemy it meets and leaves it [Poisoned] for 2 damage a second for 6 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "range": 300,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Torpor Breath",
+   "element": "frost",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.7,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes a cone of cold that deals 12 damage to everything caught in it and stuns it for 0.8 seconds. Each hit has a 70% chance of leaving the target [Slowed] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Sunning Rock",
+   "template": "selfHot",
+   "element": "fire",
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 4 health a second to you for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Midday Vigour",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "In daylight, you deal 12% more damage."
+  }
+ ]
+}

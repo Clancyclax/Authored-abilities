@@ -1,0 +1,77 @@
+{
+ "essence": "essFish",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Dazzle Glint",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "stunOnHit": 1.0,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Throws a flash of silver that deals 10 damage and stuns the target for 1 second. Its damage rises 6% for each ally within 5.5 tiles, up to 30%."
+  },
+  {
+   "name": "Sleight Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 256,
+   "maxMult": 2.2,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrown blow that costs 4% of your maximum health and deals 8 damage, up to 2.2 times as much at maximum range. Each hit has a 50% chance to leave the target [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Glint and Vanish",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 40,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 25,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds, and you move 25% faster. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Last Laugh",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you gain a ward worth 10% of your maximum health for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

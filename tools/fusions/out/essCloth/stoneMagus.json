@@ -1,0 +1,71 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Muted Phrase",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 5,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a knotted thread that deals 4 damage to the first enemy it meets, with a 30% chance per hit to leave it [Muddled] for 3 seconds."
+  },
+  {
+   "name": "Marginal Gloss",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.2,
+   "consumeAffliction": true,
+   "desc": "Annotates an enemy up to 6 tiles away, dealing 9 damage, up to 1.2 times as much at full reach. It needs an affliction of yours on the target and uses it up."
+  },
+  {
+   "name": "Redlined Draft",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "arcane",
+   "cooldown": 30,
+   "cleanseCount": 1,
+   "healScope": "party",
+   "desc": "Strikes out 1 condition on you and on every ally."
+  },
+  {
+   "name": "Rehearsed Verse",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.15,
+    "charges": 1
+   },
+   "desc": "Whenever you spend mana, your next spell deals 15% more damage. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "essence": "essBee",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spun Web",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "spreadAfflictions": 128,
+   "base": 8,
+   "cooldown": 15,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "rangeBand": "medium",
+   "reachUnits": 220,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 fine strands in a fan, each dealing 8 damage. Each hit has a 30% chance of [Pinned] for 3 seconds. Your afflictions on a target spread to every enemy within 4 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tangled Hop",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.7,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 3,
+    "radius": 95,
+    "frac": 0.5
+   },
+   "chainCount": 3,
+   "chainRange": 95,
+   "chainDamagePct": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a fine stinger that deals 3 damage, then runs on to 3 more enemies within 3 tiles, each hit dealing 50% of the original damage. Each hit has a 25% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Fine-Toothed",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "dmg_physical",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 2,
+    "interval": 1,
+    "duration": 12
+   },
+   "desc": "Increases your physical damage by 25% for 15 seconds. A tangle of strands fights beside you for 12 seconds, striking for 2 every 1 second."
+  },
+  {
+   "kind": "passive",
+   "name": "Fine Print",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.5,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 8. Your next critical hit on it spends them all: a blow strikes that enemy for 17% of your weapon damage per stack (136% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

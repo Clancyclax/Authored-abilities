@@ -1,0 +1,96 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Thrown to the Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Seizes the target in both hands and hurls it 3 tiles, which deals 12 damage and leaves it 12% easier to wound for 6 seconds. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "name": "Rallying Roar",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Beats your chest and howls, which deals 26 damage to every enemy within 3.5 tiles. Your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Loud in Front",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Packmate",
+   "desc": "Pounds the ground and bellows, pulling up to 4 enemies within 6 tiles onto you for 5 seconds. For 8 seconds a packmate fights beside you, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Knuckle-Runner",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "attackSpeed",
+     "amount": 0.05,
+     "text": "you attack faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank you move 5% faster, from silver you attack 5% faster, and from gold your dodge chance rises 5%."
+  }
+ ]
+}

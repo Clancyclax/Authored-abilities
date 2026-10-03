@@ -1,0 +1,79 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Grubbing Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "Brings the sharpened blade down edge-first from overhead for 30 damage, then levers the cut open, leaving the target 15% easier to wound for 8 seconds. The hit is always a critical hit."
+  },
+  {
+   "name": "Brush Clearing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Swings the blade edge-on in a full circle, dealing 7 damage to every enemy within 2 tiles and leaving them [Bleeding] for 2 damage a second for 3 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Filed Bevel",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Files the spade's edge sharp, increasing your slashing damage by 25% for 12 seconds."
+  },
+  {
+   "name": "Mattock Head",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a mattock, a chopping edge on one side and a digging blade on the other. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

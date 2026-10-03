@@ -1,0 +1,86 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Flying Shuttles",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A loom arm flings 3 threaded shuttles in a spread out to 6 tiles, each of which deals 3 damage, with a 30% chance to leave its target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Seam Ripper",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Runs a motor-driven hook along the target's seams, which deals 18 damage and leaves it 20% easier to wound for 6 seconds. It uses up every affliction you have on the target and deals 60% more damage for each one."
+  },
+  {
+   "name": "Lockstitch Suture",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 24,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "A stitching arm closes your wounds and restores 16 health to you. The healing rises 6% for every 10% of your health already gone, up to 30%."
+  },
+  {
+   "name": "Ballistic Weave",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 15% of your maximum health for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

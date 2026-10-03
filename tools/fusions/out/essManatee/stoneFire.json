@@ -1,0 +1,86 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "resource",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Kettle Spout",
+   "element": "fire",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Spits boiling water that deals 7 damage and leaves the target [Burning] for 2 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "role": "long",
+   "range": 160,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Steam Vent",
+   "element": "fire",
+   "base": 28,
+   "cooldown": 75,
+   "coneAngle": 0.7,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Vents steam in a cone 5 tiles long, dealing 28 damage that ignores armour and leaving everything in it [Burning] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "name": "Warm Spring",
+   "element": "water",
+   "healPerSec": 4,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 36,
+   "desc": "Opens a warm spring where you stand. For 8 seconds it restores 4 health a second to you and any ally within 3 tiles."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "name": "Banked Coals",
+   "element": "fire",
+   "desc": "Each time you afflict something, you regain 2 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

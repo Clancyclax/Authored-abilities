@@ -1,0 +1,76 @@
+{
+ "essence": "essRat",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pounce From the Skirting",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rushes you to a target up to 7 tiles away for a raking weapon strike that deals 14 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Done Playing",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "A killing bite that deals 22 damage and consumes every affliction on the target, adding 1.8 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Feet First",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "cooldown": 60,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you spring 3 tiles from where you stood. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Waiting at the Hole",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Skipping Fry",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Flicks a stinging fry that deals 4 damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 3 seconds. It then skips to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shoal Burst",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 14,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 fry in a wide spread, each dealing 6 damage and leaving the target [Slowed] for 4 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Hide in the Branches",
+   "template": "absorbShield",
+   "element": "water",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "Tucks you into the branches of the reef: a barrier that absorbs the next 20 damage, up to 4 blows, and holds for 8 seconds. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "summon",
+   "name": "Cleaner Station",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 3,
+   "familiarRange": 150,
+   "familiarInterval": 1.5,
+   "familiarFamily": "fish",
+   "familiarCreatureName": "Cleaner Wrasse",
+   "lifeOnKill": 3,
+   "desc": "A bonded cleaner wrasse fights beside you, biting enemies within 4.5 tiles for 3 damage every 1.5 seconds. Each kill it makes returns 3 health to you."
+  }
+ ]
+}

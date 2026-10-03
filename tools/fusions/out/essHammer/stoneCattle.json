@@ -1,0 +1,87 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Head-Down Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 256,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Rushes you to a target up to 8 tiles away, then deals 15 damage and leaves it 10% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Tread of the Herd",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Stamps the ground, dealing 4 damage to every enemy within 2 tiles. Its damage rises 10% for each ally beside you (max 30%).",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3
+  },
+  {
+   "name": "Lead-Cow's Clang",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "resonating",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Strikes a bell: up to 5 enemies within 6 tiles turn on you for 6 seconds."
+  },
+  {
+   "name": "Draught-Ox Shoulders",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "maxHp",
+     "amount": 10,
+     "text": "more of you behind every swing"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "and it mends at its own pace"
+    },
+    {
+     "rank": "gold",
+     "stat": "armor",
+     "amount": 0.05,
+     "text": "and very little shifts it"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank your maximum health rises by 10, from silver your health recovers 15% faster, and from gold your armour rises by 5%."
+  }
+ ]
+}

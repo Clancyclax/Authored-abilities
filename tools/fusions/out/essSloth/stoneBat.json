@@ -1,0 +1,80 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneBat",
+  "fusions": [
+    {
+      "name": "Lullaby Shriek",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "resonating",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "slowCast",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Lets out a low shriek across a cone 4 tiles long that deals 12 resonating damage, stuns everything in it for 1 second and leaves it [Muddled] for 6 seconds."
+    },
+    {
+      "name": "Quiet Nip",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "dark",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "speed": 360,
+      "radius": 6,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "leech": 0.25,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A bite that deals 4 dark damage to the first enemy it meets, heals you for 25% of the damage dealt and leaves the target [Bleeding] for 1 damage a second for 6 seconds."
+    },
+    {
+      "name": "Daylight Roost",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "dark",
+      "stealthDuration": 10,
+      "stealthAlpha": 0.3,
+      "aggroMult": 0.35,
+      "stealthSpeedPct": 0,
+      "stealthScope": "party",
+      "healOnUse": 12,
+      "cooldown": 36,
+      "desc": "Veils you and every ally near you for 10 seconds and restores 12 health. Enemies notice you 65% later, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Nocturnal Habit",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "dark",
+      "condition": "night",
+      "bonusKind": "armor",
+      "amount": 0.12,
+      "dodgeBonus": 0.05,
+      "desc": "At night, your armour rises by 12%. You have +5% dodge chance at all times."
+    }
+  ]
+}

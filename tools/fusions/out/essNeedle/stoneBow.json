@@ -1,0 +1,72 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Three on the String",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Looses 3 thin shafts at once, spread apart, each dealing 3 damage."
+  },
+  {
+   "name": "Bodkin at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "ignoreArmor": true,
+   "maxMult": 1.8,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "A narrow-headed arrow at a target up to 9 tiles away that deals 28 damage, rising to 1.8 times that at full reach, and ignores armour."
+  },
+  {
+   "name": "Slender Shafts",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "desc": "For 15 seconds, your attacks and spells reach 43% further."
+  },
+  {
+   "name": "Held at the Anchor",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your stamina reaches full, your next spell deals 30% more damage. Once every 12 seconds."
+  }
+ ]
+}

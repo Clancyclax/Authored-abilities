@@ -1,0 +1,90 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Upward Hook",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "knockback": 96,
+   "base": 14,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A hooking upward stab that deals 14 damage, throws the target 3 tiles back and leaves it [Bleeding] for 2 damage a second for 4 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Skewering Charge",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "bossPct": 0.06,
+   "chargeTo": 192,
+   "base": 26,
+   "cooldown": 90,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rushes you to a target up to 6 tiles away and gores it for 26 damage, rising to 1.5 times that at full reach, leaving it [Bleeding] for 3 damage a second for 5 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Behind the Cape",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dmg_piercing",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "desc": "Pulls up to 4 enemies within 5 tiles onto you for 5 seconds, and increases your piercing damage by 30% for 10 seconds."
+  },
+  {
+   "name": "Worth the Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your critical hit chance rises by 35% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

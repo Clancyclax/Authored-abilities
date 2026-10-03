@@ -1,0 +1,80 @@
+{
+ "essence": "essFox",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "End of the Stalk",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A raking strike that deals 26 damage, always lands as a critical hit and leaves the target 15% easier to wound for 6 seconds. Its damage rises 8% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Catch and Release",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Rakes your claws through a cone 3 tiles long for 9 damage, with a 60% chance to leave each target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Soft-Footed Slink",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 30,
+   "stealthDuration": 7,
+   "stealthScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "desc": "Veils you for 7 seconds. Enemies notice you far later, and the veil breaks the moment you attack. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Always Lands Right",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

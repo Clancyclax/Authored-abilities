@@ -1,0 +1,101 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Carried Ember",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a burning locust into the first enemy it meets for 4 fire damage, setting it [Burning] for 3 damage a second for 4 seconds, then on to 2 more enemies within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Burn the Fields",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.2,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 0.3,
+    "spreadsLeft": 2
+   },
+   "desc": "Sets your own swarm alight, dealing 9 fire damage to every enemy within 3.5 tiles, with a 50% chance per hit to leave them [Burning] for 5 seconds. The burning spreads on its own to up to 2 more enemies within 4 tiles. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Smoke-Driven Host",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your fire damage by 25% for 12 seconds. For 10 seconds, an escort of burning locusts fights beside you, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "What the Ashes Leave",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions on an enemy wears off, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

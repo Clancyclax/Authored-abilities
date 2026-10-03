@@ -1,0 +1,73 @@
+{
+ "essence": "essNet",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Rigging Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargeTo": 192,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Casts a line to a target up to 6 tiles away and swings you to it, dealing 14 damage, rising to 1.5 times that at full reach. The target moves 30% slower for 3 seconds."
+  },
+  {
+   "name": "Gunnysack Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "Bags the target in a conjured mesh and swings it into the ground for 32 damage that ignores armour, leaving it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Cargo Climb",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 192,
+   "dodgeBonus": 0.1,
+   "cooldown": 12,
+   "desc": "Throws a mesh onto a hold up to 6 tiles away and hauls you to it hand over hand, instantly, with +10% dodge chance."
+  },
+  {
+   "name": "Knuckled Down",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you pull a mesh tight around yourself: a ward soaks 30% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

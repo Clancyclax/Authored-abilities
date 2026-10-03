@@ -1,0 +1,87 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Scald Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Sacrifices 4% of your maximum health to spit boiling water at the first enemy in its path up to 6 tiles away, dealing 8 damage and setting it [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Steam Vent",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "The water on your skin flashes to steam 4 tiles ahead of you, dealing 10 damage to everything in the cone and setting it [Burning] for 2 damage a second for 4 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Blistering Skin",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are set [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Slow Boil",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "fire",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you deal 4% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

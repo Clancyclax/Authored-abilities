@@ -1,0 +1,84 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneCoral",
+  "fusions": [
+    {
+      "name": "Seal the Growth",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "water",
+      "role": "resource",
+      "base": 10,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 86,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 6
+      },
+      "consumeAffliction": true,
+      "debuff": {
+        "key": "speedDown",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A stroke that deals 10 damage and leaves the target 12% easier to wound for 6 seconds and [Leaden] for 8 seconds, its Speed drained. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+    },
+    {
+      "name": "Polyp Bloom",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "poison",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Stings every enemy within 2.5 tiles, which deals 3 poison damage and leaves them [Poisoned] for 1 damage a second for 6 seconds."
+    },
+    {
+      "name": "Breakwater by Inches",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "water",
+      "wallKind": "block",
+      "wallLength": 160,
+      "wallDuration": 9,
+      "wallThickness": 32,
+      "healOnUse": 10,
+      "cooldown": 30,
+      "desc": "Grows a reef 5 tiles long in front of you that blocks movement for 9 seconds, and restores 10 health."
+    },
+    {
+      "name": "Accretion",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "water",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "ward",
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackCap": 6,
+      "stackDecay": 10,
+      "stackScale": 1,
+      "stackIcon": "stackWard",
+      "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

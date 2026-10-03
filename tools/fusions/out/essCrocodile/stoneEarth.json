@@ -1,0 +1,70 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gizzard Stones",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Coughs up a swallowed stone that deals 8 damage to the first enemy it meets. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mudbank Heave",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You heave up out of the mud, dealing 12 damage to every enemy within 2.5 tiles and knocking them 3 tiles back, with a 50% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Taking On Ballast",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "rock",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "The damage you take falls by 20% for 12 seconds."
+  },
+  {
+   "name": "Stone in the Belly",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "rock",
+   "buffKind": "armor",
+   "amount": 0.1,
+   "resist": {
+    "element": "earth",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 10%, and you carry 12% earth resistance."
+  }
+ ]
+}

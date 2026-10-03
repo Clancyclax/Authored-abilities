@@ -1,0 +1,86 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Canopy Drop",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 6 tiles away, then deals 13 damage, leaving it 10% easier to wound for 5 seconds, with a 50% chance of [Pinned] for 2 seconds. Its damage rises 8% for every tenth of health the target still has, up to 40%.",
+   "scaleOn": "targetStamina",
+   "scalePer": 0.08,
+   "scaleCap": 0.4
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spare-Limb Cudgel",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "template": "breathCone",
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "hpCostPct": 0.06,
+   "desc": "Costs 6% of your maximum health. Swings your severed tail as a club across a cone 3 tiles long, dealing 28 damage that ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "name": "Frill and Chest",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "A threat display that pulls up to 5 enemies within 6 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Cornered Thrash",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 6
+   },
+   "regenPerSec": 0.5,
+   "desc": "Once your health falls below 35%, your physical damage rises by 40% for 6 seconds. Once every 30 seconds. You also regenerate 0.5 health a second."
+  }
+ ]
+}

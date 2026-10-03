@@ -1,0 +1,76 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Sharpened With the Teeth",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "knockback": 96,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Hurls a sharpened stick that deals 14 damage to the first enemy it meets and knocks it back 3 tiles."
+  },
+  {
+   "name": "Thornbranch Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Swings a thorned branch across a 3-tile cone ahead of you, dealing 4 damage to everything in it. Each hit has a 30% chance to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Brute Finesse",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your critical damage by 30% for 12 seconds."
+  },
+  {
+   "name": "No Wasted Muscle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you land a critical hit, you regain 8 stamina. Once every 5 seconds."
+  }
+ ]
+}

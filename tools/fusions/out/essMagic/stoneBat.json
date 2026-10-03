@@ -1,0 +1,88 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Dusk Feeder",
+   "element": "dark",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "debuff": {
+    "key": "thiefOfSpirit",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a darting bolt that deals 4 dark damage to the first enemy it meets, with a 35% chance to leave it with [Thief of Spirit] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Dissonant Shriek",
+   "element": "resonating",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 128,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shrieks, dealing 28 resonating damage to every enemy within 4 tiles and leaving them [Muddled] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Roost in Shadow",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later, and the veil breaks the moment you attack. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "name": "Lingering Echo",
+   "element": "resonating",
+   "desc": "Each time you spend mana, a bolt strikes the nearest enemy within 6 tiles, dealing 5 lightning damage. Once every 3 seconds."
+  }
+ ]
+}

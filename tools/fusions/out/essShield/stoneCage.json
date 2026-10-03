@@ -1,0 +1,84 @@
+{
+  "essence": "essShield",
+  "stone": "stoneCage",
+  "fusions": [
+    {
+      "name": "Lockdown",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 18,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 0.8,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Slams the shield's rim into the ground, dealing 10 damage to every enemy within 3.5 tiles, stunning them for 0.8 seconds and leaving them [Pinned] for 3 seconds."
+    },
+    {
+      "name": "The Bars Close",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 15,
+      "range": 84,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "stackMult": 1.5,
+      "requiresTargetBelow": 0.3,
+      "executeLadder": false,
+      "debuff": {
+        "key": "inescapable",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Crushes a cornered enemy against the shield, which deals 20 damage and consumes every affliction on it, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 30% health. The target is left [Inescapable] for 6 seconds."
+    },
+    {
+      "name": "Portcullis",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "cooldown": 30,
+      "wallKind": "block",
+      "wallLength": 192,
+      "wallDuration": 8,
+      "wallThickness": 28,
+      "desc": "Drops a line of bars 6 tiles long across the ground ahead for 8 seconds. Nothing crosses it."
+    },
+    {
+      "name": "Double-Locked",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.12,
+        "duration": 4
+      },
+      "desc": "When you inflict a condition on an enemy, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 10 seconds."
+    }
+  ]
+}

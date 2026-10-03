@@ -1,0 +1,85 @@
+{
+ "essence": "essChain",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Whaler's Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Fires a chained harpoon at an enemy up to 8 tiles away for 7 damage, up to 2 times that at full range, and the target moves 20% slower for 2 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Staked Lines",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 7,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "isAoe": true,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 chain-bolts in a spread out to 9 tiles, each dealing 26 damage that ignores armour, with a 50% chance to leave the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Strung Across",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "desc": "Strings a taut chain 6 tiles long ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Held at Full Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 25% more damage. Once every 10 seconds."
+  }
+ ]
+}

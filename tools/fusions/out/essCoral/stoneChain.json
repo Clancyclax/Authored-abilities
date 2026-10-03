@@ -1,0 +1,83 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Link by Link",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "stunOnHit": 0.8,
+   "desc": "Fires a string of linked polyps that deals 11 poison damage to the first enemy it meets and stuns it for 0.8 seconds. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reeled Under",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 192,
+   "maxMult": 1.4,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes a coral-weighted line at an enemy up to 6 tiles away for 22 damage, rising to 1.4 times that at full reach, and leaves it [Pinned] for 3 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Drag-Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "cooldown": 24,
+   "desc": "Grows a 6-tile line of linked coral for 5 seconds that drags enemies toward it, and slows each one it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Ring-Mail Reef",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.12,
+   "damageReduction": 3,
+   "thornsFrac": 0.05,
+   "itemBuffs": [],
+   "desc": "Conjures a mail of linked coral rings: every hit you take is 3 lower, your armour rises by 12%, and 5% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

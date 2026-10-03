@@ -1,0 +1,88 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Burst Comb",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 4,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a spadeful of broken comb as 3 shots spread apart, each dealing 4 poison damage with a 40% chance to leave the target [Poisoned] for 4 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Honey Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You dash up to 6 tiles to the target and strike with the honey-smeared blade for 10 damage, leaving it [Poisoned] for 3 damage a second for 5 seconds.",
+   "chargeTo": 192
+  },
+  {
+   "name": "Overturned Nest",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "desc": "Turns over a ground nest. The swarm fights for 12 seconds, stinging an enemy within 4 tiles for 4 damage every second."
+  },
+  {
+   "name": "Dawn to Dusk Digging",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 3
+   },
+   "desc": "Each time you spend stamina, you regain 2 stamina a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

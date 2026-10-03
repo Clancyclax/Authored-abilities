@@ -1,0 +1,79 @@
+{
+ "essence": "essEye",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stooping Dive",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "desc": "Usable only on an enemy at or below 30% health. Strikes a target up to 8 tiles away for 20 damage, rising to 1.5 times that from full range."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scattered Quills",
+   "template": "volley",
+   "element": "wind",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 480,
+   "radius": 6,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "isAoe": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.15,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 quills at once that fly up to 10 tiles, each dealing 3 damage, with a 15% chance per hit to leave the target [Exposed] for 4 seconds."
+  },
+  {
+   "name": "High Vantage",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "wind",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 54% further."
+  },
+  {
+   "name": "Circling Angle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your next strike gains 15% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

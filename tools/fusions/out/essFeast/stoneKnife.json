@@ -1,0 +1,75 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "name": "Carving Cut",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "leech": 0.25,
+   "desc": "A precise cut that deals 30 damage, always strikes critically and leaves the target 10% easier to wound for 6 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Paring Flick",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 4,
+    "label": "Savouring"
+   },
+   "desc": "Flicks a blade that deals 4 damage to the first enemy it meets, with 30% more critical chance against a target that has not been hurt yet. 20% of the damage dealt comes back to you as healing over 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Close to Hand",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "desc": "Increases your attack speed by 25% for 12 seconds. You restore 10 health when you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "name": "Clean Finish",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.2,
+   "regenPerSec": 0.5,
+   "desc": "Against an enemy at low health, your damage rises by 20%. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

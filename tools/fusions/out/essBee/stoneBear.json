@@ -1,0 +1,83 @@
+{
+ "essence": "essBee",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mauling Swat",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A weapon strike that deals 13 damage, knocks the target back 3 tiles and makes it [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Overturned Hive",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "A swarm that deals 30 damage to every enemy within 3.5 tiles, plus 5% of a boss's or elite's maximum health, and leaves them [Poisoned] for 5 seconds. [Poisoned] is catching: it passes to up to 2 more enemies within 4 tiles.",
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 1,
+    "spreadsLeft": 2
+   }
+  },
+  {
+   "name": "Honey Gorge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "nature",
+   "cooldown": 30,
+   "healAmount": 20,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Restores 20 health to you. Its healing rises 6% for every 10% of your health already gone, up to 30%."
+  },
+  {
+   "name": "Stingproof Hide",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "poison",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "desc": "Your maximum health rises by 12, and your poison resistance rises by 15%."
+  }
+ ]
+}

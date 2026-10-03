@@ -1,0 +1,91 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Tapped Echo",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Taps the staff on the ground. The sound deals 3 damage to every enemy within 3 tiles, and each hit has a 30% chance to leave its target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Shriek Down the Bore",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "ignoreArmor": true,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "rangeBand": "long",
+   "desc": "Sends a shriek down the hollow staff at the first enemy within 8 tiles. It deals 26 damage and ignores armour, then echoes to 2 more enemies within 3.5 tiles, each echo at 60% of that."
+  },
+  {
+   "name": "Roosting Post",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.4,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Plants the staff upright for 12 seconds as a roost. Bats drop from it onto an enemy within 4 tiles for 3 damage every second, each bite with a 30% chance to leave it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Answering Rap",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "resonating",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 3,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every blow you avoid builds a stack on you, up to 3. At 3 they all spend at once: the staff strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack (102% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

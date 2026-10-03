@@ -1,0 +1,83 @@
+{
+ "essence": "fire",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Scorching Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Rushes you to a target up to 7 tiles away and strikes it with your weapon, which deals 12 damage and sets it [Burning] for 2 damage a second for 4 seconds. Your movement speed rises 20% for 3 seconds after you use it."
+  },
+  {
+   "name": "Tipped Lamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "speed": 300,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Swats a lit lamp at the first enemy it meets, which deals 26 damage and sets it [Burning] for 2 damage a second for 5 seconds. The lamp then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Unsinged",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "fire",
+   "cooldown": 60,
+   "immunityDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 20% for 4 seconds after you use it. You have 15% fire resistance."
+  },
+  {
+   "name": "Toying Distance",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying one of your afflictions, your dodge chance rises by 12%."
+  }
+ ]
+}

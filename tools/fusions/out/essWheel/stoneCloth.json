@@ -1,0 +1,85 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Paid-Out Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Lashes a target up to 5 tiles away with thread. It deals 4 damage, rising to 1.5 times that at maximum range, and slows the target by 20% for 2 seconds."
+  },
+  {
+   "name": "Bolt Unrolled",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 112,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a bolt of cloth across a cone 3.5 tiles long that deals 13 damage and knocks each enemy back 2 tiles, with a 40% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Thrice-Wound Wrap",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 3,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "cooldown": 24,
+   "desc": "Wraps you in a barrier that absorbs the next 20 damage, up to 3 blows, and holds for 6 seconds. Your armour rises by 6% while you carry it."
+  },
+  {
+   "name": "Rewinding Bobbin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you spend mana, you recover 2 mana a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

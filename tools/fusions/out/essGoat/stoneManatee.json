@@ -1,0 +1,85 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Rolling Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "knockback": 80,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rolls a swell into the first enemy in its path, dealing 12 damage and knocking it 2.5 tiles back. It has a 50% chance to leave the target [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Idle Exhale",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Exhales a cone 3 tiles long, dealing 4 damage to everything caught in it. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Slack Water",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 20,
+   "healScope": "self",
+   "critChance": 0.1,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Restores 20 health to you. Its healing rises 6% for every 10% of your health already gone (max 30%)."
+  },
+  {
+   "name": "Slow Ebb",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Each time you are hurt by anything other than fire, you regain 2 health a second for 5 seconds. Once every 10 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

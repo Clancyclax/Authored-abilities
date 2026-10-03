@@ -1,0 +1,91 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Harness Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "strikes": 1,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lashes the target with a length of harness for 6 damage, leaving it [Bleeding] for 1 damage a second for 3 seconds and slowing it by 25% for 2 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Hauled In",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "chargeTo": 224,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a chain into the first enemy in line for 13 damage and hauls you up to 7 tiles to it, leaving it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Picket Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 24,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Stakes a chained picket line 6 tiles long ahead of you for 6 seconds that blocks enemies, slowing anything that strikes it by 25% for 2 seconds. You move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Tethered Colt",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.4,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Tethered Colt",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A colt on a chain lead fights beside you, kicking enemies within 4 tiles for 4 damage every 1.4 seconds and slowing them by 20% for 2 seconds."
+  }
+ ]
+}

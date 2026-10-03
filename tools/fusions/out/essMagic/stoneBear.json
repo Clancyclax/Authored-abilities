@@ -1,0 +1,80 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Hibernal Bellow",
+   "element": "arcane",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 20,
+   "range": 112,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "enervate",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Roars, dealing 13 damage to every enemy within 3.5 tiles, stunning them for 1 second and leaving them [Enervated] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Maul Through Wards",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreResist": true,
+   "desc": "A mauling blow that deals 30 damage and leaves the target 15% easier to wound for 8 seconds. It ignores resistances."
+  },
+  {
+   "name": "Winter Sleep",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Restores 3 mana a second for 8 seconds, and 10 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "name": "Fattened Reserves",
+   "element": "arcane",
+   "desc": "The moment your mana is full, you gain a ward worth 20% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

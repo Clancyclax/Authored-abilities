@@ -1,0 +1,79 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Table Thief",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargesMax": 4,
+   "leech": 0.3,
+   "desc": "A snatching weapon strike that deals 7 damage, leaves the target [Bleeding] for 1 damage a second for 4 seconds, and heals you for 30% of the damage dealt. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Bolt It Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "Usable only on an enemy at or below 30% health: a gorging bite deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage. You regain 10 health and move 30% faster for 3 seconds afterward.",
+   "healOnUse": 10
+  },
+  {
+   "name": "Full Cheeks",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 5,
+   "cooldown": 20,
+   "healOnUse": 10,
+   "blinkOnUse": 64,
+   "desc": "Restores 4 stamina a second for 5 seconds and 10 health at once, and scampers you 2 tiles from where you stood."
+  },
+  {
+   "name": "Crumb Hoard",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 10,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.2,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. At 10 they all spend at once: you heal for 1% of your maximum health per stack (10% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

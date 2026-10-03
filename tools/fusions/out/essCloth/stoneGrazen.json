@@ -1,0 +1,72 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Milling Crowd",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Shoves through the crowd round you, dealing 4 damage to every enemy within 2.5 tiles. Its damage rises 8% for each ally nearby (max 32%)."
+  },
+  {
+   "name": "Bell Rope",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 1.3,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Cracks a thread-wound rope at an enemy up to 7 tiles away, dealing 28 damage, up to 1.3 times as much at full reach. Allies strike 20% harder for 12 seconds."
+  },
+  {
+   "name": "Blanket Round",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 20,
+   "range": 112,
+   "healAmount": 12,
+   "healScope": "party",
+   "desc": "Draws a blanket round the herd, restoring 12 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Woolly Comfort",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "Once your health falls below 50%, healing you receive is 40% stronger for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

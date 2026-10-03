@@ -1,0 +1,66 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Textbook Chop",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "An overhead chop that deals 30 damage and is always a critical hit. It leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clean Finish",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Throws a hatchet at an enemy at or below 25% health for 18 damage, rising to 1.5 times that damage at its full 5 tile reach."
+  },
+  {
+   "name": "Drilled Hands",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Increases your attack speed by 25% for 15 seconds."
+  },
+  {
+   "name": "Woodpile Rhythm",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack, 36% at full, for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

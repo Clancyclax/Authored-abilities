@@ -1,0 +1,88 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Tainted Bit",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 4,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A chop with a musk-wet blade that deals 4 damage and leaves the cut [Poisoned] for 1 damage a second for 6 seconds."
+  },
+  {
+   "name": "Warned Once, Felled",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "cooldown": 90,
+   "base": 34,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "castTime": 1.5,
+   "guaranteedCrit": true,
+   "desc": "Holds the blade raised for 1.5 seconds, then swings a full circle, dealing 34 damage to every enemy within 3 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Scored in the Dirt",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "poison",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Chops a line 5 tiles long into the ground and fills it with musk for 8 seconds. Anything that crosses it is [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Spatter from the Cut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 160
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "When you land a critical hit, musk spatters from the cut onto the nearest enemy within 5 tiles for 7 damage and leaves it [Poisoned] for 2 damage a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

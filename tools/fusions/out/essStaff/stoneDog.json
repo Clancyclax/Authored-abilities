@@ -1,0 +1,84 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Sent After It",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 192,
+   "stunOnHit": 1,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "rangeBand": "medium",
+   "desc": "Throws the staff at the first enemy within 6 tiles with a hound after it. It deals 12 damage and stuns the target for 1 second, and the hound then worries 2 more enemies within 3.5 tiles for 60% of that."
+  },
+  {
+   "name": "Low at the Hocks",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Sweeps the crook low through a cone 3 tiles long. It deals 4 damage to everything in it, and its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Gate Held Shut",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "You bar the way with the staff and pull up to 4 enemies within 5 tiles onto you for 6 seconds. A hound fights beside you for 8 seconds, biting for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Works to the Crook",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Drover's Heeler",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A bonded herding dog works to the signals of your staff. It bites enemies within 4 tiles for 3 damage every 1.2 seconds, and anything it bites moves 20% slower for 2 seconds."
+  }
+ ]
+}

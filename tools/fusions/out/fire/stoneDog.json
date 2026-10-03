@@ -1,0 +1,80 @@
+{
+ "essence": "fire",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Hellhound's Bay",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "long",
+   "base": 27,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Bays a ring of flame that deals 27 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Singeing Fang",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A bite with your weapon that deals 4 damage and sets the target [Burning] for 1 damage a second for 3 seconds. Its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Faithful Flame",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 50,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a hound of flame on your enemies for 15 seconds. Every 1.5 seconds it bites an enemy within 5 tiles, which deals 5 damage with a 25% chance to set the target [Burning] for 4 seconds."
+  },
+  {
+   "name": "Hot on the Trail",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying one of your afflictions, your damage rises by 12%."
+  }
+ ]
+}

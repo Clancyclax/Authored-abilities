@@ -1,0 +1,80 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Thrown and Retrieved",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "chargesMax": 3,
+   "desc": "Throws the hammer at a target up to 6 tiles away for 7 damage, rising to 1.6 times that at full reach. It holds 3 charges, and each kill brings a charge back."
+  },
+  {
+   "name": "Quarry at Bay",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Only strikes a target at or below 30% health, and that threshold rises with each rank. The blow deals 22 damage and uses up every affliction on the target, adding 1.5 times the damage they had left to deal. For 3 seconds after using it, you move 20% faster."
+  },
+  {
+   "name": "Catch-Hound",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDmg": 4,
+   "summonDuration": 18,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1-second cast, whistles up a hound that fights beside you for 18 seconds, biting an enemy within 4 tiles for 4 damage every 1.2 seconds. Each bite has a 30% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Dropped at Your Feet",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 12
+   },
+   "desc": "When you kill an enemy, you regain 12 stamina. Once every 5 seconds."
+  }
+ ]
+}

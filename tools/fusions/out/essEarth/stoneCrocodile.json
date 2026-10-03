@@ -1,0 +1,87 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bank Lunge",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 210,
+   "maxMult": 1.3,
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You lunge up to 6 tiles at an enemy at or below 30% health, dealing 22 damage, up to 1.3 times as much from 6.5 tiles away, and leaving it [Pinned] for 2 seconds.",
+   "chargeTo": 192
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wallow Lash",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You whip your tail through the mud, dealing 13 damage to every enemy within 3 tiles and knocking them 3 tiles back, with a 40% chance to leave each one [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Lying in the Silt",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "earth",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "You sink into the ground and are veiled for 10 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "resist": {
+    "element": "physical",
+    "amount": 0.06
+   },
+   "desc": "When your stamina is full, your physical damage rises by 30% for 5 seconds. Once every 12 seconds. You carry 6% physical resistance."
+  }
+ ]
+}

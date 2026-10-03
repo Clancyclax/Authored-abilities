@@ -1,0 +1,86 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Indenture",
+   "element": "piercing",
+   "role": "medium",
+   "chargeTo": 160,
+   "base": 16,
+   "cooldown": 14,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You lunge up to 5 tiles to the target and clamp down on it, dealing 16 damage. The target is 15% easier to wound for 6 seconds and [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Snapped Cover",
+   "element": "blunt",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "desc": "Slams a great book shut around you, dealing 28 damage to every enemy within 3 tiles. The damage ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "name": "The Fine Print",
+   "element": "piercing",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "desc": "Hides a clause at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles takes 22 damage."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "name": "Overdue Notice",
+   "element": "piercing",
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your next strike gains 30% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

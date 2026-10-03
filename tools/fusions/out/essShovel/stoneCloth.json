@@ -1,0 +1,82 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Ballast Sack",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "stunOnHit": 1.2,
+   "desc": "Swings a sack of packed earth on the end of the haft for 14 damage, stunning the target for 1.2 seconds and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Tarp Crack",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips a dirt-laden groundsheet around you, dealing 4 damage to every enemy within 2.5 tiles with a 35% chance to leave each one [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Sandbag Parapet",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "earth",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "desc": "Stacks filled sacks in front of you as a barrier that absorbs 24 damage for 6 seconds, and raises your armour by 8% while it holds."
+  },
+  {
+   "name": "Mud and Lint",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 30%, you pack the wound with clay and bind it, regaining 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

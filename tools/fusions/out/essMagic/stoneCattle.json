@@ -1,0 +1,71 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 280,
+   "radius": 12,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Unhurried Certainty",
+   "element": "arcane",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "castTime": 1.5,
+   "bossPct": 0.06,
+   "desc": "After a 1.5 second cast, sends a heavy bolt of arcana that deals 34 damage to the first enemy it meets. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Grazing Pulse",
+   "element": "arcane",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 1,
+   "range": 96,
+   "desc": "Arcana pulses out from you, dealing 4 damage to every enemy within 3 tiles and healing you for 25% of the damage dealt.",
+   "leech": 0.25
+  },
+  {
+   "name": "Gathering Weight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "arcane",
+   "powerMult": 1.35,
+   "buffDuration": 20,
+   "castTime": 2,
+   "cooldown": 75,
+   "desc": "After a 2 second cast, increases your damage by 35% for 20 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 2,
+    "duration": 4
+   },
+   "name": "Chewed Twice",
+   "element": "arcane",
+   "desc": "Each time you spend mana, you restore 2 mana a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

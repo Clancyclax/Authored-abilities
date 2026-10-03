@@ -1,0 +1,88 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 10,
+   "cooldown": 1,
+   "range": 84,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "consumeAffliction": true,
+   "desc": "Gaffs a target already on your hook: it needs one of your afflictions on the target and uses it up. The gaff deals 10 damage and leaves the target 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Longline",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 14,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 360,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts 4 baited hooks in a spread out to 6 tiles. Each hook deals 4 damage, stuns the target for 0.8 seconds and leaves it [Bleeding] for 4 seconds.",
+   "stunOnHit": 0.8
+  },
+  {
+   "name": "Funnel Weir",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stakes a weir 5 tiles long ahead of you for 5 seconds. It drags every enemy near it inward and leaves each [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Hauled In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you regain 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

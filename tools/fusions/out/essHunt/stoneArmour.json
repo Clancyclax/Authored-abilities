@@ -1,0 +1,74 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Bodkin Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 420,
+   "radius": 8,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a hardened point at the first enemy in line for 28 damage, ignoring armour. The target is left [Sundered] for 8 seconds."
+  },
+  {
+   "name": "Misericorde",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on an enemy at or below 25% health: a thrust that deals 22 damage and leaves it 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Closing in Harness",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Raises a barrier that absorbs the next 20 damage, holds for 6 seconds and raises your armour by 8% while it holds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Gap in the Plates",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "physical",
+   "pierceElement": "physical",
+   "armorIgnore": 0.15,
+   "desc": "Your physical attacks ignore 15% of the target's armour."
+  }
+ ]
+}

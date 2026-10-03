@@ -1,0 +1,74 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Seam Prying",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "Works the spade's corner between the plates and levers them apart, dealing 30 damage that ignores armour and leaving the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Plate Ringer",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 80,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings the flat of the blade in a cone 2.5 tiles long, dealing 13 damage to everything in it, stunning each enemy for 1 second and leaving it [Damped] for 5 seconds."
+  },
+  {
+   "name": "Revetment",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Packs earth against your armour, raising it by 25% for 12 seconds."
+  },
+  {
+   "name": "Trench Plate",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.05,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "desc": "Conjures a cuirass of overlapping spade blades: every hit you take is 2 lower, your armour rises by 10%, your maximum health rises by 10, and 5% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

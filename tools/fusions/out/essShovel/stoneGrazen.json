@@ -1,0 +1,73 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pitched Turf",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 6,
+    "label": "Warmth"
+   },
+   "desc": "Pitches a clod of turf that deals 6 damage. 25% of the damage it deals comes back as healing over the following 6 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Break New Pasture",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Breaks the ground open around you, dealing 28 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Winter Fodder",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 20,
+   "range": 112,
+   "healAmount": 14,
+   "healScope": "party",
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Its healing rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "name": "Deep Litter",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 12, and you regenerate 0.5 health a second."
+  }
+ ]
+}

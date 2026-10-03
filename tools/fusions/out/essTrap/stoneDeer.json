@@ -1,0 +1,87 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Noose Across the Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "speed": 400,
+   "radius": 7,
+   "stunOnHit": 1,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Kicks a noose shut on the target that deals 11 damage and stuns it for 1 second. It has 30% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Led Across the Stakes",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Stakes spring up where you have run: the burst deals 3 damage to every enemy within 2.5 tiles. Its damage rises 8% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Break Cover",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDmg": 16,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Sets a snare at the nearest enemy that arms after 0.5 seconds and waits up to 20 seconds. It deals 16 damage to the first enemy to come within 2 tiles and leaves it [Slowed] for 5 seconds. You move 25% faster for 3 seconds after setting it."
+  },
+  {
+   "name": "Twitch of the Wire",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 4. At 4 they all spend at once: you move and attack 5% faster per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

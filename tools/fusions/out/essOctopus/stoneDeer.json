@@ -1,0 +1,78 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Startled Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "dark",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Bursts a cloud of ink around you, dealing 10 damage to every enemy within 3 tiles and knocking each one back 2.5 tiles. You move 25% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Trailing Whip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Trails an arm behind you and whips it at an enemy up to 5 tiles away for 4 damage, rising to 1.5 times that at full reach. Its damage rises 6% for every 100 paces you have covered since you last used it (max 30%)."
+  },
+  {
+   "name": "Black Jet",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "dark",
+   "dashDist": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 10,
+   "desc": "Jets you 6 tiles forward. Your movement speed rises 20% for 4 seconds afterward."
+  },
+  {
+   "name": "Flinch Cloud",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.4,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 4
+   },
+   "desc": "Once your health falls below 40%, a shield worth 25% of your maximum health covers you for 4 seconds. Once every 30 seconds."
+  }
+ ]
+}

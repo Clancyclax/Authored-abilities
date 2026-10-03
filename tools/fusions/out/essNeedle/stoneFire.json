@@ -1,0 +1,97 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Sinks Through Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "burn",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A red-hot point that deals 4 fire damage and leaves the target 8% easier to wound for 4 seconds. Each hit has a 40% chance to leave it [Burning] for 4 seconds."
+  },
+  {
+   "name": "Catching Sparks",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "fire",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 14,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "volleyCount": 3,
+   "volleySpread": 0.34,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Flicks 3 sparks off a heated point, spread apart, each dealing 8 fire damage and leaving its target [Burning] for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Sterilised in Flame",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "fire",
+   "cooldown": 24,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes 2 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Flying Ember",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "When you land a critical hit, a spark leaps to the nearest other enemy within 5 tiles for 6 lightning damage and sets it [Burning] for 1 damage a second for 3 seconds. Once every 5 seconds."
+  }
+ ]
+}

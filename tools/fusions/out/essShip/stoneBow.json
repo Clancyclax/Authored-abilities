@@ -1,0 +1,79 @@
+{
+ "essence": "essShip",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Foredeck Ballista",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "speed": 520,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a bolt at the first enemy within 10 tiles for 30 damage that ignores armour, leaving it [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Passing Flight",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Looses 3 arrows at once, spread apart out to 7 tiles, each dealing 4 damage. For 2 seconds after, you move 10% faster."
+  },
+  {
+   "name": "Fighting Top",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "castTime": 1,
+   "desc": "After a 1-second cast, your attacks and spells reach 1.4 times as far for 15 seconds."
+  },
+  {
+   "name": "On the Up-Roll",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

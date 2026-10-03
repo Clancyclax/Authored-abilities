@@ -1,0 +1,69 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Swallowed Whole",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "speed": 440,
+   "radius": 7,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "leech": 0.4,
+   "desc": "Usable only on an enemy at or below 25% health. Your tongue takes the first enemy in its path up to 4 tiles away, dealing 24 damage, and you heal for 40% of the damage dealt."
+  },
+  {
+   "name": "Glutton's Belch",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "desc": "Belches 4 tiles ahead of you, dealing 12 damage to everything in the cone and knocking it back 3 tiles."
+  },
+  {
+   "name": "Second Helping",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "healOnUse": 10,
+   "cooldown": 60,
+   "desc": "Increases your maximum health by 20% for 15 seconds, and restores 10 health."
+  },
+  {
+   "name": "Six Courses",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: you are healed for 3% of your maximum health per stack (18% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Scent Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rushes you to a target up to 7 tiles away for a bite that deals 13 damage and makes it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "End of the Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Seizes an enemy at or below 25% health for 22 damage, consuming every affliction you have on it and adding 1.4 times their remaining damage. Its damage rises 8% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Decoy Run",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 24,
+   "summonAnimal": "dog",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 7
+   },
+   "desc": "Pulls up to 4 enemies within 5 tiles onto you for 6 seconds. While it lasts, a hound runs beside you, biting for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Lurcher at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Lurcher",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Calls a bonded lurcher that runs beside you, biting an enemy within 4 tiles for 4 damage every 1.2 seconds. Anything it bites is slowed by 20% for 2 seconds."
+  }
+ ]
+}

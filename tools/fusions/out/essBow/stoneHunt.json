@@ -1,0 +1,70 @@
+{
+ "essence": "essBow",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Quarry Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires an arrow that deals 4 damage to the first enemy it meets and leaves it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Final Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 12,
+   "range": 256,
+   "maxMult": 1.5,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Looses an arrow at a target up to 8 tiles away that deals 22 damage, rising to 1.5 times that at full reach. Its damage rises 8% per affliction on the target (max 40%). Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Closing In",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "piercing",
+   "cooldown": 30,
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "desc": "Increases your movement speed by 35% for 8 seconds."
+  },
+  {
+   "name": "Wounded Prey",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

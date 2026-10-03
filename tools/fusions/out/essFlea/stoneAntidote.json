@@ -1,0 +1,71 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitter Dose",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargeTo": 128,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You hop up to 4 tiles to the target and strike with your weapon for 6 poison damage, leaving it [Poisoned] for 2 damage a second for 4 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Last Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 72,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "leech": 0.25,
+   "desc": "A bite on an enemy at or below 30% health that deals 18 damage and uses up every affliction you have on it, adding 1.5 times their remaining damage. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Drawn Out",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Removes up to 3 conditions from you, heals you for 10 health, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Immune Carrier",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 10% poison resistance."
+  }
+ ]
+}

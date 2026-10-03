@@ -1,0 +1,98 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heel Nip",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Nips at the target's heels for 4 damage, leaves it [Bleeding] for 1 damage a second for 3 seconds and slows it by 15% for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hackles Up",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Lunges at the target for 28 damage, leaving it 10% easier to wound for 6 seconds. If it hits, every ally strikes 20% harder for 12 seconds."
+  },
+  {
+   "name": "Hold the Yard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 160,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 30,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Hound",
+   "desc": "Pulls up to 4 enemies within 5 tiles onto you for 5 seconds. A hound fights beside you for 8 seconds, biting for 4 damage every 1.2 seconds."
+  },
+  {
+   "name": "Pat on the Head",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "When you kill an enemy, you restore 8 stamina. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies. Once every 6 seconds."
+  }
+ ]
+}

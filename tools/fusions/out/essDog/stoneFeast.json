@@ -1,0 +1,92 @@
+{
+ "essence": "essDog",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Second Helpings",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "leech": 0.25,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Gnaws with your weapon for 7 damage, making the target [Bleeding] for 1 damage a second for 4 seconds, and heals you for 25% of the damage dealt. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clean the Plate",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Wolfs down a target at or below 25% health for 20 damage, plus 1.5 times the remaining damage of every affliction on it, which are used up. You move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Shared Bowl",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "hp",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 6,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Restores 3 health a second for 6 seconds. It grows 10% stronger for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Scraps for All",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 8 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unbuckle",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "Undoes a strap on the target, dealing 8 damage and stripping 15% of its armour for 5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Seam Slip",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "desc": "A weapon strike slipped between the target's plates for 30 damage that ignores armour, and leaves it [Bleeding] for 3 damage a second for 5 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Borrowed Plates",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 4
+   },
+   "desc": "Straps on pilfered plates: a barrier that absorbs the next 22 damage and holds for 8 seconds. You move 12% faster for 4 seconds after using it."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackOn": "self",
+   "name": "Layer by Layer",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

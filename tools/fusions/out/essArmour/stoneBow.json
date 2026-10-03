@@ -1,0 +1,75 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bodkin Shot",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 520,
+   "radius": 5,
+   "ignoreArmor": true,
+   "desc": "Looses a narrow bodkin shaft that deals 30 damage and ignores the target's armour."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full-Draw Finish",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health: a shot that deals 18 damage, up to 1.4 times as much at 5 tiles, and leaves it [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Arrow Post",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "turret",
+   "summonDmg": 6,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "cooldown": 60,
+   "castTime": 1,
+   "desc": "Plants a fortified arrow post that shoots enemies within 5 tiles for 6 damage every 1.5 seconds, for 15 seconds."
+  },
+  {
+   "name": "Return Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything but fire, your next strike has 20% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

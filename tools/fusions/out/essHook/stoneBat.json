@@ -1,0 +1,75 @@
+{
+ "essence": "essHook",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Thumb-Claw Latch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "leech": 0.25,
+   "desc": "Flings a clawed barb that deals 7 dark damage to the first enemy it meets and heals you for 25% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Roost Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "dark",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "Drops you onto a target up to 7 tiles away, then deals 13 damage and drags its guard open, leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Rafter Line",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "dark",
+   "teleportRange": 192,
+   "dodgeBonus": 0.1,
+   "cooldown": 12,
+   "desc": "Steps you instantly to a point up to 6 tiles away. You gain +10% dodge chance."
+  },
+  {
+   "name": "Clinging Thirst",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Anything you strike moves 15% slower for 2 seconds. When you land a critical hit, your attacks heal you for 20% of their damage for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

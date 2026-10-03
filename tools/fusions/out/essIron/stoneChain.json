@@ -1,0 +1,82 @@
+{
+ "essence": "essIron",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Fetter Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "spreadAfflictions": 112,
+   "desc": "A lashing weapon strike that deals 12 damage, makes the target [Bleeding] for 2 damage a second for 5 seconds and slows it by 20% for 3 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Reeled Short",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Snaps a weighted line taut on a target up to 6 tiles away, dealing 20 damage, rising to 1.5 times that at full reach, and slowing it by 30% for 3 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Hauled Hand Over Hand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 7,
+   "tauntMax": 3,
+   "threatMult": 1,
+   "desc": "Hauls on the links, pulling up to 3 enemies within 6 tiles onto you and holding their attention for 7 seconds."
+  },
+  {
+   "name": "Link Added",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

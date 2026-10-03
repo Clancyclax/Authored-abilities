@@ -1,0 +1,73 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Jagged Footing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Jagged stone tears at every enemy within 2.5 tiles for 7 earth damage and leaves them [Bleeding] for 5 seconds, which worsens while they move. It holds 3 charges, and each kill returns one."
+  },
+  {
+   "name": "Deadfall",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 300,
+   "radius": 12,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Drops a deadfall stone on the target for 30 damage, and every other enemy within 3.5 tiles takes 80% of that."
+  },
+  {
+   "name": "Covered Pit",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 16,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 80,
+   "summonCharges": 3,
+   "summonBlast": 80,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Digs a pit at the nearest enemy. It waits up to 30 seconds, and the first 3 enemies to come within 2.5 tiles each take 16 damage in a blast around it."
+  },
+  {
+   "name": "Cornered Ground",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your armour rises by 10%."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpor Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 5,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a chilled thread that deals 4 damage to the first enemy it meets, with a 30% chance per hit to leave it [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Sullen Chill",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "frost",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 0.8,
+   "desc": "Breathes a cold draught in a cone 4 tiles ahead, dealing 10 damage to everything caught in it and stunning it for 0.8 seconds."
+  },
+  {
+   "name": "Stilled Weft",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "frost",
+   "cooldown": 150,
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "medium",
+   "desc": "Holds every creature within 5 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Mended Tail",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 50%, you regain 3 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

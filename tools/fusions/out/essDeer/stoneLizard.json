@@ -1,0 +1,78 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Sluggish Chill",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "frost",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bursts a chill around you, dealing 10 frost damage to every enemy within 3 tiles, stunning them for 0.8 seconds and leaving them [Hindered] for 6 seconds."
+  },
+  {
+   "name": "Spat Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits at an enemy for 4 poison damage, with a 30% chance to leave it [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Tail Left Behind",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "nature",
+   "healAmount": 14,
+   "critChance": 0.05,
+   "healScope": "self",
+   "cooldown": 20,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 14 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Sunlit Scales",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "nature",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "In daylight, your armour rises by 12%. You gain 5% dodge chance."
+  }
+ ]
+}

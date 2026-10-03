@@ -1,0 +1,80 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Hopping Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "A swing that deals 4 damage to every enemy within 2.5 tiles, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Plunging Leap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 2.0,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "A leaping blow that deals 15 damage, up to 2 times that at the maximum range of 8 tiles. You rush up to 7 tiles to the target first."
+  },
+  {
+   "name": "Twitch Tempo",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Your attack speed rises by 30% for 10 seconds. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Landing Force",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover, your critical hit chance rises by 40% for your next strike. Once every 4 seconds."
+  }
+ ]
+}

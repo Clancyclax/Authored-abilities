@@ -1,0 +1,87 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bloodcap Dart",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "leech": 0.25,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Costs 4% of your maximum health. Fires a spore dart that deals 8 blood damage and gives the target Rot for 1 damage a second for 4 seconds, and you heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Roost Shriek",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A shriek carries spores through a cone 5 tiles long, dealing 26 resonating damage that ignores resistances to everything in it, with a 50% chance per hit to leave it [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Cave Murk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "cooldown": 30,
+   "healOnUse": 8,
+   "desc": "Veils you and your allies in a spore cloud for 6 seconds and restores 8 health. While veiled you move 11% faster and enemies notice you 60% later. The veil breaks when you attack."
+  },
+  {
+   "name": "Night Feeder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, 15% of the damage you deal heals you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

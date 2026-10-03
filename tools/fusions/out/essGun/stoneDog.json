@@ -1,0 +1,80 @@
+{
+ "essence": "essGun",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pointed Quarry",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a round into the first enemy in its path for 4 damage, with a 25% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pack Signal",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "base": 28,
+   "cooldown": 80,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.3,
+   "desc": "Fires a round at an enemy up to 8 tiles away that deals 28 damage, rising to 1.3 times that at full reach. When it hits, your party deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Got Your Back",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Retriever",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Retriever",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Calls a bonded retriever that fights beside you within 4.5 tiles, striking for 4 damage every 1.2 seconds; anything it strikes moves 20% slower for 2 seconds."
+  }
+ ]
+}

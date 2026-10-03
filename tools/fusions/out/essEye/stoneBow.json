@@ -1,0 +1,68 @@
+{
+ "essence": "essEye",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Counted Arrows",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 5,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "desc": "Shoots a target up to 9 tiles away for 7 damage, rising to 1.5 times that at full range. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Between Heartbeats",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "castTime": 1.5,
+   "speed": 620,
+   "radius": 6,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Takes 1.5 seconds to draw, then looses an arrow that flies up to 12 tiles and hits the first enemy in its path for 32 damage, ignoring its armour."
+  },
+  {
+   "name": "Full Draw",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "piercing",
+   "powerMult": 1.3,
+   "buffDuration": 10,
+   "castTime": 1,
+   "cooldown": 40,
+   "desc": "Takes 1 second to settle your aim, then increases your damage by 30% for 10 seconds."
+  },
+  {
+   "name": "Ranging Shots",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. When you reach 5, they all spend at once: a blow strikes it for 20% of your weapon damage per stack (102% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

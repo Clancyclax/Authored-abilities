@@ -1,0 +1,79 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clamped Fast",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 96,
+   "maxMult": 1.5,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges up to 3 tiles at a target at or below 25% health and locks your horns on it for 22 damage, rising to 1.5 times that at full reach, leaving it [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Riverbank Thrash",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "desc": "Rolls with your horns down, dealing 12 damage to every enemy within 2.5 tiles and stunning them for 1.2 seconds."
+  },
+  {
+   "name": "Sunning Rock",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 30,
+   "healAmount": 14,
+   "critChance": 0.05,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 14 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Waiting Jaw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "After 10 seconds without a critical hit, your next strike has 30% more critical chance. Once every 10 seconds."
+  }
+ ]
+}

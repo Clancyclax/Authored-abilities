@@ -1,0 +1,90 @@
+{
+ "essence": "essShip",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Chop and Bear Away",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.9,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 2
+   },
+   "desc": "A chop that deals 5 damage and leaves the target 8% easier to wound for 4 seconds. For 2 seconds after, you move 12% faster."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bring Down the Rigging",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cuts the rigging down across a cone 3 tiles long, dealing 8 damage to everything in it with a 50% chance to leave each enemy [Slowed] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Cut the Cable",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "slashing",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Frees you from up to 2 conditions that hold or stun you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Boarder's Hatchet",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.04
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a boarding hatchet. Your weapon damage rises by 10% and you move 4% faster, and every strike with it makes the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

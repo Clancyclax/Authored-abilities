@@ -1,0 +1,79 @@
+{
+ "essence": "essHair",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Heel Loop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1.4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a loop of plaited hair around the legs of a target up to 7 tiles away, dealing 12 damage, stunning it for 1.4 seconds and leaving it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Drover's Crack",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Cracks a long whip of plaited hair in a full circle, dealing 28 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Round-Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Throws loops of hair over up to 4 enemies within 6 tiles, pulling them onto you and holding their attention for 5 seconds."
+  },
+  {
+   "name": "Yoked Team",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When your stamina fills, your strands haul in unison and you deal 20% more physical damage for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

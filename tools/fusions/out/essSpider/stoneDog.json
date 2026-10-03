@@ -1,0 +1,90 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Heel Cutter",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Rushes you to an enemy up to 7 tiles away and bites down, which deals 13 damage, leaves it [Bleeding] for 2 damage a second for 5 seconds and 10% easier to wound for 5 seconds.",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Usable only on an enemy at or below 30% health, up to 7 tiles away. The bite deals 18 damage, rising to 1.8 times that at maximum range, and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Bait and Heel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 192,
+   "tauntDuration": 4,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you for 4 seconds. For 8 seconds a hound fights beside you, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Kennelled Fang",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Fanghound",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded hound fights beside you, biting for 4 damage every 1.2 seconds and leaving its target [Poisoned] for 1 damage a second for 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "essence": "essNet",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Dunking Stool",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "stunOnHit": 1.2,
+   "desc": "Dunks the target in a conjured mesh, dealing 14 damage and leaving it [Stunned] for 1.2 seconds, [Soaked] for 5 seconds and 10% easier to wound for 5 seconds.",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   }
+  },
+  {
+   "name": "Skipping Sinkers",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Skips 3 mesh weights across the ground at once, spread apart, each dealing 3 damage with a 35% chance to leave its target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Runs Through the Mesh",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 5,
+   "healScope": "self",
+   "healOnUse": 8,
+   "cooldown": 60,
+   "desc": "Lets up to 5 conditions run out of you through the mesh and restores 8 health."
+  },
+  {
+   "name": "Buoyed Step",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move 10% faster while you are on it"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and your dodge chance is 8% higher while you are on it"
+    }
+   ],
+   "desc": "A line of floats holds you up: you walk on water and swamp as on solid ground. From bronze rank you move 10% faster on it, and from silver your dodge chance on it rises by 8%."
+  }
+ ]
+}

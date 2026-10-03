@@ -1,0 +1,84 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneCloth",
+  "fusions": [
+    {
+      "name": "Swaddle",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "spammable": true,
+      "speed": 340,
+      "radius": 9,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "chargesMax": 3,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Throws cloth that deals 7 damage to the first enemy it meets and leaves it [Hindered] for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Smothering Drape",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "spreadAfflictions": 112,
+      "debuff": {
+        "key": "dampen",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Drops a heavy drape over every enemy within 3 tiles, which deals 12 damage and leaves them [Damped] for 8 seconds, their damage lowered. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+    },
+    {
+      "name": "Tuck In",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "physical",
+      "hotPerSec": 3,
+      "hotDuration": 10,
+      "healScope": "ally",
+      "cooldown": 36,
+      "desc": "Restores 3 health a second to the ally who needs it most, for 10 seconds."
+    },
+    {
+      "name": "Cocoon Reflex",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 45,
+      "trigger": {
+        "on": "hpBelow",
+        "frac": 0.3,
+        "cooldown": 45
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 6
+      },
+      "desc": "Once your health falls below 30%, a shield worth 25% of your maximum health wraps you for 6 seconds. Once every 45 seconds."
+    }
+  ]
+}

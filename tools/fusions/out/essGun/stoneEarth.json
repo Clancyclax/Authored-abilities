@@ -1,0 +1,83 @@
+{
+ "essence": "essGun",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cracking Slug",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "medium",
+   "stunOnHit": 1,
+   "base": 13,
+   "cooldown": 16,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Fires a stone slug at an enemy up to 7 tiles away that deals 13 rock damage, stuns it for 1 second and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gravel Charge",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 26,
+   "cooldown": 70,
+   "range": 160,
+   "coneAngle": 0.8,
+   "aoeBand": "large",
+   "isAoe": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Blasts a charge of jagged gravel in a cone 5 tiles ahead that deals 26 rock damage to everything in it, ignoring armour, with a 50% chance to leave each target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Firing Parapet",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 10,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Raises an earthen parapet 5 tiles long for 10 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Struck Flint",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 2,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a flintlock to fire. It increases your weapon damage by 12% and your attack speed by 5%, and every strike with it sets the target [Burning] for 2 damage a second for 2 seconds."
+  }
+ ]
+}

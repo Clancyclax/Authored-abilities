@@ -1,0 +1,73 @@
+{
+ "essence": "essBat",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Course After Course",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 84,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "chargesMax": 5,
+   "leech": 0.2,
+   "desc": "A bite that deals 6 blood damage, leaves the target 5% easier to wound for 3 seconds and heals you for 20% of the damage dealt. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Gorging Frenzy",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blood",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "leech": 0.25,
+   "desc": "You tear into everything in a wide arc 3 tiles ahead of you for 26 blood damage. Every hit is a critical hit, and you heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Laid Table",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blood",
+   "buffStat": "healingReceived",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "healOnUse": 8,
+   "desc": "Healing you receive rises by 30% for 10 seconds, and you regain 8 health at once."
+  },
+  {
+   "name": "Well Fed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Whenever you are healed, your physical damage rises by 20% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

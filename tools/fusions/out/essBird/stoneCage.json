@@ -1,0 +1,82 @@
+{
+ "essence": "essBird",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Clipped Primaries",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "range": 80,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 7 damage, makes the target [Bleeding] for 1 damage a second for 3 seconds and slows it by 25% for 3 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Portcullis",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops on every enemy within 3 tiles for 26 damage plus 4% of a boss's or elite's maximum health, and leaves them [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Shut the Door Behind",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Drives a line of bars 5 tiles long into the ground for 6 seconds, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Nowhere to Fly",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "dodgeBonus": 0.05,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage, and your dodge chance rises by 5%."
+  }
+ ]
+}

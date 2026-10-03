@@ -1,0 +1,76 @@
+{
+ "essence": "essGun",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pistol-Whip",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "knockback": 96,
+   "base": 13,
+   "cooldown": 12,
+   "range": 64,
+   "reachUnits": 64,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Clubs the target with the butt of your weapon for 13 damage, knocks it back 3 tiles and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unaimed Fury",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 128,
+   "coneAngle": 0.9,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Sprays unaimed rounds in a cone 4 tiles ahead that deals 3 damage to everything in it, 8% more for every 10% of your health you are missing (up to 40% more)."
+  },
+  {
+   "name": "Thumping Challenge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "Fires a round overhead: up to 5 enemies within 7 tiles turn on you for 6 seconds."
+  },
+  {
+   "name": "Riled Trigger Finger",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you take damage from anything but fire, your physical damage rises by 30% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

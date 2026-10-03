@@ -1,0 +1,73 @@
+{
+ "essence": "essBat",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Running Scales",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "vibrantEcho",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a click of sound into the first enemy in its path for 4 resonating damage, with a 40% chance to add an instance of [Vibrant Echo] for 6 seconds. Each instance on the target adds to the damage of the rest."
+  },
+  {
+   "name": "Rehearsed Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.2,
+   "executeLadder": true,
+   "leech": 0.15,
+   "desc": "A bite on an enemy at or below 20% health, a threshold that rises with each rank. It deals 22 damage, consumes every affliction on the target, adding 1.5 times their remaining damage to the hit, and heals you for 15% of the damage dealt."
+  },
+  {
+   "name": "Second Pass",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "wind",
+   "cooldown": 90,
+   "resetCount": 1,
+   "blinkOnUse": 96,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and jinks you 3 tiles from where you stood."
+  },
+  {
+   "name": "Lessons in Evasion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 3% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

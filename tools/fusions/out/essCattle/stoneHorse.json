@@ -1,0 +1,82 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Hoofbeat Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A drumming kick that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 3 seconds. For 2s after using it, you move 10% faster."
+  },
+  {
+   "name": "Stampede",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Stomps down, dealing 28 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Barded Gallop",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 6
+   },
+   "desc": "Raises your armour by 20% for 10 seconds. Your movement speed rises 30% for 6s after you use it."
+  },
+  {
+   "name": "Gathering Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

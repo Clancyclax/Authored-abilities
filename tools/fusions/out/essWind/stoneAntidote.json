@@ -1,0 +1,75 @@
+{
+ "essence": "essWind",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Drawn on the Draught",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A pull of air that deals 14 damage to the first enemy it meets, draws out every affliction you have on it and deals 60% more damage for each one drawn."
+  },
+  {
+   "name": "Bitterness Exhaled",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes out drawn poison in a cone 4 tiles long that deals 11 damage and leaves everything in it [Poisoned] for 5 seconds. Your afflictions on each target spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Airing Out",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "wind",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 poison conditions from you and every ally, and you move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Not Yours to Keep",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Each affliction laid on you has a 20% chance to be sent back to whoever laid it instead, and you have 10% poison resistance."
+  }
+ ]
+}

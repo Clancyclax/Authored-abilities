@@ -1,0 +1,74 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Starved Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "hpCostPct": 0.04,
+   "leech": 0.4,
+   "desc": "Costs 4% of your maximum health. A bite that deals 9 damage, heals you for 40% of the damage dealt and leaves the target 6% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Field Dressing",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "leech": 0.4,
+   "desc": "Carves into an enemy at or below 30% health for 22 damage, consuming every affliction on it and adding 1.5 times their remaining damage. You heal for 40% of the damage dealt."
+  },
+  {
+   "name": "Passing the Haunch",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "healOnUse": 8,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds and fights with 1 more Power while it holds, and you regain 8 health at once."
+  },
+  {
+   "name": "Eat What You Kill",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "lifeOnKill": 6,
+   "desc": "Each kill restores 6 health. When you kill an enemy, healing you receive rises by 30% for 8 seconds. Once every 10 seconds."
+  }
+ ]
+}

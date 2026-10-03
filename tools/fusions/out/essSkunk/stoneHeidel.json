@@ -1,0 +1,89 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Tail Up, Hooves Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 8,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 80,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A kick from both hind hooves with your tail raised that deals 11 damage, knocks the target back 2.5 tiles and leaves it 10% easier to wound for 5 seconds, with a 50% chance to leave it [Fatigued] for 6 seconds."
+  },
+  {
+   "name": "Team Leans In",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sprays a ring of musk that deals 26 damage to every enemy within 3 tiles. When it hits, you and your allies pull together and deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Nosebag Rest",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 40,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds. Your movement speed rises 15% for 3 seconds after you use it."
+  },
+  {
+   "name": "Rank in the Traces",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 4,
+   "familiarRange": 96,
+   "familiarInterval": 1.8,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "mount": true,
+   "mountFamily": "beast",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded heidel fights beside you, kicking enemies within 3 tiles for 4 damage every 1.8 seconds and leaving them [Poisoned] for 1 damage a second for 5 seconds. You can ride it."
+  }
+ ]
+}

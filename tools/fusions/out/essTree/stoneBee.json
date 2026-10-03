@@ -1,0 +1,103 @@
+{
+ "essence": "essTree",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nectar Run",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 4,
+    "label": "Nectar"
+   },
+   "desc": "Sends 3 foragers out from your blossom in a spread out to 6 tiles; each one deals 3 poison damage. 15% of the damage dealt comes back to you as healing over 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wax-Sap Clot",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 320,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a clot of sap and comb that deals 11 poison damage to the first enemy it meets, leaves it [Slowed] for 4 seconds and [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Blossom Flush",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "summonAnimal": "bee",
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 10
+   },
+   "desc": "Brings you into flower where you stand. For 8 seconds the blossom restores 3 health a second to you and any ally within 3 tiles. A swarm escort drawn to it fights beside you for 10 seconds, striking for 3 damage every 1.2 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Honey Tithe",
+   "element": "nature",
+   "cooldown": 4,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "regenPerSec": 0.5,
+   "desc": "Each time you gain health, a sting leaps to the nearest enemy within 5 tiles and deals 5 damage. Once every 4 seconds. You also regenerate 0.5 health a second."
+  }
+ ]
+}

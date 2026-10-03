@@ -1,0 +1,82 @@
+{
+ "essence": "essShip",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "All Paws on Deck",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A bite that deals 4 damage and leaves the target 6% easier to wound for 4 seconds. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rouse the Watch",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Bays through a cone 3.5 tiles long, dealing 26 damage to every enemy in it. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Welcome Back Aboard",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 24,
+   "healAmount": 14,
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles. For 4 seconds after, you move 15% faster."
+  },
+  {
+   "name": "Quarterdeck Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Deckhound",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded hound keeps your watch and fights beside you, biting an enemy within 5 tiles for 4 damage every 1.2 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

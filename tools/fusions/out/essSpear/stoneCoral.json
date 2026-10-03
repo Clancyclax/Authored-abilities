@@ -1,0 +1,84 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Snapped Branch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "desc": "Throws a branching head that deals 8 damage to the first enemy it meets, then shatters into spines that hit every enemy within 2.5 tiles for 60% of that. Also costs 4% of your maximum health.",
+   "explodeRadius": 80,
+   "splashFrac": 0.6
+  },
+  {
+   "name": "Staghorn Thicket",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Raises a thicket of branching spines through a cone 4 tiles long that deals 26 damage to everything in it, ignores armour and leaves each enemy [Bleeding] for 6 seconds."
+  },
+  {
+   "name": "Fringing Reef",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Raises a reef of stinging spines 5 tiles long for 8 seconds. Anything that crosses it is [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Accreting Guard",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

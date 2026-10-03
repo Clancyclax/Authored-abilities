@@ -1,0 +1,79 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Turned Furrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 128,
+   "coneAngle": 0.4,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives the blade through the ground, cutting a furrow 4 tiles long that deals 7 earth damage to everything in it and leaves each enemy [Slowed] for 3 seconds. Each use costs 4% of your maximum health."
+  },
+  {
+   "name": "Ox-Goad",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 10,
+   "range": 112,
+   "maxMult": 1.5,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "knockback": 96,
+   "desc": "Prods with the full length of the haft for 12 damage, rising to 1.5 times that at its full reach of 3.5 tiles, and drives the target back 3 tiles."
+  },
+  {
+   "name": "Plough Team",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Puts every ally within 5 tiles in harness with you: they strike 15% harder for 10 seconds, and fight with 1 more Power while it holds."
+  },
+  {
+   "name": "Long Furrow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "Every few paces you cover, you regain 3 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

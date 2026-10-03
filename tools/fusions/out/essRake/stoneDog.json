@@ -1,0 +1,72 @@
+{
+ "essence": "essRake",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Dug-Up Bones",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseBlast",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.2,
+   "chargesMax": 3,
+   "range": 288,
+   "corpse": true,
+   "explodeRadius": 96,
+   "desc": "Holds 3 charges, and kills give charges back. The nearest body within 9 tiles is dug up and bursts, dealing 8 damage plus 8% of its maximum health to everything within 3.5 tiles."
+  },
+  {
+   "name": "Worry the Hide",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stunOnHit": 1.2,
+   "desc": "Sinks the tines in and holds on, dealing 14 damage, stunning the target for 1.2 seconds and leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Round Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Lays a herding line 6 tiles long for 5 seconds that drags nearby enemies toward it and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Brought Back",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Retriever",
+   "lifeOnKill": 3,
+   "desc": "A bonded hound fights beside you, biting an enemy within 4.5 tiles for 4 damage every 1.2 seconds. Each kill restores 3 health to you."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Scent Trail",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.2,
+   "desc": "Throws a tracker that deals 4 damage to the first enemy it meets, with a 50% chance to leave it [Marked] for 6 seconds, and heals you for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "name": "Run to Ground",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "requiresTargetBelow": 0.3,
+   "leech": 0.35,
+   "desc": "Usable only on an enemy at or below 30% health. A final lunge on a target up to 7 tiles away that deals 24 damage, rising to twice that at full reach. You heal for 35% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Scent Taken",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "healOnUse": 10,
+   "desc": "Increases your critical hit chance by 20% for 15 seconds. You restore 10 health when you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Long Stalk",
+   "element": "physical",
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "lifeOnKill": 3,
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Each kill restores 3 health to you. Once every 8 seconds."
+  }
+ ]
+}

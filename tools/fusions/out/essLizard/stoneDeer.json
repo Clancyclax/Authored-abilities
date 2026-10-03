@@ -1,0 +1,77 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kick and Away",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "template": "sunderStrike",
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 2
+   },
+   "desc": "A hind kick that deals 5 damage and leaves the target 6% easier to wound for 3 seconds, and you move 20% faster for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Caught in the Open",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "template": "aoeRing",
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Goes rigid and stamps, dealing 11 damage to every enemy within 3.5 tiles and stunning each for 1 second."
+  },
+  {
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "name": "Flagged Tail",
+   "element": "physical",
+   "speedMult": 1.35,
+   "buffDuration": 5,
+   "cooldown": 20,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 35% and your dodge chance by 10% for 5 seconds, and carries you 3 tiles from where you stood."
+  },
+  {
+   "name": "Velvet Over the Stump",
+   "element": "nature",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 30%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

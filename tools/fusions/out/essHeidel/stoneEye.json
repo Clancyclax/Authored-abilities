@@ -1,0 +1,70 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ride Down the Straggler",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 80,
+   "requiresTargetBelow": 0.3,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Usable only on an enemy at or below 30% health: you rush up to 7 tiles to it and strike for 20 damage, leaving it 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wide-Set Glare",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 1.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Your stare sweeps a wide 5-tile arc, dealing 26 damage that ignores resistance. Each hit has a 60% chance of [Marked] for 8 seconds."
+  },
+  {
+   "name": "Unbroken Sightline",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "arcane",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "castTime": 0,
+   "desc": "For 15 seconds, your attacks and spells reach 54% further."
+  },
+  {
+   "name": "Sees Who Is Flagging",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against an enemy below half health, you deal 15% more damage."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essBat",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Scent Ping",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargesMax": 4,
+   "desc": "Sends a ping into the first enemy it meets, dealing 7 resonating damage and leaving it [Marked] for 8 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Run Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "dark",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 20,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "You rush up to 6 tiles to the target and strike it for 16 dark damage, leaving it 15% easier to wound for 6 seconds. You move 20% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Predator's Surge",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "dark",
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 30% for 12 seconds. Your movement speed rises 15% for 4 seconds after you use it.",
+   "powerMult": 1.3,
+   "buffDuration": 12
+  },
+  {
+   "name": "Quarry's End",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies below 50% health, you deal 15% more damage."
+  }
+ ]
+}

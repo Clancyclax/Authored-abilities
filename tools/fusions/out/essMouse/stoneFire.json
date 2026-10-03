@@ -1,0 +1,102 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Tail Through the Straw",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 128,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "You run a burning circle through every enemy within 3 tiles, dealing 10 fire damage and setting each [Burning] for 2 damage a second for 5 seconds. Your afflictions on each spread to enemies within 4 tiles of it, and you move 25% faster for 3 seconds."
+  },
+  {
+   "name": "Bitten to Cinders",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "consumeAfflictionsPer": 0.5,
+   "desc": "A biting weapon strike that uses up every affliction you have on the target, dealing 16 fire damage and 50% more for each one used, and sets the target [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Trail of Embers",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 24,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Lays a line of embers 5 tiles long for 6 seconds. Anything that crosses it is set [Burning] for 3 damage a second for 4 seconds. You move 20% faster for 4 seconds after laying it."
+  },
+  {
+   "name": "Sparks at the Heels",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 4,
+    "range": 160
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Every few paces you cover, a spark leaps to the nearest enemy within 5 tiles for 4 lightning damage and sets it [Burning] for 1 damage a second for 3 seconds. Once every 5 seconds."
+  }
+ ]
+}

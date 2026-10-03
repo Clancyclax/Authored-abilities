@@ -1,0 +1,77 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Hold Fast",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A gripping shove that deals 4 damage, leaves the target 5% easier to wound for 3 seconds and has a 20% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Clamped Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "sunder": {
+    "amount": 0.17,
+    "duration": 8
+   },
+   "slowPct": 0.18,
+   "stunOnHit": 1,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "Clamps down on every enemy within 3 tiles, which deals 10 damage, strips 17% armour for 8 seconds and slows each by 18%, then stuns each for 1 second."
+  },
+  {
+   "name": "Pulling Together",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Finishing Grip",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "Against enemies below half health, you deal 12% more damage. Your armour rises by 5%."
+  }
+ ]
+}

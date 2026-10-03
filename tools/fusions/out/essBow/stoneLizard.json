@@ -1,0 +1,71 @@
+{
+ "essence": "essBow",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Chilled Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "frost",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a chilled arrow that deals 5 frost damage, rising to 1.5 times that at full reach, with a 40% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Waited-For Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Fires an arrow that deals 14 frost damage to the first enemy it meets, uses up every affliction you have on it and deals 50% more damage for each one."
+  },
+  {
+   "name": "Tail Regrown",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "cooldown": 25,
+   "healAmount": 14,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 14 health to you, rising 8% for every tenth of your health already lost, up to 40%."
+  },
+  {
+   "name": "Sun-Warmed Aim",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "During the day, you deal 12% more damage."
+  }
+ ]
+}

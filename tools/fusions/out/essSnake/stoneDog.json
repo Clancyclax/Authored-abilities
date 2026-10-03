@@ -1,0 +1,75 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trailing the Bitten",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Strikes an enemy up to 6 tiles away. The strike deals 16 damage, rising to 1.6 times that at full reach, uses up every affliction you have on the target and deals 50% more damage for each one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Locked Jaw",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "stunOnHit": 1.2,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A bite that holds on: it deals 13 damage, stuns the target for 1.2 seconds and leaves it 12% easier to wound for 6 seconds. Its damage rises 8% for each ally near you, up to 32%."
+  },
+  {
+   "name": "Threat Display",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "You pull up to 4 enemies within 5 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Viper-Mouthed Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Fang Cur",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded hound with a viper's bite fights beside you, striking enemies within 4 tiles for 3 damage every 1.2 seconds and leaving them [Poisoned] for 1 damage a second for 5 seconds."
+  }
+ ]
+}

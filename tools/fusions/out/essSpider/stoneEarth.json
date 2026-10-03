@@ -1,0 +1,74 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Bolas Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Slings a stone on a line at an enemy up to 6 tiles away, which deals 8 damage, rising to 1.6 times that at maximum range, and slows it by 25% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Trapdoor Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bursts from a burrow in a cone 3 tiles long, which deals 12 damage to everything in it, stuns each enemy for 1.2 seconds and leaves it [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Tunnel Under",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "earth",
+   "cooldown": 12,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "You drop into a burrow and come up at a spot up to 6 tiles away. You move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Moored to Flagstone",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "rock",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "On paved ground, your armour rises by 12%."
+  }
+ ]
+}

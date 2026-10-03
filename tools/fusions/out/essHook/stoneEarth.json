@@ -1,0 +1,67 @@
+{
+ "essence": "essHook",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Heaved Bedrock",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Catches the bedrock and hauls it up under every enemy within 3.5 tiles, dealing 30 earth damage that ignores armour."
+  },
+  {
+   "name": "Driven Piton",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a stone piton that deals 8 rock damage to the first enemy it meets, with a 40% chance to leave it [Pinned] for 1.5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Deadman Anchor",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 36,
+   "desc": "Sets your barb into bedrock and braces on it, raising your armour by 25% for 12 seconds."
+  },
+  {
+   "name": "Purchase on Stone",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "rock",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "On paved ground, your armour rises by 12%."
+  }
+ ]
+}

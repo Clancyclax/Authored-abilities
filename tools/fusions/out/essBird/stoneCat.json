@@ -1,0 +1,66 @@
+{
+ "essence": "essBird",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Drop From the Perch",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 80,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "desc": "Usable only on a target at or below 25% health. Drops onto it for 18 damage and uses up every affliction on it, adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Raking Talons",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "range": 72,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Ledge to Ledge",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 12,
+   "teleportRange": 192,
+   "dodgeBonus": 0.15,
+   "desc": "Steps you instantly to a point up to 6 tiles away, and your dodge chance rises by 15%."
+  },
+  {
+   "name": "Midflight Twist",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essRat",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "name": "Startled Flock",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Flushes a flock that hits every enemy within 3 tiles, dealing 12 damage and knocking them back 2 tiles. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Carrion Call",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "leech": 0.2,
+   "desc": "Scavengers from the ground and the sky fall on a dying enemy for 26 damage, and you heal for 20% of the damage dealt. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Hop, Flap, Gone",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "cooldown": 24,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 30% and your dodge chance by 8% for 8 seconds, and carries you 3 tiles from where you stood."
+  },
+  {
+   "name": "Glide Into the Bite",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your crit chance rises by 25% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Ruled Lines",
+   "element": "arcane",
+   "role": "medium",
+   "stunOnHit": 0.8,
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Draws a ring of ink bars around you, dealing 12 damage to every enemy within 3 tiles and stunning each for 0.8 seconds. Every enemy hit is then [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Closed Case",
+   "element": "arcane",
+   "role": "execute",
+   "consumeAfflictionsPer": 0.6,
+   "base": 16,
+   "cooldown": 15,
+   "desc": "Sends a closed file into the first enemy it meets, dealing 16 damage. It uses up every affliction you have on the target and deals 60% more damage for each one."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "name": "Barred Passage",
+   "element": "arcane",
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Draws a wall of ink bars 6 tiles long for 8 seconds. Nothing can cross it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 6,
+   "name": "Docket Entry",
+   "element": "arcane",
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 5
+   },
+   "desc": "Each time you afflict something, you regain 5 mana. Once every 6 seconds."
+  }
+ ]
+}

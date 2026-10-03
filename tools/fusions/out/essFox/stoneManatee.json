@@ -1,0 +1,86 @@
+{
+ "essence": "essFox",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lulling Wash",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "water",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 18,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "slowPct": 0.3,
+   "stunOnHit": 0.8,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "A slow wave that deals 8 water damage to every enemy within 3 tiles, strips 10% armour for 6 seconds and slows each by 30%, then stuns each for 0.8 seconds."
+  },
+  {
+   "name": "Sipped Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "leech": 0.2,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Fires a jet of water that deals 6 damage to the first enemy it meets and heals you for 20% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one. For 2 seconds after using it, you move 15% faster."
+  },
+  {
+   "name": "Calm Water",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "range": 112,
+   "healAmount": 14,
+   "healScope": "party",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Easy Does It",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.5,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Once your health falls below 50%, every heal reaching you is worth 30% more for 8 seconds. Once every 40 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

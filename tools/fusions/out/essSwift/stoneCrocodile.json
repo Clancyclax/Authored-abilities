@@ -1,0 +1,86 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneCrocodile",
+  "fusions": [
+    {
+      "name": "Lunge From Still Water",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "long",
+      "base": 34,
+      "cooldown": 90,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "guaranteedCrit": true,
+      "chargeTo": 128,
+      "desc": "You lunge up to 4 tiles to the target. The bite deals 34 damage, is always a critical hit and leaves the target 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Death Roll",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 16,
+      "strikes": 1,
+      "requiresTargetBelow": 0.3,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "bindOnHit": {
+        "slowPct": 0.4,
+        "duration": 2
+      },
+      "desc": "Usable only on an enemy at or below 30% health. The roll deals 20 damage, leaves the target [Bleeding] for 3 damage a second for 4 seconds and makes it 40% slower for 2 seconds."
+    },
+    {
+      "name": "Long Wait, Short Work",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "physical",
+      "powerMult": 1.4,
+      "buffDuration": 6,
+      "cooldown": 75,
+      "castTime": 0,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Increases your damage by 40% for 6 seconds. Your movement speed rises 25% for 4 seconds after you use it."
+    },
+    {
+      "name": "Sprung Jaw",
+      "kind": "passive",
+      "element": "physical",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 10,
+        "seconds": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.3,
+        "strikes": 1
+      },
+      "desc": "After 10 seconds without a critical hit, your critical chance rises by 30% for your next strike. Once every 10 seconds."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Spun to the Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Releases a ring of poison around you that deals 12 damage to every enemy within 3.5 tiles and leaves each one [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target then spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Drawn Clean Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "stackMult": 1.2,
+   "desc": "Usable only on a target at or below 25% health. A strike that deals 18 damage, consumes every affliction you have on the target and adds 1.2 times their remaining damage to the blow."
+  },
+  {
+   "name": "Circulation Flush",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 8,
+   "desc": "Removes up to 3 conditions from you and restores 8 health."
+  },
+  {
+   "name": "Run Its Course",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "When one of your afflictions on an enemy runs out, you regain 3 health a second for 4 seconds. Once every 8 seconds. You have 10% poison resistance."
+  }
+ ]
+}

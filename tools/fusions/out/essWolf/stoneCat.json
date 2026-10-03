@@ -1,0 +1,82 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "The Unheard Approach",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 60,
+   "ignoreArmor": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "A silent lunge that deals 26 damage to the first enemy it meets and ignores armour. It has 50% more critical chance against an enemy that has not been hurt yet. Your movement speed rises 20% for 5 seconds after you use it."
+  },
+  {
+   "name": "Spend a Life",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "confuse": {
+    "chance": 0.25,
+    "duration": 3
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Costs 5% of your maximum health. Packmates strike from every side, which deals 8 damage to every enemy within 3 tiles; each has a 25% chance to turn on its neighbours for 3 seconds."
+  },
+  {
+   "name": "Righting Reflex",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "immunityDuration": 3,
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you, and you leap 3 tiles from where you stood. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Ambush Feeds the Chase",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "When you land a critical hit, you regain 5 stamina. Once every 4 seconds."
+  }
+ ]
+}

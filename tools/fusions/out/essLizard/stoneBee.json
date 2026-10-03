@@ -1,0 +1,89 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flypaper Flick",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "template": "projectileBall",
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "leech": 0.2,
+   "desc": "Whips your tongue at the first enemy within 6 tiles for 8 damage, leaves it [Poisoned] for 2 damage a second for 4 seconds, and heals you for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swarm the Stalked",
+   "element": "piercing",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 14,
+   "template": "volley",
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "spreadAfflictions": 96,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Looses 4 stingers at once, spread apart out to 6 tiles, each dealing 5 damage, rising 10% for each affliction the target carries (max 40%). Your afflictions on each enemy hit spread to every enemy within 3 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "name": "Honey on Warm Stone",
+   "element": "nature",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Spreads a sun-warmed patch of honey 3 tiles around where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Cold Blood, Busy Wings",
+   "element": "nature",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

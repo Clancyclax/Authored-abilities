@@ -1,0 +1,80 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Running Start",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A shoulder-barge that deals 13 damage, knocks the target back 3 tiles and leaves it 10% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Cornered Maul",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "You turn on everything around you, dealing 26 damage to every enemy within 3 tiles. Against a boss or an elite it also deals 5% of their maximum health. Its damage rises 5% for every 10% of your health already gone (max 25%)."
+  },
+  {
+   "name": "Winter Curl",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 9,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 40,
+   "healOnUse": 14,
+   "desc": "Veils you for 9 seconds and restores 14 health. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Bristle to Full Size",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.35,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Once your health falls below 35%, you gain a shield worth 25% of your maximum health for 5 seconds. Once every 30 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

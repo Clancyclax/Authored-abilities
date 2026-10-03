@@ -1,0 +1,87 @@
+{
+  "essence": "essThread",
+  "stone": "stoneApe",
+  "fusions": [
+    {
+      "name": "Garrote Haymaker",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 86,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "hpCostPct": 0.04,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.3,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Costs 4% of your maximum health. A blow with a looped line that deals 9 damage and leaves the target 10% easier to wound for 4 seconds, with a 30% chance to leave it [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Troop's Bolas",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "blunt",
+      "role": "long",
+      "base": 16,
+      "cooldown": 75,
+      "volleyCount": 3,
+      "volleySpread": 0.35,
+      "speed": 320,
+      "radius": 7,
+      "range": 224,
+      "isAoe": true,
+      "castTime": 0.4,
+      "bossPct": 0.04,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "After a 0.4 second cast, hurls 3 weighted cords at once, spread apart. Each cord deals 16 damage, plus 4% of a boss's or elite's maximum health, and leaves its target [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Swing Hand Over Hand",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "physical",
+      "cooldown": 6,
+      "dashDist": 128,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Swings you 4 tiles forward on a strand. Your movement speed rises 20% for 3 seconds afterward."
+    },
+    {
+      "name": "Wrap and Wrench",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "burst",
+      "stackCap": 6,
+      "stackDecay": 4,
+      "stackSpend": "full",
+      "stackOn": "enemy",
+      "stackScale": 1,
+      "stackIcon": "stackVenom",
+      "desc": "Every hit you land winds a loop round that enemy, up to 6. At 6 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per loop. Unfed, a loop fades every 4 seconds."
+    }
+  ]
+}

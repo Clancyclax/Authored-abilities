@@ -1,0 +1,80 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Singled Out",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "desc": "Hooks a weakened enemy with a horn for 24 damage, leaving it 10% easier to wound for 5 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bloodshot Glare",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.03,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 3% of your maximum health. A glare 3 tiles ahead of you that deals 8 damage to everything in it, with a 40% chance to leave each [Marked] for 6 seconds."
+  },
+  {
+   "name": "Stare-Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "cooldown": 45,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "stun",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.5-second wind-up, holds every creature within 4 tiles in place [Stunned] for 2 seconds."
+  },
+  {
+   "name": "Steady Regard",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "armorBonus": 0.05,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage. Your armour rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essNet",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Cornered Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Rakes a mesh through a cone 3 tiles long at the cost of 5% of your maximum health, dealing 8 damage to everything caught in it. Its damage rises 10% for every 10% of your health you are missing (max 50%)."
+  },
+  {
+   "name": "Ribcracker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "Wraps the target in a conjured mesh and squeezes, dealing 28 damage plus 5% of a boss's or elite's maximum health, and leaving it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Shoulder In",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "taunt": true,
+   "tauntRadius": 128,
+   "tauntMax": 4,
+   "tauntDuration": 4,
+   "desc": "Increases your maximum health by 20% for 12 seconds, and draws up to 4 enemies within 4 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Fat of the Run",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill hangs a catch on you, up to 5. When you reach 5, they all spend at once: you are healed for 5% of your maximum health per catch (25% at full). Unfed, a catch fades every 10 seconds."
+  }
+ ]
+}

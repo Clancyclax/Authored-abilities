@@ -1,0 +1,79 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Plated Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You leap to a target up to 6 tiles away and come down on it, dealing 16 damage to every enemy within 2.5 tiles and leaving each [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Coil-Heeled Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargesMax": 3,
+   "desc": "Kicks the target for 8 damage, knocking it back 2 tiles and leaving it 15% easier to wound for 6 seconds. It holds 3 charges, and kills give charges back.",
+   "knockback": 64
+  },
+  {
+   "name": "Sprung Plates",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "cooldown": 24,
+   "desc": "A barrier absorbs the next 20 damage across up to 4 blows for 6 seconds and raises your armour by 8% while it holds. You move 15% faster for 3 seconds."
+  },
+  {
+   "name": "Loaded Leaf",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "physical",
+   "reflectKind": "damage",
+   "reflectFrac": 0.12,
+   "buffDuration": 0,
+   "desc": "12% of the damage you take is dealt back to whoever dealt it."
+  }
+ ]
+}

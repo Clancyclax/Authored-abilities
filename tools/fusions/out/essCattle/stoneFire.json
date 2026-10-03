@@ -1,0 +1,89 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "The Lantern Kicked Over",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Kicks a lit lantern that deals 28 fire damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hot-Iron Mark",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Brands the target with a searing horn strike that deals 24 damage and sets it [Burning] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Branded Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are set [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "name": "Seeing Red",
+   "element": "fire",
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, your physical damage rises by 20% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

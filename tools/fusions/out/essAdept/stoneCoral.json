@@ -1,0 +1,78 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Reef Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Raises jagged growth around you, dealing 11 damage to every enemy within 3 tiles and making them [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Accretion",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 18,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "A blow that deals 18 damage and consumes every affliction on the target, adding 1.8 times their remaining damage to the hit. Its damage rises 10% per affliction on the target (max 50%). Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Reef Garden",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Raises a living reef where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Layer on Layer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

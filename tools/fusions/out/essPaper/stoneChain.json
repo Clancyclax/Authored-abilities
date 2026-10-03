@@ -1,0 +1,79 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "name": "Pass It On",
+   "element": "arcane",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 7,
+   "cooldown": 1,
+   "chain": {
+    "count": 3,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a letter into the first enemy it meets for 7 damage. It then copies itself to 3 more enemies within 3.5 tiles, each copy dealing 60% of the original damage. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Lien Placed",
+   "element": "physical",
+   "role": "medium",
+   "stunOnHit": 1.2,
+   "base": 14,
+   "cooldown": 12,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Binds the target in linked pages, dealing 14 damage and stunning it for 1.2 seconds. The target is 15% easier to wound for 6 seconds and [Hindered] for 5 seconds, slowing its attacks."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "name": "Joint Signatories",
+   "element": "arcane",
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 9,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "cooldown": 30,
+   "desc": "Links every ally within 5 tiles under one contract: each strikes 15% harder for 9 seconds and fights with 1 more power while it holds."
+  },
+  {
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "name": "No Escape Clause",
+   "element": "arcane",
+   "desc": "Your afflictions take hold on enemies that are immune to them."
+  }
+ ]
+}

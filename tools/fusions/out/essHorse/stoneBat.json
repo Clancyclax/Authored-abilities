@@ -1,0 +1,80 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Echoing Hoofbeat",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps out a pulse of sound that strikes the first enemy for 7 damage, with a 30% chance to leave it [Muddled] for 3 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Blind Panic",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "confuse": true,
+   "confuseChance": 0.4,
+   "confuseDuration": 3,
+   "desc": "Rears with a piercing shriek, dealing 28 damage that ignores resistances to every enemy within 4 tiles. Each has a 40% chance to turn against its allies for 3 seconds."
+  },
+  {
+   "name": "Moonless Gallop",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 23,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you in darkness for 6 seconds: enemies notice you 60% later, you move 25% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Feeding Flight",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "After you cover enough ground, your attacks heal you for 15% of the damage they deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

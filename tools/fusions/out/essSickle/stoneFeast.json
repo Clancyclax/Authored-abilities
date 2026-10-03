@@ -1,0 +1,77 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Sow to Gorge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 80,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "leech": 0.3,
+   "desc": "Cuts every enemy within 2.5 tiles for 9 blood damage and heals you for 30% of the damage dealt. Also costs 5% of your maximum health.",
+   "isAoe": true
+  },
+  {
+   "name": "Shared Carving",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Cuts the target for 28 damage and leaves it 15% easier to wound for 8 seconds. When it hits, you and your allies deal 20% more damage for 15 seconds.",
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Glean the Fallen",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "cooldown": 20,
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 192,
+   "desc": "Gleans every body within 6 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Appetite From the Field",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, the healing you receive rises by 30% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

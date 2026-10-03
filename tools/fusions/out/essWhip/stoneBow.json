@@ -1,0 +1,76 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Held at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "speed": 520,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "castTime": 1.2,
+   "ignoreArmor": true,
+   "desc": "After a 1.2 second draw, looses the tip at the first enemy it meets, which deals 32 damage and ignores armour."
+  },
+  {
+   "name": "Quiver of Thongs",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 440,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 4,
+   "desc": "Looses 3 lash-tips in a fan out to 8 tiles; each deals 6 damage. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Slack Line",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Tension Kept",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 25% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

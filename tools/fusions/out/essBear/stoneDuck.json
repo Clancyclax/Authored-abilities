@@ -1,0 +1,89 @@
+{
+ "essence": "essBear",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Wet Coat Shake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 96,
+   "coneAngle": 0.9,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the water from your coat in a cone 3 tiles ahead, dealing 6 damage to everything in it and leaving each [Soaked] for 5 seconds. It holds 3 charges, and each kill gives a charge back."
+  },
+  {
+   "name": "Unhurried Clout",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "range": 72,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "desc": "A blow that deals 30 damage and leaves the target 15% easier to wound for 6 seconds. It is always a critical hit."
+  },
+  {
+   "name": "Shrugged Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "desc": "For 9 seconds, each affliction laid on you has a 60% chance to be sent back to whoever laid it."
+  },
+  {
+   "name": "Buoyant Bulk",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "your health regenerates faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your health regenerates 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

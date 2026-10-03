@@ -1,0 +1,81 @@
+{
+ "essence": "essFish",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Breaching Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 210,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "requiresTargetBelow": 0.25,
+   "chargeTo": 192,
+   "desc": "Usable only on a target at or below 25% health. You rush up to 6 tiles to it and chop for 18 damage, up to 2 times that at maximum range."
+  },
+  {
+   "name": "Hatchet Flight",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Looses 3 hatchets in a spread, each dealing 3 damage, with 30% more critical chance against a target that has not yet been wounded."
+  },
+  {
+   "name": "Sawtooth Rush",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.35,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your slashing damage by 35% for 12 seconds, and your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Blood in the Water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises 30% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

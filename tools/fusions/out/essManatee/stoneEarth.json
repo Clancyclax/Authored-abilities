@@ -1,0 +1,86 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Clouded Shallows",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "role": "basic",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spammable": true,
+   "element": "earth",
+   "base": 3,
+   "cooldown": 1,
+   "coneAngle": 0.9,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks up the bottom mud in a cone 3 tiles long, dealing 3 damage with a 35% chance to leave each enemy [Blunted] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "long",
+   "speed": 260,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Silt Burial",
+   "element": "earth",
+   "base": 30,
+   "cooldown": 90,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a mass of riverbed silt on the first enemy it meets for 30 damage and leaves it [Pinned] for 2 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Mud Wallow",
+   "element": "earth",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "healOnUse": 10,
+   "desc": "Reduces the damage you take by 20% for 12 seconds, and you regain 10 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.35,
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 8
+   },
+   "name": "Riverbed Ballast",
+   "element": "earth",
+   "desc": "Once your health falls below 35%, you gain a shield worth 25% of your maximum health for 8 seconds. Once every 60 seconds."
+  }
+ ]
+}

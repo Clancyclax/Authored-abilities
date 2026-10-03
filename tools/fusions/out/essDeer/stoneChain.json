@@ -1,0 +1,80 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Anchor Cast",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a chain at an enemy up to 7 tiles away and springs along it to the target, where it deals 12 damage and leaves it [Pinned] for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ricochet Hooves",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Kicks out around you and deals 4 blunt damage to every enemy within 2 tiles. Each hit then jumps to 1 more enemy within 3 tiles for 50% of the damage."
+  },
+  {
+   "name": "Slip the Tether",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 3,
+   "cooldown": 45,
+   "blinkOnUse": 64,
+   "desc": "You spring 2 tiles, and for 3 seconds blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Link by Link",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackOn": "enemy",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

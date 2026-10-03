@@ -1,0 +1,76 @@
+{
+ "essence": "essFork",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Crushing Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts the fork at the first enemy it meets, dealing 9 damage with a 40% chance to leave it [Pinned] for 1.5 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Steady Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Sweeps the fork in a wide arc, dealing 26 damage that ignores armour to everything within 4 tiles in front of you."
+  },
+  {
+   "name": "Firm Hold",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "desc": "Removes 2 conditions from you."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your next strike gains 30% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

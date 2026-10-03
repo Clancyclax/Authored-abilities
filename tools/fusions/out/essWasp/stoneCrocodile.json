@@ -1,0 +1,93 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shut Tight",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "guaranteedCrit": true,
+   "desc": "A bite that deals 28 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the bite. It is always a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Surfacing Bite",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.4,
+    "duration": 3
+   },
+   "desc": "Lunges you onto a target up to 6 tiles away for a bite that deals 13 damage, leaves it [Poisoned] for 2 damage a second for 4 seconds and slows it by 40% for 3 seconds."
+  },
+  {
+   "name": "Sprung From Below",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 1 second to bury a nest at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles sets it off: it deals 22 damage in a blast around it and leaves the enemy [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "name": "Letting It Work",
+   "element": "poison",
+   "desc": "When one of your afflictions runs out on an enemy, your critical hit chance rises by 20% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

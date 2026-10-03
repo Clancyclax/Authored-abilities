@@ -1,0 +1,79 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "hpCostPct": 0.04,
+   "leech": 0.3,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Costs 4% of your maximum health. A bite that deals 7 damage and leaves the target 8% easier to wound for 4 seconds, and you heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Creeping Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 192,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "A cloud deals 12 damage to everything in a cone 6 tiles long and leaves it [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on each target then spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Feeding Frenzy",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "life",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "cooldown": 45,
+   "desc": "Increases your attack speed by 25% for 12 seconds and restores 10 health."
+  },
+  {
+   "name": "Gorged Cells",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "life",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 15,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 5. At 5 they all spend at once, healing you for 5% of your maximum health per stack. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

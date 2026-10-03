@@ -1,0 +1,76 @@
+{
+ "essence": "essWind",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Smothering Sheet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 10,
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sheet thrown on a gust that deals 11 damage to the first enemy it meets, stuns it for 1.2 seconds and leaves it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Cloak Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Snaps your cloak round in a full turn that deals 3 damage to every enemy within 2 tiles, and you move 10% faster for 2 seconds."
+  },
+  {
+   "name": "Full Sail",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "cooldown": 30,
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.08,
+   "desc": "Carries you 2 tiles forward and increases your movement speed by 35% for 8 seconds. Your dodge chance rises by 8%."
+  },
+  {
+   "name": "Streaming Pennant",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "wind",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.05
+    }
+   ],
+   "desc": "Conjures a streaming pennant: you move 5% faster, your critical chance rises by 4%, your critical hits deal 0.1x more, and each kill returns 3 health."
+  }
+ ]
+}

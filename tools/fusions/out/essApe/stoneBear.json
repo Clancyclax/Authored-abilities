@@ -1,0 +1,73 @@
+{
+ "essence": "essApe",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Rib-Cracker Embrace",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 64,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A crushing hug that deals 30 damage, ignores the target's armour, and leaves it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Wounded Thrash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Costs 4% of your maximum health. You thrash at every enemy within 2.5 tiles for 7 damage, rising 8% for every tenth of your health already lost, up to 40%."
+  },
+  {
+   "name": "Shake It Off",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 25,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you, rising 8% for every tenth of your health already lost, up to 40%. The heal has a 10% chance to crit."
+  },
+  {
+   "name": "Mounting Heft",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (56% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

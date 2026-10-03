@@ -1,0 +1,76 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nailed in Place",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 80,
+   "stunOnHit": 0.8,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You stamp on the target's foot for 14 damage, stunning it for 0.8 seconds. It is [Pinned] for 3 seconds and 8% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Circling Trot",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You trot a tight circle, dealing 4 damage to every enemy within 2 tiles. Each hit has a 30% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Round-Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "A challenge that pulls up to 5 enemies within 7 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Nowhere to Bolt",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

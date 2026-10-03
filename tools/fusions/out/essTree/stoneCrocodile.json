@@ -1,0 +1,81 @@
+{
+ "essence": "essTree",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cached under the Snag",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon strike that deals 24 damage and leaves the target [Pinned] for 3 seconds and [Bleeding] for 4 damage a second for 5 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Log Roll",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Rolls your whole trunk over on the spot and deals 28 damage to every enemy within 3 tiles. Every hit is a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Mistaken for Driftwood",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "You veil yourself for 6 seconds: enemies notice you 70% later. Attacking ends it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Stillwater Wait",
+   "element": "water",
+   "cooldown": 24,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 24
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 8
+   },
+   "desc": "When your stamina fills, you heal for 25% of the damage you deal for 8 seconds. Once every 24 seconds."
+  }
+ ]
+}

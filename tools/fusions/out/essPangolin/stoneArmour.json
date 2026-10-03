@@ -1,0 +1,80 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Bulwark Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "maxMult": 1.4,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "chargeTo": 160,
+   "debuff": {
+    "key": "slowLearner",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You rush up to 5 tiles to the target and drive your scales into it, dealing 12 damage, rising to 1.4 times that from the full 5 tiles. It is left with [Slow Learner] for 6 seconds."
+  },
+  {
+   "name": "Hammered Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargesMax": 3,
+   "desc": "A tail slam that deals 9 damage and leaves the target 10% easier to wound for 4 seconds. Holds 3 charges; each use spends one and each kill gives one back."
+  },
+  {
+   "name": "Steel Under Keratin",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 28,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier that absorbs up to 28 damage for 6 seconds, and raises your armour by 10% while it holds."
+  },
+  {
+   "name": "Lamellar Lock",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.06,
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds. Your armour is 6% higher at all times."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Rake",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A raking pounce that deals 22 damage, leaves the target 10% easier to wound for 5 seconds and [Diseased] for 8 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Hooked Cuff",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A swat with claws that hook in: it deals 4 damage, slows the target by 20% for 2 seconds and leaves it [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Crevice Squeeze",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "rock",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "cooldown": 36,
+   "desc": "Springs you 2 tiles into cover and reduces the damage you take by 20% for 10 seconds."
+  },
+  {
+   "name": "Sure-Footed Crust",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

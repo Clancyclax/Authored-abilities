@@ -1,0 +1,69 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Drawn Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Flicks a needle that deals 8 poison damage to the first enemy it meets and heals you for 25% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Purging Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A precise thrust that deals 16 damage and draws out every affliction you have on the target, dealing 60% more damage for each one drawn. It leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Measured Purge",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 poison conditions from you. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Tolerance Drill",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 10% poison resistance."
+  }
+ ]
+}

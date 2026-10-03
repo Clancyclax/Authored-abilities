@@ -1,0 +1,78 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Hoof Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Flicks a hoof at the target, dealing 4 damage and leaving it [Bleeding] for 1 damage a second for 3 seconds. You move 10% faster for 2 seconds afterward."
+  },
+  {
+   "name": "Rearing Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Rears and lashes out with both forehooves, dealing 13 damage to every enemy within 2.5 tiles and knocking them 3 tiles back."
+  },
+  {
+   "name": "Startle Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 160,
+   "cooldown": 9,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Bounds you 5 tiles forward, and your movement speed rises 25% for 3 seconds afterward."
+  },
+  {
+   "name": "Bolt for Cover",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 25
+   },
+   "desc": "When your health falls below half, you regain 25 stamina. Once every 30 seconds."
+  }
+ ]
+}

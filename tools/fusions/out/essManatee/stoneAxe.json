@@ -1,0 +1,88 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "role": "long",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Falling Fluke",
+   "element": "slashing",
+   "base": 32,
+   "cooldown": 75,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 10
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings your tail down edge-first for 32 damage, always as a critical hit, leaving the target 20% easier to wound for 10 seconds and [Slowed] for 6 seconds.",
+   "guaranteedCrit": true
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "role": "resource",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Cleaving Wake",
+   "element": "slashing",
+   "base": 8,
+   "cooldown": 1.1,
+   "chargesMax": 3,
+   "coneAngle": 0.8,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cuts a wake through the water in a cone 3 tiles long, dealing 8 damage with a 50% chance to leave each enemy [Bleeding] for 6 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "name": "Logjam",
+   "element": "water",
+   "wallKind": "block",
+   "wallLength": 128,
+   "wallDuration": 10,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Fells a dam of timber 4 tiles wide that stands for 10 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Overdue Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35,
+    "strikes": 1
+   },
+   "element": "physical",
+   "desc": "After 10 seconds without a critical hit, your critical hit chance rises by 35% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

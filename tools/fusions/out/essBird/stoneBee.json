@@ -1,0 +1,85 @@
+{
+ "essence": "essBird",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Murmuration",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "medium",
+   "base": 3,
+   "cooldown": 14,
+   "isAoe": true,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 260,
+   "radius": 6,
+   "range": 224,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Sends 5 darting birds out in a spread, each dealing 3 damage and leaving the target [Poisoned] for 1 damage a second for 4 seconds. Your afflictions on each target spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Ceaseless Pecking",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "range": 80,
+   "chargesMax": 5,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A weapon strike that deals 7 damage and leaves the target [Poisoned] for 1 damage a second for 3 seconds. It holds 5 charges, and each kill gives one back."
+  },
+  {
+   "name": "Flying in Formation",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "wind",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Slipstream",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 3
+   },
+   "desc": "Each time you spend stamina, you regain 2 stamina a second for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

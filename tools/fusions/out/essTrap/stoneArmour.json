@@ -1,0 +1,75 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Plate-Cracker Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "A snap of jaws that deals 5 damage and leaves the target 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Rivet Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs a buried plate of rivets that deals 30 damage to every enemy within 3.5 tiles. It ignores armour, and each hit has a 50% chance to leave the target [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Barbed Harness",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "buffDuration": 9,
+   "thornsFrac": 0.6,
+   "desc": "For 9 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Snap-Shut Visor",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, a shield worth 10% of your maximum health snaps shut over you for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

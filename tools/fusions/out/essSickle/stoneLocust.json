@@ -1,0 +1,75 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Wingbeat Fan",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "volleyCount": 5,
+   "volleySpread": 0.8,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 192,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 5,
+    "label": "Feeding"
+   },
+   "desc": "Looses 5 curved blades in a wide spread, each dealing 3 damage. 15% of the damage they deal comes back as healing over the following 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 1,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "desc": "A stripping cut that deals 18 damage, consumes every affliction on the target, adding their remaining damage to the hit and 60% more damage for each."
+  },
+  {
+   "name": "Pick the Fallen Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "cooldown": 12,
+   "base": 5,
+   "range": 304,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "desc": "Drains every body within 9.5 tiles (up to 5); each gives back 7% of your health."
+  },
+  {
+   "name": "Following Cloud",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "slashing",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "locust",
+   "familiarCreatureName": "Locust Cloud",
+   "lifeOnKill": 3,
+   "desc": "A bonded swarm of locusts follows you, stinging an enemy within 4 tiles for 3 damage every 1.2 seconds. Each kill restores 3 health to you."
+  }
+ ]
+}

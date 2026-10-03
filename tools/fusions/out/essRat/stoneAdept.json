@@ -1,0 +1,83 @@
+{
+ "essence": "essRat",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Same Spot Again",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "chargesMax": 4,
+   "desc": "Bites the spot the last bite opened, dealing 8 damage and leaving the target 10% easier to wound for 6 seconds. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "coneAngle": 0.9,
+   "name": "Rehearsed Frenzy",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Rats fan out in a cone 4 tiles long, dealing 26 damage to everything in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Second Run-Through",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Maze-Bred",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "you move 5% faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "your dodge chance rises by 5%"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.05,
+     "text": "your abilities come round 5% sooner"
+    }
+   ],
+   "desc": "Raises your Speed by 1, and your Speed ceiling by 1. From bronze rank you move 5% faster, from silver your dodge chance rises by 5%, and from gold your abilities come round 5% sooner."
+  }
+ ]
+}

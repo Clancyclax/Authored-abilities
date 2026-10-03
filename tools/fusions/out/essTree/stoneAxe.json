@@ -1,0 +1,81 @@
+{
+ "essence": "essTree",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Felled Across Them",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.35,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Cuts a trunk loose so that it falls along a narrow line 5 tiles ahead of you. It deals 14 damage to everything under it and stuns it for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "The Last Notch",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "desc": "A felling cut that deals 22 damage and leaves the target 25% easier to wound for 8 seconds. It deals 15% more damage for each of your afflictions on the target (max 45%). Usable only on an enemy at or below 25% health.",
+   "sunder": {
+    "amount": 0.25,
+    "duration": 8
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.15,
+   "scaleCap": 0.45
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Coppice Shoots",
+   "template": "selfHot",
+   "element": "plant",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "cooldown": 30,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "New shoots close over your cuts and restore 4 health a second to you for 6 seconds. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "kind": "passive",
+   "category": "weapon summon",
+   "name": "Living Haft",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 12
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a blade on a living haft. It increases your weapon damage by 12% and your maximum health by 12, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

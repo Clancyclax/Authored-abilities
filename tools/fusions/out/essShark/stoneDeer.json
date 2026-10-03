@@ -1,0 +1,71 @@
+{
+ "essence": "essShark",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Panic Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 112,
+   "desc": "You burst into every enemy within 3.5 tiles, dealing 10 damage and knocking them back 3.5 tiles."
+  },
+  {
+   "name": "Run-Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 12,
+   "range": 192,
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "chargeTo": 192,
+   "desc": "Usable only on an enemy at or below 30% health. You run it down from up to 6 tiles away and bite for 22 damage, up to 1.5 times as much from full range."
+  },
+  {
+   "name": "Startled Bolt",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.35,
+   "buffDuration": 6,
+   "cooldown": 20,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 35% and your dodge chance by 8% for 6 seconds, and carries you 3 tiles from where you stood."
+  },
+  {
+   "name": "Noticed First",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "When you kill an enemy, you restore 8 stamina. Once every 6 seconds. Against an enemy that has not yet been wounded, your critical hit chance is 30% higher."
+  }
+ ]
+}

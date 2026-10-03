@@ -1,0 +1,88 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneCoral",
+  "fusions": [
+    {
+      "name": "Rip Current",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 12,
+      "speed": 480,
+      "radius": 8,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "knockback": 96,
+      "debuff": {
+        "key": "bleed",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a current at the first enemy in its path that deals 12 damage, carries it back 3 tiles and leaves it [Bleeding] for 4 seconds."
+    },
+    {
+      "name": "Brittle Fan",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "slashing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 96,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fires polyps through a cone 3 tiles long; each hit deals 3 damage and has a 30% chance to leave the target [Slowed] for 2 seconds."
+    },
+    {
+      "name": "Reef in a Heartbeat",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "water",
+      "wallKind": "block",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 32,
+      "cooldown": 24,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Grows a reef 5 tiles long in front of you that blocks movement for 6 seconds. You move 20% faster for 4 seconds after you use it."
+    },
+    {
+      "name": "Filter Feeder",
+      "kind": "passive",
+      "element": "water",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 2,
+        "duration": 3
+      },
+      "desc": "Each time you spend stamina, you regain 2 health a second for 3 seconds. Once every 8 seconds."
+    }
+  ]
+}

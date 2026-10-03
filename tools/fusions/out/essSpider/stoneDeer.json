@@ -1,0 +1,79 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Paying Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a trailing line that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Slowed] for 3 seconds. You move 15% faster for 2 seconds after you use it."
+  },
+  {
+   "name": "Startle Whip",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Whips your trailing line round, which deals 12 damage to every enemy within 3 tiles and knocks each back 3 tiles. Its damage rises 5% for every 100 paces you have run since you last used it, up to 25%."
+  },
+  {
+   "name": "Warning Strand",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Felt It Coming",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

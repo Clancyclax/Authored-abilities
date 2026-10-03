@@ -1,0 +1,78 @@
+{
+ "essence": "essHook",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Pulled Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 96,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "desc": "Snags a thread of the target's guard and pulls, dealing 4 damage and leaving it 6% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Weighted Net",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a barbed net over a cone 4 tiles long, dealing 11 damage to everything caught in it and stunning it for 0.8 seconds, with a 60% chance per hit to leave it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Curved-Needle Suture",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "healAmount": 14,
+   "critChance": 0.1,
+   "healScope": "self",
+   "cooldown": 30,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Stitches your wounds shut and restores 14 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Row by Row",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 7,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 7. At 7 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (29% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

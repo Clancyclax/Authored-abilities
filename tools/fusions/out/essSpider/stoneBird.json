@@ -1,0 +1,85 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Stoop on a Guyline",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "knockback": 96,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 4
+   },
+   "desc": "Drops on an enemy up to 7 tiles away, which deals 12 damage, rising to 2 times that at maximum range, knocks it back 3 tiles and slows it by 25% for 4 seconds."
+  },
+  {
+   "name": "Mist Net",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a fine net in a cone 4 tiles long, which deals 3 damage to everything in it, with a 35% chance to leave each [Leaden] for 5 seconds."
+  },
+  {
+   "name": "Ballooning",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "cooldown": 24,
+   "speedMult": 1.3,
+   "buffDuration": 6,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.1,
+   "desc": "Lifts you 3 tiles from where you stood, then your movement speed rises by 30% and your dodge chance by 10% for 6 seconds."
+  },
+  {
+   "name": "Gossamer Wake",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Every few paces you cover, a trailing thread lashes the nearest enemy within 6 tiles, which deals 5 damage and slows it by 20% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

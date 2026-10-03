@@ -1,0 +1,73 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Drawn Filament",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 5,
+   "debuff": {
+    "key": "spellImpetus",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Draws a filament of raw mana from your hands that deals 5 damage to the first enemy it meets, with a 30% chance per hit to leave it [Spell Impetus] for 6 seconds."
+  },
+  {
+   "name": "Unpicked Ward",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 224,
+   "maxMult": 1.3,
+   "ignoreResist": true,
+   "desc": "Unpicks the target's resistances with a thrown filament, dealing 28 damage that ignores resistances, up to 1.3 times as much at full reach."
+  },
+  {
+   "name": "Wound Spool",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "desc": "Winds spooled mana back into you, restoring 4 mana a second for 8 seconds."
+  },
+  {
+   "name": "Charged Bobbin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your mana is full, your next spell deals 30% more damage. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Three Courses Served",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blood",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 5,
+    "label": "Digestion"
+   },
+   "desc": "Snaps 3 tails out in a spread to 6 tiles; each deals 3 damage. 20% of the damage dealt comes back to you as healing over 5 seconds."
+  },
+  {
+   "name": "Last Morsel Snatched",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "leech": 0.4,
+   "desc": "Snatches at an enemy at or below 30% health with the tip, which deals 24 damage, and you heal for 40% of the damage dealt."
+  },
+  {
+   "name": "Reach for Every Plate",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "blood",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Its healing rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Whetted Appetite",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill something, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

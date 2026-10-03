@@ -1,0 +1,68 @@
+{
+ "essence": "essApe",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Gnawed-Bone Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 8,
+   "chargesMax": 5,
+   "desc": "Throws a gnawed bone for 7 damage. It holds 5 charges, and each kill gives one back."
+  },
+  {
+   "name": "Elbows at the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "leech": 0.2,
+   "desc": "Shoves every enemy within 3 tiles for 12 damage, knocking them back 3 tiles, and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Shared Haunch",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "blood",
+   "cooldown": 30,
+   "healAmount": 15,
+   "healScope": "party",
+   "range": 112,
+   "desc": "Restores 15 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Second Helping",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "Each time you kill an enemy, 3 stamina a second comes back to you for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

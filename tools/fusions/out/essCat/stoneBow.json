@@ -1,0 +1,71 @@
+{
+ "essence": "essCat",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "radius": 6,
+   "speed": 520,
+   "name": "Shot from Cover",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "reachUnits": 448,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Looses an arrow at the first enemy in line for 30 damage, ignoring armour. Against an enemy that has not yet been hurt, its critical chance rises by 50%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Loosed Spring",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 256,
+   "maxMult": 2,
+   "chargeTo": 256,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Launches you up to 8 tiles onto an enemy for 16 damage, rising to 2 times that from full range. It uses up every affliction you have on the target for 50% more damage each."
+  },
+  {
+   "name": "Long Stalk",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "castTime": 0,
+   "desc": "For 15 seconds, your attacks and spells reach 1.54 times as far."
+  },
+  {
+   "name": "Coiled Readiness",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your next strike gains 20% critical chance. Once every 10 seconds."
+  }
+ ]
+}

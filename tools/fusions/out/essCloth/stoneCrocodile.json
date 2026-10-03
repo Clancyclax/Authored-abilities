@@ -1,0 +1,91 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Rolling Wrap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 30,
+   "cooldown": 16,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "desc": "Seizes an enemy at or below 30% health, rolls it up in wet cloth for 30 damage and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Drowning Sheet",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a sodden sheet over a cone 4 tiles ahead, dealing 26 damage that ignores resistances to everything under it and leaving each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Sunken Seine",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDuration": 20,
+   "summonDmg": 16,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sinks a weighted net beside the nearest enemy, where it waits up to 20 seconds. The first enemy to come within 2 tiles takes 16 damage in a blast and is [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Wound Tighter",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "As one of your afflictions lifts from an enemy, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

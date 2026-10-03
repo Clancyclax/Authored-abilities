@@ -1,0 +1,75 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Held at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 40,
+   "cooldown": 60,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 400,
+   "rangeBand": "long",
+   "castTime": 2,
+   "ignoreArmor": true,
+   "desc": "Holds the string at full draw for 2 seconds, then looses an arrow that deals 40 damage to the first enemy it meets and ignores armour."
+  },
+  {
+   "name": "Loophole Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 1.6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Looses an arrow through a gap in your shell at an enemy up to 8 tiles away, which deals 4 damage, rising to 1.6 times that at full reach. The target moves 15% slower for 2 seconds."
+  },
+  {
+   "name": "Planted Pavise",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 128,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Stands a plate of your shell 4 tiles long in front of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Loaded Silence",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 30% more damage. Once every 12 seconds."
+  }
+ ]
+}

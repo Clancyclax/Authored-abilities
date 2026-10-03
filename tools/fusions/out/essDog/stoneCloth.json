@@ -1,0 +1,89 @@
+{
+ "essence": "essDog",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tug and Tear",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Seizes the target with your weapon and tears, dealing 10 damage and making it [Bleeding] for 3 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snagging Threads",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rips through a cone 2.5 tiles ahead for 7 damage, with a 35% chance each to leave the target [Hindered] for 3 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Bandage Fetch",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 20,
+   "healScope": "ally",
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "desc": "Restores 3 health a second for 6 seconds to the ally who needs it most."
+  },
+  {
+   "name": "Mended by the Pack",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.5,
+    "rearmAbove": 0.7,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Once your health falls below 50%, healing on you is 30% stronger for 8 seconds. Once every 30 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

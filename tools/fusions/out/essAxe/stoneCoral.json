@@ -1,0 +1,76 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reef-Toothed Edge",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A jagged chop that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Colony Spread",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "desc": "Sweeps the axe around you, dealing 11 water damage to every enemy within 3 tiles. Your afflictions on each one spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Barnacled Haft",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "thornsFrac": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and leaves them [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Calcified Layers",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackScale": 0.72,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they all spend at once: you gain a shield that absorbs 5% of your maximum health per stack, 25% at full. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essSword",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Loosed Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Looses the blade from your hand at a target, where it deals 4 damage, rising to 1.8 times that at its full reach of 8 tiles."
+  },
+  {
+   "name": "Four to the String",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 9,
+   "cooldown": 75,
+   "volleyCount": 4,
+   "volleySpread": 0.25,
+   "speed": 440,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "castTime": 1.2,
+   "guaranteedCrit": true,
+   "desc": "After a 1.2 second draw, looses 4 blades at once in a spread out to 8 tiles, each of which deals 9 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Strung Sentinel",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "desc": "Sets a blade hovering at full draw for 15 seconds. Every 1.5 seconds it looses at an enemy within 6 tiles and deals 5 damage."
+  },
+  {
+   "name": "Tension in the Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35,
+    "strikes": 1
+   },
+   "desc": "After 6 seconds without a critical hit, your critical hit chance rises by 35% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

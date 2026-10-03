@@ -1,0 +1,80 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Marsh Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 224,
+   "maxMult": 1.6,
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Needs one of your afflictions on the target and uses it up. Snaps a sticky spore at a target up to 7 tiles away that deals 8 damage, rising to 1.6 times that at full reach, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Sudden Squelch",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A burst deals 14 damage to every enemy within 3.5 tiles and stuns each for 1 second. Each hit has a 50% chance to leave the target [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Dew Soak",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Restores 4 health a second for 6 seconds. You move 20% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Lily Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

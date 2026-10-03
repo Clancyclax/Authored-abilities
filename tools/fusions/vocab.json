@@ -1,0 +1,3682 @@
+[
+ {
+  "template": "triggeredPassive",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "triggered"
+  ],
+  "fromCategoryRows": [
+   "triggered_regen_on_hit",
+   "triggered_wounded_fury",
+   "triggered_kill_bolt",
+   "triggered_crit_empower",
+   "triggered_crit_drought",
+   "triggered_reactive",
+   "triggered_strike_restore",
+   "triggered_strike_mana_over_time"
+  ],
+  "samples": 60,
+  "usualFields": [
+   "category",
+   "effect",
+   "element",
+   "kind",
+   "template",
+   "trigger"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "armorBonus",
+   "bindOnHit",
+   "chain",
+   "chainCount",
+   "chainDamagePct",
+   "chainRange",
+   "cooldown",
+   "cooldownReduction",
+   "dodgeBonus",
+   "dot",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "lifeOnKill",
+   "openerCrit",
+   "perAllyGain",
+   "regenPerSec",
+   "resist",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "summonAnimal": "cat",
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 300
+   },
+   "element": "physical",
+   "dodgeBonus": 0.06
+  },
+  "exampleDesc": "Each time you spend mana, a bolt leaps to the nearest enemy within 9.5 tiles, dealing 7 damage. You gain +6% dodge chance.",
+  "exampleStats": "when you spend mana: 7 lightning damage to the next nearest enemy within 9.5 tiles · +6% dodge"
+ },
+ {
+  "template": "virulence",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "affliction"
+  ],
+  "fromCategoryRows": [
+   "virulence_poison",
+   "virulence_bleed",
+   "virulence_curse",
+   "virulence_burn",
+   "virulence_holy",
+   "virulence_unholy",
+   "virulence_all"
+  ],
+  "samples": 42,
+  "usualFields": [
+   "category",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "armorBonus",
+   "cooldownReduction",
+   "dodgeBonus",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "perAllyGain",
+   "regenPerSec",
+   "resist",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "shadow",
+   "resist": {
+    "element": "shadow",
+    "amount": 0.08
+   }
+  },
+  "exampleDesc": "Your afflictions take hold on an enemy that is immune to them. You carry 8% shadow resistance for as long as you carry it.",
+  "exampleStats": "your afflictions ignore an immunity · +8% shadow resistance"
+ },
+ {
+  "template": "statBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "buff_damage_type",
+   "buff_cast_speed",
+   "buff_dodge",
+   "buff_healing_received",
+   "buff_regen_health",
+   "buff_regen_mana",
+   "buff_regen_stamina"
+  ],
+  "samples": 42,
+  "usualFields": [
+   "buffAmount",
+   "buffDuration",
+   "buffStat",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "blinkOnUse",
+   "bloodSurrogate",
+   "canonCooldownHours",
+   "castTime",
+   "cooldownFloor",
+   "dodgeBonus",
+   "drain",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "hasteOnUse",
+   "healOnUse",
+   "summonAnimal",
+   "taunt",
+   "tauntDuration",
+   "tauntMax",
+   "tauntRadius",
+   "variesCooldown"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 18,
+   "cooldown": 55,
+   "element": "shadow",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Increases your stamina recovery by 50% for 18 seconds. While it lasts, an escort of rift fights beside you, striking for 4 every 1.4s.",
+  "exampleStats": "+50% stamina recovery for 18s · 55s cd · escort strikes for 4 every 1.4s for 8s · 8 mana"
+ },
+ {
+  "template": "projectileBall",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "ranged_damage",
+   "ranged_distant",
+   "ranged_dot",
+   "ranged_aoe",
+   "ranged_leech"
+  ],
+  "samples": 30,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "radius",
+   "rangeBand",
+   "reachUnits",
+   "scaleCap",
+   "scaleOn",
+   "scalePer",
+   "speed",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "aoeBand",
+   "bloodSurrogate",
+   "castTime",
+   "chain",
+   "chainCount",
+   "chainDamagePct",
+   "chainRange",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "debuff",
+   "dot",
+   "escort",
+   "explodeRadius",
+   "familiarCreatureName",
+   "familiarFamily",
+   "hasteOnUse",
+   "isAoe",
+   "leech",
+   "leechOverTime",
+   "openerCrit",
+   "perAllyGain",
+   "projectileLife",
+   "reachPct",
+   "requiresWeapon",
+   "scaleDelay",
+   "splashFrac",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "base": 6,
+   "cooldown": 2,
+   "speed": 360,
+   "radius": 8,
+   "leech": 0.43,
+   "element": "physical",
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "scaleDelay": 6,
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "reachUnits": 396,
+   "rangeBand": "long",
+   "cost": {
+    "type": "mana",
+    "amount": 7
+   }
+  },
+  "exampleDesc": "Sends a bolt of force into the first enemy it meets, dealing 6 damage. It then leaps to 1 more enemy within 3.5 tiles, each hit dealing 60% of the original damage. Its damage rises +8% per affliction the target carries (max +40%), resolved 6s later.",
+  "exampleStats": "6 dmg · 2s cd · heals 43% of damage dealt · chains to 1 more within 3.5 tiles at 60% · its damage rises +8% per affliction the target carries (max +40%), resolved 6s later · 7 mana"
+ },
+ {
+  "template": "aura",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "aura"
+  ],
+  "fromCategoryRows": [
+   "self_passive_aoe",
+   "self_passive_heal",
+   "self_passive_slow_aura",
+   "self_passive_weaken_aura",
+   "self_passive_ward_aura"
+  ],
+  "samples": 30,
+  "usualFields": [
+   "aoeBand",
+   "aura",
+   "auraBlurb",
+   "auraCondition",
+   "auraEffect",
+   "auraEffectFired",
+   "auraLabel",
+   "auraRadius",
+   "auraTrigger",
+   "category",
+   "element",
+   "kind",
+   "template",
+   "tickInterval"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyHealPerTick",
+   "allyMax",
+   "allyRange",
+   "amplifyPct",
+   "armorBonus",
+   "bindOnHit",
+   "blindPct",
+   "brandAmplify",
+   "brandStackMax",
+   "cleanseEvery",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "cooldownReduction",
+   "critVsInField",
+   "dodgeBonus",
+   "dotOnStay",
+   "drainPct",
+   "escort",
+   "executeBelow",
+   "familiarCreatureName",
+   "familiarFamily",
+   "fearPct",
+   "hastePct",
+   "lingerSeconds",
+   "markInField",
+   "perAllyGain",
+   "pullForce",
+   "quickenPct",
+   "reachPct",
+   "regenPerSec",
+   "repelForce",
+   "resist",
+   "resourcePerTick",
+   "retaliate",
+   "revealInField",
+   "rootChance",
+   "silenceChance",
+   "siphonPerTick",
+   "slowPct",
+   "stackPerTick",
+   "summonAnimal",
+   "sunderAmt",
+   "thornsInField",
+   "tickAmount",
+   "wardResist",
+   "wardResistExtra"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "aura",
+   "template": "aura",
+   "aura": "quillfield",
+   "auraEffect": "brand",
+   "element": "physical",
+   "retaliate": 21,
+   "brandStackMax": 6,
+   "brandAmplify": 0.06,
+   "tickInterval": 1.6,
+   "auraRadius": 128,
+   "thornsInField": 30,
+   "sunderAmt": 0.16,
+   "repelForce": 8,
+   "auraCondition": {
+    "key": "bleed",
+    "chance": 0.45,
+    "stacks": 3
+   },
+   "auraLabel": "Quillfield",
+   "auraBlurb": "standing next to you is the mistake",
+   "auraTrigger": {
+    "on": "hurtNonFire",
+    "cooldown": 4
+   },
+   "auraEffectFired": {
+    "kind": "physicalDamageMult",
+    "amount": 1.25,
+    "duration": 5
+   },
+   "cooldownReduction": 0.06,
+   "aoeBand": "large"
+  },
+  "exampleDesc": "A field around you that marks enemies and hits back at whatever attacks you. Your other abilities' cooldowns are 6% shorter.",
+  "exampleStats": "Quillfield: enemies within 4 tiles gain a mark every 1.6s (up to 6); each mark makes them take 6% more damage; anything inside that trades blows with you is bitten for 21, at most once every 1.6s; and every blow that lands on you inside returns 30 damage; 45% chance per tick to inflict bleed (stacks to 3); enemies inside are pushed away; when you are hit, +25% physical damage for 5s (once every 4s) · -6% ability cooldowns"
+ },
+ {
+  "template": "cleanse",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "restore"
+  ],
+  "fromCategoryRows": [
+   "cleanse_one",
+   "dispel_one",
+   "cleanse_mass",
+   "dispel_mass"
+  ],
+  "samples": 24,
+  "usualFields": [
+   "category",
+   "cleanseCount",
+   "cooldown",
+   "cost",
+   "element",
+   "healScope",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "canonCooldownHours",
+   "castTime",
+   "cleanseTag",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "familiarWeaponId",
+   "hasteOnUse",
+   "healOnUse",
+   "perAllyGain",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "cleanseCount": null,
+   "healScope": "self",
+   "cooldown": 65,
+   "element": "physical",
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.33
+   },
+   "perAllyGain": {
+    "resistPct": 0.22,
+    "dotChancePct": 0.22
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Removes every condition from you. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4.",
+  "exampleStats": "removes every condition from you · 65s cd · +11%/ally within 5.5 tiles (max 4) · 8 mana"
+ },
+ {
+  "template": "resourceRestore",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "restore"
+  ],
+  "fromCategoryRows": [
+   "restore_mana",
+   "restore_stamina",
+   "restore_mana_over_time",
+   "restore_stamina_over_time"
+  ],
+  "samples": 24,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "resource",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "blinkOnUse",
+   "bloodSurrogate",
+   "dodgeBonus",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "hasteOnUse",
+   "healOnUse",
+   "overTime",
+   "perAllyGain",
+   "restoreAmount",
+   "restoreDuration",
+   "restorePerSec",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "summonAnimal": "flea",
+   "resource": "stamina",
+   "overTime": true,
+   "cooldown": 9,
+   "restorePerSec": 3,
+   "restoreDuration": 7,
+   "element": "physical",
+   "hasteOnUse": {
+    "pct": 0.16999999999999998,
+    "duration": 3
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Restores 3 stamina a second for 7 seconds. Your movement speed rises 17% for 3s after you use it.",
+  "exampleStats": "3 stamina/s for 7s · 9s cd · +17% move speed for 3s · 8 mana"
+ },
+ {
+  "template": "barrierWall",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "defensive",
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "barrier_block",
+   "barrier_burn",
+   "barrier_pull"
+  ],
+  "samples": 18,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "template",
+   "wallDuration",
+   "wallKind",
+   "wallLength",
+   "wallThickness"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "base",
+   "bindOnHit",
+   "bloodSurrogate",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "contagion",
+   "debuff",
+   "dot",
+   "drain",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "hasteOnUse",
+   "healOnUse",
+   "perAllyGain",
+   "pullForce",
+   "scaleCap",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "wallKind": "pull",
+   "wallLength": 210,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 12,
+   "pullForce": 32,
+   "element": "physical",
+   "bindOnHit": {
+    "slowPct": 0.16,
+    "duration": 2
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Collapses a point of force ahead of you for 6 seconds, dragging every enemy near it inward. Anything struck moves 16% slower for 2s.",
+  "exampleStats": "a 210 collapse dragging enemies inward for 6s · 12s cd · -16% enemy speed for 2s · 8 mana"
+ },
+ {
+  "template": "reflectWard",
+  "kinds": [
+   "active",
+   "passive"
+  ],
+  "categories": [
+   "defensive",
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "reflect_spell",
+   "reflect_damage",
+   "reflect_debuff"
+  ],
+  "samples": 18,
+  "usualFields": [
+   "buffDuration",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "reflectFrac",
+   "reflectKind",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "armorBonus",
+   "bloodSurrogate",
+   "cooldownFloor",
+   "cooldownReduction",
+   "drain",
+   "hasteOnUse",
+   "perAllyGain",
+   "reflectChance",
+   "resist",
+   "summonAnimal",
+   "variesCooldown"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "summonAnimal": "wasp",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.23,
+   "reflectChance": 0.55,
+   "buffDuration": 7,
+   "cooldown": 21,
+   "element": "shadow",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 55% chance to be sent back to its source instead, for 7 seconds.",
+  "exampleStats": "55% chance to send an affliction back for 7s · 21s cd · 8 mana"
+ },
+ {
+  "template": "activeSummon",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "summon"
+  ],
+  "fromCategoryRows": [
+   "summon_creature",
+   "summon_turret",
+   "summon_trap"
+  ],
+  "samples": 18,
+  "usualFields": [
+   "castTime",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "summonDmg",
+   "summonDuration",
+   "summonInterval",
+   "summonKind",
+   "summonRange",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "bloodSurrogate",
+   "canonCooldownHours",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "familiarWeaponId",
+   "hasteOnUse",
+   "healOnUse",
+   "lifeOnKill",
+   "perAllyGain",
+   "summonAfflicts",
+   "summonAnimal",
+   "summonArmDelay",
+   "summonAura",
+   "summonBlast",
+   "summonCharges",
+   "summonCreatureName",
+   "summonFamily",
+   "summonLeash",
+   "summonMoves",
+   "summonRanged",
+   "summonRole",
+   "summonRoleLabel",
+   "summonSpeed",
+   "summonTemporary",
+   "trapDelivery"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "summonKind": "trap",
+   "summonDuration": 132,
+   "cooldown": 284,
+   "summonDmg": 28,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 88,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned",
+   "element": "physical",
+   "allyScaling": {
+    "per": 0.09,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.27
+   },
+   "perAllyGain": {
+    "resistPct": 0.18,
+    "dotChancePct": 0.18
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "castTime": 1.6
+  },
+  "exampleDesc": "Conjures a set of iron jaws onto the nearest enemy. It waits 2.2 minutes, and the first 2 enemies to come within 3 tiles take 28 damage in a blast around it. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies.",
+  "exampleStats": "28 dmg blast, 2 charges, armed 2.2m · 5m cd · +9%/ally within 5.5 tiles (max 4) · 1.6s cast · 8 mana"
+ },
+ {
+  "template": "stacking",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "stacking"
+  ],
+  "fromCategoryRows": [
+   "stack_boon",
+   "stack_mark",
+   "stack_ledger"
+  ],
+  "samples": 18,
+  "usualFields": [
+   "category",
+   "element",
+   "kind",
+   "stackBuild",
+   "stackCap",
+   "stackDecay",
+   "stackIcon",
+   "stackOn",
+   "stackPay",
+   "stackScale",
+   "stackShape",
+   "stackSpend",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "armorBonus",
+   "cooldownReduction",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "perAllyGain",
+   "regenPerSec",
+   "resist",
+   "stackFlavour",
+   "stackSignature",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.1,
+   "stackIcon": "stackWard",
+   "element": "physical",
+   "armorBonus": 0.06
+  },
+  "exampleDesc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 8% of your maximum health per stack (62% at full) before your health takes damage. Unfed, a stack fades every 10s. It also hardens your armour by 6% at all times.",
+  "exampleStats": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 8% of your maximum health per stack (62% at full) before your health takes damage. Unfed, a stack fades every 10s."
+ },
+ {
+  "template": "aoeRing",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "self_active_aoe",
+   "aoe_dot_ring"
+  ],
+  "samples": 12,
+  "usualFields": [
+   "aoeBand",
+   "base",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "isAoe",
+   "kind",
+   "range",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "bloodSurrogate",
+   "castTime",
+   "chain",
+   "chainCount",
+   "chainDamagePct",
+   "chainRange",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "contagion",
+   "debuff",
+   "dot",
+   "hasteOnUse",
+   "healOnUse",
+   "perAllyGain",
+   "scaleCap",
+   "scaleDelay",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "cooldown": 7,
+   "range": 110,
+   "base": 4,
+   "isAoe": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 900,
+    "critChance": 0.05,
+    "label": "Blight"
+   },
+   "element": "physical",
+   "chain": {
+    "count": 2,
+    "radius": 95,
+    "frac": 0.6
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.11,
+   "scaleCap": 0.55,
+   "scaleDelay": 6,
+   "chainCount": 2,
+   "chainRange": 95,
+   "chainDamagePct": 0.6,
+   "aoeBand": "medium",
+   "cost": {
+    "type": "mana",
+    "amount": 6
+   },
+   "debuff": {
+    "key": "unbalanced_conAlchemy_20",
+    "chance": 0.3,
+    "duration": 8.3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  "exampleDesc": "Every enemy within 3.5 tiles of you takes 4 damage. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. Its damage rises +11% per affliction already on the target (max +55%), resolved 6s later. Each hit has a 30% chance of [Transmuting Vial] -- putting the target off balance, lowering their dodge for 8.3s.",
+  "exampleStats": "4 dmg to all enemies within 3.5 tiles · 7s cd · +2×4 Blight · chains to 2 more within 3 tiles at 60% · its damage rises +11% per affliction already on the target (max +55%), resolved 6s later · 30% chance of [Transmuting Vial] for 8.3s (putting the target off balance, lowering their dodge) · 6 mana"
+ },
+ {
+  "template": "cooldownPassive",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "cooldown_passive"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldownReduction",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "armorBonus",
+   "escort",
+   "regenPerSec",
+   "resist"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "cooldownReduction": 0.07,
+   "element": "physical",
+   "armorBonus": 0.1
+  },
+  "exampleDesc": "Every ability you have comes round 7% sooner. Your armour rises by 10%.",
+  "exampleStats": "-7% ability cooldowns"
+ },
+ {
+  "template": "breathCone",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "ranged_cone"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "aoeBand",
+   "base",
+   "category",
+   "coneAngle",
+   "cooldown",
+   "cost",
+   "debuff",
+   "element",
+   "isAoe",
+   "kind",
+   "range",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "castTime",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "familiarWeaponId",
+   "mount",
+   "mountFamily",
+   "perAllyGain",
+   "reachPct",
+   "scaleCap",
+   "scaleDelay",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "range": 350,
+   "coneAngle": 0.7592182246175333,
+   "cooldown": 4,
+   "base": 3,
+   "isAoe": true,
+   "element": "physical",
+   "reachPct": 0.4,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.09,
+   "scaleCap": 0.45,
+   "aoeBand": "huge",
+   "cost": {
+    "type": "mana",
+    "amount": 6
+   },
+   "debuff": {
+    "key": "blindEye_essBird_13",
+    "chance": 0.32,
+    "duration": 9.2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  "exampleDesc": "Looses a wide cone of raw force ahead of you, dealing 3 damage to everything caught in it. Its reach is 40% longer. Its damage rises +9% for each affliction already eating them (max +45%). Each hit has a 32% chance of [The Hollow Bones] -- spoiling the target's aim, lowering their critical chance for 9.2s.",
+  "exampleStats": "3 dmg to everything in a 350 cone · 4s cd · its damage rises +9% for each affliction already eating them (max +45%) · 32% chance of [The Hollow Bones] for 9.2s (spoiling the target's aim, lowering their critical chance) · 6 mana"
+ },
+ {
+  "template": "volley",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "ranged_volley"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "castTime",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "isAoe",
+   "kind",
+   "radius",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "speed",
+   "template",
+   "volleyCount",
+   "volleySpread"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "contagion",
+   "debuff",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "hasteOnUse",
+   "leechOverTime",
+   "openerCrit",
+   "scaleCap",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "base": 5,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220,
+   "cooldown": 2.6,
+   "element": "shadow",
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "reachUnits": 292,
+   "rangeBand": "medium",
+   "cost": {
+    "type": "mana",
+    "amount": 7
+   },
+   "bloodSurrogate": true,
+   "castTime": 3.3,
+   "debuff": {
+    "key": "refusedMercy_conDesolate_18",
+    "chance": 0.47,
+    "duration": 17.6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 180,
+    "chance": 0.30000000000000004,
+    "spreadsLeft": 2
+   }
+  },
+  "exampleDesc": "Looses 3 bolts of shadow at once, spread apart, each dealing 5 damage. 15% of the damage it deals comes back as healing over the following 6s, rather than at once. Each hit has a 47% chance of [Barren Ash] -- resisting incoming healing, cleanses and boons, cumulatively for 17.6s. It is catching: barren ash finds up to 2 more within 5.5 tiles on its own.",
+  "exampleStats": "3 bolts, 5 dmg each · 2.6s cd · heals 15% of damage dealt over 6s · 47% chance of [Barren Ash] for 17.6s (resisting incoming healing, cleanses and boons, cumulatively) · spreads to 2 within 5.5 tiles · 3.3s cast · 7 mana (or blood)"
+ },
+ {
+  "template": "elementPierce",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "passive_element_pierce"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "armorIgnore",
+   "category",
+   "element",
+   "kind",
+   "pierceElement",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "cooldownReduction",
+   "dodgeBonus",
+   "perAllyGain",
+   "regenPerSec",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "pierceElement": "physical",
+   "armorIgnore": 0.27,
+   "element": "physical",
+   "cooldownReduction": 0.06
+  },
+  "exampleDesc": "Your physical attacks ignore 27% of the target's armour. It also reduces the cooldown of every other ability you have by 6%.",
+  "exampleStats": "your physical attacks ignore 27% of armour · -6% ability cooldowns"
+ },
+ {
+  "template": "selfPower",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "self_active_damage"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "buffDuration",
+   "castTime",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "hasteOnUse",
+   "kind",
+   "powerMult",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "escort",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "cooldown": 300,
+   "powerMult": 1.4100000000000001,
+   "buffDuration": 30,
+   "element": "shadow",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 7
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "castTime": 1.7
+  },
+  "exampleDesc": "Increases your damage by 41% for 30 seconds. While it lasts, an escort of rift fights beside you, striking for 4 every 1.4s.",
+  "exampleStats": "+41% damage for 30s · 5m cd · escort strikes for 4 every 1.4s for 7s · 1.7s cast · 8 mana"
+ },
+ {
+  "template": "selfCritBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "self_active_crit"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "buffDuration",
+   "castTime",
+   "category",
+   "cooldown",
+   "cost",
+   "critChanceBonus",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "cooldownFloor",
+   "escort",
+   "healOnUse",
+   "variesCooldown"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "cooldown": 255,
+   "critChanceBonus": 0.3,
+   "buffDuration": 20,
+   "element": "physical",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "castTime": 1.4
+  },
+  "exampleDesc": "Increases your critical hit chance by 30% for 20 seconds.",
+  "exampleStats": "+30% crit chance for 20s · 4m cd · 1.4s cast · 8 mana"
+ },
+ {
+  "template": "immunityBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "self_active_immunity"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "immunityDuration",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "blinkOnUse",
+   "dodgeBonus",
+   "hasteOnUse",
+   "healOnUse",
+   "resist",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "summonAnimal": "cat",
+   "cooldown": 450,
+   "immunityDuration": 11,
+   "element": "physical",
+   "hasteOnUse": {
+    "pct": 0.18,
+    "duration": 4
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "For 11 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. Your movement speed rises 18% for 4s after you use it.",
+  "exampleStats": "immune to blows and conditions for 11s · 8m cd · +18% move speed for 4s · 8 mana"
+ },
+ {
+  "template": "timeFreeze",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "self_active_timefreeze"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "aoeBand",
+   "castTime",
+   "category",
+   "cooldown",
+   "cost",
+   "debuff",
+   "element",
+   "freezeDuration",
+   "freezeRadius",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "bindOnHit",
+   "blinkOnUse",
+   "dodgeBonus",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "hasteOnUse",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "cooldown": 600,
+   "freezeDuration": 5,
+   "freezeRadius": 300,
+   "element": "physical",
+   "escort": {
+    "dmg": 5,
+    "interval": 1.4,
+    "duration": 9
+   },
+   "aoeBand": "huge",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "castTime": 2.6
+  },
+  "exampleDesc": "Holds every creature within 9.5 tiles in place for 5 seconds. While it lasts, an escort of point fights beside you, striking for 5 every 1.4s.",
+  "exampleStats": "freezes every creature within 9.5 tiles for 5s · 10m cd · escort strikes for 5 every 1.4s for 9s · 2.6s cast · 8 mana"
+ },
+ {
+  "template": "selfHeal",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "healing"
+  ],
+  "fromCategoryRows": [
+   "self_active_heal"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "critChance",
+   "element",
+   "healAmount",
+   "healScope",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "resist",
+   "scaleCap",
+   "scaleDelay",
+   "scaleOn",
+   "scalePer"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "cooldown": 9.9,
+   "healAmount": 12,
+   "critChance": 0.12,
+   "healScope": "self",
+   "element": "physical",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "cost": {
+    "type": "mana",
+    "amount": 11
+   }
+  },
+  "exampleDesc": "Restores 12 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%).",
+  "exampleStats": "restores 12 HP to yourself · 9.9s cd · its healing rises +8% for every 10% of your health already gone (max +40%) · 11 mana"
+ },
+ {
+  "template": "bloomField",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "healing"
+  ],
+  "fromCategoryRows": [
+   "bloom_field"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "fieldDuration",
+   "healPerSec",
+   "healScope",
+   "kind",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "familiarWeaponId",
+   "perAllyGain",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "cooldown": 9,
+   "healScope": "party",
+   "element": "physical",
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.33
+   },
+   "perAllyGain": {
+    "resistPct": 0.22,
+    "dotChancePct": 0.22
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Raises a short-lived growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it. Every ally inside 5.5 tiles makes it 11% stronger, to a limit of 4.",
+  "exampleStats": "a field within 4 tiles restoring 3 HP/s to you and allies for 10s · 9s cd · +11%/ally within 5.5 tiles (max 4) · 8 mana"
+ },
+ {
+  "template": "selfHot",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "healing"
+  ],
+  "fromCategoryRows": [
+   "self_active_hot"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "healScope",
+   "hotDuration",
+   "hotPerSec",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "resist",
+   "scaleCap",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "summonAnimal": "wolf",
+   "cooldown": 11,
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "element": "nature",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "familiarFamily": "slime",
+   "familiarCreatureName": "Ichorling"
+  },
+  "exampleDesc": "Restores 3 health a second to the ally who needs it most, for 6 seconds. While it lasts, an escort of green fights beside you, striking for 4 every 1.4s.",
+  "exampleStats": "3 HP/s for 6s to the ally who needs it most · 11s cd · escort strikes for 4 every 1.4s for 8s · 8 mana"
+ },
+ {
+  "template": "absorbShield",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "defensive"
+  ],
+  "fromCategoryRows": [
+   "self_active_absorb"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "armorBonus",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "hasteOnUse",
+   "kind",
+   "shieldAmount",
+   "shieldCostPerPoint",
+   "shieldDuration",
+   "shieldKind",
+   "shieldSource",
+   "shieldStrikes",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "escort",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "cooldown": 18,
+   "shieldAmount": 16,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "element": "shadow",
+   "escort": {
+    "dmg": 5,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 13
+   }
+  },
+  "exampleDesc": "Raises a barrier that absorbs the next 16 damage and holds for 6 seconds. While it lasts, an escort of rift fights beside you, striking for 5 every 1.4s.",
+  "exampleStats": "absorbs 16 dmg, +6% armor for 6s · 18s cd · escort strikes for 5 every 1.4s for 10s · 13 mana"
+ },
+ {
+  "template": "armorBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "defensive"
+  ],
+  "fromCategoryRows": [
+   "self_active_armor"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "armorBonus",
+   "buffDuration",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "blinkOnUse",
+   "cooldownFloor",
+   "dodgeBonus",
+   "hasteOnUse",
+   "resist",
+   "summonAnimal",
+   "variesCooldown"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "cooldown": 36,
+   "armorBonus": 0.16,
+   "buffDuration": 12,
+   "element": "nature",
+   "hasteOnUse": {
+    "pct": 0.16,
+    "duration": 5
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Raises your armour by 16% for 12 seconds. Your movement speed rises 16% for 5s after you use it.",
+  "exampleStats": "+16% armor for 12s · 36s cd · +16% move speed for 5s · 8 mana"
+ },
+ {
+  "template": "sunderStrike",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "martial_sunder"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "sunder",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "debuff",
+   "hasteOnUse",
+   "perAllyGain",
+   "requiresWeapon",
+   "scaleCap",
+   "scaleDelay",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "summonAnimal": "wasp",
+   "cooldown": 6,
+   "range": 86,
+   "base": 8,
+   "sunder": {
+    "amount": 0.16,
+    "duration": 6
+   },
+   "element": "shadow",
+   "hasteOnUse": {
+    "pct": 0.13,
+    "duration": 5
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "cost": {
+    "type": "stamina",
+    "amount": 9
+   }
+  },
+  "exampleDesc": "A heavy blow that breaks armour, leaving the target 16% easier to wound. For 5s after using it, you move 13% faster.",
+  "exampleStats": "8 dmg, -16% enemy armor for 6s · 6s cd · +13% move speed for 5s · 9 stamina"
+ },
+ {
+  "template": "dash",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "movement"
+  ],
+  "fromCategoryRows": [
+   "movement_dash"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "dashDist",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "hasteOnUse",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "cooldown": 3,
+   "dashDist": 90,
+   "element": "shadow",
+   "cost": {
+    "type": "stamina",
+    "amount": 4
+   },
+   "bloodSurrogate": true
+  },
+  "exampleDesc": "A short burst of movement that carries you 90 forward.",
+  "exampleStats": "3 tiles dash · 3s cd · 4 stamina (or blood)"
+ },
+ {
+  "template": "teleport",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "movement"
+  ],
+  "fromCategoryRows": [
+   "movement_teleport"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "teleportRange",
+   "template"
+  ],
+  "optionalFields": [
+   "dodgeBonus",
+   "hasteOnUse",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "cooldown": 3.8,
+   "teleportRange": 220,
+   "element": "nature",
+   "hasteOnUse": {
+    "pct": 0.13,
+    "duration": 5
+   },
+   "cost": {
+    "type": "stamina",
+    "amount": 4
+   }
+  },
+  "exampleDesc": "Steps you instantly to a point up to 7 tiles away. Using it increases your movement speed by 13% for 5s.",
+  "exampleStats": "7 tiles blink · 3.8s cd · +13% move speed for 5s · 4 stamina"
+ },
+ {
+  "template": "movementHaste",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "movement"
+  ],
+  "fromCategoryRows": [
+   "movement_haste_active"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "buffDuration",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "speedMult",
+   "template"
+  ],
+  "optionalFields": [
+   "blinkOnUse",
+   "dodgeBonus"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "cooldown": 24,
+   "speedMult": 1.33,
+   "buffDuration": 8,
+   "element": "physical",
+   "blinkOnUse": 60,
+   "dodgeBonus": 0.08,
+   "cost": {
+    "type": "stamina",
+    "amount": 4
+   }
+  },
+  "exampleDesc": "Increases your movement speed by 33% for 8 seconds. You finish it 2 tiles from where you stood, with +8% dodge chance for it.",
+  "exampleStats": "+33% move speed for 8s · 24s cd · 2 tiles reposition · +8% dodge · 4 stamina"
+ },
+ {
+  "template": "aoeHealPulse",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "healing"
+  ],
+  "fromCategoryRows": [
+   "aoe_heal_pulse"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "healAmount",
+   "healScope",
+   "kind",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "template"
+  ],
+  "optionalFields": [
+   "blinkOnUse",
+   "dodgeBonus",
+   "hasteOnUse",
+   "reachPct",
+   "scaleCap",
+   "scaleDelay",
+   "scaleOn",
+   "scalePer",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "summonAnimal": "wasp",
+   "cooldown": 7.5,
+   "range": 110,
+   "healAmount": 15,
+   "healScope": "party",
+   "element": "shadow",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "cost": {
+    "type": "mana",
+    "amount": 12
+   }
+  },
+  "exampleDesc": "Restores 15 health to you and every ally within 3.5 tiles, and more the faster you cast. Using it increases your movement speed by 20% for 4s.",
+  "exampleStats": "restores 15 HP (+1% per 1% cast speed) to you and allies within 3.5 tiles · 7.5s cd · +20% move speed for 4s · 12 mana"
+ },
+ {
+  "template": "partyBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "party_buff"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "buffDuration",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "partyDmgPct",
+   "partyPower",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "template"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "healOnUse",
+   "reachPct",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "summonAnimal": "sloth",
+   "cooldown": 27,
+   "range": 160,
+   "buffDuration": 9,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "element": "physical",
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Every ally within 5 tiles strikes 15% harder for 9 seconds, and fights with 1 more power while it holds.",
+  "exampleStats": "allies within 5 tiles: +15% damage and +1 power for 9s · 27s cd · 8 mana"
+ },
+ {
+  "template": "weakenRing",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "aoe_weaken"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "debuff",
+   "element",
+   "kind",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "slowPct",
+   "sunder",
+   "template"
+  ],
+  "optionalFields": [
+   "dot",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "reachPct",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "summonAnimal": "sloth",
+   "cooldown": 11,
+   "range": 100,
+   "sunder": {
+    "amount": 0.17,
+    "duration": 8
+   },
+   "slowPct": 0.18,
+   "element": "physical",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 6
+   },
+   "reachUnits": 100,
+   "rangeBand": "melee",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "debuff": {
+    "key": "openWound_conForce_9",
+    "chance": 0.29,
+    "duration": 9,
+    "stacks": 1,
+    "potency": 1
+   },
+   "familiarFamily": "dragon",
+   "familiarCreatureName": "Wyrm"
+  },
+  "exampleDesc": "Strips 17% armour and 18% movement speed from every enemy within 3 tiles. While it lasts, an escort of force fights beside you, striking for 4 every 1.4s. Each hit has a 29% chance of [Movement Gash] -- bleeding the target, absorbing incoming healing, and worse while they move for 9s.",
+  "exampleStats": "-17% armor, -18% speed to enemies within 3 tiles for 8s · 11s cd · escort strikes for 4 every 1.4s for 6s · 29% chance of [Movement Gash] for 9s (bleeding the target, absorbing incoming healing, and worse while they move) · 8 mana"
+ },
+ {
+  "template": "rangeStrike",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "martial_distance"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "maxMult",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "scaleCap",
+   "scaleOn",
+   "scalePer",
+   "template"
+  ],
+  "optionalFields": [
+   "bindOnHit",
+   "bloodSurrogate",
+   "debuff",
+   "dot",
+   "reachPct",
+   "scaleDelay"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "cooldown": 5,
+   "range": 210,
+   "base": 7,
+   "maxMult": 2.4000000000000004,
+   "element": "physical",
+   "reachPct": 0.4,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.07,
+   "scaleCap": 0.35,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "cost": {
+    "type": "stamina",
+    "amount": 9
+   }
+  },
+  "exampleDesc": "A thrown blow that hits harder the further it travels, up to 2.4 times its damage at maximum range. Its reach is 40% longer. Its damage rises +7% per tenth of your own blood already lost (max +35%).",
+  "exampleStats": "7 dmg, up to ×2.4 at 6.5 tiles · 5s cd · its damage rises +7% per tenth of your own blood already lost (max +35%) · 9 stamina"
+ },
+ {
+  "template": "stackStrike",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "martial_reaper"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "executeLadder",
+   "kind",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "requiresTargetBelow",
+   "scaleCap",
+   "scaleOn",
+   "scalePer",
+   "stackMult",
+   "template"
+  ],
+  "optionalFields": [
+   "debuff",
+   "dot",
+   "hasteOnUse",
+   "openerCrit",
+   "reachPct",
+   "requiresWeapon",
+   "scaleDelay",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "summonAnimal": "wasp",
+   "cooldown": 8,
+   "range": 84,
+   "base": 8,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.1,
+   "executeLadder": true,
+   "element": "shadow",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "cost": {
+    "type": "stamina",
+    "amount": 9
+   },
+   "debuff": {
+    "key": "brokenWard_conChaotic_5",
+    "chance": 0.55,
+    "duration": 11,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  "exampleDesc": "Consumes every affliction on the target, adding 1.8 times their remaining damage to this blow. It only strikes a target at or below 10% health, and that threshold rises with each rank. Nothing unwounded is safe from the opening: 50% more critical chance until something has bled. Each hit has a 55% chance of [High Swing of the Switchy] -- lowering all of the target's resistances, cumulatively for 11s.",
+  "exampleStats": "8 dmg + ×1.8 of the target's remaining afflictions, consumed · only below 10% HP · 8s cd · +50% crit vs unwounded foes · 55% chance of [High Swing of the Switchy] for 11s (lowering all of the target's resistances, cumulatively) · 9 stamina"
+ },
+ {
+  "template": "imbueStrike",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "imbue_strike"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "dot",
+   "element",
+   "kind",
+   "strikes",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "bindOnHit",
+   "debuff",
+   "hasteOnUse",
+   "perAllyGain",
+   "summonAnimal",
+   "sunder"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "cooldown": 13,
+   "strikes": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Blight"
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "element": "physical",
+   "bindOnHit": {
+    "slowPct": 0.16,
+    "duration": 2
+   },
+   "cost": {
+    "type": "stamina",
+    "amount": 9
+   }
+  },
+  "exampleDesc": "A strike with your weapon that afflicts what it hits with force damage over time. Anything struck moves 16% slower for 2s.",
+  "exampleStats": "weapon strike · applies 2×5 Blight and -10% armor · 13s cd · -16% enemy speed for 2s · 9 stamina"
+ },
+ {
+  "template": "thornsBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "defensive"
+  ],
+  "fromCategoryRows": [
+   "thorns_active"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "buffDuration",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "template",
+   "thornsFrac"
+  ],
+  "optionalFields": [
+   "bloodSurrogate",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "dot",
+   "hasteOnUse",
+   "lifeOnKill",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "cooldown": 24,
+   "buffDuration": 8,
+   "thornsFrac": 0.8,
+   "element": "shadow",
+   "lifeOnKill": 6,
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "bloodSurrogate": true
+  },
+  "exampleDesc": "For 8 seconds, 80% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 6 health.",
+  "exampleStats": "returns 80% of damage taken for 8s · 24s cd · +6 HP per kill · 8 mana (or blood)"
+ },
+ {
+  "template": "townPortal",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "movement"
+  ],
+  "fromCategoryRows": [
+   "town_portal"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "blinkOnUse",
+   "dodgeBonus",
+   "perAllyGain",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "movement",
+   "template": "townPortal",
+   "cooldown": 30,
+   "element": "physical",
+   "allyScaling": {
+    "per": 0.05,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.15
+   },
+   "perAllyGain": {
+    "resistPct": 0.1,
+    "dotChancePct": 0.1
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "cost": {
+    "type": "stamina",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Opens a doorway back to town, and a second one to return by. Every ally inside 5.5 tiles makes it 5% stronger, to a limit of 4.",
+  "exampleStats": "opens a portal to town — and back again · 30s cd · +5%/ally within 5.5 tiles (max 4) · 8 stamina"
+ },
+ {
+  "template": "confuseTurn",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "confuse_turn"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "confuseDamageFrac",
+   "confuseDamagePct",
+   "confuseDuration",
+   "cooldown",
+   "cost",
+   "duration",
+   "element",
+   "kind",
+   "maxTargets",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "template"
+  ],
+  "optionalFields": [
+   "bindOnHit",
+   "debuff",
+   "healOnUse",
+   "reachPct",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "cooldown": 20,
+   "range": 114,
+   "confuseDuration": 5,
+   "maxTargets": 3,
+   "confuseDamageFrac": 1,
+   "element": "physical",
+   "bindOnHit": {
+    "slowPct": 0.16,
+    "duration": 3
+   },
+   "duration": 5,
+   "confuseDamagePct": 1,
+   "reachUnits": 114,
+   "rangeBand": "melee",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Turns up to 2 enemies within 3.5 tiles against each other for 5 seconds. Whatever it hits is slowed by 16% for 3s.",
+  "exampleStats": "turns up to 3 enemies within 3.5 tiles against each other for 5s · 20s cd · -16% enemy speed for 3s · 8 mana"
+ },
+ {
+  "template": "tauntPull",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "defensive"
+  ],
+  "fromCategoryRows": [
+   "taunt_pull"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "tauntDuration",
+   "tauntMax",
+   "tauntRadius",
+   "template",
+   "threatMult"
+  ],
+  "optionalFields": [
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "reachPct",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "summonAnimal": "sloth",
+   "cooldown": 17,
+   "tauntRadius": 260,
+   "tauntDuration": 8,
+   "tauntMax": 7,
+   "threatMult": 1,
+   "element": "physical",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 6
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "familiarFamily": "dragon",
+   "familiarCreatureName": "Wyrm"
+  },
+  "exampleDesc": "A challenge that pulls up to 7 enemies within 8 tiles onto you for 8 seconds. While it lasts, an escort of force fights beside you, striking for 4 every 1.4s.",
+  "exampleStats": "draws up to 7 enemies within 8 tiles onto you for 8s · 17s cd · escort strikes for 4 every 1.4s for 6s · 8 mana"
+ },
+ {
+  "template": "stealthVeil",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "defensive"
+  ],
+  "fromCategoryRows": [
+   "stealth_veil"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "aggroMult",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "stealthAlpha",
+   "stealthDuration",
+   "stealthScope",
+   "stealthSpeedPct",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "hasteOnUse",
+   "healOnUse",
+   "perAllyGain",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "element": "physical",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Veils you for 6 seconds. Enemies notice you far later, and the veil breaks the moment you attack.",
+  "exampleStats": "you are veiled for 6s: enemies notice you 60% later · +10% move speed · breaks on attack · 24s cd · 8 mana"
+ },
+ {
+  "template": "fateReroll",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "fate_reroll"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "kind",
+   "rerollCooldown",
+   "rerollKind",
+   "rerollKinds",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "cooldown",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "familiarWeaponId",
+   "perAllyGain",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "rerollKind": "crit",
+   "rerollCooldown": 10,
+   "element": "physical",
+   "allyScaling": {
+    "per": 0.09,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.27
+   },
+   "perAllyGain": {
+    "resistPct": 0.18,
+    "dotChancePct": 0.18
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "rerollKinds": [
+    "crit"
+   ]
+  },
+  "exampleDesc": "Once every 10s, a strike that failed to crit is rolled a second time, and the second roll stands. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies.",
+  "exampleStats": "a strike that did not crit is rolled again · once every 10s · +9%/ally within 5.5 tiles (max 4)"
+ },
+ {
+  "template": "passiveConditional",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "passive_conditional"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "amount",
+   "bonusKind",
+   "category",
+   "condition",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "armorBonus",
+   "condElement",
+   "cooldownReduction",
+   "dodgeBonus",
+   "resist",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "summonAnimal": "bird",
+   "condition": "onRoads",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "element": "physical",
+   "cooldownReduction": 0.08
+  },
+  "exampleDesc": "On paved ground, your dodge chance rises by 12%. Your other abilities' cooldowns are 8% shorter.",
+  "exampleStats": "+12% dodge on paved ground · -8% ability cooldowns"
+ },
+ {
+  "template": "rangeBuff",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "reach_buff"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "buffDuration",
+   "castTime",
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "rangeMult",
+   "template"
+  ],
+  "optionalFields": [
+   "canonCooldownHours",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "healOnUse",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "summonAnimal": "sloth",
+   "rangeMult": 1.5,
+   "buffDuration": 35,
+   "cooldown": 285,
+   "element": "physical",
+   "escort": {
+    "dmg": 5,
+    "interval": 1.4,
+    "duration": 6
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "castTime": 1.7,
+   "familiarFamily": "dragon",
+   "familiarCreatureName": "Wyrm"
+  },
+  "exampleDesc": "For 35 seconds, your attacks and spells reach 50% further. While it lasts, an escort of force fights beside you, striking for 5 every 1.4s.",
+  "exampleStats": "x1.50 attack and spell range for 35s · 5m cd · escort strikes for 5 every 1.4s for 6s · 1.7s cast · 8 mana"
+ },
+ {
+  "template": "weaponAffinity",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "weapon affinity"
+  ],
+  "fromCategoryRows": [
+   "weapon_affinity"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "affinityMode",
+   "attackSpeedPct",
+   "category",
+   "element",
+   "kind",
+   "rangePct",
+   "template",
+   "weaponId",
+   "weaponName"
+  ],
+  "optionalFields": [
+   "escort",
+   "regenPerSec",
+   "resist",
+   "shotPierce",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "weapon affinity",
+   "template": "weaponAffinity",
+   "summonAnimal": "wolf",
+   "weaponId": "sword",
+   "weaponName": "Sword",
+   "affinityMode": "speed",
+   "rangePct": 0,
+   "attackSpeedPct": 0.13,
+   "element": "nature",
+   "regenPerSec": 1.5
+  },
+  "exampleDesc": "Long practice with the Sword: your strikes with it land 13% faster. It also regenerates 1.5 health a second, permanently.",
+  "exampleStats": "Sword: +13% attack speed · +1.5 HP/s"
+ },
+ {
+  "template": "perception",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "perception"
+  ],
+  "fromCategoryRows": [
+   "perception"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "kind",
+   "lurkReveal",
+   "pickupRadiusMult",
+   "sense",
+   "senseLabel",
+   "template"
+  ],
+  "optionalFields": [
+   "armorBonus",
+   "dangerSense",
+   "echoSense",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "healthbars",
+   "leySight",
+   "mapMemory",
+   "mapSense",
+   "nightVision",
+   "noFlank",
+   "nodeSense",
+   "reachPct",
+   "resist",
+   "siteSense",
+   "summonAnimal",
+   "unmask"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "perception",
+   "template": "perception",
+   "summonAnimal": "sloth",
+   "sense": "stillness",
+   "pickupRadiusMult": 1.5,
+   "echoSense": 580,
+   "healthbars": true,
+   "lurkReveal": 0.8,
+   "dangerSense": 1.4,
+   "senseLabel": "Stillness",
+   "element": "physical",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4
+   },
+   "familiarFamily": "dragon",
+   "familiarCreatureName": "Wyrm"
+  },
+  "exampleDesc": "Standing still, your senses reach past where you are. An escort of force fights beside you, striking for 4 every 1.4s.",
+  "exampleStats": "Stillness: moving enemies within 18.1 tiles are outlined through walls; you see every enemy's health bar; hidden and stealthed enemies show 80% more clearly; an arrow flashes at the screen edge toward anything off-screen that starts hunting you; while your mana is full, restore 5% of your stamina over 6s (at most once every 12s) · escort strikes for 4 every 1.4s"
+ },
+ {
+  "template": "summonBonded",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "summon"
+  ],
+  "fromCategoryRows": [
+   "summon_bonded"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "familiarCreatureName",
+   "familiarDmg",
+   "familiarFamily",
+   "familiarInterval",
+   "familiarRange",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "bindOnHit",
+   "cooldownReduction",
+   "dot",
+   "lifeOnKill",
+   "mount",
+   "mountFamily",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "element": "shadow",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 800,
+    "critChance": 0.08,
+    "label": "Decay"
+   },
+   "familiarFamily": "medusa",
+   "familiarCreatureName": "Gorgonet"
+  },
+  "exampleDesc": "Calls a bonded familiar of shadow that fights beside you, striking for 4 damage. It also applies decay, dealing 3 damage per tick for 4 ticks.",
+  "exampleStats": "familiar strikes for 4 dmg every 1.2s within 4.5 tiles · +3×4 Decay"
+ },
+ {
+  "template": "passiveMove",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "movement"
+  ],
+  "fromCategoryRows": [
+   "movement_passive"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "kind",
+   "moveSpeedPct",
+   "template"
+  ],
+  "optionalFields": [
+   "escort",
+   "resist"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "moveSpeedPct": 0.16,
+   "element": "physical"
+  },
+  "exampleDesc": "Your movement speed is permanently increased by 16%.",
+  "exampleStats": "+16% movement speed"
+ },
+ {
+  "template": "passiveBuff",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "self_passive_buff"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "amount",
+   "buffKind",
+   "category",
+   "element",
+   "kind",
+   "template"
+  ],
+  "optionalFields": [
+   "armorBonus",
+   "cooldownReduction",
+   "regenPerSec",
+   "resist",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "buffKind": "crit",
+   "amount": 0.11,
+   "element": "nature",
+   "regenPerSec": 0.5
+  },
+  "exampleDesc": "Your critical strike chance rises by 11%. It also regenerates 0.5 health a second, permanently.",
+  "exampleStats": "+11% crit chance · +0.5 HP/s"
+ },
+ {
+  "template": "attrBoost",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "attr_boost"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "attr",
+   "category",
+   "element",
+   "kind",
+   "raisesCap",
+   "riders",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "attr": "speed",
+   "element": "physical",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "ground goes by faster than it used to"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "you are somewhere else by the time it arrives"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.08,
+     "text": "and your hands have stopped waiting for you"
+    }
+   ],
+   "raisesCap": 1
+  },
+  "exampleDesc": "Raises your Speed by 1, and your Speed ceiling by 1.",
+  "exampleStats": "+1 Speed · raises your Speed ceiling by 1"
+ },
+ {
+  "template": "transform",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "self_transformation"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "attr",
+   "canonCooldownHours",
+   "category",
+   "cooldown",
+   "cost",
+   "duration",
+   "kind",
+   "pool",
+   "template",
+   "transform",
+   "transformProfs"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "transform",
+   "transform": "counterfeitCombatant",
+   "attr": "power",
+   "transformProfs": [
+    "blade",
+    "power",
+    "polearm",
+    "dexterity"
+   ],
+   "pool": "stamina",
+   "canonCooldownHours": 6,
+   "cooldown": 3600,
+   "cost": {
+    "type": "stamina",
+    "amount": 40
+   },
+   "duration": 30
+  },
+  "exampleDesc": "For 30 seconds you are the combatant you are pretending to be.",
+  "exampleStats": "+2 Power · +20% max stamina · 2 stamina/s · lasts 30s · 60m cd · 40 stamina"
+ },
+ {
+  "template": "twoHandWield",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "passive buff"
+  ],
+  "fromCategoryRows": [
+   "two_hand_wield"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "frees",
+   "kind",
+   "source",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "twoHandWield",
+   "element": "shadow",
+   "frees": [
+    "hammer",
+    "scythe"
+   ],
+   "source": "essence"
+  },
+  "exampleDesc": "The weight goes somewhere -- into the stare, into the stance, into whatever Eye put in you. A hammer or a scythe that needs both hands from anyone else needs one from you, and the other hand is free for a shield or a second weapon.",
+  "exampleStats": "wield hammer and scythe in one hand"
+ },
+ {
+  "template": "waterWalk",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "movement"
+  ],
+  "fromCategoryRows": [
+   "water_walk"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "isMovement",
+   "kind",
+   "riders",
+   "source",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "physical",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you move over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "manaRegen",
+     "amount": 0.35,
+     "text": "and it gives something back while you stand on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.12,
+     "text": "and nothing that has to wade can lay a hand on you"
+    }
+   ],
+   "isMovement": true,
+   "source": "essence"
+  },
+  "exampleDesc": "You walk on water and swamp as on solid ground.",
+  "exampleStats": "cross water on foot"
+ },
+ {
+  "template": "cooldownReset",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "buff"
+  ],
+  "fromCategoryRows": [
+   "cooldown_reset"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "resetCount",
+   "template"
+  ],
+  "optionalFields": [
+   "blinkOnUse",
+   "dodgeBonus",
+   "hasteOnUse",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "summonAnimal": "wasp",
+   "cooldown": 112.5,
+   "resetCount": 1,
+   "element": "shadow",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4s after you use it.",
+  "exampleStats": "clears the cooldown on one random ability · 112.5s cd · +20% move speed for 4s · 8 mana"
+ },
+ {
+  "template": "abilityLock",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "ability_lock"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "cooldown",
+   "cost",
+   "element",
+   "kind",
+   "lockSeconds",
+   "range",
+   "rangeBand",
+   "reachUnits",
+   "template"
+  ],
+  "optionalFields": [
+   "bindOnHit",
+   "confuse",
+   "confuseChance",
+   "confuseDuration",
+   "healOnUse",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "range": 230,
+   "lockSeconds": 3,
+   "cooldown": 19,
+   "element": "physical",
+   "bindOnHit": {
+    "slowPct": 0.16,
+    "duration": 2
+   },
+   "reachUnits": 230,
+   "rangeBand": "medium",
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   }
+  },
+  "exampleDesc": "Silences one enemy within 7 tiles, taking its next action away for 3 seconds and putting out whatever it had standing. Anything struck moves 16% slower for 2s.",
+  "exampleStats": "stops the target acting for 3s within 7 tiles · 19s cd · -16% enemy speed for 2s · 8 mana"
+ },
+ {
+  "template": "unarmedFocus",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "unarmed"
+  ],
+  "fromCategoryRows": [
+   "unarmed_focus"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "isBuff",
+   "kind",
+   "template",
+   "unarmedPct"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "passive",
+   "category": "unarmed",
+   "template": "unarmedFocus",
+   "element": "shadow",
+   "unarmedPct": 0.4,
+   "isBuff": true
+  },
+  "exampleDesc": "Nothing in your hands, and the shroud is the weapon -- Death put the edge in you rather than in something you have to carry. While both hands are empty, everything you do lands 40% harder: strikes, spells and abilities alike. Pick up a sword and it counts for nothing.",
+  "exampleStats": "+40% damage while both hands are empty"
+ },
+ {
+  "template": "summonWeapon",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "weapon summon"
+  ],
+  "fromCategoryRows": [
+   "summon_weapon"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "element",
+   "itemBuffs",
+   "kind",
+   "strikeDot",
+   "template",
+   "weaponDmgPct"
+  ],
+  "optionalFields": [
+   "cooldownReduction",
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "resist",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "weaponDmgPct": 0.14,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.0625
+    },
+    {
+     "stat": "resist_nature",
+     "amount": 0.1
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 3,
+    "ticks": 2,
+    "tickMs": 800,
+    "critChance": 0.06,
+    "label": "Decay"
+   },
+   "element": "shadow",
+   "resist": {
+    "element": "shadow",
+    "amount": 0.08
+   }
+  },
+  "exampleDesc": "Conjures a weapon of shadow. It increases your weapon damage by 14%, and every strike with it leaves decay in the wound. Your shadow resistance rises by 8%.",
+  "exampleStats": "+14% weapon damage · every strike applies 3×2 Decay · +6% Weapon Attack Speed · +10% Nature Resistance · +8% shadow resistance"
+ },
+ {
+  "template": "summonArmor",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "armor summon"
+  ],
+  "fromCategoryRows": [
+   "summon_armor"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "armorBonus",
+   "category",
+   "damageReduction",
+   "element",
+   "itemBuffs",
+   "kind",
+   "template",
+   "thornsFrac"
+  ],
+  "optionalFields": [
+   "escort",
+   "familiarCreatureName",
+   "familiarFamily",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "armorBonus": 0.17,
+   "damageReduction": 3,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.046875
+    }
+   ],
+   "thornsFrac": 0.12,
+   "element": "physical"
+  },
+  "exampleDesc": "Conjures armour of force: every hit you take is 3 lower, your armour rises by 17%, 12% of the damage you take goes back to whoever dealt it. Your armour rises by 8%.",
+  "exampleStats": "-3 damage from every hit taken · +17% armor · returns 12% of damage taken · +5% Armor"
+ },
+ {
+  "template": "summonGear",
+  "kinds": [
+   "passive"
+  ],
+  "categories": [
+   "gear summon"
+  ],
+  "fromCategoryRows": [
+   "summon_gear"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "category",
+   "critChance",
+   "critDamage",
+   "element",
+   "itemBuffs",
+   "kind",
+   "lifeOnKill",
+   "template"
+  ],
+  "optionalFields": [
+   "allyGrant",
+   "allyMax",
+   "allyRange",
+   "allyScaling",
+   "armorBonus",
+   "cooldownReduction",
+   "perAllyGain",
+   "summonAnimal"
+  ],
+  "example": {
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "critChance": 0.06,
+   "critDamage": 0.16999999999999998,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 13
+    }
+   ],
+   "element": "physical",
+   "allyScaling": {
+    "per": 0.05,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.15
+   },
+   "perAllyGain": {
+    "resistPct": 0.1,
+    "dotChancePct": 0.1
+   },
+   "allyRange": 180,
+   "allyMax": 4
+  },
+  "exampleDesc": "Conjures a trinket of force: your critical chance rises by 6%, your critical hits deal 0.17x more, each kill returns 3 health. Its effect increases by 5% for each ally within 5.5 tiles, up to 4 allies.",
+  "exampleStats": "+6% crit chance · +0.17x crit damage · +3 HP per kill · +13 Max HP · +5%/ally within 5.5 tiles (max 4)"
+ },
+ {
+  "template": "corpseBlast",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "corpse_blast"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "corpse",
+   "cost",
+   "element",
+   "explodeRadius",
+   "kind",
+   "range",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseBlast",
+   "element": "physical",
+   "cooldown": 4,
+   "range": 300,
+   "base": 10,
+   "cost": {
+    "type": "mana",
+    "amount": 8
+   },
+   "corpse": true,
+   "explodeRadius": 115
+  },
+  "exampleDesc": "The nearest body within 9 tiles bursts, dealing 10 damage plus a share of what it was to everything within 4 tiles.",
+  "exampleStats": "the nearest body within 9.5 tiles bursts for 10 damage plus 8% of its max health to all within 3.5 tiles · 4s cd · 8 mana"
+ },
+ {
+  "template": "corpseMiasma",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "affliction"
+  ],
+  "fromCategoryRows": [
+   "corpse_miasma"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "corpse",
+   "cost",
+   "dot",
+   "element",
+   "explodeRadius",
+   "kind",
+   "miasmaSeconds",
+   "range",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "active",
+   "category": "affliction",
+   "template": "corpseMiasma",
+   "element": "shadow",
+   "cooldown": 10,
+   "range": 300,
+   "base": 4,
+   "cost": {
+    "type": "mana",
+    "amount": 10
+   },
+   "corpse": true,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 3,
+    "tickMs": 900,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "miasmaSeconds": 8,
+   "explodeRadius": 130
+  },
+  "exampleDesc": "The nearest body rots where it lies for 8 seconds; anything that stands in its cloud takes Rot, 4 damage a tick.",
+  "exampleStats": "the nearest body rots for 8s; enemies in its 4 tiles cloud take 4 damage a tick · 10s cd · +4×3 Rot · 10 mana"
+ },
+ {
+  "template": "corpseMine",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "attack"
+  ],
+  "fromCategoryRows": [
+   "corpse_mine"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "corpse",
+   "cost",
+   "element",
+   "explodeRadius",
+   "kind",
+   "mineSeconds",
+   "range",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "physical",
+   "cooldown": 12,
+   "range": 300,
+   "base": 8,
+   "cost": {
+    "type": "mana",
+    "amount": 12
+   },
+   "corpse": true,
+   "explodeRadius": 115,
+   "mineSeconds": 30
+  },
+  "exampleDesc": "Primes up to 3 bodies in reach. Each bursts for 8 damage the moment an enemy comes near it.",
+  "exampleStats": "primes up to 3 bodies in reach; each bursts for 8 damage when an enemy comes within 2 tiles (30s) · 12s cd · 12 mana"
+ },
+ {
+  "template": "corpseDrain",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "restore"
+  ],
+  "fromCategoryRows": [
+   "corpse_drain"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "corpse",
+   "cost",
+   "drainFrac",
+   "element",
+   "kind",
+   "range",
+   "resource",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "cooldown": 9,
+   "range": 300,
+   "base": 1,
+   "cost": {
+    "type": "stamina",
+    "amount": 4
+   },
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07
+  },
+  "exampleDesc": "Drains every body in reach (up to 5); each gives back 7% of your health.",
+  "exampleStats": "every body in reach (up to 5) restores 7% of your health · 9s cd · 4 stamina"
+ },
+ {
+  "template": "raiseDead",
+  "kinds": [
+   "active"
+  ],
+  "categories": [
+   "summon"
+  ],
+  "fromCategoryRows": [
+   "raise_dead"
+  ],
+  "samples": 6,
+  "usualFields": [
+   "base",
+   "category",
+   "cooldown",
+   "corpse",
+   "cost",
+   "element",
+   "kind",
+   "range",
+   "summonDmg",
+   "summonDuration",
+   "summonFamily",
+   "template"
+  ],
+  "optionalFields": [],
+  "example": {
+   "kind": "active",
+   "category": "summon",
+   "template": "raiseDead",
+   "element": "physical",
+   "cooldown": 14,
+   "range": 300,
+   "base": 5,
+   "cost": {
+    "type": "mana",
+    "amount": 14
+   },
+   "corpse": true,
+   "summonFamily": "skeleton",
+   "summonDuration": 30,
+   "summonDmg": 5
+  },
+  "exampleDesc": "The nearest body stands up again as a skeleton that fights for you for 30 seconds.",
+  "exampleStats": "the nearest body rises as a skeleton ally that fights for 30s, hitting for 5 · 14s cd · 14 mana"
+ }
+]

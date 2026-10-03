@@ -1,0 +1,69 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "name": "Close Reading",
+   "element": "arcane",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 7,
+   "cooldown": 1,
+   "range": 256,
+   "maxMult": 1.8,
+   "desc": "A glance that deals 7 damage, rising to 1.8 times that at its maximum range of 8 tiles. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Censor's Sweep",
+   "element": "arcane",
+   "role": "long",
+   "guaranteedCrit": true,
+   "base": 28,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.8,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a censor's gaze across a cone 5 tiles long, dealing 28 damage to every enemy in it. Every hit is a critical hit, and each enemy hit is [Suppressed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "name": "Between the Lines",
+   "element": "arcane",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Your critical hit chance rises by 25% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "name": "Double-Take",
+   "element": "arcane",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

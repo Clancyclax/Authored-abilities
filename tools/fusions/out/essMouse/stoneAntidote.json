@@ -1,0 +1,94 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Draw the Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Needs one of your afflictions on the target: a bite draws the poison out for 8 damage, consuming every affliction on the target and adding half their remaining damage to the blow. You heal for 25% of the damage dealt and move 15% faster for 2 seconds.",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   }
+  },
+  {
+   "name": "Bitterness Returned",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "You dart in and spit poison across everything within 3 tiles ahead of you, dealing 10 poison damage and leaving each target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to enemies within 3.5 tiles of it, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Bait Refused",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 24,
+   "healOnUse": 8,
+   "desc": "Removes up to 2 poison conditions from you, restores 8 health, and backs you 2 tiles away from where you stood.",
+   "blinkOnUse": 64
+  },
+  {
+   "name": "Taster's Tolerance",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you inflict a condition, you regain 2 health a second for 4 seconds. Once every 8 seconds. You also have 10% poison resistance and 5% more dodge chance."
+  }
+ ]
+}

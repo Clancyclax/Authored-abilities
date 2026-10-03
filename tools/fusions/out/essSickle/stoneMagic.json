@@ -1,0 +1,92 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Raw Crescent",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 36,
+   "cooldown": 90,
+   "ignoreResist": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "desc": "Looses a crescent of raw arcana that deals 36 damage to the first enemy it meets, then leaps to 2 more enemies within 4 tiles, each hit dealing 60% of the original damage. It ignores resistances."
+  },
+  {
+   "name": "Frayed Wards",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a thin spray of arcana 4 tiles ahead that deals 4 damage to everything in it, with a 30% chance to leave each target [Exposed] for 5 seconds."
+  },
+  {
+   "name": "Arcana on Tap",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 6,
+   "desc": "Restores 3 mana a second for 8 seconds, and 6 health at once."
+  },
+  {
+   "name": "Overflow Arc",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 288
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Each time you spend mana, a crescent of arcana strikes the nearest enemy within 9 tiles for 7 damage, then leaps to 2 more enemies within 3 tiles for 60% of that. Once every 6 seconds."
+  }
+ ]
+}

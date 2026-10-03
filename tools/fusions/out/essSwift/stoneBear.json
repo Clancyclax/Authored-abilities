@@ -1,0 +1,83 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneBear",
+  "fusions": [
+    {
+      "name": "Whole Weight Arriving",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "bossPct": 0.05,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.4,
+      "desc": "A blow that deals 30 damage, plus 5% of a boss's or elite's maximum health, and leaves the target 15% easier to wound for 6 seconds. Its damage rises 5% for every 100 paces you have travelled since you last used it, up to 40%."
+    },
+    {
+      "name": "Bowled Over",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "stunOnHit": 1,
+      "desc": "A charge that deals 13 damage to every enemy within 2.5 tiles, knocks them back 2 tiles and leaves them [Stunned] for 1 second.",
+      "knockback": 64
+    },
+    {
+      "name": "Wintered Hide",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 24,
+      "shieldStrikes": 4,
+      "shieldDuration": 6,
+      "armorBonus": 0.08,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "cooldown": 24,
+      "desc": "Raises a barrier that absorbs the next 24 damage and holds for 6 seconds. Your armour rises by 8% while you carry it, and you move 20% faster for 4 seconds after you use it."
+    },
+    {
+      "name": "Rolling Bulk",
+      "kind": "passive",
+      "element": "physical",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.12,
+        "duration": 5
+      },
+      "desc": "Every few paces you cover, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 12 seconds."
+    }
+  ]
+}

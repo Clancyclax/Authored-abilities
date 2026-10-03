@@ -1,0 +1,76 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Off My Share",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 96,
+   "leech": 0.2,
+   "desc": "A backhanded blow that deals 14 damage, knocks the target 3 tiles away and leaves it 10% easier to wound for 5 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Troop's Due",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Pounds the ground, dealing 28 damage to every enemy within 3.5 tiles. When it hits, you and every ally deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Jealous Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "blunt",
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "lifeOnKill": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, 30% of the damage you take is dealt back to whoever dealt it, and each kill you make restores 8 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "element": "blunt",
+   "lifeOnKill": 3,
+   "name": "Bared Teeth",
+   "desc": "When a non-fire blow hurts you, your physical damage rises by 30% for 5 seconds, once every 8 seconds. Each kill restores 3 health."
+  }
+ ]
+}

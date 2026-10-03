@@ -1,0 +1,80 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Panopticon",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a gaze in a full circle that deals 28 damage to every enemy within 4 tiles, ignores their resistances and leaves each one [Marked] for 8 seconds."
+  },
+  {
+   "name": "Fixed Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "stunOnHit": 1.2,
+   "desc": "A stare that deals 12 damage to the first enemy it meets and leaves it [Stunned] for 1.2 seconds. Its damage rises 10% for every affliction on the target (max 40%).",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4
+  },
+  {
+   "name": "Lamp-Room Sweep",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "light",
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "castTime": 0.8,
+   "cooldown": 45,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.8 second cast, plants a lamp that stands for 15 seconds. Every 1.5 seconds it hits an enemy within 6 tiles for 5 damage, with a 30% chance to leave the target [Marked] for 4 seconds."
+  },
+  {
+   "name": "Unbroken Watch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "arcane",
+   "buffKind": "crit",
+   "amount": 0.08,
+   "cooldownReduction": 0.05,
+   "desc": "Your critical strike chance rises by 8%, and your other abilities come round 5% sooner."
+  }
+ ]
+}

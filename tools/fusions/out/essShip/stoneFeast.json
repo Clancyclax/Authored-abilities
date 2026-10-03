@@ -1,0 +1,78 @@
+{
+ "essence": "essShip",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Raid the Larder",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "leech": 0.3,
+   "desc": "You rush up to 6 tiles onto the target and tear into it for 13 damage, leaving it 10% easier to wound for 5 seconds. You heal for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Broach the Cask",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "leech": 0.25,
+   "desc": "Sprays a cask through a cone 3 tiles long, dealing 7 damage to everything in it. You heal for 25% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Splice the Mainbrace",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "healOnUse": 10,
+   "desc": "You regain 10 health, and every ally within 5 tiles strikes 15% harder for 10 seconds and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Rations by the League",
+   "element": "life",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "After you cover enough ground, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

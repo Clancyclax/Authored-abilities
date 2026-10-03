@@ -1,0 +1,88 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scree Scatter",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks scree 4 tiles ahead that deals 7 rock damage to everything in it, with a 30% chance to leave each [Leaden] for 4 seconds. You hold 3 charges, and kills give them back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fault-Line Stamp",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Stamps on an enemy and deals 32 earth damage, plus 5% of its maximum health if it is a boss or elite, and leaves it 15% easier to wound for 6 seconds. Your movement speed then rises by 25% for 4 seconds."
+  },
+  {
+   "name": "Stone-Shod",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "rock",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 20,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "You gain a shield that absorbs 20 damage for 6 seconds, and your movement speed rises by 20% for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Gathers No Moss",
+   "element": "earth",
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

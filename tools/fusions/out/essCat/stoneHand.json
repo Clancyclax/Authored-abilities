@@ -1,0 +1,77 @@
+{
+ "essence": "essCat",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Scruff Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, and deals 20 damage to an enemy at or below 25% health. The target is [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Patting Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "isAoe": true,
+   "range": 64,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A flurry of quick pats deals 4 damage to every enemy within 2 tiles. You move 15% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Outstretched Paw",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 70,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Sure Grip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you land a critical hit, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

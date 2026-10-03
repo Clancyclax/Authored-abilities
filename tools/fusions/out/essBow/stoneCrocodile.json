@@ -1,0 +1,85 @@
+{
+ "essence": "essBow",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Out of Still Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "speed": 520,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 1.2,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Fires an arrow that deals 14 damage to the first enemy it meets and stuns it for 1.2 seconds. It has 40% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Drag Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a barbed arrow at a target up to 7 tiles away that deals 28 water damage, leaves it [Pinned] for 3 seconds and makes it 15% easier to wound for 6 seconds. Against a boss or elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Below the Waterline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Long Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripped to the Stalk",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Needs one of your afflictions on the target and uses it up. A swarm strips everything in a cone 4 tiles long, which deals 9 damage with a 40% chance to leave each target [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Plague Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "spreadAfflictions": 128,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Throws a clot of musk-fed locusts at the first enemy within 7 tiles that deals 14 damage. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Chewing Haze",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 0.5 seconds to loose a cloud of locusts and musk for 12 seconds that bites an enemy within 6 tiles for 3 damage every second, with a 30% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Next Field Over",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "When you kill an enemy, the swarm moves on to the nearest enemy within 6 tiles and deals 5 damage, slowing it by 25% for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

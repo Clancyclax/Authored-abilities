@@ -1,0 +1,86 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Stiff-Legged Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs onto an enemy up to 6 tiles away and rakes it for 12 damage, leaving it 12% easier to wound for 6 seconds and [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Arched and Hissing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "cooldown": 1,
+   "base": 3,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Arches and hisses across a cone 3 tiles long, dealing 3 damage with a 30% chance to leave each target [Weakened] for 4 seconds."
+  },
+  {
+   "name": "Hackles Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "dodgeBonus": 0.15,
+   "desc": "Raises your armour by 20% and your dodge chance by 15% for 10 seconds."
+  },
+  {
+   "name": "Soft Step, Sour Strike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover, your critical hit chance rises by 25% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

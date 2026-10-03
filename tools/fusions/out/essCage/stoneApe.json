@@ -1,0 +1,82 @@
+{
+ "essence": "essCage",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Wrenched Bar",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 320,
+   "radius": 10,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "stun",
+    "chance": 0.3,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a bar torn loose for 8 damage, with a 30% chance to leave the target [Stunned] for 1 second. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Rattle the Hinges",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the ground around you, dealing 13 damage to every enemy within 3 tiles and knocking them back 2.5 tiles, with a 50% chance to leave each [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Chest Beat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 22,
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Beats your chest and pulls up to 5 enemies within 7 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Breakout",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 6
+   },
+   "desc": "When your health falls below 35%, your physical damage rises by 40% for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

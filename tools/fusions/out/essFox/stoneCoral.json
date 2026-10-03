@@ -1,0 +1,89 @@
+{
+ "essence": "essFox",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Crevice Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 160,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You rush up to 5 tiles to the target and bite, dealing 12 damage, making it [Bleeding] for 2 damage a second for 4 seconds and leaving it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Follow Me Across",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Sharp coral rises underfoot and deals 8 slashing damage to every enemy within 2.5 tiles, with a 60% chance to leave each [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Sudden Reef",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Raises a reef 5 tiles long across the ground for 6 seconds. Nothing crosses it. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Polyp by Polyp",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. At 6 they all spend at once: you are healed for 3% of your maximum health per stack (18% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

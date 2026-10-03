@@ -1,0 +1,99 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Flattened Gland",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "stunOnHit": 1.4,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Hammers a full musk gland flat against the target, which deals 15 damage, stuns it for 1.4 seconds, leaves it 15% easier to wound for 6 seconds and [Poisoned] for 2 damage a second for 8 seconds."
+  },
+  {
+   "name": "Count of Three",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "A hammering stamp of warning that deals 8 damage to every enemy within 2.5 tiles, with a 50% chance to leave each [Slowed] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Baited Deadfall",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "blunt",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "debuff": {
+    "key": "stun",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 1 second to rig a musk-baited deadfall at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles drops it: it deals 20 damage in a blast around it and leaves each enemy hit [Stunned] for 1.5 seconds."
+  },
+  {
+   "name": "While They Gag",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "Each time you inflict a condition, your physical damage rises by 25% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

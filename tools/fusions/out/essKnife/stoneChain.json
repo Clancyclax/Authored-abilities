@@ -1,0 +1,91 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tethered Cast",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a tethered blade that deals 4 damage to the first enemy it meets, then swings on to 2 more enemies within 3.5 tiles for 60% of the damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shared Shackle",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "spreadAfflictions": 128,
+   "base": 12,
+   "cooldown": 12,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lashes the tethered blade at a target up to 4 tiles away for 12 damage, rising to 1.3 times that at full reach, and leaves it [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Barbed Dragline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "slashing",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 20,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Stretches a barbed line 6 tiles long ahead of you for 5 seconds that drags nearby enemies inward. Each one it catches is left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Link by Link",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

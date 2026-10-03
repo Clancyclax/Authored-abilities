@@ -1,0 +1,87 @@
+{
+ "essence": "essWind",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Head of the Wedge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "long",
+   "base": 26,
+   "cooldown": 60,
+   "speed": 400,
+   "radius": 8,
+   "desc": "Breaks the air ahead of you with a bolt that deals 26 damage to the first enemy it meets and ignores its resistance.",
+   "ignoreResist": true
+  },
+  {
+   "name": "Wing-Flicked Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks spray in a cone 2.5 tiles long that deals 4 damage, with a 30% chance to leave each target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Off the Back",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 60,
+   "immunityDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. You move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Paddling Calm",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you skim over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.15,
+     "text": "and the crossing rests you"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and nothing that has to wade can reach you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 10% faster over it, from silver your stamina recovers 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

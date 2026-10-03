@@ -1,0 +1,83 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "role": "basic",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "spammable": true,
+   "name": "Browsing Mouthfuls",
+   "element": "nature",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 300,
+   "radius": 6,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 5,
+    "label": "Reprieve"
+   },
+   "desc": "Tears 3 mouthfuls from the enemies ahead at once, spread apart, each dealing 3 damage. 20% of the damage dealt comes back to you as healing over 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "execute",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Last Course",
+   "element": "physical",
+   "base": 22,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "leech": 0.4,
+   "desc": "Usable only on an enemy at or below 25% health. Swallows it for 22 damage and heals you for 40% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "name": "Seagrass Banquet",
+   "element": "nature",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 24,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Its healing rises 10% for each ally near you (max 40%)."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Fattened by Degrees",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

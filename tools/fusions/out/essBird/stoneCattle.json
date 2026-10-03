@@ -1,0 +1,73 @@
+{
+ "essence": "essBird",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Long Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 10,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "Drives a bolt of wind into the first enemy it meets for 26 damage plus 5% of a boss's or elite's maximum health. Its damage rises 5% for every 100 paces you have travelled since you last used it, up to 40%."
+  },
+  {
+   "name": "Stamping Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Comes down on every enemy within 3 tiles for 12 damage, stunning them for 1 second."
+  },
+  {
+   "name": "All-Day Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 50% for 15 seconds. You move 15% faster for 5 seconds after you use it."
+  },
+  {
+   "name": "Pastured Roost",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "The moment your stamina is full, you regain 3 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

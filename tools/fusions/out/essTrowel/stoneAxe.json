@@ -1,0 +1,76 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Split on the Score",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A chop that deals 18 damage and consumes every affliction on the target, adding 1.2 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Chips Off the Block",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 112,
+   "coneAngle": 1,
+   "knockback": 64,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "A chop across the front that deals 11 damage to everything within 3.5 tiles ahead of you, knocks each enemy back 2 tiles and leaves it [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Broken-Glass Coping",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "slashing",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 32,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Raises a wall 5 tiles long in front of you that blocks movement for 8 seconds. Enemies that touch it are left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Bedding Plane",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "pierceElement": "slashing",
+   "armorIgnore": 0.15,
+   "desc": "Your slashing attacks ignore 15% of the target's armour."
+  }
+ ]
+}

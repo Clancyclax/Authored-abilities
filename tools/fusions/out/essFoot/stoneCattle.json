@@ -1,0 +1,77 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Trampling Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Tramples through a cone 3.5 tiles ahead, dealing 12 damage to every enemy in it and knocking them 3 tiles back. Its damage rises 8% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Plough-Ox Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "Plants your forefeet and lashes back with both heels, dealing 34 damage plus 5% of a boss's or elite's maximum health, and leaving the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Shoulder to the Yoke",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 6
+   },
+   "desc": "You take 20% less damage for 12 seconds and move 10% faster for 6 seconds."
+  },
+  {
+   "name": "Plodding Reserves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "Each time you cover a long stretch of ground, you regain 10 stamina. Once every 6 seconds."
+  }
+ ]
+}

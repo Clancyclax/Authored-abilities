@@ -1,0 +1,73 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Shell Cracker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "leech": 0.25,
+   "desc": "Cracks the target open for 4 damage, leaving it 6% easier to wound for 5 seconds, and heals you for 25% of the damage dealt."
+  },
+  {
+   "name": "From Every Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "leech": 0.25,
+   "desc": "Takes a helping from every enemy within 3.5 tiles, dealing 26 damage to each and healing you for 25% of the damage dealt. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Passed Down the Table",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "cooldown": 24,
+   "desc": "Restores 14 health to you and every ally within 4 tiles."
+  },
+  {
+   "name": "Midden Heap",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "life",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 4. At 4 they all spend at once: you heal for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

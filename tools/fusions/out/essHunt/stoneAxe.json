@@ -1,0 +1,72 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Thrown Hatchet",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Throws a hatchet that deals 8 damage, rising to 1.6 times that at its full reach of 6 tiles, and slows the target by 20% for 2 seconds. It holds 3 charges, and each kill returns one."
+  },
+  {
+   "name": "Hock Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you up to 6 tiles to the target and chops low for 14 damage, leaving it 12% easier to wound and [Bleeding] for 6 seconds. The bleeding worsens while the target moves."
+  },
+  {
+   "name": "Dropped Timber",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "desc": "Fells a trunk 6 tiles long across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Past the Hinge",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

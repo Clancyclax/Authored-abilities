@@ -1,0 +1,77 @@
+{
+ "essence": "essApe",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Springing Hurl",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 2.2,
+   "hpCostPct": 0.05,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Hurls a rock up to 8 tiles for 8 damage, rising to 2.2 times that at full range. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Treetop Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "You leap up to 6 tiles onto the target and pound it for 15 damage, leaving it 15% easier to wound for 6 seconds. For 4 seconds after, you move 20% faster."
+  },
+  {
+   "name": "Rampart Bound",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "Reduces the damage you take by 20% for 10 seconds. You finish it 3 tiles from where you stood."
+  },
+  {
+   "name": "Spring-Loaded",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "armorBonus": 0.05,
+   "desc": "Every 6 tiles you cover, your physical damage rises 30% for 4 seconds. Once every 8 seconds. Your armour rises by 5%."
+  }
+ ]
+}

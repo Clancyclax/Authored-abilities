@@ -1,0 +1,86 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Furrow Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends the cloud through a cone 4 tiles ahead of you, which deals 11 damage to everything in it and leaves each one [Sundered] for 5 seconds. Your afflictions on them spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "A stripping bite that deals 18 damage and leaves the target 20% easier to wound for 6 seconds. Its damage rises 10% for each affliction on the target (max 50%). Usable only on an enemy at or below 25% health.",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "requiresTargetBelow": 0.25
+  },
+  {
+   "name": "Loosed Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Next Field Over",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Unhurried Release",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "range": 288,
+   "maxMult": 1.8,
+   "guaranteedCrit": true,
+   "desc": "Looses at a target up to 9 tiles away, dealing 28 damage, up to 1.8 times that at the far end of its reach. It is always a critical hit.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Skimming Shots",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 2,
+   "volleySpread": 0.25,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Looses 2 low arrows at once, spread apart, each dealing 3 damage. You move 10% faster for 2 seconds after each volley.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Steady Breath",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "rangeMult": 1.27,
+   "buffDuration": 15,
+   "castTime": 0.8,
+   "cooldown": 60,
+   "healOnUse": 8,
+   "desc": "Steadies your breathing: your attacks and spells reach 1.4 times as far for 15 seconds, and you restore 8 health.",
+   "kind": "active"
+  },
+  {
+   "name": "Held at Full Draw",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "While your stamina is full, your next ability deals 20% more damage. Once every 10 seconds.",
+   "kind": "passive"
+  }
+ ]
+}

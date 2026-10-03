@@ -1,0 +1,75 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Snagged Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A leaping strike at an enemy up to 6 tiles away that deals 6 damage, up to 1.5 times that at the full 6 tiles, and slows it by 20% for 2 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Through the Weave",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 64,
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "leech": 0.2,
+   "desc": "A bite that deals 28 damage, ignores armour and leaves the target 10% easier to wound for 6 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Into the Folds",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later, and you move 11% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Padded Layers",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (34% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

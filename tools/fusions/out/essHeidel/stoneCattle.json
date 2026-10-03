@@ -1,0 +1,94 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Plough Line",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You drive a furrow 5 tiles ahead, dealing 28 damage plus 5% of a boss or elite's maximum health to everything in it. Each hit has a 60% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shoulder to Shoulder",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "chargesMax": 4,
+   "sunder": {
+    "amount": 0.04,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A kick that deals 7 damage, rising 10% for each ally near you (up to 30%), and leaves the target 4% easier to wound for 3 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Shared Yoke",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "The Long Haul",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "your wind comes back between furrows"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "the small hurts close while you work"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.06,
+     "text": "and every task comes round again sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your stamina recovers 12% faster, from silver your health recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

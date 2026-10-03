@@ -1,0 +1,74 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Wind to Spare",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 5,
+   "desc": "A running kick on a target up to 4 tiles away that deals 7 damage, rising to 1.5 times that at full reach. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Ridden Ragged",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rides through a cone 5 tiles ahead of you, which deals 26 damage, plus 4% of a boss's or elite's maximum health, to everything in it and leaves each one [Fatigued] for 8 seconds."
+  },
+  {
+   "name": "Cooling Walk",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "healOnUse": 8,
+   "desc": "Restores 4 stamina a second for 6 seconds, and 8 health at once."
+  },
+  {
+   "name": "Broken to Saddle",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 5,
+   "familiarRange": 96,
+   "familiarInterval": 1.8,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "mount": true,
+   "mountFamily": "beast",
+   "desc": "A bonded heidel fights beside you, striking enemies within 3 tiles for 5 damage every 1.8 seconds. You can ride it."
+  }
+ ]
+}

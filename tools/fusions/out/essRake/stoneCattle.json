@@ -1,0 +1,78 @@
+{
+ "essence": "essRake",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Shoulder to the Yoke",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "hpCostPct": 0.04,
+   "desc": "A heaving drag of the tines that deals 9 damage and leaves the target 10% easier to wound for 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Harrowed Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "earth",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "wallKind": "burn",
+   "wallLength": 224,
+   "wallDuration": 10,
+   "wallThickness": 30,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Drags a harrowed strip 7 tiles long that stays for 10 seconds. It deals 25 damage to each enemy that crosses it and slows it by 30% for 3 seconds. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Rumination",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "desc": "Restores 4 stamina a second for 6 seconds."
+  },
+  {
+   "name": "Goaded Too Far",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

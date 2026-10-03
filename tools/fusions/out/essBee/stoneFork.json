@@ -1,0 +1,88 @@
+{
+ "essence": "essBee",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Splitting Tines",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "hpCostPct": 0.05,
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 340,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 1
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 1,
+   "desc": "Costs 5% of your maximum health. Hurls a stinger that deals 8 damage, then forks to 2 more enemies within 3.5 tiles, each hit dealing 100% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Both Ways",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "spreadAfflictions": 112,
+   "base": 12,
+   "cooldown": 14,
+   "range": 200,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a narrow cone ahead of you, dealing 12 damage to everything caught in it. Each hit has a 40% chance of [Poisoned] for 6 seconds. Your afflictions on a target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "name": "Extended Haft",
+   "element": "piercing",
+   "cooldown": 90,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 12
+   },
+   "desc": "For 20 seconds, your attacks and spells reach 40% further. A line of stingers fights beside you for 12 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "kind": "passive",
+   "name": "Twofold Payoff",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 2
+   },
+   "desc": "When you inflict a condition, your next 2 spells deal 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

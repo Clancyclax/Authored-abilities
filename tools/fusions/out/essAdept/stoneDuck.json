@@ -1,0 +1,80 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Skipping Stones",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "chargesMax": 4,
+   "desc": "Skims a stone that deals 7 damage to the first enemy it meets, then leaps to 1 more enemy within 3 tiles for 60% of the damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Wing Buffet",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Beats a spray of water 4 tiles ahead of you that deals 26 water damage to everything in it and leaves them [Soaked] for 6 seconds. It ignores resistances.",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Water off the Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Unflustered",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

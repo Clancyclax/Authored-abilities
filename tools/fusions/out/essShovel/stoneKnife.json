@@ -1,0 +1,76 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spinning Entrencher",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Throws the sharpened blade, which deals 8 damage to the first enemy it meets and leaves it [Bleeding] for 2 damage a second for 4 seconds, with 30% more critical chance against a target that has not been hurt yet. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Put Under the Sod",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A finishing cut that deals 24 damage and leaves the target [Bleeding] for 3 damage a second for 4 seconds. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Whetted Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "slashing",
+   "cooldown": 60,
+   "critChanceBonus": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your critical hit chance by 30% for 15 seconds."
+  },
+  {
+   "name": "Sharp on Both Sides",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "slashing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

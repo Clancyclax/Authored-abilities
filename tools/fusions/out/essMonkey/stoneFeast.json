@@ -1,0 +1,73 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grab a Handful",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.25,
+   "desc": "Grabs at everything in reach, dealing 3 damage to every enemy within 2 tiles and healing you for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Choicest Cut",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "bossPct": 0.06,
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "leech": 0.3,
+   "desc": "Tears the best cut off a target for 30 damage, healing you for 30% of the damage dealt and leaving it 10% easier to wound for 6 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Cheek Pouches",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "hp",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 24,
+   "blinkOnUse": 64,
+   "desc": "Restores 4 health a second for 6 seconds, and you finish 2 tiles from where you stood."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Second Helping",
+   "element": "physical",
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill something, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

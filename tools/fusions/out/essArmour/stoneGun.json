@@ -1,0 +1,70 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Close Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "desc": "Fires a round at the first enemy it meets, dealing 12 damage and stunning it for 1.2 seconds.",
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "base": 12,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Scattershot",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "resource",
+   "desc": "Looses a wide spread of shot ahead of you, dealing 8 damage to everything caught in it. Holds 3 charges; a kill gives one back.",
+   "cooldown": 1,
+   "chargesMax": 3,
+   "base": 8,
+   "range": 192,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Loophole Post",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "desc": "Takes 1 second to set a shielded firing post beside you for 15 seconds. Every 1.5 seconds it fires on an enemy within 5 tiles for 6 damage.",
+   "summonKind": "turret",
+   "summonDmg": 6,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 1,
+   "cooldown": 60
+  },
+  {
+   "name": "Counter-Shot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "desc": "Each time you are hurt by anything other than fire, a shot leaps to the nearest enemy within 6 tiles, dealing 5 lightning damage. Once every 6 seconds.",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 4,
+    "range": 192
+   }
+  }
+ ]
+}

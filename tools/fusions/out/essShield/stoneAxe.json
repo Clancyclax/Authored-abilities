@@ -1,0 +1,77 @@
+{
+  "essence": "essShield",
+  "stone": "stoneAxe",
+  "fusions": [
+    {
+      "name": "Hew the Front Row",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "slashing",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 14,
+      "range": 96,
+      "coneAngle": 1.1,
+      "isAoe": true,
+      "aoeBand": "small",
+      "spreadAfflictions": 112,
+      "debuff": {
+        "key": "bleed",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Chops the shield's honed rim through an arc 3 tiles ahead, dealing 11 damage to everything in it and leaving it [Bleeding] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+    },
+    {
+      "name": "Headsman's Drop",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "slashing",
+      "role": "execute",
+      "base": 22,
+      "cooldown": 15,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.2,
+        "duration": 6
+      },
+      "requiresTargetBelow": 0.25,
+      "desc": "Drops the shield's edge on a failing enemy, which deals 22 damage and splits its armour, leaving it 20% easier to wound for 6 seconds. Usable only on an enemy at or below 25% health."
+    },
+    {
+      "name": "Notched Boss",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "slashing",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.5,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and each attacker is left [Bleeding] for 2 damage a second for 4 seconds."
+    },
+    {
+      "name": "Weighted Edge",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "slashing",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "Against enemies below half health, you deal 12% more damage."
+    }
+  ]
+}

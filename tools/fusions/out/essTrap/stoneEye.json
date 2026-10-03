@@ -1,0 +1,87 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Fixing Glance",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 440,
+   "radius": 6,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A glance that deals 4 damage, with a 25% chance to hold the target [Pinned] for 1 second."
+  },
+  {
+   "name": "Wards Open Underfoot",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Opens the watching wards set in the ground around you. The burst deals 26 damage that ignores resistances to every enemy within 3.5 tiles and leaves each [Exposed] for 8 seconds."
+  },
+  {
+   "name": "Watching Post",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "cooldown": 60,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Plants a watching post beside you for 15 seconds that strikes enemies within 5 tiles for 4 damage every 1.2 seconds. Each strike has a 40% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Counting Its Steps",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 6. Your next critical hit on it spends them all: a blow strikes it for 20% of your weapon damage per stack (122% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "essence": "essChain",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Twin Prong Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.8
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Casts a two-pronged link at the first enemy it meets that deals 12 damage and leaves it [Bleeding] for 2 damage a second for 5 seconds. It then leaps to 1 more enemy within 3 tiles for 80% of that, and your afflictions on the first target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Divergent Lines",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.7,
+   "spammable": true,
+   "volleyCount": 2,
+   "volleySpread": 0.6,
+   "speed": 420,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 2 links out in a wide split to 8 tiles, each dealing 3 damage with a 30% chance to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Joined Front",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Second Branch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollCooldown": 10,
+   "rerollKinds": [
+    "crit"
+   ],
+   "allyScaling": {
+    "per": 0.09,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.27
+   },
+   "perAllyGain": {
+    "resistPct": 0.18,
+    "dotChancePct": 0.18
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

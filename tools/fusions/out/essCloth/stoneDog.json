@@ -1,0 +1,72 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Worrying Tug",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "desc": "Bites into the target's clothing and worries at it for 6 damage, leaving it 5% easier to wound for 4 seconds. It holds 4 charges, and a kill gives one back."
+  },
+  {
+   "name": "Short Leash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Rushes you to a target up to 6 tiles away for a bite that deals 12 damage and makes it [Bleeding] for 2 damage a second for 4 seconds. A leash knotted on by the bite slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Bandaging the Pack",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "desc": "Binds bandages on you and every ally within 3.5 tiles. It restores 14 health to each, and more the faster you cast."
+  },
+  {
+   "name": "Faithful Rags",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Raghound",
+   "desc": "A hound stitched from rags fights beside you, striking for 4 damage every 1.2 seconds within 4.5 tiles."
+  }
+ ]
+}

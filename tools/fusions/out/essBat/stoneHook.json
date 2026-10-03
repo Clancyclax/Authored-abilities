@@ -1,0 +1,69 @@
+{
+ "essence": "essBat",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snagging Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 16,
+   "range": 224,
+   "maxMult": 1.4,
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A barbed throw that deals 9 damage, up to 1.4 times that at maximum range, stuns the target for 0.8 seconds and leaves it [Inescapable] for 5 seconds."
+  },
+  {
+   "name": "Barbed Draught",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "hpCostPct": 0.05,
+   "leech": 0.4,
+   "desc": "A barbed bite that costs 5% of your maximum health, deals 8 piercing damage and leaves the target 15% easier to wound for 6 seconds. You heal for 40% of the damage dealt."
+  },
+  {
+   "name": "Lure Call",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "dark",
+   "cooldown": 24,
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Pulls up to 5 enemies within 7 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Caught Prey",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying one of your afflictions, you deal 12% more damage."
+  }
+ ]
+}

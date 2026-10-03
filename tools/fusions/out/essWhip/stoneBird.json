@@ -1,0 +1,71 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Raptor's Fall",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "Whips the tip down on an enemy up to 9 tiles away, which deals 30 damage, up to 1.5 times that at full reach. The hit is always a critical hit."
+  },
+  {
+   "name": "Downdraught",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Beats the lash through a cone with a gust that deals 12 damage to everything within 4 tiles and knocks it back 3 tiles."
+  },
+  {
+   "name": "Thermal and Tether",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "cooldown": 9,
+   "dashDist": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Swings you 6 tiles forward on the lash, and you move 20% faster for 3 seconds after you land."
+  },
+  {
+   "name": "Slipstream",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Every few paces you cover, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

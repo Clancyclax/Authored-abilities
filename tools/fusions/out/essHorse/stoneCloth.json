@@ -1,0 +1,86 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Thrown Blinkers",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a strip of cloth into the first enemy in line for 6 damage, with a 35% chance to leave it [Blunted] for 4 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Tangling Caparison",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Wheels about and lashes your caparison through a cone 3 tiles ahead, dealing 13 damage, stunning everything in it for 1 second and leaving each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Loose Drape",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.5,
+   "reflectChance": 0.5,
+   "buffDuration": 7,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Conditions put on you have a 50% chance to be turned back on whoever cast them for 7 seconds. You move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Quilted Trapper",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.08,
+   "damageReduction": 2,
+   "thornsFrac": 0,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures a quilted trapper: every hit you take is 2 lower, your armour rises by 8%, and you move 4% faster."
+  }
+ ]
+}

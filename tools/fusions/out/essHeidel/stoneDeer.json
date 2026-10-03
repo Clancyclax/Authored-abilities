@@ -1,0 +1,67 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stotting Strike",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "maxMult": 1.5,
+   "range": 160,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "desc": "A bounding kick at a target up to 5 tiles away that deals 7 damage, rising to 1.5 times that at full range. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Startled Buck",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 80,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "desc": "You buck at the target for 11 damage, knocking it 3 tiles back and leaving it 6% easier to wound for 4 seconds. Your movement speed rises 20% for 3 seconds after you use it.",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Flinch Aside",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "blinkOnUse": 96,
+   "desc": "Increases your dodge chance by 20% for 10 seconds and leaps you 3 tiles from where you stood."
+  },
+  {
+   "name": "Shying Step",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a blow you failed to dodge rolls your dodge a second time, and the second roll stands."
+  }
+ ]
+}

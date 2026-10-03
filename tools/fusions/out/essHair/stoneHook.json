@@ -1,0 +1,76 @@
+{
+ "essence": "essHair",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Snag",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1.0,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 6 tiles away along a barbed strand, then deals 11 damage and holds it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Gaffed Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "maxMult": 1.5,
+   "desc": "Casts a barbed strand that deals 20 damage to one enemy within 7 tiles. It can only strike a target at or below 25% health. Deals up to 1.5 times as much at maximum range."
+  },
+  {
+   "name": "Long Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 90,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "castTime": 0.5,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Caught Fast",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "Each time you afflict something, your critical chance rises by 20% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essBird",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Skimming Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 2,
+   "stunOnHit": 1.2,
+   "leech": 0.2,
+   "desc": "Snatches the target from above for 14 damage, up to 2 times that at the full 8 tiles, and stuns it for 1.2 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Glinting Darts",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "isAoe": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 320,
+   "radius": 6,
+   "range": 224,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 darts in a spread, each dealing 2 damage with a 25% chance of leaving the target [Leaden] for 3 seconds, so blows are harder for it to slip."
+  },
+  {
+   "name": "Wriggle Free",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Removes 2 conditions from you and lifts you 3 tiles from where you stood. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Silvered Reflexes",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every blow you avoid builds a stack on you, up to 5. The next ability you use spends them all: you move and attack 3% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

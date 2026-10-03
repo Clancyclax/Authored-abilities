@@ -1,0 +1,69 @@
+{
+ "essence": "essHand",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Pinch It Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target. You pinch out every affliction on it for 8 damage, using them up and adding half their remaining damage to the blow."
+  },
+  {
+   "name": "Smeared Dose",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A palm strike that deals 11 damage and leaves the target [Poisoned] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Poultice Press",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 10,
+   "desc": "Removes up to 3 poison conditions from you and your allies, and restores 10 health."
+  },
+  {
+   "name": "Apothecary's Thumb",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 10% poison resistance."
+  }
+ ]
+}

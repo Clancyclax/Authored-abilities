@@ -1,0 +1,78 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Ripple Link",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a bead of water that deals 4 damage, then leaps to 1 more enemy within 3 tiles for 50% of that.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Haul Yourself Over",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1.5,
+   "chargeTo": 192,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Casts a link at a target up to 6 tiles away and hauls you to it, dealing 14 damage, up to 1.5 times that at the far end of its reach. The target moves 20% slower for 2 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Slipped Shackles",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Removes up to 3 conditions from you. You move 20% faster for 4 seconds after you use it.",
+   "kind": "active"
+  },
+  {
+   "name": "Brood in Tow",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 3,
+   "familiarRange": 120,
+   "familiarInterval": 1.2,
+   "familiarFamily": "bird",
+   "familiarCreatureName": "Hatchling",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded hatchling follows you and fights beside you, striking enemies within 4 tiles for 3 damage every 1.2 seconds. Anything it strikes moves 15% slower for 2 seconds.",
+   "kind": "passive"
+  }
+ ]
+}

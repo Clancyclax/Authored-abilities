@@ -1,0 +1,95 @@
+{
+ "essence": "essShark",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Dabbling Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "leech": 0.2,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a bite at an enemy up to 4 tiles away for 4 damage and leaves it [Soaked] for 4 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Underside Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 192,
+   "maxMult": 1.5,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You strike from beneath at an enemy up to 6 tiles away for 30 water damage that ignores resistance, up to 1.5 times as much at full range, and leave it [Soaked] for 8 seconds."
+  },
+  {
+   "name": "Slick Dive",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "cooldown": 120,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Skimming Cruise",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you cross it faster than ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows slide off you while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "manaRegen",
+     "amount": 0.25,
+     "text": "and it gives something back while you float"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 12% faster on it, from silver your dodge chance rises 8%, and from gold your mana recovers 25% faster."
+  }
+ ]
+}

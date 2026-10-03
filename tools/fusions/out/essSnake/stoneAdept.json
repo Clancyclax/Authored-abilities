@@ -1,0 +1,70 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Refined Dosage",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits venom that deals 4 poison damage to the first enemy it meets, with a 30% chance to leave it [Poisoned] for 6 seconds. Its damage rises 10% for each affliction already on the target, up to 40%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Once, Correctly",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "A single practised bite that deals 32 damage and is always a critical hit. It leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Return to the Coil",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "blinkOnUse": 64,
+   "desc": "You recoil 2 tiles from where you stood, and the cooldown clears on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Economy of Motion",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "cooldownReduction": 0.08,
+   "dodgeBonus": 0.04,
+   "desc": "Every ability you have comes round 8% sooner, and your dodge chance rises by 4%."
+  }
+ ]
+}

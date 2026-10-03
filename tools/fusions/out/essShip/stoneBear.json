@@ -1,0 +1,82 @@
+{
+ "essence": "essShip",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full Weight Under Way",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Shoulders into the target for 15 damage, knocking it back 3 tiles and leaving it 12% easier to wound for 6 seconds. Its damage rises 6% for every 100 paces you have covered since you last used it (max 30%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slamming Off the Swell",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "stun",
+    "chance": 0.3,
+    "duration": 1.2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slams the ground, dealing 28 damage to every enemy within 3 tiles, plus 5% of its maximum health to a boss or elite. Each hit has a 30% chance to leave its target [Stunned] for 1.2 seconds."
+  },
+  {
+   "name": "Winter Berth",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 4 health a second to you for 8 seconds. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Slow to Gather Way",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

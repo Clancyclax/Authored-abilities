@@ -1,0 +1,73 @@
+{
+  "essence": "essRat",
+  "stone": "stoneDeer",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Lowered Tines",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 12,
+      "range": 96,
+      "maxMult": 1.3,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "chargeTo": 224,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.3,
+      "desc": "Rushes you to a target up to 7 tiles away and gores it for 14 damage, rising to 1.3 times that at full reach. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "isAoe": true,
+      "name": "Alarm Drumming",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 64,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A shrill alarm and a stamped hoof hit every enemy within 2 tiles for 4 damage, with a 30% chance to leave each [Hindered] for 3 seconds."
+    },
+    {
+      "name": "Bound for the Treeline",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "buffStat": "dodgeChance",
+      "buffAmount": 0.2,
+      "buffDuration": 10,
+      "cooldown": 30,
+      "blinkOnUse": 96,
+      "desc": "Increases your dodge chance by 20% for 10 seconds and bounds you 3 tiles from where you stood."
+    },
+    {
+      "name": "Startle Reflex",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "physical",
+      "rerollKind": "dodge",
+      "rerollKinds": [
+        "dodge"
+      ],
+      "rerollCooldown": 8,
+      "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+    }
+  ]
+}

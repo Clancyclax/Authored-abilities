@@ -1,0 +1,83 @@
+{
+ "essence": "essBee",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heat Ball",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Costs 5% of your maximum health. A weapon strike that deals 8 fire damage and sets the target [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Smoker's Puff",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Puffs smoke 4 tiles ahead of you that deals 4 fire damage to everything in it, with a 30% chance per hit to leave the target [Hindered], attacking slower, for 3 seconds."
+  },
+  {
+   "name": "Fever Pitch",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "cooldown": 45,
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 13
+   },
+   "desc": "Increases your fire damage by 25% for 12 seconds. A swarm fights beside you for 13 seconds, striking for 3 every 1.2 seconds."
+  },
+  {
+   "name": "Shivering Heat",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "fire",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack of heat builds on you, up to 10. The next ability you use spends them all: you deal 4% more damage per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

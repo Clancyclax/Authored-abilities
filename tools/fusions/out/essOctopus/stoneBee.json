@@ -1,0 +1,77 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Stinger in Each Sucker",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Slaps an arm onto the target for 3 damage and every sucker stings it, leaving it [Poisoned] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Sting Follows Sting",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 128,
+   "desc": "Lashes every arm outward, dealing 10 damage to every enemy within 3 tiles. Your afflictions on each one spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Dawn-to-Dusk Labour",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Alarm Scent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Each time you inflict a condition, an arm darts at the nearest enemy within 5 tiles for 5 damage and slows it by 15% for 2 seconds. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "essence": "essDog",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Spring From Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.4,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Springs at a target up to 6 tiles away for 12 damage, up to 1.4 times that at full reach, and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Frostbreath Bark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Barks out a bolt of cold that deals 7 damage to the first enemy it meets, with a 50% chance to leave it [Hindered] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Sun Spot Doze",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Sunlit Reflex",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "By day, your dodge chance rises by 12%."
+  }
+ ]
+}

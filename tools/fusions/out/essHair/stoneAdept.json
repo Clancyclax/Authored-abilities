@@ -1,0 +1,82 @@
+{
+ "essence": "essHair",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Threaded Needle",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives one stiffened strand into a target up to 6 tiles away for 4 piercing damage, rising to 1.5 times that at full reach. Each hit has a 25% chance to leave the strand tied on, [Marked] for 6 seconds."
+  },
+  {
+   "name": "Running Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a strand through the first enemy it meets for 26 piercing damage, then on through 3 more enemies within 3 tiles, each taking 60% of that. Every hit is a critical hit."
+  },
+  {
+   "name": "Nimble Plaiting",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Your strands take over the drilled motions of your hands, increasing your attack speed by 20% for 12 seconds."
+  },
+  {
+   "name": "Rote Knotwork",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every ability you use ties another knot in your hair: a stack builds on you, up to 5. When you reach 5, they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

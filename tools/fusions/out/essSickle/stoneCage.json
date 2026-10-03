@@ -1,0 +1,77 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Hooked Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "Hooks the target's ankle for 12 damage, leaving it [Pinned] for 2 seconds and [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on the target then spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Reap What Is Held",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Usable only on an enemy carrying one of your afflictions. Cuts it down where it is held for 8 damage, using up its afflictions and adding half their remaining damage to the blow.",
+   "reachUnits": 96,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Gathering Pen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Sets a row of hooks 5 tiles long ahead of you for 5 seconds. It drags every enemy near it inward and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Nothing Slips Out",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "slashing",
+   "desc": "Your afflictions take hold on an enemy that is immune to them."
+  }
+ ]
+}

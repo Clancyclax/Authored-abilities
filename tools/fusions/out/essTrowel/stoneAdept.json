@@ -1,0 +1,83 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Reading the Cracks",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Jabs the target for a hit that deals 4 damage and leaves it 6% easier to wound for 4 seconds. The hit does 10% more damage for each affliction on the target (max 40%)."
+  },
+  {
+   "name": "Plumb and Level",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 224,
+   "maxMult": 1.6,
+   "guaranteedCrit": true,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Strikes a target up to 7 tiles away and deals 26 damage, rising to 1.6 times that at full reach. It always strikes critically."
+  },
+  {
+   "name": "Journeyman's Hand",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "blunt",
+   "summonKind": "minion",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "cooldown": 50,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.5-second cast, calls an apprentice for 15 seconds. Every 1.5 seconds it strikes an enemy within 5 tiles and deals 4 damage, with a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Course by Course",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.7,
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a stack on you, up to 6. At 6 they all spend at once: you gain a shield that absorbs 5% of your maximum health per stack (29% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

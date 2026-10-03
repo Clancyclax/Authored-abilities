@@ -1,0 +1,83 @@
+{
+  "essence": "essThread",
+  "stone": "stoneCage",
+  "fusions": [
+    {
+      "name": "Tightening Noose",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 15,
+      "range": 160,
+      "maxMult": 1.5,
+      "requiresTargetBelow": 0.3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Usable only on a target at or below 30% health. Drops a loop over a target up to 5 tiles away and draws it shut. It deals 20 damage, rising to 1.5 times that at full range, and leaves the target [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Wire Bars Closing",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "piercing",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Draws a ring of wire bars shut around you. It deals 28 damage that ignores armour to every enemy within 3 tiles and leaves them [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Cradle of Strands",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "physical",
+      "cooldown": 90,
+      "freezeDuration": 3,
+      "freezeRadius": 128,
+      "aoeBand": "medium",
+      "castTime": 0.5,
+      "desc": "After a 0.5 second cast, holds every creature within 4 tiles in place for 3 seconds."
+    },
+    {
+      "name": "Last Lattice",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 30,
+        "frac": 0.35,
+        "rearmAbove": 0.5
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 5
+      },
+      "desc": "When your health falls below 35%, strands close around you as a shield worth 20% of your maximum health for 5 seconds. Once every 30 seconds."
+    }
+  ]
+}

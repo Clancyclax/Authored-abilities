@@ -1,0 +1,73 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Long Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "castTime": 1.2,
+   "ignoreArmor": true,
+   "desc": "Draws for 1.2 seconds, then looses a javelin that deals 34 damage to the first enemy it meets and ignores armour."
+  },
+  {
+   "name": "Quiver at the Hip",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "desc": "Looses 3 light darts at once in a spread out to 7 tiles, and each deals 6 damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Thrower's Lever",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 75,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 54% further."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 25% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

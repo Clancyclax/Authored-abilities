@@ -1,0 +1,95 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Volcanic Spatter",
+   "template": "volley",
+   "element": "fire",
+   "role": "long",
+   "base": 12,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 260,
+   "radius": 8,
+   "range": 240,
+   "cooldown": 75,
+   "isAoe": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits 3 gobbets of magma at once, each dealing 12 damage and bursting over every enemy within 3 tiles for 80% as much, with a 50% chance to set each one [Burning] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clinker Shot",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 7,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a clot of slag that deals 4 damage and sets the target [Burning] for 1 damage a second for 3 seconds. The slag hardens on it, with a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Magma Crust",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds a crust of cooling magma covers you: 40% of the damage you take is dealt back to whoever dealt it, and sets them [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Obsidian Haft",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a weapon of cooling magma and obsidian. It increases your weapon damage by 12%, and every strike with it sets the target [Burning] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

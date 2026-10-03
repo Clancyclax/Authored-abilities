@@ -1,0 +1,87 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Stooping Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargeTo": 256,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Jets down on an enemy up to 8 tiles away and snatches it in your arms for 12 damage, rising to 1.8 times that at full reach. The target moves 30% slower for 2 seconds."
+  },
+  {
+   "name": "Dropped on the Rocks",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Carries the target up and drops it on the rocks for 30 damage that ignores armour, leaving it 20% easier to wound for 8 seconds.",
+   "ignoreArmor": true
+  },
+  {
+   "name": "Siphon Glide",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "cooldown": 30,
+   "desc": "Jets you 2 tiles from where you stood and increases your movement speed by 35% for 8 seconds."
+  },
+  {
+   "name": "Skims the Surface",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you jet over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.2,
+     "text": "and gliding on it rests you"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and anything that has to wade cannot reach you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 10% faster over it, from silver your stamina recovers 20% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

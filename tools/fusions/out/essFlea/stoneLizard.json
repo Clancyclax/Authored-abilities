@@ -1,0 +1,77 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpor Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spammable": true,
+   "leech": 0.15,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a dart of cold at the first enemy it meets, dealing 4 damage, with a 50% chance to leave it [Hindered] for 4 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Cold Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "frost",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "desc": "Every enemy within 3.5 tiles takes 12 damage and is stunned for 1 second."
+  },
+  {
+   "name": "Stilled Moment",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "frost",
+   "cooldown": 120,
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "medium",
+   "desc": "Holds every creature within 5 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Tail Regrowth",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "frost",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "dodgeBonus": 0.1,
+   "desc": "When your health falls below 50%, you regain 4 health a second for 6 seconds and gain +10% dodge chance. Once every 40 seconds."
+  }
+ ]
+}

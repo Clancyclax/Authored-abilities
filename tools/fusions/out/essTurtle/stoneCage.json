@@ -1,0 +1,80 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Shelled In",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1.6,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes a cage of shell plates around the first enemy it meets, which deals 10 damage and stuns it for 1.6 seconds. The target is [Suppressed] for 5 seconds: its auras are smothered and its abilities are out of reach."
+  },
+  {
+   "name": "Ribs Sprung Wide",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs the ribs of your shell outward as bars, which deals 28 damage to every enemy within 3.5 tiles and leaves each [Slowed] for 5 seconds. Against a boss or an elite it also deals 4% of their maximum health."
+  },
+  {
+   "name": "Portcullis",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 4
+   },
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds. Anything it holds moves 25% slower for 4 seconds."
+  },
+  {
+   "name": "Turn the Key",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "You deal 12% more damage to enemies carrying one of your afflictions. Your armour rises by 5%."
+  }
+ ]
+}

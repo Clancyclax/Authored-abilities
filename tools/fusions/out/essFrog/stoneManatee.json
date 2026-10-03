@@ -1,0 +1,82 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Slow Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Raises a slow wall of water 5 tiles long for 6 seconds. It deals 11 damage to each enemy that crosses it, stuns it for 0.8 seconds and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Slow Seep",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits a clot of silt that deals 3 damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 8 seconds."
+  },
+  {
+   "name": "Slow Current",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Drift Over",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you drift across it faster than ground"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you cross it 15% faster than ground."
+  }
+ ]
+}

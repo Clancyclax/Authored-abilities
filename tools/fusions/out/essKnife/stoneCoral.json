@@ -1,0 +1,91 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Branching Reach",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grows a blade of coral out to a target up to 4 tiles away for 3 damage, rising to 1.5 times that at full reach, and leaves it [Diseased] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grown From Bone",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "hpCostPct": 0.04,
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Grows a fan of razor branches from your arm through a cone 2.5 tiles ahead, dealing 8 damage and leaving each enemy [Bleeding] for 2 damage a second for 3 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Staghorn Outcrop",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 40,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grows a razor-edged outcrop that stands for 12 seconds and cuts an enemy within 4 tiles for 4 damage every 1.2 seconds, each cut with a 30% chance to leave it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.35,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land builds a stack on you, up to 8. At 8 they all spend at once: you gain a shield worth 3% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

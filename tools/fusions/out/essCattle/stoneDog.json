@@ -1,0 +1,83 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Ground",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.3,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A trampling strike that deals 20 damage and consumes every affliction on the target, adding 1.3 times their remaining damage to the hit. Its damage rises 10% for each ally near you (max 40%). Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Worrying the Stragglers",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Nips and stamps at everything in a cone 3 tiles ahead of you, dealing 7 damage, with a 50% chance to leave each [Slowed] for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "On the Long Drive",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 10,
+   "cooldown": 35,
+   "hasteOnUse": {
+    "pct": 0.18,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 10 seconds. Your movement speed rises 18% for 4 seconds after you use it."
+  },
+  {
+   "name": "Blue Heeler",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Heeler",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded herding dog runs at your heels, striking enemies within 5 tiles for 4 damage every 1.2 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

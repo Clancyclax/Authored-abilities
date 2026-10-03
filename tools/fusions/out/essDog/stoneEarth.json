@@ -1,0 +1,76 @@
+{
+ "essence": "essDog",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kicked Dirt",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks grit through a cone 2.5 tiles ahead for 4 earth damage, with a 30% chance each to leave the target [Blunted] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gone to Ground",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 160,
+   "maxMult": 1.5,
+   "ignoreArmor": true,
+   "desc": "Burrows to a target up to 5 tiles away and deals 28 earth damage that ignores armour, up to 1.5 times that at full range."
+  },
+  {
+   "name": "Dig Under",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "earth",
+   "cooldown": 8,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Burrows and comes up at a point up to 6 tiles away, and you move 15% faster for 3 seconds."
+  },
+  {
+   "name": "Buried Bone",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, a shield worth 15% of your maximum health covers you for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

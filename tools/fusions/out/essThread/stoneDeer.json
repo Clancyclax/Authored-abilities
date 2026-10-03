@@ -1,0 +1,67 @@
+{
+  "essence": "essThread",
+  "stone": "stoneDeer",
+  "fusions": [
+    {
+      "name": "Alarm Snap",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 14,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "knockback": 96,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Snaps every strand strung around you. It deals 11 damage to every enemy within 3 tiles and knocks them back 3 tiles, and you move 20% faster for 4 seconds."
+    },
+    {
+      "name": "Trailed Behind",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 192,
+      "maxMult": 1.5,
+      "chargesMax": 3,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "desc": "Whips the strand you have trailed at a target up to 6 tiles away. It deals 7 damage, rising to 1.5 times that at full range, and its damage rises 5% for every 100 paces you have run since you last used it (max 25%). It holds 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "First Twitch",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "buffStat": "dodgeChance",
+      "buffAmount": 0.2,
+      "buffDuration": 10,
+      "blinkOnUse": 96,
+      "desc": "Your dodge chance rises by 20% for 10 seconds and you spring 3 tiles from where you stood."
+    },
+    {
+      "name": "Tripline Warning",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "vsDebuffed",
+      "bonusKind": "dodge",
+      "amount": 0.15,
+      "cooldownReduction": 0.05,
+      "desc": "Against enemies carrying your afflictions, your dodge chance rises by 15%. Your other abilities' cooldowns are 5% shorter."
+    }
+  ]
+}

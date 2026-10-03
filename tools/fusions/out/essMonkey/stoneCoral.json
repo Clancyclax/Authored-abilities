@@ -1,0 +1,69 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Prised Open",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 28,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Pries a target open for 28 damage that ignores armour, and leaves it 20% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reef Scramble",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "hpCostPct": 0.04,
+   "base": 8,
+   "cooldown": 1.2,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Scrambles over the cutting edge, dealing 8 damage to every enemy within 2.5 tiles and leaving each [Bleeding] for 2 damage a second for 4 seconds. It also costs 4% of your maximum health."
+  },
+  {
+   "name": "Lay No Hand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 10,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "lifeOnKill": 5,
+   "desc": "For 10 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Gleaner's Edge",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "Against enemies below 50% health, you deal 12% more damage. You also have 5% more dodge chance."
+  }
+ ]
+}

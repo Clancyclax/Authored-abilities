@@ -1,0 +1,94 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lime Crust",
+   "template": "sunderStrike",
+   "element": "necrotic",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "rigorMortis",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A strike that deals 30 necrotic damage, ignoring armour, and leaves the target 15% easier to wound and with [Rigor Mortis], which lowers its Speed and Recovery, for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reef Swell",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 0.3,
+    "spreadsLeft": 2
+   },
+   "desc": "A swell of water deals 12 water damage to every enemy within 3 tiles and knocks them back 3 tiles, with a 40% chance per hit to leave them [Diseased] for 6 seconds. The disease spreads on its own to up to 2 more enemies within 4 tiles."
+  },
+  {
+   "name": "Polyp Colony",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 60,
+   "desc": "Grows a colony of spore-bearing polyps for 15 seconds that strikes enemies within 4 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Accretion",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you regain health, you gain a ward worth 10% of your maximum health for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essNet",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Cast on the Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a trailing snare that deals 4 damage to the first enemy it meets, with a 35% chance to leave it [Slowed] for 2 seconds. Its damage rises 6% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Tine Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "knockback": 96,
+   "desc": "Catches the target on a rack of tines strung with mesh and tosses it back 3 tiles, dealing 14 damage and leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Freeze and Bolt",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 2,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.3,
+   "cooldown": 75,
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Startles every creature within 3 tiles into a snare that holds it in place for 2 seconds, while you bound 3 tiles from where you stood. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Startled Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "When you are hurt by anything but fire, a snare springs on the nearest enemy within 4 tiles, dealing 5 damage and slowing it by 25% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

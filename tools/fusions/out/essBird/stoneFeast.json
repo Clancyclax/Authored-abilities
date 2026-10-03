@@ -1,0 +1,77 @@
+{
+ "essence": "essBird",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carrion Tear",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "range": 80,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike on a target carrying one of your afflictions that deals 8 damage and uses that affliction up. It makes the target [Bleeding] for 1 damage a second for 3 seconds, and you heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Circling Vultures",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "isAoe": true,
+   "range": 112,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Wheels down onto every enemy within 3.5 tiles for 26 damage. If it hits, every ally near you strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Feeding the Brood",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 25,
+   "healAmount": 15,
+   "healScope": "party",
+   "range": 112,
+   "desc": "Restores 15 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Picking the Bones",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill something, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

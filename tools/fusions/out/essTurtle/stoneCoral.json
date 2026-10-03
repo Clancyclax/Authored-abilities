@@ -1,0 +1,84 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Polyp Touch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "maxMult": 1.5,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lashes stinging polyps at an enemy up to 3.5 tiles away, which deals 4 damage, rising to 1.5 times that at full reach. The target is left [Poisoned] for 1 damage a second for 8 seconds."
+  },
+  {
+   "name": "Fringing Reef",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 30,
+   "base": 10,
+   "cooldown": 20,
+   "stunOnHit": 0.8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Grows a reef 5 tiles long out from your shell for 6 seconds. It deals 10 damage to each enemy that crosses it, stuns it for 0.8 seconds and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Calcify",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "armorBonus": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "resist": {
+    "element": "water",
+    "amount": 0.15
+   },
+   "desc": "Your armour rises by 30% for 12 seconds, and your water resistance rises by 15%."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.7,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a stack on you, up to 6. At 6 they all spend at once: you heal for 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

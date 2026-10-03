@@ -1,0 +1,74 @@
+{
+ "essence": "essWater",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Salmon Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "maxMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "leech": 0.3,
+   "desc": "Usable only on an enemy at or below 25% health. A hooked swipe that deals 22 damage, rising to 1.4 times that at its full reach of 3 tiles. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Displacement",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Drops your full weight into the water. The wave it throws deals 26 damage that ignores armour to every enemy within 3.5 tiles. Its damage rises 8% for every tenth of your health already gone, up to 40%."
+  },
+  {
+   "name": "Fat of the Run",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 45,
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "desc": "Your maximum health rises by 20% for 12 seconds, and you restore 10 health at once."
+  },
+  {
+   "name": "Wintered Reserve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 30%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thrown Mantle",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "speed": 340,
+   "radius": 10,
+   "stunOnHit": 1,
+   "debuff": {
+    "stacks": 1,
+    "potency": 1,
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6
+   },
+   "desc": "Throws your weighted surcoat over the target, dealing 10 damage, stunning it for 1 second and leaving it [Blunted] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unravel",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "range": 96,
+   "maxMult": 1.3,
+   "consumeAfflictionsPer": 0.5,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A cut that deals 16 damage, up to 1.3 times as much at 3 tiles. It uses up all your afflictions on the target, dealing 50% more for each one, and leaves it [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Quilted Layers",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 8,
+   "shieldDuration": 8,
+   "armorBonus": 0.05,
+   "cooldown": 28,
+   "desc": "Raises a barrier that absorbs the next 18 damage, up to 8 blows, for 8 seconds. Your armour rises by 5% while it holds."
+  },
+  {
+   "name": "Woven Gambeson",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.06,
+   "damageReduction": 1,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.05
+    }
+   ],
+   "thornsFrac": 0.02,
+   "desc": "Conjures a padded coat under your plate: every hit you take is 1 lower, your armour rises by 6%, your dodge chance rises by 5%, and 2% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Tacking Needle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 5,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a threaded needle that deals 5 damage to the first enemy it meets, with 30% more critical chance against a target that has not been hurt yet. Each hit has a 25% chance to leave it [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Measure Twice, Cut Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "range": 80,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "A shear cut that deals 28 damage and is always a critical hit, leaving the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Tailored Gambeson",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.2,
+   "dodgeBonus": 0.08,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 20% and your dodge chance by 8% for 12 seconds."
+  },
+  {
+   "name": "Running Stitch",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land adds a stitch on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stitch (30% at full) for 6 seconds. Unfed, a stitch fades every 6 seconds."
+  }
+ ]
+}

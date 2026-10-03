@@ -1,0 +1,76 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thinned Blood",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "leech": 0.2,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits thinning venom that deals 4 damage to the first enemy it meets and heals you for 20% of the damage dealt, with a 30% chance to leave the target [Bleeding] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hollow Echo",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "A hiss that carries 4 tiles ahead of you and deals 11 resonating damage to everything in it. It stuns each target for 1 second."
+  },
+  {
+   "name": "Heat-Pit Sense",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "dark",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Taking the Warmth",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you land a critical hit, your attacks heal you for 20% of the damage they deal for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

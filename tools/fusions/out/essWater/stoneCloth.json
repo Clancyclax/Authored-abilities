@@ -1,0 +1,81 @@
+{
+ "essence": "essWater",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Sodden Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "Snaps a soaked cloth at an enemy up to 3 tiles away. It deals 6 damage, rising to 1.5 times that at full reach, and the target moves 25% slower for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Damp Shroud",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a soaked sheet over the first enemy it meets. It deals 12 damage, stuns the target for 1 second and leaves it [Damped] for 6 seconds."
+  },
+  {
+   "name": "Cold Compress",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 24,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Removes up to 2 conditions from you and restores 12 health."
+  },
+  {
+   "name": "Wicking Weave",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you regain health, you also regain 2 mana a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

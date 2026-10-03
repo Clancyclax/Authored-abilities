@@ -1,0 +1,87 @@
+{
+ "essence": "essShark",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Closing Jaws",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 30% health. Closes in for 22 damage, leaving it [Stalled] for 3 seconds and 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Shrinking Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You swim a closing circle, dealing 4 damage to every enemy within 3 tiles with a 40% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Bait Ball",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 36,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Creates a pull zone 5 tiles across ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Bar by Bar",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 5. At 5 they all spend at once: a blow strikes that enemy for 27% of your weapon damage per stack (136% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

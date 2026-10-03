@@ -1,0 +1,94 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Waterline Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges at the target for 32 damage, always a critical hit. The target is left [Pinned] for 3 seconds and 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rolls an enemy at or below 30% health for 24 damage, consuming every affliction on it and adding 1.8 times their remaining damage, then leaves it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Motionless Hour",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "water",
+   "cooldown": 45,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "castTime": 1.5,
+   "desc": "After a 1.5-second cast, your critical hit chance rises by 30% for 12 seconds."
+  },
+  {
+   "name": "From the Shallows",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you close across it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows aimed at you on it go wide"
+    },
+    {
+     "rank": "gold",
+     "stat": "staminaRegen",
+     "amount": 0.25,
+     "text": "and you get your wind back while you wait on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 12% faster on it, from silver your dodge chance rises 8% on it, and from gold your stamina recovers 25% faster on it."
+  }
+ ]
+}

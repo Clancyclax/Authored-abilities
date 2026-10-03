@@ -1,0 +1,90 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spooked Stampede",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "knockback": 80,
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Stampedes through everything around you, dealing 12 damage to every enemy within 3 tiles and knocking each back 2.5 tiles. You ride it out, moving 20% faster for 3 seconds after using it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gathering Charge",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "bossPct": 0.05,
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Gores a target for 30 damage and leaves it 15% easier to wound for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Rally the Troop",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 45,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Unhurried Grazer",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.04,
+     "text": "the ground goes by a little faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "and you get your breath back between things"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and you are gone before the horn arrives"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank you move 4% faster, from silver your stamina comes back 12% faster, and from gold you have 5% more dodge chance."
+  }
+ ]
+}

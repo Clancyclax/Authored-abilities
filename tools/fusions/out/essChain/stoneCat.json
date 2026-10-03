@@ -1,0 +1,84 @@
+{
+ "essence": "essChain",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Toyed-With Prey",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 25,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A weapon strike usable only on an enemy at or below 25% health: it deals 25 damage, leaves the target [Bleeding] for 2 damage a second for 4 seconds and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Nine-Tailed Scourge",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 1,
+   "cooldown": 1,
+   "volleyCount": 9,
+   "volleySpread": 0.15,
+   "speed": 420,
+   "radius": 6,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.15,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes 9 chain tails in a fan out to 4 tiles, each dealing 1 damage with a 15% chance to leave the target [Bleeding] for 4 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Padded Tread",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 7,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Muffles your chains and veils you for 7 seconds: enemies notice you 70% later. Attacking breaks the veil."
+  },
+  {
+   "name": "Caught on the Tether",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 120,
+   "desc": "Once every 120 seconds, a blow that would kill you is refused and leaves you at 1 health."
+  }
+ ]
+}

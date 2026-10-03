@@ -1,0 +1,71 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Death Roll",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 72,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "stunOnHit": 1,
+   "desc": "Usable only on a target at or below 30% health: you clamp and roll, dealing 24 damage plus 1.6 times what your afflictions on it have left to deal, using them up, and stunning it for 1 second."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clamped Jaw",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 18,
+   "range": 72,
+   "stunOnHit": 1.4,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "desc": "A steel-jawed bite that deals 13 damage, holds the target stunned for 1.4 seconds and leaves it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Lie in Wait",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "armorBonus": 0.35,
+   "buffDuration": 8,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "Raises your armour by 35% for 8 seconds, and you move 30% faster for the first 3 seconds."
+  },
+  {
+   "name": "Saved Grievance",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. Your next ability spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

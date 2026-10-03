@@ -1,0 +1,93 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Link Skip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a weighted link that deals 4 damage to the first enemy it meets, then hops to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Run Rings",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Runs a loop of links round everything near you, dealing 12 damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Tripline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Lays a line of links 6 tiles long for 5 seconds that drags nearby enemies toward it and slows those it catches by 25% for 3 seconds. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Slack Taken Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "Each time you inflict a condition, 8 stamina comes back to you. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Snapped at the Entrance",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.8,
+   "base": 4,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "leech": 0.3,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Snaps up the first enemy within 3 tiles for 4 damage, then the next 2 within 3 tiles for 60% of that. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Smoke the Hive",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "cooldown": 90,
+   "base": 26,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Blows a cone of musk-smoke 4 tiles long, dealing 26 damage to everything in it and leaving it [Hindered] for 8 seconds. When it hits, you and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Scratch at the Comb",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "lifeOnKill": 4,
+   "desc": "Scratches a hive open. For 12 seconds its swarm stings an enemy within 4 tiles for 3 damage every second, and each kill restores 4 health to you."
+  },
+  {
+   "name": "Steady Industry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "cooldownReduction": 0.06,
+   "armorBonus": 0.08,
+   "desc": "Every ability you have comes round 6% sooner. Your armour rises by 8%."
+  }
+ ]
+}

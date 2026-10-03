@@ -1,0 +1,73 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Jaws From Below",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lunges up from below the surface with a bite that deals 28 damage and is always a critical hit, leaving the target [Bleeding] for 3 damage a second for 5 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Rolling Under",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1,
+   "consumeAfflictionsPer": 0.6,
+   "executeLadder": false,
+   "requiresTargetBelow": 0,
+   "desc": "Clamps onto a target and rolls it under, dealing 16 damage and adding the remaining damage of every affliction on it. It uses up every one of your afflictions on the target, dealing 60% more for each one.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Basking Temper",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "thornsFrac": 0.5,
+   "buffDuration": 7,
+   "cooldown": 30,
+   "lifeOnKill": 6,
+   "desc": "Returns 50% of the damage you take to whoever dealt it for 8 seconds. Each kill you make while it is active restores 6 health.",
+   "kind": "active"
+  },
+  {
+   "name": "Still Surface",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "While you are at full health, your next ability deals 25% more damage. Once every 12 seconds."
+  }
+ ]
+}

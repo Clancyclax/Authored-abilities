@@ -1,0 +1,80 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitter Trample",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps the ground, dealing 12 damage to every enemy within 3 tiles, knocking them 2.5 tiles back and leaving them [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Draw the Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "A kick that draws one of your afflictions back out of the target, dealing 8 damage and leaving it 8% easier to wound for 4 seconds. It needs one of your afflictions on the target."
+  },
+  {
+   "name": "Run It Out",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 poison conditions from you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Sweated Clean",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "When a condition on you runs out, you regain 10 stamina. Once every 8 seconds."
+  }
+ ]
+}

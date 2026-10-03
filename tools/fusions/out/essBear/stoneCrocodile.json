@@ -1,0 +1,72 @@
+{
+ "essence": "essBear",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Out of Still Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 64,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 160,
+   "scaleOn": "targetStamina",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Lunges up to 5 tiles to the target and clamps for 13 damage, leaving it 10% easier to wound for 4 seconds. Its damage rises 8% for every tenth of health the target still has, up to 40%."
+  },
+  {
+   "name": "Rolled Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "executeLadder": true,
+   "range": 64,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "desc": "Only strikes a target at or below 25% health, and that threshold rises with each rank. You roll it under for 20 damage and use up every affliction on it, adding 1.6 times the damage they had left to deal."
+  },
+  {
+   "name": "Riverbank Wait",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.3,
+   "buffDuration": 10,
+   "castTime": 1.5,
+   "desc": "After a 1.5-second wait, increases your critical hit chance by 30% for 10 seconds."
+  },
+  {
+   "name": "Coiled Ambush",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "The moment you are back at full health, your physical damage rises 30% for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

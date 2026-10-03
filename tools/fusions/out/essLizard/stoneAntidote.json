@@ -1,0 +1,74 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Draw the Venom",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "template": "stackStrike",
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAfflictionsPer": 0.5,
+   "leech": 0.2,
+   "desc": "A bite that deals 16 damage and uses up every affliction on the target, adding 1.2 times their remaining damage and 50% more damage for each one used up. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spit It Back",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "template": "breathCone",
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Spits drawn venom in a cone 4 tiles long, dealing 10 poison damage with a 60% chance of [Poisoned] for 6 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "name": "Shed the Bitterness",
+   "element": "poison",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "desc": "Sheds your skin, removing up to 3 poison conditions from you, and you regain 10 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "name": "Counter-Cure",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "regenPerSec": 0.5,
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 15% poison resistance and regenerate 0.5 health a second."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Five-Stroke Drill",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "chargesMax": 5,
+   "desc": "Lashes an enemy within 3.5 tiles, which deals 7 damage and lowers its armour by 6% for 4 seconds. Holds 5 charges, and kills give charges back."
+  },
+  {
+   "name": "Finding the Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "desc": "A lash strike that deals 30 damage, always crits, lowers the target's armour by 10% for 6 seconds and leaves it [Bleeding] for 3 damage a second for 5 seconds.",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Coiled Anew",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Corrected Aim",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

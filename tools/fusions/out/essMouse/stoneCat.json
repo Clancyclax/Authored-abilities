@@ -1,0 +1,76 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "End of the Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "range": 84,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Usable only on an enemy at or below 30% health: a pounce deals 20 damage and consumes every affliction on the target, adding 1.2 times their remaining damage. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Pounce and Let Go",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 192,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "You pounce on a target up to 6 tiles away with a raking weapon strike for 11 damage, leaving it [Bleeding] for 2 damage a second for 5 seconds. You move 30% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Stare-Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "blinkOnUse": 96,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds, and slips you 3 tiles from where you stood."
+  },
+  {
+   "name": "A Life to Spare",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead. Your dodge chance rises by 5%.",
+   "dodgeBonus": 0.05
+  }
+ ]
+}

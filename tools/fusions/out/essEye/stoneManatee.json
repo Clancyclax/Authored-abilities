@@ -1,0 +1,78 @@
+{
+ "essence": "essEye",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Slow Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 200,
+   "radius": 14,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Hurls a slow swell that deals 30 damage to the first enemy it meets, then bursts, hitting every enemy within 3 tiles for 80% of that and leaving each [Stalled] for 6 seconds."
+  },
+  {
+   "name": "Drifting Mist",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes a mist in a cone 4 tiles ahead, dealing 3 damage to everything in it, each with a 30% chance to be [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Warm Shallows",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Restores 14 health to you and every ally within 4 tiles."
+  },
+  {
+   "name": "Even Keel",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "maxHp",
+   "amount": 14,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 14, and you regenerate 0.5 health a second."
+  }
+ ]
+}

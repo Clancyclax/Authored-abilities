@@ -1,0 +1,76 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Still-Water Lunge",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 160,
+   "stunOnHit": 1.2,
+   "desc": "You lunge up to 5 tiles to the target and clamp onto it, dealing 13 damage, rising to 1.5 times that from full reach, and holding it [Stunned] for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wallowing Roll",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. You roll in the mud, dealing 9 water damage to every enemy within 2.5 tiles, with a 50% chance to leave each [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Basking Rest",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 10
+   },
+   "name": "Waiting at the Ford",
+   "element": "physical",
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3
+   },
+   "desc": "After 10 seconds without a critical hit, your critical chance rises by 30% for your next strike."
+  }
+ ]
+}

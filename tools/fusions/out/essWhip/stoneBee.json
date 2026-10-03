@@ -1,0 +1,93 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Angry Flight",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps 3 stingers off the tip in a spread out to 6 tiles; each deals 3 damage, with a 25% chance to leave its target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Barb Left Behind",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hpCostPct": 0.05,
+   "desc": "Costs 5% of your maximum health. A weapon strike that deals 9 damage and leaves the target [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Smoked Out the Hive",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cracks the lash and drives out a swarm for 12 seconds. Every second it stings an enemy within 4 tiles for 3 damage, with a 30% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Welts Like Stings",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land raises a welt on that enemy, up to 6. At 6 they all spend at once: a blow strikes that enemy for 27% of your weapon damage per welt (163% at full). Unfed, a welt fades every 4 seconds."
+  }
+ ]
+}

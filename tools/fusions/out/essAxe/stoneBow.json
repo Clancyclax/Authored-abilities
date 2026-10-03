@@ -1,0 +1,73 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Archer's Heave",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 288,
+   "maxMult": 2,
+   "castTime": 1,
+   "ignoreArmor": true,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Draws back for 1 second and hurls the axe for 26 damage that ignores armour, rising to 2 times that damage at its full 9 tile reach."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Loosed Three",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1.2,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 360,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Looses 3 hatchets at once in a narrow spread, each dealing 3 damage. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Long Arm",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "name": "Held at Full Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "The moment your stamina is full, your physical damage rises 30% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

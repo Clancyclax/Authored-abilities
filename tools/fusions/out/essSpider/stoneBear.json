@@ -1,0 +1,82 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Eight-Armed Hug",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "Usable only on an enemy carrying one of your afflictions, and uses one of them up. You crush it in every limb, which deals 9 damage and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Weight on the Web",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rears and drops your full weight, which deals 28 damage to every enemy within 3.5 tiles and leaves each [Slowed] for 5 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Hibernaculum",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "earth",
+   "cooldown": 36,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "healOnUse": 14,
+   "desc": "Veils you for 6 seconds and restores 14 health to you. Enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Back in the Burrow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 16,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "Only strikes a target at or below 30% health, and that threshold rises with each rank. Your jaws close for 26 damage, consuming every affliction on the target and adding 1.2 times their remaining damage to the blow."
+  },
+  {
+   "name": "Bank Ambush",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 160,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You lunge to a target up to 5 tiles away and snap, dealing 14 damage to everything in a cone 3 tiles long and leaving it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Eyes Above Water",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.35,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 36,
+   "desc": "Veils you for 10 seconds. Enemies notice you 65% later, and the veil breaks when you attack."
+  },
+  {
+   "name": "Nothing Slips Out",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below 50% health, your damage rises by 12%."
+  }
+ ]
+}

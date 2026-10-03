@@ -1,0 +1,73 @@
+{
+ "essence": "essCat",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Parting Swipes",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "A twin-pronged swipe that deals 4 damage to the first enemy it meets, then leaps to 1 more enemy within 3 tiles for 60% of that damage."
+  },
+  {
+   "name": "Gap in the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "ignoreArmor": true,
+   "desc": "A lunge that deals 28 damage, up to 1.5 times at maximum range, and ignores the target's armour."
+  },
+  {
+   "name": "Two Paths Taken",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 240,
+   "resetCount": 2,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on 2 of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Either Way Rolled",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

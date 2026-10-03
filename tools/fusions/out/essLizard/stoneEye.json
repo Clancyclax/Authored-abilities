@@ -1,0 +1,70 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Blood from the Lid",
+   "element": "blood",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "template": "projectileBall",
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. Squirts your own blood from under the lid at the first enemy within 6 tiles for 9 blood damage, with a 60% chance of [Blunted] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Basilisk Regard",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "template": "breathCone",
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Stares down a cone 5 tiles long, dealing 10 damage and stunning each enemy in it for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Two Ways at Once",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Increases your dodge chance by 20% for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "name": "Unblinking Second Look",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essFox",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Chink in the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Throws a narrow blade that deals 28 damage to the first enemy it meets and ignores its armour. It has 40% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Cut the Straps",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "sunder": {
+    "amount": 0.12,
+    "duration": 4
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "A quick cut at the buckles that deals 7 damage, makes the target [Bleeding] for 2 damage a second for 3 seconds, leaves it 12% easier to wound for 4 seconds and slows it by 20% for 3 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Muffled Mail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.18,
+   "dodgeBonus": 0.08,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Raises your armour by 18% and your dodge chance by 8% for 10 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Glancing Layers",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

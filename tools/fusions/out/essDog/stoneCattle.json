@@ -1,0 +1,81 @@
+{
+ "essence": "essDog",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Driving the Herd",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives through a cone 3 tiles ahead for 12 damage, pushing every enemy hit 3 tiles back and leaving it [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heeler's Nip",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Nips the target for 4 damage, leaving it 5% easier to wound for 3 seconds, with a 25% chance to leave it [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Stock on the Move",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Stockyard Partner",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "blunt",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.6,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Heeler",
+   "lifeOnKill": 3,
+   "cooldownReduction": 0.05,
+   "desc": "A bonded heeler follows you and nips enemies within 4 tiles for 3 damage every 1.6 seconds. Each kill restores 3 health, and your abilities come round 5% sooner."
+  }
+ ]
+}

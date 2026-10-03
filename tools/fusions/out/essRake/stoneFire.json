@@ -1,0 +1,92 @@
+{
+ "essence": "essRake",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Coals Drawn Wide",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Drags a bed of coals out round you, dealing 12 damage to every enemy within 3 tiles and setting each [Burning] for 3 damage a second for 5 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Poker's Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 160,
+   "maxMult": 1.6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A long jab with a hot tine that deals 4 damage, rising to 1.6 times that at its full reach of 5 tiles, and sets the target [Burning] for 1 damage a second for 4 seconds.",
+   "spammable": true
+  },
+  {
+   "name": "Smouldering Pile",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.4,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Heaps embers into a pile that smoulders for 10 seconds, scorching an enemy within 3 tiles for 3 damage every second, each time with a 30% chance to set it [Burning] for 4 seconds."
+  },
+  {
+   "name": "Sparks From the Heap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 192
+   },
+   "desc": "When you kill an enemy, a spark leaps from the body to the nearest enemy within 6 tiles for 7 damage. Once every 4 seconds."
+  }
+ ]
+}

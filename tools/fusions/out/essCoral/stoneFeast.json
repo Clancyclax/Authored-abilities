@@ -1,0 +1,85 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Open Mouths",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Needs one of your afflictions on the target and eats it. The strike deals 8 damage and leaves the target [Poisoned] for 1 damage a second for 3 seconds, and you heal for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scattered Spawn",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 340,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "stunOnHit": 0.8,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Fed"
+   },
+   "desc": "Looses 5 clouds of spawn in a wide spread, each dealing 10 water damage and stunning the target for 0.8 seconds. 15% of the damage dealt comes back to you as healing over the following 6 seconds."
+  },
+  {
+   "name": "Shared Catch",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "healAmount": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 20,
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and 1% more for every 1% of cast speed you have."
+  },
+  {
+   "name": "Preserved Surplus",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you are healed, you gain a shield worth 10% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

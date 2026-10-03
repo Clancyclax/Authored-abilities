@@ -1,0 +1,94 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "The Long Wait Ends",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps onto an enemy, which deals 32 damage and is always a critical hit. It leaves the target 20% easier to wound for 8 seconds and [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Rolled Prey",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rolls through a cone 3 tiles long, which deals 8 damage to everything in it, with a 50% chance to leave each [Slowed] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Sunk Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 180,
+   "summonKind": "trap",
+   "summonDmg": 24,
+   "summonDuration": 60,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "castTime": 1,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "desc": "Sinks a snare at the nearest enemy. It waits up to 60 seconds, and deals 24 damage in a blast around it to the first enemy to come within 2 tiles."
+  },
+  {
+   "name": "Longer the Stillness",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your critical hit chance rises by 30% for your next strike. Once every 12 seconds."
+  }
+ ]
+}

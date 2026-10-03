@@ -1,0 +1,79 @@
+{
+ "essence": "essCage",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Batted About",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 1.5
+   },
+   "desc": "A quick weapon strike that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds and 20% slower for 1.5 seconds."
+  },
+  {
+   "name": "Cornered Mouse",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "range": 80,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pounces on a target at or below 25% health for 26 damage, using up every affliction on it to add 1.2 times the damage they had left, and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Toying Feint",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 3,
+   "tauntDuration": 5,
+   "desc": "Increases your dodge chance by 25% for 10 seconds, and pulls up to 3 enemies within 5 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Playing With It",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

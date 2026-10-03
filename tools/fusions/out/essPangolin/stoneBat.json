@@ -1,0 +1,75 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Heard Bleeding",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "dark",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.15,
+   "scaleCap": 0.45,
+   "desc": "Usable only on an enemy at or below 30% health. You dive at a target up to 6 tiles away, dealing 20 dark damage, rising to 1.5 times that from the full 6 tiles. It deals 15% more damage for each affliction on the target (max 45%)."
+  },
+  {
+   "name": "Clatter Sonar",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rattles your scales in a narrow cone 5 tiles ahead of you, dealing 11 resonating damage to everything in it, stunning it for 1 second and leaving it [Leaden] for 6 seconds."
+  },
+  {
+   "name": "Hang Curled",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "healOnUse": 10,
+   "desc": "Veils you for 8 seconds and restores 10 health. Enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Dusk-Hardened",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "dodgeBonus": 0.04,
+   "desc": "At night, your armour rises by 12%. Your dodge chance is 4% higher at all times."
+  }
+ ]
+}

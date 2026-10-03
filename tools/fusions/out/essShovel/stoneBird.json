@@ -1,0 +1,80 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Haft Vault",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "You plant the haft and vault up to 7 tiles to the target, landing blade-first for 15 damage and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Winnowing Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Tosses a spadeful of chaff to the wind in a cone 3 tiles long, dealing 4 wind damage with a 30% chance to leave each enemy [Exposed] for 4 seconds."
+  },
+  {
+   "name": "Robin at the Spade",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 36,
+   "summonKind": "bird",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "desc": "Turns a patch of soil, and a robin comes to it for 10 seconds, pecking an enemy within 4 tiles for 3 damage every second."
+  },
+  {
+   "name": "Run-Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

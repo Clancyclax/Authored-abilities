@@ -1,0 +1,79 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Leg-Iron Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a weighted length of links at the first enemy ahead, dealing 6 damage with a 30% chance to wrap its legs and leave it [Slowed] for 2 seconds. Holds 4 charges, and a kill gives one back."
+  },
+  {
+   "name": "Ankle-High Whirl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "desc": "Whirls a length of links at ankle height, dealing 12 damage to every enemy within 3 tiles. Your afflictions on each one spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Hobble Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 24,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "Stretches a chain 5 tiles long at ankle height for 5 seconds that drags every enemy near it inward. Anything it catches moves 25% slower for 3 seconds."
+  },
+  {
+   "name": "Lockstep Cadence",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you move and attack 3% faster per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

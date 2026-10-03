@@ -1,0 +1,76 @@
+{
+ "essence": "essIron",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Portcullis Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a grate round you, dealing 12 damage to every enemy within 3 tiles, stunning them for 0.8 seconds and leaving them [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Door Swung To",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A closing blow that deals 22 damage and leaves the target 15% easier to wound for 6 seconds and [Pinned] for 4 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Turnkey's Hour",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Behind the Bars",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Your armour is 10% higher against enemies carrying your afflictions."
+  }
+ ]
+}

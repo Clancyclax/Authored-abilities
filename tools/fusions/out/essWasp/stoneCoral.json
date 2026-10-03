@@ -1,0 +1,95 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reef-Cut Fester",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A grazing sting that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds, with a 30% chance to leave it [Diseased] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Branching Colony",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A cone 4 tiles long that deals 11 damage to everything in it, with a 50% chance to leave each target [Poisoned] for 5 seconds. Your afflictions on each target spread to enemies within 3 tiles."
+  },
+  {
+   "name": "Budding Outpost",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.4,
+   "cooldown": 40,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Roots a colony head where you stand for 12 seconds. Every second it stings an enemy within 4 tiles and deals 3 damage, with a 30% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "name": "Slow Regrowth",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

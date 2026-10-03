@@ -1,0 +1,86 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Leaf-Mould Fling",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a spadeful of spore-thick leaf mould in a cone 3 tiles long, dealing 4 damage to everything in it, with a 35% chance to leave each target [Poisoned] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Morning Flush",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A cut that deals 15 damage and uses up every affliction you have on the target, dealing 60% more damage for each one. It leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Shallow Grave",
+   "kind": "active",
+   "category": "affliction",
+   "template": "corpseMiasma",
+   "element": "poison",
+   "cooldown": 30,
+   "range": 300,
+   "base": 4,
+   "corpse": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "miasmaSeconds": 8,
+   "explodeRadius": 128,
+   "desc": "The nearest body within 9.5 tiles sprouts where it lies for 8 seconds, and gives every enemy within 4 tiles of it Rot for 3 damage a second for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "name": "Turned Compost",
+   "element": "nature",
+   "desc": "When one of your afflictions runs its course, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

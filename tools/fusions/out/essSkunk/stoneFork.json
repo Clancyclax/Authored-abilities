@@ -1,0 +1,97 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Jet That Divides",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Needs one of your afflictions on the target and uses it up. Sends a jet of musk that deals 8 damage, then forks to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Twin Streams",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 2,
+   "volleySpread": 0.9,
+   "speed": 300,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires 2 jets of musk, one from each gland, in a wide spread out to 6 tiles. Each jet deals 3 damage with a 25% chance to leave its target [Muddled] for 4 seconds."
+  },
+  {
+   "name": "Cuts Both Ways",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Spare Nozzle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "When you land a critical hit, your other gland fires at the nearest enemy within 5 tiles and deals 6 damage, then the jet forks to 2 more enemies within 3 tiles for 50% of that. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essGun",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Held Release",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "guaranteedCrit": true,
+   "castTime": 1.2,
+   "base": 30,
+   "cooldown": 75,
+   "speed": 640,
+   "radius": 6,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "desc": "After holding the draw for 1.2 seconds, fires a round at an enemy up to 11 tiles away that deals 30 damage and always lands as a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "String and Powder",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 5,
+   "cooldown": 1.1,
+   "volleyCount": 2,
+   "volleySpread": 0.12,
+   "speed": 480,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "desc": "Looses an arrow and fires a round together, each dealing 5 damage. Holds 3 charges; each use spends one, and each kill gives one back."
+  },
+  {
+   "name": "Full Draw",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Your critical hits deal 30% more damage for 12 seconds."
+  },
+  {
+   "name": "Mounting Tension",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "crit",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 6. Your next critical hit spends them all: you deal 3% more damage per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Eaten to Stubble",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "strikes": 1,
+   "bossPct": 0.06,
+   "leech": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A stripping cut that deals 26 damage, heals you for 30% of the damage dealt and leaves the target [Bleeding] for 3 damage a second for 5 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hopper Trench",
+   "template": "barrierWall",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "wallKind": "burn",
+   "wallLength": 128,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Digs a 4-tile trench full of hoppers ahead of you for 5 seconds. It deals 7 damage to each enemy that crosses it and leaves it [Sundered] for 6 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Nothing Left to Bury",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "nature",
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 256,
+   "cooldown": 20,
+   "desc": "Strips every body within 8 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "name": "Gorged on Gleanings",
+   "element": "nature",
+   "desc": "When you kill an enemy, you heal for 25% of the damage you deal for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

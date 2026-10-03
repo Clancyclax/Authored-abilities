@@ -1,0 +1,69 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Gloaming Sip",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 9,
+   "requiresTargetBelow": 0.3,
+   "leech": 0.2,
+   "desc": "Sends a bolt of darkness at a target at or below 30% health that deals 22 damage and heals you for 20% of the damage dealt.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Carrying Call",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A call that carries through a 5-tile cone ahead of you, dealing 11 damage to everything in it and stunning it for 0.8 seconds. Each hit has a 50% chance to leave the target [Muddled] for 4 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Dusk Departure",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "dark",
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Lifts you 2 tiles from where you stood and increases your movement speed by 35% for 8 seconds, with 10% more dodge chance while it lasts."
+  },
+  {
+   "name": "Night Paddler",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "At night your dodge chance rises by 12%. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

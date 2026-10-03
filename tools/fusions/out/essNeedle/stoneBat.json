@@ -1,0 +1,80 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Lancet Kiss",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "dark",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "desc": "A fine bite that deals 3 damage, leaves the target [Bleeding] for 1 damage a second for 4 seconds and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Pinpoint Shriek",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "knockback": 64,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 128,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "A narrow shriek across a 4-tile cone ahead of you that deals 12 resonating damage to everything in it and knocks it back 2 tiles. Each target is [Leaden] for 6 seconds, its dodge chance lowered."
+  },
+  {
+   "name": "Crack in the Shutters",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "dark",
+   "cooldown": 10,
+   "teleportRange": 160,
+   "dodgeBonus": 0.1,
+   "desc": "Steps you instantly to a point up to 5 tiles away. You gain 10% dodge chance."
+  },
+  {
+   "name": "Lap at the Cut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition on an enemy, you regain 3 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

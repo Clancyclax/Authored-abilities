@@ -1,0 +1,91 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Up the Sleeve",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Throws a hidden blade that deals 7 damage to the first enemy it meets, with 30% more critical chance against a target that has not been hurt yet. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Between the Ribs",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A short thrust that deals 20 damage, leaves the target [Bleeding] for 6 seconds and makes it 15% easier to wound for 5 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Main-Gauche",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Closer Than Remembered",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.03
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a blade that is always in reach. It increases your weapon damage by 10% and your dodge chance by 3%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

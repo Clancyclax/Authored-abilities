@@ -1,0 +1,84 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Rampart Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shoves with the full guard up, dealing 14 damage to every enemy within 3 tiles and knocking them 3 tiles back. Each hit has a 60% chance of [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Leaden Rebuke",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.04,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Butts the target for 4 damage and leaves it 4% easier to wound for 3 seconds. It has a 30% chance to leave the target [Damped] for 4 seconds."
+  },
+  {
+   "name": "Unbending Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Raises your armour by 30% for 12 seconds."
+  },
+  {
+   "name": "Last Bastion",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 90,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 90,
+    "frac": 0.4,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 8
+   },
+   "desc": "When your health falls below 40%, a shield worth 30% of your maximum health covers you for 8 seconds. Once every 90 seconds."
+  }
+ ]
+}

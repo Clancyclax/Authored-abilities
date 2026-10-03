@@ -1,0 +1,87 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Overripe Cap",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 360,
+   "radius": 8,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Throws a spore pod that deals 28 damage to the first enemy it meets and bursts, dealing 80% of that to every enemy within 3.5 tiles. Its damage rises +8% per affliction the target carries (max +40%)."
+  },
+  {
+   "name": "Puffball Underfoot",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "spreadAfflictions": 128,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Puffs a cloud of spores 4 tiles ahead that deals 10 damage to everything in it and leaves it [Diseased] for 8 seconds. Your afflictions on a target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Fruiting Bodies",
+   "kind": "active",
+   "category": "affliction",
+   "template": "corpseMiasma",
+   "element": "nature",
+   "cooldown": 24,
+   "range": 304,
+   "base": 4,
+   "corpse": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "miasmaSeconds": 8,
+   "explodeRadius": 128,
+   "desc": "The nearest body within 9.5 tiles rots where it lies for 8 seconds. Enemies within 4 tiles of it take 4 damage a tick and [Rot] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Gleaned Decay",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions runs its course, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

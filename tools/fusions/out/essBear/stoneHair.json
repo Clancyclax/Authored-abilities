@@ -1,0 +1,81 @@
+{
+ "essence": "essBear",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Matted Lash",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 190,
+   "maxMult": 1.5,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lash at range that deals 8 damage, up to 1.5 times at maximum range, and costs 4% of your maximum health. Each hit has a 30% chance of leaving the target [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "range": 300,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Shedding Cloud",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 20,
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes out a cone that deals 11 damage to everything caught in it and knocks it back 2 tiles. Each hit has a 60% chance of leaving the target [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Groomed Pelt",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.25,
+   "dodgeBonus": 0.08,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Raises your armour by 25% and your dodge chance by 8% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "name": "Thick Underfur",
+   "element": "physical",
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

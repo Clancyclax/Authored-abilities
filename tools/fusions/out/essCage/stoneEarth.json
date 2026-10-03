@@ -1,0 +1,82 @@
+{
+ "essence": "essCage",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Ring of Pillars",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stone pillars burst up around you, dealing 13 damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Capstone",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "execute",
+   "base": 30,
+   "cooldown": 15,
+   "speed": 300,
+   "radius": 10,
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health. Drops a block of stone on it that deals 30 damage and leaves it [Leaden] for 5 seconds."
+  },
+  {
+   "name": "Standing Stones",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "desc": "Raises a line of standing stones 6 tiles long for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Inner Keep",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you gain a shield worth 20% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

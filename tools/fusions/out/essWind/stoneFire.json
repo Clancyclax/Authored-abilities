@@ -1,0 +1,90 @@
+{
+ "essence": "essWind",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Carried Ember",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Throws an ember on a gust that deals 12 damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds. Your afflictions on the target are blown onto every enemy within 4 tiles."
+  },
+  {
+   "name": "Flashover",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A gust feeds it into a flash that deals 9 damage to every enemy within 2.5 tiles, with a 50% chance to leave each [Burning] for 4 seconds."
+  },
+  {
+   "name": "Spinning Cinders",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 40,
+   "summonKind": "turret",
+   "summonDuration": 10,
+   "summonDmg": 5,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a column of embers spinning for 10 seconds. Every 1.2 seconds it throws a cinder at an enemy within 5 tiles that deals 5 damage, with a 30% chance to leave the target [Burning] for 4 seconds."
+  },
+  {
+   "name": "Bellows Lungs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Each time you spend stamina, your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rib-Wing Stoop",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "template": "rangeStrike",
+   "range": 224,
+   "maxMult": 1.6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "knockback": 64,
+   "desc": "A gliding strike at a target up to 7 tiles away that deals 12 damage, rising to 1.6 times that at full reach, and knocks it back 2 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Moult Scatter",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "template": "breathCone",
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Sheds quill-edged scales in a cone 4 tiles long, dealing 8 damage with a 40% chance of [Bleeding] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "name": "Branch to Branch",
+   "element": "wind",
+   "teleportRange": 192,
+   "cooldown": 12,
+   "dodgeBonus": 0.1,
+   "desc": "Glides you instantly to a spot up to 6 tiles away, and you have 10% more dodge chance."
+  },
+  {
+   "name": "Rising Warmth",
+   "element": "wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "Covering ground restores 5 stamina to you. Once every 4 seconds."
+  }
+ ]
+}

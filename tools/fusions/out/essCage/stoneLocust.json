@@ -1,0 +1,82 @@
+{
+ "essence": "essCage",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnaw Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A gnawing bite that deals 16 damage and draws out every affliction you have on the target, dealing 60% more damage for each one drawn. It leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Devouring Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Deals 28 damage to every enemy within 3.5 tiles plus 5% of a boss's or elite's maximum health, and leaves each [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Swarm Muster",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "swarm",
+   "summonDuration": 15,
+   "summonDmg": 4,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to loose a cloud for 15 seconds that bites an enemy within 6 tiles for 4 damage every second."
+  },
+  {
+   "name": "Plague Hatch",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 3,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "locust",
+   "familiarCreatureName": "Locust Cloud",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Calls a locust cloud familiar that fights beside you, striking for 3 damage every 1.2 seconds and leaving its target [Bleeding] for 1 damage a second for 4 seconds."
+  }
+ ]
+}

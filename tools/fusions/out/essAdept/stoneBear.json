@@ -1,0 +1,77 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Mountain's Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 120,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "Brings your full weight down, dealing 32 damage to every enemy within 3 tiles. Against a boss or an elite it also deals 5% of their maximum health. Its damage rises 5% for every 10% of your health already gone (max 25%).",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.05,
+   "scaleCap": 0.25
+  },
+  {
+   "name": "Paw Swat",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "strikes": 1,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A raking weapon strike that deals 13 damage, makes the target [Bleeding] for 2 damage a second for 4 seconds, and knocks it back 3 tiles."
+  },
+  {
+   "name": "Settled Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "cooldown": 24,
+   "desc": "Raises a barrier that absorbs up to 24 damage for 6 seconds, and raises your armour by 8% while it holds."
+  },
+  {
+   "name": "Hunker Down",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

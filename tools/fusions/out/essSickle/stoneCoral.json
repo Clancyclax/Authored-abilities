@@ -1,0 +1,86 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Break Off the Growth",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Snaps off what has grown in the wound for 9 damage, leaving the target 8% easier to wound for 4 seconds and healing you for 25% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up.",
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Budding Graze",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "aoeBand": "small",
+   "knockback": 64,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 0.3,
+    "spreadsLeft": 2
+   },
+   "desc": "A raking surge that deals 10 water damage to every enemy within 3 tiles and knocks them back 2 tiles, with a 50% chance per hit to leave them [Bleeding] for 6 seconds. The bleeding spreads on its own to up to 2 more enemies within 4 tiles.",
+   "isAoe": true
+  },
+  {
+   "name": "Pruned to Regrow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 3 health a second to you for 8 seconds. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. At 10 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (42% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

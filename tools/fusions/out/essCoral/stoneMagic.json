@@ -1,0 +1,85 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Bent Light",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "knockback": 96,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bends a bolt of arcane light into the first enemy it meets, dealing 11 damage, knocking it back 3 tiles and leaving it [Exposed] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spark Fragments",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps a fragment of arcana at a target up to 6 tiles away that deals 4 damage, rising to 1.5 times that at full reach. It has a 30% chance to leave the target [Exposed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Quickened Growth",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "healOnUse": 8,
+   "cooldown": 45,
+   "desc": "Increases your cast speed by 30% for 12 seconds, and restores 8 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Full Reservoir",
+   "element": "arcane",
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "armorBonus": 0.05,
+   "desc": "While you are at full mana, your next ability deals 25% more damage. Once every 12 seconds. Your armour rises by 5%."
+  }
+ ]
+}

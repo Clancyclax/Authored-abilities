@@ -1,0 +1,88 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fairy Ring",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hyphae close around every enemy within 3 tiles, dealing 12 plant damage and stunning them for 1 second, with a 50% chance per hit to leave them [Caged] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Oubliette Pod",
+   "template": "projectileBall",
+   "element": "necrotic",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 320,
+   "radius": 9,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Fires a spore pod that deals 30 necrotic damage plus 4% of a boss's or elite's maximum health, leaves the target [Pinned] for 2 seconds and gives it Rot for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Rootbound",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "plant",
+   "freezeRadius": 128,
+   "freezeDuration": 3,
+   "aoeBand": "medium",
+   "cooldown": 90,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Mycelium roots every creature within 4 tiles in place for 3 seconds and leaves them [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Captive Decay",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "plant",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your armour rises by 12%."
+  }
+ ]
+}

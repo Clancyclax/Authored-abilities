@@ -1,0 +1,76 @@
+{
+ "essence": "essFork",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clean the Plate",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 6,
+    "label": "Digesting"
+   },
+   "desc": "Spears the first enemy within 4 tiles and deals 18 piercing damage. 30% of the damage dealt returns to you as healing over the following 6 seconds. Usable only on a target at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Carving Round",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 6,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.25,
+   "desc": "Carves around you, dealing 6 slashing damage to every enemy within 2 tiles and healing you for 25% of the damage dealt. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Marrow and Gristle",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "blood",
+   "base": 5,
+   "corpse": true,
+   "range": 192,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "cooldown": 20,
+   "desc": "Picks over every body within 6 tiles, up to 5; each restores 7% of your maximum health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Second Helping",
+   "element": "blood",
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 20% of the damage you deal for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

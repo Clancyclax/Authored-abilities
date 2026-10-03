@@ -1,0 +1,72 @@
+{
+ "essence": "essFish",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Headlong Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.8,
+   "chargeTo": 224,
+   "desc": "You rush up to 7 tiles to the target and strike it, dealing 14 damage, up to 1.8 times as much if it was at long range."
+  },
+  {
+   "name": "Loosed Scree",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 9,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a stone that costs 4% of your maximum health and deals 8 damage. Each hit has a 30% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Held Ground",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "earth",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 6,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 6 health."
+  },
+  {
+   "name": "Footing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a ward worth 25% of your maximum health for 6 seconds. Once every 40 seconds."
+  }
+ ]
+}

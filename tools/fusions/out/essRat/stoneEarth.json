@@ -1,0 +1,77 @@
+{
+ "essence": "essRat",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tunnelled Lunge",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "speed": 300,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A rat burrows ahead of you in a line up to 6 tiles long and comes up under the first enemy it meets for 8 damage, with a 40% chance to leave it [Pinned] for 1.5 seconds. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "name": "The Hollowed Ground",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "The undermined ground collapses under every enemy within 3.5 tiles, dealing 28 damage. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Spoil Heap",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "desc": "Throws up a ridge of dug earth 5 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Bolt-Hole",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.3,
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 30%, you go to ground behind a shield worth 25% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

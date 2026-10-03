@@ -1,0 +1,74 @@
+{
+ "essence": "essDog",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Fetch the Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "range": 86,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. You bite down for 9 damage and leave the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rip Free",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "A tearing bite that deals 16 damage and consumes every affliction on the target, adding 1.8 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Barbed Snare",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "piercing",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Tug of War",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Each time you afflict something, you regain 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

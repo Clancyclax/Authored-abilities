@@ -1,0 +1,77 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Between the Plates",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A claw strike that deals 30 damage, ignores armour, and leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Hundredth Repetition",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 5,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A tail sweep that deals 7 damage to every enemy within 2.5 tiles, with a 30% chance to leave each [Hindered] for 4 seconds. Holds 5 charges; each use spends one and each kill gives one back."
+  },
+  {
+   "name": "Second Nature",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 60,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Layered by Rote",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.04,
+   "desc": "Every time you use an ability, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (34% at full). Unfed, a stack fades every 6 seconds. Your armour is 4% higher at all times."
+  }
+ ]
+}

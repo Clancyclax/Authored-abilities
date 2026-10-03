@@ -1,0 +1,76 @@
+{
+ "essence": "essFox",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Dazzle Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits at the first enemy it meets for 4 poison damage, with a 30% chance to leave it [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Strike from Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "bossPct": 0.06,
+   "desc": "A sudden strike that deals 28 damage and leaves the target 15% easier to wound for 6 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Dropped Tail",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 25,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.3,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to drop a writhing tail at the nearest enemy. It waits up to 25 seconds, and the first enemy to come within 2 tiles sets it off: it deals 20 damage in a blast around it."
+  },
+  {
+   "name": "Basking Hours",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "By day, your dodge chance rises by 12%."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Underbark Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Usable only on a target at or below 25% health. A strike that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage. It has 50% more critical chance until something has bled."
+  },
+  {
+   "name": "Seam Splitter",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A thrust that deals 30 damage, ignoring armour, leaves the target 20% easier to wound for 8 seconds and [Poisoned] for 3 damage a second for 6 seconds."
+  },
+  {
+   "name": "Whetted Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "poison",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "healOnUse": 8,
+   "cooldown": 45,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds and restores 8 health."
+  },
+  {
+   "name": "Neat Seam",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

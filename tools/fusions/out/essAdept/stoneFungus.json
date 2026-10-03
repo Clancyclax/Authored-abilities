@@ -1,0 +1,85 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Settling Spores",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shoots a cluster of spores that deals 4 damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 4 seconds, with a 30% chance to leave it [Diseased] for 6 seconds. It has 30% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Fairy Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Caps open in a ring around you and shed spores, which deals 11 damage to every enemy within 3.5 tiles and leaves each one [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on them spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Cultivated Bed",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 60,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 15,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to plant a bed of caps beside you for 15 seconds. It sheds spores on enemies within 4 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Grows on Anything",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "regenPerSec": 0.5,
+   "desc": "Your afflictions take hold on enemies that are immune to them. You regenerate 0.5 health a second."
+  }
+ ]
+}

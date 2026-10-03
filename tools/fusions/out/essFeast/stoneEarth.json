@@ -1,0 +1,86 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Grist to the Mill",
+   "element": "rock",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.9,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "leech": 0.1,
+   "desc": "Grinds the target between stones, which deals 5 rock damage and leaves it 5% easier to wound for 4 seconds. Its damage rises 8% for each affliction on the target, up to 40%, and you heal for 10% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Upturned Furrows",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 112,
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "healOnUse": 12,
+   "desc": "Heaves the ground, dealing 28 damage to every enemy within 3.5 tiles plus 4% of a boss's or elite's maximum health, with a 50% chance to leave each one [Pinned] for 2 seconds. You restore 12 health."
+  },
+  {
+   "name": "Buried Harvest",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "earth",
+   "base": 0,
+   "corpse": true,
+   "range": 288,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "cooldown": 30,
+   "desc": "Drains every body within 9 tiles down into the ground, up to 5, and each one restores 7% of your health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "element": "earth",
+   "armorBonus": 0.05,
+   "name": "Tamped Ground",
+   "desc": "When you kill an enemy, you gain a shield of 15% of your maximum health for 6 seconds. Once every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

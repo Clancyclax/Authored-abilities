@@ -1,0 +1,88 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Hamstring Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A chop that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 5 seconds and slows it by 15% for 2 seconds."
+  },
+  {
+   "name": "Felling Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 112,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Swings in a cone 3.5 tiles long, which deals 28 damage that ignores armour to everything in it and leaves each enemy [Bleeding] for 6 seconds. Its damage rises 10% for each affliction already on the target, up to 40%."
+  },
+  {
+   "name": "Rafter Drop",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 40,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "blinkOnUse": 96,
+   "desc": "You drop on a line and land 3 tiles from where you stood, and your slashing damage rises by 25% for 12 seconds."
+  },
+  {
+   "name": "Chopping Block",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

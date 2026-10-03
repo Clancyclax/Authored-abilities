@@ -1,0 +1,91 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ambush Spring",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "A sudden leap that deals 28 damage as a critical hit, up to 1.5 times that at its full 6 tiles. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spawn Clutch",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Lobs an egg of spawn that hits the first enemy in its path for 10 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Lily Roost",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 40,
+   "healScope": "party",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 112,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Raises a lily-pad roost where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it. Every ally inside 5.5 tiles makes it 8% stronger, to a limit of 4."
+  },
+  {
+   "name": "Fly Catcher",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you restore 6 stamina. Once every 8 seconds."
+  }
+ ]
+}

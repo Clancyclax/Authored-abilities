@@ -1,0 +1,86 @@
+{
+ "essence": "essDog",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Called Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 480,
+   "radius": 6,
+   "reachUnits": 416,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a shot that deals 30 damage to the first enemy it meets and leaves the target [Marked] for 8 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Bark Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "resonating",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 420,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Barks out 3 pulses in a spread, each dealing 3 resonating damage, each with a 25% chance to leave the target [Marked] for 5 seconds."
+  },
+  {
+   "name": "Far Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "rangeMult": 1.4,
+   "buffDuration": 12,
+   "desc": "For 12 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Report Follows",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 160
+   },
+   "desc": "Each time you kill something, a follow-up shot flies to the nearest enemy within 5 tiles, dealing 8 damage. Once every 4 seconds."
+  }
+ ]
+}

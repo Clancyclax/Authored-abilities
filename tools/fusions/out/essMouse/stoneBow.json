@@ -1,0 +1,76 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Shot From the Skirting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Looses an arrow from cover that deals 5 damage to the first enemy it meets, up to 10 tiles away. It has 50% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Gnawed String",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "desc": "A gnawed bowstring snaps, dealing 12 damage to every enemy within 3 tiles and knocking them back 2.5 tiles."
+  },
+  {
+   "name": "Another Loophole",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "blinkOnUse": 96,
+   "desc": "Increases your critical hit chance by 20% for 10 seconds and shifts you 3 tiles from where you stood."
+  },
+  {
+   "name": "Held at Full Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "After 8 seconds without a critical hit, your critical chance rises by 40% for your next strike. Once every 8 seconds. You have 25% more critical chance against enemies that have not been hurt yet."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "fire",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Exact Ignition",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Throws a bead of flame that deals 28 damage to the first enemy it meets, always as a critical hit, then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Rehearsed Singe",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A weapon strike that deals 7 damage and sets the target [Burning] for 2 damage a second for 3 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Juggler's Coals",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "fire",
+   "cooldown": 48,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "castTime": 0.5,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "desc": "Increases your critical hit chance by 25% for 12 seconds. For the first 8 seconds, burning coals strike your enemies for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Muscle Memory",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "fire",
+   "cooldownReduction": 0.08,
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "Your ability cooldowns are 8% shorter, and you have 10% fire resistance."
+  }
+ ]
+}

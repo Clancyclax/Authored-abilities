@@ -1,0 +1,78 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Dead Centre",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Throws a dart at a spot you have picked out, up to 8 tiles away. It deals 30 damage and is always a critical hit. The damage rises 10% for each affliction already on the target, up to 40%."
+  },
+  {
+   "name": "Picking the Spot",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 160,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A hard stare across a narrow cone 5 tiles ahead deals 4 damage to everything in it, with a 30% chance to leave each target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Pinned by a Stare",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "cooldown": 60,
+   "castTime": 0.3,
+   "aoeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Your stare holds every creature within 4 tiles in place for 2 seconds. When it lets go, they move 30% slower for 3 seconds."
+  },
+  {
+   "name": "Second Look",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

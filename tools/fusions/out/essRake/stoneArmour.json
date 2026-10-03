@@ -1,0 +1,74 @@
+{
+ "essence": "essRake",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Plate Peeler",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "Catches a plate on the tines and wrenches, dealing 4 damage and leaving the target 6% easier to wound for 4 seconds.",
+   "spammable": true
+  },
+  {
+   "name": "Gap in the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "bossPct": 0.05,
+   "desc": "Drives the tines through a gap in the plate, dealing 26 damage that ignores armour and leaving the target [Bleeding] for 3 damage a second for 5 seconds. A boss or elite takes a further 5% of its maximum health.",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Bristling Pauldrons",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Scrap Collector",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every kill builds a stack on you, up to 4. At 4 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

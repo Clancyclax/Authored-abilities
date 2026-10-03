@@ -1,0 +1,81 @@
+{
+ "essence": "essShark",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Notched Volley",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "isAoe": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 6,
+   "range": 256,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Looses 3 arrows in a spread, each dealing 3 damage and leaving its target [Bleeding] for 1 damage a second for 3 seconds. Each arrow has a 30% chance to also leave its target [Exsanguination] for 5 seconds.",
+   "debuff": {
+    "key": "exsanguination",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Harpoon Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 480,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 6,
+    "label": "Drawn Blood"
+   },
+   "desc": "Looses a barbed harpoon at an enemy up to 10 tiles away for 30 damage, plus 5% of a boss's or elite's maximum health. 25% of the damage it deals comes back to you along the line as healing over the following 6 seconds."
+  },
+  {
+   "name": "Far Scent",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.36,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "For 12 seconds, your attacks and spells reach 50% further."
+  },
+  {
+   "name": "Wounded Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Your damage rises by 15% against enemies below half health."
+  }
+ ]
+}

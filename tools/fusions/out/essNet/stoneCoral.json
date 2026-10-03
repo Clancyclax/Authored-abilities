@@ -1,0 +1,80 @@
+{
+ "essence": "essNet",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Branching Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mesh crusted with sharp growth that deals 4 damage to the first enemy it meets and leaves it [Bleeding] for 1 damage a second for 4 seconds, with a 35% chance to leave it [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Atoll Rising",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Your mesh hardens into a ring of branching reef around you, dealing 26 damage that ignores armour to every enemy within 3.5 tiles and leaving each [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Crusted Over",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "desc": "Grows a crust of reef over the mesh you wear, raising your armour by 25% for 11 seconds."
+  },
+  {
+   "name": "Living Lattice",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "regenPerSec": 0.5,
+   "desc": "The mesh you wear grows into living reef: your maximum health rises by 12, and you regenerate 0.5 health a second."
+  }
+ ]
+}

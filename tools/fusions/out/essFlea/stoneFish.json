@@ -1,0 +1,94 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Darting Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "volleySpread": 0.36,
+   "speed": 265,
+   "radius": 7,
+   "range": 220,
+   "isAoe": true,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "spammable": true,
+   "volleyCount": 3,
+   "leech": 0.2,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 darting bites in a spread, each of which deals 4 damage. You heal for 20% of the damage dealt, and each hit has a 30% chance to leave the target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Gulping Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You rush up to 6 tiles to the target and strike it for 14 damage, leaving it 15% easier to wound for 6 seconds. The strike has a 60% chance to leave it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Slip the Net",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "cooldown": 14,
+   "teleportRange": 224,
+   "dodgeBonus": 0.2,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 7 tiles away. Using it increases your movement speed by 20% for 4s and your dodge chance by 20%."
+  },
+  {
+   "name": "Ripple Guard",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, you gain a ward that soaks 30% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essEye",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Basking Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "frost",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "A lunge that deals 18 damage to a target at or below 25% health, consuming every affliction on it and adding 1.5 times their remaining damage. It has 50% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Twin Flicks",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 2,
+   "volleySpread": 0.25,
+   "isAoe": true,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 2 cold lashes at once, spread apart, each dealing 4 damage and having a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Held Still",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "frost",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 96,
+   "aoeBand": "medium",
+   "castTime": 0.3,
+   "desc": "Holds every creature within 3 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Warm Hours",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "frost",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "In daylight, you deal 12% more damage. You have 5% more dodge chance."
+  }
+ ]
+}

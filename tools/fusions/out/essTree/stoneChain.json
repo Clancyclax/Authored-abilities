@@ -1,0 +1,88 @@
+{
+ "essence": "essTree",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rhizome Runner",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a root runner along the ground that deals 4 damage to the first enemy it meets. It then links on to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Liana Haul",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 4
+   },
+   "desc": "Throws a thorned liana round a target up to 6 tiles away and hauls you to it, then deals 12 damage, leaves it [Bleeding] for 3 damage a second for 5 seconds and slows it by 30% for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Graft-Bound Stand",
+   "template": "partyBuff",
+   "element": "plant",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Grafts your roots to every ally within 5 tiles: each one strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Links Underground",
+   "element": "plant",
+   "cooldown": 18,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 18
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "Each time you inflict a condition on an enemy, linked roots wrap you in a shield worth 15% of your maximum health for 6 seconds. Once every 18 seconds."
+  }
+ ]
+}

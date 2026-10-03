@@ -1,0 +1,86 @@
+{
+ "essence": "essBee",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Journey's End",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Fires a sting that deals 16 damage to the first enemy it reaches. Its damage rises 8% for every 100 paces you have run since you last used it, up to 40%. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Paddle Spray",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 droplets at once, spread apart, each dealing 2 water damage, with a 30% chance per hit to leave the target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Unruffled",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 90,
+   "immunityDuration": 4,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 4
+   },
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. While it lasts, a swarm fights beside you, striking for 3 every 1.2 seconds."
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When anything but fire hurts you, you gain a shield worth 15% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

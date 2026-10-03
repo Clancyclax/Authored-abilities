@@ -1,0 +1,77 @@
+{
+ "essence": "essBow",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Light Fletching",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 1.5,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "reachPct": 0.3,
+   "desc": "Looses a light arrow that deals 5 wind damage, rising to 1.5 times that at full reach. Its reach is 30% longer."
+  },
+  {
+   "name": "Stooping Rain",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "wind",
+   "role": "long",
+   "base": 20,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 320,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Lofts 3 arrows high and spread apart; each falls on the first enemy it meets for 20 wind damage, and deals 80% of that to every enemy within 3 tiles of it."
+  },
+  {
+   "name": "Take Wing",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "dashDist": 128,
+   "cooldown": 8,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Carries you 4 tiles forward in one bound. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Vantage Shift",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Every few paces you cover, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

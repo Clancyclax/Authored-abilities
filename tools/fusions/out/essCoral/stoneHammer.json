@@ -1,0 +1,96 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Level Blow",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 86,
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A flattening blow that deals 15 damage, leaves the target 10% easier to wound for 6 seconds, stuns it for 1 second and leaves it [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gravel Spray",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays a cone of crushed reef that deals 3 damage to everything caught in it. Each hit has a 30% chance to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Packed Wall",
+   "template": "barrierWall",
+   "element": "rock",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "cooldown": 30,
+   "desc": "Packs the reef flat into a wall 5 tiles long for 8 seconds. Nothing crosses it, and anything that touches it is [Pinned] for 1 second."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Flattening Habit",
+   "element": "blunt",
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "resist": {
+    "element": "rock",
+    "amount": 0.08
+   },
+   "desc": "Each time you strike with your weapon, your physical damage rises by 30% for 5 seconds. Once every 12 seconds. You have 8% rock resistance."
+  }
+ ]
+}

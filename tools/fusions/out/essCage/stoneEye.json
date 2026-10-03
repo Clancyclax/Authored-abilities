@@ -1,0 +1,85 @@
+{
+ "essence": "essCage",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Fixing Glance",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 224,
+   "maxMult": 1.5,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Your gaze deals 8 damage, up to 1.5 times that at 7 tiles, and leaves it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Petrifying Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stares down a cone 5 tiles long, dealing 12 damage, stunning everything caught for 1 second and leaving it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Meeting the Gaze",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 36,
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 192,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "desc": "Increases your critical hit chance by 20% for 10 seconds, and pulls up to 4 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Panopticon",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you put a condition on an enemy, your critical hit chance rises by 15% for your next strike, for up to 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

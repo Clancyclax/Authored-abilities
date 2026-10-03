@@ -1,0 +1,94 @@
+{
+ "essence": "essNet",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Clamp and Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps the target and rolls, winding a conjured mesh around it and dealing 30 damage, always as a critical hit. It leaves the target 20% easier to wound for 8 seconds and [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Drag It Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.4,
+    "duration": 3
+   },
+   "desc": "Hauls in a target at or below 30% health from up to 5 tiles away, dealing 20 damage, rising to 1.5 times that at full reach, and slowing it by 40% for 3 seconds."
+  },
+  {
+   "name": "The Waiting Jaw",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 24,
+   "summonDuration": 60,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 180,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a jawed snare at the nearest enemy. It waits up to 60 seconds, and the first enemy to come within 2 tiles takes 24 damage and is left [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Slack, Then Teeth",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3
+   },
+   "desc": "When one of your conditions on an enemy runs out, your critical chance rises by 30% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

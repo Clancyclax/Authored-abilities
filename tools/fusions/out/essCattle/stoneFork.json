@@ -1,0 +1,82 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Twin Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 2,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 7,
+   "range": 192,
+   "isAoe": true,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Looses 2 horn thrusts at once, spread apart, each dealing 5 damage."
+  },
+  {
+   "name": "Crossroads Gore",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "knockback": 64,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Sends a thrust into the first enemy it meets, dealing 12 damage and knocking it back 2 tiles. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Parting of Ways",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.23,
+   "reflectChance": 0.4,
+   "buffDuration": 8,
+   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 40% chance to be sent back to its source instead, for 8 seconds."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "desc": "When you inflict a condition, a second thrust branches to the nearest enemy within 5 tiles, dealing 5 damage. Once every 6 seconds."
+  }
+ ]
+}

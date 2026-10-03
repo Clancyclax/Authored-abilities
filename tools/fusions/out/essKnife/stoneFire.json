@@ -1,0 +1,89 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Too Hot to Hold",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "resource",
+   "hpCostPct": 0.04,
+   "base": 9,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A stab with a red-hot blade that deals 9 fire damage, leaves the target 8% easier to wound for 4 seconds and sets it [Burning] for 2 damage a second for 4 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Buried Ember",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "base": 26,
+   "cooldown": 75,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Throws a heated knife that deals 26 fire damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds, then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Blade in the Coals",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Increases your fire damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Seared Shut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "When you are hurt by anything other than fire, you regain 3 health a second for 4 seconds. Once every 12 seconds. You have 10% fire resistance."
+  }
+ ]
+}

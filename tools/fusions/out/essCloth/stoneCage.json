@@ -1,0 +1,74 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Weighted Net",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 320,
+   "radius": 12,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a weighted net that deals 6 damage to the first enemy it meets and leaves it [Pinned] for 2 seconds. It holds 3 charges, and a kill gives one back."
+  },
+  {
+   "name": "Drawstring Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pulls a hidden net shut around you, dealing 26 damage that ignores armour to every enemy within 3.5 tiles, with a 60% chance to leave each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Closing Drapes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 20,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 24,
+   "pullForce": 32,
+   "desc": "Drops a 5-tile curtain ahead of you for 5 seconds that drags every enemy near it inward."
+  },
+  {
+   "name": "Trapper's Mesh",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essFox",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Snatched Morsel",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "leech": 0.3,
+   "desc": "A darting bite that deals 4 damage to the first enemy it meets and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Upset the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "healOnUse": 8,
+   "desc": "Overturns the table, dealing 12 damage to every enemy within 3 tiles and knocking them back 3 tiles. You regain 8 health when you use it."
+  },
+  {
+   "name": "Buried Larder",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you, with a 10% chance to heal critically. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Henhouse Frenzy",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you heal for 15% of the damage you deal for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

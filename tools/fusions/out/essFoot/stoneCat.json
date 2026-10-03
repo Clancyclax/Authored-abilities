@@ -1,0 +1,68 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Unheard Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 60,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "guaranteedCrit": true,
+   "chargeTo": 192,
+   "desc": "Pounces up to 6 tiles onto a target, dealing 30 damage as a critical hit and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Hind-Claw Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Grabs a target carrying one of your afflictions, uses that affliction up and rakes it with both hind feet, dealing 8 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Righting Twist",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "cooldown": 45,
+   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you twist 3 tiles from where you stood."
+  },
+  {
+   "name": "Unbroken Fall",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead."
+  }
+ ]
+}

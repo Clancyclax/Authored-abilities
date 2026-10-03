@@ -1,0 +1,77 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Pestle Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAffliction": true,
+   "desc": "A blow that deals 9 damage and leaves the target 10% easier to wound for 5 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Mortar Grind",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "stunOnHit": 1,
+   "desc": "Pounds the ground, dealing 12 poison damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Bitter Rebound",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.6,
+   "buffDuration": 9,
+   "desc": "For 9 seconds, each affliction laid on you has a 60% chance to be sent back to whoever laid it."
+  },
+  {
+   "name": "Spent Dose",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions lifts, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

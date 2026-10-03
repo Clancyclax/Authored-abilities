@@ -1,0 +1,71 @@
+{
+ "essence": "essHand",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Sic 'Em",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "knockback": 64,
+   "desc": "Points a hound at the first enemy in its path: it deals 13 damage and knocks the target back 2 tiles."
+  },
+  {
+   "name": "Two-Finger Whistle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A piercing whistle through your fingers deals 25 resonating damage to every enemy within 4 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Good Fetch",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Eats from Your Palm",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 5,
+   "familiarRange": 128,
+   "familiarInterval": 1.4,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Lurcher",
+   "desc": "Calls a hound familiar that fights beside you, biting an enemy within 4 tiles for 5 damage every 1.4 seconds. Each bite slows the target by 20% for 2 seconds.",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   }
+  }
+ ]
+}

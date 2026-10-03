@@ -1,0 +1,81 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Words Choked Off",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Costs 4% of your maximum health. Sends a jet of musk into the mouth of the first enemy within 7 tiles that deals 6 damage and leaves it [Muddled] for 5 seconds."
+  },
+  {
+   "name": "Silenced Mid-Word",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "A burst of musk deals 12 damage to every enemy within 3 tiles, stuns each for 1 second and leaves it [Stalled] for 6 seconds."
+  },
+  {
+   "name": "Practiced Cadence",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 50,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your cast speed by 30% for 15 seconds. A haze of musk fights beside you for 10 seconds, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Rote Habit",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "poison",
+   "cooldownReduction": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Every ability you have comes round 8% sooner. You have 10% poison resistance."
+  }
+ ]
+}

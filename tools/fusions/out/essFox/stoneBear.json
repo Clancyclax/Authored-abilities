@@ -1,0 +1,81 @@
+{
+ "essence": "essFox",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Bite Above Your Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "A deep bite that deals 28 damage, plus 5% of a boss or elite's maximum health, and leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Borrowed Roar",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Roars through a cone 4 tiles long, dealing 12 damage, knocking everything in it back 3 tiles and leaving them [Damped] for 5 seconds."
+  },
+  {
+   "name": "Play Dead",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "immunityDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Cornered Bristle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your health falls below 35%, you gain a shield worth 20% of your maximum health for 5 seconds. Once every 30 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essHair",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Liana Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "Catches a target up to 7 tiles away with a rope of hair and swings you to it, landing a blow for 14 blunt damage that rises to 1.5 times that at full reach."
+  },
+  {
+   "name": "Grip and Pummel",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Seizes the target in a fist of hair and pounds it for 5 blunt damage, leaving it 8% easier to wound for 4 seconds. Each hit has a 20% chance to hold it [Pinned] for 1 second."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cleanseCount": 2,
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Strands comb through you and your allies, picking up to 2 conditions off each of you."
+  },
+  {
+   "name": "Bristling Display",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, every hair on you stands on end and you deal 25% more physical damage for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

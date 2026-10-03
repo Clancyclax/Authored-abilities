@@ -1,0 +1,73 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Running Shot",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Looses an arrow at the gallop that deals 4 damage to the first enemy it meets. Its damage rises 8% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Coiled Hind Kick",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 34,
+   "cooldown": 75,
+   "range": 80,
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "You coil your hind legs and release them into the target for 34 damage, leaving it 10% easier to wound for 5 seconds. It is always a critical hit."
+  },
+  {
+   "name": "Steady in the Stirrups",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "String Drawn by Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "Every few tiles you run, your next spell deals 40% more damage. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essBow",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Misdirected Shaft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "confuse": true,
+   "confuseChance": 0.4,
+   "confuseDuration": 3,
+   "desc": "Fires an arrow that deals 8 damage to the first enemy it meets, with a 40% chance to turn it against its allies for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Through the Gap",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 14,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 arrows at once, spread apart, each dealing 14 damage and leaving the target [Exposed] for 6 seconds. They ignore resistances."
+  },
+  {
+   "name": "Vanish Behind",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "piercing",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and speeds you up by 15% while it lasts. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Pickpocket's Eye",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

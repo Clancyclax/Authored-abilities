@@ -1,0 +1,86 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Casts a barbed line into the first enemy it meets, dealing 7 damage, with a 30% chance to leave it [Pinned] for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Haul In",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Hauls you to a target up to 6 tiles away, then strikes for 13 damage and makes it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Snagged Leap",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 192,
+   "cooldown": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away, and your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "name": "Barbs in the Wake",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "Each time you afflict an enemy, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

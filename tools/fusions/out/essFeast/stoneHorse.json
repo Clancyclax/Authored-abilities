@@ -1,0 +1,78 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Stampede Front",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "knockback": 96,
+   "leech": 0.1,
+   "desc": "Sends a charging shock of force into the first enemy it meets, dealing 12 damage and knocking it back 3 tiles. You heal for 10% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "name": "Drumming Strike",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "desc": "A weapon strike that deals 6 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds. You heal for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "name": "Mending Charge",
+   "element": "physical",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "blinkOnUse": 96,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. You leap 3 tiles forward when you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Gallop Dividend",
+   "element": "physical",
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "Each time you spend stamina, you regain 2 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

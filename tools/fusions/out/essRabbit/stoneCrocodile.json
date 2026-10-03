@@ -1,0 +1,73 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Snapped Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Clamps onto an enemy at or below 30% health for 20 damage, consuming every affliction you have on it and adding 1.5 times their remaining damage. You move 20% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 112,
+   "desc": "Thrashes violently, dealing 13 damage to every enemy within 3 tiles and throwing them back 3.5 tiles."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Long Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essRat",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Inside the Breastplate",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A bite delivered from inside the target's plate: it deals 28 damage, ignores armour, and leaves the target [Bleeding] for 3 damage a second for 5 seconds and 15% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "coneAngle": 0.8,
+   "name": "Gnawed Buckles",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bites at straps and buckles in a cone 3 tiles long, dealing 4 damage to everything in it, with a 30% chance to leave each target [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Loose-Fit Mail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "cooldown": 24,
+   "desc": "Raises a barrier that absorbs the next 20 damage, up to 4 blows, for 6 seconds, and raises your armour by 6% while it holds."
+  },
+  {
+   "name": "Scrap Harness",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.08,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures armour pieced from gnawed scrap: every hit you take is 2 lower, your armour rises by 8%, your dodge chance rises by 4%, and 5% of the damage you take goes back to whoever dealt it.",
+   "thornsFrac": 0.05
+  }
+ ]
+}

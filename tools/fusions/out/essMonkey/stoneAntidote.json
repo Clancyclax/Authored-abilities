@@ -1,0 +1,73 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Parasite Pluck",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "consumeAfflictionsPer": 0.6,
+   "base": 16,
+   "cooldown": 12,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 1,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "leech": 0.2,
+   "desc": "Picks every one of your afflictions off the target at once, dealing 16 damage plus their remaining damage, with 60% more damage for each affliction picked off. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bitter Smear",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A quick weapon strike smeared with drawn venom that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds. You move 10% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Nit-Picking",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "nature",
+   "cleanseCount": 3,
+   "healScope": "party",
+   "cooldown": 40,
+   "healOnUse": 10,
+   "desc": "Picks up to 3 conditions off you and off every ally near you, and you regain 10 health."
+  },
+  {
+   "name": "Flicked Back",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "desc": "Each condition laid on you has a 20% chance to be picked off and sent back to whoever inflicted it."
+  }
+ ]
+}

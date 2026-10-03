@@ -1,0 +1,75 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Devour the Wound",
+   "template": "rangeStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "maxMult": 1.2,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Needs one of your afflictions on the target and uses it up. A strike that deals 8 damage, up to 1.2 times as much at 2.5 tiles, and heals you for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Laid Table",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A sweeping plated blow that deals 26 damage to every enemy in a cone 4 tiles long. If it hits, your party deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Second Helping",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "healAmount": 18,
+   "critChance": 0.05,
+   "healScope": "self",
+   "resist": {
+    "element": "physical",
+    "amount": 0.08
+   },
+   "cooldown": 30,
+   "desc": "Restores 18 health to you, and your physical resistance rises by 8%."
+  },
+  {
+   "name": "Full Belly Bulwark",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you are healed, you gain a shield worth 10% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

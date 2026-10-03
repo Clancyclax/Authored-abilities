@@ -1,0 +1,73 @@
+{
+ "essence": "essRake",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Fixed in the Glare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Sweeps your gaze across a cone 5 tiles long, dealing 11 damage to everything in it and stunning each enemy for 1 second."
+  },
+  {
+   "name": "Flaw Laid Bare",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 96,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "guaranteedCrit": true,
+   "desc": "A strike to the spot you have been watching that deals 28 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. It is always a critical hit."
+  },
+  {
+   "name": "Staked Watcher",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.4,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stakes a watching eye in the ground for 12 seconds that strikes an enemy within 5 tiles for 3 damage every second, each strike with a 30% chance to leave the target [Exposed] for 4 seconds."
+  },
+  {
+   "name": "Marks the Limping",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

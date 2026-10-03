@@ -1,0 +1,71 @@
+{
+  "essence": "essShield",
+  "stone": "stoneAntidote",
+  "fusions": [
+    {
+      "name": "Draw It Out",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 14,
+      "speed": 380,
+      "radius": 7,
+      "rangeBand": "medium",
+      "consumeAfflictionsPer": 0.6,
+      "leech": 0.25,
+      "desc": "Sends a bolt that deals 16 damage to the first enemy it meets. It uses up every affliction you have on the target, dealing 60% more damage for each, and you heal for 25% of the damage dealt."
+    },
+    {
+      "name": "Dregs",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "poison",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 14,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "knockback": 64,
+      "debuff": {
+        "key": "poison",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Upends the shield, which deals 10 damage to every enemy within 3 tiles, knocks them back 2 tiles and leaves them [Poisoned] for 5 seconds."
+    },
+    {
+      "name": "Bitter Return",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "poison",
+      "cooldown": 30,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.3,
+      "reflectChance": 0.6,
+      "buffDuration": 7,
+      "desc": "Each condition laid on you has a 60% chance to be sent back to whoever inflicted it instead, for 7 seconds."
+    },
+    {
+      "name": "Mithridate Lining",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveBuff",
+      "element": "poison",
+      "buffKind": "armor",
+      "amount": 0.08,
+      "resist": {
+        "element": "poison",
+        "amount": 0.15
+      },
+      "desc": "Your armour rises by 8%, and you have 15% poison resistance."
+    }
+  ]
+}

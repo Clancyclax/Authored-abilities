@@ -1,0 +1,90 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Forager Sortie",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 4,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 5,
+    "label": "Honey"
+   },
+   "desc": "Looses 3 foragers at once, spread apart; each deals 3 damage. They carry 20% of the damage dealt back to you as healing over the following 5 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Hive Aboard",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 300,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Sends a hive off your tailboard into the first enemy in its path. It deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Tireless Rounds",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 30,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "desc": "Restores 4 stamina a second for 6 seconds. For 8 seconds a swarm rides escort beside you, stinging for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Combs Aboard",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. When you reach 5, they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}

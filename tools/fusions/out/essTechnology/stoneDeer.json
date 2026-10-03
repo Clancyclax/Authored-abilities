@@ -1,0 +1,83 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Startle Flare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "light",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Pops a flare that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Blunted] for 4 seconds. You move 10% faster for 2 seconds after you use it."
+  },
+  {
+   "name": "Launched Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "knockback": 96,
+   "desc": "A spring rack shoots tines at an enemy up to 6 tiles away that deals 12 damage, rising to 1.8 times that at maximum range, and knocks it back 3 tiles."
+  },
+  {
+   "name": "Headlamp Glare",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "light",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Throws a lamp beam that holds every creature within 4 tiles in place for 2 seconds."
+  },
+  {
+   "name": "Panic Button",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.4,
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "dodgeBonus": 0.06,
+   "desc": "When your health falls below 40%, you gain a shield worth 20% of your maximum health for 6 seconds. Once every 45 seconds. You also have +6% dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Barb",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A barbed thrust that deals 18 poison damage and draws out every affliction on the target, adding 1.5 times their remaining damage to the hit, then leaves it [Pinned] for 2 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bitter Bloom",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "leech": 0.2,
+   "desc": "Stinging polyps burst out around you, dealing 12 poison damage to every enemy within 3 tiles and knocking them back 2 tiles. The venom they draw heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Filtered Shallows",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 8,
+   "cooldown": 30,
+   "desc": "Draws up to 2 poison conditions out of you and your allies and restores 8 health."
+  },
+  {
+   "name": "Lapsed Venom",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "When a condition you inflicted runs out, you regain 3 health a second for 4 seconds. Once every 10 seconds. You have 10% poison resistance."
+  }
+ ]
+}

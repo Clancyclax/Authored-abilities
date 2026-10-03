@@ -1,0 +1,81 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reef Rasp",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A rasping bite that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Polyp Scour",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You roll against every enemy within 2.5 tiles, dealing 12 damage and making each [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on each spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Calcified Crust",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "armorBonus": 0.22,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "resist": {
+    "element": "water",
+    "amount": 0.1
+   },
+   "desc": "Raises your armour by 22% and your water resistance by 10% for 12 seconds."
+  },
+  {
+   "name": "Grown in Place",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.04,
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once into a shield worth 4% of your maximum health per stack. Unfed, a stack fades every 6 seconds. Your armour is 4% higher at all times."
+  }
+ ]
+}

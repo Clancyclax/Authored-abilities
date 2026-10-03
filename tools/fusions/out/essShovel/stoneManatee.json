@@ -1,0 +1,76 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Broad-Backed Shove",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "maxMult": 1.3,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "knockback": 112,
+   "desc": "A long push with the flat of the blade that deals 12 damage, rising to 1.3 times that at its full reach of 4 tiles, and throws the target back 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grazed Seabed",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stirs up the silt around you, dealing 4 damage to every enemy within 3 tiles with a 35% chance to leave each [Stalled] for 5 seconds."
+  },
+  {
+   "name": "Warm Wallow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "name": "Tomorrow Will Do",
+   "element": "water",
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essBow",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Unruffled Release",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 460,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires an arrow that deals 28 water damage to the first enemy it meets and leaves it [Soaked] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Skimming Low",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Skims a fan of arrows 5 tiles ahead of you that deals 7 water damage to everything in it. Its damage rises 7% for every tenth of your health you have lost (max 35%). Holds 4 charges; each use spends one, and each kill restores one.",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.07,
+   "scaleCap": 0.35
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "cooldown": 60,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Steady Under Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "Each time you are hurt by anything other than fire, your crit chance rises by 20% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essHair",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Springboard Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rushes you to a target up to 6 tiles away, then deals 12 damage, makes it [Bleeding] for 2 damage a second for 4 seconds and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Barbed Skip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2.4,
+   "desc": "Casts a barbed strand that deals 4 damage to one enemy within 7 tiles, and up to 2.4 times that at maximum range."
+  },
+  {
+   "name": "Slack and Snap",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 12,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A short burst of movement that carries you 5 tiles forward. Your movement speed rises 20% for 3 seconds after you use it."
+  },
+  {
+   "name": "Pounce Cue",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover, your critical hit chance rises by 25% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

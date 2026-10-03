@@ -1,0 +1,78 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kicked Hive",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Stamps the ground around you, dealing 11 poison damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sting on the Bound",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "consumeAffliction": true,
+   "desc": "Bounds in and stings an enemy up to 6 tiles away, dealing 8 piercing damage, rising to 1.5 times that at 6 tiles. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Long Forage",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds, and your movement speed rises by 15% for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Humming Stride",
+   "element": "nature",
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "Every few paces you cover, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

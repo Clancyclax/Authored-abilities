@@ -1,0 +1,74 @@
+{
+ "essence": "essCat",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kicked Grit",
+   "template": "volley",
+   "element": "rock",
+   "role": "resource",
+   "base": 4,
+   "cooldown": 1,
+   "isAoe": true,
+   "radius": 6,
+   "range": 160,
+   "speed": 320,
+   "volleyCount": 3,
+   "volleySpread": 0.45,
+   "castTime": 0,
+   "chargesMax": 4,
+   "desc": "Kicks 3 shards of grit in a spread, each dealing 4 damage to the first enemy it meets. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nudged Off the Ledge",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "radius": 12,
+   "speed": 260,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Tips a boulder at the first enemy in line for 28 damage. It bursts, dealing 80% of that to every enemy within 3 tiles."
+  },
+  {
+   "name": "Gone to Ground",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "rock",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.05,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Raises a skin of stone that absorbs 20 damage and raises your armour by 5% for 8 seconds. Using it increases your movement speed by 15% for 3 seconds."
+  },
+  {
+   "name": "Sure-Footed on Stone",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "rock",
+   "condition": "onRoads",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "On paved ground, your dodge chance rises by 12%."
+  }
+ ]
+}

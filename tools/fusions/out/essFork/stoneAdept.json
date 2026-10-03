@@ -1,0 +1,73 @@
+{
+ "essence": "essFork",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Textbook Opening",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "You step in on a target up to 3 tiles away and thrust, which deals 30 piercing damage and always lands as a critical hit. The target is 20% easier to wound for 8 seconds.",
+   "chargeTo": 96
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drilled Pair",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 2,
+   "volleySpread": 0.12,
+   "speed": 420,
+   "radius": 6,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Thrusts both tines out together, each dealing 6 piercing damage to the first enemy it meets within 4 tiles. Your critical chance is 40% higher against a target that has not yet been wounded. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Run the Form Again",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and steps you 2 tiles from where you stood.",
+   "blinkOnUse": 64
+  },
+  {
+   "name": "Second Tine",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

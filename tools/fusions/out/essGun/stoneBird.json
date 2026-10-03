@@ -1,0 +1,74 @@
+{
+ "essence": "essGun",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Point-Blank Stoop",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "chargeTo": 224,
+   "base": 14,
+   "cooldown": 14,
+   "range": 64,
+   "reachUnits": 64,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "You swoop up to 7 tiles onto an enemy and fire point-blank for 14 damage, leaving it 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Plunging Fire",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "maxMult": 1.6,
+   "desc": "Fires a round in a high arc at an enemy up to 10 tiles away that deals 4 damage, rising to 1.6 times that at full reach."
+  },
+  {
+   "name": "Change of Perch",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "cooldown": 14,
+   "desc": "Steps you instantly to a point up to 7 tiles away, and your movement speed rises 15% for 3 seconds."
+  },
+  {
+   "name": "Wingshot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Every few paces you move, your next strike gains 15% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

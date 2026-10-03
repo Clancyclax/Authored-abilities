@@ -1,0 +1,89 @@
+{
+ "essence": "essFork",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hand in the Coals",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "resource",
+   "hpCostPct": 0.04,
+   "base": 8,
+   "cooldown": 1,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Costs 4% of your maximum health: a red-hot thrust at a target up to 5 tiles away for 8 fire damage, up to 1.4 times that at full reach, that sets it [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spitting Tongues",
+   "template": "volley",
+   "element": "fire",
+   "role": "long",
+   "base": 18,
+   "cooldown": 70,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 8,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Looses 3 branching tongues of flame, each dealing 18 fire damage to the first enemy it meets within 7 tiles and 80% of that to everything within 3 tiles of the hit."
+  },
+  {
+   "name": "Brazier Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "thornsFrac": 0.3,
+   "buffDuration": 6,
+   "cooldown": 25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 6 seconds, 30% of the damage you take is dealt back to whoever dealt it, and sets them [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Toasting Tines",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.08
+   },
+   "desc": "Conjures red-hot tines on your weapon: your weapon damage rises by 10%, every strike sets the target [Burning] for 2 damage a second for 3 seconds, and you have 8% fire resistance."
+  }
+ ]
+}

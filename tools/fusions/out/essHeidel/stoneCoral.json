@@ -1,0 +1,97 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cut on the Shoal",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 80,
+   "knockback": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A kick that deals 13 damage, knocks the target 2.5 tiles back and leaves it [Bleeding] and 6% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Breaking Reef",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Coral bursts up around you, dealing 30 damage that ignores armour to every enemy within 3 tiles and leaving them [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Razor Crust",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "For 9 seconds, 50% of the damage you take is dealt back to whoever dealt it. Your movement speed rises 15% for 5 seconds after you use it."
+  },
+  {
+   "name": "Over the Shallows",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you gallop over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.25,
+     "text": "and the spray gives your wind back"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.1,
+     "text": "and nothing wading can keep up"
+    }
+   ],
+   "desc": "You gallop on water and swamp as on solid ground. From bronze rank you move 15% faster on it, from silver your stamina recovers 25% faster on it, and from gold your dodge chance rises 10% on it."
+  }
+ ]
+}

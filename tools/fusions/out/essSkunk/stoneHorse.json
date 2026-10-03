@@ -1,0 +1,84 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Ridden Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 18,
+   "chargeTo": 256,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Gallops you to a target up to 8 tiles away for a weapon strike that deals 15 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Dust Still Hanging",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "poison",
+   "role": "long",
+   "base": 24,
+   "cooldown": 70,
+   "wallKind": "burn",
+   "wallLength": 224,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Leaves a trail of musk and hoof-dust 7 tiles long ahead of you for 8 seconds. It deals 24 damage, ignoring resistances, to each enemy that crosses it and leaves it [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Upwind at a Gallop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "poison",
+   "cooldown": 40,
+   "speedMult": 1.3,
+   "buffDuration": 10,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 30% for 10 seconds, with 10% more dodge chance while it lasts."
+  },
+  {
+   "name": "Hoofbeat Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, a shield worth 12% of your maximum health closes over you for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

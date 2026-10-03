@@ -1,0 +1,85 @@
+{
+ "essence": "essFish",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Migration Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Drives a surge of water in a cone 5 tiles long ahead of you, dealing 12 damage to everything in it and knocking it back 3 tiles. Its damage rises 10% for each ally beside you, up to 40%."
+  },
+  {
+   "name": "Boxhorn Butt",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "hpCostPct": 0.04,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Butts the target with a horned brow for 7 damage, leaving it 8% easier to wound for 4 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Move as One",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "water",
+   "cooldown": 45,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Herd Closes In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 6 seconds. Its effect grows 8% for each ally within 5.5 tiles, up to 4 allies. Once every 30 seconds."
+  }
+ ]
+}

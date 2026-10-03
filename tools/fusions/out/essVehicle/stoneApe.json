@@ -1,0 +1,87 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Swinging Arrival",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "Swings you to a target up to 6 tiles away and brings both fists down on it. The blow deals 16 damage, leaves the target [Stunned] for 1 second and makes it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Fist-Fall Tread",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Each knuckled stride pounds the ground and deals 4 damage to every enemy within 2 tiles. You move 10% faster for 2 seconds after."
+  },
+  {
+   "name": "Running Board",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "thornsFrac": 0.5,
+   "buffDuration": 8,
+   "lifeOnKill": 4,
+   "cooldown": 30,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 4 health."
+  },
+  {
+   "name": "Knuckle Gallop",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "you cover ground 5% faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "attackSpeed",
+     "amount": 0.05,
+     "text": "your attacks come 5% faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "maxHp",
+     "amount": 10,
+     "text": "your maximum health rises by 10"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank you move 5% faster, from silver you attack 5% faster, and from gold your maximum health rises by 10."
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Dropped Croak",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "resonating",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 18,
+   "range": 224,
+   "lockSeconds": 3,
+   "knockback": 64,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Throws a croak from the wrong place at one enemy within 7 tiles, dealing 8 damage and taking its next action away for 3 seconds. It is knocked back 2 tiles."
+  },
+  {
+   "name": "Decoy Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "confuse": {
+    "chance": 0.25,
+    "duration": 4
+   },
+   "desc": "Spits a decoy that deals 8 damage to the first enemy it meets, with a 25% chance to turn it against its allies for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Wrong Pocket",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.5,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each debuff laid on you has a 60% chance to be sent back to whoever laid it."
+  },
+  {
+   "name": "Quick Study",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying an affliction, your damage rises by 12%."
+  }
+ ]
+}

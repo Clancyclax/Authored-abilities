@@ -1,0 +1,85 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scolding Spit",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Spits drawn venom at the first enemy in line for 11 damage, leaving it [Poisoned] for 2 damage a second for 5 seconds, and your afflictions on it spread to every enemy within 3.5 tiles. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawing the Venom",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Pecks every one of your afflictions out of the target and deals 18 damage, plus 1.2 times their remaining damage, and 60% more for each affliction it uses up."
+  },
+  {
+   "name": "Bitter Preening",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "party",
+   "cleanseTag": "poison",
+   "desc": "Removes up to 2 poison conditions from you and every ally."
+  },
+  {
+   "name": "Scorpion Eater",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "When your health falls below half, healing you receive rises by 30% for 6 seconds. Once every 20 seconds. You carry 10% poison resistance."
+  }
+ ]
+}

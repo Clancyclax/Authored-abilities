@@ -1,0 +1,78 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Stolen Mouthful",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "leech": 0.25,
+   "desc": "A quick bite that deals 4 damage, leaves the target 5% easier to wound for 3 seconds and heals you for 25% of the damage dealt."
+  },
+  {
+   "name": "Mow the Rows",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "leech": 0.2,
+   "desc": "Crops everything within 3 tiles ahead of you for 7 damage and heals you for 20% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Warren Supper",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Fuel for Running",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Whenever you are healed, you restore 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

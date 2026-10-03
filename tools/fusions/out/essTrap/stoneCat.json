@@ -1,0 +1,77 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Pounce From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You spring up to 6 tiles onto the target with a blow that deals 13 damage, leaves it [Pinned] for 1.5 seconds and makes it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Let It Almost Go",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A swat with your weapon that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Mouse-Hole Vigil",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.3,
+   "buffDuration": 10,
+   "castTime": 1,
+   "desc": "After a 1-second crouch, your critical hit chance rises by 30% for 10 seconds."
+  },
+  {
+   "name": "Plays With Its Catch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

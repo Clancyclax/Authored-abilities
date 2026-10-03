@@ -1,0 +1,80 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Throw the Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy carrying one of your afflictions, and uses one up. Slams a lock bolt home on it, which deals 9 damage, leaves it [Pinned] for 2 seconds and 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Portcullis Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Releases a ring of counterweighted bars around you, which deals 12 damage to every enemy within 3 tiles and stuns each for 1.2 seconds."
+  },
+  {
+   "name": "Shutter Gate",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Rolls down a barred shutter 5 tiles long for 8 seconds. Nothing crosses it, and anything that touches it moves 25% slower for 2 seconds."
+  },
+  {
+   "name": "Grounded Mesh",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "lightning",
+   "reflectKind": "spell",
+   "reflectFrac": 0.12,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "resist": {
+    "element": "lightning",
+    "amount": 0.1
+   },
+   "desc": "A wire mesh around you sends 12% of the elemental damage you take back to whoever dealt it. Your lightning resistance rises by 10%."
+  }
+ ]
+}

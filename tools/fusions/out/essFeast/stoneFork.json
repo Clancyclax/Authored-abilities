@@ -1,0 +1,76 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "name": "Split Draught",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "strikes": 2,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.25,
+   "desc": "Costs 4% of your maximum health. Two weapon strikes in a row, each dealing 5 damage and leaving the target [Bleeding] for 1 damage a second for 4 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "name": "Carver's Reach",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "ignoreArmor": true,
+   "leech": 0.2,
+   "desc": "A long thrust on a target up to 7 tiles away that deals 30 damage, rising to 1.6 times that at full reach. It ignores armour, and you heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "name": "Spare Plate",
+   "element": "physical",
+   "cooldown": 30,
+   "healScope": "ally",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "desc": "Restores 3 health a second to the ally who needs it most for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Second Prong",
+   "element": "piercing",
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "lifeOnKill": 2,
+   "desc": "Each time you strike with your weapon, a second point snaps to the nearest enemy within 4 tiles, dealing 5 damage. Each kill restores 2 health to you. Once every 6 seconds."
+  }
+ ]
+}

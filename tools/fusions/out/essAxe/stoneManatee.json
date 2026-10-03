@@ -1,0 +1,85 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drift Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrown blow that deals 5 damage, up to 1.5 times that at the maximum range of 6 tiles, with a 40% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Slow Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A heavy swing that deals 12 damage to everything within 2.5 tiles ahead of you and knocks it back 2.5 tiles; each hit has a 50% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Gentle Pulse",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Easy Does It",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneCage",
+  "fusions": [
+    {
+      "name": "Bar by Bar",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "speed": 400,
+      "radius": 6,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends an iron bar that deals 4 damage to the first enemy it meets, with a 25% chance to leave it [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Muzzled Menagerie",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 128,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "bossPct": 0.04,
+      "debuff": {
+        "key": "suppressed",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Locks every enemy within 4 tiles in bars, which deals 26 damage and leaves them [Suppressed] for 5 seconds, their auras smothered and their abilities out of reach. Against a boss or an elite it also deals 4% of their maximum health."
+    },
+    {
+      "name": "Everything Stays Put",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "physical",
+      "freezeDuration": 3,
+      "freezeRadius": 160,
+      "aoeBand": "medium",
+      "castTime": 1,
+      "cooldown": 90,
+      "desc": "After a 1-second cast, holds every creature within 5 tiles in place for 3 seconds."
+    },
+    {
+      "name": "Lock and Lean",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "desc": "Each time you afflict something, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+    }
+  ]
+}

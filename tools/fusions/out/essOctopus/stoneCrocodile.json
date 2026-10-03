@@ -1,0 +1,78 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Undertow",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Winds every arm around a weakened enemy, hauls it under and rolls with it for 20 damage, leaving it [Bleeding] for 2 damage a second for 4 seconds and [Soaked] for 6 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Sprung From Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges from stillness with every arm, dealing 28 damage to every enemy in a cone 4 tiles ahead and seizing each one, leaving it [Pinned] for 2 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Settled in the Silt",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "water",
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Your critical hit chance rises by 25% for 10 seconds."
+  },
+  {
+   "name": "Grip Past Struggling",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies below half health, you deal 15% more damage."
+  }
+ ]
+}

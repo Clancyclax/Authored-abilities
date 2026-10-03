@@ -1,0 +1,87 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Skipping Crescent",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Skims a curved blade over the surface for 4 water damage to the first enemy it meets, with a 40% chance to leave it [Soaked] for 5 seconds, then skips to 1 more enemy within 3 tiles for 60% of the damage.",
+   "rangeBand": "medium",
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Shake Dry",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 96,
+   "aoeBand": "small",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cuts a full circle that deals 26 water damage to every enemy within 3 tiles and leaves them [Soaked] for 6 seconds. It ignores resistances.",
+   "isAoe": true
+  },
+  {
+   "name": "Shrugged Free",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes up to 3 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Returned to Sender",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "resist": {
+    "element": "water",
+    "amount": 0.08
+   },
+   "desc": "Each condition laid on you has a 20% chance to be hooked off you and onto whoever inflicted it. You have 8% water resistance."
+  }
+ ]
+}

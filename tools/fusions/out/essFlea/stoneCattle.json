@@ -1,0 +1,88 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Stampede of One",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A charge that deals 14 damage to everything in a cone 3 tiles ahead and knocks it 3 tiles back. Its damage rises by 8% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Long Drink",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 6,
+    "label": "Long Drink"
+   },
+   "debuff": {
+    "key": "speedDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a flea at the first enemy in a line up to 6 tiles away that deals 4 damage. 30% of the damage comes back to you as healing over 6 seconds, and each hit has a 30% chance to leave the target [Leaden] for 5 seconds."
+  },
+  {
+   "name": "Herd Grazing",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "blood",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "cooldown": 30,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Restores 3 health a second to you for 10 seconds, rising by 10% for each ally near you, up to 40%."
+  },
+  {
+   "name": "Cud Strength",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you regain health, you also regain 2 stamina a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Thrown and Fetched",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "desc": "Holds 3 charges; each use spends one, and each kill fetches one back. Your hound runs at a target up to 6 tiles away and deals 8 damage to it, rising to 1.5 times that at maximum range."
+  },
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 7 tiles away and brings it down in a blow that deals 14 damage, leaves it [Bleeding] for 4 seconds and makes it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Rounding Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 24,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "desc": "Draws up to 4 enemies within 6 tiles onto you for 5 seconds. For 8 seconds your hound runs beside you and bites a nearby enemy for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Hound at the Axle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "desc": "Every few paces you cover, your hound bites the nearest enemy within 4 tiles and deals 6 damage. Once every 8 seconds."
+  }
+ ]
+}

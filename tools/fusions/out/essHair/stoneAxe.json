@@ -1,0 +1,74 @@
+{
+ "essence": "essHair",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Split Ends",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "desc": "Swings an axe-head on a rope of hair at a target up to 5 tiles away, dealing 22 slashing damage that rises to 1.6 times that at full reach. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Roped Hatchet Whirl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Whirls an axe-head around you on its rope of hair, dealing 8 slashing damage to every enemy within 3 tiles and leaving each [Bleeding] for 2 damage a second for 4 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Razor Mane",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 9,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "desc": "Your hair stands out in honed edges for 9 seconds, and 50% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Trophy Lock",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you kill an enemy, you cut a lock from it and your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

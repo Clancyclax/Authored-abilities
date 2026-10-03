@@ -1,0 +1,85 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Raid the Comb",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 9,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 5,
+    "label": "Honeyed"
+   },
+   "desc": "Sends the swarm into the first enemy it meets for 9 damage. It needs one of your afflictions on the target and uses it up, and 30% of the damage dealt comes back to you as healing over the following 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shaken Hive",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Shakes a swarm loose in a cone 3 tiles ahead of you, dealing 3 damage to everything in it and leaving each target [Poisoned] for 1 damage a second for 4 seconds.",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   }
+  },
+  {
+   "name": "Swarm in Tow",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "lifeOnKill": 4,
+   "desc": "Turns the swarm chasing you onto your enemies for 12 seconds, stinging an enemy within 4 tiles for 4 damage every second. Each kill restores 4 health to you."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Busy Fingers",
+   "element": "nature",
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "Each time you strike, you restore 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

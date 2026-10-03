@@ -1,0 +1,98 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heel Nip",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A bite at the target's heels that deals 4 damage and leaves it [Bleeding] for 1 damage a second for 3 seconds, with a 35% chance to leave it [Slowed] for 3 seconds. For 2 seconds after, you move 10% faster."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Brought to Bay",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Runs down a target up to 7 tiles away and strikes for 30 damage, rising to 1.5 times that at full reach, plus 5% of a boss's or elite's maximum health. It leaves the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Slip the Leash",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 12,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "summonCreatureName": "Courser",
+   "summonFamily": "beast",
+   "castTime": 0.5,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "Looses a hound that fights beside you for 12 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds. You move 25% faster for 5 seconds."
+  },
+  {
+   "name": "Quickening Chase",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "haste",
+   "stackCap": 3,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Each kill builds a stack, up to 3. At 3, they are spent at once: you move and attack 5% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

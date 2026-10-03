@@ -1,0 +1,83 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 30% health. You clamp on and roll: the bite deals 24 damage, leaves it [Pinned] for 3 seconds and makes it 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Out of Still Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "speed": 420,
+   "radius": 10,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargeTo": 192,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "You lunge up to 6 tiles to the target and bite. The bite deals 14 damage, with 50% more critical hit chance against an enemy that has not yet been wounded."
+  },
+  {
+   "name": "Sunk to the Eyes",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.35,
+   "buffDuration": 12,
+   "cooldown": 60,
+   "castTime": 1.5,
+   "desc": "After 1.5 seconds held motionless, your damage is increased by 35% for 12 seconds."
+  },
+  {
+   "name": "The Long Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

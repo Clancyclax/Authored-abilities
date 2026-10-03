@@ -1,0 +1,86 @@
+{
+ "essence": "essWater",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Buffalo Ford",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You charge up to 6 tiles to the target. It deals 13 damage, rising to 1.5 times that from the full 6 tiles, and is left [Soaked] for 8 seconds."
+  },
+  {
+   "name": "Herd Crossing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives a wash of mud through a cone 3 tiles deep. It deals 4 damage, with a 30% chance to leave each enemy [Slowed] for 2 seconds, and its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Evening Trough",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 30,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Millrace",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. At 8 they all spend at once: you are healed for 3% of your maximum health per stack (24% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

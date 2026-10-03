@@ -1,0 +1,74 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Second Helping",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "leech": 0.35,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A bite that deals 8 damage to a target carrying one of your afflictions, uses that affliction up, and makes it [Bleeding] for 1 damage a second for 3 seconds. You heal for 35% of the damage dealt."
+  },
+  {
+   "name": "Every Plate Sampled",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.2,
+   "desc": "A round of bites that deals 4 damage to every enemy within 2.5 tiles, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Carrion Supper",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "blood",
+   "base": 5,
+   "cooldown": 12,
+   "range": 256,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "desc": "Drains every body within 8 tiles, up to 5. Each one restores 7% of your health."
+  },
+  {
+   "name": "Full Belly",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blood",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: you heal 3% of your maximum health per stack (18% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

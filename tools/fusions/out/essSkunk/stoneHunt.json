@@ -1,0 +1,79 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Scent-Trail Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy at or below 30% health. A finishing blow that deals 18 damage and uses up every affliction on the target, adding 1.5 times their remaining damage to the hit."
+  },
+  {
+   "name": "Tagged for the Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a jet of musk at an enemy up to 8 tiles away that deals 4 damage, rising to 2 times that at maximum range, with a 30% chance to leave it [Marked] for 10 seconds."
+  },
+  {
+   "name": "Slipped the Leash",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 50,
+   "summonKind": "minion",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 0.5 seconds to loose a hound on the scent for 15 seconds. It bites an enemy within 5 tiles every 1.5 seconds for 4 damage, with a 40% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Quarry Worn Down",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies below half health, you deal 15% more damage."
+  }
+ ]
+}

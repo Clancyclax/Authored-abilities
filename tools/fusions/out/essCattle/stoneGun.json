@@ -1,0 +1,77 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Sawn-Off Snort",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Blasts a cone of shot 2.5 tiles long, dealing 4 damage to everything in it."
+  },
+  {
+   "name": "Stockyard Mercy",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "speed": 520,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "long",
+   "desc": "Fires a point-blank bolt that deals 26 damage to the first enemy it meets. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Warning Shot",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds. While it lasts, an escort of piercing fights beside you, striking for 4 every 1.4 seconds for 10 seconds."
+  },
+  {
+   "name": "Held Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds. Your armour rises by 5%.",
+   "armorBonus": 0.05
+  }
+ ]
+}

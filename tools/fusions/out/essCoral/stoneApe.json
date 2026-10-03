@@ -1,0 +1,87 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wrenched Outcrop",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Tears a chunk of reef loose and hurls it at an enemy up to 6 tiles away for 12 damage, rising to 1.6 times that at full reach. It knocks the target back 3 tiles and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Picked-Up Hammer",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 80,
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "desc": "Brings a coral head down on the target two-handed for 30 damage. The blow is always a critical hit and leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Heaped Rubble",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "cooldown": 24,
+   "desc": "Rips up the reef and heaps it into a wall 5 tiles long for 6 seconds. Nothing crosses it, and anything that touches its jagged face moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Hold What You Hit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "armorBonus": 0.06,
+   "desc": "When you kill an enemy, your physical damage rises 25% for 5 seconds. Once every 8 seconds. Anything you strike moves 15% slower for 2 seconds, and your armour rises by 6%."
+  }
+ ]
+}

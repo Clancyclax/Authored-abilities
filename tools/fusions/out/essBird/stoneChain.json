@@ -1,0 +1,80 @@
+{
+ "essence": "essBird",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Linked Quills",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 6,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flings a quill into the first enemy it meets for 4 damage. It then leaps to 1 more enemy within 3 tiles for 50% of that."
+  },
+  {
+   "name": "Wheeling Tether",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Swings a tether in a full circle, dealing 11 damage to every enemy within 3 tiles with a 50% chance of [Pinned] for 1.5 seconds. Your afflictions on each spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Swung Lure",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 4.5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Swings a lure on a line, pulling up to 4 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Slipped Jesses",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. When it reaches 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

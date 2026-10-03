@@ -1,0 +1,78 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lobbed Clay",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Lobs a ball of mud that deals 4 damage to the first enemy it meets, with a 35% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Drawn-out Squeeze",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "A heavy press that deals 20 damage, consumes every affliction on the target and adds 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Easy Recovery",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "earth",
+   "healPerSec": 2,
+   "fieldDuration": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 45,
+   "desc": "Settles a quiet pool of silt where you stand. For 14 seconds it restores 2 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Buoyant Tread",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "Each time you are hurt by anything other than fire, you regain 2 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

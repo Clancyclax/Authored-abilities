@@ -1,0 +1,83 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mauling Rake",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "knockback": 96,
+   "base": 14,
+   "cooldown": 12,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes a cone 3 tiles ahead, dealing 14 damage, knocking each enemy 3 tiles back and leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Driven to the Hilt",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "bossPct": 0.05,
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Puts your full weight behind the blade for 30 damage and leaves the target 15% easier to wound for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Bristling Embrace",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Blood on the Pelt",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you land a critical hit, a shield worth 12% of your maximum health covers you for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

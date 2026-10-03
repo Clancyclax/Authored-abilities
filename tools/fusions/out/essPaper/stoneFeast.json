@@ -1,0 +1,79 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "name": "Next Course Served",
+   "element": "physical",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 8,
+   "cooldown": 1,
+   "leech": 0.3,
+   "desc": "Serves the next course on the written menu into the first enemy it meets for 8 damage, and you heal for 30% of the damage dealt. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "executeLadder": false,
+   "role": "execute",
+   "name": "Eat Your Words",
+   "element": "physical",
+   "base": 18,
+   "cooldown": 14,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on an enemy at or below 30% health. Devours every affliction you have written on the target, dealing 18 damage plus 1.8 times their remaining damage."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "name": "Grace Said Aloud",
+   "element": "life",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 30,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Restores 4 stamina a second for 6 seconds. It grows 10% stronger for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "name": "Food for Thought",
+   "element": "life",
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you spend mana, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

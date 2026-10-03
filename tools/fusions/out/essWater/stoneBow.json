@@ -1,0 +1,82 @@
+{
+ "essence": "essWater",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Tension Bead",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a bead of water at an enemy up to 8 tiles away. It deals 4 damage, rising to 1.6 times that at full reach, with a 30% chance to leave the target [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Loosed Downpour",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 20,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 350,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 1,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "After a 1-second draw, looses 3 arrows of water, spread apart. Each one falls on the first enemy it meets and deals 20 damage, then bursts and hits every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Artesian",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "water",
+   "cooldown": 45,
+   "rangeMult": 1.2727,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "desc": "You restore 10 health, and for 12 seconds your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Meniscus",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your mana is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

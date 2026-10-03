@@ -1,0 +1,74 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Blind-Side Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 40,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Slips a hidden blade into the target, dealing 40 damage and leaving it [Bleeding] for 3 damage a second for 5 seconds. The hit always lands as a critical hit."
+  },
+  {
+   "name": "Flick Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Flicks a hidden blade at the first enemy in its path, dealing 4 damage. It has 50% more critical chance against an enemy that has not been wounded yet."
+  },
+  {
+   "name": "Sharpened Resolve",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Sleeve Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you kill something, your next strike gains 30% critical hit chance. Once every 8 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Draw the Bitterness",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Draws one of your afflictions out of an enemy up to 6 tiles away, which deals 8 damage, rising to 1.5 times that at full reach. It needs one of your afflictions on the target and uses it up, and you heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Lobbed Purge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits a glob of poison that deals 28 damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that. The target is left [Poisoned] for 3 damage a second for 8 seconds."
+  },
+  {
+   "name": "Taken Into Yourself",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "desc": "Draws up to 2 poison conditions out of you and your allies and into your shell, and restores 10 health."
+  },
+  {
+   "name": "Nothing Takes Hold",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.25,
+   "buffDuration": 0,
+   "armorBonus": 0.05,
+   "desc": "Each condition laid on you has a 25% chance to be sent back to whoever inflicted it. Your armour rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essFork",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Long Chop",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxMult": 1.5,
+   "desc": "Brings the blade on the end of the haft down on a target up to 4 tiles away for 4 slashing damage, up to 1.5 times that at full reach."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reaping Arc",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 96,
+   "coneAngle": 1.4,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wide hooking cleave that deals 12 slashing damage to everything within 3 tiles ahead. Each hit has a 40% chance to leave the target [Bleeding] for 6 seconds, and your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Choked Grip",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your slashing damage by 30% for 15 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Point, Then Edge",
+   "element": "slashing",
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next ability deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

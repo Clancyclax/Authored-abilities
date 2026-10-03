@@ -1,0 +1,75 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Sic 'Em",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "maxMult": 1.4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Lashes your tongue at one enemy up to 6 tiles away for 8 damage, rising to 1.4 times that at its full reach. Its damage rises 10% for each ally near you, up to 30%. It holds 3 charges, and kills give charges back.",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3
+  },
+  {
+   "name": "Pack Call",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A baying croak that deals 26 damage to every enemy within 3.5 tiles. If it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Licked Clean",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 20,
+   "desc": "One pass of your tongue restores 14 health to you and every ally within 3.5 tiles. The healing rises 1% for every 1% of cast speed you have."
+  },
+  {
+   "name": "Bog Pup",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Bog Pup",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "lifeOnKill": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A bonded bog pup fights beside you, biting enemies within 4 tiles for 3 damage every 1.2 seconds and slowing them 20% for 2 seconds. Each kill restores 3 health to you."
+  }
+ ]
+}

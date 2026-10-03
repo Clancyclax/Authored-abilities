@@ -1,0 +1,73 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Planish and True",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "desc": "A light, placed tap that deals 4 damage and leaves the target 6% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Dead Level",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "A flat, heavy blow that deals 28 damage to every enemy within 3.5 tiles, ignores armour and stuns each one for 1 second.",
+   "stunOnHit": 1
+  },
+  {
+   "name": "Dents Made Good",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "blunt",
+   "cooldown": 24,
+   "healAmount": 16,
+   "critChance": 0.05,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Eight Even Blows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 8. At 8 they all spend at once: you deal 5% more damage per stack (38% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Hawthorn Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 13,
+   "range": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You spring up to 6 tiles to one enemy and rake it for 13 damage. Thorned claws leave it [Bleeding] for 2 damage a second for 5 seconds and 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Nepeta Haze",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "resource",
+   "cooldown": 1.2,
+   "base": 7,
+   "chargesMax": 3,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "confuse": {
+    "chance": 0.3,
+    "duration": 3
+   },
+   "desc": "Shakes out a haze of pollen that deals 7 damage to every enemy within 3 tiles, with a 30% chance to turn each against its allies for 3 seconds. Holds 3 charges; a kill restores one."
+  },
+  {
+   "name": "Tallgrass Prowl",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "plant",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "healOnUse": 8,
+   "desc": "Veils you for 6 seconds and restores 8 health. Enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Ninth Regrowth",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 40%, you regain 4 health a second for 5 seconds. Once every 60 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Rattling Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Snaps the tip into the first enemy it meets, which deals 4 damage, then carries on to 2 more enemies within 3 tiles for 50% of that."
+  },
+  {
+   "name": "Hauled Tight",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "stunOnHit": 1,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Hooks an enemy up to 6 tiles away, which deals 12 damage, up to 1.5 times that at full reach, and stuns it for 1 second. The lash then carries on to 2 more enemies within 3 tiles for 60% of that."
+  },
+  {
+   "name": "Taut Between Two Posts",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 24,
+   "desc": "Strings the lash 6 tiles long ahead of you for 5 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Each Hit a Shackle",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1.1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. Your next critical hit on it spends them all: you deal 7% more damage per stack (33% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essWater",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Staked Weir",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 20,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "stunOnHit": 0.8,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Stakes a wall 5 tiles long across the ground ahead of you for 6 seconds. It deals 11 damage to each enemy that crosses it, stuns it for 0.8 seconds and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Oubliette",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.18,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A crushing strike that deals 28 damage plus 5% of a boss's or elite's maximum health, leaves the target [Pinned] for 3 seconds and 18% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Lock Chamber",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 60,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "After a 0.5-second cast, holds every creature within 4 tiles in place for 3 seconds, and they cannot be healed while held. Each of them then moves 30% slower for 2 seconds."
+  },
+  {
+   "name": "Easy Pickings",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying one of your afflictions, you deal 12% more damage."
+  }
+ ]
+}

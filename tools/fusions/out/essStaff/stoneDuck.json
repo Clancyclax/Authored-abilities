@@ -1,0 +1,92 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Shallows Slap",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 1,
+   "knockback": 80,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Slaps the flat of the staff down on standing water and throws it through a cone 3 tiles long. It deals 11 damage to everything in it, knocks each target back 2.5 tiles and leaves it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Level Prod",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 112,
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargesMax": 3,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "A level prod at a target up to 3.5 tiles away that deals 7 damage, rising to 1.5 times that at full reach, with a 40% chance to leave it [Damped] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Off the Spinning Shaft",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 60,
+   "immunityDuration": 3,
+   "desc": "You spin the staff overhead for 3 seconds. Blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Paddling Beneath",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "your stamina recovers faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your stamina recovers 12% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

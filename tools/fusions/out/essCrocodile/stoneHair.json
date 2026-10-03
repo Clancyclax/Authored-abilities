@@ -1,0 +1,89 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Tangling Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "slowPct": 0.3,
+   "stunOnHit": 1,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "Snags every enemy within 3 tiles, dealing 10 damage, stripping 15% of their armour and slowing them by 30% for 6 seconds, then stuns each for 1 second."
+  },
+  {
+   "name": "Matted Rip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "A tearing bite that deals 4 damage, makes the target [Bleeding] for 1 damage a second for 4 seconds and slows it by 25% for 2 seconds."
+  },
+  {
+   "name": "Woven Mat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "plant",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 12,
+   "armorBonus": 0.06,
+   "cooldown": 40,
+   "desc": "Raises a barrier that absorbs up to 20 damage for 12 seconds, and raises your armour by 6% while it holds."
+  },
+  {
+   "name": "Knotted Whip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 4,
+    "range": 128
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Each time you strike, a snare lashes the nearest enemy within 4 tiles for 4 damage and slows it by 25% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

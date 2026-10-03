@@ -1,0 +1,82 @@
+{
+ "essence": "fire",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Flashover",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "fire",
+   "role": "long",
+   "base": 10,
+   "cooldown": 90,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 1,
+    "spreadsLeft": 2
+   },
+   "castTime": 0.8,
+   "volleyCount": 4,
+   "volleySpread": 0.6,
+   "speed": 330,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 4 fireballs in a wide spread, each of which deals 10 damage, ignores resistances and sets its target [Burning] for 6 seconds. [Burning] is catching: it passes to up to 2 more enemies within 4 tiles."
+  },
+  {
+   "name": "Backdraft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "consumeAffliction": true,
+   "explodeRadius": 80,
+   "splashFrac": 0.8,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Throws a gout of flame that deals 9 damage to the first enemy it meets, then bursts, hitting every enemy within 2.5 tiles for 80% of that. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Fanned Higher",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "cooldown": 45,
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your fire damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Nothing Left Unlit",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "fire",
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 15% fire resistance."
+  }
+ ]
+}

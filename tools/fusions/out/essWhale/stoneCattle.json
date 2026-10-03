@@ -1,0 +1,88 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Lead Bull",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Leads with a lowered head, which deals 28 damage and leaves the target 15% easier to wound for 8 seconds. Your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Milling Stampede",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Tramples every enemy within 3 tiles, which deals 8 damage and costs you 4% of your maximum health. Its damage rises 8% for each ally near you, up to 32%."
+  },
+  {
+   "name": "Rich Milk",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 20,
+   "healScope": "ally",
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "desc": "Restores 3 health a second to the ally who needs it most, for 6 seconds."
+  },
+  {
+   "name": "Grazing Pace",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "your health recovers faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "your stamina recovers faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.06,
+     "text": "your abilities come round sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your health recovers 12% faster, from silver your stamina recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

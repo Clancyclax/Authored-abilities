@@ -1,0 +1,73 @@
+{
+ "essence": "essBear",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Batting Paws",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.7,
+   "spammable": true,
+   "isAoe": true,
+   "aoeBand": "small",
+   "range": 64,
+   "coneAngle": 0.6,
+   "desc": "Bats both paws through a narrow cone 2 tiles ahead, dealing 3 damage to everything in it."
+  },
+  {
+   "name": "Velvet Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 160,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Pounces up to 5 tiles onto the target and bites for 16 damage, leaving it 10% easier to wound for 4 seconds. It uses up every affliction you have on the target, dealing 50% more damage for each."
+  },
+  {
+   "name": "Low in the Grass",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 11% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Upright Landing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

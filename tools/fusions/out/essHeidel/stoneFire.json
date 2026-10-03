@@ -1,0 +1,92 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kindled Charge",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 80,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "You rush up to 7 tiles to the target and strike it for 14 fire damage, setting it [Burning] for 3 damage a second for 4 seconds and leaving it 6% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Struck Flint",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "You strike a spark off your shoe at the first enemy in line for 4 fire damage, setting it [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Trail of Cinders",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Leaves a line of cinders 6 tiles long behind you for 6 seconds. Anything that crosses it is set [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Sparks Off the Shoes",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "desc": "Every few tiles you run, a spark leaps to the nearest enemy within 6 tiles, dealing 6 damage. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "essence": "essBird",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on a target at or below 30% health. Runs it down for 20 damage and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Hunting Party",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 7,
+   "cooldown": 75,
+   "isAoe": true,
+   "volleyCount": 4,
+   "volleySpread": 0.45,
+   "speed": 280,
+   "radius": 7,
+   "range": 256,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Sends 4 hawks out in a spread, each dealing 7 damage. If any of them hits, every ally near you strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Mobbing Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 9,
+   "thornsFrac": 0.4,
+   "lifeOnKill": 6,
+   "desc": "For 9 seconds, 40% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 6 health."
+  },
+  {
+   "name": "Hawk at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "piercing",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "bird",
+   "familiarCreatureName": "Goshawk",
+   "lifeOnKill": 5,
+   "desc": "A bonded hawk flies with you, striking enemies within 5 tiles for 4 damage every 1.2 seconds. Each kill it makes restores 5 health to you."
+  }
+ ]
+}

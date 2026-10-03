@@ -1,0 +1,84 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Sting Relay",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 400,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Looses 3 stinging packmates at once, spread apart out to 6 tiles; each deals 3 damage."
+  },
+  {
+   "name": "For the Hive",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A barbed bite that costs 5% of your maximum health; it deals 9 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "name": "Tireless Lope",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds. Your movement speed rises 15% for 5 seconds after you use it."
+  },
+  {
+   "name": "Hive Tempo",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackOn": "self",
+   "stackPay": "haste",
+   "stackSpend": "full",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 1.1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

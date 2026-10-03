@@ -1,0 +1,75 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Five Good Shots",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "chargesMax": 5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 520,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Fires a jet of musk at the first enemy within 10 tiles that deals 9 damage and leaves it [Poisoned] for 2 damage a second for 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Both Barrels",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Discharges both glands with a bang across a cone 3 tiles long that deals 14 damage to everything in it and stuns it for 1 second. Each hit has a 50% chance to leave its target [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Smoke Bank",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "poison",
+   "cooldown": 36,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "desc": "Lays a bank of foul powder smoke 6 tiles long across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Bore and Choke",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "poison",
+   "pierceElement": "poison",
+   "armorIgnore": 0.2,
+   "desc": "Your poison damage cannot be resisted."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essEye",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Headsman's Measure",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Usable only on an enemy at or below 25% health: a chop that deals 26 damage and leaves the target 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nailed to the Spot",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a hatchet that hits the first enemy in its path for 7 damage, with a 30% chance to leave it [Pinned] for 1.5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Chalk Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Your critical hits deal 40% more damage for 12 seconds."
+  },
+  {
+   "name": "Along the Grain",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

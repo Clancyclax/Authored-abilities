@@ -1,0 +1,93 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gnawing Mites",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 320,
+   "radius": 5,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 mites spread apart, each dealing 2 damage. Each hit has a 25% chance to leave the target [Sundered] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gorging Bite",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon strike that deals 26 damage, always strikes critically, makes the target [Poisoned] for 3 damage a second for 5 seconds and leaves it [Diseased] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "name": "Feeding Cloud",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 2,
+   "summonDuration": 16,
+   "summonInterval": 0.8,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "lifeOnKill": 3,
+   "cooldown": 50,
+   "desc": "Takes 0.5 seconds to raise a cloud of reef mites for 16 seconds that bites an enemy within 5 tiles for 2 damage every 0.8 seconds. Each kill you make while it is out restores 3 health."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Stored Meal",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land builds a stack on you, up to 6. The next ability you use spends them all: you are healed for 3% of your maximum health per stack (15% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

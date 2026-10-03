@@ -1,0 +1,88 @@
+{
+ "essence": "essHook",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Roll It Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Sets the barb and rolls, dealing 16 damage and tearing out every affliction you have on the target for 60% more damage each. It leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Snap From Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges through a cone 3 tiles long, dealing 28 damage to everything caught in it. Every hit is a critical hit and clamps the target [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Baited Waterline",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 40,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 2,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 120,
+   "desc": "Sets a baited barb at the nearest enemy. It waits up to 40 seconds and deals 22 damage to each of the first 2 enemies to come within 2 tiles."
+  },
+  {
+   "name": "Log in the Shallows",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "Anything you strike moves 20% slower for 3 seconds. When your stamina is full, your physical damage rises 25% for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

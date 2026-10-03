@@ -1,0 +1,79 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A hooked horn strike that deals 9 damage and makes the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Haul and Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 1,
+   "desc": "Draws a 6-tile line of rope for 6 seconds, dragging every enemy near it inward, and deals 12 damage to each. Anything struck is stunned for 1 second."
+  },
+  {
+   "name": "Haul Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 6 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Snagged on the Hurt",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Each time you are hurt by anything other than fire, a hook snags the nearest enemy within 5 tiles, dealing 5 damage and slowing it by 20% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Run Aground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "spreadAfflictions": 112,
+   "desc": "Drives the target onto a spur of reef. The grounding deals 14 damage, leaves the target [Pinned] for 1.5 seconds and makes it 12% easier to wound for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Scraped Keel",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Costs 4% of your maximum health. Grinds past every enemy within 2.5 tiles: it deals 8 damage and leaves each [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Hulk at Anchor",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 0,
+   "cooldown": 45,
+   "desc": "Sinks a reef-grown hulk where you stand. It stays for 15 seconds, and every 1.5 seconds it strikes an enemy within 4 tiles and deals 5 damage."
+  },
+  {
+   "name": "Barnacle Skin",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield for each stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

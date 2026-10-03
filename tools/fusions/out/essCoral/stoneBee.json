@@ -1,0 +1,95 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nematocyst Volley",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 stinging cells at once, spread apart, each dealing 6 poison damage with a 40% chance to leave the target [Poisoned] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Colony Seed",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Fires a seeded sting that deals 11 poison damage to the first enemy it meets and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Spawned Hive",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 45,
+   "desc": "Grows a humming colony that stands for 15 seconds and stings an enemy within 4 tiles for 4 damage every 1.2 seconds, with a 30% chance to leave it [Poisoned] for 4 seconds.",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Tireless Polyps",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you move and attack 2% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

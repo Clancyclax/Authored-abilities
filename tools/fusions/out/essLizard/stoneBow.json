@@ -1,0 +1,74 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Held Draw",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 70,
+   "template": "projectileBall",
+   "speed": 460,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "castTime": 1.2,
+   "ignoreArmor": true,
+   "desc": "Holds still at full draw for 1.2 seconds, then looses your tongue at the first enemy within 9 tiles for 34 damage that ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Regrown Quiver",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "template": "volley",
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 4,
+   "desc": "Looses 3 tail spines at once, spread apart out to 7 tiles, each dealing 6 damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "name": "Tongue at Full Stretch",
+   "element": "physical",
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 1.3 times as far."
+  },
+  {
+   "name": "Strung Tight",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 25% more damage. Once every 15 seconds."
+  }
+ ]
+}

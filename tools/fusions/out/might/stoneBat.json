@@ -1,0 +1,78 @@
+{
+ "essence": "might",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Concussive Screech",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Screams a cone of sound 5 tiles long that deals 12 damage to everything in it and stuns each enemy for 1 second."
+  },
+  {
+   "name": "Ricochet Ping",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "vibrantEcho",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a pulse of sound into the first enemy it meets, where it deals 7 damage, then rebounds to 2 more enemies within 3 tiles for 60% of that each. Each hit has a 30% chance to leave [Vibrant Echo] for 6 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Deafening Clap",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "resonating",
+   "cooldown": 60,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "desc": "After a 1-second wind-up, claps your hands together and holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Stronger After Dusk",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "At night, you deal 12% more damage. You also have 5% more dodge chance."
+  }
+ ]
+}

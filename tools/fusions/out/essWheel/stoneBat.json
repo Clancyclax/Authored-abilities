@@ -1,0 +1,87 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Outbound Chirps",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "resonating",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 5,
+    "label": "Echo"
+   },
+   "desc": "Looses 3 pulses of sound at once, spread apart, and each deals 3 damage. You heal for 20% of the damage they deal, spread over the following 5 seconds."
+  },
+  {
+   "name": "Spiral Descent",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "dark",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Swoops you to a target up to 7 tiles away and bites it. The bite deals 13 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Orbiting Colony",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.3,
+   "cooldown": 40,
+   "lifeOnKill": 2,
+   "desc": "Summons a swarm that circles you for 12 seconds. Every second it bites an enemy within 3 tiles and deals 3 damage, and each kill made while it circles restores 2 health to you."
+  },
+  {
+   "name": "Fed by Motion",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, your attacks drain 20% of the damage they deal back to you as health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essIron",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Running Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a threaded needle that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Rally to the Colours",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 120,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "desc": "Slams a shod banner pole down, dealing 26 damage to every enemy within 3 tiles. When it hits, you and your allies deal 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Wire-Thread Lining",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 0.4,
+   "buffDuration": 9,
+   "armorBonus": 0.1,
+   "desc": "For 9 seconds, 40% of the elemental damage you take is sent back to whoever dealt it, and your armour rises by 10%."
+  },
+  {
+   "name": "Ring by Ring",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. At 5 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

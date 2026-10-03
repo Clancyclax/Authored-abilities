@@ -1,0 +1,79 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Flag in the Face",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Snaps the pennant tied to the staff through a cone 3 tiles long. It deals 4 damage to everything in it, with a 30% chance to leave each target [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Planted Standard",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 192,
+   "maxMult": 1.6,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Drives the banner staff into a target up to 6 tiles away. It deals 26 damage, rising to 1.6 times that at full reach. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Draped Awning",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "light",
+   "cooldown": 36,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 5,
+   "stealthScope": "party",
+   "desc": "Drapes cloth over the raised staff and veils you and your allies for 9 seconds. Enemies notice you 60% later, you move 6% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Wound on the Distaff",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every ability you use winds a stack of thread onto the staff, up to 5. At 5 they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

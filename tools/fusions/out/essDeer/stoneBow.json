@@ -1,0 +1,79 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Parting Shots",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "isAoe": true,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Looses 3 arrows in a spread, each dealing 3 piercing damage, and your movement speed rises by 10% for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Chase's End",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "requiresTargetBelow": 0.25,
+   "speed": 480,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Looses one arrow at an enemy at or below 25% health that deals 24 piercing damage. Its damage rises 10% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Flight Distance",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Drawn at a Gallop",
+   "element": "piercing",
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Every few paces you cover, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

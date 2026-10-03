@@ -1,0 +1,81 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "One Gulp",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "consumeAfflictionsPer": 0.5,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "leech": 0.2,
+   "desc": "A snap that deals 16 damage, uses up every affliction you have on the target and deals 50% more damage for each one, and leaves it 10% easier to wound for 5 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "strikes": 1,
+   "name": "Death Roll",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "desc": "Clamps and rolls for 30 damage, plus 5% of the target's maximum health if it is a boss or elite, and leaves it [Bleeding] for 4 damage a second for 5 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Basking Gorge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "healAmount": 20,
+   "critChance": 0.1,
+   "healScope": "self",
+   "cooldown": 20,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 20 health to you. Its healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "element": "water",
+   "name": "Lying in Wait",
+   "desc": "When your stamina reaches full, you heal for 30% of all damage you deal for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Reef Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A raking kick that deals 18 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. It uses up every affliction you have on the target, dealing 50% more for each."
+  },
+  {
+   "name": "Breaker Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Charges through a wide cone 5 tiles ahead, dealing 30 damage that ignores resistances and leaving everything in it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Tide-Hardened",
+   "kind": "active",
+   "category": "defensive",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Damage you take falls by 20% for 12 seconds, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Wave Runner",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "the swell carries you"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.2,
+     "text": "and the reef in you grows back"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.1,
+     "text": "and nothing that has to wade can catch you"
+    }
+   ],
+   "desc": "You can gallop across water. From bronze rank you move 15% faster on it, from silver your health recovers 20% faster there, and from gold your dodge chance on water rises by 10%."
+  }
+ ]
+}

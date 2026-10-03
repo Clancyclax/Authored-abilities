@@ -1,0 +1,75 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silt Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays wet silt in a cone 4 tiles long, dealing 4 damage to everything in it. Each hit has a 30% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Flat Skim",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Skims a flat stone that deals 8 damage, rising to 1.6 times that at its full reach of 7 tiles. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Mud Glaze",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "dodgeBonus": 0.1,
+   "desc": "Coats you in slick mud, raising your armour by 20% and your dodge chance by 10% for 12 seconds."
+  },
+  {
+   "name": "Slippage Banked",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 5. At 5 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

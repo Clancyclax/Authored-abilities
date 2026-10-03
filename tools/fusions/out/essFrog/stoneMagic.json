@@ -1,0 +1,76 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Unshaped Croak",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Croaks raw arcana in every direction, dealing 26 damage that ignores resistances to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Stray Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a spark at the first enemy it meets, dealing 3 damage with a 30% chance to leave it [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Pond Light",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 24,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 7,
+   "desc": "Restores 3 mana a second for 7 seconds."
+  },
+  {
+   "name": "Primed Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Each time you spend mana, your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

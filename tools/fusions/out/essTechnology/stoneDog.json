@@ -1,0 +1,75 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Fetch Disc",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "chargesMax": 3,
+   "desc": "Throws a bladed disc at an enemy up to 6 tiles away that deals 8 damage, rising to 1.6 times that at maximum range. Holds 3 charges; each use spends one, and each kill brings one back to your hand."
+  },
+  {
+   "name": "Lockjaw Actuator",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that locks a geared jaw on the target, which deals 18 damage, uses up every affliction you have on it and deals 60% more damage for each one. It then leaves the target [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Brass Mastiff",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Winds up a brass hound that fights beside you for 15 seconds. It deals 5 damage to an enemy within 4 tiles every 1.2 seconds, each bite with a 25% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Scent Tracker",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

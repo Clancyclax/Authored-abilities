@@ -1,0 +1,82 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Headlock",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "stunOnHit": 1.4,
+   "desc": "Locks the target's head against your horns and wrenches it: deals 14 damage, holds it [Stunned] for 1.4 seconds and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Chest-Drum Stomp",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. You pound your chest and stamp, dealing 8 damage to every enemy within 2.5 tiles, with a 30% chance to leave each [Weakened] for 4 seconds."
+  },
+  {
+   "name": "Challenge Display",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you and holds their attention for 6 seconds."
+  },
+  {
+   "name": "Oxbone Cudgel",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "blunt",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a thighbone cudgel. It increases your weapon damage by 12% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  }
+ ]
+}

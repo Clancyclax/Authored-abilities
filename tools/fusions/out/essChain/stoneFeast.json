@@ -1,0 +1,76 @@
+{
+ "essence": "essChain",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carver's Portion",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hpCostPct": 0.04,
+   "leech": 0.35,
+   "desc": "A hooked blow that costs 4% of your maximum health and deals 9 damage, leaving the target 5% easier to wound for 3 seconds. You heal for 35% of the damage dealt."
+  },
+  {
+   "name": "Laid Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "leech": 0.2,
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "A sweep of chain that deals 26 damage to every enemy within 3.5 tiles. You heal for 20% of the damage dealt, and every ally gains 15% damage for 12 seconds."
+  },
+  {
+   "name": "Bones for Broth",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "blood",
+   "cooldown": 20,
+   "base": 0,
+   "range": 288,
+   "drainFrac": 0.07,
+   "resource": "hp",
+   "corpse": true,
+   "desc": "Hooks every body within 9 tiles, up to 5, and drains it. Each one restores 7% of your health."
+  },
+  {
+   "name": "Course After Course",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blood",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Each enemy you kill builds a stack on you, up to 5. The next ability you use spends them all: you are healed for 5% of your maximum health per stack, 25% in all at 5 stacks. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

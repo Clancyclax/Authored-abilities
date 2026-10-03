@@ -1,0 +1,76 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Both Hind Legs",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "knockback": 112,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Kicks out with both hind legs for 14 damage, knocking the target back 3.5 tiles and leaving it 10% easier to wound for 4 seconds. You move 25% faster for 3 seconds."
+  },
+  {
+   "name": "Flushed From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "cooldown": 1,
+   "base": 4,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "You kick off the ground, dealing 4 damage to every enemy within 2 tiles, and move 15% faster for 2 seconds."
+  },
+  {
+   "name": "Startle Reflex",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "cooldown": 60,
+   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you spring 3 tiles from where you stood."
+  },
+  {
+   "name": "Bolt Instinct",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. The next ability you use spends them all: you move and attack 3% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

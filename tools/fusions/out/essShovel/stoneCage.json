@@ -1,0 +1,76 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Through the Bars",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "maxMult": 1.5,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Jabs the blade out at arm's length for 4 damage, rising to 1.5 times that at its full reach of 3 tiles, with a 25% chance to leave the target [Pinned] for 1 second."
+  },
+  {
+   "name": "Oubliette",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.4,
+   "desc": "Opens the ground under every enemy within 3 tiles and shuts it over them, dealing 14 earth damage and stunning them for 1.4 seconds."
+  },
+  {
+   "name": "Buried to the Neck",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "earth",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.5,
+   "desc": "Packs earth around every creature within 3 tiles, holding them in place for 3 seconds."
+  },
+  {
+   "name": "Bolt-Hole",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything but fire, you drop behind a shield worth 20% of your maximum health for 4 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Link to Link",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 3,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Sends a bite into the first enemy it meets that deals 11 poison damage and leaves it [Poisoned] for 2 damage a second for 5 seconds. It then leaps to 3 more enemies within 4 tiles for 60% of that, and your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "End of the Tether",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Usable only on an enemy carrying one of your afflictions, and uses one of them up. A lash at up to 6 tiles deals 9 damage, rising to 1.5 times that at full reach, and wraps the target so it moves 30% slower for 2 seconds."
+  },
+  {
+   "name": "Dragging Loops",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "desc": "Lays a line of loops 6 tiles long ahead of you for 5 seconds that drags every enemy near it inward."
+  },
+  {
+   "name": "Whispered Onward",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "desc": "Each time you inflict a condition, a bolt leaps to the nearest enemy within 4 tiles and deals 5 damage. Once every 3 seconds."
+  }
+ ]
+}

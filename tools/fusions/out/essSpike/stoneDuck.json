@@ -1,0 +1,76 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneDuck",
+  "fusions": [
+    {
+      "name": "Sitting Target",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "consumeAffliction": true,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "dodgeDown",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Usable only on an enemy carrying one of your afflictions, and uses one of them up. A thrown quill deals 9 damage to the first enemy it meets within 6 tiles and leaves it [Leaden] for 5 seconds, so blows are harder for it to slip."
+    },
+    {
+      "name": "Muddied Water",
+      "kind": "active",
+      "category": "attack",
+      "template": "weakenRing",
+      "element": "water",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 16,
+      "range": 96,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.12,
+        "duration": 6
+      },
+      "slowPct": 0.2,
+      "knockback": 64,
+      "desc": "Churns the ground around you: it deals 10 damage to every enemy within 3 tiles, strips 12% armour for 6 seconds, slows each by 20% and knocks each back 2 tiles."
+    },
+    {
+      "name": "Preening Bill",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "water",
+      "cleanseCount": 2,
+      "healScope": "self",
+      "cooldown": 24,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 3
+      },
+      "desc": "You pick up to 2 conditions off yourself and move 15% faster for 3 seconds."
+    },
+    {
+      "name": "Returned to Sender",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "reflectWard",
+      "element": "water",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.25,
+      "buffDuration": 0,
+      "desc": "Each condition laid on you has a 25% chance to be sent back to whoever inflicted it instead."
+    }
+  ]
+}

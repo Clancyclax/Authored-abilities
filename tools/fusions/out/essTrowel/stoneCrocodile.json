@@ -1,0 +1,87 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Footing Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "stunOnHit": 1.6,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Clamps onto the target, which deals 14 damage, stuns it for 1.6 seconds and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Moat Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "maxMult": 1.5,
+   "ignoreArmor": true,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Lunges at a target up to 5 tiles away, which deals 30 damage, rising to 1.5 times that at full reach. It ignores armour."
+  },
+  {
+   "name": "Flagstone Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1-second cast, sets a trap at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles sets it off: it deals 22 damage and leaves the enemy [Pinned] for 3 seconds."
+  },
+  {
+   "name": "The Long Set",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Tassel Feint",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 112,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrust behind a flicked tassel that deals 4 damage and leaves the target 6% easier to wound for 4 seconds, with a 35% chance to leave it [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Colours Aloft",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Sweeps the shaft in a full circle that deals 26 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Pitched Pavilion",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "physical",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Pitches canvas over the grounded shaft where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3.5 tiles."
+  },
+  {
+   "name": "Pennon Below the Blade",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 4,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 12
+    }
+   ],
+   "desc": "Conjures a pennon tied below the blade: your critical chance rises by 4%, your critical hits deal 10% more damage, your maximum health rises by 12, and each kill restores 4 health."
+  }
+ ]
+}

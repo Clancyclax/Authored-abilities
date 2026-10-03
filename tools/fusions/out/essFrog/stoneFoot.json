@@ -1,0 +1,76 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Miles in the Legs",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "knockback": 80,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Spits a clot of pond water that hits the first enemy in its path for 12 damage and knocks it back 2.5 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Churned Track",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Kicks up a strip of mud 5 tiles long ahead of you that lasts 6 seconds. It deals 6 damage to each enemy that crosses it and slows it by 20% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Long Haul",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 60,
+   "speedMult": 1.2,
+   "buffDuration": 20,
+   "blinkOnUse": 64,
+   "desc": "Increases your movement speed by 20% for 20 seconds. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Rest Between Hops",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "Every few paces you cover, you restore 5 stamina. Once every 6 seconds."
+  }
+ ]
+}

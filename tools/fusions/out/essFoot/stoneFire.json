@@ -1,0 +1,87 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Kicked Embers",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 96,
+   "desc": "Kicks live embers at the first enemy ahead, dealing 12 damage and setting it [Burning] for 2 damage a second for 4 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Cometfall",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "range": 192,
+   "maxMult": 1.4,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Leaps feet-first at a target up to 6 tiles away, dealing 30 damage, up to 1.4 times that from the full distance, and ignoring its resistances. It sets the target [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Cinders in Your Wake",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 2
+   },
+   "desc": "Lays a line of flame 6 tiles long for 5 seconds. Anything that crosses it is set [Burning] for 3 damage a second for 4 seconds. You move 20% faster for 2 seconds."
+  },
+  {
+   "name": "Coal-Walker",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "fire",
+   "moveSpeedPct": 0.06,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "You move 6% faster, and your fire resistance rises by 15%."
+  }
+ ]
+}

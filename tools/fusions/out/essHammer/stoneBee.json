@@ -1,0 +1,90 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Scatter of Brads",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 7,
+   "range": 200,
+   "isAoe": true,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives 3 barbed nails out in a spread, each dealing 5 damage with a 50% chance to leave its target [Poisoned] for 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Stinger Driven Home",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 96,
+   "desc": "A weapon strike that deals 12 damage and leaves the target [Poisoned] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Tinkers' Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1-second cast, calls a swarm for 15 seconds that taps at an enemy within 4 tiles for 3 damage every second, each tap with a 30% chance to leave it [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Cobbler's Tempo",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

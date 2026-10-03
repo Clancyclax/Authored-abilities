@@ -1,0 +1,88 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "strikes": 1,
+   "name": "Night Sip",
+   "element": "dark",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.15,
+   "desc": "A quick bite that deals 4 dark damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and heals you for 15% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "isAoe": true,
+   "speed": 340,
+   "radius": 6,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "name": "Many Small Mouths",
+   "element": "shadow",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "range": 192,
+   "reachUnits": 192,
+   "chargesMax": 4,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 4,
+    "label": "Digesting"
+   },
+   "desc": "Looses 3 bats at once, spread apart, each dealing 5 shadow damage. 20% of the damage dealt returns to you as healing over 4 seconds. Holds 4 charges, and each kill restores one."
+  },
+  {
+   "name": "Dark Roost",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 9,
+   "stealthScope": "party",
+   "healOnUse": 10,
+   "cooldown": 24,
+   "desc": "Veils you and your allies for 6 seconds and restores 10 health. While veiled, enemies notice you 60% later and you move 10% faster. The veil breaks the moment you attack."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "element": "dark",
+   "dodgeBonus": 0.06,
+   "desc": "When your health falls below half, you heal for 25% of all damage you deal for 6 seconds. Once every 20 seconds. You gain 6% dodge chance.",
+   "name": "Thirst at Dusk"
+  }
+ ]
+}

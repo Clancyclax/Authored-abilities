@@ -1,0 +1,87 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Last Straw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "cooldown": 70,
+   "base": 26,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A horn-first shove that deals 26 damage, ignores armour, and leaves the target 15% easier to wound and [Poisoned] for 8 seconds. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Warning Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "basic",
+   "cooldown": 1,
+   "base": 4,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps a forefoot, dealing 4 damage to every enemy within 2.5 tiles with a 25% chance to leave each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Stands in the Road",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 4,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Slow to Rile",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack, 36% at full, for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

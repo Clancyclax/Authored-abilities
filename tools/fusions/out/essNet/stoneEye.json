@@ -1,0 +1,94 @@
+{
+ "essence": "essNet",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Threaded Glance",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.45,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weighted cord threaded through a gap in the target's guard that deals 4 damage, rising to 1.6 times that at its full reach of 6 tiles, and slows it by 20% for 2 seconds, with a 45% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Seeker's Mesh",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mesh around you in which every knot finds a weak spot, dealing 26 damage to every enemy within 3.5 tiles. Every hit is a critical hit and leaves its target [Marked] for 8 seconds."
+  },
+  {
+   "name": "Watching Knot",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets down a knot of mesh with a lidless gaze for 12 seconds. It strikes an enemy within 3 tiles for 3 damage every second, each strike with a 35% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Sharper Each Blink",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "crit",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a critical hit, a watching knot opens on you, up to 6. The next ability you use spends them all: you deal 6% more damage per knot (36% at full) for 6 seconds. Unfed, a knot fades every 6 seconds."
+  }
+ ]
+}

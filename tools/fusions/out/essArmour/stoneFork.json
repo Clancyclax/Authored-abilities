@@ -1,0 +1,78 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "desc": "Thrusts a prong at the first enemy, dealing 7 damage, then forks to 1 more enemy within 3 tiles for 70% of the damage. Holds 3 charges; a kill gives one back.",
+   "cooldown": 1,
+   "chargesMax": 3,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "base": 7,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Pin Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "desc": "Drives a tine through the target's armour into the ground: deals 30 damage plus 5% of a boss's or elite's maximum health, leaves it 20% easier to wound for 8 seconds and [Pinned] for 3 seconds.",
+   "base": 30,
+   "cooldown": 90,
+   "range": 84,
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Both Flanks",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "desc": "Pulls up to 6 enemies within 7 tiles onto you for 6 seconds.",
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "cooldown": 24
+  },
+  {
+   "name": "Second Road",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands.",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8
+  }
+ ]
+}

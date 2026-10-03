@@ -1,0 +1,76 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "role": "basic",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "spammable": true,
+   "name": "Rust Bloom",
+   "element": "water",
+   "base": 4,
+   "cooldown": 0.9,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wet slap that deals 4 damage and rusts the target's armour, leaving it 10% easier to wound for 8 seconds, with a 40% chance to leave it [Soaked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "role": "long",
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Breaching Hull",
+   "element": "blunt",
+   "base": 30,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "desc": "Breaches and comes down on every enemy within 3.5 tiles, dealing 30 damage that ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "name": "Barnacled Plating",
+   "element": "physical",
+   "buffDuration": 9,
+   "thornsFrac": 0.4,
+   "lifeOnKill": 5,
+   "cooldown": 30,
+   "desc": "For 9 seconds, 40% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Laminate Hide",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (34% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

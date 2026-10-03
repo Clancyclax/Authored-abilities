@@ -1,0 +1,80 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Correct Pronunciation",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "long",
+   "base": 7,
+   "cooldown": 80,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 460,
+   "radius": 6,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "isAoe": true,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 bolts at once, spread apart, each dealing 7 damage that ignores resistances, with a 50% chance per hit to leave the target [Stalled] for 6 seconds."
+  },
+  {
+   "name": "Closing Clause",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 14,
+   "speed": 480,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Fires a bolt that hits the first enemy in its path for 15 damage and uses up every affliction you have on it, dealing 60% more damage for each one."
+  },
+  {
+   "name": "Practiced Croak",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 50,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your cast speed by 30% for 15 seconds."
+  },
+  {
+   "name": "Margin Note",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When one of your afflictions runs out, your next spell deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

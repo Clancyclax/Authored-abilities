@@ -1,0 +1,86 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Rote Tripline",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a prepared snare that deals 8 damage, with a 25% chance to leave the target [Pinned] for 1.5 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Sprung by the Book",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs every snare set around you in a burst that deals 28 damage to every enemy within 3 tiles and leaves each [Slowed] for 3 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Thrice-Set Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDmg": 12,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 3,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "desc": "Sets jaws at the nearest enemy that arm after 0.5 seconds and wait up to 20 seconds. The trap deals 12 damage to each of the first 3 enemies to come within 2 tiles, resetting itself after each."
+  },
+  {
+   "name": "Follow-Up Drill",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 2
+   },
+   "desc": "When you put a condition on an enemy, your next 2 abilities deal 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

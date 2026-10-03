@@ -1,0 +1,73 @@
+{
+ "essence": "essFish",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Gentle Press",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.16,
+    "duration": 2
+   },
+   "desc": "A slow swell that deals 3 damage to every enemy within 3 tiles. Anything struck moves 16% slower for 2 seconds."
+  },
+  {
+   "name": "Slow Squeeze",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 18,
+   "range": 86,
+   "stunOnHit": 1.0,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "A heavy blow that deals 13 damage, stuns the target for 1 second and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Slack Tide",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 300,
+   "freezeDuration": 4,
+   "freezeRadius": 192,
+   "aoeBand": "huge",
+   "desc": "Holds every creature within 6 tiles in place for 4 seconds."
+  },
+  {
+   "name": "Unhurried",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "When your health falls below 50%, healing you receives is 40% stronger for 8 seconds. Once every 45 seconds."
+  }
+ ]
+}

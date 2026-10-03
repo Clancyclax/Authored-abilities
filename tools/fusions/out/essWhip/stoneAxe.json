@@ -1,0 +1,78 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Headsman's Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Drops a bladed tip on an enemy at or below 25% health up to 6 tiles away, which deals 24 damage, up to 1.5 times that at full reach."
+  },
+  {
+   "name": "Felling Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Swings the bladed tip in a full circle that deals 13 damage to every enemy within 3.5 tiles and leaves each [Bleeding] for 3 damage a second for 5 seconds. Your afflictions on each one spread to the enemies within 3.5 tiles of it."
+  },
+  {
+   "name": "Honed Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Edges the tip of your lash: your critical hits deal 30% more damage for 12 seconds."
+  },
+  {
+   "name": "Rope-Dart Bit",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.14,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a lash with a bladed head for a tip: your weapon damage rises by 14%, your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

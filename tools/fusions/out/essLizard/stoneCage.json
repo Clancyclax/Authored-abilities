@@ -1,0 +1,79 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lockjaw",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "template": "sunderStrike",
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "stunOnHit": 1.4,
+   "desc": "A bite that deals 13 damage, stuns the target for 1.4 seconds and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Left in the Trap",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.2,
+   "template": "aoeRing",
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. Drops your tail where you stand; its thrashing deals 8 damage to every enemy within 2.5 tiles, with a 40% chance of [Pinned] for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "name": "Everything Holds Still",
+   "element": "physical",
+   "freezeDuration": 2,
+   "freezeRadius": 96,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 60,
+   "desc": "Holds every creature within 3 tiles in place for 2 seconds."
+  },
+  {
+   "name": "The Door Swings Shut",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "Each time you afflict something, your next strike has 15% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

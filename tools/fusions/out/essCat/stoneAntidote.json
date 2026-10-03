@@ -1,0 +1,74 @@
+{
+ "essence": "essCat",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lancing Claw",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "desc": "Claws an enemy that carries one of your afflictions for 8 damage, using up that affliction and stripping 5% of its armour for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "radius": 7,
+   "speed": 360,
+   "name": "Bitter Spit",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hisses a glob of bitter spit at the first enemy in line for 4 damage, with a 35% chance to leave it [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Licked Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes up to 2 poison conditions from you and restores 10 health."
+  },
+  {
+   "name": "Acquired Taste",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 10%. Your poison resistance rises by 15%."
+  }
+ ]
+}

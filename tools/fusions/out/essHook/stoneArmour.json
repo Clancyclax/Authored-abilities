@@ -1,0 +1,67 @@
+{
+ "essence": "essHook",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Peel the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "Catches a plate and tears it away, dealing 30 damage that ignores armour and leaving the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Lowered Shields",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags the barb across the guard of every enemy within 3 tiles, dealing 4 damage, with a 35% chance per hit to leave them [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Barbed Pauldrons",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "buffDuration": 10,
+   "thornsFrac": 0.6,
+   "cooldown": 30,
+   "desc": "For 10 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Gap Finder",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "physical",
+   "pierceElement": "physical",
+   "armorIgnore": 0.15,
+   "cooldownReduction": 0.04,
+   "desc": "Your physical attacks ignore 15% of the target's armour, and your other abilities come round 4% sooner."
+  }
+ ]
+}

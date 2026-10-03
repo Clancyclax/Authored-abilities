@@ -1,0 +1,96 @@
+{
+ "essence": "essEye",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Head-Down Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 112,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A charge that deals 12 damage to everything in a cone 3.5 tiles ahead, knocks each enemy back 3 tiles and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Lowered Brow",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "spammable": true,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A butt that deals 7 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds, with a 25% chance to leave it [Marked] for 6 seconds. Anything struck moves 20% slower for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Dig In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you and holds their attention for 6 seconds."
+  },
+  {
+   "name": "Planted Hooves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.35,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, a shield worth 20% of your maximum health closes over you for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essWind",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Snap at the Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A snap carried on the breeze that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Marked] for 5 seconds."
+  },
+  {
+   "name": "Howl Sent Ahead",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A howl carried 5 tiles ahead of you in a cone that deals 26 damage to everything in it. If it hits, every ally deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Coursing Hound",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDuration": 15,
+   "summonDmg": 4,
+   "summonRange": 64,
+   "summonInterval": 1.2,
+   "castTime": 0.5,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Calls a hound to your side for 15 seconds; it bites enemies within 2 tiles for 4 damage every 1.2 seconds. You move 15% faster for 5 seconds."
+  },
+  {
+   "name": "The Long Chase",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover raises your physical damage by 20% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

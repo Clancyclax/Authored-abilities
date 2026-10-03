@@ -1,0 +1,74 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pack Rush",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 192,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Rushes to an enemy up to 6 tiles away and swings, dealing 11 damage to every enemy within 2.5 tiles. Its damage rises 10% for each ally near you, up to 40%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Worrying Bite",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Worries at an open wound for 8 damage, leaving the target [Bleeding] for 2 damage a second for 3 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Fetch It Back",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Woodsman's Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "piercing",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Hound",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A bonded hound fights beside you, biting an enemy within 4.5 tiles every 1.2 seconds for 4 damage and leaving it [Bleeding] for 1 damage a second for 3 seconds."
+  }
+ ]
+}

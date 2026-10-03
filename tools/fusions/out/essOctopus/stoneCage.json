@@ -1,0 +1,80 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Slammed Gate",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings your arms shut on everything in a cone 4 tiles ahead, dealing 10 damage, stunning each enemy for 1 second and leaving it [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "Shrinking Cell",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes every arm around a weakened enemy and tightens for 22 damage, leaving it 12% easier to wound and [Inescapable] for 6 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "No Way Past",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 2.5,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "Holds every creature within 3 tiles in place for 2.5 seconds."
+  },
+  {
+   "name": "No Slipping Free",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "physical",
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 8% physical resistance.",
+   "resist": {
+    "element": "physical",
+    "amount": 0.08
+   }
+  }
+ ]
+}

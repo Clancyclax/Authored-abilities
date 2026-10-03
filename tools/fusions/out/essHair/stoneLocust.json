@@ -1,0 +1,80 @@
+{
+ "essence": "essHair",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Swarm Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 4,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 4,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Casts a strand that deals 3 damage to the first enemy it meets, then hops to 4 more enemies within 3 tiles, each hit dealing 50% of the original damage."
+  },
+  {
+   "name": "Stripped Field",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Sweeps strands round you, dealing 30 damage to every enemy within 3.5 tiles and ignoring their resistances."
+  },
+  {
+   "name": "Chewing Mat",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a mat of gnawing strands for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Leave Nothing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

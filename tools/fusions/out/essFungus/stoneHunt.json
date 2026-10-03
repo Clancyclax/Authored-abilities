@@ -1,0 +1,84 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Scent Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Needs one of your afflictions on the target and uses it up. A strike that deals 9 damage, leaves the target 10% easier to wound for 4 seconds, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Run Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Usable only on a target at or below 30% health. A strike that deals 24 damage and leaves the target [Poisoned] for 3 damage a second for 4 seconds. You move 20% faster for 4 seconds after."
+  },
+  {
+   "name": "Stalking Veil",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "nature",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Veils you for 8 seconds and restores 10 health. Enemies notice you far later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Quarry's Due",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

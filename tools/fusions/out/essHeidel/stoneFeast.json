@@ -1,0 +1,83 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cropping Sweep",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "leech": 0.2,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You crop through everything in a 2-tile arc ahead, dealing 7 damage and healing you for 20% of the damage dealt. Each hit has a 30% chance of [Fatigued] for 5 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Mouthful",
+   "template": "stackStrike",
+   "element": "blood",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "leech": 0.3,
+   "desc": "A trampling stamp on a target at or below 25% health for 18 damage, consuming every affliction on it and adding 1.4 times their remaining damage. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Nosebag for All",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "healAmount": 12,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 20,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Restores 12 health to you and every ally within 3.5 tiles, and more the faster you cast. Your movement speed rises 15% for 6 seconds after you use it."
+  },
+  {
+   "name": "Full Belly, Long Road",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Whenever you are healed, you restore 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

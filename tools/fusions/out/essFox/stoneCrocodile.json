@@ -1,0 +1,81 @@
+{
+ "essence": "essFox",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Limping Lure",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "hpCostPct": 0.05,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. A snapping bite that deals 9 damage, leaves the target 10% easier to wound for 4 seconds and has a 30% chance to leave it [Pinned] for 1.5 seconds. Its damage rises 8% for every 10% of your own health already gone (max 40%)."
+  },
+  {
+   "name": "Shallows Ambush",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.6,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges out through a cone 3 tiles long, dealing 30 damage to everything in it. Every hit is a critical hit, with a 60% chance to leave each target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Sham Tears",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Feigned distress pulls up to 4 enemies within 6 tiles onto you and holds their attention for 5 seconds."
+  },
+  {
+   "name": "Weakest at the Bank",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.04,
+   "desc": "Against enemies below half health, you deal 12% more damage. You gain 4% dodge chance."
+  }
+ ]
+}

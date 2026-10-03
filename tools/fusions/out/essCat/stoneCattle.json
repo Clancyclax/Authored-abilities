@@ -1,0 +1,78 @@
+{
+ "essence": "essCat",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gathered Haunches",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 20,
+   "cooldown": 15,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "castTime": 1.2,
+   "desc": "After a 1.2 second wind-up, gores a cone 2.5 tiles long, dealing 20 damage to everything in it and tossing them back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Out of the Herd",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "chargesMax": 3,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Slips out from beside your allies to claw an enemy for 7 damage, plus 10% for each ally beside you (max +30%), and strips 5% of its armour for 3 seconds. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Sun-Warmed Straw",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "life",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "For 8 seconds, the ground within 3 tiles of where you stood restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Slow Second Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

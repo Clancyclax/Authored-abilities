@@ -1,0 +1,75 @@
+{
+ "essence": "essEye",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Dead Reckoning",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 40,
+   "cooldown": 120,
+   "range": 448,
+   "reachUnits": 448,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "bossPct": 0.05,
+   "desc": "Fires a shot that deals 40 damage, up to 2 times that at its maximum reach of 14 tiles. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Muzzle Flash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A flash and report in a cone 4 tiles ahead that deals 14 damage to everything in it, stuns each enemy for 1 second and leaves it [Muddled] for 6 seconds."
+  },
+  {
+   "name": "Sighted Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 90,
+   "rangeMult": 1.5,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 50% further."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

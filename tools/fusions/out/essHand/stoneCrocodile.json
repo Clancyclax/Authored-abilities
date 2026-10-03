@@ -1,0 +1,80 @@
+{
+ "essence": "essHand",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 86,
+   "desc": "Grips the target and twists for 18 damage, leaving it 15% easier to wound for 6 seconds. It uses up every affliction you have on the target and deals 60% more damage for each one."
+  },
+  {
+   "name": "Drowning Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps both hands onto the target for 30 damage, leaving it [Pinned] for 2 seconds and [Bleeding] for 3 damage a second for 5 seconds. The hit is always a critical hit.",
+   "guaranteedCrit": true
+  },
+  {
+   "name": "Hair-Trigger Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Sets a jaw trap at the nearest enemy. It waits up to 30 seconds and deals 22 damage to the first enemy to come within 2 tiles."
+  },
+  {
+   "name": "Never Lets Go",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

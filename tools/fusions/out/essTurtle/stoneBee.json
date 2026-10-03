@@ -1,0 +1,89 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Foragers Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 4,
+    "label": "Reprieve"
+   },
+   "desc": "Sends 3 foragers out from the hive in your shell in a spread out to 6 tiles; each one deals 3 damage. 20% of the damage dealt comes back to you as healing over 4 seconds."
+  },
+  {
+   "name": "Barb Left Behind",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 12,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Fires a barbed sting that deals 10 damage to the first enemy it meets and stays in the wound, leaving it [Poisoned] for 2 damage a second for 12 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Open Comb",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 36,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.2,
+    "duration": 7
+   },
+   "desc": "Opens a honeycomb field within 3 tiles of where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it. For 7 seconds a swarm fights beside you, striking for 4 every 1.2 seconds."
+  },
+  {
+   "name": "Colony Aboard",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Shell Swarm",
+   "lifeOnKill": 2,
+   "desc": "A bonded swarm fights beside you, striking for 3 damage every 1.2 seconds. Each kill restores 2 health."
+  }
+ ]
+}

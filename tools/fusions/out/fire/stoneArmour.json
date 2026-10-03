@@ -1,0 +1,82 @@
+{
+ "essence": "fire",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Melt Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A weapon strike that deals 30 damage, ignores armour and sets the target [Burning] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Struck Sparks",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 80,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Throws sparks in a cone that deals 4 damage to everything within 2.5 tiles ahead of you. Each hit has a 30% chance to leave the target [Sundered], its armour softened, for 5 seconds."
+  },
+  {
+   "name": "Annealed Barrier",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "fire",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 5
+   },
+   "desc": "Raises a barrier that absorbs the next 22 damage and holds for 6 seconds, and raises your armour by 10% while it holds. For the first 5 seconds, it burns your enemies for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Tempered Mail",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "fire",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "itemBuffs": [],
+   "thornsFrac": 0.12,
+   "desc": "Conjures a suit of armour: every hit you take deals 2 less damage, your armour rises by 10%, and 12% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

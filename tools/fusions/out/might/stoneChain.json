@@ -1,0 +1,92 @@
+{
+ "essence": "might",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Link to Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "desc": "Lashes the first enemy in line with a blow that deals 4 damage, and the force carries on to 2 more enemies within 3 tiles for 70% of that each."
+  },
+  {
+   "name": "Whole Length Swung",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings the full length in a circle. It deals 28 damage to every enemy within 4 tiles, ignoring their armour, with a 50% chance to leave each [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Hauled In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "Anchors a 5-tile length ahead of you for 6 seconds that drags every enemy near it inward and slows those it catches by 25% for 3 seconds."
+  },
+  {
+   "name": "Barbed Flail",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "physical",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a weighted flail of barbed links. Your weapon damage rises by 12% and you attack 5% faster, and every strike with it makes the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

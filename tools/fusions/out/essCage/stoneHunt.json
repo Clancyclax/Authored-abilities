@@ -1,0 +1,81 @@
+{
+ "essence": "essCage",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A closing blow that deals 24 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. It leaves the target [Inescapable] for 4 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Quarry Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 160,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Draws a ring 5 tiles wide around you that deals 14 damage to every enemy in it and leaves each [Marked] for 8 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Baying Pack",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 80,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 25
+   },
+   "castTime": 0.5,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further. A pack of hounds fights beside you for 25 seconds, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Scent Bound",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage. Your armour rises by 5%."
+  }
+ ]
+}

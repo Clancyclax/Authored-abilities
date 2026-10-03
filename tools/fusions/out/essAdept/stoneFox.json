@@ -1,0 +1,76 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Find the Lady",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "confuse": {
+    "chance": 0.2,
+    "duration": 2.5
+   },
+   "desc": "Flicks out 3 cards at once, spread apart. Each card deals 3 damage, with 30% more critical chance against a target that has not been hurt yet and a 20% chance to turn it against its allies for 2.5 seconds.",
+   "openerCrit": {
+    "amount": 0.3
+   }
+  },
+  {
+   "name": "The Long Con",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A thrown blade that deals 16 damage to the first enemy it meets, uses up every affliction you have on it and deals 60% more damage for each one used."
+  },
+  {
+   "name": "Come and Catch Me",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "desc": "Increases your dodge chance by 25% for 10 seconds, and pulls up to 4 enemies within 5 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Already Fooled",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 12%."
+  }
+ ]
+}

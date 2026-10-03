@@ -1,0 +1,82 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Long Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Fires a single shot that deals 30 damage to the first enemy it meets, with 40% more critical chance against a target that has not been hurt yet. It is always a critical hit."
+  },
+  {
+   "name": "Powder Flash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Looses a blast 5 tiles ahead of you that deals 12 damage to everything in it, stuns them for 1 second and leaves them [Muddled] for 5 seconds. You move 25% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Sight Down the Road",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "cooldown": 90,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Shot on the Run",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 256
+   },
+   "desc": "Each time you spend stamina, a shot snaps to the nearest enemy within 8 tiles, dealing 5 damage. Once every 5 seconds."
+  }
+ ]
+}

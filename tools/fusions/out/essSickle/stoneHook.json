@@ -1,0 +1,81 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Deep-Set Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "bossPct": 0.05,
+   "range": 224,
+   "maxMult": 2,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A barbed cut on a target up to 7 tiles away that deals 30 damage, rising to twice that at full reach, and leaves it [Bleeding] for 8 seconds. Against a boss or elite it also takes 5% of its maximum health."
+  },
+  {
+   "name": "Rip It Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Needs one of your afflictions on the target and uses it up. A tearing cut that deals 9 damage, leaves the target 12% easier to wound for 5 seconds and heals you for 25% of the damage dealt."
+  },
+  {
+   "name": "Reel Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Hooks up to 4 enemies within 8 tiles and pulls them onto you for 6 seconds."
+  },
+  {
+   "name": "Barb in the Flesh",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "When you inflict a condition, your next strike gains 30% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

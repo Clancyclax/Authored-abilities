@@ -1,0 +1,69 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Rammed Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 520,
+   "radius": 5,
+   "chargesMax": 5,
+   "desc": "Fires a cloth-wadded ball that deals 8 damage to the first enemy it meets. It holds 5 charges, and a kill gives one back."
+  },
+  {
+   "name": "Flash Cartridge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "desc": "Bursts a rag-stoppered charge in a cone 4 tiles ahead, dealing 12 damage to everything caught in it and knocking it back 2.5 tiles."
+  },
+  {
+   "name": "Powder Smoke",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later. The veil breaks when you attack."
+  },
+  {
+   "name": "Reloaded Pouch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you kill an enemy, your next spell deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

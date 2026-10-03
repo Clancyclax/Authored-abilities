@@ -1,0 +1,73 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Hamstring",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "Usable only on an enemy at or below 25% health. It deals 18 slashing damage and uses up every affliction you have on the target, adding 1.5 times their remaining damage."
+  },
+  {
+   "name": "Scything Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a fan of cuts 3 tiles ahead that deals 4 slashing damage to everything in it, with a 30% chance to leave each hit [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Cut as it Passes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Finding the Gap",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies below half health, you deal 15% more damage."
+  }
+ ]
+}

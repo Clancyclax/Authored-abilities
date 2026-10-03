@@ -1,0 +1,84 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stinging Grit",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "base": 6,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You kick back 3 spreading sprays of stinging grit, each dealing 6 damage with a 30% chance of [Poisoned] for 6 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Carried Swarm",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "maxMult": 1.5,
+   "range": 128,
+   "cooldown": 14,
+   "spreadAfflictions": 112,
+   "desc": "A kick at a target up to 4 tiles away that deals 10 damage, rising to 1.5 times that at full range. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Forager's Stint",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 8
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds, and your movement speed rises 15% for 8 seconds."
+  },
+  {
+   "name": "Never Idle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "desc": "Each time you spend stamina, a sting flies to the nearest enemy within 6 tiles, dealing 6 damage. Once every 3 seconds."
+  }
+ ]
+}

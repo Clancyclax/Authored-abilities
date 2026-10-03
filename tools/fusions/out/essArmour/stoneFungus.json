@@ -1,0 +1,86 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "desc": "Bursts spores over every enemy within 3 tiles, dealing 9 damage and leaving each [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each spread to every enemy within 3.5 tiles.",
+   "base": 9,
+   "cooldown": 16,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Seeding Pellet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "desc": "Fires a spore pellet that deals 4 damage, with a 30% chance to leave the target [Diseased] for 6 seconds.",
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "base": 4,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Lichen Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and each of them is left [Poisoned] for 2 damage a second for 4 seconds.",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "cooldown": 30
+  },
+  {
+   "name": "Fruiting Crust",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 10 seconds.",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   }
+  }
+ ]
+}

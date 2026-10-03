@@ -1,0 +1,73 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Crack from the Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a shot from the waterline that deals 30 damage to the first enemy it meets. It is always a critical hit and leaves the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Pellet Spread",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 12,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 480,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "knockback": 64,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Looses 5 pellets at once, spread apart, each dealing 6 damage and knocking its target back 2 tiles. They have 40% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.3,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Increases your critical hit chance by 30% for 15 seconds."
+  },
+  {
+   "name": "Past the Armour",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "piercing",
+   "pierceElement": "piercing",
+   "armorIgnore": 0.15,
+   "desc": "Your piercing attacks ignore 15% of the target's armour."
+  }
+ ]
+}

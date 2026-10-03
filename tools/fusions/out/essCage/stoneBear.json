@@ -1,0 +1,85 @@
+{
+ "essence": "essCage",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Crushing Embrace",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.35,
+    "duration": 3
+   },
+   "desc": "You rush up to 6 tiles to the target and crush it in a weapon strike for 12 damage. It is left [Bleeding] for 2 damage a second for 4 seconds and moves 35% slower for 3 seconds."
+  },
+  {
+   "name": "Pinned Beneath",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Mauls everything in a cone 3 tiles long, dealing 28 damage plus 5% of a boss's or elite's maximum health and leaving each enemy caught [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Winter Den Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.3,
+   "buffDuration": 12,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 30% and your physical resistance by 10% for 12 seconds."
+  },
+  {
+   "name": "Goaded Temper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

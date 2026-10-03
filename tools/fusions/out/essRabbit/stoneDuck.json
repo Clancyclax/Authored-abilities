@@ -1,0 +1,82 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Churned Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks up a wake of water 2.5 tiles ahead of you, dealing 3 water damage to everything in it with a 30% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Skimmed Sheet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 9,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Kicks a sheet of water that deals 12 water damage to the first enemy it meets, throws it back 2.5 tiles and leaves it [Soaked] for 6 seconds. You move 15% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 6,
+   "cooldown": 30,
+   "desc": "For 6 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Paddling Underneath",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "water",
+   "moveSpeedPct": 0.08,
+   "resist": {
+    "element": "water",
+    "amount": 0.1
+   },
+   "desc": "You move 8% faster, and you have 10% water resistance."
+  }
+ ]
+}

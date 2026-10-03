@@ -1,0 +1,69 @@
+{
+ "essence": "essBear",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Venom Wrung Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "executeLadder": true,
+   "range": 72,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Only strikes a target at or below 25% health, and that threshold rises with each rank. You squeeze it for 20 damage and wring out every affliction on it, adding 1.5 times the damage they had left to deal."
+  },
+  {
+   "name": "Bilious Bellow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 128,
+   "coneAngle": 0.8,
+   "knockback": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bellows a cone of bile 4 tiles long, dealing 12 damage to everything in it and knocking it back 2.5 tiles. Each hit has a 60% chance to leave the target [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Sweat It Out",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Removes up to 2 poison conditions from you and restores 12 health."
+  },
+  {
+   "name": "Bitter Hide",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "desc": "Each affliction laid on you has a 20% chance to be sent back to whoever laid it."
+  }
+ ]
+}

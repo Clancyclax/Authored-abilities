@@ -1,0 +1,72 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Dig at the Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "consumeAffliction": true,
+   "desc": "Drives the blade in where you marked for 9 damage and leaves the target 15% easier to wound for 6 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Survey Pegs",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws 3 survey pegs at once, spread apart, each dealing 3 damage with a 50% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Sighted Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "rangeMult": 1.18,
+   "buffDuration": 20,
+   "desc": "Raises the reach of your attacks and spells by 30% for 20 seconds."
+  },
+  {
+   "name": "Staked Claim",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

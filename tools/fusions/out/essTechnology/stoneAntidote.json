@@ -1,0 +1,71 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Draw the Dose",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 0.6,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Usable only on an enemy carrying one of your afflictions. A pump-needle that deals 8 damage, draws your afflictions out of the target and adds 0.6 times their remaining damage to the blow."
+  },
+  {
+   "name": "Final Draught",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "leech": 0.3,
+   "desc": "Usable only on an enemy at or below 25% health. Fires a hollow needle that deals 20 damage and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Belt Syrette",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 12,
+   "desc": "Spring-loaded injectors remove up to 3 poison conditions from you and your allies, and restore 12 health."
+  },
+  {
+   "name": "Backflow Valve",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it instead. Your poison resistance rises by 10%."
+  }
+ ]
+}

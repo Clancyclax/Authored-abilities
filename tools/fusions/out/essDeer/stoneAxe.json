@@ -1,0 +1,76 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Felling Leap",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1.6,
+   "chargeTo": 192,
+   "desc": "Bounds onto an enemy up to 6 tiles away and chops down, dealing 15 slashing damage, rising to 1.6 times that at 6 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Notch",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.25,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Chops an enemy at or below 25% health for 22 slashing damage, leaving it 10% easier to wound for 4 seconds. Then your movement speed rises by 20% for 4 seconds."
+  },
+  {
+   "name": "Whetted on Bark",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 35,
+   "blinkOnUse": 64,
+   "desc": "You spring 2 tiles, and your slashing damage rises by 30% for 10 seconds."
+  },
+  {
+   "name": "Hewing Antlers",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a weapon. It increases your weapon damage by 10% and your movement speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

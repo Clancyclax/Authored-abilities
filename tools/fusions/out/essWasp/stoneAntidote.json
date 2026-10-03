@@ -1,0 +1,71 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Draw It Back Out",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 0.6,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Usable only on an enemy carrying one of your afflictions. A sting that deals 8 damage, draws your afflictions back out of the target and adds 0.6 times their remaining damage to the blow."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "No Known Cure",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Stings every enemy within 3 tiles. Each sting deals 26 damage that ignores resistances and leaves its target [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Returned Dose",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.6,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "Raises a ward for 10 seconds: each condition laid on you has a 60% chance to be sent back to whoever inflicted it."
+  },
+  {
+   "name": "Immune to Its Own",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 12% poison resistance."
+  }
+ ]
+}

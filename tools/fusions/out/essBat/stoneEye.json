@@ -1,0 +1,70 @@
+{
+ "essence": "essBat",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Every Wound Counted",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.5,
+   "leech": 0.2,
+   "desc": "Sends a dart of darkness into the first enemy in its path for 18 dark damage, using up every affliction you have on it for 50% more damage per affliction. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Scanning Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargesMax": 4,
+   "desc": "A sweep of clicks 4 tiles ahead of you deals 6 resonating damage to everything in it, with a 50% chance to leave each [Marked] for 6 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Pinning Stare",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "resonating",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.3,
+   "desc": "A fixed stare and a shriek hold every creature within 3 tiles in place for 2 seconds."
+  },
+  {
+   "name": "Two Kinds of Sight",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "At night, your dodge chance rises by 12%."
+  }
+ ]
+}

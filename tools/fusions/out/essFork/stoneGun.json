@@ -1,0 +1,69 @@
+{
+ "essence": "essFork",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Powder Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Fires a blast of shot through the tines, dealing 14 damage to everything within 4 tiles in front of you and knocking each back 3 tiles."
+  },
+  {
+   "name": "Sudden Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 480,
+   "radius": 8,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Fires a round that deals 30 damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Long Bore",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 120,
+   "rangeMult": 1.5,
+   "buffDuration": 30,
+   "desc": "For 30 seconds, your attacks and spells reach 50% further."
+  },
+  {
+   "name": "Smoke Trail",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "desc": "Each time you spend stamina, a shot flies to the nearest enemy within 8 tiles, dealing 6 damage. Once every 6 seconds."
+  }
+ ]
+}

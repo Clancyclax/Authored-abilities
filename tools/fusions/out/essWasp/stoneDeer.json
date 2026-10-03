@@ -1,0 +1,81 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wary Distance",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hits a target up to 7 tiles away: it deals 4 damage, rising to 1.6 times that at maximum range, with a 25% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Breaking Cover",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "A burst that deals 12 damage to every enemy within 3 tiles and knocks each back 2.5 tiles. You move 25% faster for 4 seconds after."
+  },
+  {
+   "name": "Skittish Zigzag",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "blinkOnUse": 96,
+   "desc": "You spring 3 tiles aside, and your dodge chance rises by 20% for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "name": "Startled Mend",
+   "element": "physical",
+   "dodgeBonus": 0.05,
+   "desc": "When your health falls below 50%, you regain 4 health a second for 6 seconds. Once every 30 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

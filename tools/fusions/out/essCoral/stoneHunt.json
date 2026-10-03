@@ -1,0 +1,82 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Run Down",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a barbed polyp after the first enemy it meets, dealing 7 damage and leaving it [Marked] for 6 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Corner the Quarry",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 24,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 340,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Looses 3 polyps spread apart, each dealing 24 damage. When one hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Held in the Shallows",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 120,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.2,
+    "duration": 6
+   },
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds. A line of polyps fights beside you for 6 seconds, striking for 4 every 1.2 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Wounded Prey",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "Against enemies below half health, you deal 12% more damage. Your armour rises by 5% at all times."
+  }
+ ]
+}

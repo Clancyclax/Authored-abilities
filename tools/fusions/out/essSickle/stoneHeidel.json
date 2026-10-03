@@ -1,0 +1,77 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Ridden Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "A cut on a target up to 7 tiles away that deals 22 damage, rising to 1.5 times that at full reach. Its damage rises +5% per 100 paces you have run since you last used it (max +30%). Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Hooves Over Furrows",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "knockback": 96,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sweeps a full circle that deals 12 damage to every enemy within 3.5 tiles, knocks each back 3 tiles and leaves it [Fatigued] for 6 seconds."
+  },
+  {
+   "name": "Headland Rest",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "healOnUse": 8,
+   "desc": "Restores 4 stamina a second for 6 seconds, and 8 health at once."
+  },
+  {
+   "name": "Draft Beast in Harness",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 96,
+   "familiarInterval": 1.8,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "mount": true,
+   "mountFamily": "beast",
+   "lifeOnKill": 3,
+   "desc": "A bonded heidel fights beside you, striking an enemy within 3 tiles for 4 damage every 1.8 seconds. You can ride it. Each kill restores 3 health to you."
+  }
+ ]
+}

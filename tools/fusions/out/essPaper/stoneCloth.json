@@ -1,0 +1,85 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "name": "Red Tape",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes a length of filing ribbon into the first enemy it meets for 4 damage. Each hit has a 40% chance to leave the target [Hindered] for 4 seconds, slowing its attacks."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "large",
+   "name": "Unspooled Chronicle",
+   "element": "arcane",
+   "role": "long",
+   "ignoreResist": true,
+   "base": 28,
+   "cooldown": 80,
+   "range": 192,
+   "coneAngle": 0.7,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Unrolls a woven scroll across a cone 6 tiles long, dealing 28 damage to every enemy in it. The damage ignores resistances, and each enemy hit is [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "name": "Field Dressing",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 30,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles. Its healing rises 1% for each 1% of cast speed you have."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 12,
+   "name": "Rag-Stock Cushion",
+   "element": "physical",
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

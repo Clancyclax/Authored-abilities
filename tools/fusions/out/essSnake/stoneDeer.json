@@ -1,0 +1,77 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Glancing Nip",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "A weapon strike that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 3 seconds. You spring away 15% faster for 2 seconds after using it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Frozen at the Rustle",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "A sudden strike that deals 10 damage to every enemy within 3 tiles and stuns each of them for 1.2 seconds."
+  },
+  {
+   "name": "Flight Response",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.35,
+   "buffDuration": 6,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 35% for 6 seconds and springs you 2 tiles from where you stood, with 10% more dodge chance while it lasts."
+  },
+  {
+   "name": "Stepped On",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

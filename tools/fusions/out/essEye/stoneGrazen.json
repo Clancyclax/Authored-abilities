@@ -1,0 +1,87 @@
+{
+ "essence": "essEye",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Closing Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Every enemy within 4 tiles takes 11 damage and is stunned for 0.8 seconds, with a 50% chance to be left [Marked] for 6 seconds. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%)."
+  },
+  {
+   "name": "Slow Regard",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Sends a bolt into the first enemy it meets, dealing 4 damage with a 30% chance to leave it [Hindered] for 4 seconds, its attacks slowed."
+  },
+  {
+   "name": "Herd Watch",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "nature",
+   "cooldown": 45,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.2,
+   "desc": "Every ally within 7 tiles strikes 20% harder for 12 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Calm Attention",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "While you are at full health, your next ability deals 25% more damage. Once every 12 seconds."
+  }
+ ]
+}

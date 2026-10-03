@@ -1,0 +1,87 @@
+{
+ "essence": "essLife",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Pinch the Wick",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "leech": 0.3,
+   "desc": "Usable only on a target at or below 30% health. It deals 18 damage and uses up every affliction on the target, adding 1.5 times the damage they had left to deal. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Funeral Pyre",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseBlast",
+   "element": "fire",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 288,
+   "corpse": true,
+   "explodeRadius": 112,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "leech": 0.2,
+   "desc": "Burns up the nearest body within 9 tiles in a burst that deals 14 damage plus 8% of that body's maximum health to every enemy within 3.5 tiles of it, knocks them back 3 tiles and sets them [Burning] for 3 damage a second for 4 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Fever Pitch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 8,
+   "cooldown": 30,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to its source as fire, setting it [Burning] for 2 damage a second for 4 seconds. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Salamander at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "fire",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.4,
+   "familiarFamily": "salamander",
+   "familiarCreatureName": "Salamander",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "regenPerSec": 1,
+   "desc": "A bonded salamander fights beside you, striking enemies within 4.5 tiles for 4 damage every 1.4 seconds and setting them [Burning] for 2 damage a second for 4 seconds. You regenerate 1 health a second."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split the Row",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "spreadAfflictions": 128,
+   "desc": "Looses 2 curved blades spread apart, each dealing 9 damage. Your afflictions on a target they hit spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Driven Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "ignoreArmor": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives a pronged blade into a target up to 6 tiles away that deals 30 damage, rising to 1.5 times that at full reach. It ignores armour and leaves the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Two-Way Parry",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "thornsFrac": 0.5,
+   "buffDuration": 8,
+   "lifeOnKill": 5,
+   "desc": "For 9 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Branching Stroke",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Each time you strike with your weapon, a second cut branches to the nearest enemy within 4 tiles for 5 damage, then to 1 more enemy within 3 tiles for 60% of that. Once every 6 seconds."
+  }
+ ]
+}

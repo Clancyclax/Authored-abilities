@@ -1,0 +1,71 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gulp of Soil",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 9,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 9,
+   "leech": 0.3,
+   "desc": "Sends a ripple through the ground into an enemy carrying one of your afflictions, using it up to deal 9 damage. You heal for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "The Swallowing Pit",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "healOnUse": 10,
+   "desc": "The ground gapes open around you, dealing 28 damage that ignores armour to every enemy within 3 tiles, and you restore 10 health."
+  },
+  {
+   "name": "Gorged on Minerals",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "healOnUse": 10,
+   "cooldown": 60,
+   "desc": "You gorge on salts drawn from the ground, restoring 10 health, and your maximum health rises by 20% for 15 seconds."
+  },
+  {
+   "name": "Second Helpings",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "resist": {
+    "element": "physical",
+    "amount": 0.06
+   },
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 5. The next ability you use spends them all: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 6 seconds. You carry 6% physical resistance."
+  }
+ ]
+}

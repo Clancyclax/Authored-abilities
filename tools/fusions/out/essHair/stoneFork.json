@@ -1,0 +1,85 @@
+{
+ "essence": "essHair",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Prong and Prong",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 1.0
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 1.0,
+   "desc": "Throws a strand that deals 9 damage to the first enemy it meets, then splits to 1 more enemy within 3 tiles for 100% of the original damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Crossroads Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Sweeps strands round you, dealing 10 damage to every enemy within 3.5 tiles and leaving each [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on an enemy hit spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Crossed Strands",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "desc": "Strings a line of crossed strands 5 tiles long across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "desc": "Each time you kill something, a strand springs to the nearest enemy within 6 tiles, dealing 8 damage. Once every 4 seconds."
+  }
+ ]
+}

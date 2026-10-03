@@ -1,0 +1,99 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Chitin Haymaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "desc": "A punch that deals 14 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds. The locusts on your fist then leap to 2 more enemies within 3 tiles for 50% of that.",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5
+  },
+  {
+   "name": "Flung Handful",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 320,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings 3 fistfuls of locusts at once, spread apart, each dealing 3 damage, with a 30% chance per hit to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Chest-Beating Drone",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 20,
+   "escort": {
+    "dmg": 3,
+    "interval": 1,
+    "duration": 8
+   },
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you and holds their attention for 6 seconds. For 8 seconds, an escort of locusts fights beside you, striking for 3 damage every second."
+  },
+  {
+   "name": "Provoked Troop",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "lifeOnKill": 3,
+   "desc": "Each time you are hurt by anything other than fire, your physical damage rises by 25% for 5 seconds. Once every 10 seconds. Each kill restores 3 health to you."
+  }
+ ]
+}

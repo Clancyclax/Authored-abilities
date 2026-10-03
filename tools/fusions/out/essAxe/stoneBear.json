@@ -1,0 +1,76 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swat Aside",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 80,
+   "coneAngle": 1.4,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A swipe across the front that deals 13 damage to everything within 2.5 tiles ahead and knocks it back 3 tiles. Each hit has a 40% chance to leave the target [Bleeding] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full Weight",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "bossPct": 0.06,
+   "desc": "Drops your whole weight behind one chop for 30 damage plus 6% of a boss's or elite's maximum health, leaving the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Hunker Down",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "cooldown": 35,
+   "desc": "Raises your armour by 30% for 10 seconds."
+  },
+  {
+   "name": "Wounded Bruin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "When your health falls below half, your physical damage rises 40% for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

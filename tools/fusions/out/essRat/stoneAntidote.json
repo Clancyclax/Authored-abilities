@@ -1,0 +1,83 @@
+{
+ "essence": "essRat",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Venom Sippers",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Three rats dart ahead of you, spread apart, each dealing 3 damage. Each bite deals 10% more for every affliction on its target (max 30%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Siphoned Sickness",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.2,
+   "desc": "Bites out every affliction you have on the target: it deals 16 damage, with 60% more for each affliction used up, and you heal for 20% of the damage dealt. The target is left 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Cough It Up",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "desc": "Removes up to 3 poison conditions from you and restores 10 health."
+  },
+  {
+   "name": "Outlived the Dose",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "As one of your afflictions lifts, you regain 3 health a second for 4 seconds. Once every 8 seconds. You have 8% poison resistance."
+  }
+ ]
+}

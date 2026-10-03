@@ -1,0 +1,70 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reach Through",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 8,
+   "cooldown": 1,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "leech": 0.25,
+   "desc": "Reaches between the bars to rake a target for 8 damage, rising to 1.5 times that at its full reach of 4 tiles, and heals you for 25% of the damage dealt. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slammed Gate",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slams bars shut around you, dealing 26 damage to every enemy within 3 tiles and leaving each [Pinned] for 3 seconds. Against a boss or an elite it also deals 5% of their maximum health.",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Picked Lock",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cleanseCount": 3,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Frees you from up to 3 conditions that hold or stun you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Slips Any Latch",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "physical",
+   "dodgeBonus": 0.06,
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You also have 6% more dodge chance."
+  }
+ ]
+}

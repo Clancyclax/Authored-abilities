@@ -1,0 +1,103 @@
+{
+  "essence": "essRat",
+  "stone": "stoneFire",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Scorched Litter",
+      "template": "volley",
+      "element": "fire",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.35,
+      "speed": 320,
+      "radius": 6,
+      "range": 176,
+      "reachUnits": 176,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "debuff": {
+        "key": "burn",
+        "chance": 0.4,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "contagion": {
+        "max": 2,
+        "radius": 128,
+        "chance": 0.3,
+        "spreadsLeft": 2
+      },
+      "desc": "Lights 3 rats and lets them run, spread apart, each dealing 3 fire damage with a 40% chance to leave the target [Burning] for 4 seconds. The burning spreads on its own to up to 2 more enemies within 4 tiles."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Tinder Nest",
+      "template": "projectileBall",
+      "element": "fire",
+      "role": "long",
+      "base": 30,
+      "cooldown": 75,
+      "speed": 300,
+      "radius": 10,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "explodeRadius": 112,
+      "splashFrac": 0.8,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "Hurls a burning nest that deals 30 fire damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that. It leaves the target [Burning] for 3 damage a second for 5 seconds."
+    },
+    {
+      "name": "Burning Straw Behind",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "fire",
+      "cooldown": 24,
+      "wallKind": "burn",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "Lays a line of burning straw 5 tiles long for 6 seconds. Anything that crosses it is set [Burning] for 3 damage a second for 4 seconds."
+    },
+    {
+      "name": "Cinder Whiskers",
+      "kind": "passive",
+      "category": "summon",
+      "template": "summonBonded",
+      "element": "fire",
+      "familiarDmg": 3,
+      "familiarRange": 160,
+      "familiarInterval": 1.2,
+      "familiarFamily": "beast",
+      "familiarCreatureName": "Cinder Rat",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "A smouldering rat runs with you as a familiar, biting enemies within 5 tiles for 3 damage every 1.2 seconds and leaving them [Burning] for 2 damage a second for 3 seconds."
+    }
+  ]
+}

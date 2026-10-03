@@ -1,0 +1,78 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Death Roll",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps onto an enemy at or below 30% health and rolls, chopping for 22 damage, leaving it [Bleeding] for 3 damage a second for 4 seconds and [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mudbank Lunge",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 160,
+   "scaleOn": "targetStamina",
+   "scalePer": 0.06,
+   "scaleCap": 0.6,
+   "desc": "Lunges at an enemy up to 5 tiles away and chops for 12 damage, leaving it 10% easier to wound for 5 seconds. Its damage rises 6% for every 10% of health the target still has, up to 60%."
+  },
+  {
+   "name": "Lie in Wait",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.35,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "You are veiled for 10 seconds: enemies notice you 65% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Jaws for the Weak",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.14,
+   "desc": "Against an enemy below half health, your damage rises 14%."
+  }
+ ]
+}

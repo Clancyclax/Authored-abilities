@@ -1,0 +1,78 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Rivet Gnaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "A bite at the joints that deals 4 damage and leaves the target 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Under the Plates",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Sends locusts crawling through a cone 4 tiles ahead of you, dealing 30 damage to everything in it. It ignores armour."
+  },
+  {
+   "name": "Interlocked Husks",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "cooldown": 30,
+   "escort": {
+    "dmg": 5,
+    "interval": 1.6,
+    "duration": 6
+   },
+   "desc": "Locks shed husks into a shell that absorbs the next 20 damage and holds for 8 seconds. For 6 seconds, an escort of locusts fights beside you, striking for 5 damage every 1.6 seconds."
+  },
+  {
+   "name": "Salvaged Scale",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 3% of your maximum health per stack (17% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

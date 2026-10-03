@@ -1,0 +1,86 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pelt Shaken Out",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. It deals 8 damage to every enemy within 2.5 tiles, with a 35% chance to leave each [Poisoned] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full Weight Behind It",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A heavy sting that deals 30 damage, plus 5% of a boss's or elite's maximum health. It leaves the target 20% easier to wound for 8 seconds and [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Hide Too Thick",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "desc": "Raises your armour by 20% for 12 seconds. You have 15% poison resistance."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "name": "Slow to Rouse",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: a sting strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack (272% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Skipped Spray",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Kicks up a spray of water that strikes the first enemy in line for 4 damage, then skips to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Placid Wake",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a wave of water out in every direction, dealing 11 damage to every enemy within 3 tiles, pushing them 2 tiles back and leaving them [Damped] for 5 seconds."
+  },
+  {
+   "name": "Oiled Coat",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 4,
+   "cooldown": 120,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Blows that reach you deal no damage and no condition can take hold of you for 4 seconds. Transcendent damage still lands. You move 20% faster for 6 seconds."
+  },
+  {
+   "name": "Lucky Iron",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a blow you failed to dodge rolls your dodge a second time, and the second roll stands."
+  }
+ ]
+}

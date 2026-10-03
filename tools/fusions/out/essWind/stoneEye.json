@@ -1,0 +1,77 @@
+{
+ "essence": "essWind",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Far Glance",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A dart of air at a target up to 7 tiles away that deals 4 damage, rising to 1.6 times that at full reach. Its damage rises 8% for each affliction the target carries (max 40%)."
+  },
+  {
+   "name": "The Clear Centre",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A storm turns round you where you stand, which deals 26 damage that ignores resistance to every enemy within 4 tiles and leaves them [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Seen Coming, Turned Aside",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "wind",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectChance": 0.4,
+   "reflectFrac": 0.4,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is turned aside and sent back to whoever dealt it."
+  },
+  {
+   "name": "Read and Answer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "wind",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackEye",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 3% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

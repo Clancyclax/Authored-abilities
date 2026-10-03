@@ -1,0 +1,71 @@
+{
+ "essence": "essShip",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bosun's Nine Cords",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "desc": "A lash that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 5 seconds.",
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Culling Pounce",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A pounce on a target at or below 30% health that deals 18 damage, uses up every affliction on it and adds 1.5 times their remaining damage. For 3 seconds after, you move 20% faster."
+  },
+  {
+   "name": "Righted Midfall",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "desc": "Moves you 3 tiles from where you stood. For 2 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Lucky Mouser Aboard",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you is refused and leaves you at 1 health."
+  }
+ ]
+}

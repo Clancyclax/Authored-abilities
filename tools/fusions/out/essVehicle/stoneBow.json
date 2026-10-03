@@ -1,0 +1,79 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Shot Over the Tailboard",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Usable only on a target at or below 30% health. An arrow loosed as you pull away deals 20 damage, rising to 1.8 times that at maximum range, and slows the target by 30% for 3 seconds."
+  },
+  {
+   "name": "Running Quiver",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 480,
+   "radius": 5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 arrows at once from the moving bed, spread apart; each deals 2 damage, with a 20% chance to leave its target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Loosed From the String",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 160,
+   "cooldown": 9,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Draws you back and releases you 5 tiles forward. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Level Firing Bed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "On paved ground, your damage rises by 12%."
+  }
+ ]
+}

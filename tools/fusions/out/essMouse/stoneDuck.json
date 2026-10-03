@@ -1,0 +1,109 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Shaken Dry",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "You shake yourself dry: 4 droplets fly out in a spread to 5 tiles, each dealing 3 water damage with a 30% chance to leave the target [Soaked] for 5 seconds. You move 10% faster for 2 seconds afterward."
+  },
+  {
+   "name": "Ripples Outward",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "blinkOnUse": 64,
+   "desc": "Sends a ripple at the first enemy within 6 tiles: it deals 11 water damage and leaves the target [Soaked] for 6 seconds. Your afflictions on it spread to enemies within 3.5 tiles, and you bob up 2 tiles from where you stood."
+  },
+  {
+   "name": "Passed Along",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.5,
+   "reflectChance": 0.5,
+   "buffDuration": 9,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 9 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead. You move 20% faster for the first 4 seconds."
+  },
+  {
+   "name": "Dabbler's Scamper",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you run over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows slide off you while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "staminaRegen",
+     "amount": 0.2,
+     "text": "and you get your breath back while you are on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you run 15% faster over it, from silver you have 8% more dodge chance on it, and from gold your stamina recovers 20% faster on it."
+  }
+ ]
+}

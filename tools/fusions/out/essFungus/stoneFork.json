@@ -1,0 +1,94 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Twin Pods",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "volleyCount": 2,
+   "volleySpread": 0.5,
+   "chargesMax": 4,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "rangeBand": "medium",
+   "reachUnits": 220,
+   "desc": "Holds 4 charges, and kills give charges back. Looses 2 spore pods side by side, each dealing 7 damage."
+  },
+  {
+   "name": "Branching Canker",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Hurls a spore knot that deals 28 damage, ignoring resistances, and leaves the target [Poisoned] for 3 damage a second for 6 seconds. It then splits to 2 more enemies within 3 tiles for 60% of that damage each."
+  },
+  {
+   "name": "Crossroads Purge",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "nature",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "Draws up to 2 conditions out of you and restores 12 health."
+  },
+  {
+   "name": "Offshoot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "When you regain health, a spore bolt leaps to the nearest enemy within 5 tiles for 5 damage, then on to 1 more enemy within 3 tiles for 60% of that. Once every 4 seconds."
+  }
+ ]
+}

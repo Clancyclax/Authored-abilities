@@ -1,0 +1,76 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Tine and Away",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "A thrust that deals 8 damage and leaves the target 8% easier to wound for 5 seconds. Your movement speed rises 15% for 2 seconds after you use it. It holds 4 charges, and each kill returns one."
+  },
+  {
+   "name": "Startling Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "targetStamina",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "Kicks out at every enemy within 2 tiles for 3 damage. Its damage rises 5% for every 10% of health the target still has, up to 40%."
+  },
+  {
+   "name": "First Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 8,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Carries you 5 tiles forward in one bound. Your movement speed rises 25% for 3 seconds afterward."
+  },
+  {
+   "name": "White Tail Up",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 4. When you reach 4, they all spend at once: you move and attack 5% faster per stack (18% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

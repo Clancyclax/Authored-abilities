@@ -1,0 +1,74 @@
+{
+ "essence": "essBear",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thudding Kicks",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 3
+   },
+   "desc": "A heavy kick that deals 5 damage and leaves the target 5% easier to wound for 4 seconds. You move 10% faster for 3 seconds after you use it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run Down",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 260,
+   "maxMult": 1.5,
+   "chargeTo": 224,
+   "desc": "Charges up to 7 tiles at the target and deals 16 damage, up to 1.5 times at maximum range."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Second Wind",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 10,
+   "healOnUse": 8,
+   "cooldown": 40,
+   "desc": "Restores 4 stamina a second for 10 seconds and restores 8 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "name": "Unwearied",
+   "element": "physical",
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Each time you spend stamina, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

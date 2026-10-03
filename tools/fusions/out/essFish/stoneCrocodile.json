@@ -1,0 +1,85 @@
+{
+ "essence": "essFish",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Reedbed Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "You lunge up to 6 tiles to the target and bite it for 14 damage, with 50% more critical chance against a target that has not yet been wounded."
+  },
+  {
+   "name": "Clamping Jaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps onto the target for 30 damage, plus 5% of a boss's or elite's maximum health, leaving it 15% easier to wound and [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Drifting Log",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 9,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and raises your movement speed by 10%. Enemies notice you 60% later, and the veil breaks when you attack."
+  },
+  {
+   "name": "Coiled Below",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your stamina is full, your next spell deals 40% more damage. Once every 10 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Knocking Off Spalls",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "rock",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.9,
+   "volleyCount": 4,
+   "volleySpread": 0.6,
+   "speed": 320,
+   "radius": 6,
+   "range": 160,
+   "spammable": true,
+   "isAoe": true,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Knocks 4 jagged spalls off a block in a spread, and each deals 2 damage."
+  },
+  {
+   "name": "Backfill",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Buries the target, which deals 24 damage, leaves it 15% easier to wound for 6 seconds and leaves it [Pinned] for 2 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Waymark Cairn",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "rock",
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 10,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "desc": "After a 0.5-second cast, stacks a cairn for 10 seconds. Every 1.2 seconds it throws a stone at an enemy within 5 tiles and deals 5 damage."
+  },
+  {
+   "name": "Bedrock Beneath Paving",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "On paved ground, your armour rises by 12%."
+  }
+ ]
+}

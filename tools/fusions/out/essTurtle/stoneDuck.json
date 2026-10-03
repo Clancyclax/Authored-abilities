@@ -1,0 +1,92 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Belly to the Sky",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1.4,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Flips the target onto its back, which deals 12 damage, stuns it for 1.4 seconds and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Skipped Across the Pond",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Skims a flat scute that deals 4 damage to the first enemy it meets, then skips to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Rolls Off the Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.7,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "For 10 seconds, each condition laid on you has a 70% chance to run off your shell and back to whoever inflicted it."
+  },
+  {
+   "name": "Bobbing Driftwood",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "your health regenerates faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your health regenerates 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

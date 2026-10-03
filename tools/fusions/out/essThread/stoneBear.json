@@ -1,0 +1,72 @@
+{
+  "essence": "essThread",
+  "stone": "stoneBear",
+  "fusions": [
+    {
+      "name": "Hauled Up Short",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "speed": 340,
+      "radius": 8,
+      "stunOnHit": 1.4,
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Casts a loop over the first enemy it meets and pulls it up short. It deals 12 damage and stuns the target for 1.4 seconds. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+    },
+    {
+      "name": "Deadweight Maul",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 8
+      },
+      "bossPct": 0.05,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Brings a maul down that deals 30 damage, plus 5% of a boss's or elite's maximum health. It leaves the target [Pinned] for 3 seconds and 15% easier to wound for 8 seconds."
+    },
+    {
+      "name": "Wintering Cocoon",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "nature",
+      "cooldown": 30,
+      "healScope": "self",
+      "hotPerSec": 4,
+      "hotDuration": 6,
+      "desc": "Spins a cocoon around you that restores 4 health a second to you for 6 seconds."
+    },
+    {
+      "name": "Stakebound Cub",
+      "kind": "passive",
+      "category": "summon",
+      "template": "summonBonded",
+      "element": "physical",
+      "familiarDmg": 7,
+      "familiarRange": 96,
+      "familiarInterval": 2.4,
+      "familiarFamily": "bear",
+      "familiarCreatureName": "Stakecub",
+      "desc": "A bonded cub on a tether swats enemies within 3 tiles for 7 damage every 2.4 seconds."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Ungoverned Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 40,
+   "cooldown": 90,
+   "range": 128,
+   "maxMult": 1.4,
+   "ignoreResist": true,
+   "desc": "Looses raw arcane force at a target up to 4 tiles away, dealing 40 damage, rising to 1.4 times that from the full 4 tiles. It ignores resistances."
+  },
+  {
+   "name": "Loose Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a bolt of raw force into the first enemy in its path, dealing 4 damage. It then leaps to 1 more enemy within 3 tiles, dealing 60% of the original damage."
+  },
+  {
+   "name": "Grounded Ward",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "arcane",
+   "armorBonus": 0.15,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "resist": {
+    "element": "arcane",
+    "amount": 0.2
+   },
+   "desc": "Raises your armour by 15% and your arcane resistance by 20% for 12 seconds."
+  },
+  {
+   "name": "Lent Footing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "Each time you spend mana, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

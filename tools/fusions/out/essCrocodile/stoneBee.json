@@ -1,0 +1,85 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shed Teeth",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 300,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits 3 teeth in a spread, each dealing 3 damage with a 25% chance of [Bleeding] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barb Left Behind",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Costs 5% of your maximum health. A bite that deals 9 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Humming Mound",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "turret",
+   "summonDuration": 12,
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 45,
+   "desc": "Raises a nest mound beside you for 12 seconds that stings the nearest enemy within 4 tiles for 3 damage every second."
+  },
+  {
+   "name": "Ceaseless Bites",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

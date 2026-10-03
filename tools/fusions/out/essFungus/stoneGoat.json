@@ -1,0 +1,89 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Scree Ram",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A blow that deals 15 damage, knocks the target back 3 tiles, leaves it 15% easier to wound for 6 seconds and [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Lichen Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Holds 4 charges, and kills give charges back. Sprays a cone of spores 5 tiles long that deals 7 damage to everything caught in it, each hit with a 40% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Rooted Stance",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.15,
+   "buffDuration": 10,
+   "healOnUse": 12,
+   "cooldown": 40,
+   "desc": "Reduces the damage you take by 15% for 10 seconds and restores 12 health."
+  },
+  {
+   "name": "Holding Ground",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.5,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "When your health falls below 50%, healing you receive is 30% stronger for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

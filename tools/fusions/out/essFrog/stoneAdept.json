@@ -1,0 +1,75 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Drilled Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "cooldown": 0.8,
+   "base": 4,
+   "maxMult": 1.5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Your tongue snaps at one enemy up to 7 tiles away for 4 damage, rising to 1.5 times that at its full reach, with a 30% chance to leave it [Stalled] for 4 seconds.",
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Perfected Form",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "You leap to a target up to 6 tiles away and land on it, dealing 28 damage to every enemy within 3 tiles. Every hit is a critical hit.",
+   "chargeTo": 192
+  },
+  {
+   "name": "Again, From the Top",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "blinkOnUse": 64,
+   "cooldown": 90,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and hops you 2 tiles from where you stood."
+  },
+  {
+   "name": "Stuck the Landing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover raises your critical hit chance by 15% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

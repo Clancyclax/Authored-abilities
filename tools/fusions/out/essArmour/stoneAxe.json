@@ -1,0 +1,83 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Headsman's Drop",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 28,
+   "cooldown": 15,
+   "range": 84,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Usable only on a target at or below 25% health: a falling chop that deals 28 damage and leaves it 20% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wedge Cleave",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 110,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A heavy cleave that deals 14 damage to every enemy in a cone 3.5 tiles long, knocks them back 2.5 tiles and leaves them [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Bladed Harness",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take goes back to the attacker, and each attacker is [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Notched Tally",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 6 seconds."
+  }
+ ]
+}

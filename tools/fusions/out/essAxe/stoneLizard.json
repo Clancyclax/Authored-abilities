@@ -1,0 +1,77 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Sluggish Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "desc": "Throws a hatchet that deals 5 damage and has a 40% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Stilled Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.0,
+   "desc": "A broad swing that deals 13 damage to everything within 2.5 tiles ahead of you and stuns it for 1 second."
+  },
+  {
+   "name": "Basking Rest",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 30,
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Dropped Tail",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, a ward worth 25% of your maximum health closes over you for 5 seconds. Once every 40 seconds."
+  }
+ ]
+}

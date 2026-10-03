@@ -1,0 +1,75 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Clamped Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on an enemy at or below 30% health. You clamp onto it and roll, dealing 24 damage and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Ambush Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Whips your tail through a cone 3 tiles ahead of you, dealing 28 damage to everything in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Long Wait, Short Snap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "resist": {
+    "element": "physical",
+    "amount": 0.06
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds. You have 6% physical resistance."
+  }
+ ]
+}

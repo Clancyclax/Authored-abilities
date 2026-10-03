@@ -1,0 +1,76 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Drawn Taut, Let Fly",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 5,
+   "desc": "Looses an arm at an enemy up to 8 tiles away for 7 damage, rising to 1.8 times that at full reach. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Harpoon at Full Stretch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 520,
+   "radius": 8,
+   "reachUnits": 396,
+   "rangeBand": "long",
+   "castTime": 1.2,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1.2 second draw, shoots an arm tip that deals 30 damage to the first enemy it meets and stays fastened to it, leaving it [Pinned] for 2.5 seconds. The hit is always a critical hit."
+  },
+  {
+   "name": "Slack Paid Out",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "cooldown": 75,
+   "desc": "For 20 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "name": "Cocked Arms",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 25% more damage. Once every 12 seconds."
+  }
+ ]
+}

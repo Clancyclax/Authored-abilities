@@ -1,0 +1,88 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.35,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a barb at the first enemy it meets, dealing 8 damage, with a 35% chance to leave it [Pinned] for 2 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Reeled In",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You are hauled up to 7 tiles to the target and strike it for 14 damage, leaving it 12% easier to wound for 6 seconds. It also has a 60% chance to leave it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Snag and Pull",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "cooldown": 30,
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 4 enemies within 7 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Trophy Taking",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "dodgeBonus": 0.06,
+   "desc": "When you kill an enemy, your physical damage rises by 30% for 5 seconds and you gain +6% dodge chance. Once every 8 seconds."
+  }
+ ]
+}

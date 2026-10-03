@@ -1,0 +1,87 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Linked Discharge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "lightning",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 440,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Empties a capacitor into the first enemy it meets, which deals 7 damage, then arcs to 2 more enemies within 3.5 tiles, each for 60% of that damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Coupling Harpoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "spreadAfflictions": 128,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Fires a harpoon on a reel at an enemy up to 7 tiles away that deals 12 damage, rising to 1.8 times that at maximum range, and slows it by 30% for 3 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Capstan Drag",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "Stakes a powered capstan whose line runs 6 tiles for 5 seconds. It drags nearby enemies toward it and slows those it catches by 20% for 3 seconds."
+  },
+  {
+   "name": "Cascade Relay",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "lightning",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "desc": "Each time you kill something, an arc leaps from the body to the nearest enemy within 6 tiles and deals 8 damage. Once every 4 seconds."
+  }
+ ]
+}

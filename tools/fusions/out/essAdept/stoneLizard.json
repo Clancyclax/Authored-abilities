@@ -1,0 +1,73 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Out of Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "speed": 480,
+   "radius": 7,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "A darting lunge that deals 13 damage to the first enemy it meets and stuns it for 1.2 seconds. It has 40% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Dropped Tail",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "confuse": {
+    "chance": 0.3,
+    "duration": 3
+   },
+   "desc": "Sheds your tail, which thrashes and deals 8 damage to every enemy within 2.5 tiles, each with a 30% chance to be turned against its allies for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one.",
+   "chargesMax": 3
+  },
+  {
+   "name": "Not a Twitch",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 4
+   },
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds. Anything it holds moves 25% slower for 4 seconds."
+  },
+  {
+   "name": "Basking Hours",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "In daylight, you deal 12% more damage. Your armour rises by 5% at all times."
+  }
+ ]
+}

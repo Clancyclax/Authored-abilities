@@ -1,0 +1,98 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Barbed Parting",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Costs 5% of your maximum health. A weapon strike that leaves a barbed stinger in the target: the sting deals 9 damage and keeps pumping, leaving it [Poisoned] for 3 damage a second for 6 seconds."
+  },
+  {
+   "name": "Alarm Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.35,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 0.3,
+    "spreadsLeft": 2
+   },
+   "desc": "Looses 4 stingers in a spread out to 6 tiles. Each stinger deals 3 damage, with a 40% chance to leave its target [Marked] for 8 seconds. The mark can spread on its own to up to 2 more enemies within 4 tiles."
+  },
+  {
+   "name": "Kicked Hive",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "For 8 seconds, 30% of the damage you take is dealt back to whoever dealt it, and they are stung: [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Sentry of the Comb",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Comb Sentry",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded hive sentry fights beside you, stinging an enemy within 4 tiles every 1.2 seconds. Each sting deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds."
+  }
+ ]
+}

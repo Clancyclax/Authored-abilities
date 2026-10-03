@@ -1,0 +1,76 @@
+{
+ "essence": "essBear",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trudging Blow",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 110,
+   "maxMult": 1.5,
+   "hpCostPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A thrown kick that deals 8 damage, up to 1.5 times at maximum range, and costs 5% of your maximum health. Its damage rises +5% per 100 paces you have run since you last used it (max +30%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Trampling Advance",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "range": 96,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Stamps every enemy within 3 tiles; each hit deals 28 damage. If it hits, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Forced March",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "taunt": true,
+   "tauntRadius": 192,
+   "tauntMax": 4,
+   "tauntDuration": 6,
+   "desc": "Increases your stamina recovery by 50% for 20 seconds and pulls up to 4 enemies within 6 tiles onto you for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "name": "Seasoned Stride",
+   "element": "physical",
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

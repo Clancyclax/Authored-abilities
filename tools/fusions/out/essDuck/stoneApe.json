@@ -1,0 +1,85 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Chest-Beat Gale",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 144,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "stun",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Beats both wings against your chest and drives the air out in a cone 4.5 tiles long, dealing 28 damage to everything in it. Every hit is a critical hit, and each has a 40% chance to leave the target [Stunned] for 1.5 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "The Long Dunk",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 86,
+   "stunOnHit": 1.4,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grabs a target and holds it under, dealing 14 damage and stunning it for 1.4 seconds. It comes up [Soaked] for 8 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Feigned Boredom",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 14,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "healOnUse": 8,
+   "desc": "Veils you for 6 seconds and restores 8 health. Enemies notice you 60% later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Patience Then Knuckles",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. At 5 they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

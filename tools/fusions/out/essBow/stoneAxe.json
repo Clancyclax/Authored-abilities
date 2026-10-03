@@ -1,0 +1,69 @@
+{
+ "essence": "essBow",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Plunging Broadhead",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Lofts a broad-headed arrow that falls on the first enemy it meets for 28 damage, and deals 80% of that to every enemy within 3 tiles of it."
+  },
+  {
+   "name": "Felling Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Looses a broadhead at a target up to 7 tiles away that deals 24 damage, rising to 1.5 times that at full reach, and makes it [Bleeding] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Whetted Heads",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Increases your slashing damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Timber Call",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

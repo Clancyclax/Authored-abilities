@@ -1,0 +1,75 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneAdept",
+  "fusions": [
+    {
+      "name": "Remedial Lesson",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "blunt",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "chargesMax": 3,
+      "debuff": {
+        "key": "slowLearner",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A rap that deals 8 damage to the first enemy it meets and leaves it a [Slow Learner] for 8 seconds: your thorns bite it deeper, and barriers it strikes grow stronger. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Marginal Notes",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "arcane",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 224,
+      "maxMult": 1.3,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "ignoreResist": true,
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.15,
+      "scaleCap": 0.6,
+      "desc": "Strikes a target up to 7 tiles away and deals 28 damage, rising to 1.3 times that at full reach. It ignores resistances, and its damage rises 15% for each of your afflictions on the target (max 60%)."
+    },
+    {
+      "name": "Economy of Motion",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "arcane",
+      "resource": "mana",
+      "overTime": true,
+      "restorePerSec": 3,
+      "restoreDuration": 10,
+      "cooldown": 36,
+      "desc": "Restores 3 mana a second for 10 seconds."
+    },
+    {
+      "name": "Another Pass",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "physical",
+      "rerollKind": "crit",
+      "rerollKinds": [
+        "crit"
+      ],
+      "rerollCooldown": 10,
+      "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+    }
+  ]
+}

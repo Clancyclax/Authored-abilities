@@ -1,0 +1,105 @@
+{
+  "essence": "essThread",
+  "stone": "stoneCoral",
+  "fusions": [
+    {
+      "name": "Reef on a Rope",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "water",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 20,
+      "wallKind": "burn",
+      "wallLength": 192,
+      "wallDuration": 6,
+      "wallThickness": 28,
+      "knockback": 64,
+      "desc": "Strings a rope 6 tiles long ahead of you and a jagged reef grows along it for 6 seconds. It deals 11 damage to each enemy that crosses it, knocks it back 2 tiles and leaves it [Slowed] for 4 seconds.",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Holdfast Snag",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "bindOnHit": {
+        "slowPct": 0.15,
+        "duration": 1.5
+      },
+      "desc": "A weapon strike that deals 4 damage, leaves the target [Bleeding] for 2 damage a second for 3 seconds and snags it on anchoring strands, slowing it by 15% for 1.5 seconds."
+    },
+    {
+      "name": "Anchored Colony",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "water",
+      "cooldown": 45,
+      "summonKind": "turret",
+      "summonDmg": 5,
+      "summonDuration": 15,
+      "summonInterval": 1.5,
+      "summonRange": 128,
+      "castTime": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "After a 1 second cast, anchors a colony on a strand where you stand for 15 seconds. Every 1.5 seconds it strikes an enemy within 4 tiles and deals 5 damage, with a 25% chance to leave the target [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Byssus Footing",
+      "kind": "passive",
+      "category": "movement",
+      "template": "waterWalk",
+      "element": "water",
+      "isMovement": true,
+      "source": "essence",
+      "riders": [
+        {
+          "rank": "bronze",
+          "stat": "moveSpeed",
+          "amount": 0.1,
+          "text": "you move 10% faster over it than over ground"
+        },
+        {
+          "rank": "silver",
+          "stat": "hpRegen",
+          "amount": 0.15,
+          "text": "and your health regenerates 15% faster while you are on it"
+        },
+        {
+          "rank": "gold",
+          "stat": "dodgeChance",
+          "amount": 0.08,
+          "text": "and your dodge chance is 8% higher while you are on it"
+        }
+      ],
+      "desc": "Anchoring strands hold you to the surface: you walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your health regenerates 15% faster, and from gold your dodge chance rises by 8%."
+    }
+  ]
+}

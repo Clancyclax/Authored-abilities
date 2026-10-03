@@ -1,0 +1,81 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Biting Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 6,
+   "volleySpread": 0.7,
+   "speed": 380,
+   "radius": 7,
+   "range": 160,
+   "isAoe": true,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Looses 6 biters at once, spread apart, each dealing 2 damage."
+  },
+  {
+   "name": "Stripped Pasture",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A gnawing strike that deals 11 damage and makes the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Fed Cloud",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "nature",
+   "cooldown": 90,
+   "powerMult": 1.25,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your damage by 25% for 15 seconds. While it lasts, an escort of nature fights beside you, striking for 3 every 1.4s for 10s."
+  },
+  {
+   "name": "Stubble Left Behind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

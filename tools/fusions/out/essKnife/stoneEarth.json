@@ -1,0 +1,98 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Underfoot Edges",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "knockback": 64,
+   "base": 12,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Drives stone blades up through the ground around you, dealing 12 damage to every enemy within 3 tiles, knocking each 2 tiles back and leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snapped Off Inside",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "requiresTargetBelow": 0.3,
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Stabs a target at or below 30% health for 20 damage, using up every affliction on it and adding 1.5 times their remaining damage, then leaves it [Bleeding] for 4 damage a second for 5 seconds."
+  },
+  {
+   "name": "Sown Shards",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "summonKind": "trap",
+   "summonDmg": 14,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 2,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 60,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hides knapped flints at the nearest enemy. They wait up to 20 seconds, and the first 2 enemies to come within 2 tiles take 14 damage and are left [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Palmed Flint",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a flint blade. It increases your weapon damage by 12%, every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds, and your armour rises by 5%."
+  }
+ ]
+}

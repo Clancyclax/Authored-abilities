@@ -1,0 +1,92 @@
+{
+ "essence": "essBee",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Yoked Blow",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A heavy blow that deals 28 damage, always lands as a critical hit and leaves the target 12% easier to wound for 6 seconds. It hits 10% harder for each ally near you, up to 30%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swatting Tail",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A swat that deals 6 damage to every enemy within 2.5 tiles, with a 30% chance per hit to leave it [Poisoned] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Long Furrow",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "nature",
+   "cooldown": 50,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "desc": "Increases your stamina recovery by 50% for 15 seconds."
+  },
+  {
+   "name": "Unhurried Toil",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "the work stops tiring you"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "the small hurts close on their own"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.06,
+     "text": "and everything comes round again sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your stamina recovers 12% faster, from silver your health recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essFox",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Culling Hatchet",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "desc": "Throws a hatchet at a straggler up to 7 tiles away that deals 20 damage, rising to 1.5 times that at full reach. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Heel Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "A low chop that deals 4 damage, makes the target [Bleeding] for 2 damage a second for 3 seconds and slows it by 20% for 3 seconds."
+  },
+  {
+   "name": "Notched Deadfall",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 24,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Sets a deadfall of cut timber at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles brings it down, dealing 24 damage to everything within 2 tiles of it."
+  },
+  {
+   "name": "Running Swing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover raises your critical hit chance by 30% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

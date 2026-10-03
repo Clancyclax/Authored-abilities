@@ -1,0 +1,91 @@
+{
+ "essence": "essHook",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Torn Stinger",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "strikes": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Drives a barbed sting in and tears free of it, dealing 8 damage and leaving the target [Poisoned] for 2 damage a second for 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Worker's Volley",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 barbed stings at once, spread apart, each dealing 3 poison damage, with a 20% chance per hit to leave the target [Pinned] for 1 second."
+  },
+  {
+   "name": "Honey Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a baited snare at the nearest enemy. It waits up to 30 seconds, then deals 18 damage to the first enemy to come within 2 tiles and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Alarm Scent",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

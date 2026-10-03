@@ -1,0 +1,84 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Unhurried Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 200,
+   "radius": 8,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lobs a slow crescent of water that deals 5 damage, with a 40% chance to leave the target [Damped] for 4 seconds."
+  },
+  {
+   "name": "Slow Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "ignoreResist": true,
+   "castTime": 1.5,
+   "range": 160,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1.5 second cast, rolls a wave 5 tiles ahead that deals 30 damage to everything in it and leaves it [Slowed] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Calm Shallows",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 24,
+   "healAmount": 12,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 12 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Buoyant Reserves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 5
+   },
+   "desc": "When you are healed, a shield worth 8% of your maximum health covers you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

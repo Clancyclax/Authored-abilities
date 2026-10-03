@@ -1,0 +1,87 @@
+{
+ "essence": "essFish",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Beak Grind",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "desc": "Grinds at the target with a hard beak for 4 damage, leaving it 5% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Polyp Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Stings the area around you, dealing 10 damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Reef Shelter",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 40,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Raises a reef where you stand. For 10 seconds it restores 3 health a second to you and every ally within 4 tiles of it. Its effect grows 10% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "rock",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.1,
+   "stackIcon": "stackWard",
+   "regenPerSec": 0.5,
+   "desc": "Every hit you land builds a stack on you, up to 8. At 8 they all spend at once into a shield worth 8% of your maximum health per stack. Unfed, a stack fades every 10 seconds. You also regenerate 0.5 health a second."
+  }
+ ]
+}

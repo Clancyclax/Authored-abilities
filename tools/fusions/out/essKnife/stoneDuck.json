@@ -1,0 +1,83 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Skipped Blade",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Skims a knife low across the ground at a target up to 7 tiles away for 3 damage, rising to 1.6 times that at full reach, with a 50% chance to leave it [Soaked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Without a Ripple",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "ignoreArmor": true,
+   "ignoreResist": true,
+   "base": 26,
+   "cooldown": 60,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Throws a knife that deals 26 damage to the first enemy it meets, ignoring armour and resistances, and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Dive Under",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "cooldown": 90,
+   "blinkOnUse": 96,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you, and you surface 3 tiles from where you stood."
+  },
+  {
+   "name": "Placid Until",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "The moment you are back at full health, your critical hit chance rises by 20% for your next strike. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essBow",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Heavy War-Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 288,
+   "maxMult": 1.8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "desc": "Looses a heavy arrow at a target up to 9 tiles away that deals 32 damage, rising to 1.8 times that at full reach. Against a boss or elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Make Room",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Swings the stave in a full circle that deals 10 damage to every enemy within 2.5 tiles of you and knocks them back 3 tiles. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Turned at Bay",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "buffDuration": 7,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 5,
+   "cooldown": 30,
+   "desc": "For 7 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Sore-Headed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.4,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 40%, your physical damage rises by 30% for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "essence": "essBat",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Nectar Raid",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "leech": 0.2,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a sting into the first enemy in its path for 7 poison damage; it then leaps to 1 more enemy within 3 tiles for 60% of that. You heal for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Waggle Signal",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A droning pulse deals 26 resonating damage to every enemy within 4 tiles and leaves them [Marked] for 10 seconds. Your party deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Hive Sharing",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 30,
+   "range": 112,
+   "healAmount": 14,
+   "healScope": "party",
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Night Shift Drone",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Night Drone",
+   "lifeOnKill": 2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded drone familiar flies with you, striking enemies within 4 tiles for 3 damage every second and leaving them [Poisoned] for 1 damage a second for 4 seconds. Each kill restores 2 health to you."
+  }
+ ]
+}

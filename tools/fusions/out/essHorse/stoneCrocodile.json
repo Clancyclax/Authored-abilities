@@ -1,0 +1,80 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Dragged Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "range": 84,
+   "requiresTargetBelow": 0.3,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "desc": "Seizes a target at or below 30% health and deals 20 damage, using up every affliction on it and adding 1.5 times their remaining damage."
+  },
+  {
+   "name": "Waterhole Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "maxMult": 1.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lunges at a target up to 3 tiles away and bites for 7 damage, rising to 1.5 times that at full reach, leaving it [Bleeding] for 2 damage a second for 3 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Mud Wallow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "earth",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "cooldown": 24,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   },
+   "desc": "You regain 4 health a second for 6 seconds, and you take 10% less physical damage."
+  },
+  {
+   "name": "Coiled Haunches",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 35% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

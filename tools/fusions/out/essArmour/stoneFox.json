@@ -1,0 +1,69 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Bait and Clatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Clangs your plates together, dealing 10 damage to every enemy within 2.5 tiles and knocking them back 2 tiles. Each has a 40% chance to be left [Damped] for 5 seconds.",
+   "base": 10,
+   "cooldown": 18,
+   "knockback": 64,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "range": 80,
+   "aoeBand": "small"
+  },
+  {
+   "name": "Dirty Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "desc": "Usable only on a target at or below 25% health: consumes every affliction on it, adding 1.5 times their remaining damage to a blow that deals 20 damage.",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true
+  },
+  {
+   "name": "Sleight of Steel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead.",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30
+  },
+  {
+   "name": "Barely Counted",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "desc": "Once every 240 seconds, a blow that would kill you leaves you at 1 health instead.",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 240
+  }
+ ]
+}

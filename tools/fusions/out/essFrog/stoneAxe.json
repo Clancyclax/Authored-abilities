@@ -1,0 +1,73 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Apex Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 224,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "You leap to a target up to 7 tiles away and chop down for 15 damage, leaving it 15% easier to wound for 6 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Felling Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "You jump and swing the axe in a full circle, dealing 28 damage to every enemy within 4 tiles. It ignores armour."
+  },
+  {
+   "name": "Long Haft",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.2727,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "For 12 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Weight of the Drop",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover raises your physical damage by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

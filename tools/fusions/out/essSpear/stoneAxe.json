@@ -1,0 +1,77 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Bardiche Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 112,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "stunOnHit": 1,
+   "desc": "Brings a long-hafted blade down on an enemy up to 3.5 tiles away. It deals 16 slashing damage, stuns the target for 1 second and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Headsman's Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 112,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy at or below 25% health, from up to 3.5 tiles away. It deals 20 damage and uses up every affliction on the target, adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Beard Hook",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "Hooks a line 5 tiles long ahead of you for 5 seconds that drags nearby enemies toward it and slows those it catches by 20% for 3 seconds."
+  },
+  {
+   "name": "Jab, Jab, Hew",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. Your next critical hit on it spends them all: a blow strikes it for 27% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

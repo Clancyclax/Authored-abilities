@@ -1,0 +1,86 @@
+{
+ "essence": "essFox",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Picked Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes a target up to 6 tiles away for 8 damage, rising to 1.5 times that at full reach, and leaves it [Marked] for 6 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Look Over There",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A pointing gesture through a cone 4 tiles long that deals 11 arcane damage, stuns everything in it for 1.2 seconds and leaves them [Leaden] for 6 seconds."
+  },
+  {
+   "name": "Blink and Missed",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "arcane",
+   "cooldown": 10,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. Your movement speed rises 15% for 3 seconds afterward."
+  },
+  {
+   "name": "Watched Long Enough",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

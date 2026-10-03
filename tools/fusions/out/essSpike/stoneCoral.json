@@ -1,0 +1,84 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Polyp's Harpoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a stinging thread up to 6 tiles. It deals 11 damage to the first enemy it meets, stuns it for 1 second and leaves it [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Staghorn Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.2,
+   "hpCostPct": 0.05,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Costs 5% of your maximum health. Branching tines grow out of you, and the growth deals 9 damage to every enemy within 3 tiles. The damage rises 10% for each affliction already on the target, up to 40%."
+  },
+  {
+   "name": "Stinging Colony",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.6,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Roots a head of living reef where you stand for 12 seconds. It deals 3 damage every second to an enemy within 4 tiles, each time with a 30% chance to leave it [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Reef Edge",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "damage",
+   "reflectFrac": 0.12,
+   "buffDuration": 0,
+   "desc": "12% of the damage you take is dealt back to whoever dealt it. You have 10% water resistance.",
+   "resist": {
+    "element": "water",
+    "amount": 0.1
+   }
+  }
+ ]
+}

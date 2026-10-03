@@ -1,0 +1,88 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Brood Stingers",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends 3 hatchlings out in a spread out to 7 tiles, each of which deals 3 damage, with a 30% chance to leave its target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Barbed Parting",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Costs 5% of your maximum health. A sting left in the wound, which deals 9 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Egg-Sac Hive",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "lifeOnKill": 4,
+   "desc": "Splits an egg sac. For 12 seconds its hatchlings swarm an enemy within 4 tiles for 3 damage every second, and each kill restores 4 health to you."
+  },
+  {
+   "name": "Tireless Spinner",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you inflict a condition, you regain 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

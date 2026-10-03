@@ -1,0 +1,78 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Nowhere to Flinch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "maxMult": 1.3,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Thrusts a spike at a target up to 5 tiles away for 4 damage, rising to 1.3 times that at full reach. Its damage rises 10% per affliction on the target (max 30%)."
+  },
+  {
+   "name": "Spiked Door Closing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Spiked bars close in around you, dealing 28 damage that ignores armour to every enemy within 3 tiles and leaving each [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Picket Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Drives a row of stakes 5 tiles long into the ground for 6 seconds. Anything that crosses it is left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Bars Between Us",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your armour rises by 10%."
+  }
+ ]
+}

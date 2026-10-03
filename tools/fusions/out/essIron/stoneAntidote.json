@@ -1,0 +1,71 @@
+{
+ "essence": "essIron",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Drawn to the Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A thrust that deals 16 damage and draws out every affliction you have on the target, dealing 60% more damage for each one drawn. It leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Skimmed Dross",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Flings off skimmed dross, dealing 10 poison damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. You regain 6 health. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it.",
+   "healOnUse": 6
+  },
+  {
+   "name": "Proof Against Taint",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "immunityDuration": 3,
+   "healOnUse": 8,
+   "desc": "For 3 seconds, no condition can take hold of you and blows that reach you deal no damage, and you regain 8 health at once. Transcendent damage still lands."
+  },
+  {
+   "name": "Nothing to Corrode",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 8%, and you have 12% poison resistance."
+  }
+ ]
+}

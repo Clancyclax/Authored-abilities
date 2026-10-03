@@ -1,0 +1,91 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Swallowed Whole",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes your jaws over a weakened enemy, which deals 22 damage, leaves it [Pinned] for 3 seconds and 15% easier to wound for 6 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Ribbed Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes around every enemy within 3 tiles, which deals 12 damage and leaves them [Pinned] for 4 seconds. Your afflictions on each one spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Bubble Net",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Blows a curtain of bubbles 6 tiles long for 5 seconds that drags nearby enemies toward it and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Corral",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "resonating",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "When you inflict a condition, your next spell deals 20% more damage. Once every 8 seconds."
+  }
+ ]
+}

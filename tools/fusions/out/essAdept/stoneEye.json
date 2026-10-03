@@ -1,0 +1,68 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Flaw Spotted",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "desc": "A precise strike on a target up to 7 tiles away that deals 22 damage, rising to 1.5 times that at full reach. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Piercing Gaze",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 500,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a bolt of arcane force that deals 28 damage to the first enemy it meets and leaves it [Exposed] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Measured Look",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.3,
+   "buffDuration": 10,
+   "castTime": 1,
+   "cooldown": 45,
+   "desc": "Takes 1 second to use, then raises your critical hit chance by 30% for 10 seconds."
+  },
+  {
+   "name": "Wound Reader",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

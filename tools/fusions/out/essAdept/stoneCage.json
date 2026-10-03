@@ -1,0 +1,85 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Snare Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a weighted snare that deals 12 damage to the first enemy it meets, stuns it for 1 second and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "No Way Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A blow on an enemy at or below 30% health that deals 18 damage, leaves it 10% easier to wound for 4 seconds, and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Shut Every Door",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Trapper's Instinct",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

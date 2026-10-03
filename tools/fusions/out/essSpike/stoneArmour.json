@@ -1,0 +1,80 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneArmour",
+  "fusions": [
+    {
+      "name": "Studded Shoulder",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "stunOnHit": 1.2,
+      "desc": "Drives a studded pauldron into the target. The blow deals 14 damage, stuns it for 1.2 seconds and leaves it 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Sprung Rivets",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "piercing",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "sunder",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "The burst deals 28 damage that ignores armour to every enemy within 3.5 tiles and leaves each [Sundered] for 6 seconds."
+    },
+    {
+      "name": "Planted in Plate",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "buffStat": "damageReduction",
+      "buffAmount": 0.25,
+      "buffDuration": 10,
+      "taunt": true,
+      "tauntRadius": 160,
+      "tauntMax": 4,
+      "tauntDuration": 6,
+      "cooldown": 36,
+      "desc": "Reduces the damage you take by 25% for 10 seconds, and pulls up to 4 enemies within 5 tiles onto you for 6 seconds."
+    },
+    {
+      "name": "Hobnailed Harness",
+      "kind": "passive",
+      "category": "armor summon",
+      "template": "summonArmor",
+      "element": "piercing",
+      "armorBonus": 0.1,
+      "damageReduction": 2,
+      "itemBuffs": [
+        {
+          "stat": "maxHp",
+          "amount": 15
+        }
+      ],
+      "thornsFrac": 0.12,
+      "desc": "Conjures a harness of studded plate: every hit you take is 2 lower, your armour rises by 10%, 12% of the damage you take goes back to whoever dealt it, and your maximum health rises by 15."
+    }
+  ]
+}

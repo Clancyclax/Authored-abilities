@@ -1,0 +1,87 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Living Spur",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Breaks a spur off your own body and throws it, which deals 8 damage to the first enemy it meets and makes it [Bleeding] for 2 damage a second for 3 seconds. It costs 4% of your maximum health."
+  },
+  {
+   "name": "Breakwater",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "knockback": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Strikes every enemy within 3 tiles, which deals 12 damage and knocks them back 3 tiles. You restore 6 health.",
+   "healOnUse": 6
+  },
+  {
+   "name": "Accretion",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Reef Causeway",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "your health regenerates faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "armor",
+     "amount": 0.06,
+     "text": "your armour rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your health regenerates 15% faster, and from gold your armour rises by 6%."
+  }
+ ]
+}

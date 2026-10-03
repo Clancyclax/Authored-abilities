@@ -1,0 +1,66 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Webbed Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.4,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A lunging strike that deals 4 damage, rising to 1.4 times that at its full reach of 4 tiles. Its damage rises 5% for every 100 paces you have covered since you last used it (max 30%)."
+  },
+  {
+   "name": "Marching Thump",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Stamps out a beat that deals 28 damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Long-Haul Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "wind",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Pavement Waddle",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "cooldownReduction": 0.06,
+   "desc": "On paved ground, your dodge chance rises by 12%. Your other abilities' cooldowns are 6% shorter."
+  }
+ ]
+}

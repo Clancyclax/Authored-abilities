@@ -1,0 +1,98 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Splitting Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a barbed bolt that deals 4 damage with a 20% chance to leave the target [Pinned] for 1.5 seconds, then splits to 1 more enemy within 3.5 tiles for 60% of the damage."
+  },
+  {
+   "name": "Cleft Loyalties",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "confuseDuration": 5,
+   "maxTargets": 2,
+   "confuseDamageFrac": 1,
+   "duration": 5,
+   "confuseDamagePct": 1,
+   "stunOnHit": 1.0,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "range": 114,
+   "reachUnits": 114,
+   "rangeBand": "melee",
+   "desc": "Seizes up to 2 enemies within 3.5 tiles and turns them against each other for 5 seconds. Each takes 10 damage and is stunned for 1 second, and the first to turn is slowed by 30% for 3 seconds."
+  },
+  {
+   "name": "Blame Elsewhere",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "armorBonus": 0.1,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead. Your armour rises by 10% while it holds."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "When you land a critical hit, a second strike hits the nearest enemy within 6 tiles, dealing 6 damage and slowing it by 30% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

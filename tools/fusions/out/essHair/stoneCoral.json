@@ -1,0 +1,85 @@
+{
+ "essence": "essHair",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Snapped Branch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Snaps off a lock grown hard and jagged, at a cost of 4% of your maximum health, and throws it at a target up to 6 tiles away. It deals 9 slashing damage, rising to 1.5 times that at full reach, and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Stinging Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Every strand opens into a stinging polyp and fires at once, dealing 12 poison damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Polyp Garden",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Your hair roots where you stand and spreads into a bed of polyps reaching 3 tiles around you. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Accreted Shell",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you are healed, the new growth along your hair hardens into a shield worth 12% of your maximum health for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Cheap Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sly butt that deals 4 damage, makes the target [Bleeding] for 1 damage a second for 3 seconds and has a 30% chance to leave it [Leaden] for 4 seconds."
+  },
+  {
+   "name": "Misdirected Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 20,
+   "range": 112,
+   "confuseDuration": 4,
+   "maxTargets": 2,
+   "confuseDamageFrac": 1,
+   "duration": 4,
+   "confuseDamagePct": 1,
+   "knockback": 64,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Turns up to 2 enemies within 3.5 tiles against each other for 4 seconds, dealing 8 damage and knocking them back 2 tiles."
+  },
+  {
+   "name": "Slipped the Drover's Eye",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 40,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 6 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Loaded Dice",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollCooldown": 10,
+   "rerollKinds": [
+    "crit"
+   ],
+   "allyScaling": {
+    "per": 0.09,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

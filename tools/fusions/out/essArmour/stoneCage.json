@@ -1,0 +1,84 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shackling Blow",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A blow that deals 12 damage, stuns the target for 1.2 seconds, leaves it [Pinned] for 3 seconds and 10% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Iron Maiden",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives spikes out of your plate, dealing 28 damage that ignores armour to every enemy within 3 tiles and leaving them [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Drop the Portcullis",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 30,
+   "desc": "Drops a wall of bars 6 tiles long that nothing crosses, for 6 seconds."
+  },
+  {
+   "name": "Turnkey's Calm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

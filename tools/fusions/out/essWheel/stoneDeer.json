@@ -1,0 +1,72 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Parting Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "desc": "A kick that deals 4 damage and leaves the target 6% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Tossed Aside",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "knockback": 96,
+   "desc": "Bounds past a target up to 5 tiles away. It deals 12 damage, rising to 1.6 times that at maximum range, and knocks the target back 3 tiles."
+  },
+  {
+   "name": "Startled Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 224,
+   "cooldown": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you to a spot up to 7 tiles away. You move 20% faster for 4 seconds after."
+  },
+  {
+   "name": "Sprung Gait",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you dodge, a stack builds on you, up to 6. The next ability you use spends them all: you move and attack 3% faster per stack (16% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

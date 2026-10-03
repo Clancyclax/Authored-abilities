@@ -1,0 +1,76 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Staghorn Scrape",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A weapon strike that deals 12 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Salt in the Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A flurry of bites that deals 4 water damage to every enemy within 2.5 tiles, rising by 10% for each affliction the target carries, up to 40%."
+  },
+  {
+   "name": "Low-Tide Refuge",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "healAmount": 15,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 20,
+   "blinkOnUse": 64,
+   "desc": "Hops you 2 tiles and restores 15 health to you and every ally within 3.5 tiles. The healing rises by 1% for each 1% of cast speed you have."
+  },
+  {
+   "name": "Encrusting Colony",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 8. When it reaches 8, they all spend at once: a blow strikes that enemy for 20% of your weapon damage per stack (163% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

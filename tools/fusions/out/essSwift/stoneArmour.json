@@ -1,0 +1,75 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneArmour",
+  "fusions": [
+    {
+      "name": "Flung Gauntlet",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.8,
+      "knockback": 80,
+      "desc": "Throws a gauntlet at a target up to 6 tiles away that deals 11 damage, rising to 1.8 times that at full reach, and knocks it back 2.5 tiles."
+    },
+    {
+      "name": "Gap in the Lames",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.6,
+      "spammable": true,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "hasteOnUse": {
+        "pct": 0.1,
+        "duration": 2
+      },
+      "desc": "A thrust that deals 4 damage and leaves the target 8% easier to wound for 4 seconds. You move 10% faster for 2 seconds afterwards."
+    },
+    {
+      "name": "Glancing Angle",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "physical",
+      "armorBonus": 0.2,
+      "buffDuration": 9,
+      "cooldown": 30,
+      "blinkOnUse": 64,
+      "dodgeBonus": 0.1,
+      "desc": "Raises your armour by 20% for 9 seconds. You finish it 2 tiles from where you stood, with 10% more dodge chance."
+    },
+    {
+      "name": "Turned Blows",
+      "kind": "passive",
+      "element": "physical",
+      "category": "stacking",
+      "template": "stacking",
+      "stackOn": "self",
+      "stackShape": "ledger",
+      "stackBuild": "dodge",
+      "stackPay": "ward",
+      "stackCap": 4,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackScale": 1,
+      "stackIcon": "stackWard",
+      "desc": "Every time you avoid a blow, a stack builds on you, up to 4. At 4 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (28% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

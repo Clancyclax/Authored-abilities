@@ -1,0 +1,86 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Stooping Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargeTo": 256,
+   "desc": "Glides you up to 8 tiles onto a target and lands a kick for 12 damage, rising to 1.8 times that from full range."
+  },
+  {
+   "name": "Moulting Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 3,
+   "desc": "Looses 3 quills at once, spread apart, each dealing 6 damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Gliding Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "teleportRange": 224,
+   "cooldown": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Carries you instantly to a point up to 7 tiles away. Your movement speed rises 15% for 3 seconds afterward."
+  },
+  {
+   "name": "Hollow Bones",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "wind",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "you cover ground faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "you are harder to hit"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.08,
+     "text": "and you strike faster"
+    }
+   ],
+   "desc": "Raises your Speed by 1, and your Speed ceiling by 1. From bronze rank you move 5% faster, from silver your dodge chance rises by 5%, and from gold you attack 8% faster."
+  }
+ ]
+}

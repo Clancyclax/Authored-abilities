@@ -1,0 +1,93 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Nose and Echo",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "cooldown": 0.8,
+   "base": 4,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Sends a click and a whiff of musk into the first enemy within 6 tiles, dealing 4 damage with a 30% chance to leave it [Poisoned] for 4 seconds. It then echoes on to 2 more enemies within 3 tiles for 50% of the damage."
+  },
+  {
+   "name": "Nightfall Flyby",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 12,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swoops to an enemy up to 6 tiles away and sprays as you pass, dealing 12 damage to everything in a cone 3 tiles long and leaving it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Roost Mate",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "cooldown": 36,
+   "summonKind": "bird",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a roost-mate for 10 seconds that swoops on an enemy within 4 tiles for 3 damage every second, each pass with a 30% chance to leave it [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Dusk Riser",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "At night, you deal 12% more damage."
+  }
+ ]
+}

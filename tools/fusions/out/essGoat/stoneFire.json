@@ -1,0 +1,81 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sparks Underfoot",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Strikes sparks from your hooves, dealing 4 fire damage to every enemy within 2 tiles and setting each [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Burnt Offering",
+   "template": "stackStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 80,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Butts a target at or below 30% health for 18 fire damage, consuming every affliction on it to add 1.6 times their remaining damage to the hit, then sets it [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Walk the Coals",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "fire",
+   "cooldown": 40,
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "resist": {
+    "element": "fire",
+    "amount": 0.3
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Your armour rises by 20% and your fire resistance by 30% for 12 seconds. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Stubborn Embers",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "fire",
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. Your fire resistance rises by 10%."
+  }
+ ]
+}

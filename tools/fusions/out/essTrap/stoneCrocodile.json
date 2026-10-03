@@ -1,0 +1,83 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "One Long Wait",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "range": 84,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lunge from stillness that deals 34 damage and is always a critical hit. It leaves the target [Pinned] for 3 seconds and 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Roll It Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rolls with the target held in your grip: a weapon strike that deals 18 damage and uses up every affliction you have on the target for 60% more damage each. It then leaves the target [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Sunk to the Eyes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 40,
+   "stealthDuration": 10,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 10 seconds: enemies notice you 70% later. Attacking ends it."
+  },
+  {
+   "name": "Stillness Before the Snap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12,
+    "seconds": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35
+   },
+   "desc": "After 12 seconds without a critical hit, your critical chance rises by 35% for your next strike."
+  }
+ ]
+}

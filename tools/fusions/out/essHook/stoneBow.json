@@ -1,0 +1,81 @@
+{
+ "essence": "essHook",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Full-Draw Harpoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Looses a harpoon at a target up to 8 tiles away that deals 30 damage, rising to 2 times that at full reach, and always lands as a critical hit. Its barbed line slows the target by 30% for 3 seconds."
+  },
+  {
+   "name": "Quiver of Barbs",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 5,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shoots a barbed arrow that deals 7 damage to the first enemy it meets, with a 50% chance to leave it [Bleeding] for 5 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Paid-Out Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 12,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "For 12 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "name": "Nock After the Set",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your next strike has 20% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

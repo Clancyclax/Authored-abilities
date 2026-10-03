@@ -1,0 +1,86 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "basic",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spammable": true,
+   "name": "Mooring Links",
+   "element": "physical",
+   "base": 4,
+   "cooldown": 1,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a length of links that deals 4 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. Each hit has a 30% chance to leave its target [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "role": "medium",
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Anchor Cast",
+   "element": "blunt",
+   "base": 13,
+   "cooldown": 16,
+   "maxMult": 1.8,
+   "stunOnHit": 1,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 4
+   },
+   "desc": "Heaves an anchor at a target up to 7 tiles away for 13 damage, rising to 1.8 times that at full reach. It stuns the target for 1 second and leaves it moving 25% slower for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "name": "Tow Line",
+   "element": "water",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "ally",
+   "cooldown": 30,
+   "desc": "Ties a line to the ally who needs it most, restoring 3 health a second to them for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Slack Taken Up",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "The Long Wait",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "cooldown": 120,
+   "base": 34,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A single bite that deals 34 damage, is always a critical hit and leaves the target 20% easier to wound for 8 seconds. Its damage rises 10% for each affliction the target already carries (max 40%)."
+  },
+  {
+   "name": "Snap at the Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "resource",
+   "cooldown": 1.1,
+   "base": 9,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Snaps across a cone 3 tiles long for 9 damage, with a 40% chance to leave each target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Water-Dance Bellow",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Bellows a warning that holds every creature within 4 tiles in place for 2 seconds."
+  },
+  {
+   "name": "Strikes as It Lifts",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "When one of your conditions on an enemy runs out, your critical hit chance rises by 30% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

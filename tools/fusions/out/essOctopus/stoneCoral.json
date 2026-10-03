@@ -1,0 +1,93 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Staghorn Threshold",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "rock",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 30,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grows a reef 5 tiles long ahead of you for 8 seconds. It deals 26 damage that ignores armour to each enemy that crosses it and leaves that enemy [Bleeding] for 2 damage a second for 5 seconds and [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Reach From the Crevice",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lashes an arm at an enemy up to 6 tiles away for 7 damage, rising to 1.6 times that at full reach, and leaves it [Bleeding] for 1 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Garden at the Den",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "healPerSec": 3,
+   "fieldDuration": 9,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Arranges a reef garden where you stand. For 9 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Overgrown at Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "The moment your health is full, a shield worth 20% of your maximum health covers you for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

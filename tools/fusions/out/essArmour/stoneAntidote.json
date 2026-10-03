@@ -1,0 +1,84 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Venom",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Fires a bolt that deals 8 damage and leaves the target [Sundered] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Purging Shrug",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "healOnUse": 6,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You shrug the poison out of your plate, dealing 10 damage to every enemy within 3 tiles, knocking them back 2.5 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. You restore 6 health."
+  },
+  {
+   "name": "Bitter Lining",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.6,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "resist": {
+    "element": "poison",
+    "amount": 0.2
+   },
+   "desc": "For 10 seconds, each affliction laid on you has a 60% chance to be sent back to whoever inflicted it, and your poison resistance rises by 20%."
+  },
+  {
+   "name": "Mithridate Temper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.7,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they spend at once and you are healed for 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heartrot Cleave",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A cleaving chop that uses up every affliction you have on the target and deals 18 slashing damage, 60% more for each one used, and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Felling Sweep",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sweeping chop through a cone 2.5 tiles deep that deals 12 slashing damage, stuns enemies for 1 second and has a 40% chance per hit to leave them [Diseased] for 6 seconds.",
+   "stunOnHit": 1
+  },
+  {
+   "name": "Deadwood Reek",
+   "kind": "active",
+   "category": "affliction",
+   "template": "corpseMiasma",
+   "element": "necrotic",
+   "cooldown": 30,
+   "range": 300,
+   "base": 4,
+   "corpse": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "miasmaSeconds": 8,
+   "explodeRadius": 112,
+   "desc": "The nearest body within 9.5 tiles rots where it lies for 8 seconds, and gives every enemy within 4 tiles of it Rot for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Windfall",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "desc": "When you kill an enemy, spores strike the nearest enemy within 6 tiles for 8 damage. Once every 4 seconds."
+  }
+ ]
+}

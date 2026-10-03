@@ -1,0 +1,75 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Baited Carcass",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 60,
+   "range": 288,
+   "corpse": true,
+   "explodeRadius": 112,
+   "mineSeconds": 30,
+   "desc": "Baits up to 3 bodies within 9 tiles for 30 seconds. Each one bursts the moment an enemy comes within 2 tiles of it and deals 26 damage to everything within 3.5 tiles."
+  },
+  {
+   "name": "Passed Around the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Throws poisoned bait that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Dinner Bell",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffStat": "healingReceived",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "desc": "Rings the bell: up to 5 enemies within 6 tiles are drawn onto you for 6 seconds, and healing you receive rises by 30% for 10 seconds."
+  },
+  {
+   "name": "Larder of the Caught",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

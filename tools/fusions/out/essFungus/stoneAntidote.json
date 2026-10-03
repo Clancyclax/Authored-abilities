@@ -1,0 +1,78 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Poultice",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Fires a spore that draws out every affliction you have on the target and deals 16 poison damage, 60% more for each one drawn. 20% of the damage comes back to you as healing over 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Measured Dose",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "healOnUse": 1,
+   "desc": "Releases a puff of spores that deals 4 poison damage to every enemy within 2.5 tiles and restores 1 health to you."
+  },
+  {
+   "name": "Bitter Filter",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "healScope": "self",
+   "cleanseCount": 3,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Draws up to 3 conditions out of you and restores 10 health."
+  },
+  {
+   "name": "Spent Toxin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "When one of your afflictions runs out on an enemy, you regain 3 health a second for 4 seconds. Once every 8 seconds. You carry 8% poison resistance."
+  }
+ ]
+}

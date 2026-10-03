@@ -1,0 +1,74 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Blinked First",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "execute",
+   "cooldown": 15,
+   "base": 20,
+   "maxMult": 1.6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A jet of musk into the eyes of an enemy at or below 25% health and up to 7 tiles away, dealing 20 damage, rising to 1.6 times that at maximum range, and leaving it [Blunted] for 8 seconds."
+  },
+  {
+   "name": "Every Lid Streaming",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "cooldown": 75,
+   "base": 26,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays a cone 4 tiles long at face height, dealing 26 damage that ignores armour to everything in it and leaving it [Marked] for 10 seconds."
+  },
+  {
+   "name": "Sighted Down the Stripe",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Sharp Focus",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

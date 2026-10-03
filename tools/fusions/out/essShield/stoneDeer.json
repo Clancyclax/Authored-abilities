@@ -1,0 +1,84 @@
+{
+  "essence": "essShield",
+  "stone": "stoneDeer",
+  "fusions": [
+    {
+      "name": "Upsweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 96,
+      "coneAngle": 1,
+      "isAoe": true,
+      "aoeBand": "small",
+      "knockback": 96,
+      "desc": "Scoops everything in an arc 3 tiles ahead on the shield's upturned edge and throws it, dealing 12 damage and knocking each enemy back 3 tiles."
+    },
+    {
+      "name": "Sidestep Jab",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "chargesMax": 3,
+      "sunder": {
+        "amount": 0.05,
+        "duration": 4
+      },
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 2
+      },
+      "desc": "Jabs with the shield's rim, which deals 7 damage and leaves the target 5% easier to wound for 4 seconds. You move 15% faster for 2 seconds after. It holds 3 charges, and a kill gives one back."
+    },
+    {
+      "name": "Bolt Under Cover",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 20,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 18,
+      "shieldStrikes": 3,
+      "shieldDuration": 5,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Raises a barrier that absorbs the next 18 damage and holds for 5 seconds, and you move 25% faster for 4 seconds."
+    },
+    {
+      "name": "First to Flinch",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.12,
+        "duration": 4
+      },
+      "dodgeBonus": 0.05,
+      "desc": "When a blow lands on you from anything but fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 12 seconds. You gain +5% dodge chance."
+    }
+  ]
+}

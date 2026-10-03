@@ -1,0 +1,84 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Clamped Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Clamps onto the target for 13 damage, stuns it for 1.2 seconds and leaves it [Bleeding] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Twist Until It Tears",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "consumeAfflictionsPer": 0.5,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Rolls with the target held in your teeth, dealing 16 damage and leaving it 15% easier to wound for 6 seconds. It uses up every affliction you have on the target and deals 50% more damage for each one."
+  },
+  {
+   "name": "Jaws in the Shallows",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Sets a pair of toothed jaws at the nearest enemy. They wait up to 30 seconds, then close on the first enemy to come within 2 tiles in a blast that deals 22 damage."
+  },
+  {
+   "name": "Longer the Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

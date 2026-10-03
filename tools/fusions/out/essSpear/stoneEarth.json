@@ -1,0 +1,72 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Butt-Strike Tremor",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Slams the butt of the shaft into the ground, which deals 28 earth damage to every enemy within 3.5 tiles. It ignores resistances."
+  },
+  {
+   "name": "Flint That Flakes",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargesMax": 4,
+   "desc": "A thrust with a flint head that deals 8 damage and leaves flakes in the wound, making the target [Bleeding] for 2 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Bedrock Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 25% for 12 seconds."
+  },
+  {
+   "name": "Hill Under the Heel",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 30%, you gain a shield worth 20% of your maximum health for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

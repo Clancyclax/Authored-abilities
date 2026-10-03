@@ -1,0 +1,83 @@
+{
+ "essence": "essIron",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Brought to Bay",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A clamping bite of spiked metal that deals 22 damage and leaves the target 12% easier to wound for 5 seconds. Usable only on an enemy at or below 30% health. Its damage rises 10% for each ally near you (max 30%)."
+  },
+  {
+   "name": "Slipped Leash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 6 tiles away, then deals 11 damage to every enemy within 2.5 tiles of you, with a 40% chance to leave each one [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Collar of Spikes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and each attacker is left [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Junkyard Mastiff",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 144,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Mastiff",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Calls a mastiff that fights beside you, biting an enemy within 4.5 tiles for 4 damage every 1.2 seconds and slowing what it bites by 20% for 2 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essBee",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fletched Stinger",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargesMax": 5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Fires a sting that deals 7 damage to the first enemy it reaches and leaves it [Poisoned] for 2 damage a second for 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Emptied Quiver",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 14,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Looses 3 stings at once, spread apart, each dealing 14 damage and bursting on impact for 80% of that to every enemy within 3 tiles."
+  },
+  {
+   "name": "Far Forage",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "name": "Barbs Left In",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 10,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you land a hit, a barb builds on that enemy, up to 10. Your next critical hit on it spends them all: a blow strikes it for 20% of your weapon damage per barb. Unfed, a barb fades every 4 seconds."
+  }
+ ]
+}

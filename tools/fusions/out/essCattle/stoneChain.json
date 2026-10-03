@@ -1,0 +1,84 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lash of the Traces",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Lashes a trace chain into the first enemy in its path for 7 damage. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slipped the Picket",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "You lunge up to 6 tiles to the target, strike it for 13 damage and make it [Bleeding] for 2 damage a second for 4 seconds. The trailing chain leaves it 25% slower for 3 seconds."
+  },
+  {
+   "name": "Dragged to Heel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 224,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Drags up to 4 enemies within 7 tiles onto you and holds their attention for 5 seconds."
+  },
+  {
+   "name": "Strain at the Tether",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: a blow strikes the nearest enemy within 8 tiles for 27% of your weapon damage per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

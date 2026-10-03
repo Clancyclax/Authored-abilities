@@ -1,0 +1,86 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Drawn Thread",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "leech": 0.2,
+   "desc": "Sends a strand into the first enemy it meets, dealing 4 damage. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "name": "Snared Mass",
+   "element": "physical",
+   "role": "long",
+   "base": 24,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 112,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "healOnUse": 14,
+   "desc": "Casts a web of strands around you, dealing 24 damage to every enemy within 3.5 tiles and ignoring their resistances. Each has a 60% chance of being [Slowed] for 6 seconds. You restore 14 health."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "name": "Stitch in Time",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 22,
+   "healScope": "self",
+   "critChance": 0.1,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 22 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Spun Thread",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "desc": "Every hit you land builds a stack, up to 6. At 6 they all spend at once and heal you for 3% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

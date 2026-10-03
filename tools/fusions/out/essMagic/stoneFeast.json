@@ -1,0 +1,78 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Second Helping",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Sends a bolt of arcana that deals 9 damage to the first enemy it meets and heals you for 30% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Passed Plates",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 112,
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "thiefOfLife",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Releases arcana that deals 11 damage to every enemy within 3.5 tiles, with a 50% chance per hit to leave them with [Thief of Life] for 6 seconds. Your afflictions on each of them spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Conjured Banquet",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 15,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 30,
+   "desc": "Restores 15 health to you and every ally within 3.5 tiles. The amount rises 1% for each 1% of cast speed you have."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 4
+   },
+   "name": "Sated Mind",
+   "element": "arcane",
+   "desc": "When you are healed, you restore 4 mana. Once every 5 seconds."
+  }
+ ]
+}

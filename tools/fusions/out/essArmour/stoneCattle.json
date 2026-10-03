@@ -1,0 +1,68 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Head-Down Rush",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "chargeTo": 192,
+   "knockback": 96,
+   "desc": "Rushes you up to 6 tiles to the target and deals 12 damage, up to 1.5 times as much from the full 6 tiles, knocking it back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herd Stomp",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A plated stomp that deals 26 damage to every enemy within 3.5 tiles. If it hits, your party deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Yoked Endurance",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.15,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "desc": "Reduces the damage you take by 15% for 20 seconds."
+  },
+  {
+   "name": "Slow-Built Hide",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 15,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they spend at once and you gain a shield worth 4% of your maximum health per stack (34% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

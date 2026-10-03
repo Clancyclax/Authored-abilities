@@ -1,0 +1,93 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneBear",
+  "fusions": [
+    {
+      "name": "Full Weight Down",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "bossPct": 0.05,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A slam deals 30 damage to every enemy within 3 tiles, plus 5% of a boss's or elite's maximum health, and leaves each [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Nothing Left to Lose",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "chargesMax": 4,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "A heavy thrust deals 9 damage and leaves the target 10% easier to wound for 5 seconds. The damage rises 8% for every 10% of your health already gone, up to 40%. Holds 4 charges; a kill gives one back."
+    },
+    {
+      "name": "Gin Trap",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "piercing",
+      "cooldown": 60,
+      "summonKind": "trap",
+      "summonDmg": 22,
+      "summonDuration": 20,
+      "summonInterval": 0,
+      "summonRange": 64,
+      "summonCharges": 1,
+      "summonBlast": 64,
+      "summonArmDelay": 1,
+      "trapDelivery": "spawned",
+      "castTime": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sets a toothed iron trap at the nearest enemy. It waits up to 20 seconds, and when an enemy comes within 2 tiles it snaps shut: it deals 22 damage and leaves the enemy [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Baited Too Long",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "power",
+      "stackCap": 6,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackKarma",
+      "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

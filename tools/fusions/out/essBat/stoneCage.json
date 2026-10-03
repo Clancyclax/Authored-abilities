@@ -1,0 +1,86 @@
+{
+ "essence": "essBat",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Folding Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "dark",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "stunOnHit": 1.2,
+   "desc": "You fold your wings shut around one enemy, dealing 16 dark damage, stunning it for 1.2 seconds and leaving it 10% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Sealed-Room Shriek",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a shriek into the first enemy in its path for 16 resonating damage, using up every affliction you have on it for 60% more damage per affliction, and leaves it [Inescapable] for 4 seconds."
+  },
+  {
+   "name": "Curtain of Wings",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "shadow",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Hangs a curtain of bats 5 tiles long for 6 seconds. Nothing crosses it, and anything that touches it moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Captive Larder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Anything you strike moves 15% slower for 2 seconds. When you afflict an enemy, you regain 3 health a second for 4 seconds; once every 8 seconds."
+  }
+ ]
+}

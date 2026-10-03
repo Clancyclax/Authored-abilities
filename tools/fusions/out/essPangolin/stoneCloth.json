@@ -1,0 +1,83 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Pulled Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "Usable only on an enemy at or below 25% health. A claw pulls the target apart at the seams, dealing 20 damage, consuming every affliction on it and adding 1.5 times their remaining damage to the hit."
+  },
+  {
+   "name": "Spun Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Binds the first enemy it meets, dealing 10 damage, stunning it for 1 second and leaving it [Weakened] for 6 seconds."
+  },
+  {
+   "name": "Bandaged Ranks",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "physical",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Wrapped Beneath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "physical",
+    "amount": 0.05
+   },
+   "desc": "Each time you are hurt by anything other than fire, you regain 3 health a second for 4 seconds. Once every 10 seconds. You have 5% physical resistance."
+  }
+ ]
+}

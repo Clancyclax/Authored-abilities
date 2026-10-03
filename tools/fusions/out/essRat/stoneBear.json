@@ -1,0 +1,76 @@
+{
+ "essence": "essRat",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "name": "Buried Under Fur",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 64,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "The pack piles its whole weight onto every enemy within 2 tiles, dealing 12 damage and stunning each of them for 1 second."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lean Season Lunge",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "hpCostPct": 0.05,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.36,
+   "desc": "A mauling bite that deals 9 damage and leaves the target 10% easier to wound for 5 seconds. Also costs 5% of your maximum health. Its damage rises 6% for every 10% of your health already gone (max 36%)."
+  },
+  {
+   "name": "Sleep Off the Winter",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "cooldown": 30,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Restores 4 health a second to you for 8 seconds. Its healing rises 6% for every 10% of your health already gone (max 30%)."
+  },
+  {
+   "name": "Nowhere Left to Run",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.35,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "Once your health falls below 35%, your physical damage rises by 40% for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

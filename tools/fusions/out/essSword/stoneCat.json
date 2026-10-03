@@ -1,0 +1,89 @@
+{
+ "essence": "essSword",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Done Playing",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A finishing cut that deals 20 damage and consumes every affliction on the target, adding 1.6 times their remaining damage to the hit. Usable only on an enemy at or below 30% health. For 3 seconds after using it, you move 20% faster."
+  },
+  {
+   "name": "Three Raked Lines",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.2,
+   "speed": 420,
+   "radius": 6,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rakes 3 parallel cuts out to 3 tiles, each of which deals 5 damage and leaves the target [Bleeding] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Land Behind Them",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 9,
+   "blinkOnUse": 96,
+   "desc": "Increases your critical hit chance by 20% for 9 seconds and jinks you 3 tiles from where you stood."
+  },
+  {
+   "name": "Soft-Footed Opener",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Each time you kill something, 8 stamina comes back to you. Once every 6 seconds. Your strikes have 40% more critical chance against a target that has not been hurt yet."
+  }
+ ]
+}

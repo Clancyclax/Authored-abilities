@@ -1,0 +1,73 @@
+{
+ "essence": "essDog",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "From Nowhere",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Springs at a target at or below 25% health up to 7 tiles away for 22 damage, up to 1.5 times that at full range."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fur Flying",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Claws and bites every enemy within 2 tiles and deals 7 damage, with a 30% chance each to leave it [Blunted] for 4 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Quiet Stalk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 22% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Twist Away",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 4% more damage per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

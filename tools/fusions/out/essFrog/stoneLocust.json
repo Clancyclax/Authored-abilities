@@ -1,0 +1,73 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Cloud Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "leech": 0.15,
+   "desc": "Drops into the middle of the swarm, dealing 8 damage to every enemy within 2.5 tiles and healing you for 15% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Clean Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "A snap at a target at or below 25% health that deals 18 damage, consuming every affliction on it and adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Cloud of Gnats",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 60,
+   "summonKind": "swarm",
+   "summonDmg": 5,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 1,
+   "desc": "Releases a swarm of gnats that fights for 12 seconds, biting an enemy within 5 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Eats What Falls",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you kill something, you heal for 20% of the damage you deal for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

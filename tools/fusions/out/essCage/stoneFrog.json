@@ -1,0 +1,93 @@
+{
+ "essence": "essCage",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sticky Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes out a sticky tongue that deals 4 damage, rising to 1.5 times that at its full reach of 7 tiles. Each hit has a 25% chance to leave the target [Pinned] for 1 second."
+  },
+  {
+   "name": "Marsh Chorus",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Booms a narrow croak 5 tiles ahead that deals 12 damage to everything in it, stuns it for 1 second and leaves it [Muddled] for 5 seconds."
+  },
+  {
+   "name": "Lily Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 22,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Takes 1 second to set a snapping trap at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles sets it off: it deals 22 damage in a blast around it."
+  },
+  {
+   "name": "Last Hop",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.5,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "dodgeBonus": 0.08,
+   "desc": "Once your health falls below 50%, a shield worth 25% of your maximum health closes over you for 6 seconds. You also have 8% more dodge chance. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "role": "medium",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Dunking Hold",
+   "element": "water",
+   "base": 14,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Seizes the target and holds it under, dealing 14 damage and stunning it for 1.2 seconds. It is left [Soaked] and 12% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "role": "long",
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Knuckle Quake",
+   "element": "blunt",
+   "base": 28,
+   "cooldown": 75,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings both fists down, dealing 28 damage to every enemy within 3.5 tiles and leaving them [Slowed] for 5 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Silverback Girth",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntDuration": 4,
+   "tauntMax": 4,
+   "desc": "Increases your maximum health by 20% for 15 seconds, and pulls up to 4 enemies within 5 tiles onto you for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "name": "Brute's Reckoning",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.06,
+   "desc": "Against enemies carrying one of your afflictions, you deal 12% more damage. Your armour rises by 6%."
+  }
+ ]
+}

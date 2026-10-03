@@ -1,0 +1,82 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drowning Roll",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "A clamping roll that deals 30 damage and leaves the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mud-Bank Lunge",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 160,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You rush up to 5 tiles to the target. The weapon strike deals 14 damage, leaves it [Poisoned] for 2 damage a second for 4 seconds and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Eyes at the Waterline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 36,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 5,
+   "stealthScope": "self",
+   "healOnUse": 10,
+   "desc": "Veils you for 9 seconds and restores 10 health. Enemies notice you 70% later, you move 6% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Longer the Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 4
+   },
+   "desc": "After 10 seconds without a critical hit, your physical damage rises by 40% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

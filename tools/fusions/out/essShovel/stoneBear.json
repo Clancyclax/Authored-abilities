@@ -1,0 +1,71 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Grub Raker",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "desc": "Rakes the blade through the ground in a cone 3 tiles long, dealing 14 damage to everything in it and throwing each enemy back 2.5 tiles."
+  },
+  {
+   "name": "Deadfall",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 120,
+   "range": 86,
+   "sunder": {
+    "amount": 0.18,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "Drops your whole weight behind the blade for 32 damage and leaves the target 18% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Winter Den",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "earth",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "You dig in and rest, regaining 4 health a second for 8 seconds. The healing rises 6% for every 10% of your health already gone, up to 30%."
+  },
+  {
+   "name": "Dig In Deeper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

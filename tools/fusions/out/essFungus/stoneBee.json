@@ -1,0 +1,88 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Forager's Return",
+   "template": "volley",
+   "element": "nature",
+   "role": "basic",
+   "spammable": true,
+   "base": 2,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 320,
+   "radius": 6,
+   "range": 220,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Looses 3 stings at once, spread apart, each dealing 2 nature damage. 20% of the damage dealt comes back to you as healing over 6 seconds.",
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Reprieve"
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cross-Pollination",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Fires a spore that deals 12 plant damage and gives the target Rot for 2 damage a second for 5 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Laden Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "desc": "Releases a swarm for 10 seconds that strikes enemies within 4 tiles for 3 damage every second. Each kill you make while it is out restores 5 health.",
+   "lifeOnKill": 5
+  },
+  {
+   "name": "Capped Cells",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land puts a stack on that enemy, up to 5. At 5 they all burst at once, striking the enemy for 34% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

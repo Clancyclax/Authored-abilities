@@ -1,0 +1,85 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneArmour",
+  "fusions": [
+    {
+      "name": "Dead Stop",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 14,
+      "strikes": 1,
+      "knockback": 96,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bruised"
+      },
+      "bindOnHit": {
+        "slowPct": 0.4,
+        "duration": 4
+      },
+      "desc": "A weapon strike that deals 16 damage, knocks the target back 3 tiles, leaves it [Bruised] for 2 damage a second for 4 seconds and slows it by 40% for 4 seconds."
+    },
+    {
+      "name": "Struck Breastplate",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "resonating",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "hpCostPct": 0.03,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Rings your breastplate in a blow that deals 7 resonating damage to every enemy within 3 tiles and leaves them [Hindered] for 4 seconds. Also costs 3% of your maximum health."
+    },
+    {
+      "name": "Plates at Rest",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 24,
+      "shieldStrikes": 6,
+      "shieldDuration": 15,
+      "cooldown": 48,
+      "desc": "Raises a barrier that absorbs the next 24 damage and holds for 15 seconds."
+    },
+    {
+      "name": "Mossback Harness",
+      "kind": "passive",
+      "category": "armor summon",
+      "template": "summonArmor",
+      "element": "nature",
+      "armorBonus": 0.1,
+      "damageReduction": 2,
+      "itemBuffs": [
+        {
+          "stat": "maxHp",
+          "amount": 12
+        }
+      ],
+      "thornsFrac": 0,
+      "desc": "Equips armour that lowers every hit you take by 2, raises your armour by 10% and raises your maximum health by 12."
+    }
+  ]
+}

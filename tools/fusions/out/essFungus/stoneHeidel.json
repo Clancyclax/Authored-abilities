@@ -1,0 +1,88 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Heavy Tread",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Holds 4 charges, and kills give charges back. A heavy blow that deals 6 damage, leaves the target 8% easier to wound for 4 seconds and [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Stampede Mould",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 256,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "huge",
+   "desc": "A wave of spores deals 30 damage to everything in a cone 8 tiles long, ignoring armour. Each hit has a 50% chance to leave the target [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Long Haul Poultice",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "life",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Restores 4 stamina a second for 8 seconds and 10 health."
+  },
+  {
+   "name": "Long Furrow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you spend stamina, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

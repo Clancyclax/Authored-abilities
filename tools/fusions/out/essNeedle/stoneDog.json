@@ -1,0 +1,86 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Worry the Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Bites into a wound and shakes, dealing 9 damage and leaving the target [Bleeding] for 2 damage a second for 4 seconds. Usable only on a target carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Hold the Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Strikes a target up to 7 tiles away for 26 damage, rising to 1.5 times that at full reach, and leaves it [Marked] for 10 seconds. If it hits, every ally strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Belly-Low Stalk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 9,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 6 seconds: enemies notice you 60% later, you move 10% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Steady to Wing",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "piercing",
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Pointer",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A bonded pointer fights beside you, biting enemies within 4 tiles for 3 damage every 1.2 seconds. Its bite leaves them [Bleeding] for 1 damage a second for 3 seconds."
+  }
+ ]
+}

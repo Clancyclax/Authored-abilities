@@ -1,0 +1,96 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Lunges a double point into the first enemy it meets, dealing 7 damage, then forks to 1 more enemy within 3 tiles for 70% of that damage. Holds 4 charges; each use spends one, and each kill restores one. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Two-Way Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 1.2,
+   "chargeTo": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rushes you to a target up to 4 tiles away, then kicks with two points for 13 damage, makes it [Bleeding] for 2 damage a second for 5 seconds and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Other Branch",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Crossroads Gait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Every 6 tiles you cover, a bolt strikes the nearest enemy within 5 tiles, dealing 6 damage, then forks to 1 more enemy within 3 tiles for 60% of that damage. Once every 6 seconds."
+  }
+ ]
+}

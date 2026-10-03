@@ -1,0 +1,72 @@
+{
+ "essence": "essIron",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Belfry Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Strikes your own plate so it rings, dealing 12 resonating damage to every enemy within 3 tiles and stunning them for 1 second."
+  },
+  {
+   "name": "Latching Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "leech": 0.25,
+   "desc": "A hooked weapon strike that deals 8 damage, makes the target [Bleeding] for 2 damage a second for 4 seconds, slows it by 20% for 3 seconds, and heals you for 25% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Answering Peal",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "resonating",
+   "cooldown": 24,
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "reflectChance": 1,
+   "buffDuration": 7,
+   "armorBonus": 0.1,
+   "desc": "For 7 seconds, 30% of the damage you take echoes back to whoever dealt it, and your armour rises by 10%."
+  },
+  {
+   "name": "Dark-Hung Mail",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "At night, your armour rises by 12%."
+  }
+ ]
+}

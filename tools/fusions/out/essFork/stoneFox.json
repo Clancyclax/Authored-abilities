@@ -1,0 +1,87 @@
+{
+ "essence": "essFork",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Feint Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "confuse": {
+    "chance": 0.25,
+    "duration": 3
+   },
+   "reachPct": 0.4,
+   "desc": "Flicks the fork at the first enemy it meets, dealing 4 damage with a 25% chance to turn it against its allies for 3 seconds. Its reach is 40% longer."
+  },
+  {
+   "name": "Slipped Between",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "ignoreArmor": true,
+   "desc": "Finds the gap in its guard and thrusts through, dealing 30 damage that ignores armour and leaving the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Straw Man",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 45,
+   "summonKind": "minion",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 2,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Props up a pitchfork-wielding scarecrow for 12 seconds that jabs an enemy within 5 tiles every 2 seconds for 3 damage, with a 30% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Light Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "Each time you afflict something, your next strike gains 20% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

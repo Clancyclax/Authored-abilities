@@ -1,0 +1,82 @@
+{
+ "essence": "essChain",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Ball and Shackle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a shackle weighted with a ball of stone at the first enemy it meets for 7 damage and leaves it [Leaden] for 5 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Anchor Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "long",
+   "base": 32,
+   "cooldown": 100,
+   "range": 90,
+   "reachUnits": 90,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "castTime": 1,
+   "desc": "Drops a chained anchor of rock on an enemy for 32 damage that ignores armour, leaving it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Bolted Down",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "cooldown": 40,
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "desc": "Locks plates of stone along your chains, raising your armour by 30% for 10 seconds."
+  },
+  {
+   "name": "Rock Flail",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "rock",
+   "weaponDmgPct": 0.14,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a flail of chain with a rock head: your weapon damage rises 14%, every strike leaves the target [Bleeding] for 2 damage every 0.8 seconds, 3 times over, and your armour rises by 5%."
+  }
+ ]
+}

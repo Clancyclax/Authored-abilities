@@ -1,0 +1,75 @@
+{
+ "essence": "essEye",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Trampling Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a cone 5 tiles ahead, dealing 28 damage to everything in it. Every hit is a critical hit and leaves the target [Marked] for 8 seconds."
+  },
+  {
+   "name": "Ride Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A heavy blow that deals 14 damage, leaves the target 10% easier to wound for 5 seconds and knocks it back 3 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Gallop Cadence",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 40,
+   "speedMult": 1.4,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 40% for 10 seconds. You have +8% dodge chance for it."
+  },
+  {
+   "name": "Paved Run",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "On paved ground, you deal 12% more damage. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

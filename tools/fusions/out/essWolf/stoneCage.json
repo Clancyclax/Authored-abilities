@@ -1,0 +1,80 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Pincer Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Rushes you to a target up to 6 tiles away and closes the ring, which deals 11 damage to every enemy within 3 tiles and leaves them [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "No Way Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A bite that deals 16 damage and uses up every affliction you have on the target, dealing 60% more damage for each one. It leaves the target 10% easier to wound for 6 seconds and [Inescapable] for 8 seconds."
+  },
+  {
+   "name": "Slipped Bars",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 50,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "desc": "Opens the cage on a wolf that fights for 15 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds."
+  },
+  {
+   "name": "Nothing Gets Loose",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

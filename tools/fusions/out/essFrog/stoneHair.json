@@ -1,0 +1,84 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Loose Ends",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 14,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "spreadAfflictions": 96,
+   "desc": "Looses 5 strands at once, spread apart out to 6 tiles, each dealing 4 damage. Your afflictions on each enemy hit spread to every enemy within 3 tiles of it."
+  },
+  {
+   "name": "Matted Clump",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a matted clump that hits the first enemy in its path for 6 damage and slows it by 20% for 2 seconds, with a 30% chance to leave it [Pinned] for 1.5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Snare Field",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "nature",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 96,
+   "aoeBand": "medium",
+   "castTime": 0.3,
+   "desc": "Holds every creature within 3 tiles in place for 2 seconds."
+  },
+  {
+   "name": "Slow Weave",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

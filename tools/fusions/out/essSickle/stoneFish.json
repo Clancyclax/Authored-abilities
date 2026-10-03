@@ -1,0 +1,85 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silver Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Throws a crescent of water that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage. For 3 seconds after you use it, you move 15% faster."
+  },
+  {
+   "name": "Scale and Gut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A gutting cut that deals 18 damage and leaves the target 15% easier to wound for 6 seconds. It uses up every affliction you have on the target and deals 60% more damage for each one."
+  },
+  {
+   "name": "Slip the Net",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "healScope": "self",
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 control effects from you, restores 10 health and increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Off the Line",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 4. At 4 they all spend at once: you heal for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

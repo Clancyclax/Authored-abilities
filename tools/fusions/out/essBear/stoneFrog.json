@@ -1,0 +1,76 @@
+{
+ "essence": "essBear",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snap Reach",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 200,
+   "maxMult": 2,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A ranged blow that deals 4 damage, up to 2 times at maximum range. Each hit has a 30% chance of leaving the target [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Belly Flop",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "stunOnHit": 1.2,
+   "desc": "Slams down on every enemy within 3 tiles; each hit deals 14 damage and stuns for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Mud Wallow",
+   "template": "selfHeal",
+   "element": "water",
+   "healAmount": 18,
+   "healScope": "self",
+   "critChance": 0.12,
+   "cooldown": 20,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "name": "Spring Back",
+   "element": "water",
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When your stamina runs out, 20 stamina comes back to you. Once every 20 seconds."
+  }
+ ]
+}

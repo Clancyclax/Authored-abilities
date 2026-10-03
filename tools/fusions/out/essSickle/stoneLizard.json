@@ -1,0 +1,78 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Drop It and Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Costs 5% of your maximum health. A cut that deals 9 damage and leaves the target 10% easier to wound for 5 seconds. For 3 seconds after you use it, you move 20% faster."
+  },
+  {
+   "name": "Tail Whip",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "knockback": 64,
+   "range": 128,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips an arc 4 tiles ahead that deals 11 damage to everything in it, knocks each back 2 tiles and leaves it [Hindered] for 5 seconds."
+  },
+  {
+   "name": "Bask",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "fire",
+   "cooldown": 24,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 4 health a second to you for 6 seconds. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Noon Edge",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "In daylight, you deal 12% more damage."
+  }
+ ]
+}

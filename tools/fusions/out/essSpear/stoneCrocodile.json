@@ -1,0 +1,81 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Twist in the Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 112,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on an enemy at or below 30% health. Drives in and rolls the shaft, which deals 22 damage and leaves the target 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Clamp at the Bank",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weapon strike that deals 4 damage, makes the target [Bleeding] for 1 damage a second for 6 seconds and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Still Above the Water",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "water",
+   "cooldown": 60,
+   "powerMult": 1.35,
+   "buffDuration": 12,
+   "castTime": 2,
+   "desc": "Takes 2 seconds to use, then increases your damage by 35% for 12 seconds."
+  },
+  {
+   "name": "Hours for One Lunge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your crit chance rises by 35% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

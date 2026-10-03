@@ -1,0 +1,73 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Scent Bead",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "desc": "Flicks a bead of water that deals 7 damage and leaves the target [Marked] for 8 seconds. It holds 3 charges and kills give charges back."
+  },
+  {
+   "name": "Final Approach",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Closes on a target and deals 28 damage, leaving it 12% easier to wound for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health. You move 20% faster for 4 seconds after it."
+  },
+  {
+   "name": "Fresh Scent",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "wind",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Closing Circle",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies below half health, you deal 15% more damage."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+  "essence": "essShield",
+  "stone": "stoneCoral",
+  "fusions": [
+    {
+      "name": "Reefshard",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "rangeBand": "medium",
+      "hpCostPct": 0.04,
+      "debuff": {
+        "key": "slowLearner",
+        "chance": 0.6,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Breaks a branch off the reef grown over the shield, at a cost of 4% of your maximum health, and throws it. It deals 9 damage to the first enemy it meets, with a 60% chance to leave it [Slow Learner] for 6 seconds."
+    },
+    {
+      "name": "Wave-Breaker",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "water",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 128,
+      "coneAngle": 0.9,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "bossPct": 0.05,
+      "knockback": 96,
+      "debuff": {
+        "key": "bleed",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Braces the reef-crusted shield and breaks forward through a cone 4 tiles ahead, dealing 26 damage to everything in it, knocking it back 3 tiles and leaving it [Bleeding] for 5 seconds. Against a boss or elite it adds 5% of the target's maximum health."
+    },
+    {
+      "name": "Sheltering Reef",
+      "kind": "active",
+      "category": "healing",
+      "template": "bloomField",
+      "element": "water",
+      "cooldown": 30,
+      "healPerSec": 3,
+      "fieldDuration": 8,
+      "range": 96,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "healScope": "party",
+      "desc": "Raises a living reef around the shield where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3 tiles."
+    },
+    {
+      "name": "Slow Accretion",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "water",
+      "stackShape": "boon",
+      "stackBuild": "hit",
+      "stackPay": "ward",
+      "stackCap": 10,
+      "stackDecay": 6,
+      "stackSpend": "nextCast",
+      "stackOn": "self",
+      "stackScale": 0.4,
+      "stackIcon": "stackWard",
+      "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+    }
+  ]
+}

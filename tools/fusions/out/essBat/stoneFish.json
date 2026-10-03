@@ -1,0 +1,90 @@
+{
+ "essence": "essBat",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Ripple Pings",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "resonating",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 300,
+   "radius": 6,
+   "range": 224,
+   "isAoe": true,
+   "spammable": true,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 4,
+    "label": "Siphon"
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 sonic pings in a spread, each dealing 3 resonating damage with a 30% chance to leave the target [Soaked] for 6 seconds. 15% of the damage dealt comes back as healing over 4 seconds."
+  },
+  {
+   "name": "Undertow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 64,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes the target, dealing 12 water damage, leaving it 10% easier to wound for 5 seconds and knocking it back 2 tiles, with a 50% chance to leave it [Soaked] for 6 seconds. You heal for 20% of the damage dealt.",
+   "leech": 0.2
+  },
+  {
+   "name": "Slipstream",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "water",
+   "cooldown": 30,
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "dodgeBonus": 0.2,
+   "desc": "Increases your movement speed by 30% for 8 seconds, with 20% more dodge chance while it lasts."
+  },
+  {
+   "name": "Flicker Dance",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 5. At 5 they all spend at once: you move and attack 3% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

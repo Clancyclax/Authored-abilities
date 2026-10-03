@@ -1,0 +1,83 @@
+{
+  "essence": "essShield",
+  "stone": "stoneDuck",
+  "fusions": [
+    {
+      "name": "Spray Off",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "water",
+      "role": "resource",
+      "base": 3,
+      "cooldown": 1,
+      "volleyCount": 4,
+      "volleySpread": 0.5,
+      "speed": 340,
+      "radius": 6,
+      "range": 160,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "chargesMax": 3,
+      "debuff": {
+        "key": "wet",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Shakes the water off the shield as 4 droplets at once, spread apart, each dealing 3 damage and leaving what it hits [Soaked] for 6 seconds. It holds 3 charges, and a kill gives one back."
+    },
+    {
+      "name": "Skip Across",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "knockback": 64,
+      "debuff": {
+        "key": "dampen",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Skims the shield low across the ground, dealing 11 damage, rising to 1.5 times that at its full reach of 6 tiles. It knocks the target back 2 tiles and leaves it [Damped] for 4 seconds."
+    },
+    {
+      "name": "Unruffled",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "water",
+      "cooldown": 90,
+      "immunityDuration": 3,
+      "healOnUse": 6,
+      "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. You regain 6 health."
+    },
+    {
+      "name": "Rolls Right Off",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "reflectWard",
+      "element": "water",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.2,
+      "buffDuration": 0,
+      "resist": {
+        "element": "water",
+        "amount": 0.1
+      },
+      "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it. You have 10% water resistance."
+    }
+  ]
+}

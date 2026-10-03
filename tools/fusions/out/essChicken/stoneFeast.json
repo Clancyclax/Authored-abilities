@@ -1,0 +1,74 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scrap Scramble",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.25,
+   "desc": "Pecks at everything within 2 tiles for 3 damage, and you heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Second Helping",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 1,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "leech": 0.3,
+   "desc": "Gorges on a target at or below 25% health for 20 damage, using up your afflictions on it and adding their remaining damage to the blow. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Scattered Grain",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Scatters a feeding ground 4 tiles across at your feet. For 8 seconds it restores 3 health a second to you and every ally inside it."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, 15% of the damage you deal heals you for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

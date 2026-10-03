@@ -1,0 +1,68 @@
+{
+ "essence": "essGun",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Through the Glass",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 30,
+   "cooldown": 75,
+   "range": 352,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "maxMult": 1.8,
+   "desc": "Fires a round at an enemy up to 11 tiles away that deals 30 damage, rising to 1.8 times that at full reach, and ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spotted Flaw",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 8,
+   "cooldown": 1,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "desc": "Needs one of your afflictions on the target: fires at an enemy up to 8 tiles away for 8 damage, consuming every affliction on it and adding half their remaining damage to the shot."
+  },
+  {
+   "name": "Zeroed In",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Your attacks and spells reach 54% further for 15 seconds."
+  },
+  {
+   "name": "Tracking Gaze",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 8. Your next critical hit on it spends them all: a second blow strikes it for 20% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

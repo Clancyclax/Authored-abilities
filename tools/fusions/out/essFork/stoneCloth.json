@@ -1,0 +1,75 @@
+{
+ "essence": "essFork",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thrown Net",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a weighted net over everything within 4 tiles ahead for 8 damage, stunning each target for 1 second and leaving it [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Through the Mesh",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up: a weapon strike through the mesh for 7 piercing damage that leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Wrapped Haft",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 20,
+   "desc": "Wraps the haft to turn blows: a barrier absorbs the next 18 damage for 6 seconds."
+  },
+  {
+   "name": "Footwork on the Sand",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Your dodge chance rises by 10% against enemies carrying your afflictions."
+  }
+ ]
+}

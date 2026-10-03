@@ -1,0 +1,86 @@
+{
+ "essence": "essCat",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpor Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "frost",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A lunge that deals 8 damage, up to 1.5 times at maximum range. Anything struck moves 30% slower for 3 seconds. You hold 3 charges and each kill gives one back."
+  },
+  {
+   "name": "Hissing Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "frost",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "isAoe": true,
+   "range": 64,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A hiss that deals 3 damage to every enemy within 2 tiles, with a 35% chance to leave each [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Shed Tail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "A challenge that pulls up to 4 enemies within 6 tiles onto you for 6 seconds. A dropped tail fights beside you for 8 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Sunning Spot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "frost",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When your stamina is full, you regain 3 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

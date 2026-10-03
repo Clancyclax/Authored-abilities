@@ -1,0 +1,72 @@
+{
+ "essence": "essHand",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Held at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "Looses an arrow held at full draw for 30 damage, rising to 1.8 times that at its full reach of 8 tiles. The hit is always a critical hit."
+  },
+  {
+   "name": "Fistful of Arrows",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "volleyCount": 2,
+   "volleySpread": 0.2,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 2 arrows at once from the spares held in your draw hand, each dealing 6 damage. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Anchor Point",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Follow-Through",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you land a critical hit, you regain 4 stamina. Once every 4 seconds."
+  }
+ ]
+}

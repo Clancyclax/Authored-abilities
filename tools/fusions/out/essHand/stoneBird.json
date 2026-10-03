@@ -1,0 +1,81 @@
+{
+ "essence": "essHand",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Cast Off",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a hawk from your fist at the first enemy in its path, dealing 4 damage with a 30% chance to leave the target [Hindered] for 5 seconds."
+  },
+  {
+   "name": "Downstroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fans a spread palm, sending a gust 4 tiles ahead that deals 11 wind damage to everything in it, knocks each target back 3 tiles and leaves it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Slip the Jesses",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "wind",
+   "cooldown": 24,
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 conditions that hold or stop you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Hooded Hawk",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "piercing",
+   "familiarDmg": 3,
+   "familiarRange": 192,
+   "familiarInterval": 1,
+   "familiarFamily": "bird",
+   "familiarCreatureName": "Tiercel",
+   "desc": "Calls a hawk familiar that fights beside you, striking an enemy within 6 tiles for 3 damage every second."
+  }
+ ]
+}

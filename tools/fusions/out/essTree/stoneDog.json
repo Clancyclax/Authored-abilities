@@ -1,0 +1,83 @@
+{
+ "essence": "essTree",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fetched Stick",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Throws a stick that deals 8 damage, rising to 1.5 times that at its full reach of 7 tiles. Holds 3 charges; each use spends one, and each kill brings one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Held at Bay",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes every enemy within 3.5 tiles, dealing 11 damage, stunning them for 0.8 seconds and leaving them [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Kennel in the Buttress",
+   "template": "absorbShield",
+   "element": "plant",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 24,
+   "summonAnimal": "dog",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 9
+   },
+   "desc": "Raises a barrier of buttress roots that absorbs the next 18 damage, up to 4 blows, for 6 seconds. A hound escort guards you for 9 seconds, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Buried Bones",
+   "template": "stacking",
+   "element": "life",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make buries a stack at your roots, up to 5. At 5 they all spend at once: you heal for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

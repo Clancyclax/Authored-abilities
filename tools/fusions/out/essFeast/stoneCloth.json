@@ -1,0 +1,94 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "rangeBand": "medium",
+   "name": "Snapped Napkin",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "maxMult": 1.5,
+   "range": 160,
+   "reachUnits": 160,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "leech": 0.12,
+   "desc": "Snaps a strip of cloth that deals 4 damage, rising to 1.5 times that at full reach, and wraps the target so it moves 20% slower for 2 seconds. You heal for 12% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "coneAngle": 0.8,
+   "name": "Pulled Tablecloth",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips a cone 5 tiles long ahead of you that deals 26 damage to everything in it, with a 50% chance to leave each one [Leaden] for 6 seconds. When it hits, you and every ally deal 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Picnic Blanket",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "life",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Lays a cloth where you stand for 10 seconds that restores 3 health a second to you and any ally within 4 tiles of it. Each ally within 5.5 tiles makes it 10% stronger, up to 4 allies."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "element": "physical",
+   "name": "Knotted Kerchief",
+   "desc": "When your health falls below half, healing you receive rises by 40% for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

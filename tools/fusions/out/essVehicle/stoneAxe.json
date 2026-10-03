@@ -1,0 +1,83 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Headsman's Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Runs you to a target up to 6 tiles away and chops it. Usable only on a target at or below 30% health. The chop deals 22 damage and leaves the target 15% easier to wound for 6 seconds.",
+   "chargeTo": 192
+  },
+  {
+   "name": "Chariot Blades",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Blades on your axles sweep every enemy within 3 tiles. The sweep deals 14 damage, knocks each enemy back 2 tiles and leaves it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Felled Across the Road",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Fells a trunk 5 tiles long across the ground in front of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Outrider's Hatchet",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a hatchet made to be swung from the saddle: your weapon damage rises by 12%, you move 5% faster, and every strike with it leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  }
+ ]
+}

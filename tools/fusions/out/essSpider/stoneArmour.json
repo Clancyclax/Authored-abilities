@@ -1,0 +1,78 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Seam Finder",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 25% health. A bite that deals 22 damage, leaves it 20% easier to wound for 6 seconds and [Poisoned] for 8 seconds."
+  },
+  {
+   "name": "Split Moult",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Bursts your outgrown shell, which deals 13 damage to every enemy within 3 tiles and knocks each back 3 tiles. You move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Spun Mail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.06,
+   "desc": "Wraps you in layered silk that absorbs the next 24 damage, up to 4 blows, for 8 seconds, and raises your armour by 6%."
+  },
+  {
+   "name": "Bound Hands Hit Soft",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Your armour is 10% higher against enemies carrying your afflictions."
+  }
+ ]
+}

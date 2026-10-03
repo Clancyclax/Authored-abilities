@@ -1,0 +1,69 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "requiresTargetBelow": 0.3,
+   "consumeAfflictionsPer": 0.6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Butts a target at or below 30% health for 16 damage, consuming every affliction on it to add 1.5 times their remaining damage to the hit, and 60% more damage for each one consumed. You move 20% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Wearing Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "scaleOn": "targetStamina",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Closes on a target up to 5 tiles away and deals 4 damage, rising to 1.5 times that from the full 5 tiles. Its damage rises 5% for every tenth of its stamina the target still has (max 25%)."
+  },
+  {
+   "name": "Downwind Stalk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds: enemies notice you 50% later, you move 20% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Final Stretch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "dodgeBonus": 0.05,
+   "desc": "Against enemies below half health, you deal 15% more damage. Your dodge chance rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Two-Fist Quake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "desc": "Brings both fists down on the ground, dealing 13 damage to every enemy within 2.5 tiles and knocking them back 2.5 tiles."
+  },
+  {
+   "name": "Whatever's to Hand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 300,
+   "radius": 10,
+   "bossPct": 0.06,
+   "desc": "Hurls a stone that deals 30 damage to the first enemy in its path. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Found a Bigger Rock",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "cooldown": 45,
+   "buffStat": "dmg_blunt",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your blunt damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Roused Silverback",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "When your health falls below 30%, your physical damage rises 40% for 8 seconds. Once every 45 seconds."
+  }
+ ]
+}

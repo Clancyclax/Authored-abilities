@@ -1,0 +1,99 @@
+{
+ "essence": "essDog",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reef Rash",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "desc": "Bites with your weapon for 7 water damage, making the target [Bleeding] for 2 damage a second for 4 seconds and 6% easier to wound for 4 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run Aground",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives through a cone 3 tiles ahead and deals 12 water damage, leaving every enemy hit [Stunned] for 1 second and [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Growing Shelter",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 128,
+   "healScope": "party",
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Grows a reef where you stand. For 8 seconds it restores 3 health a second to you and any ally within 4 tiles of it, and it grows 10% stronger for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Polyp by Polyp",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. At 6 they all spend at once: you are healed for 3% of your maximum health per stack. Unfed, a stack fades every 6 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

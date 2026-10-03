@@ -1,0 +1,81 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Dart on a Tether",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "maxMult": 1.4,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Whips a tethered dart at a target up to 6 tiles away for 8 damage, rising to 1.4 times that at full reach, and the line slows it by 30% for 2 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Lockstitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "stunOnHit": 0.8,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Sends a threaded spike into the first enemy it meets for 11 damage and stuns it for 0.8 seconds. It then passes on to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Pulled Taut",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "desc": "Draws a line 5 tiles long tight around a point ahead of you for 6 seconds, dragging every enemy near it inward."
+  },
+  {
+   "name": "Slack Taken Up",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1.1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. Your next critical hit on it spends them all: you deal 7% more damage per stack (33% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

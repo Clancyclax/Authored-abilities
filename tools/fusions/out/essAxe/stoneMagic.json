@@ -1,0 +1,84 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Rune-Split Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "arcane",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A chop that deals 13 arcane damage, leaves the target 15% easier to wound for 6 seconds and has a 60% chance to leave it [Exposed] for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Candle-Bent Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "spellImpetus",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A glowing swing that deals 4 arcane damage to every enemy within 2.5 tiles; each hit has a 30% chance to leave the target [Spell Impetus] for 6 seconds."
+  },
+  {
+   "name": "Drawn Mana",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 mana a second for 8 seconds."
+  },
+  {
+   "name": "Edge of Arcana",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

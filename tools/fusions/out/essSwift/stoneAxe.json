@@ -1,0 +1,73 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneAxe",
+  "fusions": [
+    {
+      "name": "End Over End",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 14,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "maxMult": 1.6,
+      "requiresTargetBelow": 0.3,
+      "desc": "Usable only on an enemy at or below 30% health. Throws a hatchet at a target up to 7 tiles away that deals 18 damage, rising to 1.6 times that at full reach."
+    },
+    {
+      "name": "Chopping Reel",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "slashing",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "chargesMax": 3,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A spin that deals 7 damage to every enemy within 2.5 tiles and leaves them [Bleeding] for 1 damage a second for 3 seconds. Holds 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "Juggled Hatchets",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "slashing",
+      "buffStat": "dmg_slashing",
+      "buffAmount": 0.2,
+      "buffDuration": 10,
+      "cooldown": 40,
+      "escort": {
+        "dmg": 3,
+        "interval": 0.8,
+        "duration": 6
+      },
+      "desc": "Increases your slashing damage by 20% for 10 seconds. For the first 6 seconds, an escort of hatchets strikes for 3 every 0.8 seconds."
+    },
+    {
+      "name": "Woodcutter's Cadence",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "slashing",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "cooldownReduction": 0.05,
+      "desc": "Against enemies below half health, you deal 12% more damage. Your other abilities' cooldowns are 5% shorter."
+    }
+  ]
+}

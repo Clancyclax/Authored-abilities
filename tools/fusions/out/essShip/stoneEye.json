@@ -1,0 +1,70 @@
+{
+ "essence": "essShip",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Masthead Sighting",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 288,
+   "maxMult": 2.2,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "Strikes a target up to 9 tiles away for 26 damage, rising to 2.2 times that at full reach. It always lands as a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Figurehead Stare",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a stare at the first enemy it meets for 4 damage, with a 40% chance to leave it [Leaden] for 4 seconds.",
+   "rangeBand": "medium",
+   "radius": 7,
+   "speed": 420
+  },
+  {
+   "name": "Landfall at a Glance",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "arcane",
+   "cooldown": 12,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a spot you can see up to 7 tiles away. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Pricked on the Chart",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "arcane",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying one of your afflictions, you deal 12% more damage and have 6% more dodge chance.",
+   "dodgeBonus": 0.06
+  }
+ ]
+}

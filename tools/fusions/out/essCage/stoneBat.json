@@ -1,0 +1,92 @@
+{
+ "essence": "essCage",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Belfry Shriek",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shrieks in a cone 5 tiles long, dealing 26 damage that ignores resistances and leaving everything caught [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "Night Tether",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "leech": 0.25,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A dart of darkness deals 4 damage and heals you for 25% of it, with a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Mobbing Colony",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a colony of bats for 12 seconds. Every second it bites an enemy within 4 tiles and deals 3 damage, with a 30% chance to leave the target [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Feeding on the Held",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "When you put a condition on an enemy, you heal for 15% of the damage you deal for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

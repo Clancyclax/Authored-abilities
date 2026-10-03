@@ -1,0 +1,76 @@
+{
+ "essence": "essChain",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpor Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a cold link at the first enemy it meets that deals 4 damage, with a 30% chance to leave it [Stalled] for 3 seconds."
+  },
+  {
+   "name": "Stilling Coil",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Coils a ring of links around you that deals 11 damage to every enemy within 3 tiles and stuns each for 1 second, leaving each [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Dead Still",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds: enemies notice you 60% later and you move 10% faster. Attacking breaks the veil."
+  },
+  {
+   "name": "Basking Weight",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "In daylight, your armour rises by 12%."
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Tumbril Ride",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "stackMult": 1.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 30% health. Locks it aboard: deals 20 damage and leaves it [Pinned] for 2 seconds, consuming every affliction on it and adding 1.2 times their remaining damage to the blow."
+  },
+  {
+   "name": "Boxed In",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings out the barred sides of your wagon and deals 7 damage to every enemy within 2.5 tiles, with a 40% chance to leave each [Pinned] for 1.5 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Roll Bars",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 0,
+   "shieldDuration": 6,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Closes bars around you that absorb the next 22 damage and hold for 6 seconds. You move 15% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Menagerie Car",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.5,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Wagon Beast",
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "A bonded beast travels in your barred wagon and fights beside you, striking for 4 damage every 1.5 seconds. Anything it strikes moves 30% slower for 2 seconds."
+  }
+ ]
+}

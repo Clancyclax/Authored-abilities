@@ -1,0 +1,71 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Leaping Loop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a looping stitch that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles for 60% of the damage each."
+  },
+  {
+   "name": "Knotwork Cordon",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws loops of knotted thread around you, dealing 10 damage to every enemy within 3 tiles with a 50% chance to leave each [Slowed] for 3 seconds. Your afflictions on each spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Laced Ranks",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Laces every ally within 5 tiles together for 10 seconds: each strikes 15% harder and fights with 1 more Power."
+  },
+  {
+   "name": "Unbreakable Knot",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "physical",
+   "desc": "Your afflictions take hold on enemies that are immune to them."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Riveted Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 10,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.14,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives your shell into the target, which deals 12 damage, knocks it back 3 tiles and leaves it 14% easier to wound for 6 seconds. The target is [Damped], its damage lowered, for 5 seconds."
+  },
+  {
+   "name": "Shed Lames",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Blasts the outer plates off your shell, which deals 28 damage to every enemy within 3.5 tiles and ignores their armour."
+  },
+  {
+   "name": "Second Skin of Steel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 28,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "cooldown": 30,
+   "desc": "Closes a second layer of plate over you that absorbs the next 28 damage and holds for 8 seconds, and raises your armour by 10% while it holds."
+  },
+  {
+   "name": "Layer on Layer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

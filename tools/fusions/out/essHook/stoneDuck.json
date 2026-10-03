@@ -1,0 +1,80 @@
+{
+ "essence": "essHook",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Dive and Surface",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 160,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Dives you to a target up to 5 tiles away, then gaffs it for 13 water damage, leaving it [Soaked] for 5 seconds and [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Idle Dabble",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.5,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A reach that deals 4 water damage, rising to 1.5 times that at its full reach of 4 tiles, with a 35% chance to leave the target [Damped] for 4 seconds."
+  },
+  {
+   "name": "Unruffled",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "blinkOnUse": 64,
+   "cooldown": 120,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you, and you slip 2 tiles from where you stood."
+  },
+  {
+   "name": "Slides Off, Snags Them",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it instead."
+  }
+ ]
+}

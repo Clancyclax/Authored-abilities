@@ -1,0 +1,74 @@
+{
+ "essence": "essApe",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Swing-Through Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 72,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "You swing up to 7 tiles onto the target and kick it for 12 damage, leaving it 10% easier to wound for 4 seconds. Its damage rises 5% for every 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "name": "Hang-Time Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "desc": "You come down on every enemy within 3.5 tiles for 28 damage plus 4% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Branch Vault",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "cooldown": 6,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Vaults you 5 tiles forward, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Weightless Swing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "Every few paces you cover, 5 stamina comes back to you. Once every 4 seconds."
+  }
+ ]
+}

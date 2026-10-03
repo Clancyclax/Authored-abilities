@@ -1,0 +1,79 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Somebody Else's Stink",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a dab of your musk onto an enemy up to 8 tiles away that deals 28 damage, rising to 1.5 times that at maximum range. It always crits and leaves the target [Marked] for 10 seconds."
+  },
+  {
+   "name": "Counted Your Coins",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 300,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Pilfered"
+   },
+   "desc": "Looses 3 jets of musk in a spread out to 6 tiles. Each jet deals 5 damage, and 20% of the damage dealt comes back to you as healing over the following 6 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Rolled in It",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "poison",
+   "cooldown": 36,
+   "stealthDuration": 7,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Masks your own scent under musk for 7 seconds. Enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Can't See for Crying",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 12%."
+  }
+ ]
+}

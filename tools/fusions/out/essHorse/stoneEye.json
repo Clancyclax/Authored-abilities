@@ -1,0 +1,90 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hold and Close",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 520,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1.5,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Fixes the first enemy in line with a stare that deals 12 damage and stuns it for 1.5 seconds. You move 25% faster for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "No Blind Side",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks at everything around you, dealing 3 damage to every enemy within 2 tiles, with a 25% chance to leave each [Exposed] for 3 seconds."
+  },
+  {
+   "name": "Open Country",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "arcane",
+   "rangeMult": 1.18,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 0.5,
+   "desc": "For 12 seconds, your attacks and spells reach 30% further."
+  },
+  {
+   "name": "Wide-Set Watch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "arcane",
+   "attr": "spirit",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "dodgeChance",
+     "amount": 0.04,
+     "text": "you see the blow before it starts"
+    },
+    {
+     "rank": "silver",
+     "stat": "moveSpeed",
+     "amount": 0.04,
+     "text": "and the ground ahead before you reach it"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.05,
+     "text": "and you are ready again sooner"
+    }
+   ],
+   "desc": "Raises your Spirit by 1, and your Spirit ceiling by 1. From bronze rank your dodge chance rises by 4%, from silver you move 4% faster, and from gold your abilities come round 5% sooner."
+  }
+ ]
+}

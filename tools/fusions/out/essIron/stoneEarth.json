@@ -1,0 +1,80 @@
+{
+ "essence": "essIron",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Seam Collapse",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a slab of ore-bearing rock that deals 22 rock damage to the first enemy it meets and leaves it [Sundered] for 5 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Hematite Teeth",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Drives spikes of raw ore up through a cone 4 tiles long, dealing 12 rock damage to everything in it and stunning it for 1 second."
+  },
+  {
+   "name": "Lodestone Draw",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Raises a lodestone seam 6 tiles long ahead of you for 5 seconds that drags every enemy near it inward and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Laid Down in Strata",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essBat",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Strand Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "spammable": true,
+   "desc": "Sends a fine strand into the first enemy it meets, dealing 4 damage with a 25% chance to leave it [Pinned] for 2 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Spun Razors",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Lashes every enemy within 3 tiles, dealing 12 slashing damage and leaving each [Bleeding] for 6 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Woven Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "dark",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Tangled Count",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 6. Your next critical hit on it spends them all: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

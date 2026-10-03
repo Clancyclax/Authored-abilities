@@ -1,0 +1,74 @@
+{
+ "essence": "essIron",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Hundredth Hammerfall",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "desc": "A practised hammer blow that deals 4 damage and leaves the target 6% easier to wound for 5 seconds."
+  },
+  {
+   "name": "The Rehearsed Turn",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings the hammer through a full turn, dealing 28 damage to every enemy within 3 tiles. Every hit is a critical hit, and each enemy hit is left [Leaden] for 6 seconds."
+  },
+  {
+   "name": "Mailed Footwork",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.2,
+   "dodgeBonus": 0.08,
+   "buffDuration": 10,
+   "desc": "Raises your armour by 20% and your dodge chance by 8% for 10 seconds."
+  },
+  {
+   "name": "Rote and Rivet",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

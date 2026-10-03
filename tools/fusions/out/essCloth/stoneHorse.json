@@ -1,0 +1,72 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Riding Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Charges up to 7 tiles to the target and rides it down, dealing 15 damage and leaving it 15% easier to wound for 6 seconds. For 4 seconds after using it, you move 20% faster."
+  },
+  {
+   "name": "Loosed Reins",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 1.6,
+   "guaranteedCrit": true,
+   "desc": "Lets a rein-length cord fly at an enemy up to 8 tiles away, dealing 30 damage, up to 1.6 times as much at full reach. It is always a critical hit."
+  },
+  {
+   "name": "Full Tack",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "dodgeBonus": 0.1,
+   "desc": "Raises your movement speed by 40% and your dodge chance by 10% for 8 seconds."
+  },
+  {
+   "name": "Saddle Rhythm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

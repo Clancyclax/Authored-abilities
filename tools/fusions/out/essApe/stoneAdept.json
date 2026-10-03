@@ -1,0 +1,81 @@
+{
+ "essence": "essApe",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Practised Juggle",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 7,
+   "range": 224,
+   "isAoe": true,
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "Throws 3 stones at once in a spread out to 7 tiles, each dealing 3 damage. Each stone has 25% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Copied Form",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A blow that deals 26 damage, always lands as a critical hit and leaves the target 12% easier to wound for 6 seconds. Its damage rises 10% for each ally near you, up to 30%."
+  },
+  {
+   "name": "Do It Again",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Watched and Learned",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 12,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Once every 12 seconds, a strike that fails to crit is rolled again and the second roll stands. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

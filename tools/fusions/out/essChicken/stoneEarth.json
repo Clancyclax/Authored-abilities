@@ -1,0 +1,78 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scratched-Up Dirt",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scratches dirt back through a cone 3 tiles long, dealing 3 damage to everything in it with a 25% chance to leave each [Blunted] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gizzard Stone",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Coughs up a swallowed stone and spits it at the first enemy in line for 28 damage. It bursts on impact, dealing 80% of that to every enemy within 3 tiles."
+  },
+  {
+   "name": "Dust Bath",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "earth",
+   "immunityDuration": 3,
+   "cooldown": 90,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Grit Spurs",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "rock",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 2,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures spurs of jagged rock on your heels: your weapon damage rises by 12% and your attack speed by 5%, and every strike leaves the target [Bleeding] for 2 damage a tick for 2 ticks."
+  }
+ ]
+}

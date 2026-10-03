@@ -1,0 +1,89 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Filter Feeding",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 4,
+    "label": "Digesting"
+   },
+   "desc": "Spits a jet that deals 4 water damage to the first enemy it meets, with a 30% chance to leave it [Soaked] for 4 seconds. 15% of the damage dealt returns to you as healing over 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Thousand Barbs",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 1,
+    "spreadsLeft": 2
+   },
+   "leech": 0.15,
+   "desc": "Stings every enemy within 3 tiles, dealing 10 poison damage, stunning them for 1 second and leaving them [Poisoned] for 6 seconds. The poison spreads on its own to up to 2 more enemies within 4 tiles, and you heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Polyp Garden",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 15,
+   "lifeOnKill": 4,
+   "cooldown": 60,
+   "desc": "Grows a reef beside you for 15 seconds that strikes enemies within 4 tiles for 4 damage every 1.5 seconds. Each kill restores 4 health to you."
+  },
+  {
+   "name": "Grown Bulwark",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your armour rises by 8%, and you regenerate 0.5 health a second."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "essence": "essDog",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rehearsed Takedown",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 84,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "A drilled takedown that deals 28 damage, is always a critical hit, and leaves the target 12% easier to wound for 6 seconds. It grows 8% stronger for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Steady Point",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a bolt that deals 7 damage to the first enemy it hits and leaves it [Marked] for 6 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "One More Throw",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and you move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Trained Sidestep",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 10,
+   "allyScaling": {
+    "per": 0.06,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a blow you failed to dodge is rolled again and the second roll stands. The effect grows 6% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

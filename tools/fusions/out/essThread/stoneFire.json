@@ -1,0 +1,93 @@
+{
+  "essence": "essThread",
+  "stone": "stoneFire",
+  "fusions": [
+    {
+      "name": "Short Fuse",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "fire",
+      "role": "long",
+      "base": 28,
+      "cooldown": 80,
+      "speed": 340,
+      "radius": 8,
+      "explodeRadius": 112,
+      "splashFrac": 0.8,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "Throws a lit fuse that deals 28 damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds. It then bursts, hitting every enemy within 3.5 tiles for 80% of that damage."
+    },
+    {
+      "name": "Slow Match",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "fire",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "spreadAfflictions": 96,
+      "debuff": {
+        "key": "burn",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sweeps a smouldering cord through a cone 4 tiles long. It deals 12 damage to everything in it and sets each target [Burning] for 5 seconds. Your afflictions on each target spread to enemies within 3 tiles."
+    },
+    {
+      "name": "Slag Shackles",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "fire",
+      "cooldown": 30,
+      "cleanseCount": 3,
+      "cleanseTag": "control",
+      "healScope": "self",
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Burns through up to 3 conditions that hold or stun you, and you move 25% faster for 4 seconds."
+    },
+    {
+      "name": "Spark at the End",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "fire",
+      "isTriggered": true,
+      "cooldown": 5,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 5
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 8,
+        "range": 160
+      },
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "When one of your conditions on an enemy runs out, the fuse has burnt down and a spark jumps to the nearest enemy within 5 tiles. The spark deals 8 damage and sets that enemy [Burning] for 2 damage a second for 3 seconds. Once every 5 seconds."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essBow",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Fine-Spun Shaft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a thread-trailing arrow that deals 4 damage to the first enemy it meets, with a 40% chance to leave it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Tangling Fan",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a fan of cord-trailing arrows 5 tiles ahead that deals 11 damage to everything in it, stuns each for 1 second and leaves them [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Plaited Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "piercing",
+   "cooldown": 36,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08,
+   "desc": "Raises your armour by 20% for 10 seconds, and gives you 8% more dodge chance."
+  },
+  {
+   "name": "Gathered Strands",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

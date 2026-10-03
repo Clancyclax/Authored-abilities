@@ -1,0 +1,78 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Festering Graze",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Gores the target for 4 damage, leaving it [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance of [Diseased] for 4 seconds.",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Brittle Tine",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Snaps the tip off a horn and hurls it at the first enemy in its path for 28 damage. It shatters there, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Reef-Crusted Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "desc": "For 9 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Growth Rings",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land adds a growth ring, up to 8. At 8 they all spend at once: you deal 3% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "essence": "essShip",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Straight-Line Sting",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chargeTo": 224,
+   "desc": "You rush up to 7 tiles in a straight line onto the target and sting it for 12 damage, leaving it [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "All Hands Humming",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Your swarm stings every enemy within 2.5 tiles for 8 damage, with a 40% chance to leave each [Poisoned] for 4 seconds. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%). Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Open Hatches",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 60,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Releases a swarm for 15 seconds. It stings an enemy within 4 tiles for 3 damage every second, each sting with a 30% chance to leave it [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Relief Rowers",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When your stamina runs out, you regain 20 stamina. Once every 20 seconds."
+  }
+ ]
+}

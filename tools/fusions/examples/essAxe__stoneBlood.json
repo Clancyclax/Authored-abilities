@@ -1,0 +1,36 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneBlood",
+ "fusions": [
+  {
+   "name": "Opening Vein",
+   "kind": "active", "category": "attack", "template": "sunderStrike", "element": "physical", "role": "medium",
+   "base": 14, "cooldown": 12, "range": 86,
+   "sunder": { "amount": 0.15, "duration": 6 },
+   "dot": { "dmgPerTick": 3, "ticks": 6, "tickMs": 1000, "critChance": 0.05, "label": "Bleeding" },
+   "spreadAfflictions": 112,
+   "desc": "A downward chop that deals 14 damage, makes the target [Bleeding] for 3 damage a second for 6 seconds and leaves it 15% easier to wound for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Red Harvest",
+   "kind": "active", "category": "attack", "template": "aoeRing", "element": "physical", "role": "long",
+   "base": 30, "cooldown": 120, "range": 110, "isAoe": true, "aoeBand": "medium",
+   "guaranteedCrit": true, "leech": 0.2,
+   "desc": "Swings the axe in a full circle, dealing 30 damage to every enemy within 3.5 tiles. Every hit is a critical hit, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Battle Flush",
+   "kind": "active", "category": "buff", "template": "selfPower", "element": "physical",
+   "powerMult": 1.3, "buffDuration": 15, "cooldown": 60,
+   "desc": "Increases your damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Butcher's Rhythm",
+   "kind": "passive", "category": "triggered", "template": "triggeredPassive", "element": "physical",
+   "isTriggered": true, "cooldown": 6,
+   "trigger": { "on": "kill", "cooldown": 6 },
+   "effect": { "kind": "regenBurst", "perSec": 4, "duration": 4 },
+   "desc": "When you kill an enemy, you regain 4 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

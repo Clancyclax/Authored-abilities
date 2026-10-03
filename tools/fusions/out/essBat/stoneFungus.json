@@ -1,0 +1,81 @@
+{
+ "essence": "essBat",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mildew Puff",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "leech": 0.15,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spammable": true,
+   "desc": "Puffs a cone of spores ahead of you, dealing 3 poison damage to everything in it with a 30% chance to leave each [Diseased] for 6 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Harvest the Rot",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "leech": 0.3,
+   "desc": "Bites an enemy at or below 30% health, dealing 18 poison damage, and consumes every affliction on it, adding 1.5 times their remaining damage to the hit. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Hushing Spores",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "nature",
+   "cooldown": 35,
+   "healScope": "party",
+   "desc": "Veils you and your allies for 8 seconds: enemies notice you 50% later, you move 10% faster, and the veil breaks the moment you attack. You regain 10 health.",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "healOnUse": 10
+  },
+  {
+   "name": "Decay Dividend",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions runs its course, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

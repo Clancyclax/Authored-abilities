@@ -1,0 +1,75 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Spring from Crouch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.8,
+   "chargeTo": 192,
+   "desc": "Springs you up to 6 tiles onto an enemy for 14 damage, rising to 1.8 times that from full range."
+  },
+  {
+   "name": "Batted About",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A quick swipe that deals 3 damage and leaves the target 5% easier to wound for 4 seconds, with a 40% chance to leave it [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Belly to the Grass",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 10 seconds: enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Toyed With",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 8. Your next critical hit on it spends them all: a blow strikes that enemy for 27% of your weapon damage per stack (218% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

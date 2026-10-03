@@ -1,0 +1,74 @@
+{
+ "essence": "essDog",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run It Down",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "speed": 460,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.3,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Looses a shot at a target at or below 30% health for 20 damage, and you move 20% faster for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hunting Party",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 6,
+   "range": 224,
+   "isAoe": true,
+   "desc": "Looses 3 arrows at once in a spread out to 7 tiles, each dealing 3 damage. It hits 8% harder for each ally near you, up to 32%.",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32
+  },
+  {
+   "name": "Long Leash",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "For 15 seconds, your attacks and spells reach 43% further. A hound escort fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Wounded Game",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "You deal 12% more damage to enemies below 50% health."
+  }
+ ]
+}

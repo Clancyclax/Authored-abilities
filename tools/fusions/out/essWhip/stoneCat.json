@@ -1,0 +1,81 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Pounce of Nine Tails",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "medium",
+   "base": 2,
+   "cooldown": 12,
+   "volleyCount": 9,
+   "volleySpread": 0.2,
+   "speed": 420,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargeTo": 160,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.15,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs you at an enemy up to 5 tiles away and lashes 9 tails out in a fan; each deals 2 damage, with a 15% chance to leave its target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Wound Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "consumeAffliction": true,
+   "desc": "Rakes an enemy up to 5 tiles away, which deals 8 damage, up to 1.5 times that at full reach. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Padded Fall",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 17% faster. Attacking breaks the veil."
+  },
+  {
+   "name": "Raised Hackles",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "burst",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 4. When you reach 4, they all spend at once: a blow strikes the nearest enemy within 8 tiles for 27% of your weapon damage per stack (109% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

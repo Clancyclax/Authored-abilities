@@ -1,0 +1,73 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "desc": "A barbed line that costs 4% of your maximum health, deals 8 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds.",
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "base": 8,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Raking Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "desc": "Rakes a wide arc ahead of you with hooked steel, dealing 30 damage to everything caught in it. Every hit is a critical hit.",
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "base": 30,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Long Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "desc": "For 20 seconds, your attacks and spells reach 54% further.",
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "cooldown": 90
+  },
+  {
+   "name": "Barb Holds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "desc": "When you inflict a condition on an enemy, your physical damage rises by 25% for 4 seconds. Once every 8 seconds.",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   }
+  }
+ ]
+}

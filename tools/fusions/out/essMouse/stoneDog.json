@@ -1,0 +1,83 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Flush the Quarry",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Sends a small biter racing to the first enemy within 8 tiles, dealing 26 damage. Every ally deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Bigger Bark",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A yap that deals 7 resonating damage to everything within 3 tiles ahead of you, with a 40% chance to leave each target [Damped] for 4 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Back to the Pack",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 20,
+   "blinkOnUse": 64,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and 1% more for each 1% of cast speed you have. It also scampers you 2 tiles from where you stood."
+  },
+  {
+   "name": "Hand That Feeds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you are healed, your physical damage rises by 20% for 4 seconds. Once every 8 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

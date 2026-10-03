@@ -1,0 +1,80 @@
+{
+ "essence": "essHand",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Touch and Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "range": 86,
+   "desc": "A light slap that deals 4 damage and leaves the target 6% easier to wound for 4 seconds. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Spread Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Gores the target with spread fingers for 24 damage and leaves it [Bleeding] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Sudden Flinch",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "immunityDuration": 2,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Raised in Alarm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything but fire, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

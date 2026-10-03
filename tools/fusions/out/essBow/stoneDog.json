@@ -1,0 +1,79 @@
+{
+ "essence": "essBow",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 1.4,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses an arrow at a target up to 8 tiles away that deals 22 damage, rising to 1.4 times that at full reach, and leaves it [Slowed] for 3 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Pack Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 20,
+   "cooldown": 75,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 440,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Looses 3 arrows at once, spread apart, each dealing 20 damage. When one hits, every ally strikes 20% harder for 15 seconds."
+  },
+  {
+   "name": "Fetch",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 60,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Lurcher at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Lurcher",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded hunting hound fights beside you, striking an enemy within 4.5 tiles for 4 damage every 1.2 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

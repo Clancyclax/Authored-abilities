@@ -1,0 +1,78 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kick and Scatter",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "knockback": 112,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A backward kick that deals 12 damage, leaves the target 8% easier to wound for 4 seconds and knocks it back 3.5 tiles. Your movement speed rises by 20% for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Blind Flap",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Flaps in a panic, dealing 6 damage to every enemy within 2 tiles. Its damage rises 6% for every tenth of your health already gone, up to 30%. It holds 3 charges, and a kill gives one back."
+  },
+  {
+   "name": "Bolting Flutter",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "dashDist": 128,
+   "cooldown": 6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Bolts 4 tiles forward in a flutter of wings, and your movement speed rises by 20% for 3 seconds."
+  },
+  {
+   "name": "Startle Reflex",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

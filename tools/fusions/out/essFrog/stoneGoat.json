@@ -1,0 +1,86 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Rooted Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps the ground, dealing 3 damage to every enemy within 3 tiles, each with a 25% chance to be [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Ledge Rebound",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 13,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "knockback": 96,
+   "desc": "A head-first spring that deals 14 damage, leaves the target 10% easier to wound for 4 seconds and knocks it back 3 tiles."
+  },
+  {
+   "name": "Toehold",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "rock",
+   "cooldown": 36,
+   "armorBonus": 0.16,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.16,
+    "duration": 5
+   },
+   "desc": "Raises your armour by 16% for 12 seconds. Your movement speed rises 16% for 5 seconds after you use it."
+  },
+  {
+   "name": "Sure Landing",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "rock",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "your feet find the ledge before you do"
+    },
+    {
+     "rank": "silver",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "and you cross it quicker"
+    }
+   ],
+   "desc": "Raises your Speed by 1, and your Speed ceiling by 1. From bronze rank your dodge chance rises 5%, and from silver you move 5% faster."
+  }
+ ]
+}

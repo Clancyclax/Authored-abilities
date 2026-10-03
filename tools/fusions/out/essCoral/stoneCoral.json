@@ -1,0 +1,101 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rising Atoll",
+   "template": "barrierWall",
+   "element": "rock",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 30,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Raises a jagged reef 6 tiles long for 8 seconds. It deals 26 damage that ignores armour to each enemy that crosses it, and leaves it [Pinned] for 2 seconds and [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Seeding Cut",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A cut that deals 12 damage and seeds the wound with polyps, [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Lodger in the Reef",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "totem",
+   "summonDmg": 5,
+   "summonDuration": 20,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "Calls a moray out of the reef for 20 seconds. Every 1.5 seconds it strikes an enemy within 4 tiles for 5 damage."
+  },
+  {
+   "name": "Ever-Growing",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "rock",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "what breaks off you grows back"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "and the growth never stops to rest"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.06,
+     "text": "and every layer comes back sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your health recovers 12% faster, from silver your stamina recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

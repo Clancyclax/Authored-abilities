@@ -1,0 +1,74 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ridden to a Standstill",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "desc": "Runs a tiring target down with a blow that deals 18 damage and leaves it 10% easier to wound for 5 seconds. It only strikes a target at or below 30% health. You move 20% faster for 4 seconds after you use it.",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lunge Ring",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 5,
+   "desc": "Churns a ring of earth around you, dealing 6 damage to every enemy within 2.5 tiles. It holds 5 charges, and kills give charges back."
+  },
+  {
+   "name": "Long Haul Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Dray Beast Alongside",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "earth",
+   "familiarDmg": 5,
+   "familiarRange": 96,
+   "familiarInterval": 1.8,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "mount": true,
+   "mountFamily": "beast",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded heidel hauls spoil beside you and fights, striking enemies within 3 tiles for 5 damage every 1.8 seconds. Anything it strikes moves 15% slower for 2 seconds. You can ride it."
+  }
+ ]
+}

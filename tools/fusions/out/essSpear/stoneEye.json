@@ -1,0 +1,80 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Spotter's Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a javelin at an enemy up to 8 tiles away that deals 4 damage, rising to 1.8 times that at full reach, with a 40% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Reckoning Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Throws a javelin that deals 16 damage to the first enemy it meets, uses up every affliction you have on it, and deals 60% more damage for each one."
+  },
+  {
+   "name": "Sentry Post",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 1,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Plants a watching shaft that stands for 15 seconds and strikes an enemy within 4 tiles for 5 damage every 1.5 seconds, each strike with a 30% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Second Look",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

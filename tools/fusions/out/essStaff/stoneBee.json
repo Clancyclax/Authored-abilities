@@ -1,0 +1,88 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Shaken Skep",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 6,
+   "range": 160,
+   "castTime": 0,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Shakes the hive hung from the staff and looses 3 bees in a spread out to 5 tiles. Each deals 3 damage, with a 30% chance to leave its target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Alarm Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A weapon strike that smears the hive's alarm scent on the target. It deals 11 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Dripping Comb",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Plants the staff with its comb dripping honey. For 8 seconds it restores 3 health a second to you and any ally within 3 tiles of it."
+  },
+  {
+   "name": "Forager's Miles",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "Every few paces you cover on foot restores 5 stamina. Once every 4 seconds."
+  }
+ ]
+}

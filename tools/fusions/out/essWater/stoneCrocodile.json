@@ -1,0 +1,88 @@
+{
+ "essence": "essWater",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Thrashed Shallows",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sweeping strike that deals 12 damage to every enemy within 2.5 tiles and knocks each back 3 tiles, with a 50% chance to leave it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Undertow",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "debuff": {
+    "key": "enervate",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 30% health. A clamping strike that deals 18 damage, uses up every affliction on the target and adds 1.5 times their remaining damage, and leaves it [Enervated] for 5 seconds."
+  },
+  {
+   "name": "Mudbank",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Your armour rises by 25% for 12 seconds, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Basking Count",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "regenPerSec": 0.5,
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds. You regenerate 0.5 health a second."
+  }
+ ]
+}

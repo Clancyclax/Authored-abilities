@@ -1,0 +1,81 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stinger Jab",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A jab of the beak that deals 7 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds. Your movement speed rises by 15% for 3 seconds. It holds 4 charges, and a kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swarming Rush",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Drives the flock through a cone 4 tiles long, dealing 10 damage to everything in it; your afflictions on each target spread to enemies within 3.5 tiles. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "name": "Hatchling Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "Calls up a swarm of chicks that fights for 15 seconds, pecking an enemy within 4 tiles for 4 damage every second."
+  },
+  {
+   "name": "Tireless Foraging",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. The next ability you use spends them all: you move and attack 5% faster per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

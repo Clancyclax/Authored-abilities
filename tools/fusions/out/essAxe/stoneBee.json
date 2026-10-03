@@ -1,0 +1,78 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barbed Hack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A hack that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hatchet Swarm",
+   "template": "volley",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 2,
+   "cooldown": 0.9,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Flings 4 small hatchets at once in a spread, each dealing 2 damage."
+  },
+  {
+   "name": "Hive Work",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 10,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles deals 15% more damage and gains 1 power for 10 seconds."
+  },
+  {
+   "name": "Thousand Stings",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 8. At 8 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

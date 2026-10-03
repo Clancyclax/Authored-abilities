@@ -1,0 +1,74 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slow Harvest",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "castTime": 1.5,
+   "bossPct": 0.05,
+   "desc": "Winds up for 1.5 seconds, then swings a full circle, dealing 34 damage plus 5% of a boss's or elite's maximum health to every enemy within 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lowered-Horn Hew",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "knockback": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Drives in with a lowered shoulder and hews for 13 damage, knocking the target back 3.5 tiles and leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Unhurried Furrow",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "desc": "Restores 4 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Steady Labour",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you spend stamina, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

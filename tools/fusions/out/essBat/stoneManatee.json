@@ -1,0 +1,78 @@
+{
+ "essence": "essBat",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lulling Hum",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "spammable": true,
+   "desc": "Sends a soft hum into the first enemy it meets, dealing 4 water damage with a 40% chance to leave it [Slowed] for 4 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Easing Wash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 256,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A wide cone of sound deals 26 water damage to everything in it. Your party deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Slow Tide",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 10 seconds."
+  },
+  {
+   "name": "Sinking Calm",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

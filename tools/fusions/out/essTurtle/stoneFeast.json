@@ -1,0 +1,75 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Mouthful",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargesMax": 3,
+   "leech": 0.3,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Takes a mouthful out of the target, which deals 8 damage, leaves it 10% easier to wound for 4 seconds and heals you for 30% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Overturned Cauldron",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "healOnUse": 10,
+   "desc": "Tips out a pot of boiling stew, which deals 26 damage to every enemy within 3 tiles and ignores resistance. You restore 10 health."
+  },
+  {
+   "name": "Everyone Eats",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 16,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 24,
+   "desc": "Serves a meal off the back of your shell: restores 16 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Full Larder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "The moment you are back at full health, the surplus is stored as a shield worth 15% of your maximum health for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

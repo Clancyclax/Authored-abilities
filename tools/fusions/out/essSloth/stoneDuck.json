@@ -1,0 +1,94 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneDuck",
+  "fusions": [
+    {
+      "name": "Slack Water",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "speed": 300,
+      "radius": 9,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "enervate",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a slow ripple that deals 12 water damage to the first enemy it meets, knocks it back 3 tiles and leaves it [Enervated] for 8 seconds, so its health, mana and stamina return slower.",
+      "knockback": 96
+    },
+    {
+      "name": "Flat Water",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "long",
+      "base": 28,
+      "cooldown": 75,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreResist": true,
+      "debuff": {
+        "key": "wet",
+        "chance": 1,
+        "duration": 10,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a wave out from you that deals 28 water damage to every enemy within 3.5 tiles. It ignores resistances and leaves them [Soaked] for 10 seconds."
+    },
+    {
+      "name": "Off the Back",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "water",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.25,
+      "reflectChance": 0.6,
+      "buffDuration": 10,
+      "cooldown": 36,
+      "desc": "For 10 seconds, each condition laid on you has a 60% chance to be sent back to whoever laid it."
+    },
+    {
+      "name": "Drift Paddle",
+      "kind": "passive",
+      "category": "movement",
+      "template": "waterWalk",
+      "element": "water",
+      "isMovement": true,
+      "source": "essence",
+      "riders": [
+        {
+          "rank": "bronze",
+          "stat": "hpRegen",
+          "amount": 0.15,
+          "text": "your health regenerates faster"
+        },
+        {
+          "rank": "silver",
+          "stat": "staminaRegen",
+          "amount": 0.12,
+          "text": "your stamina recovers faster"
+        },
+        {
+          "rank": "gold",
+          "stat": "dodgeChance",
+          "amount": 0.08,
+          "text": "your dodge chance rises"
+        }
+      ],
+      "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank your health regenerates 15% faster, from silver your stamina recovers 12% faster, and from gold your dodge chance rises by 8%."
+    }
+  ]
+}

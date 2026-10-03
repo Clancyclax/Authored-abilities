@@ -1,0 +1,80 @@
+{
+ "essence": "essBow",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Lancing Shaft",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 256,
+   "maxMult": 1.4,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Looses an arrow at a target up to 8 tiles away that deals 16 poison damage, rising to 1.4 times that at full reach. It uses up every affliction you have on the target, dealing 60% more damage for each one."
+  },
+  {
+   "name": "Bursting Phial",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires an arrow carrying a phial that deals 12 poison damage to the first enemy it meets and leaves it [Poisoned] for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Bitter Draught",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 poisons from you. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Spent Venom",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When a condition you inflicted runs out, 6 stamina comes back to you. Once every 5 seconds."
+  }
+ ]
+}

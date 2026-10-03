@@ -1,0 +1,77 @@
+{
+ "essence": "essEye",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Echo Sweep",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.2,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a click 4 tiles ahead of you in a cone, dealing 3 damage to everything in it, with a 20% chance per hit to leave it [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Night Swoop",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "chargeTo": 192,
+   "leech": 0.15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "You swoop up to 6 tiles onto the target and bite for 14 damage, 10% more for each affliction on it (up to 30%), healing for 15% of the damage dealt and leaving it 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Erratic Flight",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "dark",
+   "speedMult": 1.3,
+   "buffDuration": 6,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "cooldown": 24,
+   "desc": "You blink 2 tiles and your movement speed rises by 30% for 6 seconds. You have 10% more dodge chance."
+  },
+  {
+   "name": "Dark-Adjusted",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "dodgeBonus": 0.05,
+   "desc": "At night, you deal 10% more damage. You have 5% more dodge chance."
+  }
+ ]
+}

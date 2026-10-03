@@ -1,0 +1,90 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Exhaust Vent",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "burn",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 2
+   },
+   "desc": "Vents engine exhaust around you, which deals 3 damage to every enemy within 2 tiles, with a 30% chance to leave each [Burning] for 4 seconds. The thrust moves you 12% faster for 2 seconds."
+  },
+  {
+   "name": "Incendiary Canister",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Lobs a pressurised canister that deals 12 damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Afterburner",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "fire",
+   "cooldown": 24,
+   "speedMult": 1.35,
+   "buffDuration": 6,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.08,
+   "desc": "A burner kicks you 3 tiles from where you stood, then your movement speed rises by 35% and your dodge chance by 8% for 6 seconds."
+  },
+  {
+   "name": "Kept at Forge Heat",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a tool held at forge heat by its own burner. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Burning] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

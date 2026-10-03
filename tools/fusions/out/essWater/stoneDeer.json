@@ -1,0 +1,80 @@
+{
+ "essence": "essWater",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Sip and Start",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "leech": 0.2,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Flicks water at the first enemy it meets: it deals 4 damage, you heal for 20% of the damage dealt, and you move 10% faster for 2 seconds."
+  },
+  {
+   "name": "Brookside Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 64,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A spray from a leap that deals 12 damage to every enemy within 2.5 tiles and knocks each back 2 tiles. You move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Lifted Head",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "cooldown": 24,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 6 seconds, and you move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Drinks Between Alarms",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.7,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. At 5 they all spend at once: you are healed for 4% of your maximum health per stack (18% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

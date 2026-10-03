@@ -1,0 +1,78 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mouthful of Loam",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a clod at the mouth of the first enemy it meets. It deals 10 damage, stuns the target for 1 second and leaves it [Muddled] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Circle Scored in Turf",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Scores a circle into the ground, dealing 30 damage to every enemy within 3.5 tiles and ignoring their resistances."
+  },
+  {
+   "name": "Read from the Headstone",
+   "kind": "active",
+   "category": "summon",
+   "template": "raiseDead",
+   "element": "necrotic",
+   "base": 5,
+   "range": 300,
+   "corpse": true,
+   "summonFamily": "skeleton",
+   "summonDuration": 30,
+   "summonDmg": 5,
+   "cooldown": 90,
+   "desc": "The nearest body within 9.5 tiles rises and fights at your side for 30 seconds. It deals 5 damage a hit."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "name": "Said Over the Dead",
+   "element": "arcane",
+   "desc": "When you kill an enemy, your next spell deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

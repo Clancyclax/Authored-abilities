@@ -1,0 +1,76 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "desc": "A flurry of gnawing bites that deals 8 damage and leaves the target 8% easier to wound for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Cloud Stripping",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "A cloud of grit-laden locusts sweeps around you, dealing 28 damage to every enemy within 3.5 tiles and ignoring their armour."
+  },
+  {
+   "name": "Dust Plague",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 50,
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 14,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 3,
+   "desc": "Takes 0.5 seconds to loose a cloud for 14 seconds that bites an enemy within 6 tiles for 4 damage every second. Each kill you make while it is out restores 3 health."
+  },
+  {
+   "name": "Fed by the Fallen",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essBow",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carved Portion",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Looses an arrow at a target up to 7 tiles away that deals 8 damage, rising to 1.4 times that at full reach, and heals you for 25% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Clear the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blood",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "leech": 0.3,
+   "desc": "Looses an arrow at an enemy at or below 25% health that deals 18 blood damage and consumes every affliction on it, adding 1.4 times their remaining damage to the hit. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Share the Kill",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 30,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Field-Dressed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "Each time you kill an enemy, you regain 3 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

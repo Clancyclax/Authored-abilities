@@ -1,0 +1,77 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "rangeBand": "medium",
+   "name": "Play with Your Food",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "maxMult": 1.6,
+   "range": 192,
+   "reachUnits": 192,
+   "requiresTargetBelow": 0.3,
+   "leech": 0.25,
+   "desc": "Usable only on an enemy at or below 30% health. A pounce that deals 18 damage, rising to 1.6 times that at the end of its reach, and heals you for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "strikes": 1,
+   "name": "Stolen Bites",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.15,
+   "desc": "A swipe that deals 7 damage, leaves the target [Bleeding] for 2 damage a second for 3 seconds and heals you for 15% of the damage dealt. Holds 3 charges, and each kill restores one."
+  },
+  {
+   "name": "Licked Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cleanseCount": 1,
+   "healScope": "self",
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "cooldown": 20,
+   "desc": "Removes 1 condition from you and restores 10 health. Your movement speed rises 15% for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "name": "Saucer of Cream",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you dodge builds a stack, up to 4. At 4 they all spend at once and heal you for 5% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Stubble Burn",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 112,
+   "coneAngle": 1.2,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Sweeps a burning arc through a cone 3.5 tiles long, dealing 11 fire damage and setting everything in it [Burning] for 2 damage a second for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it.",
+   "isAoe": true
+  },
+  {
+   "name": "Ash Harvest",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Throws a red-hot crescent that deals 16 fire damage to the first enemy it meets, uses up every affliction you have on it and deals 60% more damage for each one.",
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Fallow Plot",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "fire",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "For 8 seconds, the ground where you stand restores 3 health a second to you and any ally within 3 tiles."
+  },
+  {
+   "name": "Embers Down the Row",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 160
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "When you kill an enemy, a spark jumps to the nearest enemy within 5 tiles, dealing 7 damage and setting it [Burning] for 2 damage a second for 3 seconds. Once every 5 seconds."
+  }
+ ]
+}

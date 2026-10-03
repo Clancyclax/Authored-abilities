@@ -1,0 +1,96 @@
+{
+ "essence": "essShip",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Echo Sounding",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a pulse into the first enemy it meets for 4 damage, then on to 1 more enemy within 3 tiles for 60% of that. Each hit has a 35% chance to leave its target [Marked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Colony Sortie",
+   "template": "volley",
+   "element": "dark",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "hpCostPct": 0.04,
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 5,
+    "label": "Blood Meal"
+   },
+   "desc": "Looses 3 bats in a spread out to 6 tiles, each dealing 6 damage. 25% of the damage dealt comes back to you as healing over the following 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Running Dark",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 8 seconds: enemies notice you 60% later and you move 15% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Feeding on Passage",
+   "element": "blood",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "After you cover enough ground, your attacks heal you for 20% of the damage they deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

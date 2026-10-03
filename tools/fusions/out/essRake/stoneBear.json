@@ -1,0 +1,75 @@
+{
+ "essence": "essRake",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Bark Stripper",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A clawing swipe that deals 7 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. Holds 5 charges, and kills give charges back."
+  },
+  {
+   "name": "Sprawling Cuff",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "Swings the full weight of the haft round you, dealing 15 damage to every enemy within 3 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Autumn Stores",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "nature",
+   "cooldown": 30,
+   "healAmount": 18,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you. The healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Cornered Bulk",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a ward worth 25% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

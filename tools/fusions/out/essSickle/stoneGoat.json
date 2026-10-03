@@ -1,0 +1,81 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Curl of the Horn",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A butting cut that deals 14 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds. Its damage rises +6% for every 10% of your health already gone (max +30%)."
+  },
+  {
+   "name": "Nothing Inedible",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "leech": 0.2,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sweeps a full circle that deals 30 damage to every enemy within 3.5 tiles. It ignores armour, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Hold the Ledge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "cooldown": 30,
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Footing Found",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, a shield worth 10% of your maximum health covers you for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

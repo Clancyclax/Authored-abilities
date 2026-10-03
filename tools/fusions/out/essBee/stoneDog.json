@@ -1,0 +1,88 @@
+{
+ "essence": "essBee",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Ground",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes up to 6 tiles to the target and bites for 14 damage, leaving it 10% easier to wound for 5 seconds and [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pack Frenzy",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A swarm that deals 26 poison damage to every enemy within 3.5 tiles. When it hits, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Hackles Raised",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and leaves them [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Apiary Watchdog",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Heeler",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded hound runs with you, biting enemies within 5 tiles for 4 damage every 1.2 seconds and leaving them [Poisoned] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

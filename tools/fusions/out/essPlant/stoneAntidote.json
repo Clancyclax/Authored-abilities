@@ -1,0 +1,68 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Draw the Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "cooldown": 12,
+   "base": 16,
+   "speed": 330,
+   "radius": 8,
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.3,
+   "desc": "Strikes one enemy for 16 damage and uses up every affliction you have on it, dealing 60% more damage for each one. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Wormwood Mist",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 3,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned",
+    "healFrac": 0.5
+   },
+   "desc": "Releases a wormwood mist over every enemy within 3 tiles, dealing 3 damage and leaving each [Poisoned] for 1 damage a second for 6 seconds. Half of the damage the poison deals heals you."
+  },
+  {
+   "name": "Plantain Poultice",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "plant",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Removes 2 conditions from you and restores 12 health."
+  },
+  {
+   "name": "Mithridatism",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You gain 10% poison resistance."
+  }
+ ]
+}

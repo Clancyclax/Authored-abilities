@@ -1,0 +1,79 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Root Ball",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a root-bound clod that deals 6 damage with a 40% chance to leave the target [Slowed] for 3 seconds. It holds 5 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Knotted Runners",
+   "template": "confuseTurn",
+   "element": "plant",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "range": 114,
+   "confuseDuration": 5,
+   "maxTargets": 2,
+   "confuseDamageFrac": 1,
+   "duration": 5,
+   "confuseDamagePct": 1,
+   "stunOnHit": 1,
+   "reachUnits": 114,
+   "rangeBand": "melee",
+   "desc": "Knots the roots under up to 2 enemies within 3.5 tiles and turns them against each other for 5 seconds. It deals 10 damage to each and stuns it for 1 second."
+  },
+  {
+   "name": "Wattle Hurdle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "plant",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "desc": "Weaves a wattle fence 6 tiles long across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Strands in the Daub",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. When you reach 5, they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

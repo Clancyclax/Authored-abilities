@@ -1,0 +1,79 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Chill Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "desc": "A flicking strike on a target up to 5 tiles away that deals 4 damage, rising to 1.4 times that at full reach, with a 30% chance to leave it [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Stilled in Place",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "frost",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "stunOnHit": 1,
+   "range": 96,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Breathes a chill cone 3 tiles long, dealing 10 damage to everything in it and stunning each for 1 second."
+  },
+  {
+   "name": "Sun on the Flank",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 18,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you, with a 10% chance to heal critically. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Calm at Full Strength",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 8
+   },
+   "desc": "While you are at full health, a shield worth 20% of your maximum health closes over you for 8 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wrench It Open",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 72,
+   "chargesMax": 3,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "Grips the target and tears at its plate, dealing 8 damage and leaving it 12% easier to wound for 5 seconds. Holds 3 charges; a kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flung Buckler",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 9,
+   "stunOnHit": 0.8,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Hurls your shield, dealing 12 damage and stunning the target for 0.8 seconds. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the damage."
+  },
+  {
+   "name": "Chest-Beating Challenge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 30,
+   "desc": "You pound your breastplate and draw up to 5 enemies within 5 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Grudge Fists",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything but fire, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

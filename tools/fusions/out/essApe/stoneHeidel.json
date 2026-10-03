@@ -1,0 +1,74 @@
+{
+ "essence": "essApe",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Hoof Rain",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "desc": "Stamps every enemy within 2.5 tiles for 7 damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Run Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 18,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Rushes you up to 7 tiles to a target, then deals 16 damage and leaves it 12% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Tireless Plating",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Raises your armour by 20% for 12 seconds. Your movement speed rises 20% for 6s after you use it."
+  },
+  {
+   "name": "Second Wind",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

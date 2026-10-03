@@ -1,0 +1,82 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Brought to Bay",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Your next weapon strike on an enemy at or below 30% health deals 22 piercing damage and leaves it [Bleeding] for 3 damage a second for 4 seconds. It deals 10% more for each ally beside you, up to 30%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Warning Bark",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Barks an alarm 3 tiles ahead that deals 4 resonating damage to everything in it, with a 25% chance to leave each [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Lead Them Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Draws up to 5 enemies within 6 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Coursing Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Harrier",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A hound runs at your side and bites an enemy within 5 tiles for 4 damage every 1.2 seconds, slowing what it bites by 20% for 2 seconds."
+  }
+ ]
+}

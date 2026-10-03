@@ -1,0 +1,87 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Done Toying",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A hooking pounce on a target at or below 30% health that deals 20 damage, uses up every affliction on it and adds 1.6 times their remaining damage. For 3 seconds after, you move 20% faster.",
+   "reachUnits": 84,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Batting Swipes",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A quick hooked swipe that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 4 seconds and slows it by 15% for 2 seconds."
+  },
+  {
+   "name": "Under the Hedge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 15% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Waiting in the Rows",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "duration": 5
+   },
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds. You have 25% more critical chance against a target that has not been hurt yet."
+  }
+ ]
+}

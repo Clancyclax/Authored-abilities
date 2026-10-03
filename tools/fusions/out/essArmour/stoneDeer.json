@@ -1,0 +1,81 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Startle Kick",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 112,
+   "desc": "An iron-shod kick in every direction that deals 11 damage to every enemy within 2.5 tiles and knocks them back 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Locked Tines",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "maxMult": 1.2,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lunge that deals 7 damage, up to 1.2 times as much at 2.5 tiles, with a 50% chance to leave the target [Pinned] for 2 seconds. Holds 3 charges; a kill gives one back."
+  },
+  {
+   "name": "Flinch Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 12,
+   "shieldStrikes": 3,
+   "shieldDuration": 4,
+   "armorBonus": 0.06,
+   "cooldown": 14,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "Raises a quick barrier that absorbs the next 12 damage, up to 3 blows, for 4 seconds and raises your armour by 6%, and you move 30% faster for 3 seconds."
+  },
+  {
+   "name": "Bounding Ward",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Squawking Feint",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 16,
+   "knockback": 64,
+   "confuse": true,
+   "confuseChance": 0.35,
+   "confuseDuration": 4,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Squawks and flaps in a ring, dealing 9 damage to every enemy within 3 tiles and knocking them back 2 tiles. Each has a 35% chance to turn on its neighbours for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swapped Egg",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "leech": 0.25,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Flings a stolen egg that hits the first enemy in its path for 8 damage and heals you for 25% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Hushed Henhouse",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 6 seconds. Enemies notice you far later, you move 10% faster while veiled, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Quick Wits",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "Each time you afflict an enemy, your next strike gains 20% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

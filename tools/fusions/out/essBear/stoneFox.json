@@ -1,0 +1,81 @@
+{
+ "essence": "essBear",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Feint Swipe",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a swat that deals 9 damage to the first enemy it meets. Each hit has a 40% chance of leaving the target [Blunted] for 6 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sucker Punch",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 72,
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "A sudden blow that deals 30 damage, always a critical hit, and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Turned Aside",
+   "template": "reflectWard",
+   "element": "physical",
+   "reflectKind": "debuff",
+   "reflectChance": 0.5,
+   "reflectFrac": 0.5,
+   "buffDuration": 8,
+   "cooldown": 40,
+   "armorBonus": 0.15,
+   "desc": "For 8 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead, and your armour rises by 15%."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.35
+   },
+   "name": "Feigned Limp",
+   "element": "physical",
+   "dodgeBonus": 0.08,
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 35%, a shield worth 30% of your maximum health closes over you for 6 seconds. Once every 40 seconds. Your dodge chance rises by 8%."
+  }
+ ]
+}

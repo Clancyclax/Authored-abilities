@@ -1,0 +1,76 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Flung Spicule",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Flings a reef spicule that deals 7 damage to the first enemy it meets, with a 40% chance to leave it [Diseased] for 6 seconds, healing doing less for it. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Every Polyp Fires",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Every stinging cell on you fires at once, dealing 26 poison damage to every enemy within 3 tiles, ignoring their resistances, and leaving them [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Staghorn Thicket",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 32,
+   "desc": "Grows a wall of branching spines 5 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Reef Rash",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "piercing",
+   "reflectKind": "damage",
+   "reflectFrac": 0.12,
+   "reflectChance": 1,
+   "buffDuration": 0,
+   "desc": "12% of the damage you take is dealt back to whoever dealt it."
+  }
+ ]
+}

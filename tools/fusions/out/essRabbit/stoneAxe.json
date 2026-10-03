@@ -1,0 +1,83 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Run-Up Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "An overhead chop that deals 30 damage, always lands as a critical hit and leaves the target 20% easier to wound for 8 seconds. Its damage rises 8% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Hamstring Notch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "A darting cut at the legs that deals 7 damage, makes the target [Bleeding] for 2 damage a second for 4 seconds and slows it by 25% for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Spring-Loaded Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "blinkOnUse": 64,
+   "desc": "Hops you 2 tiles from where you stood and increases your slashing damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Culling Spree",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "dodgeBonus": 0.05,
+   "desc": "Each time you kill an enemy, your next strike has 30% more critical hit chance, once every 12 seconds. You also have 5% more dodge chance.",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   }
+  }
+ ]
+}

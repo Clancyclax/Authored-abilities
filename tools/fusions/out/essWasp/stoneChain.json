@@ -1,0 +1,99 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "name": "Venom Down the Line",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting that deals 12 damage and leaves the target [Poisoned] for 5 seconds, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Short Leash",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A sting that deals 8 damage, leaves the target [Poisoned] for 2 damage a second for 4 seconds and slows it by 30% for 3 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Shared Shackle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "reflectChance": 1,
+   "buffDuration": 6,
+   "cooldown": 24,
+   "desc": "Links you to your attackers: for 6 seconds, 30% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "name": "One Leads to Another",
+   "element": "poison",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "When you inflict a condition, a sting leaps to the nearest enemy within 6 tiles, dealing 5 damage, then on to 1 more within 3 tiles for 50% of that. Once every 3 seconds."
+  }
+ ]
+}

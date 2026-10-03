@@ -1,0 +1,87 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Passing Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 30,
+   "cooldown": 16,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "A stroke at a target at or below 30% health that deals 30 damage and leaves it [Bleeding] for 3 damage a second for 4 seconds. You move 25% faster for 5 seconds after."
+  },
+  {
+   "name": "Wheeling Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Pivots on your haunches and lashes out, dealing 3 damage to every enemy within 2 tiles and leaving them [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Edged Shoes",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Your slashing damage rises by 30% for 12 seconds, and you move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Weight Behind It",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "After you cover enough ground, your physical damage rises by 25% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

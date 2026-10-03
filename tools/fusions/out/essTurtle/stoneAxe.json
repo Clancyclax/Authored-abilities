@@ -1,0 +1,78 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Unhurried Fall",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 75,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "castTime": 1.5,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1.5-second wind-up, chops down through a cone 3 tiles ahead, which deals 34 damage to everything in it and leaves it [Bleeding] for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health.",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Splitting Wedge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "A chop usable only on an enemy at or below 30% health. It deals 20 damage and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Blades Along the Keel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Knows Where Shells Split",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "pierceElement": "slashing",
+   "armorIgnore": 0.15,
+   "regenPerSec": 0.5,
+   "desc": "Your slashing attacks ignore 15% of the target's armour. You also regenerate 0.5 health a second."
+  }
+ ]
+}

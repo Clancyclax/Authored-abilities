@@ -1,0 +1,76 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneEarth",
+  "fusions": [
+    {
+      "name": "Falling Stalactite",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "rock",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "speed": 300,
+      "radius": 12,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "explodeRadius": 112,
+      "splashFrac": 0.8,
+      "desc": "Drops a stalactite on the first enemy it meets within 8 tiles. It deals 30 damage, then shatters and hits every enemy within 3.5 tiles for 80% of that."
+    },
+    {
+      "name": "Row of Fangs",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "earth",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 160,
+      "coneAngle": 0.45,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "desc": "A row of stone tines erupts in a narrow cone 5 tiles ahead. The eruption deals 13 damage to everything in it and stuns each target for 1 second."
+    },
+    {
+      "name": "Jagged Rampart",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "rock",
+      "wallKind": "block",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "cooldown": 24,
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 3
+      },
+      "desc": "Raises a wall of stone tines 5 tiles long for 6 seconds. Nothing crosses it, and anything that touches it moves 30% slower for 3 seconds."
+    },
+    {
+      "name": "Rock Bottom",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "rock",
+      "isTriggered": true,
+      "cooldown": 40,
+      "trigger": {
+        "on": "hpBelow",
+        "frac": 0.35,
+        "cooldown": 40
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 6
+      },
+      "desc": "Once your health falls below 35%, a shield worth 25% of your maximum health closes over you for 6 seconds. Once every 40 seconds."
+    }
+  ]
+}

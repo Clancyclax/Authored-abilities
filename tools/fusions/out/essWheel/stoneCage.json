@@ -1,0 +1,83 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Trundled Cell",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "chargeTo": 192,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 6 tiles away and closes a ring of bars there that deals 12 damage to every enemy within 3 tiles and leaves each one [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Treadmill Sentence",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "curse",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "cursedMove",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a bolt that deals 4 damage to the first enemy it meets, with a 40% chance to leave it under [Cursed Step] for 5 seconds, so that every step it takes costs it health."
+  },
+  {
+   "name": "Locked Turnstile",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 2,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.3,
+   "cooldown": 60,
+   "desc": "After a 0.3 second cast, every creature within 3 tiles is held in place for 2 seconds."
+  },
+  {
+   "name": "Pacing the Bars",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, you gain a ward that absorbs damage up to 15% of your maximum health for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

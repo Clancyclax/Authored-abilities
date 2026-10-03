@@ -1,0 +1,77 @@
+{
+ "essence": "essWater",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Beater's Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "knockback": 64,
+   "desc": "Sends a surge of water at the first enemy it meets that deals 26 damage, knocks it back 2 tiles and leaves it 12% easier to wound for 6 seconds. If it hits, you and your allies deal 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Lapping Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "leech": 0.2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 5 damage and leaves the target [Bleeding] for 1 damage a second for 6 seconds. You heal for 20% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Rescue Swim",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 24,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "desc": "Restores 4 health a second for 6 seconds to the ally who needs it most."
+  },
+  {
+   "name": "Marsh Retriever",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Marsh Retriever",
+   "lifeOnKill": 5,
+   "desc": "A bonded Marsh Retriever fights beside you. Every 1.2 seconds it deals 3 damage to an enemy within 4 tiles, and each kill it makes restores 5 health to you."
+  }
+ ]
+}

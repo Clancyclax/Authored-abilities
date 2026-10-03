@@ -1,0 +1,95 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Branded on the Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "chargeTo": 224,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Rushes you to a target up to 7 tiles away and bites, which deals 11 damage and sets it [Burning] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Three Loosed Flames",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "fire",
+   "role": "long",
+   "base": 16,
+   "cooldown": 90,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 380,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Looses 3 burning packmates at once, spread apart out to 7 tiles; each deals 16 damage and bursts on impact for 80% of that to every enemy within 3 tiles."
+  },
+  {
+   "name": "Backburn",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "cooldown": 24,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 32,
+   "base": 4,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Lights a line of fire 5 tiles long in front of you for 6 seconds. It deals 4 damage to anything that crosses it and sets it [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Embers at the Heels",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Every few paces you cover, an ember leaps from your heels to the nearest enemy within 6 tiles and deals 5 damage, setting it [Burning] for 2 damage a second for 3 seconds. Once every 4 seconds."
+  }
+ ]
+}

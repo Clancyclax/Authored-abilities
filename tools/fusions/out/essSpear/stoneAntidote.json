@@ -1,0 +1,69 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitter on the Tip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A thrust that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 6 seconds."
+  },
+  {
+   "name": "Lance the Swelling",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 112,
+   "stackMult": 0.6,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "desc": "Usable only on an enemy carrying one of your afflictions. A lancing thrust from up to 3.5 tiles away that deals 8 damage, uses up its afflictions and adds 0.6 times their remaining damage to the blow."
+  },
+  {
+   "name": "Poisoned Chalice",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "Each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead, for 9 seconds."
+  },
+  {
+   "name": "No Hide Proof",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 12% poison resistance."
+  }
+ ]
+}

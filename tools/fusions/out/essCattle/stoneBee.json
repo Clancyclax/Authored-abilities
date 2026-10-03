@@ -1,0 +1,82 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kicked Hive",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Stamps a hive open, dealing 10 poison damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Left in the Wound",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Costs 4% of your maximum health. A horn strike that deals 8 damage and leaves its tip in the wound, making the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Milk and Honey",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "cooldown": 20,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "name": "Dawn to Dusk",
+   "element": "physical",
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 1,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, you regain 1 stamina a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

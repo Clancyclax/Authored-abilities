@@ -1,0 +1,77 @@
+{
+  "essence": "essThread",
+  "stone": "stoneBird",
+  "fusions": [
+    {
+      "name": "Kite-String Hoist",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "wind",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "speed": 340,
+      "radius": 8,
+      "knockback": 96,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Hooks a strand into the first enemy it meets. It deals 11 damage, carries the target back 3 tiles and leaves it [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Three on Creances",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "wind",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "volleyCount": 3,
+      "volleySpread": 0.35,
+      "speed": 320,
+      "radius": 7,
+      "range": 224,
+      "isAoe": true,
+      "chargesMax": 3,
+      "desc": "Looses 3 hawks on lines at once, spread apart. Each hawk deals 6 damage. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Woven Nest",
+      "kind": "active",
+      "category": "healing",
+      "template": "bloomField",
+      "element": "nature",
+      "cooldown": 30,
+      "healPerSec": 3,
+      "fieldDuration": 8,
+      "range": 96,
+      "healScope": "party",
+      "desc": "Weaves a nest of strands reaching 3 tiles around where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+    },
+    {
+      "name": "Line Paid Out",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.25,
+        "strikes": 1
+      },
+      "desc": "Every few paces you cover, your critical hit chance rises by 25% for your next strike. Once every 6 seconds."
+    }
+  ]
+}

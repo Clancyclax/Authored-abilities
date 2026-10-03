@@ -1,0 +1,83 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Steady Trot",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.6,
+   "spammable": true,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 3
+   },
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Stamps a quick trot around you, dealing 4 damage to every enemy within 2.5 tiles. Your movement speed rises by 10% for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trampling Rush",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "You rush up to 7 tiles onto the target and trample it for 15 damage, leaving it 10% easier to wound for 6 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Stout Heart",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "cooldown": 70,
+   "buffStat": "maxHp",
+   "buffAmount": 0.15,
+   "buffDuration": 20,
+   "desc": "Your maximum health rises by 15% for 20 seconds."
+  },
+  {
+   "name": "Last Reserves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 24,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 24
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 5,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you regain 5 stamina a second for 6 seconds. Once every 24 seconds."
+  }
+ ]
+}

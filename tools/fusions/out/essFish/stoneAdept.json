@@ -1,0 +1,79 @@
+{
+ "essence": "essFish",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Tight Formation",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "volleyCount": 3,
+   "volleySpread": 0.2,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Looses 3 darts of water in a tight spread, each dealing 6 damage. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Rehearsed Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 210,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "guaranteedCrit": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A thrown strike that deals 28 damage, up to 2 times that at maximum range, and always lands as a critical hit. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "name": "Drilled Turn",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "water",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities that is still waiting, chosen at random, and raises your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Schooled Instinct",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "water",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again and the second roll stands. Its effect grows 10% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

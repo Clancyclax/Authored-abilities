@@ -1,0 +1,84 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Rumen Puff",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 64,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Belches a cone of spores 2 tiles long, dealing 4 damage to everything in it and making each [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Trampled to Compost",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "stackMult": 1.5,
+   "desc": "Uses up every affliction on the target and adds 1.5 times the damage they had left to this blow, which deals 16 damage. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Fairy Ring",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Raises a short-lived growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it. Every ally inside 5.5 tiles makes it 10% stronger, to a limit of 4."
+  },
+  {
+   "name": "Spore-Fed",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "armorBonus": 0.06,
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 4 seconds. It also hardens your armour by 6% at all times."
+  }
+ ]
+}

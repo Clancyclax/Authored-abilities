@@ -1,0 +1,88 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Moving As One",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Stamps down with the herd, dealing 26 damage to every enemy within 3 tiles. Its damage rises 8% for each ally near you (max 32%). On a hit, every ally strikes 20% harder for 15 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Shouldering Nudge",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "chargesMax": 3,
+   "knockback": 64,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "desc": "Shoulders a target aside, dealing 7 damage, knocking it back 2 tiles and leaving it 5% easier to wound for 3 seconds. It holds 3 charges and kills give charges back.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Stand Placid",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "healOnUse": 10,
+   "desc": "Reduces the damage you take by 25% for 12 seconds and restores 10 health.",
+   "kind": "active"
+  },
+  {
+   "name": "Plough Strength",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "armor",
+     "amount": 0.05,
+     "text": "blows land and go nowhere"
+    },
+    {
+     "rank": "silver",
+     "stat": "maxHp",
+     "amount": 10,
+     "text": "and there is more of you to move"
+    },
+    {
+     "rank": "gold",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "and you mend while you plod on"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank your armour rises by 5%, from silver your maximum health rises by 10, and from gold your health recovers 12% faster.",
+   "kind": "passive"
+  }
+ ]
+}

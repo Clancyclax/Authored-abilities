@@ -1,0 +1,77 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Pasture Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A thrown blow that deals 8 damage, up to 1.5 times that at the maximum range of 5 tiles. Its damage rises 8% per ally within 5 tiles (max +32%). Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Stampede Cleave",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A sweeping cleave that deals 28 damage to every enemy within 3.5 tiles. Allies deal 20% more damage for 15 seconds after it lands."
+  },
+  {
+   "name": "Warm Clearing",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Clears a patch 3 tiles around where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Steady Heat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you are healed, your physical damage rises by 20% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

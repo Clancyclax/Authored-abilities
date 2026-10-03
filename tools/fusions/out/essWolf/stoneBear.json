@@ -1,0 +1,85 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Bigger Game",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A mauling bite that deals 30 damage and leaves the target 15% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Cornered Fury",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "knockback": 96,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Rears and swipes in a full circle, which deals 13 damage to every enemy within 3 tiles and knocks them back 3 tiles. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Shared Den",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 36,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Digs a den where you stand for 10 seconds; it restores 3 health a second to you and every ally within 3.5 tiles of it. The effect grows 10% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Winter Fat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

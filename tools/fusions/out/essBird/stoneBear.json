@@ -1,0 +1,73 @@
+{
+ "essence": "essBird",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Full-Weight Touchdown",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "isAoe": true,
+   "range": 112,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Lands on every enemy within 3.5 tiles for 30 damage, ignoring their armour."
+  },
+  {
+   "name": "Wing Swat",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "knockback": 112,
+   "desc": "A heavy wing swat deals 13 damage, knocks the target back 3.5 tiles and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Puffed-Up Bulk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "desc": "Raises a barrier that absorbs the next 22 damage and holds for 8 seconds. Your armour rises by 8%."
+  },
+  {
+   "name": "Ponderous Takeoff",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, a shield worth 10% of your maximum health closes over you for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

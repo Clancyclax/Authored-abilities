@@ -1,0 +1,87 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rearing Verdict",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A downward blow that deals 28 slashing damage to everything in the 3 tiles ahead of you and ignores armour. Each target is left [Poisoned] for 8 seconds."
+  },
+  {
+   "name": "Seeping Gash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon strike that deals 4 damage, leaves the target [Poisoned] for 1 damage a second for 4 seconds and has a 35% chance to leave it [Bleeding] for 5 seconds.",
+   "base": 4
+  },
+  {
+   "name": "Poised Above the Neck",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your critical damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Severed, Still Biting",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 160
+   },
+   "desc": "Each time you kill something, a bolt leaps from the body to the nearest enemy within 5 tiles and deals 8 damage. Once every 4 seconds."
+  }
+ ]
+}

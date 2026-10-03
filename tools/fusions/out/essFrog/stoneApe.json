@@ -1,0 +1,89 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Catch and Hurl",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "maxMult": 1.4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "desc": "Your tongue grips one enemy up to 6 tiles away and throws it, dealing 14 damage, rising to 1.4 times that at its full reach, and knocking it back 3 tiles."
+  },
+  {
+   "name": "Chest-Drum Boom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.06,
+   "desc": "A croak drummed out of your inflated throat deals 26 damage to every enemy within 3.5 tiles and leaves them [Weakened] for 8 seconds. A boss or elite also loses 6% of its maximum health.",
+   "debuff": {
+    "key": "powerDown",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Knuckled Crouch",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 25% for 12 seconds. You move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Thick in the Haunch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "your legs throw you further"
+    },
+    {
+     "rank": "silver",
+     "stat": "attackSpeed",
+     "amount": 0.05,
+     "text": "and your fists are back before they are missed"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and you are already somewhere else"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank you move 5% faster, from silver you attack 5% faster, and from gold your dodge chance rises 5%."
+  }
+ ]
+}

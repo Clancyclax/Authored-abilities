@@ -1,0 +1,82 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "First Look",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "A darting bite at the first enemy in a line up to 7 tiles away that deals 7 damage, with 50% more critical chance against an enemy that has not yet been wounded. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Seen Weakness",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 64,
+   "consumeAfflictionsPer": 0.5,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A bite that deals 16 damage and uses up every affliction you have on the target, dealing 50% more for each one. It leaves the target 5% easier to wound and [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Fixed Gaze",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Your critical hit chance rises by 25% for 10 seconds, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Spotted Mark",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 5. When it reaches 5, they all spend at once: you deal 4% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

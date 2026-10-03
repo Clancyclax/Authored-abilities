@@ -1,0 +1,82 @@
+{
+ "essence": "essChain",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "desc": "Drags a swarm-laden link across an enemy that deals 7 damage and leaves it 8% easier to wound for 4 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Swarm Reaping",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Looses a cloud of links in a cone ahead of you that deals 28 damage that ignores resistances to everything within 4 tiles."
+  },
+  {
+   "name": "Tethered Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "desc": "Looses a swarm tethered to you for 12 seconds. It strikes an enemy within 4 tiles for 3 damage every second."
+  },
+  {
+   "name": "Devouring Reach",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 192
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "When you kill an enemy, a link whips to the nearest enemy within 6 tiles for 7 damage, then jumps to 2 more enemies within 3 tiles for 50% of that. Once every 5 seconds."
+  }
+ ]
+}

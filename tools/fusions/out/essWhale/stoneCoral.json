@@ -1,0 +1,81 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Flank Scrape",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Scrapes a crusted flank along the target, which deals 4 damage and leaves it [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "False Island",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "rock",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 30,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Surfaces a reef-crusted back 6 tiles long for 8 seconds. It deals 26 damage that ignores armour to each enemy that crosses it and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Fallen Giant",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "life",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Raises a reef 3 tiles around where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Grown-Over Hide",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "rock",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

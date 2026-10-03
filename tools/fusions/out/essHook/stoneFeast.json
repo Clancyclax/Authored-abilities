@@ -1,0 +1,76 @@
+{
+ "essence": "essHook",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carve the Catch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "A carving cut that deals 9 damage, heals you for 30% of the damage dealt and leaves the target 8% easier to wound for 4 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Passed Platter",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "leech": 0.2,
+   "desc": "Gaffs and carves every enemy within 3 tiles for 28 damage, healing you for 20% of the damage dealt. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Hung to Share",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "physical",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Hangs the day's catch where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3 tiles of it."
+  },
+  {
+   "name": "Full Rail",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make hangs a stack on you, up to 5. At 5 they all spend at once: you heal for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

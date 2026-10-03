@@ -1,0 +1,79 @@
+{
+ "essence": "essHair",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Rooted Spore",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 10,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Throws a strand that deals 10 damage and makes the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Spore Drift",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "coneAngle": 0.75,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Puffs a cone of spores ahead of you, dealing 3 damage to everything caught in it. Each hit has a 25% chance of [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Mycelial Weave",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "desc": "Raises a growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Spreading Rot",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 8% poison resistance for as long as you carry it."
+  }
+ ]
+}

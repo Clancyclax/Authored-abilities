@@ -1,0 +1,86 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Embers on the Current",
+   "template": "volley",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 380,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 burning polyps at once, spread apart, each dealing 26 fire damage, setting the target [Burning] for 5 seconds and bursting for 80% of that on every enemy within 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stinging Brush",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A brushing touch that deals 4 fire damage and leaves the target [Burning] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Scalding Skin",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "cooldown": 30,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and they are left [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Kiln-Hardened",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "fire",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "fire",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 8%, and you have 12% fire resistance."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essApe",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Forked Branch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "spammable": true,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 1.0
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 1.0,
+   "chargesMax": 4,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Hurls a forked branch that deals 8 damage to the first enemy it meets. It then leaps to 1 more enemy within 3.5 tiles, the hit dealing 100% of the original damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Crossed Purposes",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "range": 114,
+   "confuseDuration": 5,
+   "maxTargets": 2,
+   "confuseDamageFrac": 1,
+   "duration": 5,
+   "confuseDamagePct": 1,
+   "stunOnHit": 1.0,
+   "reachUnits": 114,
+   "rangeBand": "melee",
+   "desc": "Seizes up to 2 enemies within 3.5 tiles and turns them against each other for 5 seconds. Each takes 10 damage and is stunned for 1 second."
+  },
+  {
+   "name": "Two-Pronged Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "thornsFrac": 0.5,
+   "buffDuration": 8,
+   "confuse": {
+    "chance": 0.3,
+    "duration": 3
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and each such blow has a 30% chance to turn the attacker against its allies for 3 seconds."
+  },
+  {
+   "name": "Either Hand",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "armorBonus": 0.05,
+   "desc": "Each time you afflict something, your physical damage rises by 25% for 5 seconds. Once every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

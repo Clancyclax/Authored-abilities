@@ -1,0 +1,76 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Coffle Rivet",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "A blow that deals 13 damage, leaves the target [Pinned] for 3 seconds and 10% easier to wound for 5 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Portcullis Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes the ground, dealing 30 damage to every enemy within 3 tiles and leaving them [Pinned] for 3 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Driven Palings",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "desc": "Hammers a row of bars 5 tiles long into the ground ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Held for the Blow",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "blunt",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying one of your afflictions, you deal 12% more damage."
+  }
+ ]
+}

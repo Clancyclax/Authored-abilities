@@ -1,0 +1,78 @@
+{
+ "essence": "essApe",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Mocking Fling",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "confuse": {
+    "chance": 0.3,
+    "duration": 3
+   },
+   "reachPct": 0.4,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 396,
+   "rangeBand": "long",
+   "desc": "Flings a clod that deals 4 damage to the first enemy it meets, with a 30% chance to turn it against its allies for 3 seconds. Its reach is 40% longer."
+  },
+  {
+   "name": "Pilfered Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A finishing blow that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Troop Bluff",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 40,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies within 5 tiles for 6 seconds. Enemies notice you far later, you move 10% faster while veiled, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Palmed Coin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you strike with your weapon, your next strike gains 30% critical hit chance. Once every 10 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

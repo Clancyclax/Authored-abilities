@@ -1,0 +1,90 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneCattle",
+  "fusions": [
+    {
+      "name": "Plodding Tread",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A plodding stamp that deals 4 damage to every enemy within 2.5 tiles, with a 30% chance to leave each [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Unhurried Gore",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "long",
+      "base": 28,
+      "cooldown": 100,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 8
+      },
+      "bossPct": 0.06,
+      "desc": "Gores a target, which deals 28 damage and leaves it 15% easier to wound for 8 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+    },
+    {
+      "name": "Grazing Ground",
+      "kind": "active",
+      "category": "healing",
+      "template": "bloomField",
+      "element": "nature",
+      "healPerSec": 3,
+      "fieldDuration": 10,
+      "range": 112,
+      "reachUnits": 112,
+      "rangeBand": "melee",
+      "healScope": "party",
+      "cooldown": 36,
+      "desc": "Raises a patch of pasture where you stand, reaching 3.5 tiles. For 10 seconds it restores 3 health a second to you and any ally inside it."
+    },
+    {
+      "name": "Draught Strength",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "attrBoost",
+      "element": "physical",
+      "attr": "power",
+      "raisesCap": 1,
+      "riders": [
+        {
+          "rank": "bronze",
+          "stat": "hpRegen",
+          "amount": 0.1,
+          "text": "your health recovers faster"
+        },
+        {
+          "rank": "silver",
+          "stat": "staminaRegen",
+          "amount": 0.12,
+          "text": "your stamina recovers faster"
+        },
+        {
+          "rank": "gold",
+          "stat": "manaRegen",
+          "amount": 0.15,
+          "text": "your mana recovers faster"
+        }
+      ],
+      "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank your health recovers 10% faster, from silver your stamina recovers 12% faster, and from gold your mana recovers 15% faster."
+    }
+  ]
+}

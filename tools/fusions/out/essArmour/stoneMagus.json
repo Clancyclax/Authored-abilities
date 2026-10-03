@@ -1,0 +1,76 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Hushed Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "desc": "Fires a bolt that deals 7 damage and leaves the target [Muddled] for 4 seconds. Holds 4 charges; a kill gives one back.",
+   "cooldown": 1,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "base": 7,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Spoken Seal",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "desc": "Speaks a word that shoves everything in a wide cone back 3 tiles, dealing 10 damage to each and leaving it [Dimmed] for 5 seconds.",
+   "cooldown": 20,
+   "knockback": 96,
+   "debuff": {
+    "key": "spiritDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "base": 10,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Turned Phrase",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "desc": "For 6 seconds, 40% of the elemental damage you take is turned aside and sent back to whoever dealt it.",
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 0.4,
+   "buffDuration": 6,
+   "cooldown": 30
+  },
+  {
+   "name": "Rehearsed Strike",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "arcane",
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands.",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10
+  }
+ ]
+}

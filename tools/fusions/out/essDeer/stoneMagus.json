@@ -1,0 +1,74 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Recited Verses",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 3 bolts of arcana in a narrow spread, each dealing 6 damage. You hold 3 charges, and kills give them back."
+  },
+  {
+   "name": "Cut Short",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "arcane",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "stunOnHit": 1,
+   "desc": "A cutting blow that deals 14 arcane damage, stuns the target for 1 second and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Say It Twice",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds."
+  },
+  {
+   "name": "Rehearsed Form",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. At 5 they all spend at once: you deal 4% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

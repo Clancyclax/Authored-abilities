@@ -1,0 +1,81 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Heel Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "stunOnHit": 1,
+   "desc": "Brings your heel straight down on the target, dealing 16 damage, stunning it for 1 second and leaving it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Hamstring Hew",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A low chopping sweep of the shin that deals 4 damage to every enemy in a cone 2.5 tiles ahead, with a 25% chance to leave each [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Feller's Stride",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Your slashing damage rises by 30% for 10 seconds and your movement speed by 15% for 5 seconds."
+  },
+  {
+   "name": "Carried Downswing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "Each time you cover a long stretch of ground, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

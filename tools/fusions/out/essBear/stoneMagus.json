@@ -1,0 +1,85 @@
+{
+ "essence": "essBear",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grumbled Hex",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Mutters a hex that deals 5 damage to the first enemy it meets. Each hit has a 35% chance of leaving the target [Muddled] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "range": 300,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Commanding Roar",
+   "element": "arcane",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Roars a cone of force that deals 14 damage to everything caught in it and stuns it for 1 second. Each hit has a 50% chance of leaving the target [Damped] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Quiet Reserves",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Restores 3 mana a second for 8 seconds and restores 10 health at once."
+  },
+  {
+   "name": "Primed Word",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Each time your mana becomes full, your next spell deals 30% more damage. Once every 20 seconds."
+  }
+ ]
+}

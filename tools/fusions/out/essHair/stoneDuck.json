@@ -1,0 +1,92 @@
+{
+ "essence": "essHair",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Shaken Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the water out of your hair in a cone 3.5 tiles ahead of you, dealing 4 water damage and leaving each target [Soaked] for 3 seconds."
+  },
+  {
+   "name": "Unruffling Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 128,
+   "maxMult": 1.4,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "stunOnHit": 1,
+   "desc": "Draws an oiled braid down a target up to 4 tiles away for 13 damage, rising to 1.4 times that at full reach. It stuns the target for 1 second and leaves it [Damped] for 6 seconds."
+  },
+  {
+   "name": "Oiled Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "cooldown": 90,
+   "desc": "Works preen oil through every strand: for 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Strider's Tread",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you skate over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows slide off you while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "and the water under you mends you"
+    }
+   ],
+   "desc": "Fine oiled hairs on your feet hold you up on the surface: you walk on water and swamp as on solid ground. From bronze rank you move 10% faster on it, from silver you have 8% more dodge chance on it, and from gold your health recovers 15% faster on it."
+  }
+ ]
+}

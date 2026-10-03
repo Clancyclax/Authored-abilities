@@ -1,0 +1,77 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Herd Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 192,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Stampedes through a wide cone 6 tiles ahead, dealing 30 damage. If it hits anything, your party deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Close Ranks",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 84,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A kick that deals 7 damage, rising by 8% for each ally near you (up to 32%), and leaves the target 6% easier to wound for 3 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Cast the Hobbles",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Removes up to 2 control conditions from you and from each member of your party."
+  },
+  {
+   "name": "Last Furlong",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

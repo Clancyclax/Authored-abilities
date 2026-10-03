@@ -1,0 +1,75 @@
+{
+ "essence": "essBow",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Bodkin Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Fires a narrow-headed arrow that deals 30 damage to the first enemy it meets. It ignores armour."
+  },
+  {
+   "name": "Plate-Splitting Fan",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a fan of heavy arrows 5 tiles ahead of you that deals 11 damage to everything in it, with a 60% chance to leave each target [Sundered] for 6 seconds, and knocks them back 2 tiles."
+  },
+  {
+   "name": "Pavise Stand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "cooldown": 30,
+   "desc": "Plants a pavise that absorbs the next 20 damage and holds for 8 seconds, and raises your armour by 10%."
+  },
+  {
+   "name": "Arrow-Proofed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "piercing",
+   "buffKind": "armor",
+   "amount": 0.1,
+   "resist": {
+    "element": "piercing",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 10%, and you have 12% piercing resistance."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Ten Thousand Cuts",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 1,
+   "spammable": true,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 192,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 hair-thin blades in a fan, each of which deals 2 damage, with a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Tangled Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "spreadAfflictions": 112,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "range": 160,
+   "maxMult": 1.4,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "A whipping cut on a target up to 5 tiles away that deals 12 damage, rising to 1.4 times that at full reach, and slows it by 30% for 3 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Braided Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.05,
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds. Your armour rises by 5% while it holds."
+  },
+  {
+   "name": "Knot by Knot",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackScale": 0.87,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land marks the target with a stack, up to 6. At 6 they all spend at once and a blow strikes it for 30% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

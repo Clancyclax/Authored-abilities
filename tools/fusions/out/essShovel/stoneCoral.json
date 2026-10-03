@@ -1,0 +1,94 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Barnacled Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A strike with the reef-crusted blade that deals 4 damage and leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Silt Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 320,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a spadeful of dredged seabed that deals 12 water damage to the first enemy it meets, stuns it for 1 second and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Dug Tidepool",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Digs a pool where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Causeway",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than open ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "and you mend while you stand on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows find you less often out on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 10% faster on it, from silver your health recovers 12% faster on it, and from gold your dodge chance is 8% higher on it."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essCage",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Cut Both Ways",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Costs 5% of your maximum health. A weapon strike deals 8 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds and 30% slower for 3 seconds."
+  },
+  {
+   "name": "Reef Closes In",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Reef grows up around you, dealing 26 damage that ignores armour to every enemy within 3 tiles, with a 50% chance to leave each [Caged] for 2 seconds."
+  },
+  {
+   "name": "Tide Pool Shelter",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 110,
+   "healScope": "party",
+   "desc": "Raises a pool where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3.5 tiles of it."
+  },
+  {
+   "name": "Accretion Wall",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

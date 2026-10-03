@@ -1,0 +1,87 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quiver That Hums",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 arrows at once, in a spread out to 7 tiles. Each one deals 3 damage with a 35% chance to leave its target [Poisoned] for 5 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nailed to the Spot",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Hits a target up to 9 tiles away: it deals 14 damage, rising to 1.5 times that at maximum range, stuns the target for 1.2 seconds and leaves it [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Longer Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "rangeMult": 1.4,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "For 12 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "name": "Held Breath",
+   "element": "physical",
+   "desc": "When you go a while without landing a critical hit, your critical hit chance rises by 30% for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

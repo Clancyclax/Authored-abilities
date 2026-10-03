@@ -1,0 +1,77 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Matted Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "Tangles the target in strands and butts it for 12 damage, leaving it [Bleeding] for 2 damage a second for 5 seconds. Anything struck moves 20% slower for 3 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Braided Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "desc": "Lashes a braided length of strands at a target up to 5 tiles away, dealing 8 damage, rising to 1.5 times that from the full 5 tiles. Holds 3 charges; each kill restores one."
+  },
+  {
+   "name": "Woven Coat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs up to 22 damage for 8 seconds, and raises your armour by 8% while it holds."
+  },
+  {
+   "name": "Strand by Strand",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land weaves a strand into your coat, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per strand (32% at full). Unfed, a strand fades every 10 seconds."
+  }
+ ]
+}

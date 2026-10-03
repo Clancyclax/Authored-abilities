@@ -1,0 +1,75 @@
+{
+ "essence": "essHand",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Clenched Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes a fist of bars around you, dealing 12 damage to every enemy within 3 tiles, stunning each for 1 second and leaving it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "No Way Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes a grip of bars on one enemy up to 6 tiles away for 22 damage, rising to 1.5 times that at full reach, and leaves it [Inescapable] for 6 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Laced Fingers",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 96,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Holds every creature within 3 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Firmly in Grasp",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

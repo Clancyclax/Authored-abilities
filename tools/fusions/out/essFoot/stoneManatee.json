@@ -1,0 +1,86 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Wake Pulse",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "Pushes a wake out from you that deals 10 water damage to every enemy within 3 tiles, knocks them back 3 tiles and slows them by 25% for 3 seconds."
+  },
+  {
+   "name": "Slow Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Rolls a tide into the first enemy it meets, dealing 7 water damage. 20% of the damage dealt comes back to you as healing over 6 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Calm Waters",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "healingReceived",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Healing you receive rises by 30% for 12 seconds, and you regain 10 health at once. Your movement speed rises 15% for 5 seconds."
+  },
+  {
+   "name": "Drift Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you regain 3 health a second for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

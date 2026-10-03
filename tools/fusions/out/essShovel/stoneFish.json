@@ -1,0 +1,86 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wriggling Clod",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Hurls a clod of wet silt that deals 4 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sluice Cut",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cuts a sluice that floods a cone 4 tiles long. It deals 14 damage to everything in it, throws each enemy back 3 tiles and leaves it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Slip the Mire",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 control conditions from you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Silt Scales",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "water",
+   "armorBonus": 0.08,
+   "damageReduction": 2,
+   "thornsFrac": 0,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures a coat of dried silt scales: every hit you take is 2 lower, your armour rises by 8%, and your dodge chance rises by 4%."
+  }
+ ]
+}

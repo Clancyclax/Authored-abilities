@@ -1,0 +1,70 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Shed Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "desc": "Flings 4 loose layers of scale in a fan, each dealing 3 damage.",
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.36,
+   "base": 3,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220
+  },
+  {
+   "name": "Slide In",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "desc": "Slides you up to 6 tiles across the ground to the target, then deals 14 damage and leaves it 15% easier to wound for 6 seconds.",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192
+  },
+  {
+   "name": "Silver Sheen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "desc": "Raises your armour by 25% and your dodge chance by 15% for 10 seconds.",
+   "armorBonus": 0.25,
+   "dodgeBonus": 0.15,
+   "buffDuration": 10,
+   "cooldown": 40
+  },
+  {
+   "name": "Slipped Blows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 5. At 5 they spend at once and you gain a shield worth 5% of your maximum health per stack (26% at full). Unfed, a stack fades every 6 seconds.",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.75,
+   "stackIcon": "stackWard"
+  }
+ ]
+}

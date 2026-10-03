@@ -1,0 +1,86 @@
+{
+ "essence": "essTree",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bast Winding",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a length of bark fibre that winds round the first enemy it meets and deals 11 damage, stuns it for 1.2 seconds and leaves it [Hindered] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kapok Burst",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Splits a seed pod and looses its floss 4 tiles ahead of you; it deals 7 damage to everything caught in it and leaves it [Blunted] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Draped Canopy",
+   "template": "stealthVeil",
+   "element": "plant",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "party",
+   "cooldown": 36,
+   "desc": "Veils you and your allies in hanging moss for 10 seconds: enemies notice you 60% later. Attacking ends it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Fibre Bandage",
+   "element": "plant",
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When anything but fire hurts you, healing you receive is 30% stronger for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

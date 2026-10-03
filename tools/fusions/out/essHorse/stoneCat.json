@@ -1,0 +1,82 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "First Touch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "targetStamina",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A kick that deals 4 damage, rising by 5% for every 10% of health the target still has (up to 30%), and leaves it 5% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Silent Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Springs up to 6 tiles onto the target, dealing 15 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds. You move 15% faster for 3 seconds after."
+  },
+  {
+   "name": "Padded Stride",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.25,
+   "buffDuration": 6,
+   "cooldown": 20,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Slips 2 tiles forward, then for 6 seconds you move 25% faster and your dodge chance rises by 10%."
+  },
+  {
+   "name": "Stalking Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "After you cover enough ground, your critical hit chance rises by 25% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

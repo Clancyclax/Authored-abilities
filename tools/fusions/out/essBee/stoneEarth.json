@@ -1,0 +1,83 @@
+{
+ "essence": "essBee",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grit in the Wound",
+   "template": "imbueStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A weapon strike that deals 8 rock damage, leaves it 5% easier to wound for 3 seconds and [Poisoned] for 2 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Erupting Burrows",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bursts the ground in a cone 5 tiles ahead of you that deals 30 rock damage to everything in it, plus 5% of a boss's or elite's maximum health, and leaves them [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Mason's Rampart",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "desc": "Raises a wall of packed nest 5 tiles long for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Kicked Mound",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "rock",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: a blow strikes the nearest enemy within 8 tiles for 20% of your weapon damage per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

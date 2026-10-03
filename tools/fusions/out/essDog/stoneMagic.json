@@ -1,0 +1,74 @@
+{
+ "essence": "essDog",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Wild Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Sparks a bolt of raw arcana that deals 8 arcane damage to the first enemy it meets. Its damage rises 8% per affliction on the target (max 40%). Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Unleashed Howl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Releases a pulse of raw magic around you that deals 11 arcane damage to every enemy within 3 tiles, knocks each back 2 tiles and leaves each [Exposed] for 5 seconds."
+  },
+  {
+   "name": "Candlelit Rest",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "healOnUse": 8,
+   "desc": "Restores 4 mana a second for 6 seconds, and 8 health at once."
+  },
+  {
+   "name": "Wisp Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "arcane",
+   "familiarDmg": 4,
+   "familiarRange": 144,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Wisp Hound",
+   "desc": "A bonded hound of raw arcana fights beside you, striking enemies within 4.5 tiles for 4 arcane damage every 1.2 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bars Come Down",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Chops a ring around you, dealing 11 damage to every enemy within 3 tiles, stunning them for 0.8 seconds and leaving them [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "No Way Out",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A chop at an enemy at or below 30% health that deals 18 damage, adding 1.2 times the remaining damage of every affliction you have on it and using them up. It leaves the target [Inescapable] for 6 seconds."
+  },
+  {
+   "name": "Into the Pen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "A challenge that pulls up to 5 enemies within 6 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Cornered Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying one of your afflictions, your damage rises 12%."
+  }
+ ]
+}

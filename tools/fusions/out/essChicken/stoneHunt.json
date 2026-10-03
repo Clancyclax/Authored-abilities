@@ -1,0 +1,82 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quarry Call",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "maxMult": 1.4,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Calls the flock onto a quarry with a strike that deals 26 damage, up to 1.4 times that at its full 6 tiles, and leaves it [Marked] for 10 seconds. If it hits, every ally strikes 20% harder for 12 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Rake",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "You close up to 6 tiles on the target and rake it for 13 damage, leaving it [Bleeding] for 2 damage a second for 3 seconds and slowing it by 30% for 3 seconds."
+  },
+  {
+   "name": "Forward Scout",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 60,
+   "summonKind": "bird",
+   "summonDmg": 5,
+   "summonDuration": 20,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "castTime": 1,
+   "desc": "Sends a chick out to scout for 20 seconds, pecking an enemy within 5 tiles for 5 damage every 1.2 seconds."
+  },
+  {
+   "name": "Final Stretch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against enemies below 50% health."
+  }
+ ]
+}

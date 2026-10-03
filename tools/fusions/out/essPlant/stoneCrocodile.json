@@ -1,0 +1,86 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Mangrove Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 60,
+   "base": 30,
+   "range": 96,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps onto one enemy and rolls it under for 30 damage that always lands as a critical hit, leaving it 20% easier to wound for 8 seconds. Mangrove roots hold it [Caged] for 3 seconds."
+  },
+  {
+   "name": "Surfacing Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 12,
+   "range": 80,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You burst from cover up to 6 tiles to your target and snap across a cone 2.5 tiles long, dealing 12 damage with a 50% chance to leave each enemy [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Mudbank Rest",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "plant",
+   "cooldown": 50,
+   "buffStat": "regenHealth",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "desc": "Increases your health recovery by 50% for 15 seconds."
+  },
+  {
+   "name": "Log in the Reeds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "regenPerSec": 1,
+   "desc": "After 10 seconds without a critical hit, your next strike gains 30% critical hit chance. You also regenerate 1 health a second."
+  }
+ ]
+}

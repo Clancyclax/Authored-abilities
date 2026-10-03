@@ -1,0 +1,93 @@
+{
+ "essence": "essCage",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snarl Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lashing strike that deals 7 damage, leaves the target 8% easier to wound for 4 seconds and has a 40% chance to leave it [Slowed] for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Thousand Threads",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 14,
+   "volleyCount": 4,
+   "volleySpread": 0.6,
+   "speed": 380,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 strands in a fan, each dealing 4 damage, with a 25% chance to leave the target [Pinned] for 1.5 seconds. Your afflictions on a target hit spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Woven Ward",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 6,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "desc": "Weaves a barrier that absorbs the next 18 damage, up to 6 blows, and holds for 8 seconds. Your armour rises by 8% while it holds."
+  },
+  {
+   "name": "Strand Ledger",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land ties a strand to that enemy, up to 6. Your next critical hit on it spends them all: the strands pull tight and strike it for 27% of your weapon damage per strand (163% at full). Unfed, a strand fades every 4 seconds."
+  }
+ ]
+}

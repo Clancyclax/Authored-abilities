@@ -1,0 +1,83 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Lancing Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up. The claw deals 8 damage and draws out every affliction on the target, adding 0.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Musk Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Sprays musk in a cone 3 tiles ahead of you, dealing 12 poison damage to everything in it and leaving each target [Poisoned] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Nothing Soaks Through",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each condition laid on you has a 60% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Bitter Hide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Each time you afflict something, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 10 seconds. You have 10% poison resistance."
+  }
+ ]
+}

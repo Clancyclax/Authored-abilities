@@ -1,0 +1,86 @@
+{
+ "essence": "essBat",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpor Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargesMax": 4,
+   "desc": "Spits a cold ping into the first enemy it meets, dealing 7 frost damage with a 50% chance to leave it [Stalled] for 6 seconds. You heal for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one.",
+   "leech": 0.2
+  },
+  {
+   "name": "Gloaming Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "frost",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wave of cold deals 26 frost damage to every enemy within 3.5 tiles, ignoring their resistances, and leaves each [Exposed] for 8 seconds."
+  },
+  {
+   "name": "Dead Still",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 50% later, you move 10% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Warm Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you recover 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

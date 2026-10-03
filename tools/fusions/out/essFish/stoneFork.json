@@ -1,0 +1,88 @@
+{
+ "essence": "essFish",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Branching Current",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 8,
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a bolt of water into the first enemy it meets, dealing 7 damage, then splits to 1 more enemy within 3.5 tiles, dealing 60% of the original damage. It holds 4 charges, and each kill gives one back. Its damage rises 5% for each ally within 5.5 tiles, up to 25%."
+  },
+  {
+   "name": "Parting Streams",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 8,
+   "range": 220,
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 2 streams of water, spread apart, each dealing 10 damage and knocking the target back 2 tiles. Each hit has a 40% chance to leave the target [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Turned Tide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead."
+  },
+  {
+   "name": "Spare Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you strike, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

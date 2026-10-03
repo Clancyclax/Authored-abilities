@@ -1,0 +1,80 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Springboard",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "knockback": 96,
+   "base": 12,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Kicks off a target for 12 damage, knocking it back 3 tiles and leaving it 10% easier to wound for 4 seconds. You move 25% faster for 3 seconds after using it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lookout's Bark",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "base": 26,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "A warning bark that deals 26 damage to everything in a cone 5 tiles ahead of you. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Gone at the Snap",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.4,
+   "buffDuration": 6,
+   "cooldown": 20,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 40% for 6 seconds. You finish it 2 tiles from where you stood, with +10% dodge chance for it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Pricked Ears",
+   "element": "physical",
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 4
+   },
+   "dodgeBonus": 0.06,
+   "desc": "Each time you are hurt by anything other than fire, you regain 3 stamina a second for 4 seconds. Once every 10 seconds. You also have 6% more dodge chance."
+  }
+ ]
+}

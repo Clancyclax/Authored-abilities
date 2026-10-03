@@ -1,0 +1,95 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Dabbling Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A darting peck at the first enemy in a line up to 6 tiles away that deals 8 water damage. It needs one of your afflictions on the target and uses it up, and leaves the target [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Splashdown",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargeTo": 192,
+   "desc": "You leap up to 6 tiles to your target and deal 26 water damage, ignoring resistances, to every enemy within 3.5 tiles of where you land, leaving them [Soaked] for 8 seconds."
+  },
+  {
+   "name": "Water Off Feathers",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "blinkOnUse": 64,
+   "desc": "You take 25% less damage for 10 seconds, and you hop 2 tiles."
+  },
+  {
+   "name": "Pond Skater",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than open ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.06,
+     "text": "and blows slide off you there"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.06,
+     "text": "and you strike faster from it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you cross it 10% faster, from silver you have 6% more dodge chance there, and from gold you attack 6% faster there."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Ribbon Whirl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 2
+   },
+   "desc": "Whirls weighted ribbons around you, dealing 6 damage to every enemy within 2.5 tiles, then you move 20% faster for 2 seconds. It holds 3 charges, and a kill gives one back."
+  },
+  {
+   "name": "Flashing Scarf",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a pale scarf that deals 4 damage to the first enemy it meets, with a 25% chance to leave it [Hindered] for 2 seconds."
+  },
+  {
+   "name": "Empty Coat",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "desc": "Slips you out of your coat: for 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you leap 3 tiles from where you stood."
+  },
+  {
+   "name": "Skittish Fringe",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you avoid adds a fluttering ribbon on you, up to 4. At 4 they all spend at once: you move and attack 5% faster per ribbon (18% at full) for 6 seconds. Unfed, a ribbon fades every 6 seconds."
+  }
+ ]
+}

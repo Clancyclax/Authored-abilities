@@ -1,0 +1,86 @@
+{
+ "essence": "essCage",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Latching Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A bite for 5 damage that leaves the target 5% easier to wound for 3 seconds, with a 20% chance to leave it [Pinned] for 1 second."
+  },
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health: deals 24 damage, up to 1.5 times that at 7 tiles, and leaves it [Inescapable] for 5 seconds."
+  },
+  {
+   "name": "Kennel Call",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "desc": "Pulls up to 4 enemies within 5 tiles onto you for 6 seconds. A pack of hounds fights beside you for 8 seconds, striking for 3 every 1.2 seconds."
+  },
+  {
+   "name": "Gatehound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarInterval": 1.2,
+   "familiarRange": 150,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Gate Mastiff",
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Calls a bonded hound that fights beside you. Every 1.2 seconds it bites an enemy within 4.5 tiles and deals 4 damage, and anything it bites moves 30% slower for 2 seconds."
+  }
+ ]
+}

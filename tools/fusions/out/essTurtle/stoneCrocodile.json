@@ -1,0 +1,91 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Drag Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps your beak on an enemy at or below 30% health and rolls, which deals 20 damage and leaves it 15% easier to wound for 6 seconds. The target is [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Log That Wasn't",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Erupts around you, which deals 30 damage to every enemy within 3 tiles as a critical hit and leaves each [Bleeding] for 6 seconds."
+  },
+  {
+   "name": "Wriggling Lure",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "taunt": true,
+   "tauntRadius": 224,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "desc": "Up to 4 enemies within 7 tiles are pulled onto you for 5 seconds, and your critical hit chance rises by 20% for 10 seconds."
+  },
+  {
+   "name": "Longer the Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "armorBonus": 0.05,
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds. Your armour rises by 5%."
+  }
+ ]
+}

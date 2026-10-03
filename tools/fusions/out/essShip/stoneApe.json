@@ -1,0 +1,91 @@
+{
+ "essence": "essShip",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swing Aboard",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 224,
+   "desc": "You swing up to 7 tiles onto the target and bring both fists down for 14 damage, leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Belaying Pin Fling",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a belaying pin for 7 damage, rising to 1.6 times that at its full reach of 6 tiles, with a 35% chance to leave the target [Hindered] for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Hand Over Hand",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "blinkOnUse": 64,
+   "desc": "Moves you 2 tiles from where you stood and increases your attack speed by 25% for 12 seconds."
+  },
+  {
+   "name": "Topman's Grip",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.04,
+     "text": "you go up the shrouds faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and you swing clear of what is thrown at you"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.06,
+     "text": "and one hand is always free to hit with"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank you move 4% faster, from silver your dodge chance rises by 5%, and from gold you attack 6% faster."
+  }
+ ]
+}

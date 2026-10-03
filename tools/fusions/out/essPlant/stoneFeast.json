@@ -1,0 +1,79 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Ripe Picking",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 9,
+   "consumeAffliction": true,
+   "range": 96,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "leech": 0.35,
+   "desc": "Needs one of your afflictions on the target and uses it up. Plucks it for 9 damage, heals you for 35% of the damage dealt and leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Laden Bough",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 90,
+   "base": 6,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 280,
+   "radius": 8,
+   "range": 224,
+   "isAoe": true,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Shakes down 5 heavy fruit in a spread, each dealing 6 damage. Your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Compost Banquet",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "plant",
+   "cooldown": 20,
+   "base": 1,
+   "corpse": true,
+   "drainFrac": 0.07,
+   "range": 288,
+   "resource": "hp",
+   "desc": "Needs at least 1 body within 9 tiles. Your roots drain every body in reach, up to 5, and each restores 7% of your health."
+  },
+  {
+   "name": "Gleaner's Appetite",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "lifeOnKill": 4,
+   "desc": "Each kill restores 4 health. When you kill an enemy, you also receive 40% more healing for 8 seconds, once every 10 seconds."
+  }
+ ]
+}

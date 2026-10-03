@@ -1,0 +1,76 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Printed Canard",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Floats a printed rumour into the first enemy it meets for 3 damage. Each hit has a 30% chance to leave the target [Damped] for 5 seconds, lowering the damage it deals."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "name": "Bill Come Due",
+   "element": "blunt",
+   "role": "execute",
+   "consumeAfflictionsPer": 0.6,
+   "base": 16,
+   "cooldown": 12,
+   "range": 192,
+   "maxMult": 1.5,
+   "desc": "Skims an itemised bill at the target for 16 damage, rising to 1.5 times that at its maximum range of 6 tiles. It uses up every affliction you have on the target and deals 60% more damage for each one."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "name": "Waxed Sleeve",
+   "element": "water",
+   "immunityDuration": 3,
+   "cooldown": 120,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 45,
+   "name": "Little Boat Afloat",
+   "element": "water",
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.35,
+    "rearmAbove": 0.5,
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Festering Graze",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "template": "imbueStrike",
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon strike that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance of [Diseased] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Broken-Off Bud",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "template": "projectileBall",
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Snaps a spined growth from your tail and launches it, dealing 28 water damage to the first enemy within 7 tiles. It then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "name": "Encrust",
+   "element": "water",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "armorBonus": 0.08,
+   "cooldown": 36,
+   "desc": "Raises a barrier that absorbs the next 24 damage for 10 seconds, and your armour rises by 8% while it holds."
+  },
+  {
+   "name": "Overgrowth",
+   "element": "water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 8
+   },
+   "desc": "The moment you are back at full health, you gain a shield worth 15% of your maximum health for 8 seconds. Once every 20 seconds."
+  }
+ ]
+}

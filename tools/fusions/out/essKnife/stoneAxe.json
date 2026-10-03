@@ -1,0 +1,80 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Notch and Fell",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "requiresTargetBelow": 0.3,
+   "base": 22,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "desc": "A falling chop on a target at or below 30% health that deals 22 damage, uses up every affliction on it and adds 1.5 times their remaining damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hatchet Chaser",
+   "template": "volley",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 2,
+   "volleySpread": 0.2,
+   "speed": 400,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Throws a hatchet and a small blade together out to 7 tiles, each dealing 3 damage and leaving its target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Weighted Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your critical damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Scored for the Split",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "Each time you afflict an enemy, your physical damage rises by 25% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

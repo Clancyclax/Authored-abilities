@@ -1,0 +1,79 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Grows on the Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "cooldown": 0.9,
+   "base": 4,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Spits at the first enemy in its path up to 5 tiles away, dealing 4 damage. Its damage rises 8% for each affliction the target carries (max 40%)."
+  },
+  {
+   "name": "Brood Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.2,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Sacrifices 4% of your maximum health to bud off a cloud of stinging spawn, dealing 7 damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Tide Pool",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Fills a tide pool reaching 3.5 tiles around where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

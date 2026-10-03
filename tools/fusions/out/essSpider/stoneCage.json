@@ -1,0 +1,83 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Shut in Silk",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Wraps an enemy, which deals 12 damage, stuns it for 1.2 seconds, leaves it [Pinned] for 3 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Bar by Bar",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops 3 hardened threads in a spread out to 7 tiles, each of which deals 6 damage, with a 35% chance to leave its target [Hindered] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Closed Circle",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Holds every creature within 4 tiles in place for 2 seconds."
+  },
+  {
+   "name": "No Way Out",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy below half health, your damage rises 12%."
+  }
+ ]
+}

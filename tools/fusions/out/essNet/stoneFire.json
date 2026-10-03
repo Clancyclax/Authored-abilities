@@ -1,0 +1,100 @@
+{
+ "essence": "essNet",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Running Flame",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Throws a burning mesh that deals 12 damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds. The flame runs along the cords: your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Held in the Blaze",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a burning mesh on every enemy within 3 tiles, dealing 26 fire damage that ignores resistance, leaving each [Pinned] for 2 seconds and [Burning] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Burning Weir",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "cooldown": 24,
+   "desc": "Stretches a burning mesh 5 tiles long across the ground for 6 seconds. Anything that crosses it is set [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Smouldering Bolas",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a weighted cord that smoulders in your hand: your weapon damage rises by 12%, your strikes land 5% faster, and every strike with it leaves the target [Burning] for 2 damage a tick for 3 ticks."
+  }
+ ]
+}

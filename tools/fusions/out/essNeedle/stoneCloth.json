@@ -1,0 +1,76 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Unpicked Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Unpicks a seam in the target's armour, dealing 8 damage and leaving it 12% easier to wound for 5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Gathering Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Draws a thread tight through every enemy within 3 tiles, dealing 12 damage and stunning each for 1 second."
+  },
+  {
+   "name": "Mattress Suture",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you. Its healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Emergency Patch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.3,
+    "rearmAbove": 0.6
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 30%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

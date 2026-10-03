@@ -1,0 +1,77 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "executeLadder": false,
+   "name": "Precipitate",
+   "element": "arcane",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "desc": "Draws every affliction out of the target at once, dealing 16 damage plus 1.5 times the damage those afflictions had left to deal. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Bitter Mist",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 112,
+   "coneAngle": 0.7,
+   "debuff": {
+    "key": "taintedMeridians",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays drawn poison through a cone 3.5 tiles long, dealing 3 poison damage to everything in it, with a 35% chance per hit to leave the target with [Tainted Meridians] for 6 seconds."
+  },
+  {
+   "name": "Dispelling Draught",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "arcane",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "Removes up to 3 conditions from you and restores 12 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 5
+   },
+   "name": "Dregs Into Power",
+   "element": "arcane",
+   "desc": "When one of your afflictions on an enemy runs out, you restore 5 mana. Once every 4 seconds."
+  }
+ ]
+}

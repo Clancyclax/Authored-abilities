@@ -1,0 +1,78 @@
+{
+ "essence": "essFox",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Snatch the Dose",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "A bite that deals 16 damage, uses up every affliction you have on the target and deals 60% more damage for each one, and leaves it 10% easier to wound for 5 seconds. You move 20% faster for 4 seconds afterward."
+  },
+  {
+   "name": "Switched Cups",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Throws a dosed cup that deals 11 poison damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Drink It Yourself",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.6,
+   "buffDuration": 7,
+   "desc": "For 7 seconds, each condition laid on you has a 60% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Poisoner's Poise",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 12%. You have 10% poison resistance."
+  }
+ ]
+}

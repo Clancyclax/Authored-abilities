@@ -1,0 +1,97 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Scattered Flint",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "rock",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 1,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 300,
+   "radius": 6,
+   "range": 128,
+   "isAoe": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scatters 4 flint caltrops in a spread out to 4 tiles. Each caltrop deals 2 damage, with a 25% chance to leave the target [Bleeding] for 3 seconds."
+  },
+  {
+   "name": "Propped Slab",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 34,
+   "cooldown": 80,
+   "speed": 320,
+   "radius": 10,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Knocks the prop from a slab of rock above the target. It deals 34 damage to the target and 80% of that to every enemy within 3 tiles, and leaves the target [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "Covered Pit",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 2,
+   "summonBlast": 96,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Digs a covered pit at the nearest enemy that arms after 1 second and waits up to 30 seconds. Each of the first 2 enemies to come within 2 tiles drops it: the pit deals 18 damage to everything within 3 tiles and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "The Ground Remembers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "desc": "When a condition you inflicted runs out, a spike of stone strikes the nearest enemy within 4 tiles and deals 6 damage. Once every 5 seconds."
+  }
+ ]
+}

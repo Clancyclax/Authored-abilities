@@ -1,0 +1,100 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Thrown Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws your wake across a cone 2.5 tiles long. It deals 3 damage and leaves each enemy [Soaked] for 2 seconds."
+  },
+  {
+   "name": "Line Astern",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 320,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 3,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "spreadAfflictions": 112,
+   "desc": "Sends a brood out in single file. It deals 12 damage to the first enemy in its path, then follows on to 3 more enemies within 3.5 tiles for 60% of that damage each. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "For 8 seconds, each condition laid on you has a 60% chance to be sent back to whoever inflicted it. You move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Shallow Draught",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you cross it 12% faster than ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.2,
+     "text": "your stamina recovers 20% faster on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises by 8% on it"
+    }
+   ],
+   "desc": "You cross water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 12% faster, from silver your stamina recovers 20% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Among the Flock",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Throws off the fleece in the middle of them, which deals 28 damage to every enemy within 3.5 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Blind Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Pulls a hood over the target's head and bites, which deals 12 damage, stuns it for 1.2 seconds and leaves it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Strung Fladry",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "desc": "Strings a line of cloth flags 6 tiles long across the ground for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Borrowed Fleece",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "The moment you are back at full health, your next strike gains 20% critical hit chance. Once every 12 seconds. You have 25% more critical chance against enemies that have not been hurt yet."
+  }
+ ]
+}

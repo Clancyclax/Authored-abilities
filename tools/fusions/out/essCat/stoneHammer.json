@@ -1,0 +1,73 @@
+{
+ "essence": "essCat",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Settling Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "ignoreArmor": true,
+   "desc": "A pouncing blow that deals 30 damage, ignores the target's armour and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Off the Shelf",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "knockback": 112,
+   "desc": "A swat that deals 12 damage, up to 1.6 times at maximum range, and knocks the target back 3.5 tiles."
+  },
+  {
+   "name": "Weighted Pads",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "blunt",
+   "cooldown": 45,
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 25% for 12 seconds. You move 20% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Follow-Through",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

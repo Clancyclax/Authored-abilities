@@ -1,0 +1,89 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Parting Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 11,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Sprays the first enemy within 5 tiles for 11 damage, knocks it back 3 tiles and leaves it [Poisoned] for 2 damage a second for 5 seconds. You move 25% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Herd-Wide Alarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "cooldown": 90,
+   "base": 26,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps the alarm, dealing 26 damage to every enemy within 3 tiles and leaving them [Marked] for 8 seconds. When it hits, you and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Caught Mid-Step",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.3,
+   "blinkOnUse": 96,
+   "desc": "Holds every creature within 4 tiles in place for 2 seconds, and you bound 3 tiles from where you stood."
+  },
+  {
+   "name": "Flag and Bolt",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 4. At 4 they all spend at once: you move and attack 5% faster per stack, 18% at full, for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

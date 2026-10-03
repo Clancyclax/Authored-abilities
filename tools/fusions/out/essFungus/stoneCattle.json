@@ -1,0 +1,85 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Churned Pasture",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Stamps the ground, bursting spores that deal 26 nature damage to every enemy within 3.5 tiles, ignoring armour, and give them Rot for 2 damage a second for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Head-Down Rush",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "creepingDeath",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes up to 6 tiles to the target and deals 14 blunt damage, leaving it 10% easier to wound for 6 seconds and with [Creeping Death] for 8 seconds."
+  },
+  {
+   "name": "Grazing Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "cooldown": 30,
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Chewed Cud",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once, healing you for 5% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

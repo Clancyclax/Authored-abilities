@@ -1,0 +1,82 @@
+{
+ "essence": "essFox",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Bagged Head",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 320,
+   "radius": 10,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a sack over the first enemy it meets, dealing 11 damage, stunning it for 1.2 seconds and leaving it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Rug Pull",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.6,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Yanks the cloth from under everything in a cone 3 tiles long, dealing 8 damage with a 60% chance to leave each target [Leaden] for 3 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Turned Lining",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "light",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectChance": 0.4,
+   "reflectFrac": 0.4,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is sent back to whoever dealt it."
+  },
+  {
+   "name": "Hollow Coat",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.06,
+   "damageReduction": 1,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.06
+    }
+   ],
+   "thornsFrac": 0,
+   "desc": "Conjures a loose coat on you: every hit you take is reduced by 1, your armour rises by 6% and your dodge chance rises by 6%."
+  }
+ ]
+}

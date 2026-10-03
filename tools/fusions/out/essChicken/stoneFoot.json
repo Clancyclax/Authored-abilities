@@ -1,0 +1,75 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scrabbling Kick",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Rakes the target with a kick that deals 12 damage, knocks it back 3 tiles and leaves it [Bleeding] for 2 damage a second for 3 seconds. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Muster Stomp",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Stamps in a ring, dealing 26 damage to every enemy within 3 tiles. If it hits, every ally strikes 20% harder for 12 seconds."
+  },
+  {
+   "name": "Long March",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 40,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 10 seconds. Your movement speed rises by 10% for 4 seconds after you use it."
+  },
+  {
+   "name": "Beaten Track",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "On paved ground, your armour rises by 10%."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "name": "Tasting Flick",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "leech": 0.2,
+   "desc": "A quick lash that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 6 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Sapping Spit",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "desc": "Spits a glob that deals 12 damage to the first enemy it meets and stuns it for 1.2 seconds. It has a 50% chance to leave the target [Hindered] for 5 seconds, and you heal for 15% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "name": "Warmed Through",
+   "element": "fire",
+   "cooldown": 45,
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 12,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 3 health a second to you for 12 seconds. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Gone Still",
+   "element": "physical",
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 health a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

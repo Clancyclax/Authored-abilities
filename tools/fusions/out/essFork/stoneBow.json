@@ -1,0 +1,77 @@
+{
+ "essence": "essFork",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full Draw",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "castTime": 1,
+   "desc": "Draws the polearm back for 1 second and looses a thrust at a target up to 6 tiles away for 30 piercing damage, up to 1.6 times that at full reach. It always lands as a critical hit.",
+   "guaranteedCrit": true
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Split Broadhead",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 7,
+   "cooldown": 1,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Shoots a forked head into the first enemy it meets for 7 piercing damage; it splits and strikes 1 more enemy within 3 tiles for 50% of the damage. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Reach of the String",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Breath Before Release",
+   "element": "physical",
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When your stamina is full, your next strike has 20% more critical chance. Once every 10 seconds."
+  }
+ ]
+}

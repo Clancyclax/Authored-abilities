@@ -1,0 +1,89 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sprung Barb",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Springs a barbed polyp at a wounded target up to 6 tiles away that deals 20 damage, rising to 1.5 times that at full reach, and makes it [Poisoned] for 2 damage a second for 5 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Bursting Pool",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a pool of reef water that deals 28 damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that. Each target is left [Soaked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Out of the Pool",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "healAmount": 12,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "blinkOnUse": 96,
+   "cooldown": 24,
+   "desc": "Restores 12 health to you and every ally within 4 tiles. You finish it 3 tiles from where you stood."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Held Breath",
+   "element": "water",
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your health falls below 40%, you regain 4 health a second for 6 seconds. Once every 40 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

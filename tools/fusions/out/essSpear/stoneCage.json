@@ -1,0 +1,75 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Nailed to the Spot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a javelin that deals 14 damage to the first enemy it meets, stuns it for 1 second and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Closing Hedge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Thrusts outward in a full circle that deals 7 damage to every enemy within 3 tiles and leaves each one [Slowed] for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Palisade",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "desc": "Drives a row of shafts into the ground 5 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Cornered Prey",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "You deal 12% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essWind",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Headsman's Downstroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 84,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Usable only on a target at or below 25% health. An overhead chop that deals 22 damage and leaves the target 15% easier to wound for 6 seconds, then carries you on 20% faster for 3 seconds."
+  },
+  {
+   "name": "Felling Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "knockback": 64,
+   "desc": "Swings the edge through a full turn that deals 28 damage to every enemy within 3.5 tiles and knocks them back 2 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Keen Updraught",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 40,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Your slashing damage rises by 25% for 12 seconds, and you move 15% faster for 4 seconds.",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Sharpened Gust",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a hatchet of hardened air. It increases your weapon damage by 12% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

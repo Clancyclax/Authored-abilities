@@ -1,0 +1,68 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "executeLadder": false,
+   "role": "execute",
+   "name": "Sentence Carried Out",
+   "element": "slashing",
+   "base": 24,
+   "cooldown": 14,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on an enemy at or below 25% health. Brings the edge down for 24 damage, using up every affliction on the target and adding 1.5 times their remaining damage to the hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Guillotine Cut",
+   "element": "slashing",
+   "role": "medium",
+   "stunOnHit": 1,
+   "base": 15,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.45,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a trimming blade through a narrow cone 4 tiles long, dealing 15 damage to every enemy in it and stunning each for 1 second. Each hit has a 60% chance to leave the target [Bleeding] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "name": "Headsman's Commission",
+   "element": "slashing",
+   "powerMult": 1.3,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Your damage rises by 30% for 15 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "name": "The Condemned Roll",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

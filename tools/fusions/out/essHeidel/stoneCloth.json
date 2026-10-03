@@ -1,0 +1,85 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wrap and Trample",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 80,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 25% health: you throw a cloth over it and trample it for 22 damage, leaving it [Pinned] for 2 seconds and 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Streaming Caparison",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "You wheel round at a gallop, dealing 28 damage to every enemy within 3.5 tiles. When it hits, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Quilted Trapper",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 6 seconds, with 6% more armour. Your movement speed rises 15% for 6 seconds."
+  },
+  {
+   "name": "Threading Between",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (34% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

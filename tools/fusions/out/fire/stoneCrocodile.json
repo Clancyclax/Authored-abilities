@@ -1,0 +1,86 @@
+{
+ "essence": "fire",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Banked Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lunge out of stillness that deals 34 damage, leaves the target 15% easier to wound for 8 seconds and sets it [Burning] for 6 seconds. Against a boss or an elite it also deals 6% of their maximum health.",
+   "bossPct": 0.06
+  },
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Thrashes in a ring of flame, which deals 11 damage to every enemy within 2.5 tiles, stuns each for 1 second and sets it [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Sleeping Cinder",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "castTime": 1,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "desc": "Buries a banked coal at the nearest enemy. It waits up to 30 seconds, and when an enemy comes within 2 tiles it bursts and deals 22 damage."
+  },
+  {
+   "name": "Basking Heat",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "In daylight, your damage rises by 12%. You have 10% fire resistance."
+  }
+ ]
+}

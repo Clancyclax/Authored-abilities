@@ -1,0 +1,80 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Flung Handful",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 4,
+   "spammable": true,
+   "maxMult": 1.8,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a handful of filth at an enemy up to 6 tiles away, dealing 4 damage, rising to 1.8 times that at maximum range, with a 30% chance to leave it [Damped] for 4 seconds."
+  },
+  {
+   "name": "Drumming Threat",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "cooldown": 18,
+   "base": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Beats your chest and stamps both feet, dealing 12 damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Weakened] for 6 seconds."
+  },
+  {
+   "name": "Handstand Bluff",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "desc": "Increases your maximum health by 20% for 12 seconds."
+  },
+  {
+   "name": "Three Warnings Given",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 3,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 3. At 3 they all spend at once: a blow strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

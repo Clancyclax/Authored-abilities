@@ -1,0 +1,86 @@
+{
+ "essence": "essBow",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Skip the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "desc": "Looses an arrow that deals 6 damage to the first enemy it meets, then leaps to 3 more enemies within 3 tiles, each hit dealing 70% of that. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Host-Hopping Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a fan of arrows 5 tiles ahead that deals 12 damage to everything in it and leaves each one [Diseased] for 8 seconds. Your afflictions on them spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Out of Reach",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "piercing",
+   "cooldown": 14,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you instantly to a point up to 7 tiles away. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Hop and Loose",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your next strike gains 15% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

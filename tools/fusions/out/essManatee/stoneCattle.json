@@ -1,0 +1,96 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "role": "long",
+   "range": 160,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Unhurried Stampede",
+   "element": "blunt",
+   "base": 28,
+   "cooldown": 90,
+   "coneAngle": 0.7,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Tramples forward in a cone 5 tiles long, dealing 28 damage and leaving everything in it [Slowed] for 5 seconds. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "role": "basic",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "spammable": true,
+   "name": "Lowered Brow",
+   "element": "blunt",
+   "base": 5,
+   "cooldown": 1,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A headbutt that deals 5 damage and leaves the target 8% easier to wound for 5 seconds. Its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Ruminant Hours",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "nature",
+   "buffStat": "regenHealth",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "desc": "Increases your health recovery by 50% for 20 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "name": "Grazer's Constitution",
+   "element": "nature",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "the small hurts close on their own"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "you get your breath back between things"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.06,
+     "text": "and everything you have comes round again sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your health regenerates 12% faster, from silver your stamina recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

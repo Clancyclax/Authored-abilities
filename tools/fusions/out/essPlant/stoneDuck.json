@@ -1,0 +1,92 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Dewdrop Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "cooldown": 10,
+   "base": 13,
+   "speed": 330,
+   "radius": 8,
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rolls a bead of water off your leaves into one enemy for 13 damage, knocking it back 3 tiles and leaving it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Pondweed Mat",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 7,
+   "chargesMax": 3,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spreads a mat of floating weed under every enemy within 3 tiles, dealing 7 damage with a 60% chance to leave each [Hindered] for 4 seconds. Holds 3 charges; a kill restores one."
+  },
+  {
+   "name": "Lotus Sheen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "plant",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.6,
+   "buffDuration": 10,
+   "desc": "For 10 seconds, each affliction laid on you has a 60% chance to roll off and land on whoever inflicted it instead."
+  },
+  {
+   "name": "Lily Pad Footing",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you move faster over water than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "manaRegen",
+     "amount": 0.3,
+     "text": "and you recover mana faster while you stand on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.1,
+     "text": "and you are harder to hit while you stand on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground."
+  }
+ ]
+}

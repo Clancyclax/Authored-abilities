@@ -1,0 +1,76 @@
+{
+ "essence": "essApe",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Palmed Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hpCostPct": 0.04,
+   "desc": "A quick stab that deals 9 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Hidden Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 1.6,
+   "guaranteedCrit": true,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Throws a concealed blade up to 7 tiles for 28 damage, rising to 1.6 times that at full range. It is always a critical hit."
+  },
+  {
+   "name": "Honed Instinct",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 12,
+   "desc": "Increases your critical damage by 40% for 12 seconds."
+  },
+  {
+   "name": "Edge Unseen",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 12,
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "armorBonus": 0.05,
+   "desc": "After 12 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 12 seconds. Your armour rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essBat",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Rafter Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "dark",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.3,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Strikes an enemy at or below 25% health for 22 dark damage and consumes every affliction on it, adding 1.3 times their remaining damage to the hit. You move 25% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Lapping Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.15,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A swipe of claws in a short arc ahead of you deals 4 slashing damage to everything in it, with a 25% chance to leave each [Bleeding] for 4 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Padded Flight",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 14,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "The Small Hours",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "At night, you deal 12% more damage."
+  }
+ ]
+}

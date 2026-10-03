@@ -1,0 +1,75 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Gallop Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "chargeTo": 256,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "melee",
+   "desc": "Carries you up to 8 tiles to a target; the cut deals 16 damage and leaves it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Swath at a Canter",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 3
+   },
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Sweeps a fan 4 tiles ahead that deals 4 damage to everything in it. For 3 seconds after you use it, you move 10% faster."
+  },
+  {
+   "name": "Give It Its Head",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 32,
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 35% for 8 seconds. You finish it 2 tiles from where you stood, with +8% dodge chance for it."
+  },
+  {
+   "name": "Rolling Cadence",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essRake",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carve and Serve",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "leech": 0.2,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Sweeps the tines round you, dealing 26 damage to every enemy within 3.5 tiles and healing you for 20% of the damage dealt. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Scraped Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "leech": 0.4,
+   "requiresTargetBelow": 0.25,
+   "desc": "Casts the tines out to scrape the target for 18 damage and heals you for 40% of the damage dealt. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Pick the Bones",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "cooldown": 20,
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 256,
+   "desc": "Gleans every body within 8 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Whetted Appetite",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "lifeOnKill": 3,
+   "desc": "When you kill an enemy, healing you receive rises by 40% for 8 seconds. Once every 8 seconds. Each kill also restores 3 health."
+  }
+ ]
+}

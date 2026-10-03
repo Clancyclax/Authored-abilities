@@ -1,0 +1,98 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Bloom of Barbs",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "explodeRadius": 64,
+   "splashFrac": 0.6,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Fires a stinging cell that deals 4 poison damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 4 seconds, then bursts, hitting every enemy within 2 tiles for 60% of that."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spawning Night",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A burst of stored venom that deals 28 poison damage to every enemy within 4 tiles and is always a critical hit. Each target is left [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Crevice Lurker",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 14,
+   "summonInterval": 1.5,
+   "summonRange": 96,
+   "castTime": 0.8,
+   "desc": "Raises a reef head where you stand for 14 seconds. A sea krait strikes from its crevices at an enemy within 3 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Krait's Crossing",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "your health regenerates faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your health regenerates 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

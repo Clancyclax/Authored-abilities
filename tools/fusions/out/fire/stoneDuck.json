@@ -1,0 +1,89 @@
+{
+ "essence": "fire",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Oil Slick",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Sprays burning oil that deals 8 damage to everything within 3 tiles ahead of you and leaves each target [Slowed] for 2 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Skipping Coal",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "knockback": 64,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Skips a hot coal low across the ground that deals 12 damage to the first enemy it meets and knocks it back 2 tiles, then skips on to 2 more enemies within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Preened Feathers",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "fire",
+   "cooldown": 24,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 6,
+   "resist": {
+    "element": "fire",
+    "amount": 0.12
+   },
+   "desc": "For 6 seconds, each condition laid on you has a 50% chance to be sent back to whoever laid it. You have 12% fire resistance."
+  },
+  {
+   "name": "Sparks Roll Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

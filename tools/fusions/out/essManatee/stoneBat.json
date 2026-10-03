@@ -1,0 +1,84 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "role": "basic",
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "spammable": true,
+   "name": "Sounding Chirps",
+   "element": "resonating",
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 320,
+   "radius": 6,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends 3 chirps through the water at once, spread apart, each dealing 3 damage with a 30% chance to leave its target [Muddled] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "medium",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Slow Sip",
+   "element": "dark",
+   "base": 12,
+   "cooldown": 14,
+   "chargeTo": 192,
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 8,
+    "label": "Reprieve"
+   },
+   "desc": "Drifts you to a target up to 6 tiles away, then latches on for 12 damage. 30% of the damage dealt comes back to you as healing over 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "name": "Blubber Echo",
+   "element": "resonating",
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 1,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "armorBonus": 0.1,
+   "desc": "For 8 seconds, 40% of the elemental damage you take is sent back to whoever dealt it, and your armour rises by 10%."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "name": "Thick-Skinned Dusk",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "resist": {
+    "element": "dark",
+    "amount": 0.08
+   },
+   "desc": "At night, your armour rises by 12%. You have 8% dark resistance."
+  }
+ ]
+}

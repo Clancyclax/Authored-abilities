@@ -1,0 +1,70 @@
+{
+ "essence": "essBird",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Seize and Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "stunOnHit": 1.2,
+   "desc": "Seizes the target in your talons and slams it down for 14 damage, stunning it for 1.2 seconds and leaving it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "From a Great Height",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 260,
+   "radius": 12,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Drops a boulder on the first enemy in its path for 30 damage. Every other enemy within 3.5 tiles takes 80% of that."
+  },
+  {
+   "name": "Strutting Display",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 4.5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A threat display that pulls up to 5 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Swing Into It",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

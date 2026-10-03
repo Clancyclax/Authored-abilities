@@ -1,0 +1,84 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Rust in the Joints",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks water into the joints of a target's armour, dealing 7 damage with a 50% chance to leave it [Sundered] for 5 seconds. It holds 4 charges and kills give charges back."
+  },
+  {
+   "name": "Moulted Plates",
+   "template": "volley",
+   "element": "slashing",
+   "role": "long",
+   "base": 12,
+   "cooldown": 80,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 8,
+   "range": 224,
+   "castTime": 0.5,
+   "ignoreArmor": true,
+   "desc": "Sheds 3 steel plates from among your feathers in a spread, each dealing 12 damage and ignoring armour.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Riveted Down",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 3
+   },
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 22 damage and raises your armour by 10%, both for 8 seconds. You move 12% faster for 3 seconds after you use it.",
+   "kind": "active"
+  },
+  {
+   "name": "Layered Against Blows",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.05,
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. At 6 they all spend at once into a shield that soaks 6% of your maximum health per stack (34% at full). Unfed, a stack fades every 10 seconds. Your armour is 5% higher at all times.",
+   "kind": "passive"
+  }
+ ]
+}

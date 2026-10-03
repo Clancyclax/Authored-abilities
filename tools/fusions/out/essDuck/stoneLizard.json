@@ -1,0 +1,75 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Chilled Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "desc": "Spits chilled water that deals 4 damage with a 30% chance to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Dawn Chill",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "frost",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes cold air in a cone 5 tiles long, dealing 11 damage to everything in it and knocking it back 2 tiles. Each hit has a 60% chance to leave the target [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Utter Stillness",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "frost",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Sun Bath",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "In daylight, you deal 12% more damage. Your abilities' cooldowns are 5% shorter at all times."
+  }
+ ]
+}

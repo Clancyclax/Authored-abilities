@@ -1,0 +1,82 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneEye",
+  "fusions": [
+    {
+      "name": "Heavy Lids",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 16,
+      "speed": 500,
+      "radius": 6,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "stunOnHit": 1.5,
+      "debuff": {
+        "key": "dodgeDown",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fixes a gaze on the first enemy in its line, which deals 11 arcane damage, stuns it for 1.5 seconds and leaves it [Leaden] for 6 seconds, its dodge lowered."
+    },
+    {
+      "name": "The Slow Blink",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "arcane",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1.2,
+      "spammable": true,
+      "range": 128,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 3,
+      "debuff": {
+        "key": "cooldownSlow",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "One slow blink across a cone 4 tiles long deals 7 arcane damage to everything in it and leaves it [Stalled] for 6 seconds, so its abilities return slower. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Fixed Regard",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfCritBuff",
+      "element": "arcane",
+      "critChanceBonus": 0.25,
+      "buffDuration": 20,
+      "castTime": 1.5,
+      "cooldown": 75,
+      "desc": "After a 1.5-second look, increases your critical hit chance by 25% for 20 seconds."
+    },
+    {
+      "name": "Stared Down",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "arcane",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "power",
+      "stackSpend": "crit",
+      "stackOn": "enemy",
+      "stackCap": 6,
+      "stackDecay": 4,
+      "stackScale": 1,
+      "stackIcon": "stackEye",
+      "desc": "Every hit you land on an enemy builds a stack on it, up to 6. Your next critical hit on it spends them all: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+    }
+  ]
+}

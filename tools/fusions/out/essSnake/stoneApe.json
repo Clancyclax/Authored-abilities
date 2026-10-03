@@ -1,0 +1,77 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Strangler's Heave",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "knockback": 96,
+   "desc": "A crushing hold that deals 14 damage, throws the target back 3 tiles and leaves it 12% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flung Viper",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a live viper at an enemy up to 6 tiles away. It deals 4 damage, rising to 1.5 times that at full reach, with a 30% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Bough Drop",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 14,
+   "teleportRange": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Swings you instantly to a point up to 5 tiles away, and you move 20% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Anchored Mass",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land builds a stack on you, up to 5. At 5 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

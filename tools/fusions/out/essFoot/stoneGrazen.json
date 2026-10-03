@@ -1,0 +1,84 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Warm Breath",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "life",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 4,
+    "label": "Reprieve"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Breathes a warm gust into the first enemy it meets, dealing 4 damage. 15% of the damage dealt comes back to you as healing over 4 seconds. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Herd Rolls On",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "life",
+   "role": "long",
+   "base": 26,
+   "cooldown": 120,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Rolls through every enemy within 3 tiles, dealing 26 damage to each. Every hit is a critical hit, and its damage rises 10% for each ally within 5.5 tiles (max 40%)."
+  },
+  {
+   "name": "Steady Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "life",
+   "buffStat": "regenHealth",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "cooldown": 65,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Increases your health recovery by 50% for 20 seconds, and your movement speed rises 15% for 6 seconds."
+  },
+  {
+   "name": "Browsing Gait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 6
+   },
+   "desc": "Every 6 tiles you cover, you regain 2 health a second for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

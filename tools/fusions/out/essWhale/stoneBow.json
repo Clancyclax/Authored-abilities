@@ -1,0 +1,75 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Sleighride",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargeTo": 256,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you up to 8 tiles toward the target on a barbed line that deals 13 damage to the first enemy it meets and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Over the Horizon",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 320,
+   "maxMult": 2,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "Looses a long-held shot at an enemy up to 10 tiles away that deals 28 damage, rising to 2 times that at full reach. It is always a critical hit."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "name": "Full Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

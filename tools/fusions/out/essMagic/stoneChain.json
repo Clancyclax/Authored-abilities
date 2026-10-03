@@ -1,0 +1,87 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "rangeBand": "long",
+   "name": "Pull Taut",
+   "element": "arcane",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "maxMult": 1.5,
+   "consumeAfflictionsPer": 0.5,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Yanks a tether of arcana on a target up to 7 tiles away, dealing 18 damage, rising to 1.5 times that at full reach, and slowing it by 20% for 2 seconds. It uses up every affliction you have on the target and deals 50% more damage for each."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Fettering Current",
+   "element": "lightning",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1,
+   "chain": {
+    "count": 3,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "shocked",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a bolt of lightning that deals 12 damage and stuns the first enemy it meets for 1 second, then leaps to 3 more enemies within 3.5 tiles for 60% of that. Each hit has a 50% chance to leave the target [Shocked] for 5 seconds."
+  },
+  {
+   "name": "Hold Fast",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "After a 0.5 second cast, binds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Link by Link",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 8. At 8 they all spend at once: a blow strikes it for 27% of your weapon damage per stack (218% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

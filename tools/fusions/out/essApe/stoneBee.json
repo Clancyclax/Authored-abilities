@@ -1,0 +1,87 @@
+{
+ "essence": "essApe",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Hurled Hive",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "speed": 300,
+   "radius": 10,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Hurls a torn-off hive that deals 10 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Swarm Let Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes a swarm out in a cone 3.5 tiles long, dealing 4 damage to everything in it with a 25% chance to leave each target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Raided Honeycomb",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Restores 4 stamina a second for 6 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Hive Tempo",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1.2,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you move and attack 5% faster per stack (54% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

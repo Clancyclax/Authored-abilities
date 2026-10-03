@@ -1,0 +1,89 @@
+{
+ "essence": "essBee",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Firm Grasp",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 8,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.35,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.8
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.8,
+   "desc": "Throws a stinger that deals 8 damage, then leaps to 1 more enemy within 3.5 tiles for 80% of the original damage. Each hit has a 35% chance of [Pinned] for 2.5 seconds. Holds up to 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shared Burden",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "base": 28,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Every enemy within 3.5 tiles takes 28 damage. When it hits, your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "name": "Steadying Touch",
+   "element": "physical",
+   "cleanseCount": 2,
+   "healScope": "ally",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "desc": "Removes 2 conditions from an ally and restores 10 health to them. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4."
+  },
+  {
+   "kind": "passive",
+   "name": "Many Fingers",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 3,
+   "familiarRange": 150,
+   "familiarInterval": 1,
+   "familiarFamily": "wasp",
+   "familiarCreatureName": "Needler",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Calls a bonded familiar of force that fights beside you, striking for 3 damage. Anything it strikes moves 20% slower for 2 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essApe",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Pinpoint Pitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "speed": 480,
+   "radius": 6,
+   "guaranteedCrit": true,
+   "desc": "Throws a stone for 30 damage that always lands as a critical hit and leaves the target [Marked] for 8 seconds.",
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Threat Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 20,
+   "range": 160,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "large",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stares down everything in a cone 5 tiles long, dealing 8 damage, stunning it for 1 second, with a 60% chance to leave each target [Weakened] for 8 seconds."
+  },
+  {
+   "name": "Weak Spot Found",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Sized Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2
+   },
+   "desc": "Each time you afflict something, your critical chance rises by 20% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

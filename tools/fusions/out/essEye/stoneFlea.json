@@ -1,0 +1,80 @@
+{
+ "essence": "essEye",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Spotted Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "You leap up to 7 tiles onto the target and bite it for 12 damage, leaving it [Marked] for 8 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Long Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "chargesMax": 4,
+   "desc": "A leaping strike that deals 7 damage, up to 2 times that at its maximum reach of 8 tiles. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Vantage Hop",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 40,
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "You blink 3 tiles and your critical hit chance rises by 25% for 10 seconds."
+  },
+  {
+   "name": "Landing Spot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover, your crit chance rises by 30% for your next strike. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Gauntlet Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Seizes the target in an iron grip, dealing 12 damage, stunning it for 1.4 seconds and leaving it 15% easier to wound for 5 seconds.",
+   "base": 12,
+   "cooldown": 18,
+   "range": 72,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "stunOnHit": 1.4
+  },
+  {
+   "name": "Closing Fist",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "desc": "Usable only on a target at or below 25% health: consumes every affliction on it, adding 1.5 times their remaining damage to a blow that deals 18 damage.",
+   "base": 18,
+   "cooldown": 15,
+   "range": 72,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true
+  },
+  {
+   "name": "Steadying Hold",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "desc": "Removes up to 2 conditions from the ally who needs it most.",
+   "cleanseCount": 2,
+   "healScope": "ally",
+   "cooldown": 30
+  },
+  {
+   "name": "Hands Under",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your health falls below 40%, healing you receive rises by 30% for 8 seconds. Once every 40 seconds.",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   }
+  }
+ ]
+}

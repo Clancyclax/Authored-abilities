@@ -1,0 +1,77 @@
+{
+ "essence": "essBird",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Chilled Peck",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "frost",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "isAoe": true,
+   "range": 96,
+   "coneAngle": 0.7,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes out a cold cone 3 tiles long, dealing 3 damage to everything in it, each with a 30% chance of [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Dropped Tail",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 7,
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "stun",
+    "chance": 0.3,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. Flings a writhing tail into the first enemy it meets for 9 damage, with a 30% chance of [Stunned] for 1 second."
+  },
+  {
+   "name": "Basking Ledge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "fire",
+   "cooldown": 36,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 3 health a second to you for 10 seconds. You move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Daylight Reflexes",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "By day, your dodge chance rises by 10%."
+  }
+ ]
+}

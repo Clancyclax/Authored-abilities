@@ -1,0 +1,79 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Off the Spool",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "template": "rangeStrike",
+   "range": 192,
+   "maxMult": 1.4,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Unspools your tongue at a target up to 6 tiles away for 8 damage, rising to 1.4 times that at full reach, and wraps it so it moves 30% slower for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Billowing Slough",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "template": "aoeRing",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps your shed skin outward in a sheet, dealing 11 damage to every enemy within 3 tiles and knocking each back 2 tiles, with a 40% chance of [Damped] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "name": "Skin Dressing",
+   "element": "nature",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "cooldown": 24,
+   "desc": "Binds your wounds in shed skin, restoring 4 health a second to you for 6 seconds."
+  },
+  {
+   "name": "Quilted Scales",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

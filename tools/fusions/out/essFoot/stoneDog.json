@@ -1,0 +1,74 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Off the Leash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.5,
+   "chargeTo": 224,
+   "desc": "Runs a target down from up to 7 tiles away, dealing 14 damage, up to 1.5 times that from the full distance."
+  },
+  {
+   "name": "Heel Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Nips at the target's heels, dealing 4 damage and leaving it 5% easier to wound for 3 seconds, with a 25% chance to leave it [Slowed] for 2 seconds."
+  },
+  {
+   "name": "At a Whistle",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 18,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 60,
+   "desc": "Whistles up a hound that runs with you for 18 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds. You move 20% faster for 5 seconds.",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   }
+  },
+  {
+   "name": "Scent of the Wounded",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

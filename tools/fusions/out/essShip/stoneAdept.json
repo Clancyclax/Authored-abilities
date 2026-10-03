@@ -1,0 +1,92 @@
+{
+ "essence": "essShip",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drilled Broadside",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "volleyCount": 4,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "guaranteedCrit": true,
+   "desc": "Looses 4 bolts at once, spread apart out to 8 tiles, each dealing 25 damage. Every hit is a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stolen Wind",
+   "template": "sunderStrike",
+   "element": "wind",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A cut that deals 4 damage and leaves the target 6% easier to wound for 4 seconds, with a 35% chance to leave it [Stalled] for 4 seconds. For 2 seconds after, you move 10% faster."
+  },
+  {
+   "name": "Ready About",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "wind",
+   "cooldown": 90,
+   "resetCount": 1,
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Puts you about 3 tiles from where you stood and clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds after."
+  },
+  {
+   "name": "Sea Legs",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "After you cover enough ground, your next strike gains 20% critical hit chance. Once every 10 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

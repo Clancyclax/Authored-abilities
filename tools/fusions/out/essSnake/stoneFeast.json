@@ -1,0 +1,76 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swallowed Whole",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "leech": 0.3,
+   "desc": "Usable only on an enemy at or below 25% health, a threshold that rises with each rank. The bite deals 18 damage, consumes every affliction on the target, adding 1.5 times their remaining damage, and heals you for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Passed Around the Table",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Serves venom to the 4 tiles ahead of you: it deals 12 poison damage to everything in the cone and leaves each target [Poisoned] for 6 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Nothing Left Over",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 256,
+   "cooldown": 20,
+   "desc": "You swallow every body within 8 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Fourth Course",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 4. At 4 they all spend at once: you heal for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

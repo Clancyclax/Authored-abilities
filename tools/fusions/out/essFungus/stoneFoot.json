@@ -1,0 +1,89 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Wayside Puff",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.4,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Flicks a spore at a target up to 5 tiles away that deals 5 damage, rising to 1.4 times that at full reach. Its damage rises 10% for every 100 paces you run since you last used it (max 50%)."
+  },
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Rushes up to 6 tiles to the target and deals 14 damage, leaving it 15% easier to wound for 6 seconds and [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Steady Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "life",
+   "buffStat": "regenHealth",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "desc": "Increases your health recovery by 50% for 20 seconds."
+  },
+  {
+   "name": "Seeded Road",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Every few paces you travel, a spore bolt leaps to the nearest enemy within 4 tiles for 5 damage and leaves it [Poisoned] for 1 damage a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

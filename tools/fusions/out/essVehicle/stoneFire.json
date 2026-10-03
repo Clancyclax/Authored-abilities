@@ -1,0 +1,90 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Stoke the Box",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Costs 5% of your maximum health. Opens your firebox on everything in a cone 3 tiles long: it deals 8 damage and sets each enemy [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Heaped Coals",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.5,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Dumps the coals your run has heaped up onto the first enemy in their path. It deals 18 damage and uses up every affliction you have on the target for 50% more damage each. Its damage rises 8% for every 100 paces you have travelled since you last used it (max 40%)."
+  },
+  {
+   "name": "Burning Tracks",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 32,
+   "base": 4,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 2
+   },
+   "desc": "Lays a line of fire 5 tiles long in front of you for 6 seconds. It deals 4 damage to anything that crosses it and sets it [Burning] for 3 damage a second for 4 seconds. You move 25% faster for 2 seconds after."
+  },
+  {
+   "name": "Head of Steam",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "fire",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. When you reach 8, they all spend at once: a blast strikes the nearest enemy for each stack. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

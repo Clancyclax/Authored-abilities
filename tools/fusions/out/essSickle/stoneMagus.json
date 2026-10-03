@@ -1,0 +1,71 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Cutting Remark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "spreadAfflictions": 112,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "vulnerable",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a crescent that deals 12 damage and leaves the target [Vulnerable] for 8 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Full Stop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Needs one of your afflictions on the target and uses it up. Sweeps a full circle that deals 8 damage to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Repeated Clause",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "cooldown": 120,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Fresh-Cut Reagent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you kill an enemy, your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

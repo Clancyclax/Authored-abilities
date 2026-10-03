@@ -1,0 +1,86 @@
+{
+ "essence": "essBee",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Picked Out",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 256,
+   "maxMult": 1.5,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting at a target up to 8 tiles away that deals 22 damage, rising to 1.5 times that at full reach, and leaves it [Marked] for 10 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scout Darts",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.45,
+   "speed": 420,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 stings in a wide spread, each dealing 3 damage, with a 30% chance per hit to leave the target [Exposed], its resistances stripped, for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Compound Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Ocelli Circlet",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "piercing",
+   "critChance": 0.06,
+   "critDamage": 0.15,
+   "lifeOnKill": 3,
+   "itemBuffs": [],
+   "allyScaling": {
+    "per": 0.05,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Conjures a circlet: your critical hit chance rises by 6%, your critical hits deal 15% more damage, and each kill returns 3 health. The effect grows 5% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

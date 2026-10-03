@@ -1,0 +1,89 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Left the Barb In",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hpCostPct": 0.04,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A stinging weapon strike that costs 4% of your maximum health, deals 8 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds. You move 15% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Buzzing Circuit",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "You scurry a tight circle, stinging every enemy within 2.5 tiles for 3 damage. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%).",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4
+  },
+  {
+   "name": "Nest Pours Out",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Empties the nest: a swarm of mice fights for 12 seconds, biting an enemy within 4 tiles for 3 damage every second, each bite with a 30% chance to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Never Idle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "Every few paces you cover, 5 stamina comes back to you. Once every 4 seconds."
+  }
+ ]
+}

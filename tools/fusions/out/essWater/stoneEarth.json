@@ -1,0 +1,80 @@
+{
+ "essence": "essWater",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Slurry Slide",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a slide of mud through a cone 4 tiles deep. It deals 13 damage, carries enemies back 2 tiles and has a 50% chance to leave each [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Grit in the Current",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "desc": "Sends a stream of grit at the target in front of you that deals 4 damage and leaves it 8% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Struck Spring",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Cracks the ground at your feet and a spring wells up. For 8 seconds it restores 3 health a second to you and any ally within 3.5 tiles of it."
+  },
+  {
+   "name": "Alluvium",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a layer of silt settles on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per layer (28% at full). Unfed, a layer fades every 10 seconds."
+  }
+ ]
+}

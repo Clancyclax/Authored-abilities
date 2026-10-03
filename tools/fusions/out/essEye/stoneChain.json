@@ -1,0 +1,81 @@
+{
+ "essence": "essEye",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Second Glance",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Fires a bolt that hits the first enemy in its path for 4 damage, then leaps to 1 more enemy within 3 tiles for 50% of that."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Link by Link",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes a chain around you, dealing 11 damage to every enemy within 3 tiles and leaving each [Pinned] for 2 seconds. Your afflictions on each spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Reeling In",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 192,
+   "cooldown": 12,
+   "desc": "Pulls you instantly to a point up to 6 tiles away."
+  },
+  {
+   "name": "Carried Over",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "desc": "Each time you afflict something, a bolt leaps to the nearest other enemy within 5 tiles for 6 lightning damage. Once every 5 seconds."
+  }
+ ]
+}

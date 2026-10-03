@@ -1,0 +1,94 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flung Cinder",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Kicks a cinder at an enemy that deals 4 fire damage and sets it [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wind-Fanned Flare",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Breathes flame 5 tiles ahead that deals 28 fire damage to everything in it, ignoring resistance, and sets it [Burning] for 3 damage a second for 5 seconds. Its damage rises 10% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Fever Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 35,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Your fire damage rises by 30% for 10 seconds and your movement speed by 20% for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Flashpoint",
+   "element": "fire",
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "When non-fire damage hits you, your next strike gains 20% critical hit chance. Once every 8 seconds. You resist fire damage by 10%."
+  }
+ ]
+}

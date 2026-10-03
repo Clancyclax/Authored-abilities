@@ -1,0 +1,87 @@
+{
+ "essence": "essWind",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Link by Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "A lash of air that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Spinning Links",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips joined gusts in a full circle that deals 11 damage to every enemy within 3.5 tiles, stuns them for 1 second and leaves them [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Mooring Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "wind",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 24,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Anchors a line 5 tiles long ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Unbroken Run",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "Each time you kill something, your physical damage rises by 25% for 5 seconds. Once every 6 seconds."
+  }
+ ]
+}

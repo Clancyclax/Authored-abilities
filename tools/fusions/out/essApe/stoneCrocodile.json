@@ -1,0 +1,75 @@
+{
+ "essence": "essApe",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Riverbank Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 64,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "desc": "Seizes the target and rolls with it, dealing 28 damage plus 5% of a boss's or elite's maximum health and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Waterline Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "range": 160,
+   "maxMult": 1.6,
+   "chargesMax": 3,
+   "desc": "Strikes a target up to 5 tiles away for 6 damage, rising to 1.6 times that at full range. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Sunken Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Sets a jaw trap at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles takes 22 damage."
+  },
+  {
+   "name": "Coiled Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Acrid Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A weapon strike that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Bitter Harvest",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Hooks the tip into an enemy up to 6 tiles away, which deals 18 damage, up to 1.5 times that at full reach. It draws out every affliction you have on the target and deals 60% more damage for each one drawn."
+  },
+  {
+   "name": "Tourniquet Pull",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 10,
+   "desc": "Draws up to 3 poison conditions out of you and out of each of your allies, and restores 10 health to you."
+  },
+  {
+   "name": "Venom Into Tonic",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "When you afflict an enemy, you regain 3 health a second for 4 seconds. Once every 8 seconds. You have 8% poison resistance."
+  }
+ ]
+}

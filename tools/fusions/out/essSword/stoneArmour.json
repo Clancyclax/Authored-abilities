@@ -1,0 +1,77 @@
+{
+ "essence": "essSword",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Murder Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "stunOnHit": 1.2,
+   "desc": "A hilt strike that deals 14 damage, stuns the target for 1.2 seconds and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Gap in the Gorget",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "ignoreArmor": true,
+   "desc": "A thrust between the plates that deals 24 damage, ignores armour and makes the target [Bleeding] for 3 damage a second for 5 seconds. Usable only on an enemy at or below 25% health.",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Gatehouse Bulwark",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "desc": "Raises a guard that absorbs the next 22 damage, up to 4 blows, and holds for 6 seconds. Your armour rises by 8% while you carry it."
+  },
+  {
+   "name": "Fencer's Harness",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.08,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures fitted plate: every hit you take is 2 lower, your armour rises by 10%, your attack speed rises by 4%, and 8% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

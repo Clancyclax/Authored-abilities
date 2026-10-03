@@ -1,0 +1,93 @@
+{
+ "essence": "fire",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Caldera",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "long",
+   "base": 32,
+   "cooldown": 110,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Splits the ground around you with molten rock, which deals 32 damage to every enemy within 3.5 tiles, ignores armour and sets each [Burning] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Magma Knuckle",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "burn",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A blow with a fist of half-molten rock that deals 5 damage and leaves the target 8% easier to wound for 4 seconds, with a 35% chance to set it [Burning] for 6 seconds."
+  },
+  {
+   "name": "Basalt Ridge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 32,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Raises a ridge of lava rock 5 tiles long in front of you that blocks movement for 6 seconds. Anything that touches it is set [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Cooling Crust",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "fire",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "Every time you use an ability, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds. You have 10% fire resistance."
+  }
+ ]
+}

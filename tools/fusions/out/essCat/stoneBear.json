@@ -1,0 +1,77 @@
+{
+ "essence": "essCat",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dead Weight",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "chargeTo": 160,
+   "bossPct": 0.06,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Pounces up to 5 tiles onto an enemy and hangs your weight on it for 28 damage, plus 6% of a boss's or elite's maximum health, and strips 15% of its armour for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cornered Mauling",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 64,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Mauls a cone 2 tiles long, dealing 8 damage to everything in it. Its damage rises 10% for every 10% of your health already gone (max +50%). Each use costs 4% of your maximum health."
+  },
+  {
+   "name": "Looming Bulk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 128,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Up to 4 enemies within 4 tiles turn on you for 5 seconds."
+  },
+  {
+   "name": "Winter Coat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.4,
+    "rearmAbove": 0.6
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When your health falls below 40%, you gain a shield worth 20% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

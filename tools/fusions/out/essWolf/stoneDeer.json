@@ -1,0 +1,81 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Flushing Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "scaleOn": "targetStamina",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "A darting snap that deals 4 damage to the first enemy it meets. Its damage rises 6% for every 10% of health the target still has (max 30%)."
+  },
+  {
+   "name": "Frozen in the Open",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 112,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "A snarl through a cone 3.5 tiles long that deals 7 damage to everything in it and leaves it [Leaden] for 4 seconds. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "White-Tail Bolt",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 24,
+   "speedMult": 1.4,
+   "buffDuration": 6,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 40% for 6 seconds. You finish it 3 tiles from where you stood, with 10% more dodge chance."
+  },
+  {
+   "name": "Flight Response",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Each time you are hurt by anything other than fire, 8 stamina comes back to you. Once every 5 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

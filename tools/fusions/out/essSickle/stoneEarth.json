@@ -1,0 +1,70 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Furrow Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 224,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Throws a stone crescent that deals 30 rock damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that.",
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Gravel Fling",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Flings flint chips for 5 rock damage, rising to 1.5 times that at their full reach of 6 tiles."
+  },
+  {
+   "name": "Put to the Whetstone",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "rock",
+   "cooldown": 45,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your slashing damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Chips Off the Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Each time you strike with your weapon, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

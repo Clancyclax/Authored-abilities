@@ -1,0 +1,82 @@
+{
+ "essence": "essApe",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Seizing Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 160,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1.0,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you up to 5 tiles to a target and seizes it with a strike that deals 12 damage, makes it [Bleeding] for 2 damage a second for 4 seconds and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Open Palm",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slaps a wide cone ahead of you, dealing 3 damage to everything caught in it. Each hit has a 25% chance to leave the target [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Binding Squeeze",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 16,
+   "healAmount": 20,
+   "healScope": "self",
+   "critChance": 0.1,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 20 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%). The heal has a 10% chance to crit."
+  },
+  {
+   "name": "Steady Grip",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "crit",
+   "amount": 0.08,
+   "armorBonus": 0.06,
+   "desc": "Your critical strike chance rises by 8%. Your armour also rises by 6%."
+  }
+ ]
+}

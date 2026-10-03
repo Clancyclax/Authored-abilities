@@ -1,0 +1,73 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lazy Current",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "desc": "Rolls a heavy swell into the first enemy it meets, dealing 10 damage, knocking it back 2 tiles and with a 60% chance leaving it [Stalled] for 8 seconds.",
+   "cooldown": 16,
+   "knockback": 64,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "base": 10,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Slow Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "desc": "A swell that rolls out and deals 28 damage to every enemy within 3.5 tiles, plus 5% of a boss's or elite's maximum health.",
+   "base": 28,
+   "cooldown": 100,
+   "bossPct": 0.05,
+   "isAoe": true,
+   "range": 112,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Drifting Recovery",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "desc": "Restores 3 health a second to you for 10 seconds.",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "cooldown": 40
+  },
+  {
+   "name": "Banked Calm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "desc": "When your stamina runs out, you gain a shield worth 15% of your maximum health for 6 seconds. Once every 30 seconds.",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   }
+  }
+ ]
+}

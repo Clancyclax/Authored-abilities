@@ -1,0 +1,79 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Linked Arms",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "leech": 0.2,
+   "desc": "Whips a length of links into the first enemy it meets for 4 damage, then leaps to 2 more enemies within 3 tiles for 60% of that each. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swing In",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "chargeTo": 224,
+   "base": 12,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings you on the links to a target up to 7 tiles away for 12 damage, rising to 1.5 times that from full range, and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Hold Still",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "blinkOnUse": 96,
+   "desc": "Holds every creature within 4 tiles in place for 2 seconds, and you finish 3 tiles from where you stood."
+  },
+  {
+   "name": "Short Leash",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 10%."
+  }
+ ]
+}

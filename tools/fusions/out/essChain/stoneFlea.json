@@ -1,0 +1,75 @@
+{
+ "essence": "essChain",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Springing Anchor",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "desc": "Casts a barbed link at an enemy up to 6 tiles away and springs you to it, dealing 12 damage and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Skipping Rope",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Whips a ring of links around you that deals 3 damage to every enemy within 2.5 tiles, and you move 15% faster for 2 seconds."
+  },
+  {
+   "name": "Slack Line",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 14,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 7 tiles away, and you move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Hopscotch",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Each enemy you kill builds a stack on you, up to 4. The next ability you use spends them all: you move and attack 5% faster per stack, 18% in all at 4 stacks, for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Snatch and Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "desc": "Rushes you to a target up to 6 tiles away, then deals 14 damage and leaves it 15% easier to wound for 6 seconds. You slip away 20% faster for 5 seconds after you use it."
+  },
+  {
+   "name": "Churning School",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1.1,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.35,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 darts of water in a spread, each dealing 5 damage with a 25% chance to leave its target [Pinned] for 1.5 seconds. Its damage rises 8% for each ally within 5.5 tiles (max 32%). Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Out of Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 2,
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "cooldown": 60,
+   "desc": "For 2 seconds, blows that reach you deal no damage and no condition can take hold of you, and you slip 3 tiles from where you stood. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Slipped Grasp",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. At 5 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}

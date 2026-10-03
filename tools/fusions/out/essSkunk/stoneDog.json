@@ -1,0 +1,91 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "cooldown": 14,
+   "base": 20,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Follows the reek to an enemy at or below 30% health and bites for 20 damage, leaving it 15% easier to wound for 6 seconds. Its damage rises 10% for each affliction the target already carries (max 40%)."
+  },
+  {
+   "name": "Coat Shudder",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 11,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 128,
+    "chance": 0.3,
+    "spreadsLeft": 2
+   },
+   "desc": "Bounds to an enemy up to 6 tiles away and shakes the musk out of your coat, dealing 11 damage to every enemy within 2.5 tiles with a 50% chance to leave each [Poisoned] for 6 seconds. The poison spreads on its own to up to 2 more enemies within 4 tiles."
+  },
+  {
+   "name": "Whole Pack Reeks",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "poison",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Doused Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Hound",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded hound fights beside you, biting for 4 damage every 1.2 seconds and leaving its target [Poisoned] for 1 damage a second for 5 seconds."
+  }
+ ]
+}

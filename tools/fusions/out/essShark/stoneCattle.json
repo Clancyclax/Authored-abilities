@@ -1,0 +1,78 @@
+{
+ "essence": "essShark",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Cropped Short",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.3,
+   "desc": "Crops a cone 2.5 tiles long, dealing 3 damage to everything in it. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Lowered Head",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "knockback": 112,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "A head-down ram that deals 13 damage, knocks the target back 3.5 tiles and leaves it 12% easier to wound for 6 seconds. Its damage rises 6% for every 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "name": "Slow Digestion",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds. The healing rises 7% for every 10% of your health already gone, up to 35%.",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.07,
+   "scaleCap": 0.35
+  },
+  {
+   "name": "Unhurried Hunger",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12,
+    "seconds": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 12 seconds without a critical hit, your critical hit chance rises by 30% for your next strike. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essEye",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Browbeater",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You pound the ground, dealing 13 damage to every enemy within 3 tiles, knocking them back 2.5 tiles and leaving them [Damped] for 5 seconds, their damage lowered."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sized-Up Hurl",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a chunk of rubble that hits the first enemy in its path for 28 damage plus 5% of a boss's or elite's maximum health and leaves it [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Dominance Display",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 30,
+   "desc": "Up to 5 enemies within 6 tiles turn on you for 6 seconds."
+  },
+  {
+   "name": "Grudge Watch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Last Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 160,
+    "frac": 0.7
+   },
+   "chainCount": 2,
+   "chainRange": 160,
+   "chainDamagePct": 0.7,
+   "desc": "Usable only on a target at or below 25% health. Hurls a spore that deals 20 damage, then hops to 2 more enemies within 5 tiles for 70% of that damage each."
+  },
+  {
+   "name": "Vaulting Smother",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Leaps up to 7 tiles to the target and deals 12 damage, leaving it [Poisoned] for 2 damage a second for 5 seconds. Each hit has a 60% chance to leave it [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Bounce Back",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "restoreAmount": 15,
+   "healOnUse": 12,
+   "blinkOnUse": 64,
+   "cooldown": 25,
+   "desc": "Springs 2 tiles forward, restoring 15 stamina and 12 health."
+  },
+  {
+   "name": "Host Mite",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarFamily": "insect",
+   "familiarCreatureName": "Sporemite",
+   "familiarDmg": 3,
+   "familiarRange": 160,
+   "familiarInterval": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded mite rides with you, biting enemies within 5 tiles for 3 damage every second and leaving them [Poisoned] for 1 damage a second for 4 seconds."
+  }
+ ]
+}

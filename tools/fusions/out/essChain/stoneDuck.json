@@ -1,0 +1,87 @@
+{
+ "essence": "essChain",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "One Good Skip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Skims a link at the first enemy it meets for 4 damage; it skips on to 1 more enemy within 3 tiles for 50% of that."
+  },
+  {
+   "name": "Shaken Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes water off your chains in a cone, which deals 26 damage that ignores resistances to everything within 4 tiles and leaves it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Shrugged Off",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 45,
+   "cleanseCount": 5,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Removes up to 5 conditions from you, and you move 15% faster for 3 seconds."
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions lifts, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

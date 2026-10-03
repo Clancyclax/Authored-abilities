@@ -1,0 +1,94 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Stokehole Blast",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 112,
+   "coneAngle": 0.9,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Blasts everything within 3.5 tiles ahead of you, which deals 12 damage and leaves each enemy [Burning] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Bursting Clinker",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "radius": 10,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "speed": 330,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Throws a brick that deals 32 damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 4 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Hard Glaze",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "fire",
+   "armorBonus": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "Raises your armour by 30% and your fire resistance by 15% for 12 seconds."
+  },
+  {
+   "name": "Kiln-Hot Float",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.08
+   },
+   "desc": "Conjures a float still hot from the kiln. It increases your weapon damage by 12% and your attack speed by 5%, and every strike with it sets the target [Burning] for 2 damage a second for 3 seconds. You have 8% fire resistance."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "name": "Raw Draught",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "coneAngle": 0.8,
+   "range": 160,
+   "ignoreResist": true,
+   "leech": 0.15,
+   "desc": "Looses a cone of raw arcana 5 tiles long that deals 26 damage to everything in it and ignores resistances. You heal for 15% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Distilled Spark",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 4,
+    "label": "Siphoned"
+   },
+   "desc": "Fires a spark that deals 4 arcane damage to the first enemy it meets. 20% of the damage dealt comes back to you as healing over 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "name": "Tapped Cask",
+   "element": "arcane",
+   "cooldown": 40,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "desc": "Restores 3 mana a second for 8 seconds and 10 health to you."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Spellfed Vigour",
+   "element": "arcane",
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Each time you spend mana, 15% of the damage you deal heals you for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

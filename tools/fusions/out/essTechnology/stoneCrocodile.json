@@ -1,0 +1,86 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Toothed Vise",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 25% health. Shuts a toothed vise on it, which deals 24 damage, leaves it [Pinned] for 3 seconds and 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Death-Roll Flywheel",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "A flywheel spins you through a full roll, which deals 30 damage to every enemy within 3 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Waiting Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 150,
+   "summonKind": "trap",
+   "summonDmg": 16,
+   "summonDuration": 50,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "castTime": 1,
+   "summonCharges": 2,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "desc": "Sets a sprung iron trap at the nearest enemy. It waits up to 50 seconds, and deals 16 damage in a blast around it to each of the first 2 enemies to come within 2 tiles."
+  },
+  {
+   "name": "Coiled Mainspring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

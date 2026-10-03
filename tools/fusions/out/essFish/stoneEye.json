@@ -1,0 +1,83 @@
+{
+ "essence": "essFish",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Many-Eyed Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Fires a dart of water into the first enemy it meets for 7 damage, with a 35% chance to leave it [Marked] for 6 seconds. Its damage rises 8% for each ally beside you, up to 32%. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Silver Flash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "light",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flashes silver, dealing 28 damage to every enemy within 3.5 tiles that ignores their resistances. Each hit has a 50% chance to leave the target [Exposed] for 8 seconds."
+  },
+  {
+   "name": "Watching School",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "water",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "castTime": 0.5,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your critical hit chance by 25% for 15 seconds. An escort of water fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Lidless Watch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "At night, your damage rises by 12%. You also have 5% more dodge chance."
+  }
+ ]
+}

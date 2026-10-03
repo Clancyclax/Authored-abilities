@@ -1,0 +1,82 @@
+{
+ "essence": "essDog",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Snapped Catch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Rushes up to 6 tiles to the target and bites for 12 water damage, leaving it 15% easier to wound for 6 seconds. It grows 8% stronger for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Spin-Dry Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes a spray off your coat that deals 4 water damage to every enemy within 2.5 tiles, each with a 30% chance to be left [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Silver Dart",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "water",
+   "cooldown": 30,
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.15,
+   "desc": "Increases your movement speed by 30% for 8 seconds, with +15% dodge chance for it. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Shake and Snap",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. At 5 they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

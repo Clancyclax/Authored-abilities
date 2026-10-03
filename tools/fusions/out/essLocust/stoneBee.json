@@ -1,0 +1,93 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Barbed Sacrifice",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A weapon strike that deals 9 damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and makes it 10% easier to wound for 5 seconds. It also costs 4% of your maximum health."
+  },
+  {
+   "name": "Stinging Front",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Both swarms break outward, dealing 10 poison damage to every enemy within 3.5 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Second Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 60,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Calls a second swarm that fights for 15 seconds, stinging an enemy within 4 tiles for 4 damage every second, each sting with a 30% chance to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Nectar from the Fallen",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 12
+   },
+   "desc": "When you kill an enemy, you restore 12 stamina. Once every 8 seconds."
+  }
+ ]
+}

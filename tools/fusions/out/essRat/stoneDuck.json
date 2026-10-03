@@ -1,0 +1,78 @@
+{
+  "essence": "essRat",
+  "stone": "stoneDuck",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Surfacing Bite",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 128,
+      "maxMult": 1.4,
+      "reachUnits": 128,
+      "rangeBand": "medium",
+      "chargesMax": 4,
+      "debuff": {
+        "key": "wet",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Comes up under an enemy up to 4 tiles away and bites for 8 damage, rising to 1.4 times that at full reach, leaving it [Soaked] for 5 seconds. Holds 4 charges, and each kill gives one back."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "isAoe": true,
+      "name": "Ditchwater Flick",
+      "element": "water",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 64,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "powerDown",
+        "chance": 0.3,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Flicks foul water off your coat at every enemy within 2 tiles, dealing 3 damage with a 30% chance to leave each [Weakened] for 5 seconds."
+    },
+    {
+      "name": "Bob Up Elsewhere",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "water",
+      "teleportRange": 160,
+      "cooldown": 10,
+      "dodgeBonus": 0.08,
+      "desc": "You dive and come up at a point up to 5 tiles away, and have 8% more dodge chance."
+    },
+    {
+      "name": "Off the Oiled Coat",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "reflectWard",
+      "element": "water",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.2,
+      "buffDuration": 0,
+      "resist": {
+        "element": "water",
+        "amount": 0.08
+      },
+      "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it. You have 8% water resistance."
+    }
+  ]
+}

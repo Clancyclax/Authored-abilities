@@ -1,0 +1,80 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 400,
+   "radius": 7,
+   "name": "Unheard Approach",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting that deals 4 damage to the first enemy it meets, with a 25% chance to leave it [Poisoned] for 5 seconds. It has 30% more critical chance against an enemy that has not been wounded yet."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Done Toying",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Usable only on a target at or below 30% health. Pounces you onto it from up to 6 tiles away for a sting that deals 20 damage and leaves it [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Soundless Hover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Veils you for 10 seconds. Enemies notice you far later, and the veil breaks the moment you attack. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Quarry Out of Reach",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 12%."
+  }
+ ]
+}

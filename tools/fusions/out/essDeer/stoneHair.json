@@ -1,0 +1,81 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snarled Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strews strands around you, dealing 10 damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Plucked Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Snags an enemy and deals 4 damage, leaving it 5% easier to wound for 3 seconds. Its damage rises 8% per affliction on the target, up to 40%."
+  },
+  {
+   "name": "Winter Coat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "cooldown": 40,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "armorBonus": 0.08,
+   "desc": "Raises a barrier that absorbs the next 20 damage, up to 4 blows, for 10 seconds, and raises your armour by 8%."
+  },
+  {
+   "name": "Tightening Weave",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land ties a strand to that enemy, up to 6. Your next critical hit on it spends them all: the strands pull tight and strike it for 27% of your weapon damage per strand (163% at full). Unfed, a strand fades every 4 seconds."
+  }
+ ]
+}

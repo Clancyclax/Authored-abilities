@@ -1,0 +1,74 @@
+{
+  "essence": "essShield",
+  "stone": "stoneAdept",
+  "fusions": [
+    {
+      "name": "Read the Opening",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 10,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "stunOnHit": 1,
+      "scaleOn": "targetStamina",
+      "scalePer": 0.06,
+      "scaleCap": 0.3,
+      "desc": "Bashes with the shield's boss, which deals 12 damage, stuns the target for 1 second and leaves it 10% easier to wound for 5 seconds. Its damage rises 6% for every tenth of its health the target still has, up to 30%."
+    },
+    {
+      "name": "Kata's End",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 28,
+      "cooldown": 75,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "guaranteedCrit": true,
+      "knockback": 64,
+      "desc": "Turns a full circle on the shield's rim, dealing 28 damage to every enemy within 3 tiles and knocking them back 2 tiles. Every hit is a critical hit."
+    },
+    {
+      "name": "Second Nature",
+      "kind": "active",
+      "category": "buff",
+      "template": "cooldownReset",
+      "element": "physical",
+      "cooldown": 60,
+      "resetCount": 1,
+      "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+    },
+    {
+      "name": "Practice Pays",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "physical",
+      "rerollKind": "crit",
+      "rerollKinds": [
+        "crit"
+      ],
+      "rerollCooldown": 10,
+      "allyScaling": {
+        "per": 0.09,
+        "max": 4,
+        "range": 180
+      },
+      "allyRange": 180,
+      "allyMax": 4,
+      "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies."
+    }
+  ]
+}

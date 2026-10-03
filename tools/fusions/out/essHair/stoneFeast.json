@@ -1,0 +1,85 @@
+{
+ "essence": "essHair",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Course After Course",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Sends a strand to tear a mouthful from a target up to 6 tiles away, dealing 8 blood damage. Its damage rises 6% for every 10% of your health already gone (max 30%). Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Passed Around",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blood",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "spreadAfflictions": 112,
+   "volleyCount": 3,
+   "volleySpread": 0.34,
+   "speed": 320,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Digesting"
+   },
+   "desc": "Looses 3 feeding strands at once, spread apart, each dealing 10 blood damage. Your afflictions on each target spread to every enemy within 3.5 tiles, and 20% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "name": "Bound at One Table",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "healOnUse": 8,
+   "cooldown": 40,
+   "desc": "Ties a strand to every ally within 5 tiles: each strikes 15% harder for 10 seconds and fights with 1 more Power while it holds, and you regain 8 health."
+  },
+  {
+   "name": "Ten Thousand Mouths",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your strands feed on the remains: for 6 seconds you heal for 25% of the damage you deal. Once every 12 seconds."
+  }
+ ]
+}

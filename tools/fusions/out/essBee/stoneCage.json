@@ -1,0 +1,89 @@
+{
+ "essence": "essBee",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ring of Bodies",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A crush of bees that deals 12 damage to every enemy within 3 tiles, stuns them for 1.2 seconds and leaves them [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herding Jab",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weapon strike that deals 4 damage, makes the target [Poisoned] for 1 damage a second for 3 seconds, and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "The Bars Close",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "poison",
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Gathers a swarm 5 tiles long ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Nowhere to Fly",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.12,
+    "strikes": 1
+   },
+   "desc": "When you inflict a condition, your next strike has 12% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

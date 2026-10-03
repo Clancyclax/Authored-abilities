@@ -1,0 +1,85 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Held at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "cooldown": 75,
+   "base": 30,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "castTime": 1.2,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Holds the draw for 1.2 seconds, then looses a musk-dipped arrow at the first enemy within 10 tiles for 30 damage. It is always a critical hit and leaves the target [Poisoned] for 3 damage a second for 6 seconds."
+  },
+  {
+   "name": "Rank Quiver",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 6,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 440,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 5,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 musk-dipped arrows in a spread out to 8 tiles, each dealing 6 damage with a 30% chance to leave its target [Poisoned] for 5 seconds. Holds 5 charges; each kill gives one back."
+  },
+  {
+   "name": "Downwind Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "wind",
+   "cooldown": 90,
+   "rangeMult": 1.3,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 43% further."
+  },
+  {
+   "name": "Stamp, Stamp, Loose",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. Your next critical hit on it spends them all: a blow strikes it for 27% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

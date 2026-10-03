@@ -1,0 +1,83 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Burrow Breaks Open",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "The ground under you breaks open: it deals 13 damage to every enemy within 3 tiles and knocks each back 2.5 tiles, with a 40% chance to leave each [Poisoned] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Potter's Flung Jar",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Throws a clay pot at a target up to 6 tiles away. It deals 8 damage, rising to 1.5 times that at maximum range, and leaves the target [Poisoned] for 2 damage a second for 4 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Daubed Rampart",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Raises a wall of mud 5 tiles long across the ground ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "name": "Walled-In Larder",
+   "element": "earth",
+   "desc": "When you kill an enemy, you gain a shield worth 15% of your maximum health for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Tow Hook Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a tow hook that deals 7 damage to the first enemy in its path, then links on to 2 more enemies within 3.5 tiles for 60% of that damage each. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Dragged Behind",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "consumeAfflictionsPer": 0.5,
+   "bindOnHit": {
+    "slowPct": 0.4,
+    "duration": 2
+   },
+   "desc": "Hooks the target and drags it behind you. It deals 18 damage, uses up every affliction you have on the target for 50% more damage each, then leaves it [Bleeding] for 3 damage a second for 4 seconds and 40% slower for 2 seconds."
+  },
+  {
+   "name": "Winch In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 35,
+   "cooldown": 24,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Anchors a winch point ahead of you for 4 seconds that drags every enemy near it inward. Anything it catches moves 25% slower for 2 seconds."
+  },
+  {
+   "name": "Convoy Coupling",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.05,
+   "critDamage": 0.15,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.04
+    }
+   ],
+   "allyScaling": {
+    "per": 0.05,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Conjures a coupling that links you to your convoy: your critical hit chance rises by 5%, your critical hits deal 15% more damage, each kill returns 3 health, and you move 4% faster. The effect grows 5% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

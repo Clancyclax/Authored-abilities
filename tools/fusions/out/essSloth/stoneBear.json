@@ -1,0 +1,80 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneBear",
+  "fusions": [
+    {
+      "name": "Roused Too Early",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 15,
+      "cooldown": 20,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "A sweep that deals 15 damage to every enemy within 3 tiles and knocks them back 3 tiles. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+    },
+    {
+      "name": "Winter Reserves",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 10,
+      "cooldown": 1.1,
+      "spammable": true,
+      "strikes": 1,
+      "hpCostPct": 0.05,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 5
+      },
+      "desc": "A weapon strike that deals 10 damage, leaves the target [Bleeding] for 1 damage a second for 6 seconds and slows it by 30% for 5 seconds. Also costs 5% of your maximum health."
+    },
+    {
+      "name": "Short Hibernation",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "nature",
+      "hotPerSec": 4,
+      "hotDuration": 10,
+      "healScope": "self",
+      "cooldown": 45,
+      "desc": "Restores 4 health a second to you for 10 seconds."
+    },
+    {
+      "name": "Waking Hunger",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "fullHealth",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 8
+      },
+      "desc": "The moment you are back at full health, your physical damage rises by 30% for 8 seconds. Once every 30 seconds."
+    }
+  ]
+}

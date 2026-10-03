@@ -1,0 +1,83 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mud Gob",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a gob of mud that deals 4 damage with a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flycatcher's Reach",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 0.8,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A lash at full stretch that deals 12 damage, rising to 1.5 times that at its full reach of 6 tiles, and stuns the target for 0.8 seconds. Anything struck moves 30% slower for 3 seconds."
+  },
+  {
+   "name": "Sprung from the Bank",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 12,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Carries you 4 tiles forward and raises your movement speed by 20% for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "name": "Spadefoot's Burrow",
+   "element": "earth",
+   "desc": "Once your health falls below 30%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

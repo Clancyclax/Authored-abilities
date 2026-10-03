@@ -1,0 +1,71 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Stoop From Height",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 25,
+   "cooldown": 75,
+   "range": 224,
+   "maxMult": 2,
+   "ignoreArmor": true,
+   "desc": "Rises and hurls an edge down at a target up to 7 tiles away, dealing 25 damage, up to 2 times that at the far end of its reach. It ignores armour.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Downbeat Chop",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Chops down in a circle as your wings come down, dealing 7 damage to every enemy within 2.5 tiles. It holds 3 charges and kills give charges back. You move 10% faster for 2 seconds after it.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Rise to Swing",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "blinkOnUse": 64,
+   "desc": "Lifts you 2 tiles from where you stood and increases your critical damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Carried Momentum",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Once you have covered enough ground, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

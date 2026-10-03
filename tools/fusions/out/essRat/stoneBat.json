@@ -1,0 +1,76 @@
+{
+ "essence": "essRat",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shriek on the Wing",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A winged rat stoops on the first enemy in its path with a shriek, biting for 5 damage, with a 30% chance to leave the target [Muddled] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "name": "Falling Roost",
+   "element": "dark",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "The colony drops from above onto every enemy within 3 tiles, dealing 26 damage that ignores armour, with a 60% chance to leave each target [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Rafters Cry as One",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "dark",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "The whole colony screeches at once, holding every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Night Shift",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "dodgeBonus": 0.05,
+   "desc": "At night, you deal 10% more damage. Your dodge chance rises by 5%."
+  }
+ ]
+}

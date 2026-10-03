@@ -1,0 +1,81 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Whipped Switch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "desc": "A flick of the tail that deals 4 damage to a target up to 4 tiles away, rising to 1.3 times that at full reach, and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Snarled Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 3,
+   "wallKind": "burn",
+   "wallLength": 128,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Strews a 4-tile line of snarled strands ahead of you for 5 seconds. It deals 7 damage to each enemy that crosses it and slows it by 25% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Combed Out",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 45,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Removes up to 3 conditions from you. Fighting beside others pays: +10% per ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Matted Hide",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

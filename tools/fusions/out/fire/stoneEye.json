@@ -1,0 +1,84 @@
+{
+ "essence": "fire",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Burning Glass",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.5,
+   "range": 256,
+   "maxMult": 1.6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Focuses a beam through a lens onto a target up to 8 tiles away that deals 15 damage, rising to 1.6 times that at full reach. It burns away every affliction you have on the target and deals 50% more damage for each one."
+  },
+  {
+   "name": "Dazzle",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "stunOnHit": 1.0,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "A flare of white flame that deals 11 damage to everything within 3 tiles ahead of you, stuns each target for 1 second and leaves it [Blunted], its critical hit chance lowered, for 6 seconds."
+  },
+  {
+   "name": "Watchtower Beacon",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 14,
+   "summonInterval": 1.5,
+   "summonRange": 224,
+   "castTime": 0.8,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lights a beacon where you stand for 14 seconds. Every 1.5 seconds its beam burns an enemy within 7 tiles, which deals 4 damage with a 40% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Held Focus",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "fire",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 10,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 10. Your next critical hit on it spends them all: a beam of focused heat strikes it for 27% of your weapon damage per stack (272% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

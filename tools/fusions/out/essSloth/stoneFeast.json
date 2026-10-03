@@ -1,0 +1,78 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneFeast",
+  "fusions": [
+    {
+      "name": "Month-Long Meal",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 1,
+      "spammable": true,
+      "speed": 360,
+      "radius": 7,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "leechOverTime": {
+        "frac": 0.5,
+        "duration": 8,
+        "label": "Digesting"
+      },
+      "desc": "Takes a bite that deals 5 damage to the first enemy it meets. 50% of the damage dealt comes back to you as healing over 8 seconds."
+    },
+    {
+      "name": "Food Coma",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 20,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1.2,
+      "debuff": {
+        "key": "recoveryDown",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends out a wave that deals 12 damage to every enemy within 3 tiles, stuns them for 1.2 seconds and leaves them [Fatigued] for 8 seconds."
+    },
+    {
+      "name": "Second Stomach",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "nature",
+      "buffStat": "healingReceived",
+      "buffAmount": 0.4,
+      "buffDuration": 20,
+      "cooldown": 60,
+      "desc": "Healing you receive rises by 40% for 20 seconds."
+    },
+    {
+      "name": "Larder for Later",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "kill",
+      "stackPay": "heal",
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackCap": 4,
+      "stackDecay": 10,
+      "stackScale": 1,
+      "stackIcon": "stackFortune",
+      "desc": "Every kill you make builds a stack on you, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

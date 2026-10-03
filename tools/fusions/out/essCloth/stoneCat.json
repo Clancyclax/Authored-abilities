@@ -1,0 +1,74 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Unravel",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.3,
+   "consumeAffliction": true,
+   "desc": "Bats a ball of yarn at an enemy up to 5 tiles away that deals 7 damage, up to 1.3 times as much at full reach. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Velvet Ambush",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A muffled weapon strike that deals 28 damage and is always a critical hit. It makes the target [Bleeding] for 3 damage a second for 4 seconds and leaves it [Suppressed] for 2 seconds."
+  },
+  {
+   "name": "Muffled Tread",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 18,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 18,
+   "stealthScope": "self",
+   "desc": "Binds your feet in cloth and veils you for 5 seconds: enemies notice you 70% later, you move 20% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Stitch in Time",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you is refused and leaves you at 1 health."
+  }
+ ]
+}

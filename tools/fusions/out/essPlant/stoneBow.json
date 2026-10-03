@@ -1,0 +1,77 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Pegging Shaft",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 80,
+   "base": 28,
+   "range": 320,
+   "maxMult": 2,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a thorn-headed shaft at one enemy within 10 tiles for 28 damage that ignores armour, rising to 2 times that at full reach. The shaft takes root and holds the target [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "Quiver of Thorns",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "plant",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 3,
+   "chargesMax": 4,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 380,
+   "radius": 6,
+   "range": 256,
+   "isAoe": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 thorns in a spread, each dealing 3 damage with a 35% chance to leave its target [Bleeding] for 4 seconds. Holds 4 charges; a kill restores one."
+  },
+  {
+   "name": "Fletcher's Sapling",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "plant",
+   "cooldown": 60,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonInterval": 1.2,
+   "summonRange": 192,
+   "summonDuration": 20,
+   "desc": "Roots a sapling where you stand for 20 seconds. It shoots thorns at enemies within 6 tiles, dealing 5 damage every 1.2 seconds."
+  },
+  {
+   "name": "Bodkin Tip",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "plant",
+   "pierceElement": "plant",
+   "armorIgnore": 0.2,
+   "regenPerSec": 1,
+   "desc": "Your plant damage cannot be resisted, and you regenerate 1 health a second."
+  }
+ ]
+}

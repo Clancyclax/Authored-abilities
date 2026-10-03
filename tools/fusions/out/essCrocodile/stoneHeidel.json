@@ -1,0 +1,78 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Trampling Spin",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Crashes down on every enemy within 3.5 tiles for 28 damage. Against a boss or an elite it also deals 5% of their maximum health. Its damage rises 5% for every 100 paces you have covered since you last used it (max 25%)."
+  },
+  {
+   "name": "Unflagging Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "A snapping strike that deals 7 damage and leaves the target 6% easier to wound for 4 seconds. Its damage rises 5% for every 100 paces you have covered since you last used it (max 25%). Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Staying Power",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 10,
+   "cooldown": 45,
+   "desc": "Restores 4 stamina a second for 10 seconds."
+  },
+  {
+   "name": "Wellspring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "armorBonus": 0.06,
+   "desc": "The moment your stamina is full, your physical damage rises by 25% for 5 seconds. Once every 15 seconds. Your armour rises by 6%."
+  }
+ ]
+}

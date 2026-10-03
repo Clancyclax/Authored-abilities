@@ -1,0 +1,71 @@
+{
+ "essence": "essBear",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Final Lunge",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 80,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "A lunge at a weakened target that deals 24 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to it. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Spoor Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a marking blow that deals 4 damage to the first enemy it meets. Each hit has a 35% chance of leaving the target [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Closing In",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dmg_physical",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your physical damage by 30% for 12 seconds. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Scent of Weakness",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

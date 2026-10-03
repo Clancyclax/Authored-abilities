@@ -1,0 +1,79 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "role": "long",
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "name": "Pounce From Below",
+   "element": "water",
+   "base": 26,
+   "cooldown": 70,
+   "maxMult": 1.8,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Surfaces under a target up to 6 tiles away for 26 damage, rising to 1.8 times that at full reach. It always strikes critically and leaves the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Fathom Purr",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "role": "medium",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "element": "resonating",
+   "base": 11,
+   "cooldown": 14,
+   "stunOnHit": 1,
+   "healOnUse": 8,
+   "desc": "A deep purr deals 11 damage to every enemy within 3 tiles and stuns them for 1 second. You regain 8 health."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "name": "Afternoon Doze",
+   "element": "water",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "healOnUse": 8,
+   "desc": "Restores 4 mana a second for 8 seconds, and you regain 8 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 90,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.25,
+    "cooldown": 90
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 5,
+    "duration": 8
+   },
+   "name": "Eight Lives Left",
+   "element": "water",
+   "desc": "Once your health falls below 25%, you regain 5 health a second for 8 seconds. Once every 90 seconds."
+  }
+ ]
+}

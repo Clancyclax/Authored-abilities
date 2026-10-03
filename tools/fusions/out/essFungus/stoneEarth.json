@@ -1,0 +1,83 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Loam Upheaval",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Heaves the ground, dealing 14 earth damage to every enemy within 3 tiles, knocking them back 3 tiles and giving them Rot for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wedged Boulder",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.3,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health. Hurls a stone packed with spores up to 7 tiles that deals 24 rock damage, rising to 1.3 times that at full reach, and leaves the target [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Fruiting Rampart",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 32,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Raises a wall of stone 5 tiles long for 8 seconds that nothing crosses. Enemies that touch it gain Rot for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "affliction",
+   "name": "Slow Weathering",
+   "template": "virulence",
+   "element": "earth",
+   "resist": {
+    "element": "earth",
+    "amount": 0.08
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You carry 8% earth resistance."
+  }
+ ]
+}

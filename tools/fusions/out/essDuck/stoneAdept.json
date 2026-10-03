@@ -1,0 +1,70 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Textbook Buffet",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 86,
+   "guaranteedCrit": true,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "A drilled wing-strike that deals 26 damage, is always a critical hit and knocks the target back 3 tiles. It leaves the target 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Opening Form",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Flicks a bead of water that deals 4 damage, with 30% more critical chance against a target that has not yet been wounded.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Collect Yourself",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 45,
+   "dodgeBonus": 0.1,
+   "blinkOnUse": 64,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and moves you 2 tiles from where you stood, with 10% more dodge chance."
+  },
+  {
+   "name": "Rehearsed Takeoff",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "wind",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

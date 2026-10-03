@@ -1,0 +1,80 @@
+{
+ "essence": "essChain",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Slammed Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bars of chain slam shut around you, which deals 14 damage to every enemy within 3 tiles, stuns each for 1.2 seconds and leaves it [Inescapable] for 4 seconds."
+  },
+  {
+   "name": "Warden's Lock",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a shackle at the first enemy it meets that deals 30 damage plus 5% of a boss's or elite's maximum health and leaves it [Suppressed] for 4 seconds."
+  },
+  {
+   "name": "Behind Bars",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "immunityDuration": 4,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Cell of Last Resort",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

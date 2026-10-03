@@ -1,0 +1,70 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scruff Grab",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "desc": "Grabs the target by the scruff for 12 damage, stunning it for 1.2 seconds and leaving it 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clench",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Pinches the target for 8 damage and leaves it [Bleeding] for 2 damage a second for 3 seconds. Each use costs 4% of your maximum health."
+  },
+  {
+   "name": "Settled Ruffles",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 45,
+   "cleanseCount": 3,
+   "healScope": "party",
+   "desc": "Removes up to 3 conditions from you and every ally."
+  },
+  {
+   "name": "Foster Chick",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "lifeOnKill": 3,
+   "familiarFamily": "bird",
+   "familiarCreatureName": "Chick",
+   "desc": "A chick raised at your side fights beside you, pecking enemies within 4 tiles for 4 damage every 1.2 seconds. Each kill it makes restores 3 health to you."
+  }
+ ]
+}

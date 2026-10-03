@@ -1,0 +1,73 @@
+{
+ "essence": "essWind",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Rising Palisade",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "wind",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "knockback": 64,
+   "desc": "Raises a row of upright gusts 5 tiles long for 5 seconds. It deals 11 damage to each enemy that crosses it and knocks it back 2 tiles."
+  },
+  {
+   "name": "Dropped Shutter",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "speed": 420,
+   "radius": 8,
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 30% health. Drops a column of air on the first enemy in its path that deals 20 damage and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Becalmed",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "wind",
+   "cooldown": 60,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "desc": "After a 1-second cast, stills the air and holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Pacing the Bars",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "wind",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. When it reaches 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

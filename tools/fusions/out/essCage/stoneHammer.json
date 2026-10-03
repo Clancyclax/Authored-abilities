@@ -1,0 +1,75 @@
+{
+ "essence": "essCage",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Leveller",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 40,
+   "cooldown": 100,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.25,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A flattening blow that deals 40 damage, ignores armour, leaves the target 25% easier to wound for 8 seconds and [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Anvil Toll",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 18,
+   "cooldown": 20,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Slams the ground, dealing 18 damage to every enemy within 3.5 tiles and stunning each for 1.2 seconds."
+  },
+  {
+   "name": "Smith's Summons",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "cooldown": 36,
+   "buffStat": "dmg_blunt",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 5,
+   "tauntDuration": 6,
+   "desc": "Increases your blunt damage by 25% for 10 seconds and pulls up to 5 enemies within 5 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Finishing Weight",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "blunt",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.06,
+   "desc": "Against enemies below half health, you deal 12% more damage. Your armour rises by 6%."
+  }
+ ]
+}

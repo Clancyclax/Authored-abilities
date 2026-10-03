@@ -1,0 +1,86 @@
+{
+ "essence": "essBow",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Barbed Polyp",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Fires a coral-barbed arrow that deals 4 water damage to the first enemy it meets and makes it [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Spawning Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Looses a coral-headed arrow at a target up to 7 tiles away that deals 12 water damage, rising to 1.4 times that at full reach, and makes it [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Reef Spire",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "castTime": 1,
+   "cooldown": 50,
+   "desc": "Grows a coral spire that stands for 15 seconds and looses a barb at an enemy within 6 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Calcifying Wounds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, a shield worth 10% of your maximum health closes over you for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

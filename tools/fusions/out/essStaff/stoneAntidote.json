@@ -1,0 +1,77 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Lancing Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 128,
+   "maxMult": 1.5,
+   "consumeAffliction": true,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy carrying one of your afflictions, and draws one of them out through the staff, using it up. The thrust reaches a target up to 4 tiles away and deals 8 damage, rising to 1.5 times that at full reach."
+  },
+  {
+   "name": "Wormwood Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sweeps the staff through a cone 4 tiles long. It deals 11 damage to everything in it and leaves each target [Poisoned] for 6 seconds. Your afflictions on each target spread to enemies within 3 tiles."
+  },
+  {
+   "name": "Drawn Through the Grain",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "desc": "You spin the staff in a guard for 9 seconds. Each condition laid on you has a 60% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Bracing Draught",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When one of your afflictions lifts, a shield worth 20% of your maximum health closes over you for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

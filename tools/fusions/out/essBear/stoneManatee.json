@@ -1,0 +1,76 @@
+{
+ "essence": "essBear",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Breaching Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "desc": "Rolls a surge of water that deals 14 damage to the first enemy it meets and knocks it back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Drifting Wake",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 80,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pushes a wake out around you; each hit deals 3 damage to every enemy within 2.5 tiles. Each hit has a 50% chance of leaving the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Calm Waters",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 10,
+   "cooldown": 40,
+   "desc": "Removes up to 2 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Rising Tide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.5
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "When your health falls below 50%, the healing you receive is 40% stronger for 8 seconds. Once every 40 seconds."
+  }
+ ]
+}

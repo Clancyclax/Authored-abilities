@@ -1,0 +1,68 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stooping Landfall",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 224,
+   "desc": "You stoop onto a target up to 7 tiles away and land with the weight of stone, dealing 14 damage to every enemy within 2.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Geode Clutch",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 8,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "explodeRadius": 64,
+   "splashFrac": 0.5,
+   "desc": "Throws a stone egg that deals 8 damage to the first enemy it meets and bursts over every enemy within 2 tiles for 50% as much. You hold 3; each kill gives one back."
+  },
+  {
+   "name": "Crag Perch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "cooldown": 40,
+   "desc": "You hop 2 tiles onto a perch of stone, and your armour rises by 20% for 10 seconds."
+  },
+  {
+   "name": "Ballast",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, you gain a shield of packed grit worth 12% of your maximum health for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

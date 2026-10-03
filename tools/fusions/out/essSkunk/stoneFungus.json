@@ -1,0 +1,92 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Ripe Puffballs",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 288,
+   "corpse": true,
+   "explodeRadius": 112,
+   "mineSeconds": 30,
+   "desc": "Seeds up to 3 bodies within 9 tiles with puffballs for 30 seconds. Each one bursts the moment an enemy comes within 2 tiles of it and deals 26 damage to everything within 3.5 tiles."
+  },
+  {
+   "name": "Settling Spores",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 240,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Puffs a cloud of stinkhorn spores at the first enemy within 6 tiles that deals 3 damage and leaves it [Poisoned] for 1 damage a second for 8 seconds."
+  },
+  {
+   "name": "Stink-Cap Stand",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 0.5 seconds to plant a stand of stinkhorns beside you for 12 seconds. They shed spores on an enemy within 4 tiles for 3 damage every 1.5 seconds, each time with a 35% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Fruiting Body",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 4,
+    "range": 160
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "When one of your conditions on an enemy runs out, a puff of spores hits the nearest enemy within 5 tiles and deals 4 damage, leaving it [Poisoned] for 2 damage a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

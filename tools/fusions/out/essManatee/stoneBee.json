@@ -1,0 +1,97 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "basic",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spammable": true,
+   "name": "Drowsy Sting",
+   "element": "poison",
+   "base": 3,
+   "cooldown": 0.9,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 8 seconds, with a 30% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "role": "medium",
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "name": "Swarm Settles",
+   "element": "poison",
+   "base": 5,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 280,
+   "radius": 7,
+   "spreadAfflictions": 96,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Sends 3 clusters of bees at once, spread apart, each dealing 5 damage. Your afflictions on each enemy hit spread to every enemy within 3 tiles of it, and 20% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "name": "Passenger Hive",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 50,
+   "desc": "After a 0.5-second cast, wakes the hive you carry for 15 seconds: it stings an enemy within 4 tiles for 3 damage every second. Each kill you make while it is out restores 4 health.",
+   "lifeOnKill": 4
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "name": "Honey for Labour",
+   "element": "nature",
+   "desc": "Each time you spend stamina, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

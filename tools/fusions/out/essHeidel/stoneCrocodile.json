@@ -1,0 +1,71 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snap From Stillness",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "chargeTo": 128,
+   "scaleOn": "targetStamina",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "You burst up to 4 tiles to the target and snap at everything in a 3-tile cone, dealing 12 damage and stunning what you catch for 1.2 seconds. Its damage rises 8% for every 10% of health the target still has, up to 40%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bankside Lunge",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "maxMult": 1.8,
+   "range": 192,
+   "cooldown": 70,
+   "bossPct": 0.05,
+   "desc": "A lunge at a target up to 6 tiles away that deals 26 damage plus 5% of a boss or elite's maximum health, rising to 1.8 times that at full range."
+  },
+  {
+   "name": "Settled Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your stamina recovery by 40% for 15 seconds."
+  },
+  {
+   "name": "Waiting Haunches",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 30% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Preen-Gland Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chargesMax": 3,
+   "desc": "A weapon strike slicked with tail-gland oil that deals 8 damage and leaves the target [Poisoned] for 1 damage a second for 10 seconds. Holds 3 charges; each kill gives one back."
+  },
+  {
+   "name": "Slick Underfoot",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 11,
+   "range": 112,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays oily musk across a cone 3.5 tiles long, dealing 11 damage to everything in it, stunning it for 1 second and leaving it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Oilskin",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 75,
+   "immunityDuration": 3,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Rolls Off, Sticks On",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it instead."
+  }
+ ]
+}

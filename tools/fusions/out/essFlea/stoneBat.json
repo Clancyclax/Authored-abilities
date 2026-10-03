@@ -1,0 +1,80 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Night Sip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "thiefOfLife",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a dart of darkness at the first enemy in a line up to 7 tiles away that deals 7 dark damage, with a 30% chance to leave it [Thief of Life] for 5 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Shrieking Draught",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "dark",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "leech": 0.25,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A shriek that deals 26 dark damage, ignoring resistances, to everything in a cone 4 tiles ahead. You heal for 25% of the damage dealt, and each hit has a 50% chance to leave the target [Muddled] for 4 seconds."
+  },
+  {
+   "name": "Roost and Digest",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "blood",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 3 health a second to you for 8 seconds, rising by 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Small-Hours Appetite",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "At night you deal 12% more damage. You have 5% more dodge chance at all times."
+  }
+ ]
+}

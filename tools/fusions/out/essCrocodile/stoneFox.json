@@ -1,0 +1,86 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Playing Dead",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 18,
+   "cooldown": 16,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "stunOnHit": 1.2,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A sudden snap that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. It has 50% more critical chance against a target that has not been hurt yet, and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Wrong Turn",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "confuse": {
+    "chance": 0.2,
+    "duration": 2.5
+   },
+   "desc": "Spits 3 clods of mud at once, spread apart. Each deals 3 damage, with a 20% chance to turn its target against its allies for 2.5 seconds."
+  },
+  {
+   "name": "Dangled Bait",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "water",
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "A feint that pulls up to 5 enemies within 7 tiles onto you and holds their attention for 6 seconds."
+  },
+  {
+   "name": "Bided Time",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35,
+    "strikes": 1
+   },
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Each time you afflict something, your next strike has 35% more critical chance. Once every 8 seconds. Your strikes also have 30% more critical chance against an enemy that has not been wounded yet."
+  }
+ ]
+}

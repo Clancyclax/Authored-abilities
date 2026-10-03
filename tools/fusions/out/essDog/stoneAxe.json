@@ -1,0 +1,81 @@
+{
+ "essence": "essDog",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Headsman's Due",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 90,
+   "requiresTargetBelow": 0.3,
+   "stackMult": 1.6,
+   "executeLadder": true,
+   "desc": "Strikes a target at or below 30% health and deals 24 damage, plus 1.6 times the remaining damage of every affliction on it, which are used up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Worry the Cut",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 64,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps through a cone 2 tiles ahead and deals 4 damage, with a 30% chance each to leave the target [Bleeding] for 4 seconds. It deals 8% more for each affliction already on the target, up to 40%.",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4
+  },
+  {
+   "name": "Cut Loose",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "slashing",
+   "cooldown": 45,
+   "powerMult": 1.25,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Increases your damage by 25% for 10 seconds and your movement speed by 20% for 6 seconds."
+  },
+  {
+   "name": "Blooded",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your physical damage rises by 25% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

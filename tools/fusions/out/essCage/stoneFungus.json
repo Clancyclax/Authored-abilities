@@ -1,0 +1,90 @@
+{
+ "essence": "essCage",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mycelial Bind",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon strike that deals 12 damage, leaves the target [Poisoned] for 3 damage a second for 5 seconds and [Caged] for 3 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Puffball Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 0.15,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bursts a cloud that deals 3 damage to every enemy within 2.5 tiles and leaves each [Poisoned] for 1 damage a second for 4 seconds. Each hit has a 15% chance to leave the target [Caged] for 2 seconds."
+  },
+  {
+   "name": "Brittle Husk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "cooldown": 30,
+   "thornsFrac": 0.5,
+   "buffDuration": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and each such blow leaves the attacker [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Slow Colony",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "armorBonus": 0.05,
+   "regenPerSec": 0.5,
+   "desc": "Your afflictions take hold on enemies that are immune to them. You regenerate 0.5 health a second and your armour rises by 5%."
+  }
+ ]
+}

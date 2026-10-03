@@ -1,0 +1,74 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bulk Behind the Blow",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "maxMult": 1.5,
+   "range": 192,
+   "cooldown": 70,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A lunging blow at a target up to 6 tiles away that deals 28 damage, ignoring armour, rising to 1.5 times that at full range. It leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barge Through",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 112,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "You barge through, dealing 14 damage to every enemy within 2 tiles and knocking them 3.5 tiles back. Its damage rises 10% for every 100 paces you have run since you last used it, up to 50%."
+  },
+  {
+   "name": "Winter Fat",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "restoreAmount": 30,
+   "healOnUse": 10,
+   "cooldown": 40,
+   "desc": "Restores 30 stamina and 10 health to you at once."
+  },
+  {
+   "name": "Settling Weight",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

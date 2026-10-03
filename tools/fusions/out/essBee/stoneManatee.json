@@ -1,0 +1,98 @@
+{
+ "essence": "essBee",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Languid Wash",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 2,
+    "radius": 95,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 95,
+   "chainDamagePct": 0.6,
+   "desc": "Every enemy within 3 tiles takes 4 damage, then it leaps to 2 more enemies within 3 tiles for 60% of the original damage. Each hit has a 30% chance of [Enervated] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gentle Nudge",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "knockback": 64,
+   "base": 12,
+   "maxMult": 1.5,
+   "cooldown": 12,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A thrown stinger that deals 12 damage, rising to 1.5 times that at maximum range, knocking the target back 2 tiles. It makes the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "name": "Still Shallows",
+   "element": "water",
+   "healPerSec": 3,
+   "fieldDuration": 12,
+   "range": 125,
+   "cooldown": 45,
+   "healScope": "party",
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "desc": "Raises a still pool where you stand. For 12 seconds it restores 3 health a second to you and any ally inside it. Every ally inside 5.5 tiles makes it 11% stronger, to a limit of 4."
+  },
+  {
+   "kind": "passive",
+   "name": "Unhurried Tide",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a stack on you, up to 6. When you reach 6, they all spend at once: you are healed for 3% of your maximum health per stack (18% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

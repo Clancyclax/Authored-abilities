@@ -1,0 +1,70 @@
+{
+ "essence": "essRake",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Sieve the Shallows",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.25,
+   "desc": "Combs the tines through every enemy within 2.5 tiles for 3 damage, and you heal for 25% of the damage dealt.",
+   "spammable": true
+  },
+  {
+   "name": "Upended Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 192,
+   "maxMult": 1.8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Tips forward and strikes a target up to 6 tiles away for 28 damage, rising to 1.8 times that at full reach. It ignores resistances."
+  },
+  {
+   "name": "Preened Slick",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Nothing Wasted",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 5
+   },
+   "desc": "When you regain health, you also regain 5 mana. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Staple Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 5,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a heavy staple that deals 5 damage to the first enemy it meets, with a 25% chance per hit to leave it [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Shutter Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.0,
+   "desc": "Slams a mail-hung shutter round you, dealing 11 damage to every enemy within 2.5 tiles and stunning them for 1 second."
+  },
+  {
+   "name": "Linked Hauberk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 45,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldAmount": 28,
+   "shieldStrikes": 0,
+   "shieldDuration": 10,
+   "armorBonus": 0.15,
+   "desc": "Links a barrier of mail that absorbs the next 28 damage and raises your armour by 15% for 10 seconds."
+  },
+  {
+   "name": "Riveted Lining",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

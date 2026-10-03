@@ -1,0 +1,77 @@
+{
+ "essence": "essApe",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Bare-Knuckle Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Throws a punch of raw force that deals 4 damage to the first enemy it meets. It then leaps to 1 more enemy within 3.5 tiles for 60% of the original damage."
+  },
+  {
+   "name": "Unbound Pound",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Slams a wave of raw arcana that deals 30 damage to every enemy within 3.5 tiles and ignores their resistances."
+  },
+  {
+   "name": "Quickened Beat",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 45,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your casting speed by 30% for 15 seconds."
+  },
+  {
+   "name": "Charged Fist",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "armorBonus": 0.05,
+   "desc": "Each time you spend stamina, your next spell deals 25% more damage. Once every 6 seconds. Your armour rises by 5%."
+  }
+ ]
+}

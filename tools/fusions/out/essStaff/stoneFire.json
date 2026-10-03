@@ -1,0 +1,77 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Both Ends Alight",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 96,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Costs 4% of your maximum health. Spins the staff with both ends burning: it deals 9 damage to every enemy within 3 tiles and sets each [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rake Out the Coals",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy at or below 30% health, a threshold that rises with each rank. Rakes the burning end of the staff through the target: it deals 18 damage and consumes every affliction on it, adding 1.8 times their remaining damage to the hit."
+  },
+  {
+   "name": "Line in the Ash",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 10,
+   "wallThickness": 32,
+   "base": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Drags the burning end of the staff across the ground to draw a line 5 tiles long that burns for 10 seconds. It deals 4 damage to anything that crosses it and sets it [Burning] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Torchbearer",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "At night, with the head of the staff lit, you deal 12% more damage."
+  }
+ ]
+}

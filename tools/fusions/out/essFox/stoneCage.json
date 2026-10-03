@@ -1,0 +1,88 @@
+{
+ "essence": "essFox",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "String-Pulled Door",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a barred door on a target up to 6 tiles away, dealing 12 damage, rising to 1.5 times that at full reach. The target is stunned for 1.2 seconds and left [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Gnawed Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Costs 5% of your maximum health. A tearing bite deals 9 damage and makes the target [Bleeding] for 3 damage a second for 4 seconds, and you move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Baited Bars",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Drops a baited cage ahead of you for 5 seconds that drags every enemy near it inward and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Sprung Latch",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Boggy Thrash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Thrashes with the blade dug in and churns the ground to mud, dealing 28 earth damage to every enemy within 3 tiles and leaving each one [Slowed] for 5 seconds. Against a boss or an elite it also deals 5% of their maximum health.",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Mudbank Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Clamps the blade shut on the target and rolls it under the mud, dealing 14 damage, stunning it for 1.2 seconds and leaving it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Waiting Pit",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 24,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Digs a covered pit at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles takes 24 damage."
+  },
+  {
+   "name": "Sunk to the Eyes",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 30% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

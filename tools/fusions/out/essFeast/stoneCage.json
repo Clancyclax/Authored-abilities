@@ -1,0 +1,87 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Snared Supper",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.2,
+   "desc": "Throws a snare that deals 12 damage to the first enemy it meets, stuns it for 1.2 seconds and leaves it [Slowed] for 4 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Locked Pantry",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 112,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "desc": "Drops bars around you, dealing 26 damage to every enemy within 3.5 tiles, ignoring their armour, and leaving them [Pinned] for 3 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Fattening Pen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "healOnUse": 10,
+   "cooldown": 20,
+   "desc": "Closes a pen 5 tiles long ahead of you for 6 seconds that drags every enemy near it inward, and restores 10 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "element": "physical",
+   "name": "Kept for Later",
+   "desc": "When you inflict a condition on an enemy, you heal for 20% of all damage you deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

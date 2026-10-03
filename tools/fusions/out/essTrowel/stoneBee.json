@@ -1,0 +1,75 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Brood Cells",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "chargesMax": 5,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Stings every enemy within 2.5 tiles, which deals 7 damage. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Mud-Dauber's Errand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Sends a bee at the first enemy it meets, which deals 11 damage and leaves it [Poisoned] for 2 damage a second for 4 seconds. It then carries your afflictions on that enemy to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Swarm Lodge",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.4,
+   "cooldown": 40,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.4-second cast, builds a hive for 12 seconds. Every second its swarm stings an enemy within 4 tiles and deals 3 damage, with a 30% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Industry of the Comb",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "cooldownReduction": 0.07,
+   "desc": "Every ability you have comes round 7% sooner."
+  }
+ ]
+}

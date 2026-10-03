@@ -1,0 +1,74 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Palmed Dose",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A weapon strike with musk smeared across your palm that deals 12 damage and leaves the target [Poisoned] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Wafted Their Way",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Fans musk with an open hand across a cone 3 tiles long that deals 3 damage to everything in it, with a 30% chance to leave each target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Hold Your Nose",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 8,
+   "desc": "Removes up to 2 poison conditions from you and your allies, and restores 8 health to you."
+  },
+  {
+   "name": "Grip That Won't Wash",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 10% poison resistance."
+  }
+ ]
+}

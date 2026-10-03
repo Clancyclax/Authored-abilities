@@ -1,0 +1,81 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Worked Appetite",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "leech": 0.25,
+   "desc": "A bite that deals 4 damage, rising by 5% for every 100 paces you have run since you last used it (up to 30%), and leaves the target 5% easier to wound for 3 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bolted Meal",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 192,
+   "leech": 0.3,
+   "desc": "Bolts up to 6 tiles to the target and bites for 14 damage, rising to 1.5 times that at full reach. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Nosebag Round",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 16,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Restores 16 health to you and every ally within 4 tiles. You move 15% faster for 6 seconds."
+  },
+  {
+   "name": "Earned Fodder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, you regain 3 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

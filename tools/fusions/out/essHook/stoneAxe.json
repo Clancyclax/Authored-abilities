@@ -1,0 +1,75 @@
+{
+ "essence": "essHook",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Back-Spike Trip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 12,
+   "strikes": 1,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Catches the target's leg with the back-spike and brings the blade down. It deals 16 damage, stuns the target for 1.2 seconds and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Headsman's Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 112,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Pulls the target's head down and drops the edge on it, dealing 24 damage and leaving it 10% easier to wound for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Timber Skid",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Pulls a felled trunk 5 tiles long across the ground for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Neck on the Block",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 9,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 9
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your physical damage rises 25% for 4 seconds. Once every 9 seconds."
+  }
+ ]
+}

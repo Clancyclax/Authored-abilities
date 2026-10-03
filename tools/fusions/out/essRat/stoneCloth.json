@@ -1,0 +1,70 @@
+{
+  "essence": "essRat",
+  "stone": "stoneCloth",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Pulled Thread",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 84,
+      "sunder": {
+        "amount": 0.06,
+        "duration": 4
+      },
+      "desc": "Gnaws a thread loose from the target, dealing 4 damage and leaving it 6% easier to wound for 4 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "isAoe": true,
+      "coneAngle": 0.9,
+      "name": "Moth-Eaten Wards",
+      "element": "arcane",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 128,
+      "aoeBand": "medium",
+      "ignoreResist": true,
+      "desc": "The swarm chews through every woven protection in a cone 4 tiles long, dealing 26 damage to everything in it. It ignores resistances."
+    },
+    {
+      "name": "Thrown Dust Sheet",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "physical",
+      "cooldown": 30,
+      "stealthDuration": 6,
+      "stealthAlpha": 0.35,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 0,
+      "stealthScope": "party",
+      "desc": "Throws a sheet over you and every ally near you for 6 seconds. Enemies notice you 60% later, and the sheet comes off the moment you attack."
+    },
+    {
+      "name": "Lined Burrow",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "hit",
+      "stackPay": "ward",
+      "stackCap": 8,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.6,
+      "stackIcon": "stackWard",
+      "desc": "Every time you land a hit, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rote Incision",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.3,
+    "label": "Poisoned"
+   },
+   "desc": "A practised cut that deals 7 damage and lodges coral grit in the wound: the target is [Poisoned] for 2 damage a second for 6 seconds, and each tick has a 30% chance to crit. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Textbook Spurs",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Raises a ring of coral spurs that deals 30 damage to every enemy within 3 tiles. Every hit is a critical hit and leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Studied Stillness",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "rock",
+   "critChanceBonus": 0.2,
+   "buffDuration": 30,
+   "castTime": 2,
+   "cooldown": 90,
+   "desc": "After 2 seconds of holding still, your critical hit chance rises by 20% for 30 seconds."
+  },
+  {
+   "name": "Laid Down by Practice",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "rock",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use lays a stack on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

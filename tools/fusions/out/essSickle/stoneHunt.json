@@ -1,0 +1,69 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Leave a Red Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a crescent that deals 4 damage, with a 30% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Winded Prey",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "A cut on a target up to 7 tiles away that deals 20 damage, rising to 1.5 times that at full reach, and slows it by 25% for 3 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Quarry in Outline",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Scent of the Wound",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.2,
+   "desc": "Against enemies below half health, you deal 20% more damage."
+  }
+ ]
+}

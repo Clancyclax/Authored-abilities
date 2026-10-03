@@ -1,0 +1,76 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Laid Open for All",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "healOnUse": 10,
+   "desc": "Tears open every enemy within 3 tiles, dealing 26 damage, and restores 10 health to you. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Last Morsel",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 12,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "healOnUse": 14,
+   "desc": "Usable only on an enemy at or below 25% health. A claw tears into the first enemy it meets, dealing 18 damage, and restores 14 health to you."
+  },
+  {
+   "name": "Termite Banquet",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "You gorge and restore 16 health. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Surplus Plating",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 6
+   },
+   "desc": "The moment you are back at full health, you gain a shield worth 12% of your maximum health for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

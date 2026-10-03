@@ -1,0 +1,86 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Alarm Sting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A darting sting that deals 3 poison damage, with a 50% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Swarm Pursuit",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 14,
+   "volleyCount": 4,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "spreadAfflictions": 128,
+   "desc": "Looses 4 stingers at once, spread apart, each dealing 5 poison damage. Your afflictions on anything they hit spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Harrying Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Calls up a swarm for 12 seconds that stings an enemy within 4 tiles for 4 damage every 1 second, each sting with a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Forager's Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Every few paces you cover restores 6 stamina. Once every 8 seconds."
+  }
+ ]
+}

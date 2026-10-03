@@ -1,0 +1,77 @@
+{
+ "essence": "essIron",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Clamp and Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 4
+   },
+   "desc": "A clamping, rolling weapon strike that deals 24 damage, makes the target [Bleeding] for 3 damage a second for 5 seconds and slows it by 30% for 4 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Jaws From Below",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 96,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Snaps a hinged jaw shut across a cone 3 tiles long, dealing 26 damage to everything in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Mantrap in the Shallows",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Sets a jaw trap at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles takes 22 damage."
+  },
+  {
+   "name": "Grip Never Slackens",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "Against enemies below half health, you deal 12% more damage. Your armour rises by 5%."
+  }
+ ]
+}

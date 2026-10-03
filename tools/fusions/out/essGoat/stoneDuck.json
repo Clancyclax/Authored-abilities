@@ -1,0 +1,95 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drenching Shake",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the water from your coat in a 4-tile cone, dealing 12 water damage to everything caught, knocking it 2 tiles back and leaving it [Soaked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Puddle Kick",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a splash of water at the target for 4 damage, with a 30% chance to leave it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 9 seconds, each condition laid on you has a 50% chance to be sent back to whoever laid it instead."
+  },
+  {
+   "name": "Dry-Shod",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move 10% faster over it than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and your dodge chance is 8% higher while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "and your health regenerates 15% faster while you are on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your dodge chance rises by 8%, and from gold your health regenerates 15% faster."
+  }
+ ]
+}

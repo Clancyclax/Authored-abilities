@@ -1,0 +1,72 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Textbook Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "A finishing blow that deals 20 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Master's Demonstration",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A model strike that deals 28 damage and leaves the target 15% easier to wound for 8 seconds. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Drilled Repetition",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Rehearsed Motions",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "crit",
+   "stackPay": "power",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a critical hit, a stack builds on you, up to 10. The next ability you use spends them all: you deal 3% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

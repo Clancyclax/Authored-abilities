@@ -1,0 +1,77 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Loosed Self",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "ignoreArmor": true,
+   "desc": "A leaping strike at an enemy up to 9 tiles away that deals 28 piercing damage, up to 2 times that at the full 9 tiles. It ignores armour."
+  },
+  {
+   "name": "Quiver of Biters",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 3,
+   "desc": "You loose 3 fleas in a spread out to 7 tiles, each dealing 3 damage to the enemy it strikes. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Coiled Release",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "piercing",
+   "dashDist": 192,
+   "cooldown": 8,
+   "castTime": 0.6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "After a 0.6 second draw, you launch 6 tiles forward and move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Taut Legs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When your stamina is full, your physical damage rises by 30% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

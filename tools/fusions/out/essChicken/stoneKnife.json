@@ -1,0 +1,77 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hidden Spur",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "A concealed spur-slash that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds, with 50% more critical hit chance against a target nothing has yet wounded."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sunday Dinner",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "stackMult": 1,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "desc": "Carves a target at or below 25% health for 24 damage, using up your afflictions on it and adding their remaining damage to the blow."
+  },
+  {
+   "name": "Honed Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.35,
+   "buffDuration": 12,
+   "desc": "Your critical hit damage rises by 35% for 12 seconds."
+  },
+  {
+   "name": "Cutting Streak",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "Each time you kill an enemy, your next strike gains 25% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

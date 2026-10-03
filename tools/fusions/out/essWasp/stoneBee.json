@@ -1,0 +1,80 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 7,
+   "name": "Robbing the Comb",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 5,
+    "label": "Robbed Honey"
+   },
+   "desc": "A sting that deals 4 damage to the first enemy it meets. 25% of the damage it deals comes back to you as healing over the following 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Left-Behind Barb",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.2,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Costs 5% of your maximum health. A sting that deals 8 damage and leaves the target [Poisoned] for 3 damage a second for 6 seconds."
+  },
+  {
+   "name": "Rally Scent",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "nature",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 36,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "name": "Never Idle Wings",
+   "element": "nature",
+   "desc": "Each time you kill an enemy, 3 stamina a second comes back to you for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Strand Barrage",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "earth",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 380,
+   "radius": 7,
+   "range": 192,
+   "isAoe": true,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 barbed rootlets at once, spread apart, each dealing 3 damage. Each hit has a 20% chance of [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Matted Snarl",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Flings a mat of woven roots that deals 12 damage to the first enemy it meets, stuns it for 1 second and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Spun Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Raises your armour by 20% for 12 seconds."
+  },
+  {
+   "name": "Selvedge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 10% of your maximum health for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

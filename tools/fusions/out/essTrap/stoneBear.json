@@ -1,0 +1,94 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Mauled Where It Lies",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "bossPct": 0.06,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A mauling weapon strike that deals 28 damage plus 6% of a boss's or elite's maximum health and leaves the target [Bleeding] for 3 damage a second for 5 seconds. Its damage rises 10% for each affliction already on the target, up to 40%."
+  },
+  {
+   "name": "Snagging Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags a snagged log through a cone 2.5 tiles long that deals 4 damage to every enemy in it, with a 25% chance to leave each [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Iron Maw",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDmg": 26,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a heavy iron jaw at the nearest enemy that arms after 1 second and waits up to 30 seconds. It deals 26 damage to the first enemy to come within 2 tiles and leaves it [Pinned] for 4 seconds."
+  },
+  {
+   "name": "Poked Once Too Often",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: a blow strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack (272% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Lance the Swelling",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A cut that deals 16 poison damage, draws out every affliction you have on the target and deals 60% more damage for each one drawn, then leaves it [Poisoned] for 2 damage a second for 4 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Carried Bitterness",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 1,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "leech": 0.3,
+   "isAoe": true,
+   "desc": "Sweeps a cone 3 tiles long that deals 3 poison damage to everything in it and leaves each [Poisoned] for 1 damage a second for 4 seconds. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Pare Away the Rot",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 12,
+   "desc": "Removes up to 3 poison conditions from you and your allies and restores 12 health."
+  },
+  {
+   "name": "Drawn Into the Blade",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "When you inflict a condition, you heal for 20% of the damage you deal for 4 seconds. Once every 10 seconds. You have 8% poison resistance."
+  }
+ ]
+}

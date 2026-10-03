@@ -1,0 +1,71 @@
+{
+ "essence": "essRake",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Upthrown Ridge",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 30,
+   "stunOnHit": 0.8,
+   "desc": "Drags up a jagged ridge 6 tiles long that stands for 6 seconds. It deals 12 damage to each enemy that crosses it and stuns it for 0.8 seconds."
+  },
+  {
+   "name": "Clod Breaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargesMax": 3,
+   "desc": "Brings the tines down for 8 damage, leaving the target 10% easier to wound for 5 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Heaped Berm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "cooldown": 36,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "desc": "Raises your armour by 20% for 10 seconds."
+  },
+  {
+   "name": "Grit Underfoot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you deal 20% more physical damage for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Kicked Scree",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "rock",
+   "role": "medium",
+   "base": 7,
+   "cooldown": 12,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 340,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "knockback": 64,
+   "desc": "Your hind legs kick 3 jagged stones in a spread out to 6 tiles, each dealing 7 damage and knocking what it hits back 2 tiles."
+  },
+  {
+   "name": "Up From Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "You burrow to a target up to 5 tiles away and erupt beneath it for 30 damage, ignoring its armour, and leave it 20% easier to wound for 8 seconds.",
+   "chargeTo": 160
+  },
+  {
+   "name": "Toadstone",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "cooldown": 36,
+   "desc": "You burrow and surface 2 tiles from where you stood, and your armour rises by 20% for 10 seconds."
+  },
+  {
+   "name": "Dig In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.3,
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you gain a ward worth 25% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

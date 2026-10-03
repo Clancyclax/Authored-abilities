@@ -1,0 +1,81 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneCage",
+  "fusions": [
+    {
+      "name": "Shut the Lid",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 15,
+      "range": 84,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "stackMult": 1.4,
+      "requiresTargetBelow": 0.3,
+      "executeLadder": true,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Usable only on an enemy at or below 30% health, a threshold that rises with each rank. The blow deals 20 damage, consumes every affliction on the target, adding 1.4 times their remaining damage, and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+    },
+    {
+      "name": "Narrowing Bars",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.35,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A ring of barbed bars swings in around you and deals 4 damage to every enemy within 2.5 tiles, with a 35% chance to leave each [Slowed] for 3 seconds."
+    },
+    {
+      "name": "The Closing Grate",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "wallKind": "pull",
+      "wallLength": 192,
+      "wallDuration": 5,
+      "wallThickness": 26,
+      "pullForce": 32,
+      "cooldown": 24,
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 2
+      },
+      "desc": "Drives a stake into the ground ahead of you and draws a ring of bars 6 tiles across in toward it for 5 seconds, dragging every enemy near it inward. Anything it catches moves 25% slower for 2 seconds."
+    },
+    {
+      "name": "Nowhere to Turn",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "piercing",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "Against an enemy carrying one of your afflictions, your damage rises 12%."
+    }
+  ]
+}

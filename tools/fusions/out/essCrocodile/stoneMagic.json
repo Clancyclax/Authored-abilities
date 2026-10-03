@@ -1,0 +1,86 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Spellbitten",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "spellImpetus",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a bolt of arcana that deals 4 damage to the first enemy it meets, with a 30% chance of [Spell Impetus] for 6 seconds, lowering every resistance."
+  },
+  {
+   "name": "Yawning Maw",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Opens the jaws on a wide cone 4 tiles ahead that deals 26 damage to everything in it and leaves it [Exposed] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Silted Ward",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "arcane",
+   "armorBonus": 0.2,
+   "resist": {
+    "element": "arcane",
+    "amount": 0.25
+   },
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Raises your armour by 20% and your arcane resistance by 25% for 15 seconds."
+  },
+  {
+   "name": "Thickened Husk",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.06,
+    "duration": 4
+   },
+   "desc": "Each time you spend mana, a shield worth 6% of your maximum health closes over you for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

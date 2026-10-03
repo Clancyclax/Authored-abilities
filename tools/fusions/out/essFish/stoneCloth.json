@@ -1,0 +1,71 @@
+{
+ "essence": "essFish",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Cast Net",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 300,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1.0,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Throws a weighted net that bursts on the first enemy it meets, dealing 12 damage, with 80% of that to every enemy within 3 tiles. Everything it hits is stunned for 1 second."
+  },
+  {
+   "name": "Shimmer Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "light",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flashes a cone of silver shimmer 5 tiles long ahead of you, dealing 3 damage to everything in it with a 30% chance to leave each target [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Fold the Light",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "light",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectChance": 0.4,
+   "reflectFrac": 0.4,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is sent back to whoever dealt it."
+  },
+  {
+   "name": "Silver Weave",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "light",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "In daylight, your dodge chance rises by 12%."
+  }
+ ]
+}

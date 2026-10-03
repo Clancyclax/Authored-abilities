@@ -1,0 +1,81 @@
+{
+ "essence": "might",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Peel the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.25,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A blow that deals 30 damage, ignoring the target's armour, and leaves it 25% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Bulwark Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives your shoulder plate through a cone 3 tiles long. It deals 12 damage to everything in it, knocks each enemy back 3 tiles and leaves it [Damped] for 4 seconds."
+  },
+  {
+   "name": "Shoulder the Blow",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 26,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.12,
+   "desc": "Raises a barrier that absorbs the next 26 damage and holds for 8 seconds. Your armour rises by 12% while it holds."
+  },
+  {
+   "name": "Harness None Could Lift",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.12,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 12
+    }
+   ],
+   "thornsFrac": 0.06,
+   "desc": "Conjures a harness of heavy plate: every hit you take is 2 lower, your armour rises by 12%, your maximum health rises by 12, and 6% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

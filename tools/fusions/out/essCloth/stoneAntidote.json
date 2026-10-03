@@ -1,0 +1,73 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Wrung Poultice",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Wrings a venom-soaked rag out in a cone up to 5 tiles ahead, dealing 10 damage and leaving everything caught [Poisoned] for 6 seconds. Your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Drawn Sting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "desc": "Flings a wet poultice pad that deals 8 damage to the first enemy it meets and draws one of your afflictions out of it, healing you for 20% of the damage dealt. It needs an affliction of yours on the target and uses it up."
+  },
+  {
+   "name": "Fresh Dressings",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 24,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "desc": "Changes the dressings on you and every ally, removing up to 2 poison conditions from each."
+  },
+  {
+   "name": "Soaked Through",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Each affliction laid on you has a 20% chance to be sent back to whoever laid it. Your poison resistance rises by 10%."
+  }
+ ]
+}

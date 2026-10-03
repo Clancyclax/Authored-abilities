@@ -1,0 +1,73 @@
+{
+ "essence": "essFox",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Hounding Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a bolt that deals 12 damage to the first enemy it meets, stuns it for 0.8 seconds and leaves it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Fresh Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A strike on a target up to 7 tiles away that deals 16 damage, rising to 1.4 times that at full reach. Its damage rises 8% per affliction the target carries (max 40%). Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Downwind",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds. Enemies notice you 70% later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Nose to Ground",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies carrying your afflictions, you deal 15% more damage."
+  }
+ ]
+}

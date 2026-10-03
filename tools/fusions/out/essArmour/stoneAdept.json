@@ -1,0 +1,73 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Seam Finder",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 80,
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "desc": "A trained thrust into the gap between plates that deals 30 damage, ignores the target's armour and leaves it 15% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Measured Lunge",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "debuff": {
+    "stacks": 1,
+    "potency": 1,
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 3
+   },
+   "desc": "A drilled lunge at the weapon arm that deals 7 damage, up to 1.5 times as much at 4 tiles, and leaves the target [Hindered] for 3 seconds. Holds 4 charges; a kill gives one back."
+  },
+  {
+   "name": "Drilled Guard",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Reduces the damage you take by 20% for 12 seconds, and you move 15% faster for the first 5 seconds."
+  },
+  {
+   "name": "Worn Like Skin",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "cooldownReduction": 0.05,
+   "resist": {
+    "element": "physical",
+    "amount": 0.06
+   },
+   "desc": "Your other abilities' cooldowns are 5% shorter, and your physical resistance rises by 6%."
+  }
+ ]
+}

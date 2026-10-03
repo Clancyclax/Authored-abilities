@@ -1,0 +1,35 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Swinging Links",
+   "kind": "active", "category": "attack", "template": "aoeRing", "element": "physical", "role": "basic",
+   "base": 4, "cooldown": 0.9, "spammable": true, "range": 64, "isAoe": true, "aoeBand": "small",
+   "chain": { "count": 1, "radius": 96, "frac": 0.5 }, "chainCount": 1, "chainRange": 96, "chainDamagePct": 0.5,
+   "desc": "Whirls a length of chain around you, dealing 4 damage to every enemy within 2 tiles. It then leaps to 1 more enemy within 3 tiles for 50% of the damage."
+  },
+  {
+   "name": "Reeling Hook",
+   "kind": "active", "category": "attack", "template": "sunderStrike", "element": "piercing", "role": "medium",
+   "base": 13, "cooldown": 14, "range": 86,
+   "sunder": { "amount": 0.1, "duration": 5 },
+   "chargeTo": 192,
+   "desc": "Hooks a target up to 6 tiles away and hauls you to it, then deals 13 damage and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Haul In",
+   "kind": "active", "category": "defensive", "template": "tauntPull", "element": "physical",
+   "tauntRadius": 192, "tauntDuration": 5, "tauntMax": 5, "threatMult": 1, "cooldown": 20,
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you and holds their attention for 5 seconds."
+  },
+  {
+   "name": "Next Link",
+   "kind": "passive", "category": "triggered", "template": "triggeredPassive", "element": "physical",
+   "isTriggered": true, "cooldown": 4,
+   "trigger": { "on": "kill", "cooldown": 4 },
+   "effect": { "kind": "boltNearest", "damage": 8, "range": 192 },
+   "desc": "Each time you kill something, a bolt leaps to the nearest enemy within 6 tiles, dealing 8 damage. Once every 4 seconds."
+  }
+ ]
+}

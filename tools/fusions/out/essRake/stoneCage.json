@@ -1,0 +1,82 @@
+{
+ "essence": "essRake",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "No Gap Between Bars",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "desc": "Hooks a target up to 6 tiles away for 20 damage, rising to 1.5 times that at full reach, and leaves it [Pinned] for 2 seconds. Usable only on an enemy at or below 30% health.",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Portcullis Row",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "wallKind": "burn",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives a row of tines 6 tiles long into the ground for 8 seconds. It deals 26 damage, ignoring armour, to each enemy that crosses it and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Penned In",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 180,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds. They cannot be healed while it holds."
+  },
+  {
+   "name": "Latch Falls",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

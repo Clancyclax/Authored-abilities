@@ -1,0 +1,78 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Skimmed Dart",
+   "element": "piercing",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 7,
+   "cooldown": 1,
+   "range": 224,
+   "maxMult": 2,
+   "desc": "Throws a folded dart for 7 damage, rising to 2 times that at its maximum range of 7 tiles. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Kite Stoop",
+   "element": "wind",
+   "role": "medium",
+   "chargeTo": 224,
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "desc": "You glide up to 7 tiles to the target and land on it, dealing 14 damage to every enemy within 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "name": "Thousand-Fold Crane",
+   "element": "wind",
+   "summonKind": "bird",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "cooldown": 36,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Folds a crane and lets it fly for 10 seconds. It pecks an enemy within 4 tiles for 3 damage every second, each peck with a 30% chance to leave the target [Marked] for 5 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 4,
+   "name": "Airmail",
+   "element": "wind",
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 192
+   },
+   "desc": "Every few paces you cover, a leaflet dives at the nearest enemy within 6 tiles for 7 damage. Once every 4 seconds."
+  }
+ ]
+}

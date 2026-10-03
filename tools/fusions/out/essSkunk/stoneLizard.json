@@ -1,0 +1,91 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Bitten, Then Followed",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A foul-mouthed bite that deals 26 damage plus 5% of a boss's or elite's maximum health, leaves the target 15% easier to wound for 8 seconds and [Poisoned] for 3 damage a second for 10 seconds."
+  },
+  {
+   "name": "Shed and Thrashing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Costs 4% of your maximum health. Sheds the tip of your tail, which thrashes musk across a cone 3 tiles long that deals 7 damage to everything in it and leaves it [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Long Noon Basking",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "poison",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "resist": {
+    "element": "poison",
+    "amount": 0.2
+   },
+   "desc": "Restores 3 health a second to you for 10 seconds, and you have 20% more poison resistance while it lasts."
+  },
+  {
+   "name": "Left the Tail Behind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 5,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 35%, you regain 5 health a second for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

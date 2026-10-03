@@ -1,0 +1,85 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Whole Weight Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 112,
+   "maxMult": 1.3,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 4
+   },
+   "desc": "Lunges up to 3.5 tiles and falls on the target, which deals 30 damage, rising to 1.3 times that at full reach. The target is left [Bleeding] for 3 damage a second for 6 seconds and moves 30% slower for 4 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Wounded Shrug",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Throws your weight through a cone 2 tiles ahead, which deals 4 damage to everything in it. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Laid-Up Stores",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 45,
+   "healOnUse": 12,
+   "desc": "Your maximum health rises by 20% for 10 seconds, and you restore 12 health."
+  },
+  {
+   "name": "Denned Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.5,
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "Once your health falls below 50%, healing you receive is 40% stronger for 8 seconds. Once every 40 seconds."
+  }
+ ]
+}

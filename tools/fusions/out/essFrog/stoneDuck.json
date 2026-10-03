@@ -1,0 +1,82 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Pond Squirt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "cooldown": 0.8,
+   "base": 4,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Squirts pond water at the first enemy in its path up to 6 tiles away, dealing 4 damage with a 40% chance to leave it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Bellyflop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You jump and land flat, and the splash deals 26 damage to every enemy within 4 tiles and leaves them [Soaked] for 8 seconds. It ignores resistance."
+  },
+  {
+   "name": "Off the Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.5,
+   "reflectChance": 0.5,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "For 10 seconds, each debuff laid on you has a 50% chance to return to whoever laid it."
+  },
+  {
+   "name": "Paddle and Pad",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you cross it faster than ground"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you cross it 15% faster than ground."
+  }
+ ]
+}

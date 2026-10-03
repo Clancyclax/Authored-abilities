@@ -1,0 +1,78 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Bulldozing Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "Rushes up to 7 tiles onto a target and bowls into it, dealing 16 damage and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Forepaw Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Slams both forepaws down, dealing 8 damage to every enemy within 2.5 tiles. Its damage rises 6% for every 10% of your health already gone, up to 30%. Holds 3 charges, and a kill gives one back.",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3
+  },
+  {
+   "name": "Lumbering Momentum",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.06,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds, with 6% more armour while it holds. You move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Goaded Into a Charge",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you move and attack 3% faster per stack for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

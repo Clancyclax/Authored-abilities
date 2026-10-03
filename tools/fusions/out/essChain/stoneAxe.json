@@ -1,0 +1,79 @@
+{
+ "essence": "essChain",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Headsman's Tether",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Drops a chained blade on an enemy at or below 25% health for 22 damage, using up every affliction on it to add 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Whirling Bit",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whirls an axe-head on a chain around you, which deals 7 damage to every enemy within 3 tiles, with a 30% chance to leave each [Bleeding] for 4 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Pendulum Blade",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 6,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 96,
+   "castTime": 0.5,
+   "desc": "Hangs an axe-head on a chain where you stand for 12 seconds. It swings at an enemy within 3 tiles for 6 damage every 1.5 seconds."
+  },
+  {
+   "name": "Carry Through",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "desc": "When you kill an enemy, your chain whips on to the nearest enemy within 6 tiles for 8 damage. Once every 4 seconds."
+  }
+ ]
+}

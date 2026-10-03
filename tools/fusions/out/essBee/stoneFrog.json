@@ -1,0 +1,97 @@
+{
+ "essence": "essBee",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sudden Venom",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits a stinger of venom that deals 14 damage, stuns the target for 1.2 seconds and makes it [Poisoned] for 2 damage a second for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Croaking Spray",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 7,
+   "cooldown": 1,
+   "range": 180,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "escort": {
+    "dmg": 2,
+    "interval": 1.4,
+    "duration": 6
+   },
+   "desc": "Sprays a wide cone of water ahead of you, dealing 7 damage to everything caught in it. Each hit has a 40% chance of [Slowed] for 4 seconds. Holds up to 3 charges, and each kill gives one back. Stingers fight beside you for 6 seconds, striking for 2 every 1.4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "name": "Gone Before Noticed",
+   "element": "water",
+   "cooldown": 30,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 5 seconds. Enemies notice you far later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "kind": "passive",
+   "name": "Fresh Legs",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "When your stamina is full, a stinger springs at the nearest enemy within 6 tiles, dealing 8 damage and making it [Poisoned] for 2 damage a second for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

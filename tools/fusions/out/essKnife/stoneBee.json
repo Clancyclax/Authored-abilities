@@ -1,0 +1,82 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barb Left Behind",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A stab that deals 7 poison damage, leaves the target 6% easier to wound for 4 seconds and [Poisoned] for 2 damage a second for 6 seconds. Holds 3 charges; each use spends one, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stirred Hive",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "spreadAfflictions": 128,
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Stabs at everything in reach, dealing 10 damage to every enemy within 3 tiles. Your afflictions on each one spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Worker's Tempo",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "summonAnimal": "bee",
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Increases your attack speed by 25% for 10 seconds. A swarm escorts you for 8 seconds, stinging for 3 damage every 1.4 seconds."
+  },
+  {
+   "name": "Tireless Round",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When one of your afflictions runs out on an enemy, 6 stamina comes back to you. Once every 5 seconds."
+  }
+ ]
+}

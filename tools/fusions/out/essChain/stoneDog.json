@@ -1,0 +1,70 @@
+{
+ "essence": "essChain",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Worry the Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "consumeAffliction": true,
+   "desc": "Worries a hooked link into the target for 8 damage and leaves it 5% easier to wound for 3 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Run It Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "Casts a leash at the first enemy it meets, up to 7 tiles away, and runs you down it to the target for 14 damage."
+  },
+  {
+   "name": "Lifeline",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 20,
+   "healScope": "ally",
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "desc": "Throws a lifeline to the ally who needs it most: they regain 3 health a second for 6 seconds."
+  },
+  {
+   "name": "Hound at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Leashed Hound",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A leashed hound fights beside you, striking an enemy within 4 tiles for 4 damage every 1.2 seconds. Anything it bites moves 20% slower for 2 seconds."
+  }
+ ]
+}

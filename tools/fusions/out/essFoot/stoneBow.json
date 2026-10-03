@@ -1,0 +1,80 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Skirmisher's Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "chargesMax": 3,
+   "isAoe": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Looses 3 arrows on the run, spread apart, each dealing 5 damage. Their damage rises 5% for every 100 paces you have run since you last used it, up to 30%. Holds 3 charges, and a kill gives one back."
+  },
+  {
+   "name": "Supine Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 36,
+   "cooldown": 90,
+   "speed": 480,
+   "radius": 8,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "castTime": 1.5,
+   "bossPct": 0.05,
+   "desc": "Lies back and draws the bow with your feet for 1.5 seconds, then looses a shot that deals 36 damage to the first enemy it meets, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Kiting Step",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 128,
+   "cooldown": 9,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 4 tiles away, and your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "name": "Nocked on the Move",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Each time you cover a long stretch of ground, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dabbling Dose",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 7,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting that deals 7 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds, with a 50% chance to leave it [Soaked] for 5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Finally Bothered",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Stings every enemy within 3 tiles. Each sting deals 26 damage and is always a critical hit. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Rolls Off the Back",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 3 conditions from you. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Skimming the Pond",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you skim over it 10% faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises by 8% while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "staminaRegen",
+     "amount": 0.2,
+     "text": "your stamina recovers 20% faster while you are on it"
+    }
+   ],
+   "desc": "You hover across water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your dodge chance rises by 8%, and from gold your stamina recovers 20% faster."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+  "essence": "essShield",
+  "stone": "stoneBird",
+  "fusions": [
+    {
+      "name": "Stoop",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 16,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "chargeTo": 224,
+      "knockback": 64,
+      "desc": "Dives up to 7 tiles onto the target and lands shield-first, dealing 13 damage to every enemy within 2.5 tiles and knocking them back 2 tiles."
+    },
+    {
+      "name": "Discus",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "wind",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 12,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "long",
+      "maxMult": 2,
+      "requiresTargetBelow": 0.3,
+      "desc": "Sends the shield gliding at a failing enemy, dealing 18 damage, rising to 2 times that at its full reach of 7 tiles. Usable only on an enemy at or below 30% health."
+    },
+    {
+      "name": "Alight and Brace",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "wind",
+      "cooldown": 30,
+      "armorBonus": 0.15,
+      "buffDuration": 8,
+      "blinkOnUse": 96,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Moves you 3 tiles from where you stood, raises your armour by 15% for 8 seconds and makes you move 20% faster for 4 seconds."
+    },
+    {
+      "name": "Carried on the Wind",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "desc": "Every few paces you cover, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+    }
+  ]
+}

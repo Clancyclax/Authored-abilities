@@ -1,0 +1,87 @@
+{
+ "essence": "essIron",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Hive of Tacks",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a swarm of barbed tacks across a cone 4 tiles long, dealing 3 poison damage to everything in it, with a 35% chance to leave each target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Barb Driven Home",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "Hammers the barb in, dealing 18 damage and consuming every affliction on the target to add 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Riveting Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Calls up a swarm of rivet-wasps that fights for 12 seconds, stinging an enemy within 4 tiles for 4 damage every second, each sting with a 30% chance to leave the target [Sundered] for 3 seconds."
+  },
+  {
+   "name": "Forge-Hand Tempo",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 4
+   },
+   "armorBonus": 0.05,
+   "desc": "Each time you strike with your weapon, you regain 2 stamina a second for 4 seconds. Once every 8 seconds. Your armour rises by 5%."
+  }
+ ]
+}

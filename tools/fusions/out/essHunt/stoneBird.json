@@ -1,0 +1,80 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Stoop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 2.2,
+   "stunOnHit": 1,
+   "desc": "A diving strike that deals 12 damage, rising to 2.2 times that at its full reach of 8 tiles, and stuns the target for 1 second."
+  },
+  {
+   "name": "Talon Take",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "speed": 440,
+   "radius": 8,
+   "requiresTargetBelow": 0.25,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Usable only on an enemy at or below 25% health: a strike from range that deals 20 damage. Your movement speed rises 20% for 3 seconds after you use it."
+  },
+  {
+   "name": "Cast Off",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "wind",
+   "cooldown": 40,
+   "summonKind": "bird",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "castTime": 0.3,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts off a hawk for 12 seconds that strikes an enemy within 5 tiles for 4 damage every 1.2 seconds, each strike with a 35% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Riding the Thermal",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 12
+   },
+   "dodgeBonus": 0.05,
+   "desc": "The moment your stamina runs out, you regain 12 stamina. Once every 20 seconds. Your dodge chance rises by 5%."
+  }
+ ]
+}

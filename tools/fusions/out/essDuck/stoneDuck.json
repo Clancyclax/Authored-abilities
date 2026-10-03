@@ -1,0 +1,96 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Unimpressed Quack",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Quacks in a 3-tile cone ahead of you, dealing 4 damage to everything in it. Each hit has a 25% chance to leave the target [Damped] for 5 seconds."
+  },
+  {
+   "name": "Splashdown",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "speed": 300,
+   "radius": 10,
+   "castTime": 0.6,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a burst of water on a target, dealing 26 damage to it and 80% of that to every enemy within 3.5 tiles of it, and leaving them [Soaked] for 6 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Nothing Sticks",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 4,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Makes you immune for 4 seconds: blows that reach you deal no damage and no condition can take hold of you. You move 15% faster for 3 seconds after you use it.",
+   "kind": "active"
+  },
+  {
+   "name": "Millpond Stride",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you cross it faster than ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and nothing that wades can pin you down"
+    },
+    {
+     "rank": "gold",
+     "stat": "hpRegen",
+     "amount": 0.2,
+     "text": "and it mends you while you float"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 12% faster on it, from silver your dodge chance rises 8%, and from gold your health recovers 20% faster.",
+   "kind": "passive"
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Taut-Cord Prowl",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Rushes you to a target up to 7 tiles away, then strikes, which deals 13 damage, leaves it 10% easier to wound for 5 seconds and leaves it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Ledge Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 300,
+   "spammable": true,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Lobs a loose brick at the first enemy it meets that deals 5 damage. Its damage rises 3% for each 100 paces you have run since you last used it (max 30%).",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.03,
+   "scaleCap": 0.3
+  },
+  {
+   "name": "Quiet Footing",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.35,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you for 10 seconds: enemies notice you 65% later, you move 17% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Bolt-Hole",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 30%, a shield worth 25% of your maximum health closes over you for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

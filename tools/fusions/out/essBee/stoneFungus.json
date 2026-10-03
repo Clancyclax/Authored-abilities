@@ -1,0 +1,86 @@
+{
+ "essence": "essBee",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cap Burst",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Every enemy within 3 tiles takes 4 damage and is [Diseased] for 1 damage a second for 5 seconds. Its damage rises 10% for each affliction already on the target (max +50%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rot Root",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Deals 9 damage and leaves the target 8% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "name": "Mycelial Mend",
+   "element": "nature",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "party",
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 12
+   },
+   "desc": "Restores 3 health a second to you and your allies for 10 seconds. Stingers fight beside you for 12 seconds, striking for 3 every 1.4 seconds."
+  },
+  {
+   "kind": "passive",
+   "name": "Compost Cycle",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When a condition you inflicted expires, you regain 3 health a second for 5 seconds. Once every 6 seconds."
+  }
+ ]
+}

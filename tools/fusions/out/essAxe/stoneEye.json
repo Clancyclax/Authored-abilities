@@ -1,0 +1,75 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spotter's Toss",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.9,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a hatchet that deals 5 damage to the first enemy it meets. Each hit has a 25% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grain Reader",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A chop that deals 28 damage and ignores armour. It leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Unblinking Focus",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "castTime": 0.5,
+   "cooldown": 50,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Sized Up",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 5. Your next critical hit on it spends them all: you deal 6% more damage per stack, 30% at full, for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lancing Horn",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.5,
+   "desc": "A goring thrust that deals 18 damage and draws out every affliction you have on the target, dealing 50% more damage for each one drawn. It leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Soured Bellow",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bellows a bitter breath 3.5 tiles ahead of you that deals 11 poison damage to everything in it, knocks them back 2 tiles and leaves them [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Chew It Over",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 45,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Removes up to 3 conditions from you. Its effect increases by 10% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Four-Chambered Gut",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "poison",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your maximum health rises by 12, and your poison resistance rises by 12%."
+  }
+ ]
+}

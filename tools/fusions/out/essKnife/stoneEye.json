@@ -1,0 +1,83 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Line of Sight",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a knife that deals 4 damage to the first enemy it meets and leaves it [Marked] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Where the Gaze Rests",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "guaranteedCrit": true,
+   "base": 28,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Stabs the target for 28 damage and leaves it 15% easier to wound for 6 seconds. It is always a critical hit."
+  },
+  {
+   "name": "Held by a Look",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 45,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Your stare holds every creature within 4 tiles in place for 2 seconds and leaves them [Marked] for 6 seconds."
+  },
+  {
+   "name": "Every Tell Noted",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 8. Your next critical hit on it spends them all: a second blow strikes it for 20% of your weapon damage per stack (163% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

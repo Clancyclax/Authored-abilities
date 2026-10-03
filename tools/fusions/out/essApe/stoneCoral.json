@@ -1,0 +1,79 @@
+{
+ "essence": "essApe",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Broken Reef Hurl",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 280,
+   "radius": 12,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rips up a coral head and hurls it for 26 damage, leaving the target [Bleeding] for 3 damage a second for 5 seconds. It bursts over every enemy within 3.5 tiles for 80% of the damage."
+  },
+  {
+   "name": "Shard Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1.0,
+   "volleyCount": 4,
+   "volleySpread": 0.45,
+   "speed": 360,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Throws a fistful of 4 coral shards in a spread out to 6 tiles, each dealing 5 damage with a 30% chance to leave the target [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Rooted Outcrop",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 1,
+   "desc": "Plants a coral outcrop that stands for 15 seconds and strikes an enemy within 4 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Calcified Skin",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your armour rises by 8%, and you regenerate 0.5 health a second."
+  }
+ ]
+}

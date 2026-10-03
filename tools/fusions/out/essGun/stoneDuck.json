@@ -1,0 +1,82 @@
+{
+ "essence": "essGun",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Calm Dispatch",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "requiresTargetBelow": 0.25,
+   "base": 22,
+   "cooldown": 14,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 1.2,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a round at an enemy up to 9 tiles away that deals 22 water damage, rising to 1.2 times that at full reach, and leaves it [Soaked] for 6 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Decoy Calls",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "chargesMax": 3,
+   "base": 6,
+   "cooldown": 1.1,
+   "range": 80,
+   "aoeBand": "small",
+   "isAoe": true,
+   "confuse": true,
+   "confuseChance": 0.2,
+   "confuseDuration": 3,
+   "desc": "Fires a scatter of rounds around you that deals 6 water damage to every enemy within 2.5 tiles, with a 20% chance to turn each one against its allies for 3 seconds. Holds 3 charges; each use spends one, and each kill gives one back."
+  },
+  {
+   "name": "Shake It Off",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "cooldown": 45,
+   "desc": "Removes 2 conditions from you, and your movement speed rises 15% for 3 seconds."
+  },
+  {
+   "name": "Cool Under Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.5,
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "When your health falls below 50%, your next strike gains 30% critical hit chance. Once every 30 seconds."
+  }
+ ]
+}

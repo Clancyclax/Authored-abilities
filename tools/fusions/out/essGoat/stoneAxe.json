@@ -1,0 +1,71 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Headsman's Drop",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rears up and drops your horns on a target at or below 25% health for 24 damage, leaving it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cleaving Toss",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "ignoreArmor": true,
+   "desc": "Tosses your horns through a 3-tile cone ahead of you, dealing 28 slashing damage to everything caught. It ignores armour."
+  },
+  {
+   "name": "Whetstone Rub",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Whets your horns, raising your slashing damage by 25% for 12 seconds."
+  },
+  {
+   "name": "Notch for Notch",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: a blow strikes the nearest enemy within 8 tiles for 17% of your weapon damage per stack (102% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

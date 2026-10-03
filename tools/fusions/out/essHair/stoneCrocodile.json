@@ -1,0 +1,79 @@
+{
+ "essence": "essHair",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Wrung Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.2,
+   "executeLadder": true,
+   "desc": "Winds a rope of hair around the target and rolls, dealing 22 damage and consuming every affliction on it, adding 1.8 times their remaining damage. Usable only on an enemy at or below 20% health, and that threshold rises with each rank."
+  },
+  {
+   "name": "Waterline Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hauls you along a strand to a target up to 6 tiles away and clamps on, dealing 14 damage, holding it [Pinned] for 2 seconds and leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Drowned Noose",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "desc": "Lays a noose of hair on the ground at the nearest enemy, where it waits up to 30 seconds. When an enemy comes within 2 tiles it pulls shut and deals 22 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Still Holding",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your strands clamp down on what they already hold: you deal 12% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

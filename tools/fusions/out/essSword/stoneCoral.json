@@ -1,0 +1,82 @@
+{
+ "essence": "essSword",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Hull-Breaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "Deals 28 damage to every enemy within 3 tiles. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Reef Rash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A weapon strike that deals 3 damage and makes the target [Bleeding] for 2 damage a second for 4 seconds. Its damage rises 8% for each affliction already on the target (max 40%)."
+  },
+  {
+   "name": "Raised Shoal",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 30,
+   "base": 4,
+   "desc": "Raises a ridge of reef 5 tiles long in front of you for 8 seconds. It deals 4 damage to anything that crosses it and leaves it [Slowed] for 3 seconds.",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Encrusted by Blows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land adds a stack, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (34% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

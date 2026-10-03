@@ -1,0 +1,76 @@
+{
+ "essence": "essRake",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Triple Nock",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "isAoe": true,
+   "speed": 440,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Looses 3 tines at once, spread apart, each dealing 6 damage. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Full Draw Length",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 288,
+   "maxMult": 2,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "A drawn shot at a target up to 9 tiles away that deals 28 damage, rising to twice that at full reach. It is always a critical hit."
+  },
+  {
+   "name": "Strung Stave",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "castTime": 1,
+   "desc": "Plants the haft as a strung stave that stands for 15 seconds and shoots an enemy within 6 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Spare Tine",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 10,
+    "range": 256
+   },
+   "desc": "Once every 12 seconds, when you strike, a spare tine flies at the nearest enemy within 8 tiles and deals 10 damage."
+  }
+ ]
+}

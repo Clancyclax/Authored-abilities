@@ -1,0 +1,77 @@
+{
+ "essence": "essBat",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Lowing Echo",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A low cry carries 4 tiles ahead of you, dealing 7 resonating damage to everything in it, and 10% more for each ally near you, up to 30%. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Drinking From Giants",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "leech": 0.2,
+   "desc": "A deep bite that deals 26 damage plus 5% of the maximum health of a boss or elite, leaves the target 10% easier to wound for 6 seconds, and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Herd Huddle",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "range": 128,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "desc": "Every ally within 4 tiles strikes 15% harder and fights with 1 more power for 10 seconds."
+  },
+  {
+   "name": "Second Stomach",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Whenever you are healed, you restore 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

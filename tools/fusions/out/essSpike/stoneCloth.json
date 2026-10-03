@@ -1,0 +1,84 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneCloth",
+  "fusions": [
+    {
+      "name": "Running Stitch",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "chargesMax": 4,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "chain": {
+        "count": 2,
+        "radius": 96,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 96,
+      "chainDamagePct": 0.6,
+      "desc": "Throws a threaded needle up to 7 tiles. It deals 6 damage to the first enemy it meets, then the thread carries it to 2 more enemies within 3 tiles for 60% of the damage each. Holds 4 charges; a kill gives one back."
+    },
+    {
+      "name": "Tacked in Place",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 160,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "maxMult": 1.4,
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 2
+      },
+      "desc": "Throws a pin on a short thread up to 5 tiles. It deals 4 damage, rising to 1.4 times that at full reach, and the target moves 25% slower for 2 seconds."
+    },
+    {
+      "name": "Suture",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "physical",
+      "healAmount": 16,
+      "critChance": 0.1,
+      "healScope": "self",
+      "cooldown": 20,
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Stitches your wounds shut and restores 16 health to you. The healing rises 8% for every 10% of your health already gone, up to 40%."
+    },
+    {
+      "name": "Sleeve Pin",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 4,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 4
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 5,
+        "range": 96
+      },
+      "desc": "Each time you are hurt by anything other than fire, a pin flies at the nearest enemy within 3 tiles and deals 5 damage. Once every 4 seconds."
+    }
+  ]
+}

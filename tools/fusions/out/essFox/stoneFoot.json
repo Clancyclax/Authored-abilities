@@ -1,0 +1,81 @@
+{
+ "essence": "essFox",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Long-Stride Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 128,
+   "maxMult": 1.4,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A lunging strike that deals 4 damage, rising to 1.4 times that at its full reach of 4 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Dust Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a cone of grit 4 tiles ahead that deals 10 earth damage to everything in it, knocks each back 2 tiles and leaves them [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 45,
+   "speedMult": 1.35,
+   "buffDuration": 12,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 35% for 12 seconds, with +8% dodge chance for it."
+  },
+  {
+   "name": "Second Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Every few paces you cover, you regain 3 stamina a second for 5 seconds. Once every 8 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

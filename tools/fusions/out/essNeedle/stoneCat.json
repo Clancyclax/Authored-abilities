@@ -1,0 +1,73 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Late Unsheathing",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "chargeTo": 192,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Springs you onto a target up to 6 tiles away, dealing 12 damage and leaving it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Play's Over",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "maxMult": 1.4,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "desc": "Usable only on an enemy at or below 30% health. A lunge at a target up to 4 tiles away that deals 22 damage, rising to 1.4 times that at full reach."
+  },
+  {
+   "name": "Claws Kept In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 9,
+   "stealthScope": "self",
+   "desc": "Veils you for 10 seconds: enemies notice you 60% later, you move 10% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Righted in the Fall",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 3% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

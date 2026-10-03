@@ -1,0 +1,80 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Annotated Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "consumeAffliction": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "desc": "Throws a hatchet that needs one of your afflictions on the target and uses it up, dealing 9 arcane damage. Its damage rises 10% per affliction the target carries (max +40%)."
+  },
+  {
+   "name": "Red-Pen Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sweep that deals 11 arcane damage to every enemy within 3.5 tiles; each hit has a 40% chance to leave the target [Stalled] for 6 seconds. Your afflictions on a struck enemy spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Corrected Draft",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Spell-Edged",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Each time you spend mana, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

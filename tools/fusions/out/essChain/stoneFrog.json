@@ -1,0 +1,85 @@
+{
+ "essence": "essChain",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Snapped Tether",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "ignoreArmor": true,
+   "bindOnHit": {
+    "slowPct": 0.4,
+    "duration": 3
+   },
+   "desc": "Lashes a chain at an enemy up to 7 tiles away that deals 28 damage ignoring armour, up to 1.5 times that at full reach, and the target moves 40% slower for 3 seconds."
+  },
+  {
+   "name": "Wet Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a dripping link at the first enemy it meets that deals 4 damage, with a 30% chance to leave it [Soaked] for 3 seconds."
+  },
+  {
+   "name": "Reeling Call",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you and holds their attention for 6 seconds."
+  },
+  {
+   "name": "Snap Back",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "When you strike an enemy, you regain 3 stamina and it moves 15% slower for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

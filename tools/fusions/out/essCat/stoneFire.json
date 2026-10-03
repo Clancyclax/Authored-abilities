@@ -1,0 +1,81 @@
+{
+ "essence": "essCat",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flashover",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 80,
+   "chargeTo": 192,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Pounces up to 6 tiles onto an enemy for 16 damage and strips 10% of its armour for 5 seconds. It uses up every affliction you have on the target for 60% more damage each."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flicked Embers",
+   "template": "volley",
+   "element": "fire",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "isAoe": true,
+   "radius": 6,
+   "range": 160,
+   "speed": 340,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "castTime": 0,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 embers from your paws in a spread, each dealing 3 damage to the first enemy it meets with a 30% chance to set it [Burning] for 4 seconds."
+  },
+  {
+   "name": "Smouldering Hackles",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Raises your hackles for 8 seconds: 30% of the damage you take is dealt back to the attacker, who is set [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Hot Tin Roof",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "fire",
+   "moveSpeedPct": 0.08,
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "You move 8% faster, and you have 10% fire resistance."
+  }
+ ]
+}

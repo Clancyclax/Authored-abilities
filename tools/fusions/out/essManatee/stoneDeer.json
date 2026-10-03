@@ -1,0 +1,82 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "role": "medium",
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Fording Bound",
+   "element": "water",
+   "base": 11,
+   "cooldown": 14,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bounds you to a target up to 6 tiles away, then lands in a splash that deals 11 damage to every enemy within 2.5 tiles and leaves them [Soaked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "resource",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Shed and Regrown",
+   "element": "nature",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Sheds a tine and casts it for 9 damage. Also costs 4% of your maximum health. 30% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "name": "Bolt to Cover",
+   "element": "nature",
+   "resource": "hp",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 24,
+   "blinkOnUse": 96,
+   "desc": "Springs you 3 tiles from where you stood, and restores 4 health a second for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "name": "Winded, Then Still",
+   "element": "nature",
+   "desc": "When your stamina runs out, you regain 3 health a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

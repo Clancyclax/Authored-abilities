@@ -1,0 +1,73 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "rangeBand": "long",
+   "name": "Full Draw",
+   "element": "arcane",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "range": 288,
+   "reachUnits": 288,
+   "maxMult": 2,
+   "ignoreResist": true,
+   "desc": "Looses an arrow of arcana at a target up to 9 tiles away that deals 32 damage, rising to 2 times that at full reach. It ignores resistances."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "isAoe": true,
+   "castTime": 0,
+   "speed": 380,
+   "radius": 6,
+   "rangeBand": "long",
+   "name": "Spell Quiver",
+   "element": "arcane",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "range": 256,
+   "reachUnits": 256,
+   "chargesMax": 5,
+   "desc": "Looses 3 arrows of arcana at once in a spread out to 8 tiles, each dealing 3 damage. It holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Far Mark",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "arcane",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.35,
+    "charges": 1
+   },
+   "name": "Nocked and Waiting",
+   "element": "arcane",
+   "desc": "The moment your mana is full, your next spell deals 35% more damage. Once every 12 seconds."
+  }
+ ]
+}

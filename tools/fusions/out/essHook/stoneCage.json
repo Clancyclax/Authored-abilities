@@ -1,0 +1,77 @@
+{
+ "essence": "essHook",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Through the Bars",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.5,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "A thrust that deals 8 damage, rising to 1.5 times that at its full reach of 4 tiles. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Dropped Portcullis",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a ring of bars on every enemy within 3 tiles, dealing 12 damage, stunning them for 1.2 seconds and leaving them [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Gibbet Lock",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 3,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "Holds every creature within 3 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Kept at Arm's Length",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions lifts, you gain a shield worth 15% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

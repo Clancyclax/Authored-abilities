@@ -1,0 +1,84 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Patient Lean",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Leans into the target, dealing 12 damage, knocking it 3 tiles back and leaving it 8% easier to wound for 4 seconds. It has a 40% chance to be [Hindered] for 5 seconds."
+  },
+  {
+   "name": "Flank Barge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Barges into the enemies around you, dealing 4 damage to every enemy within 2.5 tiles. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "name": "Huddle Up",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 22,
+   "range": 112,
+   "healAmount": 14,
+   "healScope": "party",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. You move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Warm Stall",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "armorBonus": 0.04,
+   "desc": "When anything but fire hurts you, every heal reaching you is worth 30% more for 6 seconds. Once every 12 seconds. Your armour rises by 4%."
+  }
+ ]
+}

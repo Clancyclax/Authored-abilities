@@ -1,0 +1,84 @@
+{
+ "essence": "essBear",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Encircling Hug",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 80,
+   "stunOnHit": 1,
+   "desc": "Closes your arms on every enemy within 2.5 tiles, dealing 11 damage and leaving each [Stunned] for 1 second."
+  },
+  {
+   "name": "Back to the Bars",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A swipe that deals 5 damage and leaves the target 6% easier to wound for 3 seconds. Its damage rises 8% for every tenth of your health already lost, up to 40%."
+  },
+  {
+   "name": "Jaw Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Takes 1 second to set a spring snare at the nearest enemy. It waits up to 20 seconds, and the first enemy to come within 2 tiles takes 20 damage and is [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Bars for Ribs",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.08,
+   "damageReduction": 2,
+   "thornsFrac": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 8
+    }
+   ],
+   "desc": "Conjures barred plating over your hide: every hit you take is 2 lower, your armour rises by 8%, your maximum health rises by 8, and 10% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

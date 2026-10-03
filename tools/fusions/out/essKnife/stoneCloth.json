@@ -1,0 +1,74 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sleeve Dart",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Flicks a blade from your sleeve that deals 4 damage to the first enemy it meets. It has 40% more critical chance against an enemy that has not been hurt yet."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cloak and Dagger",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "stunOnHit": 1,
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips your cloak across a cone 3 tiles ahead with the blade behind it, dealing 12 damage, stunning each enemy for 1 second and leaving it [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Field Sutures",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "cooldown": 20,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you, 8% more for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Stitched-In Sheaths",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "crit",
+   "amount": 0.06,
+   "dodgeBonus": 0.04,
+   "desc": "Your critical strike chance rises by 6%, and your dodge chance by 4%."
+  }
+ ]
+}

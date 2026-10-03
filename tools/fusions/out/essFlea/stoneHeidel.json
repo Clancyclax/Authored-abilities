@@ -1,0 +1,82 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Skittering Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "spammable": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "leech": 0.15,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A blow that deals 5 damage and leaves the target 5% easier to wound for 4 seconds. You heal for 15% of the damage dealt and move 15% faster for 3 seconds."
+  },
+  {
+   "name": "Trampling Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 112,
+   "desc": "Looses a wide cone ahead that deals 14 damage to everything in it and knocks it back 3.5 tiles."
+  },
+  {
+   "name": "Easy Canter",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 40,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds. Your movement speed rises 15% for 4s after you use it."
+  },
+  {
+   "name": "Second Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When you run out of stamina, you regain 20 stamina. Once every 30 seconds."
+  }
+ ]
+}

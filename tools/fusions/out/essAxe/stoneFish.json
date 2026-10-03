@@ -1,0 +1,88 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Hatchet Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 292,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws 3 hatchets in a spread. Each deals 4 damage and has a 30% chance to leave the target [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Scale-Splitter",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A downward chop that deals 14 damage, leaves the target 20% easier to wound for 8 seconds and has a 50% chance to leave it [Soaked] for 6 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Slick Haft",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "cooldown": 40,
+   "armorBonus": 0.1,
+   "dodgeBonus": 0.2,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 10% and your dodge chance by 20% for 12 seconds."
+  },
+  {
+   "name": "Silver Flinch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 5
+   },
+   "desc": "Each time you strike with your weapon, a slick ward worth 8% of your maximum health closes over you for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

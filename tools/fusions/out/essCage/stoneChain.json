@@ -1,0 +1,81 @@
+{
+ "essence": "essCage",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Shackle Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a shackle for 4 damage that then leaps to 1 more enemy within 3 tiles for 60% of that, with a 30% chance to leave each [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Links Pulled Taut",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Yanks the chain taut around you, dealing 7 damage to every enemy within 2.5 tiles with a 25% chance to leave each [Pinned] for 1.5 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Hauled In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "desc": "Reels up to 4 enemies within 6 tiles onto you and holds their attention for 5 seconds."
+  },
+  {
+   "name": "Short Leash",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your armour rises by 12%."
+  }
+ ]
+}

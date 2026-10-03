@@ -1,0 +1,75 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lunge From the Shallows",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 160,
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Lunges at an enemy up to 5 tiles away that is at or below 25% health and deals 22 piercing damage, rising to 1.5 times that at 5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rolling Thrash",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Thrashes in a circle, dealing 12 damage to every enemy within 2.5 tiles, knocking them 2.5 tiles back and leaving them [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "cooldown": 60,
+   "castTime": 0.5,
+   "desc": "After a 0.5 second cast, holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Still Water Strike",
+   "element": "water",
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your stamina is full, your physical damage rises by 30% for 5 seconds. Once every 15 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

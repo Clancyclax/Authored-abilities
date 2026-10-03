@@ -1,0 +1,91 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "name": "Cutting Reef",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 96,
+   "desc": "Grows a reef of sharp coral 5 tiles long for 6 seconds, dealing 10 damage to anything that crosses it and leaving it [Bleeding] for 3 damage a second for 4 seconds. Your afflictions on it spread to every enemy within 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Budding Hex",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a bud of calcifying arcana that deals 8 damage to the first enemy it meets, with a 50% chance to leave it [Stalled] for 5 seconds. It holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Grown Outcrop",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.5 second cast, grows a coral head that stands for 12 seconds and stings enemies within 4 tiles for 3 damage every second, each sting with a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you use an ability, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (45% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "essence": "essFish",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Riverbank Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 30% health. A heavy swipe that deals 20 damage and leaves it 15% easier to wound and [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Upstream Crash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "Crashes down on every enemy within 3 tiles for 30 damage, plus 5% of a boss's or elite's maximum health. Its damage rises 5% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Winter Weight",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Raises a barrier that absorbs 24 damage for 8 seconds and raises your armour by 8%. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Fat of the Run",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 15% of your maximum health for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Corroding Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A jab that deals 5 damage, leaves the target 8% easier to wound for 4 seconds and [Poisoned] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Pellet Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1.4,
+   "stunOnHit": 1.2,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Slings a mould-hardened pellet at a target up to 6 tiles away that deals 12 damage, rising to 1.4 times that at full reach, and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Verdigris Shell",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "earth",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 26,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "cooldown": 40,
+   "desc": "Raises a barrier that absorbs the next 26 damage and holds for 10 seconds."
+  },
+  {
+   "name": "Layered Rind",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "regenPerSec": 0.5,
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack before your health takes damage. Unfed, a stack fades every 10 seconds. You regenerate 0.5 health a second."
+  }
+ ]
+}

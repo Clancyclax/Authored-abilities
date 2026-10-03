@@ -1,0 +1,74 @@
+{
+ "essence": "essBear",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Nibbling Swarm",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 64,
+   "leech": 0.25,
+   "desc": "Swats every enemy within 2 tiles; each hit deals 3 damage, and you heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pillaging Bite",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "scaleOn": "targetStamina",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A tearing bite that deals 8 damage, leaves the target 10% easier to wound for 4 seconds and costs 4% of your maximum health. Its damage rises +10% for every 10% of health the target still has (max +40%)."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Feeding Frenzy",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "healOnUse": 10,
+   "desc": "Increases your attack speed by 20% for 10 seconds and restores 10 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "name": "Fat of the Field",
+   "element": "physical",
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

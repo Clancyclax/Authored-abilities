@@ -1,0 +1,70 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Longshot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2.0,
+   "chargesMax": 4,
+   "desc": "A thrown blow that deals 7 damage, harder the further it travels, up to 2 times its damage at maximum range. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Scatter Blast",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 128,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "leech": 0.15,
+   "desc": "Looses a wide cone ahead that deals 14 damage to everything in it and knocks it back 3 tiles. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Quick Draw",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "healOnUse": 8,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds, and you heal 8 health."
+  },
+  {
+   "name": "Follow-Through",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

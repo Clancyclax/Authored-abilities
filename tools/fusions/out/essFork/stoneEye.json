@@ -1,0 +1,80 @@
+{
+ "essence": "essFork",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gap-Seeking Jab",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A precise jab for 4 piercing damage that leaves the target 5% easier to wound for 3 seconds. Each hit has a 25% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Twin Gouge",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "strikes": 2,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives both tines at the eyes: a weapon strike for 26 piercing damage that always lands as a critical hit, leaving the target [Bleeding] for 3 damage a second for 4 seconds and [Blunted], with lower critical chance, for 6 seconds."
+  },
+  {
+   "name": "Unblinking Aim",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "light",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Nothing Turns the Point",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "piercing",
+   "pierceElement": "piercing",
+   "armorIgnore": 0.15,
+   "desc": "Your piercing damage cannot be resisted."
+  }
+ ]
+}

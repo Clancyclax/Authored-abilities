@@ -1,0 +1,82 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Banked Ember",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Throws an ember banked under your shell that deals 7 damage to the first enemy it meets and sets it [Burning] for 1 damage a second for 10 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Vent the Kiln",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Vents the heat stored in your shell, which deals 12 damage to every enemy within 3 tiles, knocks them back 3 tiles and sets them [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Hearth Within",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "fire",
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 4 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Cold Blood Warmed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, the heat warms your blood and you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

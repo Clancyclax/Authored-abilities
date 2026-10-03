@@ -1,0 +1,72 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Belly-Low Pounce",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "template": "imbueStrike",
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 160,
+   "desc": "Rushes you to a target up to 5 tiles away, then rakes it with your weapon for 12 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Toy with the Catch",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "template": "stackStrike",
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target: a swat for 8 damage that uses it up and adds half its remaining damage to the blow."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "name": "Twitching Lure",
+   "element": "physical",
+   "summonKind": "turret",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.3,
+   "cooldown": 40,
+   "desc": "Drops your tail, which thrashes where it lands for 10 seconds and lashes an enemy within 3 tiles for 3 damage every second."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "name": "Tail for a Life",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you is refused and leaves you at 1 health."
+  }
+ ]
+}

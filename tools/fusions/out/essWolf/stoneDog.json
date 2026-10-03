@@ -1,0 +1,79 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Blooded as One",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "A lunging bite that deals 26 damage to the first enemy it meets and leaves it [Bleeding] for 3 damage a second for 5 seconds. Your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "See Them Off",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "knockback": 96,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Snaps at everything close, which deals 11 damage to every enemy within 2.5 tiles and knocks them back 3 tiles. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "name": "Keep Vigil",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 24,
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 6 seconds."
+  },
+  {
+   "name": "Half-Wild Companion",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Wolfdog",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded wolfdog fights beside you, striking an enemy within 4.5 tiles for 4 damage every 1.2 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

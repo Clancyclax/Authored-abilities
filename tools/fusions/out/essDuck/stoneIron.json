@@ -1,0 +1,69 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Anvil Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 256,
+   "maxMult": 2,
+   "ignoreArmor": true,
+   "desc": "A dropped weight on a target up to 8 tiles away that deals 30 damage, rising to twice that at full reach. It ignores armour."
+  },
+  {
+   "name": "Dented Ripple",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rings out in a circle, dealing 7 damage to every enemy within 2.5 tiles, each with a 50% chance to be [Sundered] for 5 seconds. It holds 3 charges and kills give charges back."
+  },
+  {
+   "name": "Unflinching Calm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 30,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier that absorbs the next 30 damage and raises your armour by 10%, both for 10 seconds."
+  },
+  {
+   "name": "Cold Composure",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.15,
+   "regenPerSec": 0.5,
+   "desc": "Your armour rises by 15%. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

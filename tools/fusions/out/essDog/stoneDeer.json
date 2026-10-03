@@ -1,0 +1,78 @@
+{
+ "essence": "essDog",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Startle Burst",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "A burst that deals 11 damage to every enemy within 3 tiles and throws each 3 tiles back, and you move 25% faster for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Brought to Bay",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Bites a target at or below 30% health for 20 damage and leaves it 10% easier to wound for 5 seconds. It deals 5% more for every 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "name": "Clear the Fence",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 6,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Bounds 4 tiles forward, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "On the Scent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Every few tiles you run, your next strike gains 15% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

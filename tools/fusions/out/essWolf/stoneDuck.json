@@ -1,0 +1,97 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Flying Wedge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Runs the pack through in a wedge, which deals 4 damage to everything in a cone 3.5 tiles long. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Dunked",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "desc": "Lunges at an enemy up to 5 tiles away and ducks it under, which deals 12 damage, rising to 1.3 times that at full reach, stuns it for 1 second and leaves it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Wet-Coat Shake",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Sheds up to 3 conditions from you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Dry-Shod Pursuit",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.15,
+     "text": "your stamina recovers faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your stamina recovers 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Itching Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A weapon swipe that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 3 seconds, with a 25% chance to leave it [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Unheard Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "guaranteedCrit": true,
+   "desc": "A pounce on an enemy up to 7 tiles away that deals 26 damage, up to 1.6 times that at the full 7 tiles. It always lands as a critical hit."
+  },
+  {
+   "name": "Feet First",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 3,
+   "cooldown": 60,
+   "blinkOnUse": 64,
+   "desc": "You hop 2 tiles, and for 3 seconds blows deal no damage to you and no condition can take hold of you."
+  },
+  {
+   "name": "Scratch Fever",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "dodgeBonus": 0.05,
+   "desc": "Against an enemy carrying one of your afflictions, you deal 10% more damage. You have 5% more dodge chance."
+  }
+ ]
+}

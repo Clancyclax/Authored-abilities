@@ -1,0 +1,79 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Sting Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 stings at once, spread apart, each dealing 3 poison damage, with a 30% chance per hit to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Venom Tally",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 16,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Fires a barbed stinger that deals 14 poison damage to the first enemy it meets, uses up every affliction you have on it, and deals 60% more damage for each one."
+  },
+  {
+   "name": "Hive Rhythm",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 30,
+   "desc": "Restores 4 stamina a second for 6 seconds."
+  },
+  {
+   "name": "Worker's Tempo",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you move and attack 3% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

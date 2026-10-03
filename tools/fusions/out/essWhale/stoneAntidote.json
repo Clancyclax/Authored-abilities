@@ -1,0 +1,75 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Spat Dregs",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Spits the strained-out dregs in a cone 5 tiles ahead, which deals 12 damage to everything in it and leaves each enemy [Poisoned] for 5 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Backwash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Draws one of your afflictions back out of an enemy up to 6 tiles away, which deals 8 damage, rising to 1.5 times that at full reach, and heals you for 25% of the damage dealt. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Baleen Sieve",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 8,
+   "desc": "Removes up to 3 poison conditions from you and your allies, and restores 8 health."
+  },
+  {
+   "name": "Ambergris",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it. Your poison resistance rises by 10%."
+  }
+ ]
+}

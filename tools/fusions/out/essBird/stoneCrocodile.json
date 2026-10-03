@@ -1,0 +1,71 @@
+{
+ "essence": "essBird",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Still-Water Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 60,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "desc": "Snaps the target for 30 damage, leaving it 15% easier to wound for 6 seconds. It always lands as a critical hit."
+  },
+  {
+   "name": "Reedbed Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "isAoe": true,
+   "range": 80,
+   "coneAngle": 0.6,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "desc": "Lunges in a cone 2.5 tiles long, dealing 7 damage to everything in it. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "One-Legged Vigil",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 30,
+   "stealthDuration": 7,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 7 seconds: enemies notice you 70% later. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Worth the Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3
+   },
+   "desc": "The moment your health is full, your critical chance rises by 30% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

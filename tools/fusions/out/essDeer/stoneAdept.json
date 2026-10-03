@@ -1,0 +1,70 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Measured Bound",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 224,
+   "maxMult": 2,
+   "guaranteedCrit": true,
+   "desc": "Bounds at an enemy up to 7 tiles away and deals 26 piercing damage, rising to double that at 7 tiles. It always lands as a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Textbook Finish",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Usable only on an enemy at or below 25% health. It deals 18 damage and uses up every affliction you have on the target, adding 1.5 times their remaining damage. Then your movement speed rises by 25% for 4 seconds."
+  },
+  {
+   "name": "Run It Back",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "wind",
+   "cooldown": 90,
+   "resetCount": 1,
+   "blinkOnUse": 96,
+   "desc": "You spring 3 tiles aside and clear the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Second Nature",
+   "element": "physical",
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "dodgeBonus": 0.06,
+   "desc": "When you have gone a while without a critical hit, your next strike gains 25% critical hit chance. Once every 8 seconds. You gain 6% dodge chance."
+  }
+ ]
+}

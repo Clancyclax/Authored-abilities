@@ -1,0 +1,75 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Hindleg Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 64,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "A backward kick that deals 12 damage, knocks the target 3 tiles away and leaves it 8% easier to wound for 4 seconds. You move 25% faster for 3 seconds."
+  },
+  {
+   "name": "Startling Hop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sudden spring that deals 6 damage to every enemy within 2 tiles, with a 40% chance to leave each one [Hindered] for 3 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Hair Trigger",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.3,
+   "buffDuration": 9,
+   "cooldown": 30,
+   "blinkOnUse": 64,
+   "desc": "Your dodge chance rises by 30% for 9 seconds, and you hop 2 tiles."
+  },
+  {
+   "name": "Already Gone",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a dodge that failed is rolled again, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Forager's Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 192,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "desc": "Sends a stinger into the first enemy it meets for 4 poison damage, leaving it [Poisoned] for 1 damage a second for 4 seconds. It then leaps to 2 more enemies within 3 tiles, each for 60% of the damage.",
+   "rangeBand": "medium",
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Work Gang",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "aoeBand": "small",
+   "spreadAfflictions": 112,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.06,
+   "scaleCap": 0.24,
+   "desc": "A circling cut that deals 11 damage to every enemy within 3 tiles. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it. Its damage rises 6% for each ally near you (max 24%).",
+   "isAoe": true
+  },
+  {
+   "name": "Cut Comb",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Field Workers",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Field Bee",
+   "lifeOnKill": 2,
+   "desc": "A bonded swarm of field bees flies with you, stinging an enemy within 4 tiles for 3 damage every second. Each kill restores 2 health to you."
+  }
+ ]
+}

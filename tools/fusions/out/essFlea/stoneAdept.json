@@ -1,0 +1,81 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Rote Vein",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "leech": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 28 damage and makes the target [Bleeding] for 3 damage a second for 4 seconds. It always lands as a critical hit, and you heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Studied Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 72,
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You leap up to 6 tiles onto the target and deal 12 damage. It is left 10% easier to wound and [Marked] for 6 seconds."
+  },
+  {
+   "name": "Muscle Memory",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "blinkOnUse": 64,
+   "desc": "Clears the cooldown on one of your other abilities still waiting, chosen at random, and hops you 2 tiles."
+  },
+  {
+   "name": "Perfected Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover give your next strike 15% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

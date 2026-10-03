@@ -1,0 +1,81 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quick Dunk",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 70,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A quick snap that deals 4 damage, leaves the target 5% easier to wound for 3 seconds, and has a 40% chance of [Soaked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spreading Wake",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a wave through a cone 3 tiles ahead, dealing 11 damage and leaving each enemy [Soaked] for 5 seconds. Your afflictions on each spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Shrugged Off",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Removes up to 2 conditions from you, and your movement speed rises 15% for 3 seconds."
+  },
+  {
+   "name": "Rolls Off the Back",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "water",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a dodge that failed is rolled a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Rolled Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 18,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "stunOnHit": 1.2,
+   "leech": 0.25,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Clamps the target and rolls for 18 damage, stunning it for 1.2 seconds, using up every affliction on it and adding 1.5 times their remaining damage. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "The One Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bossPct": 0.06,
+   "desc": "Hooks the target for 30 damage and leaves it [Bleeding] for 3 damage a second for 6 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Still Until Ripe",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "water",
+   "cooldown": 60,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "castTime": 1.5,
+   "desc": "After a 1.5-second wait, increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "name": "Fed After Basking",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, you heal for 30% of all damage you deal for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

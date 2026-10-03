@@ -1,0 +1,104 @@
+{
+ "essence": "fire",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Caustic Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Flicks a spark of flame that deals 4 damage to the first enemy it meets and sets it [Burning] for 1 damage a second for 3 seconds. It has a 40% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Bitter Fumes",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Burns a reagent in a ring around you that deals 11 damage to every enemy within 3 tiles, stuns each for 1 second and sets each [Burning] for 2 damage a second for 3 seconds. Each has a 50% chance to be [Damped], its damage lowered, for 6 seconds.",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   }
+  },
+  {
+   "name": "Burn It Off",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "fire",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 6
+   },
+   "desc": "Removes up to 3 conditions from you. For 6 seconds afterwards, they burn off as flames that strike your enemies for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Sweated Out",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Each time you afflict an enemy, you regain 2 health a second for 4 seconds. Once every 8 seconds. You have 12% poison resistance."
+  }
+ ]
+}

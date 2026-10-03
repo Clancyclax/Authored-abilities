@@ -1,0 +1,81 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Rote Verse",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "vibrantEcho",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sings a drilled phrase that deals 4 damage to the first enemy it meets, with a 35% chance to leave it ringing with [Vibrant Echo] for 6 seconds."
+  },
+  {
+   "name": "Coda",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "resonating",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "A closing note that deals 18 damage to an enemy up to 8 tiles away and consumes every affliction on it, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Taught by Ear",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "resonating",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Refrain",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "resonating",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again and the second roll stands. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneBee",
+  "fusions": [
+    {
+      "name": "Drowsy Drones",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "poison",
+      "role": "basic",
+      "base": 2,
+      "cooldown": 0.9,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.4,
+      "speed": 300,
+      "radius": 6,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "castTime": 0,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.3,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "contagion": {
+        "max": 2,
+        "radius": 128,
+        "chance": 1,
+        "spreadsLeft": 2
+      },
+      "desc": "Looses 3 stings at once, spread apart, each of which deals 2 poison damage, with a 30% chance per hit to leave the target [Hindered] for 5 seconds. [Hindered] is catching: it passes to up to 2 more enemies within 4 tiles."
+    },
+    {
+      "name": "Honeyed Barb",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "poison",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "spammable": true,
+      "strikes": 1,
+      "chargesMax": 4,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 3
+      },
+      "desc": "A weapon strike that deals 6 damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and slows it by 25% for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Let the Hive Work",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "poison",
+      "resource": "stamina",
+      "overTime": true,
+      "restorePerSec": 4,
+      "restoreDuration": 6,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 9
+      },
+      "cooldown": 30,
+      "desc": "Restores 4 stamina a second for 6 seconds. A swarm of bees fights beside you for 9 seconds, stinging for 4 damage every 1.4 seconds."
+    },
+    {
+      "name": "Idle Hands, Busy Wings",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 8,
+        "range": 224
+      },
+      "desc": "The moment your stamina is full, a bee flies to the nearest enemy within 7 tiles and deals 8 damage. Once every 6 seconds."
+    }
+  ]
+}

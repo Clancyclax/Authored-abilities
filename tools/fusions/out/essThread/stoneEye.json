@@ -1,0 +1,74 @@
+{
+  "essence": "essThread",
+  "stone": "stoneEye",
+  "fusions": [
+    {
+      "name": "First Glance",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 340,
+      "radius": 8,
+      "openerCrit": {
+        "amount": 0.3
+      },
+      "desc": "Sends a strand down your line of sight that deals 4 damage to the first enemy it meets. Your critical chance is 30% higher against an enemy that has not yet been hurt."
+    },
+    {
+      "name": "Field of Regard",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "arcane",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 160,
+      "coneAngle": 0.6,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Ties everything in your field of view to your gaze, in a cone 5 tiles long. It deals 12 damage, stuns each target for 1 second and leaves it [Marked] for 6 seconds."
+    },
+    {
+      "name": "Long Sightline",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "arcane",
+      "cooldown": 90,
+      "rangeMult": 1.3,
+      "buffDuration": 20,
+      "desc": "For 20 seconds, your attacks and spells reach 1.3 times as far."
+    },
+    {
+      "name": "Knot for Every Look",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "arcane",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "power",
+      "stackCap": 5,
+      "stackDecay": 4,
+      "stackSpend": "crit",
+      "stackOn": "enemy",
+      "stackScale": 1,
+      "stackIcon": "stackEye",
+      "desc": "Every hit you land on an enemy ties a knot on it, up to 5. Your next critical hit on it spends them all: you deal 6% more damage per knot (30% at full) for 6 seconds. Unfed, a knot fades every 4 seconds."
+    }
+  ]
+}

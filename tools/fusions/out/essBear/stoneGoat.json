@@ -1,0 +1,67 @@
+{
+ "essence": "essBear",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cliffside Ram",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 80,
+   "knockback": 112,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "A headlong ram that deals 16 damage, knocks the target back 3.5 tiles and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Stand Gore",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 80,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "A goring blow that deals 20 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to it. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Dug Heels",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Reduces the damage you take by 30% for 10 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Planted Hooves",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.15,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 8% of your maximum health per stack (48% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

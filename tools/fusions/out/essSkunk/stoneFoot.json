@@ -1,0 +1,79 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Scuffed Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Scuffs a line of musk 5 tiles long into the ground ahead of you that lasts 6 seconds. It deals 6 damage to each enemy that crosses it and slows it by 20% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Every Mile of Muck",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "knockback": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A kick with a road-fouled boot that deals 13 damage, knocks the target back 2.5 tiles, leaves it 15% easier to wound for 5 seconds and [Poisoned] for 8 seconds. Its damage rises 5% for every 100 paces you have travelled since you last used it (max 25%)."
+  },
+  {
+   "name": "Plod On Regardless",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "cooldown": 45,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Reduces the damage you take by 25% for 12 seconds."
+  },
+  {
+   "name": "Right of Way",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.15,
+   "cooldownReduction": 0.05,
+   "desc": "On paved ground, your armour rises by 15%. Your other abilities come round 5% sooner."
+  }
+ ]
+}

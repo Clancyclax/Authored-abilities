@@ -1,0 +1,74 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Hydraulic Maul",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 80,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "desc": "Swings a hydraulic maul across a cone 2.5 tiles long, which deals 13 damage to everything in it and stuns each enemy for 1.2 seconds."
+  },
+  {
+   "name": "Trap-Spring Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that closes sprung iron teeth on the target, which deals 30 damage and leaves it [Bleeding] for 3 damage a second for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Winter Maintenance",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 40,
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "You power down and run repairs, restoring 4 health a second for 8 seconds. The healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Needle in the Red",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

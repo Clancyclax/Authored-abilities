@@ -1,0 +1,74 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "role": "medium",
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Gliding Descent",
+   "element": "wind",
+   "base": 12,
+   "cooldown": 14,
+   "maxMult": 2,
+   "chargeTo": 224,
+   "desc": "Glides you to a target up to 7 tiles away, then lands on it for 12 damage, rising to 2 times that at full reach."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "role": "basic",
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spammable": true,
+   "name": "Languid Wingbeat",
+   "element": "water",
+   "base": 3,
+   "cooldown": 1,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A slow beat of your flippers sends out a swell, dealing 3 damage to every enemy within 2.5 tiles with a 35% chance to leave each [Leaden] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "name": "Surfacing Breath",
+   "element": "wind",
+   "immunityDuration": 3,
+   "cooldown": 120,
+   "healOnUse": 10,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. You regain 10 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "name": "Riding the Thermal",
+   "element": "wind",
+   "desc": "Every few paces you cover, you regain 2 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

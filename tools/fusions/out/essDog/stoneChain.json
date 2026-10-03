@@ -1,0 +1,77 @@
+{
+ "essence": "essDog",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "End of the Tether",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.5,
+   "stunOnHit": 1,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Lunges at a target up to 5 tiles away for 12 damage, up to 1.5 times that at full reach, leaving it [Stunned] for 1 second and then moving 30% slower for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rattling Links",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "consumeAffliction": true,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Bites every enemy within 2 tiles for 7 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 60%. Usable only on a target carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Junkyard Welcome",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 128,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Pulls up to 5 enemies within 4 tiles onto you for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Pulled Taut",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you deal 5% more damage per stack for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

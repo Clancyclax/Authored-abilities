@@ -1,0 +1,79 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Called Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "A single aimed shot that deals 30 damage to the first enemy it meets. It is always a critical hit."
+  },
+  {
+   "name": "Fan Fire",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 12,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 480,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "knockback": 64,
+   "desc": "Empties 5 shots in a fan, spread apart, each of which deals 6 damage and knocks its target back 2 tiles, with 30% more critical chance against a target that has not been hurt yet.",
+   "openerCrit": {
+    "amount": 0.3
+   }
+  },
+  {
+   "name": "Sentry Piece",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDuration": 12,
+   "summonDmg": 5,
+   "summonInterval": 1.2,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to set a loaded piece on a rest beside you for 12 seconds. Every 1.2 seconds it fires on an enemy within 6 tiles for 5 damage."
+  },
+  {
+   "name": "Double Tap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Recited Verse",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "spellImpetus",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "rangeBand": "medium",
+   "reachUnits": 220,
+   "desc": "Holds 3 charges, and kills give charges back. Looses 3 spore pods in a spread, each dealing 6 damage with a 30% chance to leave the target [Spell Impetus] for 8 seconds."
+  },
+  {
+   "name": "Spoken Contagion",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 360,
+   "radius": 8,
+   "desc": "Hurls a spore word that deals 14 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Practiced Cadence",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "cooldown": 45,
+   "desc": "Increases your casting speed by 25% for 12 seconds and restores 10 health."
+  },
+  {
+   "name": "Marginal Note",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "When you inflict a condition, your next spell deals 20% more damage. Once every 8 seconds."
+  }
+ ]
+}

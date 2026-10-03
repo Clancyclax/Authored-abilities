@@ -1,0 +1,94 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Roll Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy at or below 25% health, a threshold that rises with each rank. You pin its neck under the staff and roll: it deals 20 damage, consumes every affliction on the target, adding 1.5 times their remaining damage to the hit, and makes it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Wedged Jaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "stunOnHit": 1.4,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Jams the staff upright between the target's jaws. It deals 14 damage, stuns the target for 1.4 seconds and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Stick-Propped Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a pair of jaws at the nearest enemy, propped open on a length of staff. It waits up to 20 seconds, and the first enemy to come within 2 tiles knocks the prop out: the jaws deal 18 damage and leave it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Log at the Waterline",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 25% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

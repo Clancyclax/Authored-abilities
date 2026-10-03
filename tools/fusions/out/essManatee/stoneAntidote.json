@@ -1,0 +1,82 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "execute",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Drawn Dose",
+   "element": "poison",
+   "base": 16,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Draws out every affliction you have on the target: it deals 16 damage, with 60% more for each one drawn. 25% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "role": "medium",
+   "range": 160,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Brackish Outflow",
+   "element": "poison",
+   "base": 11,
+   "cooldown": 16,
+   "coneAngle": 0.7,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 12,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Expels fouled water in a cone 5 tiles long, dealing 11 damage and leaving everything in it [Poisoned] for 12 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "name": "Filtered Clean",
+   "element": "water",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "Removes up to 3 poison conditions from you, and you regain 12 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "name": "Passed Through",
+   "element": "water",
+   "desc": "As one of your afflictions lifts, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

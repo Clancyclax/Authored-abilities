@@ -1,0 +1,80 @@
+{
+ "essence": "essHook",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Land the Big One",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 120,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A raking maul that deals 32 damage and leaves the target [Bleeding] for 3 damage a second for 5 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "River Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.5,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "A long reach that deals 5 damage, rising to 1.5 times that at its full reach of 4 tiles. Its damage rises 6% for every 10% of your health already gone (max 30%)."
+  },
+  {
+   "name": "Crushing Embrace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "taunt": true,
+   "tauntRadius": 128,
+   "tauntMax": 4,
+   "tauntDuration": 4,
+   "desc": "Increases your maximum health by 20% for 12 seconds, and pulls up to 4 enemies within 4 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Taste of the Catch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

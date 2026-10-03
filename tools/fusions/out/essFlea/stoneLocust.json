@@ -1,0 +1,77 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Swarm Feed",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "wind",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1.0,
+   "volleySpread": 0.7,
+   "speed": 265,
+   "radius": 7,
+   "range": 220,
+   "isAoe": true,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "volleyCount": 5,
+   "leech": 0.25,
+   "chargesMax": 5,
+   "desc": "Looses 5 bites in a wide spread, each of which deals 3 damage. You heal for 25% of the damage dealt. It holds 5 charges, and kills give charges back."
+  },
+  {
+   "name": "Grain Thief",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "bossPct": 0.05,
+   "leech": 0.25,
+   "desc": "Sends a bite at the first enemy it meets, dealing 26 damage plus 5% of a boss's or elite's maximum health. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Roiling Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "wind",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDuration": 12,
+   "summonDmg": 4,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "desc": "Conjures a cloud that fights beside you for 12 seconds, striking enemies within 4 tiles for 4 damage every 1 second."
+  },
+  {
+   "name": "Gorging Frenzy",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you heal for 30% of all damage you deal for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+  "essence": "essShield",
+  "stone": "stoneBee",
+  "fusions": [
+    {
+      "name": "Barb Left In",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "speed": 400,
+      "radius": 6,
+      "rangeBand": "medium",
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "debuff": {
+        "key": "slowLearner",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a guard bee from behind the shield that deals 3 damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 4 seconds, with a 30% chance to leave it [Slow Learner] for 6 seconds."
+    },
+    {
+      "name": "Comb Rampart",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "poison",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 20,
+      "wallKind": "burn",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "spreadAfflictions": 112,
+      "desc": "Raises a wall of comb 5 tiles long for 6 seconds. It deals 10 damage to each enemy that crosses it and leaves it [Poisoned] for 2 damage a second for 5 seconds, and your afflictions on that enemy spread to every enemy within 3.5 tiles."
+    },
+    {
+      "name": "Sentries at the Entrance",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "nature",
+      "cooldown": 27,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 18,
+      "shieldStrikes": 4,
+      "shieldDuration": 6,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 9
+      },
+      "desc": "Raises a barrier that absorbs the next 18 damage and holds for 6 seconds. A swarm of guard bees fights beside you for 9 seconds, stinging for 4 damage every 1.4 seconds."
+    },
+    {
+      "name": "Hive Answers",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "reflectWard",
+      "element": "poison",
+      "reflectKind": "damage",
+      "reflectFrac": 0.12,
+      "buffDuration": 0,
+      "resist": {
+        "element": "poison",
+        "amount": 0.1
+      },
+      "desc": "12% of the damage you take is stung back into whoever dealt it. You have 10% poison resistance."
+    }
+  ]
+}

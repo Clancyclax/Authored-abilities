@@ -1,0 +1,73 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Belated Pounce",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "requiresTargetBelow": 0.25,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Pounces on a target at or below 25% health, dealing 20 damage and adding 1.2 times the remaining damage of every affliction on it. The health threshold rises with each rank. You move 20% faster for 3 seconds after it.",
+   "kind": "active",
+   "category": "attack",
+   "stackMult": 1.2,
+   "executeLadder": true
+  },
+  {
+   "name": "Lazy Swat",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A swat that deals 4 damage, knocks the target back 1.5 tiles and leaves it [Bleeding] for 1 damage a second for 3 seconds.",
+   "kind": "active",
+   "category": "attack",
+   "knockback": 48
+  },
+  {
+   "name": "Soundless Glide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 18,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later, you move 20% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Feet Under You",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead.",
+   "kind": "passive"
+  }
+ ]
+}

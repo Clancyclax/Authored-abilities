@@ -1,0 +1,83 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Slit Glance",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a glance at the first enemy in line, which deals 4 damage. Each hit has a 30% chance to leave the target [Exposed], its resistance to the elements stripped, for 8 seconds."
+  },
+  {
+   "name": "Sweep of the Gaze",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "karma",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a cone 5 tiles ahead with your gaze, which deals 26 damage to everything in it and ignores resistance. Each target has [Karma] opened against it for 10 seconds: your blows on it land harder and its blows land softer."
+  },
+  {
+   "name": "Periscope Neck",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.3,
+   "buffDuration": 20,
+   "cooldown": 75,
+   "castTime": 0.5,
+   "desc": "Extends your neck from the shell: for 20 seconds, your attacks and spells reach 43% further."
+  },
+  {
+   "name": "Nictitating Blink",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, a shield worth 12% of your maximum health closes over you for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

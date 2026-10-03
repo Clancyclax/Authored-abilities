@@ -1,0 +1,80 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Ripsaw Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a pull-cord saw through a cone 3 tiles long, which deals 8 damage to everything in it, with a 50% chance to leave each [Bleeding] for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Falling Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Usable only on an enemy at or below 25% health. A weapon strike that releases a weighted blade, which deals 22 damage and leaves the target [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Spinning Picket Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "slashing",
+   "cooldown": 30,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Stakes a row of spinning blades 5 tiles long for 8 seconds. Anything that crosses it is left [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Treadle Whetwheel",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "pierceElement": "physical",
+   "armorIgnore": 0.12,
+   "cooldownReduction": 0.04,
+   "desc": "Your physical attacks ignore 12% of the target's armour, and your other abilities come round 4% sooner."
+  }
+ ]
+}

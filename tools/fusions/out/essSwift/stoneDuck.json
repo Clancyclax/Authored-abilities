@@ -1,0 +1,95 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneDuck",
+  "fusions": [
+    {
+      "name": "Shaken Dry",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "wet",
+        "chance": 0.4,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A spray around you that deals 3 damage to every enemy within 2.5 tiles, each with a 40% chance to be left [Soaked] for 5 seconds."
+    },
+    {
+      "name": "Skidding Touchdown",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "speed": 520,
+      "radius": 10,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "explodeRadius": 96,
+      "splashFrac": 0.8,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.4,
+      "desc": "Sends a wave along the ground that deals 28 damage to the first enemy it meets; every other enemy within 3 tiles takes 80% of that. Its damage rises 5% for every 100 paces you have travelled since you last used it, up to 40%."
+    },
+    {
+      "name": "Off the Back",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "water",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.6,
+      "buffDuration": 6,
+      "cooldown": 24,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "For 6 seconds, each condition laid on you has a 60% chance to be sent back to whoever inflicted it. Your movement speed rises 20% for 4 seconds after you use it."
+    },
+    {
+      "name": "Runs on the Pond",
+      "kind": "passive",
+      "category": "movement",
+      "template": "waterWalk",
+      "element": "water",
+      "isMovement": true,
+      "source": "essence",
+      "riders": [
+        {
+          "rank": "bronze",
+          "stat": "moveSpeed",
+          "amount": 0.15,
+          "text": "you cross it faster than ground"
+        },
+        {
+          "rank": "silver",
+          "stat": "dodgeChance",
+          "amount": 0.08,
+          "text": "and blows slide off you while you are on it"
+        },
+        {
+          "rank": "gold",
+          "stat": "staminaRegen",
+          "amount": 0.2,
+          "text": "and running on it costs you less"
+        }
+      ],
+      "desc": "You walk on water and swamp as on solid ground. While on it, from bronze rank you move 15% faster, from silver your dodge chance rises by 8%, and from gold your stamina recovers 20% faster."
+    }
+  ]
+}

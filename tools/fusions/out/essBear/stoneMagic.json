@@ -1,0 +1,68 @@
+{
+ "essence": "essBear",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ley Burst",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Hurls a surge of raw arcana that deals 30 damage to the first enemy it meets and ignores the target's resistances."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Ground Tremor",
+   "element": "arcane",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "knockback": 96,
+   "desc": "Stamps out a shockwave that deals 14 damage to every enemy within 3 tiles and knocks them back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Swelling Mass",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "maxHp",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Increases your maximum health by 25% for 15 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "name": "Stray Aegis",
+   "element": "arcane",
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.06,
+    "duration": 6
+   },
+   "desc": "Each time you spend mana, you gain a shield worth 6% of your maximum health for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Buckling Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "basic",
+   "cooldown": 1,
+   "base": 4,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Roots heave the ground under every enemy within 2.5 tiles, dealing 4 damage with a 40% chance to leave each [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Geode Pod",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "long",
+   "cooldown": 70,
+   "base": 26,
+   "speed": 280,
+   "radius": 10,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Throws a stone-shelled seed pod that deals 26 damage to the first enemy it meets and bursts, dealing 80% of that to every enemy within 3 tiles."
+  },
+  {
+   "name": "Tilled Ground",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "earth",
+   "cooldown": 36,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 112,
+   "healScope": "party",
+   "desc": "Turns the ground where you stand into a growing bed for 10 seconds. It restores 3 health a second to you and any ally within 3.5 tiles."
+  },
+  {
+   "name": "Dug In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you gain a shield worth 20% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

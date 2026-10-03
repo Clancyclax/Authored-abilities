@@ -1,0 +1,90 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Startled Puff",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Bursts spores around you, dealing 4 nature damage to every enemy within 2.5 tiles and giving them Rot for 1 damage a second for 3 seconds. Your movement speed rises 15% for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wide Berth",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Launches a spore pod at a target up to 6 tiles away that deals 12 nature damage, rising to 1.6 times that at full reach. It knocks the target back 3 tiles, with a 50% chance to leave it [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Run It Off",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "cooldown": 20,
+   "desc": "Restores 3 health a second to you for 6 seconds, 10% more for every 100 paces you have run since you last used it, up to 50% more."
+  },
+  {
+   "name": "Quick to Knit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When a blow that is not fire damages you, you regain 2 health a second for 4 seconds. Once every 8 seconds. Your dodge chance rises by 5%."
+  }
+ ]
+}

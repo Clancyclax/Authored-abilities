@@ -1,0 +1,73 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Vise Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1.2,
+   "desc": "A clamping bite that deals 13 damage, makes the target [Bleeding] for 2 damage a second for 4 seconds and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Wrenching Clench",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "A wrenching bite that deals 8 damage, leaves the target 6% easier to wound for 3 seconds and heals you for 25% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Steadying Hold",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "cooldown": 45,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Sure Seizure",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

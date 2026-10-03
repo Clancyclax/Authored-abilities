@@ -1,0 +1,89 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grazed Down",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Needs one of your afflictions on the target and uses it up. A cropping bite that deals 9 damage, leaves the target 5% easier to wound for 3 seconds, and heals you for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tenderised",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "sunder": {
+    "amount": 0.12,
+    "duration": 8
+   },
+   "desc": "A pounding weapon strike that deals 30 damage, ignores armour, makes the target [Bleeding] for 3 damage a second for 5 seconds, and leaves it 12% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Second Stomach",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "cooldown": 12,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Restores 16 health to you. Its healing rises 6% for every 10% of your health already gone (max 30%)."
+  },
+  {
+   "name": "Laden Feedbag",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 4,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 15
+    }
+   ],
+   "allyScaling": {
+    "per": 0.05,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Conjures a laden feedbag: your maximum health rises by 15, each kill returns 4 health, your critical chance rises by 4% and your critical hits deal 0.1x more. Its effect increases by 5% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Peck by Rote",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "chargesMax": 5,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A drilled peck that deals 7 damage and leaves the target 6% easier to wound for 4 seconds. Its damage rises 8% for each ally beside you, up to 32%. It holds 5 charges, and a kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Note-Perfect Flurry",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Buffets every enemy within 3 tiles for 28 damage, and every hit is a critical hit. Your movement speed rises by 20% for 4 seconds."
+  },
+  {
+   "name": "Well-Worn Routine",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 60,
+   "blinkOnUse": 64,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting, and you jink 2 tiles from where you stood."
+  },
+  {
+   "name": "Practised Scramble",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Once every 12 seconds, a dodge that fails is rolled again and the second roll stands. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

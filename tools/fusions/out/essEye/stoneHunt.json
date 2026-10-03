@@ -1,0 +1,84 @@
+{
+ "essence": "essEye",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Quarry's End",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 90,
+   "reachUnits": 90,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "A strike that deals 20 damage to a target at or below 30% health, consuming every affliction on it and adding 1.6 times their remaining damage to the blow. You move 20% faster for 4 seconds afterwards."
+  },
+  {
+   "name": "Quarry Glint",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Sends a bolt into the first enemy it meets, dealing 4 damage with a 50% chance to leave it [Marked] for 8 seconds. Its damage rises 8% for each affliction on the target (max 40%)."
+  },
+  {
+   "name": "Closing Leap",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 20,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Closing In",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. When it reaches 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

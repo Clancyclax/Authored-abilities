@@ -1,0 +1,63 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Haymaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "desc": "A crushing blow that costs 5% of your maximum health, deals 9 damage and leaves the target 20% easier to wound for 5 seconds.",
+   "base": 9,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 5
+   },
+   "hpCostPct": 0.05
+  },
+  {
+   "name": "Dropped Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "desc": "Hurls a heavy weight that deals 32 damage, up to 1.5 times as much at 6 tiles, and ignores the target's armour.",
+   "base": 32,
+   "cooldown": 100,
+   "range": 192,
+   "maxMult": 1.5,
+   "ignoreArmor": true
+  },
+  {
+   "name": "Forged Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "blunt",
+   "desc": "Raises your armour by 30% for 10 seconds and your physical resistance by 10% while it holds.",
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   },
+   "cooldown": 40
+  },
+  {
+   "name": "Level Ground",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "desc": "On paved ground, your armour rises by 15%.",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.15
+  }
+ ]
+}

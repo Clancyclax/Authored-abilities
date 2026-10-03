@@ -1,0 +1,85 @@
+{
+ "essence": "essShip",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Caught in Irons",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a set of shackles at a target up to 7 tiles away for 12 damage, rising to 1.5 times that at full reach. It stuns the target for 1 second and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Boarding Net Cast",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a weighted net over a cone 3 tiles long, dealing 8 damage to everything in it with a 50% chance to leave each enemy [Slowed] for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Batten the Gratings",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 90,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "desc": "After a 1-second cast, holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Galley Draft",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you regain 3 stamina a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

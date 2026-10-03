@@ -1,0 +1,68 @@
+{
+ "essence": "essBear",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barbed Fling",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Flings a barb that deals 8 damage to the first enemy it meets and makes it [Bleeding] for 2 damage a second for 5 seconds. Costs 5% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Raking Sweep",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "spreadAfflictions": 112,
+   "desc": "Sweeps every enemy within 3 tiles; each hit deals 12 damage. Your afflictions on each target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Hauled to the Den",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 256,
+   "tauntMax": 6,
+   "tauntDuration": 6,
+   "threatMult": 1.5,
+   "cooldown": 24,
+   "desc": "A challenge that pulls up to 6 enemies within 8 tiles onto you for 6 seconds, and draws 1.5 times the usual threat."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Snagged Quarry",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

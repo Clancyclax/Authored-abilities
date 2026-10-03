@@ -1,0 +1,80 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Planted Lure",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "confuse": {
+    "chance": 0.25,
+    "duration": 3
+   },
+   "confuseChance": 0.25,
+   "confuseDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Flicks a lure into the first enemy it meets, dealing 4 damage, with a 25% chance to turn it against its allies for 3 seconds. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Counted Coins",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A sly kick on a target up to 8 tiles away that deals 30 damage, rising to twice that at full reach. It ignores resistances, and its damage rises 8% per affliction on the target (max 40%)."
+  },
+  {
+   "name": "Sly Reversal",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 6,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "For 6 seconds, each affliction laid on you has a 50% chance to be sent back to its source. You move 15% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Tithe Taken",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "You deal 12% more damage to enemies carrying an affliction, and your dodge chance rises by 5%."
+  }
+ ]
+}

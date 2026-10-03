@@ -1,0 +1,91 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Dragged Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Clamps the lash on an enemy at or below 30% health within 3.5 tiles and rolls, which deals 24 damage, lowers its armour by 20% for 5 seconds and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that clamps and rolls, which deals 15 damage, stuns the target for 1.2 seconds and leaves it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Snare in the Reeds",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 200,
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 60,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Sets a coiled snare at the nearest enemy. It waits up to 1 minute; the first enemy to come within 2 tiles springs it, which deals 20 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Still Until the Snap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scratched Dirt",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.7,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You scratch a spray of grit 3 tiles ahead, dealing 3 damage to everything in the cone, with a 30% chance to leave each one [Blunted], its critical hit chance lowered, for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ledge Pounce",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "range": 86,
+   "guaranteedCrit": true,
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "You pounce on a target up to 6 tiles away and land with stone-hard claws, dealing 28 damage that is always a critical hit and leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Righting Twist",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "earth",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "cooldown": 45,
+   "desc": "You twist back onto your feet, removing up to 3 conditions from you, and your movement speed rises 15% for 3 seconds."
+  },
+  {
+   "name": "Upright Landing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your health falls below 50%, you gain a stone shield worth 25% of your maximum health for 6 seconds. Once every 45 seconds. You gain +5% dodge chance."
+  }
+ ]
+}

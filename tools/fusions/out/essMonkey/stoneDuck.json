@@ -1,0 +1,96 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Splash Fight",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slaps up a sheet of water in a cone 3 tiles ahead of you, dealing 3 damage to everything in it with a 50% chance to leave each target [Soaked] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pond Skipper",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "medium",
+   "knockback": 64,
+   "base": 11,
+   "cooldown": 10,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Skips a flat pebble that deals 11 damage to the first enemy it meets and knocks it back 2 tiles, then skips on to 2 more enemies within 3.5 tiles for 60% of that each."
+  },
+  {
+   "name": "Unruffled",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your stamina recovery by 40% for 12 seconds, with +8% dodge chance for it."
+  },
+  {
+   "name": "Shallows Stride",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than you cross ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows slide off you while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "manaRegen",
+     "amount": 0.25,
+     "text": "and it gives something back while you rest on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you cross it 10% faster, from silver you have 8% more dodge chance while on it, and from gold your mana comes back 25% faster while on it."
+  }
+ ]
+}

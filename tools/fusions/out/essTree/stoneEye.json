@@ -1,0 +1,81 @@
+{
+ "essence": "essTree",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Knothole Glance",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "A stare from a knot in your bark that deals 4 arcane damage to the first enemy it meets. It has 50% more critical chance against an enemy that has not been wounded yet."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lenticel Stare",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Opens every pore in your bark: it deals 26 arcane damage to every enemy within 4 tiles, ignores resistances and leaves each one [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "name": "Watch-Sapling",
+   "template": "activeSummon",
+   "element": "plant",
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "castTime": 1,
+   "cooldown": 50,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Plants a sapling that watches for 15 seconds and strikes an enemy within 6 tiles for 5 damage every 1.5 seconds, with a 30% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Nothing Unwitnessed",
+   "template": "passiveConditional",
+   "element": "arcane",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage. Your armour rises by 5%."
+  }
+ ]
+}

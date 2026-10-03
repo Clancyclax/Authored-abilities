@@ -1,0 +1,75 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Trail's End",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Kicks a target at or below 30% health, dealing 24 damage and leaving it [Bleeding] for 3 damage a second for 4 seconds. Its damage rises 6% for every 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "name": "Read the Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks through a cone 4 tiles ahead, dealing 12 damage to each enemy and leaving it [Marked] for 8 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Where the Gaze Lands",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "arcane",
+   "teleportRange": 192,
+   "cooldown": 12,
+   "dodgeBonus": 0.08,
+   "desc": "Steps you instantly to a point up to 6 tiles away, and your dodge chance rises by 8%."
+  },
+  {
+   "name": "No Print Missed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "dodgeBonus": 0.04,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage, and your dodge chance rises by 4% at all times."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Loosed Mid-Stride",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "desc": "Looses an arrow that deals 8 damage to the first enemy it meets. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Parting Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "knockback": 96,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A heavy arrow that deals 13 damage, rising to 1.8 times that at its full reach of 8 tiles. It throws the target back 3 tiles and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Breathing Room",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "piercing",
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "blinkOnUse": 96,
+   "desc": "Hops you 3 tiles from where you stood and increases your critical hit chance by 20% for 10 seconds."
+  },
+  {
+   "name": "Strung by Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Every stretch of ground you cover, your next spell deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

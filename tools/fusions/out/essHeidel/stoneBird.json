@@ -1,0 +1,86 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stoop at Speed",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "medium",
+   "base": 10,
+   "maxMult": 2,
+   "range": 224,
+   "cooldown": 12,
+   "knockback": 80,
+   "desc": "A diving kick at a target up to 7 tiles away that deals 10 damage, rising to 2 times that at full range, and knocks it 2.5 tiles back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Beaten Air",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You beat the air down across a 4-tile cone, dealing 28 damage that ignores armour. Each hit has a 50% chance of [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Hollow-Boned Sprint",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 35% for 8 seconds. You bound 2 tiles from where you stood, with +10% dodge chance while it lasts."
+  },
+  {
+   "name": "Barely Touching Ground",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "wind",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "your hooves leave the ground sooner"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and blows find only the air behind you"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.08,
+     "text": "and your kicks land between strides"
+    }
+   ],
+   "desc": "Raises your Speed by 1, and your Speed ceiling by 1. From bronze rank you move 5% faster, from silver your dodge chance rises 5%, and from gold you attack 8% faster."
+  }
+ ]
+}

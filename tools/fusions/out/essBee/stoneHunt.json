@@ -1,0 +1,102 @@
+{
+ "essence": "essBee",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scent Trail",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.7
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.7,
+   "desc": "Flicks a stinger that deals 4 damage, then leaps to 1 more enemy within 3.5 tiles for 70% of the original damage. Each hit has a 40% chance of [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quarry's End",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "ignoreResist": true,
+   "base": 30,
+   "maxMult": 2,
+   "cooldown": 120,
+   "range": 260,
+   "reachUnits": 260,
+   "rangeBand": "long",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "A thrown stinger that deals 30 damage, rising to 2 times that at maximum range, and ignores the target's resistances. Its damage rises 10% for each affliction on the target (max +50%)."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "name": "Tracking Pack",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Calls a swarm that fights beside you for 12 seconds, striking for 3 damage every second. Each strike has a 30% chance of [Marked] for 5 seconds."
+  },
+  {
+   "kind": "passive",
+   "name": "Narrowing Gap",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 2
+   },
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "When you kill an enemy, your next 2 strikes have 30% more critical chance, and stingers fight beside you for 8 seconds, striking for 3 every 1.4 seconds. Once every 8 seconds."
+  }
+ ]
+}

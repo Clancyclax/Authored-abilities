@@ -1,0 +1,83 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Ruinous Gnaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Looses a cone 4 tiles ahead that deals 10 damage to everything in it and leaves it [Sundered] for 6 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "chargesMax": 3,
+   "leech": 0.2,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A crushing bite that deals 8 damage and consumes every affliction on the target, adding 1.2 times their remaining damage to the hit, and heals you for 20% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Droning Horde",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDuration": 12,
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 45,
+   "desc": "Calls a swarm for 12 seconds that gnaws the nearest enemy within 4 tiles for 3 damage every second."
+  },
+  {
+   "name": "Gorged Reprieve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 20% of the damage you deal for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essBow",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Rote Quiver",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 256,
+   "maxMult": 1.5,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargesMax": 5,
+   "desc": "Looses an arrow at a target up to 8 tiles away that deals 8 damage, rising to 1.5 times that at full reach. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Flawless Spread",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 20,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 440,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "guaranteedCrit": true,
+   "desc": "Looses 3 arrows at once, spread apart, each dealing 20 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Practised Renock",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 75,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Muscle Memory",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again, and the second roll stands."
+  }
+ ]
+}

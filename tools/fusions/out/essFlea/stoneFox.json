@@ -1,0 +1,74 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Pickpocket Sip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "desc": "Sends a bite at the first enemy it meets, dealing 7 damage. It needs one of your afflictions on the target and uses it up, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Decoy Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "confuse": true,
+   "confuseChance": 0.4,
+   "confuseDuration": 4,
+   "desc": "Every enemy within 3.5 tiles takes 12 damage and is knocked back 2 tiles. Each hit has a 40% chance to turn the target against its allies for 4 seconds."
+  },
+  {
+   "name": "Vanishing Trick",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 150,
+   "immunityDuration": 4,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. Your movement speed rises 25% for 4s after you use it."
+  },
+  {
+   "name": "Fortune's Favour",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you go without a critical hit for a while, your critical hit chance rises by 30% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

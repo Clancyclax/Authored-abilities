@@ -1,0 +1,82 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Under Hoof",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "range": 86,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pins a target at or below 25% health under your hooves, dealing 26 damage, leaving it [Pinned] for 2 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Round-Up",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Gallops a tight circle, dealing 12 damage to every enemy within 3 tiles and stunning them for 1 second."
+  },
+  {
+   "name": "Closing Rails",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 224,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 24,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Closes a pen 7 tiles long ahead of you for 6 seconds that drags every enemy near it inward, slowing anything it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Penned Quarry",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 12
+   },
+   "desc": "When you inflict a condition on an enemy, you regain 12 stamina. Once every 10 seconds."
+  }
+ ]
+}

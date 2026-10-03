@@ -1,0 +1,78 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Darning Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 380,
+   "radius": 5,
+   "range": 200,
+   "castTime": 0,
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.15,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 darning needles at once, each dealing 3 damage, with a 15% chance per hit to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Flower to Flower",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "spreadAfflictions": 128,
+   "desc": "Throws a bobbin that deals 12 damage to the first enemy it meets. Your afflictions on that enemy spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Hive of Needles",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 40,
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonInterval": 1.2,
+   "summonDuration": 12,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Sets down a hive sewn from cloth for 12 seconds. It looses a needle at an enemy within 6 tiles every 1.2 seconds for 4 damage."
+  },
+  {
+   "name": "Stinging Seam",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land sews a stitch into that enemy, up to 5. At 5 they all pull at once: a blow strikes it for 34% of your weapon damage per stitch (170% at full). Unfed, a stitch fades every 4 seconds."
+  }
+ ]
+}

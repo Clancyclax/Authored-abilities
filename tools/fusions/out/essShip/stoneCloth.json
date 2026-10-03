@@ -1,0 +1,66 @@
+{
+ "essence": "essShip",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Crack of Canvas",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "desc": "Snaps a sail around you, dealing 12 damage to every enemy within 2.5 tiles and knocking each back 2.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Stitch",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Strikes a target at or below 25% health for 22 damage and leaves it 15% easier to wound for 6 seconds. Usable only on such a target."
+  },
+  {
+   "name": "Fothered Leak",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 15,
+   "healAmount": 18,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Lampblack Canvas",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "wind",
+   "desc": "At night, your dodge chance rises by 12%.",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12
+  }
+ ]
+}

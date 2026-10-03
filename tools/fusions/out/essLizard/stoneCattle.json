@@ -1,0 +1,91 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unhurried Stampede",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "template": "aoeRing",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A stamp that deals 26 damage to every enemy within 3 tiles, with a 50% chance of [Stalled] for 6 seconds. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Whole Herd Leaning",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 96,
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A shove that deals 13 damage, knocks the target back 3 tiles and leaves it 10% easier to wound for 5 seconds, with a 60% chance of [Enervated] for 6 seconds. Its damage rises 10% for each ally beside you, up to 30%."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "name": "Shared Sunpatch",
+   "element": "nature",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "cooldown": 24,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Chewed Over",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you heal for 5% of your maximum health per stack (30% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

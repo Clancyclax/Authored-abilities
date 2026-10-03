@@ -1,0 +1,76 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Unshaped Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Slams a wave of raw arcana that deals 30 damage to every enemy within 3.5 tiles and ignores their resistances."
+  },
+  {
+   "name": "Probing Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a spark at an enemy that deals 4 arcane damage, with a 30% chance to leave it [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Quickened Casting",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your casting speed by 30% and your dodge chance by 8% for 12 seconds."
+  },
+  {
+   "name": "Pent Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds."
+  }
+ ]
+}

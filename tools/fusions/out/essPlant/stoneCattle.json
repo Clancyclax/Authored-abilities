@@ -1,0 +1,80 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Turned Furrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 12,
+   "range": 128,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lowers your horns and ploughs a furrow 4 tiles long, dealing 12 damage to every enemy in it and knocking each back 3 tiles. Roots turned up by the furrow leave them [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Close Cropping",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 4,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "leech": 0.3,
+   "desc": "Crops one enemy for 4 damage, heals you for 30% of the damage dealt and leaves the target 5% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Chew the Cud",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "plant",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds, and restores 8 health at once."
+  },
+  {
+   "name": "Fallow Strength",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When your stamina is full, you deal 25% more physical damage for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essApe",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Wringing the Venom Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 72,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Usable only on a target at or below 30% health. A crushing squeeze deals 18 damage and uses up every affliction on the target, adding 1.5 times their remaining damage and 50% more damage for each one used up."
+  },
+  {
+   "name": "Retched Draught",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits drawn poison in a cone 4 tiles long, dealing 11 damage to everything in it with a 60% chance to leave each target [Poisoned] for 6 seconds, and knocks them back 2.5 tiles."
+  },
+  {
+   "name": "Bitter-Leaf Chew",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes 2 poison conditions from you and restores 10 health."
+  },
+  {
+   "name": "Hardened Gut",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "poison",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your maximum health rises by 12, and your poison resistance rises by 12%."
+  }
+ ]
+}

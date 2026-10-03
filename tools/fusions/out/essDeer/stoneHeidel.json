@@ -1,0 +1,74 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Hoofbeat Drive",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 2,
+   "knockback": 80,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Your next 2 weapon strikes each deal 12 blunt damage, knock the enemy 2.5 tiles back and leave it [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Trample Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "desc": "A trampling blow that deals 28 blunt damage, always lands as a critical hit and leaves the target 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Steady Pace",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "cooldown": 40,
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Not Yet Spent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 25,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 25
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When your stamina runs out, 20 stamina comes back to you. Once every 25 seconds."
+  }
+ ]
+}

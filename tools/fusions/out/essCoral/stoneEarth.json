@@ -1,0 +1,84 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Upthrust Shelf",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Thrusts a shelf of old reef limestone up through the ground 4 tiles ahead of you, dealing 28 rock damage that ignores armour to everything in it and leaving them [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Set in Stone",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.7,
+   "desc": "A blow with fossil reef that deals 16 rock damage and turns your afflictions on the target to stone: it uses up every one and deals 70% more damage for each. The target is 10% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Limestone Rind",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "rock",
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "resist": {
+    "element": "rock",
+    "amount": 0.1
+   },
+   "cooldown": 40,
+   "desc": "Raises your armour by 30% for 10 seconds, and your rock resistance by 10%."
+  },
+  {
+   "name": "Bedrock Reply",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "resist": {
+    "element": "rock",
+    "amount": 0.06
+   },
+   "desc": "When you take damage that is not fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 12 seconds. You have 6% rock resistance."
+  }
+ ]
+}

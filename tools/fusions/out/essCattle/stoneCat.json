@@ -1,0 +1,78 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pounce From Cover",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "desc": "A pouncing gore on a target up to 6 tiles away that deals 22 damage, rising to 1.5 times that at full reach. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swishing Tail",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.7,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lashing swish of your tail that deals 3 damage to every enemy within 2 tiles, with a 25% chance to leave each [Damped] for 3 seconds."
+  },
+  {
+   "name": "Lost in the Herd",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Veils you for 6 seconds. Enemies notice you 60% later, and the veil breaks the moment you attack. Its effect increases by 10% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Four Hooves Down",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead."
+  }
+ ]
+}

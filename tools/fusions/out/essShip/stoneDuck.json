@@ -1,0 +1,85 @@
+{
+ "essence": "essShip",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Splash Off the Stem",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a wave through a cone 3 tiles long, dealing 3 damage to everything in it with a 50% chance to leave each enemy [Soaked] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dead in the Water",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Only strikes a target at or below 25% health, and that threshold rises with each rank. It deals 20 damage and uses up every affliction on the target, adding 1.5 times the damage they had left to deal, then leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Decks Run Clear",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to run off you and onto whoever inflicted it."
+  },
+  {
+   "name": "Shrugged Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "desc": "When a condition on you ends, you regain 15 stamina. Once every 10 seconds.",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   }
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Bodkin at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "ignoreArmor": true,
+   "desc": "Looses a narrow-headed shaft up to 9 tiles. It deals 28 damage that ignores armour, rising to 1.8 times that at full reach."
+  },
+  {
+   "name": "Emptying the Quiver",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 5,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 shafts in a spread out to 7 tiles. Each shaft deals 6 damage, with a 20% chance to leave its target [Pinned] for 1.5 seconds. Holds 5 charges; a kill gives one back."
+  },
+  {
+   "name": "Archer's Stakes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 10,
+   "wallThickness": 32,
+   "base": 6,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "cooldown": 30,
+   "desc": "Plants a row of sharpened stakes 5 tiles long in front of you for 10 seconds. The row deals 6 damage to anything that crosses it and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Nocked and Held",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 30% more damage. Once every 15 seconds."
+  }
+ ]
+}

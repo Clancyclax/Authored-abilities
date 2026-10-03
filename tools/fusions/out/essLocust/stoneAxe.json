@@ -1,0 +1,76 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Cleaving Maw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A chop that deals 18 damage and eats every affliction you have on the target, dealing 60% more damage for each one eaten. It leaves the target 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Windrow Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Sweeps edged wings in a full circle, dealing 8 damage to every enemy within 3 tiles and making them [Bleeding] for 2 damage a second for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Hooked Wing-Edges",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "lifeOnKill": 5,
+   "desc": "For 9 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Mown Rows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

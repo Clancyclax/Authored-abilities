@@ -1,0 +1,75 @@
+{
+ "essence": "essWater",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Sounding Pulse",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends out a pulse of pressure that deals 11 damage to every enemy within 3.5 tiles, stuns each for 0.8 seconds and leaves it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Skimmed Drink",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "leech": 0.25,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Strikes an enemy up to 5 tiles away: it deals 7 damage, rising to 1.5 times that at full reach, and you heal for 25% of the damage dealt. Its damage rises 6% for every tenth of your health already gone, up to 30%. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Grotto",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "healOnUse": 8,
+   "desc": "Veils you for 6 seconds and restores 8 health. Enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Stalactite Seep",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "regenPerSec": 0.5,
+   "desc": "At night, your dodge chance rises by 10%. You regenerate 0.5 health a second at all times."
+  }
+ ]
+}

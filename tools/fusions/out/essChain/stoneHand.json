@@ -1,0 +1,79 @@
+{
+ "essence": "essChain",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Seizing Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "stunOnHit": 1.2,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Closes a chain around an enemy up to 5 tiles away that deals 14 damage, up to 1.4 times that at full reach, stuns it for 1.2 seconds and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Vise Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whirls a ring of links around you that deals 7 damage to every enemy within 3 tiles, with a 40% chance to leave each [Pinned] for 2 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Steadying Line",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 24,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "desc": "Restores 4 health a second to the ally who needs it most, for 6 seconds."
+  },
+  {
+   "name": "Tightening Hold",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a shield worth 30% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

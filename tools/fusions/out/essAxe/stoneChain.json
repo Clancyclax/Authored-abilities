@@ -1,0 +1,86 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reel In",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "Throws a hatchet on a length of chain that deals 12 damage to the first enemy it meets, then reels you to it from up to 7 tiles away."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swung on a Tether",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Swings the axe on its chain, dealing 4 damage to every enemy within 2 tiles. The swing then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Snare Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 20,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Stretches a chain 6 tiles long ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Links Pulled Taut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "When you inflict a condition, your physical damage rises 20% for 4 seconds. Once every 8 seconds. Anything you strike moves 15% slower for 2 seconds."
+  }
+ ]
+}

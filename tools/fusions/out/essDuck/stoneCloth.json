@@ -1,0 +1,77 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Billowing Sheet",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps a sheet out on a wingbeat in a 4-tile cone ahead of you, dealing 12 damage to everything in it and knocking it back 2.5 tiles. Each hit has a 50% chance to leave the target [Hindered] for 5 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Wet Snap",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps a wet cloth at a target up to 4 tiles away that deals 7 damage, up to 1.5 times that at the far end of its reach, with a 40% chance to leave it [Soaked] for 5 seconds. It holds 3 charges and kills give charges back.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Eiderdown Nest",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Lays a nest of cloth and down where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3 tiles of it.",
+   "kind": "active"
+  },
+  {
+   "name": "Quilted Lining",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "frost",
+   "buffKind": "armor",
+   "amount": 0.06,
+   "resist": {
+    "element": "frost",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 6%, and you take 12% less frost damage.",
+   "kind": "passive"
+  }
+ ]
+}

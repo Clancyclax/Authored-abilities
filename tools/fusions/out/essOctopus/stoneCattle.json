@@ -1,0 +1,91 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Drive the Herd",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Spreads your arms wide and walks them forward, dealing 10 damage to every enemy in a cone 4 tiles ahead and driving each one back 3 tiles."
+  },
+  {
+   "name": "Ring Brand",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Presses a sucker hard onto the target for 5 damage, leaving it 5% easier to wound for 5 seconds, with a 35% chance that the ring it leaves keeps the target [Marked] for 8 seconds."
+  },
+  {
+   "name": "Bellwether Anchor",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 160,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "Fastens your suckers to the ground and pulls up to 5 enemies within 5 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Slow Blood, Strong Pull",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "staminaRegen",
+     "amount": 0.15,
+     "text": "a long haul tires you less"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.1,
+     "text": "and what the day wears off you grows back"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.05,
+     "text": "and every arm is ready again sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your stamina recovers 15% faster, from silver your health recovers 10% faster, and from gold your abilities come round 5% sooner."
+  }
+ ]
+}

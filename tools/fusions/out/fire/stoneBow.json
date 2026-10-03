@@ -1,0 +1,89 @@
+{
+ "essence": "fire",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Pitch Arrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Looses a pitch-soaked arrow at a target up to 7 tiles away that deals 4 damage, rising to 1.5 times that at full reach, and sets it [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Burning Rain",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "fire",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 14,
+   "spreadAfflictions": 96,
+   "castTime": 0.6,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 330,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 5 lit arrows in a wide spread out to 7 tiles, each of which deals 5 damage. Your afflictions on each target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Tracer Shafts",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "fire",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "castTime": 0.5,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far. For the first 8 seconds, lit arrows strike your enemies for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Tinder String",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.06
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a bow with a burning string. It increases your weapon damage by 10% and your attack speed by 6%, and every arrow from it sets the target [Burning] for 1 damage a second for 5 seconds."
+  }
+ ]
+}

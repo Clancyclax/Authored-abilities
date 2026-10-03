@@ -1,0 +1,75 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Under the Gorget",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "stunOnHit": 1,
+   "desc": "A sting that deals 12 damage, stuns the target for 1 second, leaves it 15% easier to wound for 6 seconds and [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Every Joint Found",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stings everything in a cone 4 tiles long. Each sting deals 26 damage that ignores armour, with a 40% chance to leave its target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Curled in the Shell",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 3,
+   "cooldown": 90,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Answered in Kind",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "piercing",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.12,
+   "itemBuffs": [],
+   "desc": "Every hit you take is 2 lower, your armour rises by 10%, and 12% of the damage you take is dealt back to whoever dealt it."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Sip From the Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 192,
+   "leech": 0.3,
+   "desc": "Throws a crescent of darkness that deals 4 dark damage to the first enemy it meets and heals you for 30% of the damage dealt.",
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Roost Alarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "desc": "A shriek that deals 11 resonating damage to every enemy within 3 tiles and stuns them for 1 second, then chains to 2 more enemies within 3 tiles for 60% of the damage.",
+   "isAoe": true,
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Dusk Colony",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.8,
+   "lifeOnKill": 4,
+   "desc": "Looses a colony that flies with you for 12 seconds, biting an enemy within 4 tiles for 3 damage every second. Each kill restores 4 health to you."
+  },
+  {
+   "name": "Lapping the Wound",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blood",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land marks the target with a stack, up to 5. At 5 they all spend at once and heal you for 5% of your maximum health per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

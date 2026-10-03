@@ -1,0 +1,70 @@
+{
+ "essence": "essBow",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Unbarred Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "desc": "Fires a heavy point that deals 30 damage to the first enemy it meets and ignores resistances."
+  },
+  {
+   "name": "Shield-Biter",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses an arrow that deals 5 damage, rising to 1.5 times that at full reach, with a 30% chance to leave the target [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Unyielding Stand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "piercing",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   },
+   "desc": "Raises your armour by 25% for 12 seconds, and your physical resistance by 10% while it lasts."
+  },
+  {
+   "name": "Case-Hardened",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "piercing",
+   "pierceElement": "piercing",
+   "armorIgnore": 0.2,
+   "desc": "Your piercing attacks ignore 20% of the target's armour."
+  }
+ ]
+}

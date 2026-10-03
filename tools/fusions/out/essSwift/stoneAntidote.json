@@ -1,0 +1,85 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneAntidote",
+  "fusions": [
+    {
+      "name": "Drawn in One Pull",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "poison",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 14,
+      "range": 84,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "stackMult": 1.5,
+      "requiresTargetBelow": 0.25,
+      "executeLadder": false,
+      "desc": "Usable only on an enemy at or below 25% health. A strike that deals 16 damage, uses up every affliction on the target and adds 1.5 times their remaining damage to the hit."
+    },
+    {
+      "name": "Dose After Dose",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.6,
+      "spammable": true,
+      "speed": 520,
+      "radius": 6,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "debuff": {
+        "key": "poison",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Flicks a dart that deals 3 damage to the first enemy it meets and leaves it [Poisoned] for 4 seconds."
+    },
+    {
+      "name": "Run It Off",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "poison",
+      "cleanseCount": 3,
+      "cleanseTag": "poison",
+      "healScope": "self",
+      "cooldown": 30,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 5
+      },
+      "desc": "Removes up to 3 poison conditions from you. Your movement speed rises 25% for 5 seconds after you use it."
+    },
+    {
+      "name": "Sweated Clean",
+      "kind": "passive",
+      "element": "poison",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 4
+      },
+      "resist": {
+        "element": "poison",
+        "amount": 0.1
+      },
+      "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 10 seconds. You have 10% poison resistance."
+    }
+  ]
+}

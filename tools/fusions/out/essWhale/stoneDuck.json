@@ -1,0 +1,94 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Bow Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 320,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pushes a swell that deals 12 damage to the first enemy it meets, knocks it back 2.5 tiles and leaves it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Wedge Formation",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 12,
+   "cooldown": 75,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 8,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0.4,
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "desc": "Sends 3 swells out in a wedge, each of which deals 12 damage. Your allies deal 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Undertow",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 60,
+   "immunityDuration": 3,
+   "blinkOnUse": 96,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you, and you surface 3 tiles from where you stood."
+  },
+  {
+   "name": "Riding High",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "your health regenerates faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver your health regenerates 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

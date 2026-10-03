@@ -1,0 +1,82 @@
+{
+ "essence": "essDog",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "No Detours",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Rushes up to 6 tiles straight to the target and strikes with your weapon, dealing 11 damage and making it [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swarm the Quarry",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 25,
+   "cooldown": 75,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Sets on every enemy within 4 tiles and deals 25 damage that ignores resistances. It grows 8% stronger for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Tireless Trot",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds, and you move 15% faster for 5 seconds."
+  },
+  {
+   "name": "Hive Momentum",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. At 8 they all spend at once: you move and attack 3% faster per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

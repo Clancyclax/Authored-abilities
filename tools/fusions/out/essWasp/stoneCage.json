@@ -1,0 +1,94 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sealed in the Cell",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stings every enemy within 3 tiles. Each sting deals 10 damage, stuns its target for 1 second and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Egg Laid Last",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health. A sting that deals 16 damage, leaves the target [Pinned] for 4 seconds and [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Stilled for the Egg",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "poison",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 60,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds and leaves each one [Poisoned] for 5 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 192
+   },
+   "name": "Hatching Day",
+   "element": "poison",
+   "desc": "When one of your afflictions runs out on an enemy, a stinger leaps to the nearest enemy within 6 tiles, dealing 7 damage. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essBear",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bursting Puffball",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Lobs a puffball that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "range": 300,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Choking Huff",
+   "element": "nature",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Huffs a cone of spores that deals 3 damage to everything caught in it. Each hit has a 30% chance of leaving the target [Diseased] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "name": "Mycelial Net",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "rangeBand": "melee",
+   "reachUnits": 110,
+   "cooldown": 24,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Mossback",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "regenPerSec": 0.6,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your maximum health rises by 12, you regenerate 0.6 health a second, and your poison resistance rises by 12%."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Painted Decoy",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "chargesMax": 3,
+   "confuse": {
+    "chance": 0.3,
+    "duration": 3
+   },
+   "desc": "Throws a decoy that deals 8 damage, with a 30% chance to turn the target on its own side for 3 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Flushed From Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A shot that deals 14 damage to a target up to 7 tiles away, rising to 1.4 times that at full reach, stuns it for 1 second and leaves it [Soaked] for 5 seconds.",
+   "stunOnHit": 1
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "healScope": "self",
+   "cleanseCount": 2,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Removes up to 2 control conditions from you. You move 20% faster for 3 seconds after you use it.",
+   "cleanseTag": "control"
+  },
+  {
+   "name": "Drawn Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health falls below 35%, a shield worth 30% of your maximum health covers you for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

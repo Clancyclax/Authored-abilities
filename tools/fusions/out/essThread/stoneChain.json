@@ -1,0 +1,83 @@
+{
+ "essence": "essThread",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Lockstitch Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a looped strand that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles, each leap dealing 60% of the original damage."
+  },
+  {
+   "name": "Fettered Together",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shackles every enemy within 3 tiles to its neighbours. It deals 11 damage and leaves each [Slowed] for 4 seconds, and your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Mail Weave",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "desc": "Weaves links into a barrier that absorbs the next 22 damage, up to 4 blows, and holds for 6 seconds. Your armour rises by 8% while you carry it."
+  },
+  {
+   "name": "Each Loop Locks",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every ability you use adds a link to the one before, up to 6. At 6 they all spend at once: you deal 6% more damage per link (36% at full) for 6 seconds. Unfed, a link fades every 6 seconds."
+  }
+ ]
+}

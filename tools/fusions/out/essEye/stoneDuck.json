@@ -1,0 +1,86 @@
+{
+ "essence": "essEye",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Idle Flick",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks water at a target up to 7 tiles away for 4 damage, rising to 1.3 times that at full reach, with a 25% chance to leave it [Soaked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Calm Regard",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You sweep a 5-tile cone ahead of you, dealing 26 damage that ignores resistances to everything in it and leaving it [Stalled] for 6 seconds, its abilities coming back slower."
+  },
+  {
+   "name": "Shed Like Water",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Removes 2 conditions from you, and your movement speed rises by 15% for 3 seconds."
+  },
+  {
+   "name": "Unruffled",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "When your health fills, your next strike gains 20% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

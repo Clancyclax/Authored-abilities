@@ -1,0 +1,79 @@
+{
+ "essence": "essBat",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Shriek Down the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "spreadAfflictions": 112,
+   "desc": "Sends a shriek into the first enemy in its path for 12 resonating damage; it leaps on to 2 more enemies within 3.5 tiles, each hit dealing 60% of that. Your afflictions on the first target spread to enemies within 3.5 tiles of it."
+  },
+  {
+   "name": "Leash of Thirst",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Strikes an enemy up to 6 tiles away for 8 blood damage, rising to 1.5 times that at full reach. It needs one of your afflictions on the target and uses it up. The target moves 20% slower for 2 seconds, and you heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Tethered Flit",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "shadow",
+   "cooldown": 12,
+   "teleportRange": 192,
+   "dodgeBonus": 0.1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Snaps you to a point up to 6 tiles away. You move 15% faster for 3 seconds afterward and have 10% more dodge chance."
+  },
+  {
+   "name": "Locked Tendons",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 120,
+   "desc": "Once every 120 seconds, a blow that would kill you is refused and leaves you at 1 health."
+  }
+ ]
+}

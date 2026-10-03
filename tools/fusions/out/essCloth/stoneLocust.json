@@ -1,0 +1,80 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Swarm Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "A swarm of moths sweeps round you, dealing 3 damage to every enemy within 2.5 tiles, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Stripped Selvedge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "spreadAfflictions": 112,
+   "desc": "Gnaws at the target's armour, dealing 12 damage and leaving it 15% easier to wound for 6 seconds. Your afflictions on it spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Moth Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonDuration": 14,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "desc": "Calls a cloud of moths woven from thread for 14 seconds. It strikes an enemy within 6 tiles every second for 3 damage."
+  },
+  {
+   "name": "Hollowed Stores",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you restore 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

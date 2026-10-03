@@ -1,0 +1,78 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Trampled Banquet",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "leech": 0.2,
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "Stamps down, dealing 26 damage to every enemy within 3 tiles and healing you for 20% of the damage dealt. If it hits, your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Straggler's Portion",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blood",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Stamps down on a target at or below 30% health, dealing 20 damage, using up every affliction on it and adding 1.5 times their remaining damage to the blow. You move 20% faster for 4 seconds afterward."
+  },
+  {
+   "name": "Trail Rations",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 10,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "You regain 4 stamina a second for 10 seconds, and your movement speed rises 15% for 5 seconds."
+  },
+  {
+   "name": "Fed on the March",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blood",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 4. At 4 they all spend at once: you move and attack 4% faster per stack for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

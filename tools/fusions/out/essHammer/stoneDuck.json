@@ -1,0 +1,71 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Pond Ripple",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes the ground and a ripple deals 3 water damage to every enemy within 2.5 tiles, with a 35% chance to leave each [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Seven Skips",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 256,
+   "maxMult": 2,
+   "ignoreResist": true,
+   "desc": "Skims the hammer at a target up to 8 tiles away for 28 damage, rising to 2 times that at full reach. It ignores the target's resistances."
+  },
+  {
+   "name": "Rain on the Anvil",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "cooldown": 120,
+   "immunityDuration": 5,
+   "desc": "For 5 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Bobs Back Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything other than fire, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

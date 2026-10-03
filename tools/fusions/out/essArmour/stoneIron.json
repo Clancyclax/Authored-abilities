@@ -1,0 +1,66 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Cold Clang",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Rings your iron against the ground, dealing 12 damage to every enemy within 3 tiles and knocking them back 2.5 tiles. Each has a 50% chance to be left [Suppressed] for 5 seconds.",
+   "base": 12,
+   "cooldown": 18,
+   "knockback": 80,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Hurled Ingot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "desc": "Hurls a block of cold iron that deals 32 damage, up to 1.5 times as much at 6 tiles, and ignores the target's resistances.",
+   "base": 32,
+   "cooldown": 100,
+   "range": 192,
+   "maxMult": 1.5,
+   "ignoreResist": true
+  },
+  {
+   "name": "Unyielding Moment",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands.",
+   "immunityDuration": 4,
+   "cooldown": 120
+  },
+  {
+   "name": "Hardened Core",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "desc": "Your armour rises by 15%, and you have 12% arcane resistance.",
+   "buffKind": "armor",
+   "amount": 0.15,
+   "resist": {
+    "element": "arcane",
+    "amount": 0.12
+   }
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+  "essence": "essShield",
+  "stone": "stoneFeast",
+  "fusions": [
+    {
+      "name": "Second Helping",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "chargesMax": 4,
+      "sunder": {
+        "amount": 0.06,
+        "duration": 4
+      },
+      "leech": 0.3,
+      "desc": "Bashes the target and takes a bite of what breaks off: it deals 7 damage, leaves the target 6% easier to wound for 4 seconds, and you heal for 30% of the damage dealt. It holds 4 charges, and a kill gives one back."
+    },
+    {
+      "name": "Board Is Laid",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 15
+      },
+      "healOnUse": 10,
+      "desc": "Slams the shield down flat as a table between your allies, dealing 26 damage to every enemy within 3.5 tiles. You regain 10 health, and your allies deal 20% more damage for 15 seconds."
+    },
+    {
+      "name": "Rations Behind the Line",
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "element": "life",
+      "cooldown": 20,
+      "healAmount": 14,
+      "range": 128,
+      "reachUnits": 128,
+      "rangeBand": "melee",
+      "healScope": "party",
+      "desc": "Passes food back from behind the shield: restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+    },
+    {
+      "name": "Fat of the Table",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "gainHealth",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "desc": "When you are healed, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+    }
+  ]
+}

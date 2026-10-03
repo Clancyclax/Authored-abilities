@@ -1,0 +1,75 @@
+{
+ "essence": "essFork",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stoop",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "Dives at a target up to 7 tiles away and drives the tines down for 14 piercing damage, leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Soaring Cast",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "reachPct": 0.5,
+   "ignoreResist": true,
+   "desc": "Throws the polearm in a gliding arc that reaches 50% further, dealing 28 piercing damage to the first enemy it meets. It ignores the target's resistances."
+  },
+  {
+   "name": "Vault Aloft",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "dashDist": 160,
+   "cooldown": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Vaults off the haft and glides 5 tiles forward, then moves 20% faster for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "On the Wing",
+   "element": "wind",
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

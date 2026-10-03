@@ -1,0 +1,76 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Skipping Clod",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Skims a flat clod that deals 4 damage to the first enemy it meets, then skips to 2 more enemies within 3 tiles, each skip dealing 60% of the original damage."
+  },
+  {
+   "name": "Burst Dyke",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cuts through the bank and floods a cone 4 tiles long, dealing 26 water damage that ignores resistances to everything in it and leaving each enemy [Soaked] for 8 seconds."
+  },
+  {
+   "name": "Heads Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 75,
+   "immunityDuration": 3,
+   "desc": "You drop into a dug hole: for 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Runs Off Downhill",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it."
+  }
+ ]
+}

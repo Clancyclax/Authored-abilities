@@ -1,0 +1,78 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sodden Cud",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "desc": "Spits a sodden mouthful of cud that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Out of the Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "stunOnHit": 1.2,
+   "desc": "A sudden heavy spring that deals 14 damage, leaves the target 15% easier to wound for 6 seconds and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Pond Wallow",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 10 seconds."
+  },
+  {
+   "name": "Sprung Clear",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, a shield worth 20% of your maximum health closes over you for 5 seconds. Once every 40 seconds."
+  }
+ ]
+}

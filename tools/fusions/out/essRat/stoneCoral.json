@@ -1,0 +1,98 @@
+{
+  "essence": "essRat",
+  "stone": "stoneCoral",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Festering Scrape",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 84,
+      "maxMult": 1.2,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "debuff": {
+        "key": "disease",
+        "chance": 0.25,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A scrape against an enemy up to 2.5 tiles away that deals 4 damage, rising to 1.2 times that at full reach, and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance to leave it [Diseased] for 6 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Spur in the Gap",
+      "template": "sunderStrike",
+      "element": "water",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 86,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 8
+      },
+      "bossPct": 0.05,
+      "desc": "Drives a spur of reef into a gap the rats have gnawed, dealing 30 damage and leaving the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+    },
+    {
+      "name": "Warren Outcrop",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "water",
+      "cooldown": 45,
+      "summonKind": "turret",
+      "summonDmg": 4,
+      "summonDuration": 15,
+      "summonInterval": 1.2,
+      "summonRange": 128,
+      "castTime": 1,
+      "desc": "Raises a coral outcrop riddled with rat holes that stands for 15 seconds. Rats dart out of it to bite an enemy within 4 tiles for 4 damage every 1.2 seconds."
+    },
+    {
+      "name": "Wharf Runner",
+      "kind": "passive",
+      "category": "movement",
+      "template": "waterWalk",
+      "element": "water",
+      "isMovement": true,
+      "source": "essence",
+      "riders": [
+        {
+          "rank": "bronze",
+          "stat": "moveSpeed",
+          "amount": 0.1,
+          "text": "you run over it faster than over ground"
+        },
+        {
+          "rank": "silver",
+          "stat": "dodgeChance",
+          "amount": 0.06,
+          "text": "and blows miss you more often while you are on it"
+        },
+        {
+          "rank": "gold",
+          "stat": "staminaRegen",
+          "amount": 0.2,
+          "text": "and your stamina comes back faster while you are on it"
+        }
+      ],
+      "desc": "You walk on water and swamp as on solid ground."
+    }
+  ]
+}

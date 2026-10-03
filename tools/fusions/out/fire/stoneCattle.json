@@ -1,0 +1,90 @@
+{
+ "essence": "fire",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Branding Iron",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Presses a hot brand into the target, which deals 8 damage, sets it [Burning] for 2 damage a second for 5 seconds and leaves it [Marked] for 10 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Bellows Breath",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "long",
+   "base": 27,
+   "cooldown": 90,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 112,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Bellows a cone of flame that deals 27 damage to everything within 3.5 tiles ahead of you and sets each target [Burning] for 10 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Cured Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "fire",
+   "cooldown": 36,
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "Raises your armour by 30% for 10 seconds. You have 15% fire resistance."
+  },
+  {
+   "name": "Stoked by Blows",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "Each time you are hurt by anything other than fire, 8 stamina comes back to you. Once every 5 seconds."
+  }
+ ]
+}

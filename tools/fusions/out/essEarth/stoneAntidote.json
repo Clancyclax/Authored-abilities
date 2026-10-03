@@ -1,0 +1,73 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Out",
+   "template": "stackStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Presses a fist of bitter clay into an enemy at or below 25% health for 20 damage, drawing out every affliction on it and adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quicklime Scatter",
+   "template": "volley",
+   "element": "earth",
+   "role": "long",
+   "base": 8,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 280,
+   "radius": 8,
+   "range": 220,
+   "cooldown": 75,
+   "isAoe": true,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scatters 4 clods of quicklime at once, each dealing 8 damage that ignores resistances, with a 50% chance to leave the target [Damped], its damage reduced, for 6 seconds."
+  },
+  {
+   "name": "Clay Poultice",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "earth",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "You press bitter clay to your wounds, drawing out up to 3 poisons on you and restoring 12 health."
+  },
+  {
+   "name": "Mineral Blood",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "earth",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "desc": "Your armour rises by 8%, and you carry 15% poison resistance."
+  }
+ ]
+}

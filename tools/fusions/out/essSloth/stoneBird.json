@@ -1,0 +1,71 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneBird",
+  "fusions": [
+    {
+      "name": "Downdraft",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "wind",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "range": 128,
+      "coneAngle": 1,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a downdraft across a cone 4 tiles long that deals 11 wind damage, knocks everything in it back 3 tiles and leaves it [Blunted] for 5 seconds."
+    },
+    {
+      "name": "Circling Wait",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 15,
+      "range": 256,
+      "maxMult": 1.6,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "requiresTargetBelow": 0.25,
+      "desc": "Usable only on an enemy at or below 25% health. Stoops on a target up to 8 tiles away and deals 20 damage, rising to 1.6 times that at full reach."
+    },
+    {
+      "name": "Easy Descent",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "wind",
+      "buffStat": "regenStamina",
+      "buffAmount": 0.5,
+      "buffDuration": 15,
+      "blinkOnUse": 96,
+      "cooldown": 45,
+      "desc": "Moves you 3 tiles from where you stood and increases your stamina recovery by 50% for 15 seconds."
+    },
+    {
+      "name": "Soft Landing",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "wind",
+      "rerollKind": "death",
+      "rerollKinds": [
+        "death"
+      ],
+      "rerollCooldown": 300,
+      "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead."
+    }
+  ]
+}

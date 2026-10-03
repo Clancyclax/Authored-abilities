@@ -1,0 +1,89 @@
+{
+ "essence": "essCage",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Dropped Portcullis",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Edged bars fall around you, dealing 14 damage to every enemy within 3 tiles, stunning them for 1 second and leaving them [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Headsman's Appointment",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 30,
+   "cooldown": 15,
+   "range": 86,
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health: a falling chop deals 30 damage and leaves it 15% easier to wound and [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Hedge of Blades",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "slashing",
+   "cooldown": 30,
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and it leaves them [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Next to the Block",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you gain a shield worth 15% of your maximum health for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

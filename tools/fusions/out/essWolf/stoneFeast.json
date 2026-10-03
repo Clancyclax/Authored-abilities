@@ -1,0 +1,79 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Shared Carcass",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "leech": 0.25,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "The pack tears in, which deals 8 damage to every enemy within 3 tiles, and you heal for 25% of the damage dealt. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Down to the Gristle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.5,
+   "leech": 0.4,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "A bite that deals 18 damage to the first enemy it meets, uses up every affliction you have on it for 50% more damage each, and heals you for 40% of the damage dealt."
+  },
+  {
+   "name": "Room at the Kill",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Bolted Meat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 18,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 18
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Each time you kill an enemy, 20% of the damage you deal heals you for 6 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies. Once every 18 seconds."
+  }
+ ]
+}

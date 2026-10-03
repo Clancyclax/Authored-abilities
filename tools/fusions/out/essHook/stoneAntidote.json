@@ -1,0 +1,70 @@
+{
+ "essence": "essHook",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Draw the Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 96,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "A pulling cut that deals 18 damage and draws out every affliction on the target, adding 1.6 times their remaining damage to the hit. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Dosed Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weapon strike that deals 4 damage and leaves a barb in the wound: the target is [Poisoned] for 1 damage a second for 4 seconds and moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Bitter Extraction",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Pulls up to 2 poison conditions out of you and restores 10 health."
+  },
+  {
+   "name": "Under Any Hide",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 10% poison resistance."
+  }
+ ]
+}

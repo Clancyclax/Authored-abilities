@@ -1,0 +1,91 @@
+{
+ "essence": "essNet",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Full-Draw Bolas",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "castTime": 1,
+   "speed": 460,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1 second draw, looses a weighted mesh that deals 32 damage to the first enemy it meets, ignoring its armour, and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Three on a String",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 shafts on cords at once, spread apart, each dealing 6 damage with a 30% chance to leave its target [Slowed] for 2 seconds. It holds 5 charges, and each kill hauls one back."
+  },
+  {
+   "name": "Tripline Shot",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "turret",
+   "summonDmg": 6,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strings a drawn shaft to a tripline where you stand for 12 seconds. It shoots an enemy within 5 tiles for 6 damage every 1.5 seconds, each shot with a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Shooting the Snared",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

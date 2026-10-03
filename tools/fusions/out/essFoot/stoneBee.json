@@ -1,0 +1,85 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Barbed Spur",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chargesMax": 4,
+   "desc": "A kick with a barbed spur that deals 7 damage and leaves the target [Poisoned] for 2 damage a second for 3 seconds. Holds 4 charges, and a kill gives one back."
+  },
+  {
+   "name": "Long-Haul Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "long",
+   "base": 14,
+   "cooldown": 70,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "isAoe": true,
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.36,
+   "desc": "Looses 3 stingers at once, spread apart, each dealing 14 damage and ignoring armour. Their damage rises 6% for every 100 paces you have run since you last used it, up to 36%."
+  },
+  {
+   "name": "Waggle Dance",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles deals 15% more damage and gains 1 Power for 12 seconds."
+  },
+  {
+   "name": "Dawn to Dusk",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your stamina runs dry, you regain 3 stamina a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

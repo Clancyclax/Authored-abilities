@@ -1,0 +1,71 @@
+{
+ "essence": "essBear",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Heaved Boulder",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "speed": 300,
+   "radius": 12,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Tears a boulder from the ground and heaves it into the first enemy in its path for 30 damage. It bursts on impact, dealing 80% of that to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Bedrock Stomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 112,
+   "stunOnHit": 1.2,
+   "desc": "Stomps the ground, dealing 12 damage to every enemy within 3.5 tiles and leaving each [Stunned] for 1.2 seconds."
+  },
+  {
+   "name": "Dug-In Rampart",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "desc": "Claws up a 5-tile bank of earth ahead of you for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Flint Talons",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "rock",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.04
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures claws of flint. Your weapon damage rises by 12% and your armour by 4%, and every strike with them leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

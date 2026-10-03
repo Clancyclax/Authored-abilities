@@ -1,0 +1,79 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneApe",
+  "fusions": [
+    {
+      "name": "Hurled Stake",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 12,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "maxMult": 1.6,
+      "knockback": 96,
+      "desc": "Throws a sharpened stake up to 7 tiles. It deals 12 damage, rising to 1.6 times that at full reach, and knocks the target back 3 tiles."
+    },
+    {
+      "name": "Cudgelwork",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "blunt",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "chargesMax": 3,
+      "range": 80,
+      "coneAngle": 0.9,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "bleed",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Swings a club with a nail driven through it across a cone 2.5 tiles ahead. The swing deals 8 damage to everything it catches and leaves each target [Bleeding] for 4 seconds. Holds 3 charges; a kill gives one back."
+    },
+    {
+      "name": "Longer Than It Looks",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "physical",
+      "rangeMult": 1.3,
+      "buffDuration": 15,
+      "cooldown": 60,
+      "castTime": 0.5,
+      "desc": "For 15 seconds, your attacks and spells reach 43% further."
+    },
+    {
+      "name": "Whittled Branch",
+      "kind": "passive",
+      "category": "weapon summon",
+      "template": "summonWeapon",
+      "element": "piercing",
+      "weaponDmgPct": 0.1,
+      "itemBuffs": [
+        {
+          "stat": "attackSpeed",
+          "amount": 0.05
+        }
+      ],
+      "strikeDot": {
+        "dmgPerTick": 2,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Conjures a branch stripped and sharpened to a tip. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Mouthful of Sea",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "healOnUse": 4,
+   "desc": "Gulps at every enemy within 2.5 tiles, which deals 7 damage and restores 4 health to you. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Clean Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.4,
+   "desc": "A lunging bite that deals 20 damage to the first enemy it meets, uses up every affliction you have on it and deals 60% more damage for each one. It heals you for 40% of the damage dealt."
+  },
+  {
+   "name": "Blubber Rations",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "healOnUse": 8,
+   "desc": "Restores 4 stamina a second for 6 seconds, and restores 8 health to you."
+  },
+  {
+   "name": "Larder Within",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you are healed, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

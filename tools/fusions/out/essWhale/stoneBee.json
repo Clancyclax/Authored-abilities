@@ -1,0 +1,88 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Droning Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "resonating",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0.2,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hums 3 notes at once, spread apart, each of which deals 3 damage, with a 30% chance per hit to leave the target [Muddled] for 4 seconds."
+  },
+  {
+   "name": "Stray Sting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Flicks a barb that deals 7 damage to the first enemy it meets and leaves it [Poisoned] for 2 damage a second for 4 seconds. Its damage rises 8% for each ally near you, up to 32%. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Shared Comb",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 20,
+   "healAmount": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Following Swarm",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 3,
+   "familiarRange": 144,
+   "familiarInterval": 1,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Wake Swarm",
+   "lifeOnKill": 3,
+   "desc": "A bonded swarm follows in your wake and fights beside you, striking enemies within 4.5 tiles for 3 damage every second. Each kill restores 3 health to you."
+  }
+ ]
+}

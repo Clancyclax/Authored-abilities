@@ -1,0 +1,77 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Drawstring",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Pulls a noose of cord tight on the target. It deals 16 damage, uses up every affliction you have on the target for 60% more damage each, and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Taut Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 24,
+   "knockback": 64,
+   "desc": "Strings a line 5 tiles long for 5 seconds. The line deals 10 damage to each enemy that crosses it and knocks that enemy back 2 tiles."
+  },
+  {
+   "name": "Slack Net",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "cooldown": 30,
+   "shieldAmount": 20,
+   "shieldDuration": 8,
+   "desc": "Throws up a net of cord that absorbs the next 20 damage and holds for 8 seconds.",
+   "shieldStrikes": 0
+  },
+  {
+   "name": "Paid-Out Thread",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "As you move, a strung thread snaps at the nearest enemy within 4 tiles, deals 5 damage and slows it by 20% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

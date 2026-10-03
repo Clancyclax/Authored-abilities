@@ -1,0 +1,79 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Bramble Paw",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 9,
+   "chargesMax": 3,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swipes a bramble-clawed paw across a cone 2.5 tiles long, dealing 9 damage with a 60% chance to leave each enemy [Bleeding] for 5 seconds. Holds 3 charges; a kill restores one."
+  },
+  {
+   "name": "Rootbound Hug",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 120,
+   "base": 30,
+   "range": 96,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Crushes one enemy for 30 damage plus 5% of a boss's or elite's maximum health. Roots hold it [Pinned] for 3 seconds and it is 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Dormant Season",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "cooldown": 45,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 4 health a second to you for 8 seconds. The healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Berry Fat",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 15,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 15, and you regenerate 0.5 health a second."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Samara Spiral",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 4,
+   "spammable": true,
+   "speed": 300,
+   "radius": 7,
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Spins a winged seed into one enemy for 4 damage. It then glides on to 1 more enemy within 3.5 tiles for 60% of that damage."
+  },
+  {
+   "name": "Leafwing Gust",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 11,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wingbeat drives sharp leaves down a cone 4 tiles long, dealing 11 damage and knocking each enemy back 3 tiles, with a 50% chance to leave it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Thistledown Drift",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "plant",
+   "cooldown": 30,
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 30% for 8 seconds, with 10% more dodge chance."
+  },
+  {
+   "name": "Seed on the Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 3
+   },
+   "desc": "Every few paces you travel, you regain 2 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

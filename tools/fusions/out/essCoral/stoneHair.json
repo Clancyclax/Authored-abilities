@@ -1,0 +1,89 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Combing Tines",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes fine filaments across the target, dealing 7 damage, leaving it 6% easier to wound for 4 seconds and making it [Bleeding] for 1 damage a second for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thousand Tendrils",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips filaments out around you, dealing 28 damage that ignores armour to every enemy within 3 tiles. It then leaps to 3 more enemies within 3 tiles, each hit dealing 60% of the original damage. Each target is left [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Combed Clear",
+   "template": "cleanse",
+   "element": "plant",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 8,
+   "cooldown": 40,
+   "desc": "Removes up to 3 conditions from you and restores 8 health."
+  },
+  {
+   "kind": "passive",
+   "category": "armor summon",
+   "name": "Fine Fringe",
+   "template": "summonArmor",
+   "element": "plant",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.08,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.03
+    }
+   ],
+   "desc": "Conjures a fringe of reef filaments: every hit you take is 2 lower, your armour rises by 10%, your dodge chance rises by 3%, and 8% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

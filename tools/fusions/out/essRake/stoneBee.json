@@ -1,0 +1,88 @@
+{
+ "essence": "essRake",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Stingers Abreast",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 400,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 barbed tines at once, spread apart, each dealing 3 damage. Each hit has a 30% chance to leave the target [Poisoned] for 4 seconds.",
+   "spammable": true
+  },
+  {
+   "name": "Pitched Hive",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Pitches a hive off the tines that deals 26 damage to the first enemy it meets and 80% of that to every enemy within 3 tiles of it. Everything struck is [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Dole of Honey",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Pollen Baskets",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. At 6 they all spend at once: you are healed for 5% of your maximum health per stack. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

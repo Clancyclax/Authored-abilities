@@ -1,0 +1,82 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Grip and Wrench",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.14,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You rush up to 6 tiles to the target and wrench its armour apart, dealing 14 damage. It is left [Pinned] for 2 seconds and 14% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Chest-Drum Clatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health and deals 8 resonating damage to every enemy within 2.5 tiles, with a 35% chance to leave each [Damped] for 4 seconds."
+  },
+  {
+   "name": "Barbed Return",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "lifeOnKill": 6,
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 6 health."
+  },
+  {
+   "name": "Rattled Temper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "armorBonus": 0.05,
+   "desc": "Every time you take damage, a stack builds on you, up to 6. The next ability you use spends them all: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 10 seconds. Your armour is 5% higher at all times."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essCat",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rake from the Glide",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Glides up to 7 tiles onto an enemy and rakes it for 12 damage, stripping 10% of its armour for 5 seconds. Its damage rises 10% for every 100 paces you have run since you last used it (max +40%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stooping Drop",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "guaranteedCrit": true,
+   "desc": "Strikes the ground where you stand, dealing 30 damage to every enemy within 2.5 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Feathered Twist",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "blinkOnUse": 64,
+   "desc": "Hops 2 tiles in the direction you face and increases your dodge chance by 20% for 10 seconds."
+  },
+  {
+   "name": "Updraft Instinct",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, your next strike gains 20% critical chance. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Passed Down the Line",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "leech": 0.12,
+   "desc": "Throws a link that deals 7 damage, then leaps to 2 more enemies within 3 tiles for 50% of that. You heal for 12% of all damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "rangeBand": "medium",
+   "name": "Hauled In",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "maxMult": 1.5,
+   "range": 192,
+   "reachUnits": 192,
+   "chargeTo": 192,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "leech": 0.15,
+   "desc": "Hauls you up to 6 tiles to the target for 12 damage, rising to 1.5 times that at full reach. It moves 25% slower for 3 seconds, and you heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Linked Repast",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "healScope": "party",
+   "hotPerSec": 2,
+   "hotDuration": 8,
+   "cooldown": 30,
+   "desc": "Restores 2 health a second to you and every ally for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 224
+   },
+   "element": "physical",
+   "name": "One Good Turn",
+   "desc": "Each time you gain health, a bolt passes along to the nearest enemy within 7 tiles for 6 lightning damage. Once every 3 seconds."
+  }
+ ]
+}

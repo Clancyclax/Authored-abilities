@@ -1,0 +1,84 @@
+{
+ "essence": "essIron",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Marrow Cracked",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "leech": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A cracking weapon strike that deals 24 damage, makes the target [Bleeding] for 2 damage a second for 4 seconds, and heals you for 30% of the damage dealt. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Tipped Cauldron",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Tips a boiling cauldron across a wide cone 3 tiles long, dealing 11 fire damage to everything in it and setting it [Burning] for 2 damage a second for 4 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "The Common Pot",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "physical",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Sets a cookpot down where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3 tiles."
+  },
+  {
+   "name": "Well-Fed Bulwark",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you are healed, you gain a shield worth 10% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Burning Felloe",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Costs 4% of your maximum health. A ring of fire around you deals 8 damage to every enemy within 2.5 tiles and sets each one [Burning] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Midsummer Hoop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Rolls a flaming hoop at the first enemy in its path. It deals 30 damage, and 80% of that to every other enemy within 3 tiles of where it breaks, and sets the target [Burning] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Staked Girandole",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.4,
+   "cooldown": 40,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.4 second cast, plants a fire totem for 12 seconds. Every second it throws sparks at an enemy within 4 tiles and deals 3 damage, with a 30% chance to leave the target [Burning] for 5 seconds."
+  },
+  {
+   "name": "Ember Relay",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "desc": "When you inflict a condition on an enemy, a spark leaps from it to the nearest other enemy within 4 tiles and deals 6 damage. Once every 8 seconds."
+  }
+ ]
+}

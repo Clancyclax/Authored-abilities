@@ -1,0 +1,91 @@
+{
+ "essence": "essSword",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Fanned Embers",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wide cut that fans flame: it deals 12 damage to everything within 3 tiles ahead of you and sets them [Burning] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Heat Treatment",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "fire",
+   "role": "resource",
+   "base": 10,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "consumeAffliction": true,
+   "desc": "Presses the hot blade into the target: it deals 10 damage, sets it [Burning] for 3 damage a second for 4 seconds and leaves it 12% easier to wound for 5 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up.",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   }
+  },
+  {
+   "name": "Forge Retort",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "cooldown": 30,
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and it sets them [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Struck Sparks",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "desc": "Each time you are hurt by anything other than fire, a spark leaps to the nearest enemy within 4 tiles and deals 6 damage. Once every 5 seconds."
+  }
+ ]
+}

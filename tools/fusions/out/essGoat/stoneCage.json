@@ -1,0 +1,85 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bar Rattler",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 64,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "knockback": 96,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Butts the target 3 tiles back for 14 damage, then leaves it [Pinned] for 1.5 seconds and 10% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hem Them In",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps your hooves around you, dealing 4 damage to every enemy within 2 tiles, with a 20% chance to leave each [Pinned] for 1 second."
+  },
+  {
+   "name": "Slipped the Pen",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "immunityDuration": 3,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Shut Gate",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essWind",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Stinging Spindrift",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 112,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Blows spray and loose polyps through a cone 3.5 tiles long that deals 7 damage, with a 50% chance to leave each target [Poisoned] for 4 seconds. Holds 3 charges; a kill gives one back."
+  },
+  {
+   "name": "Reef Break",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 9,
+   "knockback": 96,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A gust that deals 11 damage to the first enemy it meets, throws it back 3 tiles onto raised reef and leaves it [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Whistling Reef",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "wind",
+   "cooldown": 60,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 15,
+   "desc": "Grows a reef beside you for 15 seconds that strikes enemies within 4 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Settling Drift",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover lays down a shield worth 8% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

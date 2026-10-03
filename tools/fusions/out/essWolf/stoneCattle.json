@@ -1,0 +1,77 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Heeler's Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "maxMult": 1.2,
+   "desc": "A nip at the heels of an enemy up to 2.5 tiles away that deals 4 damage, rising to 1.2 times that at full reach, and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Stampede Drive",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "knockback": 112,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Drives through a cone 4 tiles long, which deals 12 damage to everything in it and knocks it back 3.5 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Yoked Together",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Tithe of the Herd",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackOn": "self",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 5. At 5 they all spend at once: you heal for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

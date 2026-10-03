@@ -1,0 +1,84 @@
+{
+ "essence": "essIron",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Tined Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "strikes": 1,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Hooks the target on a rack of tines and throws it: a weapon strike that deals 13 damage, makes it [Bleeding] for 2 damage a second for 4 seconds and knocks it back 3 tiles."
+  },
+  {
+   "name": "Warning Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Stamps a shod hoof, dealing 7 damage to every enemy within 2.5 tiles, and you move 20% faster for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Bolt in Full Harness",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you 3 tiles from where you stood and reduces the damage you take by 20% for 10 seconds. You move 20% faster for the first 4 seconds."
+  },
+  {
+   "name": "Flinch Turned Plate",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.4,
+    "rearmAbove": 0.6
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 40%, a shield worth 25% of your maximum health closes over you for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

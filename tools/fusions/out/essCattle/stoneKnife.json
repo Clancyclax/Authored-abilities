@@ -1,0 +1,84 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Between the Ribs",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "stackMult": 1.2,
+   "chargesMax": 3,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "A hidden slit that deals 8 damage and uses up every affliction on the target, adding 1.2 times the damage they had left. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Flung Cleaver",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "desc": "A thrown blow that deals 12 damage, rising to 1.6 times that at full reach of 6 tiles, and makes the target [Bleeding] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Muffled Hooves",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 40,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 8 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Edge Kept Ready",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "When you kill something, your next strike gains 30% critical hit chance. Once every 8 seconds. Your armour rises by 5%.",
+   "armorBonus": 0.05
+  }
+ ]
+}

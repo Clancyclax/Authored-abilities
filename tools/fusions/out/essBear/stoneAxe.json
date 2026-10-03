@@ -1,0 +1,77 @@
+{
+ "essence": "essBear",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Undercut",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 96,
+   "coneAngle": 1,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A chopping claw stroke through a cone 3 tiles ahead deals 13 damage to everything in it, with a 50% chance to leave each target [Bleeding] for 5 seconds. Your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Timber Fall",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Brings your full weight down on one target for 18 damage, leaving it 10% easier to wound for 4 seconds. It uses up every affliction you have on the target, dealing 60% more damage for each."
+  },
+  {
+   "name": "Whetted Claws",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your slashing damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Clear-Cut Fury",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises 30% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

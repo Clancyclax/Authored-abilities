@@ -1,0 +1,60 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drowning Hold",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 64,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "stackMult": 1.4,
+   "desc": "Only strikes a target at or below 30% health, a threshold that rises with each rank. You drag it under for 24 damage and use up every affliction on it, adding 1.4 times the damage they had left to deal."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "The Long Wait",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 180,
+   "range": 70,
+   "castTime": 1.5,
+   "bossPct": 0.06,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "After holding still for 1.5 seconds, you bite for 34 damage and leave the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Go Under",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 4,
+   "cooldown": 60,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Scent of the Faltering",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Your damage rises by 15% against enemies below half health."
+  }
+ ]
+}

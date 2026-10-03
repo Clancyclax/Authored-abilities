@@ -1,0 +1,73 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Bitter Draught",
+   "element": "poison",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 15,
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.25,
+   "desc": "Fires a draught that deals 15 poison damage to the first enemy it meets, uses up every affliction you have on it and deals 60% more damage for each one. You heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Back in Their Cups",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 80,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.08,
+   "desc": "Spills drawn poison around you, dealing 4 poison damage to every enemy within 2.5 tiles, with a 35% chance to leave each one [Poisoned] for 6 seconds. You heal for 8% of the damage dealt."
+  },
+  {
+   "name": "Purging Toast",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 8,
+   "cooldown": 30,
+   "desc": "Draws up to 2 poison conditions out of you and every ally, and restores 8 health to you."
+  },
+  {
+   "name": "Cast-Iron Stomach",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "poison",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "desc": "Your maximum health rises by 12, and you carry 15% poison resistance."
+  }
+ ]
+}

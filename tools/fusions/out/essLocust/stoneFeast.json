@@ -1,0 +1,75 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Lick the Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "leech": 0.4,
+   "desc": "Sends the swarm to finish an enemy at or below 30% health for 24 damage, and heals you for 40% of the damage dealt."
+  },
+  {
+   "name": "Uninvited Guests",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "leech": 0.15,
+   "desc": "The swarm lands on every enemy within 3.5 tiles for 28 damage, and you heal for 15% of the damage dealt. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Stripped to Bone",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.06,
+   "range": 256,
+   "cooldown": 20,
+   "desc": "The swarm strips every body within 8 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Full-Bellied Fury",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Whenever you are healed, your physical damage rises by 20% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

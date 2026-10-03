@@ -1,0 +1,86 @@
+{
+ "essence": "essShark",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Counter-Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.25,
+   "desc": "A bite that deals 16 damage and uses up every affliction you have on the target, dealing 60% more damage for each one. It leaves the target 10% easier to wound for 6 seconds and heals you for 25% of the damage dealt."
+  },
+  {
+   "name": "Chummed Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.7,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Sprays poison in a cone 4 tiles long, dealing 10 damage with a 70% chance to leave each target [Poisoned] for 6 seconds. Its damage rises 8% for each affliction already on the target, up to 40%, and your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Venom Siphon",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Removes 2 poison conditions from you and restores 12 health."
+  },
+  {
+   "name": "Bitter Meal",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "When one of your afflictions on an enemy runs out, you regain 3 health a second for 3 seconds. Once every 6 seconds. You carry 10% poison resistance."
+  }
+ ]
+}

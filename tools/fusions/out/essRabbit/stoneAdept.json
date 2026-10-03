@@ -1,0 +1,70 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Thousandth Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargesMax": 4,
+   "desc": "A practised kick that deals 8 damage and leaves the target 12% easier to wound for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Flawless Roundhouse",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "A spinning kick that deals 28 damage to every enemy within 3 tiles. Every hit is a critical hit, and you move 20% faster for 4 seconds afterward."
+  },
+  {
+   "name": "Reset Stance",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "blinkOnUse": 64,
+   "desc": "Hops you 2 tiles from where you stood and clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Muscle Memory",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 6. At 6 they all spend at once: you move and attack 3% faster per stack (16% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

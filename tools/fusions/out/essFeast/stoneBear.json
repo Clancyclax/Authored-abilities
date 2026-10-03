@@ -1,0 +1,78 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "strikes": 1,
+   "name": "Salmon Run",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.15,
+   "desc": "Rushes up to 6 tiles to the target and mauls it for 14 damage, leaving it [Bleeding] for 3 damage a second for 4 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Waking Hunger",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.9,
+   "range": 64,
+   "leech": 0.08,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Swipes all round you, dealing 5 damage to every enemy within 2 tiles. Its damage rises 8% for every 10% of your health already gone, up to 40%, and you heal for 8% of the damage dealt."
+  },
+  {
+   "name": "Hibernation Fat",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 20,
+   "healOnUse": 15,
+   "cooldown": 60,
+   "desc": "Increases your maximum health by 20% for 20 seconds and restores 15 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "element": "physical",
+   "name": "Well-Fed Fury",
+   "desc": "When you reach full health, your physical damage rises by 25% for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "essence": "essNet",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Link to Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mesh of links that deals 4 damage to the first enemy it meets, then leaps to 3 more enemies within 3 tiles for 60% of that damage each. Each hit has a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Shared Shackles",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Loops a linked mesh over every enemy within 3 tiles, dealing 12 damage and leaving each [Hindered] for 4 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Purse Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 128,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 36,
+   "cooldown": 24,
+   "desc": "Lays a drawstring loop 4 tiles long ahead of you for 5 seconds. It drags nearby enemies toward it."
+  },
+  {
+   "name": "Cracked Lash",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "When you land a critical hit, a length of linked cord lashes the nearest enemy within 5 tiles for 6 damage, then leaps to 2 more enemies within 3 tiles for 60% of that damage each. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essGun",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barbed Harpoon",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "knockback": 80,
+   "base": 12,
+   "cooldown": 16,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Fires a reef-barbed bolt at an enemy up to 7 tiles away that deals 12 damage, rising to 1.4 times that at full reach, knocks it back 2.5 tiles and leaves it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Staghorn Burst",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 4,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 440,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires 3 reef shards in a spread, each dealing 4 water damage with a 30% chance to leave the target [Soaked] for 5 seconds. Holds 4 charges; each use spends one, and each kill gives one back."
+  },
+  {
+   "name": "Grown Battery",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 50,
+   "desc": "Grows a reef battery that stands for 15 seconds and fires at an enemy within 4 tiles for 5 water damage every 1.5 seconds."
+  },
+  {
+   "name": "Encrusted Scope",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "water",
+   "critChance": 0.06,
+   "critDamage": 0.15,
+   "lifeOnKill": 2,
+   "itemBuffs": [],
+   "desc": "Conjures a reef-grown scope for your weapon: your critical hit chance rises by 6%, your critical damage multiplier rises by 0.15, and each kill restores 2 health."
+  }
+ ]
+}

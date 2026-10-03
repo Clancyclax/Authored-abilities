@@ -1,0 +1,92 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Wet-Brush Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weapon strike wound in musk-soaked strands of your tail hair that deals 4 damage, tangles the target to slow it by 20% for 2 seconds and leaves it [Poisoned] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Ten Thousand Snags",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 16,
+   "stunOnHit": 0.8,
+   "volleyCount": 6,
+   "volleySpread": 0.7,
+   "speed": 300,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whips 6 musk-soaked strands out in a spread to 6 tiles. Each strand deals 4 damage, stuns its target for 0.8 seconds and leaves it [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Matted Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "poison",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier of matted, musk-stiff fur that absorbs the next 22 damage, up to 4 blows, for 8 seconds. Your armour rises by 10% while it holds."
+  },
+  {
+   "name": "Thickening Coat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 6
+   },
+   "desc": "When you gain health, a shield worth 10% of your maximum health closes over you for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

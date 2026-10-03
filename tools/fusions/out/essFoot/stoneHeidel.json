@@ -1,0 +1,85 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Hoof Rap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Raps the target with a hard kick that deals 5 damage and leaves it 8% easier to wound for 3 seconds. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Dust Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks up a cone of dust 4 tiles ahead of you that deals 6 damage to everything in it, with a 30% chance to leave each one [Slowed] for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 5,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "You regain 5 stamina a second for 8 seconds and 10 health at once, and your movement speed rises 20% for 4 seconds."
+  },
+  {
+   "name": "Stable Companion",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 5,
+   "familiarRange": 96,
+   "familiarInterval": 1.8,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "mount": true,
+   "mountFamily": "beast",
+   "desc": "A bonded heidel fights beside you, striking enemies within 3 tiles for 5 damage every 1.8 seconds. You can ride it."
+  }
+ ]
+}

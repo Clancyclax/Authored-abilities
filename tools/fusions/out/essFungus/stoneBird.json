@@ -1,0 +1,86 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Far Scatter",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 1.5,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "spreadAfflictions": 144,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Drops a spore pod on a target up to 8 tiles away that deals 14 nature damage, rising to 1.5 times that at full reach, and gives it Rot for 2 damage a second for 5 seconds. Your afflictions on the target then spread to every enemy within 4.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Downdraft",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Holds 3 charges, and kills give charges back. A wingbeat drives spores through a cone 4 tiles long, dealing 7 wind damage to everything in it and giving it Rot for 1 damage a second for 4 seconds.",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   }
+  },
+  {
+   "name": "Lichen Nest",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "healScope": "party",
+   "cooldown": 35,
+   "desc": "Grows a nest up to 5 tiles away. For 10 seconds it restores 3 health a second to you and every ally inside it."
+  },
+  {
+   "name": "Thermal Drift",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Every few paces you travel, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

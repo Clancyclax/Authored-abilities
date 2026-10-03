@@ -1,0 +1,81 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "long",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Studied Swell",
+   "element": "water",
+   "base": 34,
+   "cooldown": 90,
+   "castTime": 1.5,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 1.5-second cast, sends a swell of water that deals 34 damage, always as a critical hit, and leaves the target [Stalled] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "role": "resource",
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "name": "Rote Ripples",
+   "element": "water",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A drilled flick of the tail deals 7 damage to every enemy within 2.5 tiles, with a 40% chance to leave each [Hindered] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "name": "Second Nature",
+   "element": "water",
+   "buffStat": "healingReceived",
+   "buffAmount": 0.3,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "desc": "Increases the healing you receive by 30% for 20 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Ten Thousand Strokes",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 8. At 8 they all spend at once: you are healed for 3% of your maximum health per stack (24% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

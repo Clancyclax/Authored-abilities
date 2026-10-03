@@ -1,0 +1,78 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hook and Haul",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 420,
+   "radius": 7,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a hooked line that deals 12 damage, hauls you up to 6 tiles to the target and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mail Flail",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whirls a length of mail around you, dealing 7 damage to every enemy within 2.5 tiles with a 40% chance to leave each [Slowed] for 3 seconds. Holds 4 charges; a kill gives one back."
+  },
+  {
+   "name": "Drawing Links",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "cooldown": 30,
+   "desc": "Lays a line of links 6 tiles long for 5 seconds that drags nearby enemies toward it and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Bound and Braced",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Your armour is 10% higher against enemies carrying your afflictions."
+  }
+ ]
+}

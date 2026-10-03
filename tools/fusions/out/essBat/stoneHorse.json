@@ -1,0 +1,71 @@
+{
+ "essence": "essBat",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Thunder Stoop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "A stooping dive deals 30 blunt damage to every enemy within 4 tiles, ignoring their armour."
+  },
+  {
+   "name": "Canter Click",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 3
+   },
+   "spammable": true,
+   "desc": "Sends a sonar click into the first enemy it meets, dealing 4 resonating damage. Your movement speed rises 10% for 3 seconds after you use it."
+  },
+  {
+   "name": "Spurred Flight",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "resonating",
+   "cooldown": 45,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "blinkOnUse": 64,
+   "desc": "Increases your attack speed by 30% for 12 seconds. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Heartbeat Tempo",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "wind",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

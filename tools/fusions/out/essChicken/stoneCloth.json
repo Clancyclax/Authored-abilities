@@ -1,0 +1,78 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fluff Burst",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes a cloud of loose down through a cone 3 tiles long, dealing 10 damage to everything in it, stunning each for 0.8 seconds and leaving it [Hindered] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unpicked Seam",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target: a peck unpicks it for 8 damage, using it up and adding half its remaining damage to the blow."
+  },
+  {
+   "name": "Downy Bandage",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "physical",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 25,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Quilted Plumage",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.03
+    }
+   ],
+   "thornsFrac": 0.05,
+   "desc": "Conjures a quilted coat over your feathers: every hit you take is 2 lower, your armour rises by 10%, and 5% of the damage you take goes back to whoever dealt it. The coat itself adds 3% armour."
+  }
+ ]
+}

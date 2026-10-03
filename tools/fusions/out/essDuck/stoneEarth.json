@@ -1,0 +1,87 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Thrice-Skipped Pebble",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "knockback": 64,
+   "chain": {
+    "count": 3,
+    "radius": 128,
+    "frac": 0.7
+   },
+   "chainCount": 3,
+   "chainRange": 128,
+   "chainDamagePct": 0.7,
+   "desc": "Skips a flat stone at a target, dealing 13 damage and knocking it back 2 tiles, then skips on to 3 more enemies within 4 tiles for 70% of that."
+  },
+  {
+   "name": "Churned Mire",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "castTime": 0.6,
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Churns the ground around you to mud, dealing 26 damage to every enemy within 3.5 tiles plus 4% of a boss's or elite's maximum health, and leaving them [Slowed] for 6 seconds."
+  },
+  {
+   "name": "Raised Bank",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "cooldown": 24,
+   "desc": "Raises a bank of earth 5 tiles long in front of you for 6 seconds. Nothing crosses it. You move 20% faster for 3 seconds after you use it.",
+   "kind": "active",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Stony Composure",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "When a blow that is not fire lands on you, you gain a shield worth 20% of your maximum health for 5 seconds. Once every 15 seconds.",
+   "kind": "passive"
+  }
+ ]
+}

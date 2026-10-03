@@ -1,0 +1,81 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Between the Lames",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "range": 112,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "desc": "A thrust between the plates of an enemy up to 3.5 tiles away that deals 32 damage, ignores armour and leaves it 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Two Deep in File",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.35,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Thrusts along a narrow line 4 tiles long that deals 4 damage to everything in it, with a 30% chance to leave each enemy [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Front Rank Steady",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 128,
+   "tauntMax": 4,
+   "tauntDuration": 4,
+   "desc": "Reduces the damage you take by 20% for 10 seconds, and pulls up to 4 enemies within 4 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Pike-Studded Harness",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.06,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "desc": "Conjures a spiked harness: every hit you take is 2 lower, your armour rises by 10%, your maximum health rises by 10, and 6% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

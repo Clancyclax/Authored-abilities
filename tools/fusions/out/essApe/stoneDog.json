@@ -1,0 +1,72 @@
+{
+ "essence": "essApe",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Pack-Backed Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A swipe that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. Its damage rises 10% for each ally near you, up to 30%."
+  },
+  {
+   "name": "Lead the Hunt",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 192,
+   "maxMult": 1.5,
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "Lunges at a target up to 6 tiles away and bites for 26 damage, rising to 1.5 times that at full range. On a hit, you and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Tended Wounds",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 20,
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "desc": "Restores 3 health a second to the ally who needs it most, for 6 seconds."
+  },
+  {
+   "name": "Hound of the Band",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.1,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Panterimp",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded hound runs with you, striking enemies within 5 tiles for 4 damage every 1.1 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

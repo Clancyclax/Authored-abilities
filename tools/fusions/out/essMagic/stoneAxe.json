@@ -1,0 +1,82 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Headsman's Sigil",
+   "element": "arcane",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Strikes the target for 26 damage, leaving it 20% easier to wound for 6 seconds and [Suppressed] for 3 seconds. Usable only on an enemy at or below 25% health.",
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Falling Arc",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.8,
+   "ignoreArmor": true,
+   "desc": "Sweeps a conjured edge through a cone 4 tiles long, dealing 30 damage to everything in it. It ignores armour."
+  },
+  {
+   "name": "Edge on the Word",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your critical damage by 40% for 12 seconds."
+  },
+  {
+   "name": "Hewing Construct",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "arcane",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a cleaving blade of arcana. It increases your weapon damage by 12% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

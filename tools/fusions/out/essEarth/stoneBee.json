@@ -1,0 +1,84 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mason Swarm",
+   "template": "volley",
+   "element": "earth",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 300,
+   "radius": 6,
+   "range": 200,
+   "cooldown": 1,
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings 3 barbs of grit at once, spread apart, each dealing 3 damage with a 30% chance to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flint Stinger",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 7,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Darts a flint stinger into an enemy for 7 damage and leaves it [Poisoned] for 2 damage a second for 4 seconds. You hold 4; each kill gives one back."
+  },
+  {
+   "name": "Mud Hive",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "summonKind": "turret",
+   "summonDuration": 15,
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "You raise a hive of packed mud for 15 seconds. Its bees sting the nearest enemy within 5 tiles for 3 damage every second."
+  },
+  {
+   "name": "Daubed Layers",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.4,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land packs on a layer of mud, building a stack on you, up to 10. The next ability you use spends them all: you gain a shield that soaks 3% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

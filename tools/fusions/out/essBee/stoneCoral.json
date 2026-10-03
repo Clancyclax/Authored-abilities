@@ -1,0 +1,87 @@
+{
+ "essence": "essBee",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Encrusting Colony",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A burst that deals 12 damage to every enemy within 3.5 tiles and leaves them [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on each target spread to every enemy within 4 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Razor Polyps",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 7 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Brood Nursery",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 125,
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Raises a reef around you for 8 seconds that restores 3 health a second to you and every ally within 4 tiles. Every ally within 5.5 tiles makes it 10% stronger, up to 4 allies."
+  },
+  {
+   "name": "Cell on Cell",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you use an ability, a stack builds on you, up to 10. At 10 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

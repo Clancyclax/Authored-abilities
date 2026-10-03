@@ -1,0 +1,84 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneDog",
+  "fusions": [
+    {
+      "name": "Run to Ground",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "requiresTargetBelow": 0.3,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Usable only on an enemy at or below 30% health. A bite that deals 18 damage and leaves the target 10% easier to wound for 5 seconds. Its damage rises 8% for every 100 paces you have travelled since you last used it, up to 40%."
+    },
+    {
+      "name": "Hamstring Bite",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "strikes": 1,
+      "stunOnHit": 0.8,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 4
+      },
+      "desc": "A bite that deals 11 damage, leaves the target [Stunned] for 0.8 seconds and [Bleeding] for 2 damage a second for 4 seconds, and makes it 30% slower for 4 seconds."
+    },
+    {
+      "name": "Hunting Cry",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "physical",
+      "partyDmgPct": 0.2,
+      "partyPower": 1,
+      "range": 160,
+      "rangeBand": "medium",
+      "reachUnits": 160,
+      "buffDuration": 12,
+      "cooldown": 40,
+      "desc": "Every ally within 5 tiles deals 20% more damage and fights with 1 more power for 12 seconds."
+    },
+    {
+      "name": "Courser at Heel",
+      "kind": "passive",
+      "category": "summon",
+      "template": "summonBonded",
+      "element": "piercing",
+      "familiarDmg": 4,
+      "familiarRange": 160,
+      "familiarInterval": 1,
+      "familiarFamily": "dog",
+      "familiarCreatureName": "Courser",
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      },
+      "desc": "A bonded courser runs at your heel, biting enemies within 5 tiles for 4 damage every second. Anything it bites moves 20% slower for 2 seconds."
+    }
+  ]
+}

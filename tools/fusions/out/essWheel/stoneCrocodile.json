@@ -1,0 +1,79 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Seizes the target in a roll that deals 22 damage and leaves it 20% easier to wound for 6 seconds, and tears out every affliction you have on it for 60% more damage each."
+  },
+  {
+   "name": "Thrashing Backlash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 1.6,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "Sweeps a cone 3 tiles long that deals 13 damage and leaves each enemy [Stunned] for 1 second."
+  },
+  {
+   "name": "Whirlpool Drag",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 35,
+   "cooldown": 24,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Opens a whirlpool along a line 6 tiles long ahead of you for 4 seconds that drags every enemy near it inward. Anything it catches moves 30% slower for 2 seconds."
+  },
+  {
+   "name": "Long Wait Repaid",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your critical hit chance rises by 40% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

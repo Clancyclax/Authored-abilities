@@ -1,0 +1,84 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Bars Come Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes your scales in on every enemy within 2.5 tiles, dealing 11 damage, stunning them for 1.2 seconds and leaving each [Hindered] for 4 seconds."
+  },
+  {
+   "name": "No Way Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 30% health. Your tail lashes the first enemy it meets, dealing 20 damage and leaving it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Palisade of Scutes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "desc": "Stands a wall of scales 6 tiles long across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Latch Down",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.3,
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 30%, you gain a shield worth 30% of your maximum health for 5 seconds. Once every 60 seconds."
+  }
+ ]
+}

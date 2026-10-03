@@ -1,0 +1,92 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Flat Skim",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "knockback": 64,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Skims a javelin low that deals 12 water damage to the first enemy it meets and knocks it back 2 tiles. It then skips to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Fowler's Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 12,
+   "range": 224,
+   "maxMult": 1.8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on an enemy at or below 30% health. Throws a fowling javelin up to 7 tiles that deals 18 damage, rising to 1.8 times that at full reach."
+  },
+  {
+   "name": "Slides Off the Shaft",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 3,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "desc": "Raises a guard that absorbs the next 20 damage, up to 3 blows, for 6 seconds, and raises your armour by 6%."
+  },
+  {
+   "name": "Wader's Footing",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "attackSpeed",
+     "amount": 0.04,
+     "text": "you attack faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "your dodge chance rises"
+    },
+    {
+     "rank": "gold",
+     "stat": "moveSpeed",
+     "amount": 0.08,
+     "text": "you move faster"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you attack 4% faster, from silver your dodge chance rises by 5%, and from gold you move 8% faster."
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "essence": "essEye",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Calcified Tread",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Strikes a target up to 6 tiles away for 7 damage, rising to 1.3 times that at full reach, 10% more for each affliction on it (up to 30%), and leaves it [Slowed] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Budding Colony",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 128,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 13 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Reef Lookout",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 1,
+   "cooldown": 50,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grows a coral outcrop that stands for 15 seconds and strikes an enemy within 5 tiles for 4 damage every 1.5 seconds, each strike with a 30% chance to leave it [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 6. Your next critical hit on it spends them all: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

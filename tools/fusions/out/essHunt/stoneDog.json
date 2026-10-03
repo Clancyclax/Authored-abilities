@@ -1,0 +1,70 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Whipped In",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A bite that deals 4 damage and leaves the target 5% easier to wound for 4 seconds. Its damage rises 10% for each ally beside you, up to 40%."
+  },
+  {
+   "name": "Full Cry",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A baying call that deals 25 resonating damage to every enemy within 4 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Slipped Leash",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 18,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "desc": "Slips a hound that fights beside you for 18 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds."
+  },
+  {
+   "name": "Blood Scent",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

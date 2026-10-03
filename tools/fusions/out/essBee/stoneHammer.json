@@ -1,0 +1,98 @@
+{
+ "essence": "essBee",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rolling Thud",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "stunOnHit": 1.2,
+   "base": 14,
+   "cooldown": 18,
+   "range": 100,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 95,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 95,
+   "chainDamagePct": 0.6,
+   "desc": "Every enemy within 3 tiles takes 14 damage and is stunned for 1.2 seconds. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tack Strike",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "maxMult": 1.8,
+   "cooldown": 0.9,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A thrown stinger that deals 5 damage, rising to 1.8 times that at maximum range, and makes the target [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "name": "Tinker Crew",
+   "element": "blunt",
+   "cooldown": 50,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Calls a minion that fights beside you for 15 seconds, striking for 5 damage every 1.5 seconds. Each strike has a 35% chance of [Sundered] for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "name": "Drive Home",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "desc": "When you strike, your damage rises 30% for 5 seconds. Once every 8 seconds. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essBow",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore Pods",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 1,
+    "radius": 96,
+    "chance": 1,
+    "spreadsLeft": 1
+   },
+   "desc": "Looses 3 spore-tipped arrows at once, spread apart, each dealing 3 nature damage with a 30% chance to leave the target [Diseased] for 5 seconds. [Diseased] is catching: it passes to up to 1 more enemy within 3 tiles."
+  },
+  {
+   "name": "Fruiting Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Looses an arrow that deals 16 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Puffball Archer",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 50,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "castTime": 1,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grows a puffball that stands for 15 seconds and looses a spore arrow at an enemy within 6 tiles for 5 damage every 1.5 seconds, each hit with a 30% chance to leave it [Diseased] for 3 seconds."
+  },
+  {
+   "name": "Nothing Immune",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "nature",
+   "resist": {
+    "element": "nature",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You have 10% nature resistance."
+  }
+ ]
+}

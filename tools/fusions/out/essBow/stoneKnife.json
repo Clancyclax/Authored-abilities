@@ -1,0 +1,82 @@
+{
+ "essence": "essBow",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Slipped Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Fires a narrow arrow that deals 4 damage to the first enemy it meets and makes it [Bleeding] for 1 damage a second for 4 seconds. It has 30% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Gutting Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 160,
+   "desc": "Rushes you to a target up to 5 tiles away for a point-blank strike with the bow's bladed limb that deals 13 damage and makes it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Edge Unsheathed",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 50,
+   "critChanceBonus": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your critical hit chance by 30% for 15 seconds."
+  },
+  {
+   "name": "Opened Veins",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

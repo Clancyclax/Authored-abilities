@@ -1,0 +1,87 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Sitting Bait",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bars slam down around you, dealing 12 damage to every enemy within 3 tiles and stunning them for 1 second. Each has a 40% chance to be left [Pinned] for 4 seconds."
+  },
+  {
+   "name": "Penning Splash",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Splashes water at a target that deals 4 damage, with a 25% chance to leave it [Slowed] for 2 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Decoy Pipe",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "blunt",
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 30,
+   "cooldown": 90,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Sets a decoy at the nearest enemy with a cage trap behind it. It waits up to 30 seconds, and the first enemy to come within 2 tiles springs it, which deals 20 damage in a blast around it.",
+   "kind": "active"
+  },
+  {
+   "name": "Behind the Bars",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 15% of your maximum health for 4 seconds. Once every 10 seconds.",
+   "kind": "passive"
+  }
+ ]
+}

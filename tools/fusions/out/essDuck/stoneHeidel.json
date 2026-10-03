@@ -1,0 +1,85 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Churned Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 5,
+   "desc": "Kicks up a cone of spray 4 tiles long, dealing 6 damage to everything in it. It holds 5 charges and kills give charges back."
+  },
+  {
+   "name": "Barrelling Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 86,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Barrels through a target, dealing 13 damage, knocking it back 3 tiles and leaving it 10% easier to wound for 5 seconds. You move 20% faster for 3 seconds after it."
+  },
+  {
+   "name": "Unflagging Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "cooldown": 55,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 18,
+   "desc": "Increases your stamina recovery by 50% for 18 seconds."
+  },
+  {
+   "name": "Long-Haul Stamina",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "recovery",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "the small hurts close on their own"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.12,
+     "text": "you get your breath back between things"
+    },
+    {
+     "rank": "gold",
+     "stat": "cooldownReduction",
+     "amount": 0.06,
+     "text": "and everything you have comes round again sooner"
+    }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your health recovers 12% faster, from silver your stamina recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Devour the Marked",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Sends the swarm at the first enemy it meets for 16 damage, uses up every affliction you have on it, and deals 50% more damage for each one."
+  },
+  {
+   "name": "Compound Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looks down a wide cone 4 tiles ahead of you, dealing 3 damage to everything in it, with a 50% chance per hit to leave them [Marked] for 6 seconds."
+  },
+  {
+   "name": "Held for the Swarm",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "escort": {
+    "dmg": 5,
+    "interval": 1.4,
+    "duration": 6
+   },
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds. For 6 seconds, an escort of locusts fights beside you, striking for 5 damage every 1.4 seconds."
+  },
+  {
+   "name": "Singled Out",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "dodgeBonus": 0.05,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions. You also have 5% more dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Palmed Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 5,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Throws a knife drawn from a fold of cloth that deals 5 damage to the first enemy it meets, with 40% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Opened Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 160,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Slips up to 5 tiles to a target and cuts for 12 damage, making it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Held in Sleeve",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Sleeve Blade",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a blade of thread: it increases your weapon damage by 12% and your attack speed by 5%, and every strike makes the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

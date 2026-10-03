@@ -1,0 +1,77 @@
+{
+ "essence": "essApe",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Yoke-Breaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 80,
+   "sunder": {
+    "amount": 0.18,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "A head-down heave that deals 26 damage and leaves the target 18% easier to wound for 8 seconds. On a hit, you and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Plodding Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps the ground, dealing 3 damage to every enemy within 2 tiles with a 30% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Will Not Be Hurried",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "immunityDuration": 3,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Slow-Building Wrath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12,
+    "seconds": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3
+   },
+   "desc": "After 12 seconds without a critical hit, your critical chance rises by 30% for your next strike."
+  }
+ ]
+}

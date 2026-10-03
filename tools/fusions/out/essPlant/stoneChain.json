@@ -1,0 +1,89 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Linked Runners",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 7,
+   "chargesMax": 4,
+   "speed": 330,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a runner vine into one enemy for 7 damage. It then links on to 2 more enemies within 3 tiles, each taking 60% of that damage. Holds 4 charges; a kill restores one."
+  },
+  {
+   "name": "Grapnel Tendril",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 13,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 224,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hooks one enemy with a tendril and hauls you up to 7 tiles to it, dealing 13 damage. The target is left [Hindered] for 4 seconds and 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Reeling Creeper",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "plant",
+   "cooldown": 20,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Knots a creeper at a spot ahead of you for 5 seconds, dragging every enemy near it inward. Enemies it strikes move 20% slower for 2 seconds."
+  },
+  {
+   "name": "Bound and Fed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 3
+   },
+   "desc": "When you inflict a condition on an enemy, you regain 2 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

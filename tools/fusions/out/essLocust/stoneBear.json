@@ -1,0 +1,78 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Maul of Many Mouths",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.06,
+   "leech": 0.2,
+   "desc": "A wide maul that deals 30 damage to every enemy within 3 tiles and heals you for 20% of the damage dealt. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Swarmweight Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "stunOnHit": 1.2,
+   "desc": "Drops the weight of the swarm on one target, dealing 15 damage, stunning it for 1.2 seconds and leaving it 12% easier to wound for 5 seconds. 25% of the damage dealt returns to you as healing over 6 seconds.",
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 6,
+    "label": "Fat Store"
+   }
+  },
+  {
+   "name": "Glutted Bulk",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 20,
+   "cooldown": 75,
+   "healOnUse": 10,
+   "desc": "Increases your maximum health by 20% for 20 seconds, and you regain 10 health at once."
+  },
+  {
+   "name": "Autumn Gorge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 6
+   },
+   "desc": "Whenever you are healed, you gain a shield worth 10% of your maximum health for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

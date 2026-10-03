@@ -1,0 +1,79 @@
+{
+ "essence": "essHook",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Wrench Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "hpCostPct": 0.04,
+   "desc": "Wrenches the target's guard open, dealing 9 damage and leaving it 10% easier to wound for 4 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Uprooted Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Gaffs a chunk out of the ground and hurls it overhand. It deals 30 damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that, with a 50% chance per hit to leave them [Pinned] for 1.5 seconds.",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Bough Swing",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 12,
+   "desc": "Catches a hold ahead and swings you 5 tiles forward. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Hand Over Hand",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

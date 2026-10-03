@@ -1,0 +1,73 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Heaped Mouthful",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "leech": 0.3,
+   "desc": "Scoops a bite out of the target with the blade's edge, dealing 4 damage, leaving it 6% easier to wound for 3 seconds, and healing you for 30% of the damage dealt."
+  },
+  {
+   "name": "Pit Roast",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "leech": 0.3,
+   "desc": "Uncovers a pit oven under your feet, dealing 26 fire damage that ignores resistances to every enemy within 3 tiles. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Root Harvest",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 20,
+   "healAmount": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Digs up a crop and shares it. It restores 14 health to you and every ally within 4 tiles, more the faster you cast."
+  },
+  {
+   "name": "Fed Labourer",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Whenever you are healed, your physical damage rises by 20% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

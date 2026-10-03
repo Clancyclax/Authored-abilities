@@ -1,0 +1,82 @@
+{
+ "essence": "essWater",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Cascade Display",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A ring of water bursts outward and deals 26 damage to every enemy within 3.5 tiles. If it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Mangle",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargesMax": 3,
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grips the target and wrings it out: it deals 8 damage, leaves it 10% easier to wound for 4 seconds, and has a 40% chance to leave it [Enervated] for 6 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Leaf Sponge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "cooldown": 24,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you, with a 10% chance to land as a critical heal. The healing rises 8% for every tenth of your health already gone, up to 40%."
+  },
+  {
+   "name": "Flood Temper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

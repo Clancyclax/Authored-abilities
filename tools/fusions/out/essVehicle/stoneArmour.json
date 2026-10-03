@@ -1,0 +1,81 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Ram Prow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Rushes you to a target up to 7 tiles away and rams it with a steel prow. The ram deals 30 damage that ignores armour and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Trading Paint",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Sideswipes everything in a cone 2.5 tiles long: it deals 8 damage, with a 30% chance to leave each enemy [Sundered] for 4 seconds.",
+   "hpCostPct": 0.04
+  },
+  {
+   "name": "Hatches Down",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Raises your armour by 30% for 12 seconds. You move 15% faster for 5 seconds after you use it."
+  },
+  {
+   "name": "Coachwork Plate",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0,
+   "itemBuffs": [
+    {
+     "stat": "moveSpeed",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures plating built to travel in: every hit you take is 2 lower, your armour rises by 10%, and you move 4% faster."
+  }
+ ]
+}

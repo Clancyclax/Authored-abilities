@@ -1,0 +1,79 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Ocellus Flare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 4,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flares open across a cone 3.5 tiles long, dealing 4 damage with a 50% chance to leave each enemy [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Heliotrope Lance",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 90,
+   "base": 28,
+   "speed": 420,
+   "radius": 8,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A flower turns to face one enemy and looses a thorn for 28 damage that always lands as a critical hit. The target is [Marked] for 8 seconds."
+  },
+  {
+   "name": "Watchtower Stalk",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "plant",
+   "cooldown": 60,
+   "rangeMult": 1.3,
+   "buffDuration": 20,
+   "healOnUse": 8,
+   "desc": "For 20 seconds, your attacks and spells reach 1.3 times as far. You restore 8 health."
+  },
+  {
+   "name": "Chitted Tuber",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "ledger",
+   "stackBuild": "crit",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every critical hit you land builds a stack on you, up to 5. At 5 stacks they all spend at once and heal you for 5% of your maximum health per stack (25% in all). A stack fades every 10 seconds if none is added."
+  }
+ ]
+}

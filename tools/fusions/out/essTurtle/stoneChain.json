@@ -1,0 +1,90 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Link After Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "chain": {
+    "count": 3,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws your anchor chain, which deals 11 damage to the first enemy it meets and stuns it for 1 second, then links to 3 more enemies within 3.5 tiles, each hit dealing 60% of the original damage. Each enemy struck is [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Flail on a Tether",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swings a shell plate on a length of chain at an enemy up to 5 tiles away, which deals 4 damage, rising to 1.6 times that at full reach. Each hit has a 20% chance to leave the target [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Shackled to You",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "Chains up to 4 enemies within 7 tiles to your shell: they are pulled onto you and held there for 6 seconds."
+  },
+  {
+   "name": "Mail of Linked Scutes",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.12,
+   "damageReduction": 2,
+   "thornsFrac": 0.05,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "desc": "Conjures mail of linked scutes: every hit you take is 2 lower, your armour rises by 12%, your maximum health rises by 10, and 5% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Stinger Shoe",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.7,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A quick kick that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Scatter the Hive",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "desc": "Tramples the ground around you, dealing 12 damage to every enemy within 3 tiles. Your afflictions on each one spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Untiring Pace",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 8
+   },
+   "desc": "You regain 4 stamina a second for 8 seconds, and you move 15% faster for 8 seconds."
+  },
+  {
+   "name": "Drover's Swarm",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "nature",
+   "moveSpeedPct": 0.06,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 0
+   },
+   "desc": "You move 6% faster, and a swarm escorts you, stinging a nearby enemy for 3 damage every 1.4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneBird",
+  "fusions": [
+    {
+      "name": "Thorn Larder",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 14,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.5,
+      "requiresTargetBelow": 0.25,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Usable only on an enemy at or below 25% health. You dive on it from up to 6 tiles: the strike deals 20 damage, rising to 1.5 times that at full reach, and leaves it [Pinned] for 4 seconds."
+    },
+    {
+      "name": "Stoop Through the Flock",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargeTo": 256,
+      "desc": "You dive up to 8 tiles onto the target. The landing deals 12 damage to every enemy within 2.5 tiles of you."
+    },
+    {
+      "name": "Shrike on Watch",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "piercing",
+      "cooldown": 40,
+      "summonKind": "bird",
+      "summonDmg": 3,
+      "summonDuration": 12,
+      "summonInterval": 1,
+      "summonRange": 128,
+      "castTime": 0.3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 1.5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses a shrike for 12 seconds. It deals 3 damage to an enemy within 4 tiles every second, each pass with a 25% chance to leave the target [Pinned] for 1.5 seconds."
+    },
+    {
+      "name": "Plummeting Beak",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.2,
+        "strikes": 1
+      },
+      "desc": "Every few paces you cover raises your critical hit chance by 20% for your next strike. Once every 6 seconds."
+    }
+  ]
+}

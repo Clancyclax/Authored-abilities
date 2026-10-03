@@ -1,0 +1,86 @@
+{
+ "essence": "essBow",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Charged Fletching",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 arcane arrows at once, spread apart, each dealing 3 arcane damage with a 30% chance to leave the target [Exposed] for 5 seconds."
+  },
+  {
+   "name": "Unbound String",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a bolt of arcane force from the string that deals 28 damage to the first enemy it meets and leaves it [Exposed] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Raw Surge",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "arcane",
+   "cooldown": 60,
+   "powerMult": 1.3,
+   "buffDuration": 15,
+   "desc": "Increases your damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Spell Nock",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "When you strike with your weapon, your next spell deals 20% more damage. Once every 5 seconds."
+  }
+ ]
+}

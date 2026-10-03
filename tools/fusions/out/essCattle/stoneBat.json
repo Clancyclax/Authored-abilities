@@ -1,0 +1,74 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Byre Leeching",
+   "template": "sunderStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hpCostPct": 0.04,
+   "leech": 0.3,
+   "desc": "Costs 4% of your maximum health. A headbutt that deals 8 damage, leaves the target 5% easier to wound for 3 seconds, and heals you for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lowing in the Dark",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lets out a low bellow 4 tiles ahead of you that deals 11 resonating damage to everything in it, stuns them for 1 second, and leaves them [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Echoing Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "resonating",
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "reflectChance": 1,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "Sends 30% of the damage that reaches you back to whoever dealt it for 8 seconds."
+  },
+  {
+   "name": "Dusk Grazing",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "armorBonus": 0.05,
+   "desc": "At night, your dodge chance rises by 10%. Your armour rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Locked Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 160,
+   "maxMult": 1.5,
+   "chargeTo": 160,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.6,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you up to 5 tiles onto the target and deals 14 damage, rising to 1.5 times that from the full 5 tiles. It has a 60% chance to leave the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Wrung Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Wrings the target for 8 damage, leaving it [Bleeding] for 1 damage a second for 4 seconds and 12% easier to wound for 5 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Sure Hold",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Increases your dodge chance by 20% for 12 seconds."
+  },
+  {
+   "name": "Braced Hold",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying one of your afflictions, your armour rises by 12%."
+  }
+ ]
+}

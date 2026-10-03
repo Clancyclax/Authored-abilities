@@ -1,0 +1,85 @@
+{
+ "essence": "essHorse",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Saddle Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "speed": 460,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Looses an arrow at the first enemy in line for 7 damage, rising by 5% for every 100 paces you have run since you last used it (up to 30%). It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Parthian Volley",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "knockback": 64,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Looses 3 arrows in a spread, each dealing 10 damage and knocking its target 2 tiles back. You move 25% faster for 3 seconds after."
+  },
+  {
+   "name": "Running Draw",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "piercing",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 6
+   },
+   "desc": "You attack 25% faster for 10 seconds and move 25% faster for 6 seconds."
+  },
+  {
+   "name": "Steady Mount",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next spell deals 30% more damage. Once every 12 seconds."
+  }
+ ]
+}

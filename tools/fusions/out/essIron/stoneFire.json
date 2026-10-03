@@ -1,0 +1,89 @@
+{
+ "essence": "essIron",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Bare-Handed Brand",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "spammable": true,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A weapon strike with the metal gripped red-hot in your bare hand, dealing 9 fire damage and setting the target [Burning] for 2 damage a second for 4 seconds. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Crucible Overhand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Hurls a crucible of molten slag that deals 28 fire damage to the first enemy it meets and sets it [Burning] for 3 damage a second for 5 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Tempering Heat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "fire",
+   "cooldown": 40,
+   "armorBonus": 0.22,
+   "buffDuration": 10,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "Raises your armour by 22% and your fire resistance by 15% for 10 seconds."
+  },
+  {
+   "name": "Struck While Hot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 30% for 4 seconds. Once every 10 seconds. You have 10% fire resistance."
+  }
+ ]
+}

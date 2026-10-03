@@ -1,0 +1,80 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Driven Into the Pen",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "knockback": 96,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A shoving butt that deals 12 damage, knocks the target back 3 tiles, leaves it 8% easier to wound for 4 seconds and [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rattling the Stall",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Kicks out at every enemy within 2 tiles, dealing 4 damage. Its damage rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Gate Swung Shut",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "cooldown": 24,
+   "desc": "Swings a pen gate 5 tiles long across the ground for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Rail by Rail",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 10,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.7,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 10. Your next critical hit on it spends them all: a blow strikes it for 24% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

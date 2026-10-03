@@ -1,0 +1,89 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "On the Scent",
+   "element": "arcane",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a bolt that deals 4 damage to the first enemy it meets, with a 40% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Baying Chorus",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.8,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Howls through a cone 4 tiles long, dealing 28 damage to everything in it and leaving them [Marked] for 8 seconds. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Whistled Familiar",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 18,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "After a 1 second cast, whistles up a hound of arcana that fights beside you for 18 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 8
+   },
+   "name": "Fetch",
+   "element": "arcane",
+   "desc": "When you kill an enemy, you restore 8 mana. Once every 4 seconds."
+  }
+ ]
+}

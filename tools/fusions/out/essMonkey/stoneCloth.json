@@ -1,0 +1,90 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pulled Thread",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "spreadAfflictions": 112,
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A yank that deals 12 damage, leaves the target [Exposed] and 12% easier to wound for 5 seconds, and spreads your afflictions on it to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Over the Head",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a cloth over a target up to 4 tiles away for 3 damage, rising to 1.5 times that at full reach, with a 50% chance to leave it [Stalled] for 4 seconds.",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.5
+  },
+  {
+   "name": "Drape and Vanish",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Veils you for 6 seconds. Enemies notice you far later, and the veil breaks the moment you attack. You move 15% faster for 4 seconds after using it."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Deep Pockets",
+   "element": "physical",
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 8
+   },
+   "desc": "When you kill an enemy, you restore 8 mana. Once every 6 seconds."
+  }
+ ]
+}

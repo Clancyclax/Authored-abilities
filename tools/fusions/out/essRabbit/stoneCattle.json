@@ -1,0 +1,79 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Gathering Stampede",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Barrels through everything within 3 tiles ahead of you, dealing 13 damage and knocking each enemy back 3 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Both Barrels",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A two-footed hind kick that deals 30 damage and leaves the target 15% easier to wound for 8 seconds. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Clover Pasture",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Raises a patch of clover where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Rested Legs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 25% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dabbled Muck",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 320,
+   "radius": 8,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a gob of wet mud that deals 4 damage, with a 40% chance to leave the target [Soaked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pondbed Heave",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "The ground around you turns to wet mud, dealing 26 damage that ignores resistances to every enemy within 3 tiles, with a 60% chance to leave each one [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Water Off Stone",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "earth",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.5,
+   "reflectChance": 0.5,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "For 10 seconds, each condition laid on you has a 50% chance to be sent back to whoever laid it. You carry 8% physical resistance.",
+   "resist": {
+    "element": "physical",
+    "amount": 0.08
+   }
+  },
+  {
+   "name": "Stepping Stones",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "earth",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than you cross ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and you are harder to hit while you stand on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "and your health recovers faster while you stand on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground."
+  }
+ ]
+}

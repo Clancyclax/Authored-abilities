@@ -1,0 +1,89 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Smoked-Out Workers",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lifts your scales and looses 3 stingers, spread apart, each dealing 3 poison damage, with a 35% chance per hit to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Lapped Clean",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Usable only on an enemy carrying one of your afflictions, and uses one of them up. Your tongue lashes the first enemy it meets, dealing 8 damage and healing you for 30% of the damage dealt."
+  },
+  {
+   "name": "Guarded Comb",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Raises a barrier that absorbs up to 20 damage for 6 seconds. A guard swarm fights beside you for 8 seconds, stinging for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Kicked Nest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "desc": "Each time you are hurt by anything other than fire, a stinger from under your scales strikes the nearest enemy within 4 tiles, dealing 6 damage. Once every 4 seconds."
+  }
+ ]
+}

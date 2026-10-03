@@ -1,0 +1,75 @@
+{
+ "essence": "essEye",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Cold Verdict",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Fires an iron bolt that deals 34 damage to the first enemy it meets, ignoring its armour and leaving it [Sundered] for 8 seconds."
+  },
+  {
+   "name": "Final Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A blow that deals 20 damage to a target at or below 30% health and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Cold Regard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 26,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier that absorbs up to 26 damage for 10 seconds, and raises your armour by 10% while it holds."
+  },
+  {
+   "name": "Hard Read",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your armour rises by 12%."
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pincushion",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 4,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 stingers at once, in a spread out to 6 tiles. Each one deals 4 damage with a 50% chance to leave its target [Pinned] for 2 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pulled Thread",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting that deals 4 damage and leaves the target 8% easier to wound for 4 seconds, with a 30% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Spun Cocoon",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "name": "Ply Over Ply",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a layer on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per layer (42% at full). Unfed, a layer fades every 10 seconds."
+  }
+ ]
+}

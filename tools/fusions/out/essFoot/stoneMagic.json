@@ -1,0 +1,75 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Arc Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "hpCostPct": 0.05,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Fires a bolt of raw arcana into the first enemy it meets, dealing 8 damage. It also costs 5% of your maximum health. You move 15% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Shockwave Step",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Releases a pulse of arcana that deals 12 damage to every enemy within 3 tiles and knocks them back 3 tiles. You move 20% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Slip Through",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "arcane",
+   "teleportRange": 224,
+   "cooldown": 10,
+   "dodgeBonus": 0.1,
+   "desc": "Steps you instantly to a point up to 7 tiles away, and your dodge chance rises by 10% for the move."
+  },
+  {
+   "name": "Second Source",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 4
+   },
+   "desc": "Each time you spend stamina, you regain 4 mana. Once every 6 seconds."
+  }
+ ]
+}

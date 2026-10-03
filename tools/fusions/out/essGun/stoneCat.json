@@ -1,0 +1,75 @@
+{
+ "essence": "essGun",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unheard Opener",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Fires a round into the first enemy in its path for 5 damage, with 50% more critical chance against a target that has not yet been wounded."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Done Playing",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "requiresTargetBelow": 0.3,
+   "base": 18,
+   "cooldown": 12,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "Fires at an enemy up to 6 tiles away for 18 damage and leaves it 15% easier to wound for 5 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Stalking Crouch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 11% faster. Attacking breaks the veil."
+  },
+  {
+   "name": "Slip and Answer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. The next ability you use spends them all: you deal 3% more damage per stack for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lanced and Drawn",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Usable only on an enemy carrying one of your afflictions, and uses one of them up. The venom is drawn back out as a bolt that deals 8 poison damage and heals you for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spoiled Remedy",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes a bitter mist 5 tiles ahead of you that deals 26 poison damage to everything in it and ignores resistances. Each target is left [Diseased] for 10 seconds, so healing does less for it."
+  },
+  {
+   "name": "Milked for Serum",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 12,
+   "desc": "Removes up to 3 poison conditions from you and restores 12 health to you."
+  },
+  {
+   "name": "Hardened by Trace Amounts",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 3
+   },
+   "desc": "Each time you inflict a condition, you regain 2 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

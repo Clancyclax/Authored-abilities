@@ -1,0 +1,71 @@
+{
+ "essence": "essHair",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Wicking Strand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "leech": 0.3,
+   "desc": "A strand fastens on a target up to 7 tiles away that carries one of your afflictions, draws that affliction out and uses it up, and deals 8 poison damage. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Shed Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "coneAngle": 0.7,
+   "desc": "Flicks the poison your strands have drawn out across a cone 4 tiles ahead of you, dealing 11 poison damage and leaving each enemy [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Drawn Through the Roots",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 8,
+   "cooldown": 30,
+   "desc": "Your hair draws up to 3 poison conditions out of you through its roots and restores 8 health."
+  },
+  {
+   "name": "Bitter Run-Off",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "desc": "Each condition laid on you has a 20% chance to run down a strand to whoever inflicted it instead."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essNet",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Roped and Thrown",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Throws a loop of cord that deals 14 damage to the first enemy it meets and throws it down, leaving it [Stunned] for 1.2 seconds."
+  },
+  {
+   "name": "Ox-Drawn Trawl",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags a wide mesh forward through a cone 4 tiles long, dealing 26 damage to everything caught in it plus 4% of a boss's or elite's maximum health, and leaving each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Herd Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Ropes up to 6 enemies within 6 tiles and pulls them onto you, holding their attention for 5 seconds."
+  },
+  {
+   "name": "Taut Coils",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you land a hit, a coil of rope winds onto that enemy, up to 6. When it reaches 6, they all spend at once: the rope snaps taut and strikes that enemy for 27% of your weapon damage per coil (163% at full). Unfed, a coil fades every 4 seconds."
+  }
+ ]
+}

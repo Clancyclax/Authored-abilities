@@ -1,0 +1,84 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 7,
+   "name": "Lap What Was Opened",
+   "element": "dark",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Usable only on an enemy carrying one of your afflictions. A bite that deals 8 damage, uses up one of those afflictions and heals you for 30% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Out of the Eaves",
+   "template": "volley",
+   "element": "dark",
+   "role": "long",
+   "base": 10,
+   "cooldown": 75,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 stingers at once, in a spread out to 7 tiles. Each one deals 10 damage and is always a critical hit, with a 50% chance to leave its target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Roost Empties at Dusk",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "cooldown": 40,
+   "lifeOnKill": 2,
+   "desc": "Sends a swarm for 12 seconds. Every second it stings an enemy within 4 tiles and deals 3 damage. Each kill made while it flies restores 2 health to you."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "name": "Drinks at the Wound",
+   "element": "dark",
+   "desc": "When you put a condition on an enemy, 20% of the damage you deal heals you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

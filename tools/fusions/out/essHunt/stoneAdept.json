@@ -1,0 +1,68 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Rehearsed Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "Looses a shot at the first enemy in line that deals 4 damage. Against an enemy that has not yet been hurt, its critical chance rises by 40%."
+  },
+  {
+   "name": "Measured Mile",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 24,
+   "cooldown": 75,
+   "range": 288,
+   "maxMult": 2.4,
+   "guaranteedCrit": true,
+   "desc": "A long shot that deals 24 damage, rising to 2.4 times that at its full reach of 9 tiles. It is always a critical hit."
+  },
+  {
+   "name": "Pick Up the Trail",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Each One Cleaner",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 5. The next ability you use spends them all: you deal 5% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essBee",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Venom",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up. Flicks a sting at a target up to 6 tiles away for 9 poison damage, rising to 1.5 times that at full reach."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bitter Hum",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A hum that deals 4 poison damage to every enemy within 3 tiles, with a 30% chance per hit to leave it [Damped], dealing less damage, for 4 seconds."
+  },
+  {
+   "name": "Propolis Salve",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 8,
+   "desc": "Removes up to 2 poison conditions from you and your allies, and restores 8 health."
+  },
+  {
+   "name": "Returned in Kind",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "desc": "Each debuff laid on you has a 20% chance to be sent back to whoever laid it instead."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essBear",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Pulled Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A snagging claw stroke that deals 4 damage, unravels the target's armour so it is 5% easier to wound for 3 seconds, and has a 25% chance to leave it [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Blanketing Collapse",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 80,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Collapses your padded weight onto every enemy within 2.5 tiles for 26 damage that ignores resistances, with a 50% chance to leave each [Muddled] for 5 seconds."
+  },
+  {
+   "name": "Overstuffed",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "desc": "Increases your maximum health by 20% for 10 seconds."
+  },
+  {
+   "name": "Layered Padding",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land adds a layer, up to 10. At 10 they all spend at once: you gain a shield that soaks 4% of your maximum health per layer (42% at full). Unfed, a layer fades every 10 seconds."
+  }
+ ]
+}

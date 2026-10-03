@@ -1,0 +1,106 @@
+{
+ "essence": "fire",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Scorched Echo",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Screeches a tongue of flame that deals 4 damage to the first enemy it meets, then echoes to 2 more enemies within 3 tiles for 50% of the damage."
+  },
+  {
+   "name": "Fevered Colony",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "fire",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1.1,
+   "chargesMax": 4,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 4,
+    "label": "Reprieve"
+   },
+   "debuff": {
+    "key": "burn",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 330,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 3 bats in a spread, each of which deals 3 damage with a 25% chance to set its target [Burning] for 5 seconds. 15% of the damage dealt comes back to you as healing over 4 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Smoke Roost",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "fire",
+   "cooldown": 36,
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Veils you in smoke for 10 seconds. Enemies notice you 60% later, and the veil breaks the moment you attack. Your movement speed rises 20% for 3 seconds after you use it."
+  },
+  {
+   "name": "Wingbeat Embers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Every 6 tiles you cover, an ember drops on the nearest enemy within 4 tiles, deals 5 damage and sets it [Burning] for 1 damage a second for 3 seconds. Once every 4 seconds."
+  }
+ ]
+}

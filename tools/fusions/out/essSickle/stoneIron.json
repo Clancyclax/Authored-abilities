@@ -1,0 +1,80 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Plate No Proof",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.25,
+    "duration": 8
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A hard cut that deals 34 damage, ignores armour and leaves the target 25% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Charms Come Undone",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "knockback": 64,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a cold grey crescent that deals 12 damage, knocks the target back 2 tiles and leaves it [Suppressed] for 3 seconds."
+  },
+  {
+   "name": "Cold Shoulder",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "buffDuration": 8,
+   "desc": "For 9 seconds, 40% of the elemental damage you take is returned to whoever dealt it."
+  },
+  {
+   "name": "Grey Reaping Hook",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a cold-wrought reaping blade. It increases your weapon damage by 12%, every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds, and your armour rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Beady Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "openerCrit": {
+    "amount": 0.4
+   },
+   "desc": "A stare from hiding strikes the first enemy within 8 tiles for 7 damage and leaves it [Marked] for 8 seconds. It has 40% more critical chance against a target that has not been hurt yet. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "The Picked Moment",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 24,
+   "cooldown": 75,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "ignoreArmor": true,
+   "desc": "Strikes one enemy from hiding, up to 7 tiles away: it deals 24 damage, rising to 1.5 times that at full reach. The hit is always a critical hit and ignores armour."
+  },
+  {
+   "name": "Saw It Coming",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Increases your dodge chance by 20% for 10 seconds, and you move 15% faster for the first 4 seconds."
+  },
+  {
+   "name": "Watcher in the Wall",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Each time you afflict something, your critical chance rises by 25% for your next strike. Once every 6 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

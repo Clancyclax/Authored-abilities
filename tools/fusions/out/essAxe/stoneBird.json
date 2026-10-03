@@ -1,0 +1,77 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gliding Hatchet",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 1,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Throws a hatchet that deals 4 damage and hits harder the further it glides, up to 2 times its damage at 8 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Downdraft Cleave",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 10,
+   "range": 128,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A swing that drives wind 4 tiles ahead in a cone, dealing 12 wind damage to everything in it and knocking it back 3 tiles. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Thermal Lift",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.08,
+   "cooldown": 30,
+   "desc": "Carries you 2 tiles forward and increases your movement speed by 30% for 8 seconds. Your dodge chance rises by 8%."
+  },
+  {
+   "name": "Hunting Stoop",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your next strike gains 20% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

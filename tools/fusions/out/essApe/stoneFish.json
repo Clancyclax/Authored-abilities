@@ -1,0 +1,82 @@
+{
+ "essence": "essApe",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Troop Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Slams the ground in a wave that deals 14 damage to every enemy within 3.5 tiles and knocks them back 2.5 tiles. Its damage rises +8% per ally within 5 tiles (max +32%)."
+  },
+  {
+   "name": "Long-Arm Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "reachPct": 0.4,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 396,
+   "rangeBand": "long",
+   "desc": "Flicks a bolt of water into the first enemy it meets, dealing 4 damage. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage. Its reach is 40% longer."
+  },
+  {
+   "name": "Sent Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 24,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "Each affliction laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+  },
+  {
+   "name": "Slick Retreat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When anything but fire hurts you, a shield worth 20% of your maximum health covers you for 5 seconds. Once every 20 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essChain",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Grapple Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 192,
+   "desc": "Casts a barbed link at the first enemy it meets that deals 12 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds, then hauls you 6 tiles toward it."
+  },
+  {
+   "name": "Reeling Gate",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "wallKind": "pull",
+   "wallLength": 256,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "ignoreArmor": true,
+   "desc": "Stretches an 8-tile line of links ahead of you for 5 seconds that drags nearby enemies inward. It deals 28 damage that ignores armour to each one it catches.",
+   "pullForce": 40
+  },
+  {
+   "name": "Hauling Swing",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "piercing",
+   "cooldown": 10,
+   "dashDist": 192,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Swings you 6 tiles forward on a chain, and you move 15% faster for 3 seconds."
+  },
+  {
+   "name": "Barbed Tally",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Each hit you land on an enemy builds a stack on it, up to 5. At 5 stacks they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack, 170% in all. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

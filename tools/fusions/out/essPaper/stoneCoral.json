@@ -1,0 +1,76 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "name": "Pulp Spur",
+   "element": "water",
+   "role": "resource",
+   "hpCostPct": 0.04,
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Costs 4% of your maximum health. Throws a spur of hardened pulp for 8 damage, rising to 1.5 times that at its maximum range of 6 tiles. The target is left [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Accreted Stacks",
+   "element": "water",
+   "role": "long",
+   "bossPct": 0.05,
+   "base": 26,
+   "cooldown": 100,
+   "range": 128,
+   "desc": "Raises a reef of hardened pages around you, dealing 26 damage to every enemy within 4 tiles, plus 5% of a boss or elite's maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "name": "Living Watermark",
+   "element": "water",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Grows a field of wet pulp 3 tiles across where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "name": "Layer Upon Layer",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you use an ability, a layer of pulp sets on you, up to 10. At 10 they all spend at once: you gain a shield that soaks 6% of your maximum health per layer (56% at full). Unfed, a layer fades every 6 seconds."
+  }
+ ]
+}

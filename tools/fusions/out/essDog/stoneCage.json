@@ -1,0 +1,83 @@
+{
+ "essence": "essDog",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snap Shut",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Snaps at the target with your weapon for 4 damage, making it [Bleeding] for 1 damage a second for 3 seconds, with a 20% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Round-Up",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Strikes every enemy within 3 tiles for 12 damage and leaves each [Stunned] for 1 second."
+  },
+  {
+   "name": "Pen Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Closes a pen 6 tiles across ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Closing Circle",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. At 6 they all spend at once: a blow strikes that enemy for 20% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "essence": "fire",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Red-Hot Gibbet",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Drops a cage of red-hot bars over a target up to 6 tiles away that deals 12 damage, rising to 1.5 times that at full reach. It holds the target stunned for 1.2 seconds and sets it [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Closing Brazier",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Closes a ring of burning bars around you that deals 30 damage to every enemy within 3 tiles, always as a critical hit, and leaves each [Pinned] for 2.5 seconds."
+  },
+  {
+   "name": "Bars of Flame",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "cooldown": 24,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 32,
+   "base": 4,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Raises a row of red-hot bars 5 tiles long in front of you for 6 seconds. It deals 4 damage to anything that crosses it, sets it [Burning] for 3 damage a second for 4 seconds and slows it by 25% for 2 seconds."
+  },
+  {
+   "name": "Portcullis",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 5
+   },
+   "desc": "When your health falls below 30%, bars of flame close around you: you gain a shield worth 25% of your maximum health for 6 seconds, and for the first 5 seconds the bars burn your enemies for 3 damage every 1.2 seconds. Once every 45 seconds."
+  }
+ ]
+}

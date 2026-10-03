@@ -1,0 +1,99 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Find the Gaps",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 6,
+   "range": 192,
+   "castTime": 0,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.2,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 stings, spread apart, each dealing 3 damage with a 20% chance to leave its target [Sundered] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hive Lance",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Launches a barbed lance that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds and [Sundered] for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Swarm Shell",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 16,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "cooldown": 24,
+   "summonAnimal": "bee",
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 6
+   },
+   "desc": "Raises a barrier that absorbs the next 16 damage, up to 4 blows, for 6 seconds, and raises your armour by 6%. While it holds, a swarm escort strikes your enemies for 3 damage every 1.2 seconds."
+  },
+  {
+   "name": "Tireless Under Fire",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they spend at once and you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

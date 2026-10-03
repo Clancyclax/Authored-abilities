@@ -1,0 +1,77 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Joint by Joint",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "leech": 0.25,
+   "desc": "A practised cut to the joint that deals 26 damage, always lands as a critical hit and leaves the target 12% easier to wound for 8 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "First Taste",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "leech": 0.12,
+   "desc": "Flicks a skewer that deals 4 damage to the first enemy it meets and heals you for 12% of the damage dealt. Against an enemy that has not been wounded yet, it has 30% more critical chance."
+  },
+  {
+   "name": "Exact Serving",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "healAmount": 16,
+   "critChance": 0.25,
+   "healScope": "self",
+   "cooldown": 14,
+   "desc": "Restores 16 health to you, with a 25% chance to land as a critical heal."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "element": "physical",
+   "desc": "When you land a critical hit, you heal for 20% of all damage you deal for 5 seconds. Once every 10 seconds.",
+   "name": "Seasoned Hand"
+  }
+ ]
+}

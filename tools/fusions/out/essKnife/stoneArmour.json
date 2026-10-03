@@ -1,0 +1,82 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gap in the Plates",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 28,
+   "cooldown": 60,
+   "range": 80,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Drives the blade through a join in the target's plate for 28 damage that ignores armour, and leaves it 20% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Edged Lames",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Turns the sharpened edges of your plates through every enemy within 2 tiles, dealing 3 damage and leaving each [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Muffled Mail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "Absorbs 20 damage across up to 4 blows for 8 seconds and raises your armour by 8%. You move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Sharpened Rondels",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.06,
+   "damageReduction": 1,
+   "thornsFrac": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.03
+    }
+   ],
+   "desc": "Conjures bladed plate: every hit you take is 1 lower, your armour rises by 6%, and 12% of the damage you take goes back to whoever dealt it. Your dodge chance rises by 3%."
+  }
+ ]
+}

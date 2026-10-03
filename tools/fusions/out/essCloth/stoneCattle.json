@@ -1,0 +1,75 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "In the Traces",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "knockback": 96,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Throws your harnessed weight into the target, dealing 13 damage, knocking it back 3 tiles and leaving it 10% easier to wound for 6 seconds. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%)."
+  },
+  {
+   "name": "Herd Banner",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Plants a banner with a stamp that deals 28 damage to every enemy within 3 tiles. If it hits, every ally deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Draught Harness",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 50,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 15,
+   "desc": "Buckles on a draught harness, raising your stamina recovery by 40% for 15 seconds."
+  },
+  {
+   "name": "Rested Caparison",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 18,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 18
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "The moment your stamina is full, you gain a shield worth 15% of your maximum health for 6 seconds. Once every 18 seconds."
+  }
+ ]
+}

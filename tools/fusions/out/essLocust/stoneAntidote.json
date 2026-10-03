@@ -1,0 +1,71 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitter Meal",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Sends locusts into the first enemy they meet for 9 poison damage and heals you for 30% of the damage dealt. Usable only on an enemy carrying one of your afflictions; the locusts eat one of them."
+  },
+  {
+   "name": "Decanted Plague",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 128,
+   "desc": "Pours a cone of locusts 5 tiles ahead of you, dealing 12 poison damage to everything in it and leaving them [Poisoned] for 6 seconds. Your afflictions on each target spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Venom Gleaners",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 12,
+   "desc": "The swarm eats up to 3 poison conditions off you, and you regain 12 health."
+  },
+  {
+   "name": "Seasoned Carriers",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 10% poison resistance."
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "essence": "essFish",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnashing Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.8,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 200,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Looses 4 bolts of water at once, spread widely apart, each dealing 3 damage. 15% of the damage it deals comes back as healing over the following 6 seconds."
+  },
+  {
+   "name": "Devouring Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 320,
+   "radius": 10,
+   "bossPct": 0.05,
+   "leech": 0.2,
+   "desc": "Sends a wave of water that deals 30 damage, and up to 5% of a boss's or elite's maximum health. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Swarm Strike",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 60,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 14,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 1,
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.33
+   },
+   "perAllyGain": {
+    "resistPct": 0.22,
+    "dotChancePct": 0.22
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Summons a swarm that stays for 14 seconds and strikes an enemy within 5 tiles for 3 damage every second. Its effect increases by 11% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Frenzied Gulp",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

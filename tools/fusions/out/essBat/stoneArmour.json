@@ -1,0 +1,80 @@
+{
+ "essence": "essBat",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Ringing Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a pulse of sound into the first enemy in its path up to 10 tiles away. It deals 30 resonating damage that ignores armour and leaves the target [Sundered] for 8 seconds."
+  },
+  {
+   "name": "Rivet Popper",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargesMax": 4,
+   "desc": "A jab of your thumb-claw at a seam that deals 7 damage and leaves the target 10% easier to wound for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Lamellar Fold",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "cooldown": 30,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "A barrier absorbs the next 22 damage for 8 seconds, and your armour rises by 10% while it holds."
+  },
+  {
+   "name": "Rattled Loose",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.05,
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 2% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 10 seconds. Your armour also rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essBear",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Seen Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "executeLadder": true,
+   "range": 72,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "desc": "Only strikes a target at or below 30% health, and that threshold rises with each rank. You strike the opening you saw for 18 damage and use up every affliction on it, adding 1.5 times the damage they had left to deal."
+  },
+  {
+   "name": "Sizing-Up Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A jab that deals 4 damage, leaves the target 5% easier to wound for 3 seconds, and has a 25% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Staring Down",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 60,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "desc": "After a 1-second stare, holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Marked the Culprit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When anything but fire hurts you, your next strike has 25% more critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

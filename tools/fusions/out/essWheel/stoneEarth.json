@@ -1,0 +1,76 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Boulder Let Go",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "bossPct": 0.05,
+   "desc": "Sets a boulder rolling at a target up to 8 tiles away. It deals 30 damage, rising to 2 times that at maximum range, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Shingle Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "rock",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 360,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws up 4 stones at once, spread apart, and each deals 3 damage, with a 25% chance to leave the target [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Gathers No Moss",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "rock",
+   "immunityDuration": 3,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.18,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. You move 18% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Beaten Path",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "rock",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "On paved ground, your damage rises by 12%. Your armour rises by 5% at all times."
+  }
+ ]
+}

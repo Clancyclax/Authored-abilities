@@ -1,0 +1,76 @@
+{
+ "essence": "essChain",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Resonant Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Casts a link of raw arcana at the first enemy it meets that deals 12 damage and leaves it [Exposed] for 6 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Unspooling",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Unspools links of arcana outward that deal 30 damage that ignores resistances to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Drawn Current",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 30,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 mana a second for 8 seconds."
+  },
+  {
+   "name": "Banked Charge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your mana is full, your next spell deals 30% more damage. Once every 20 seconds."
+  }
+ ]
+}

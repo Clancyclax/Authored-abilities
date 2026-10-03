@@ -1,0 +1,84 @@
+{
+ "essence": "essHair",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Coffle Braid",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spreadAfflictions": 128,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a braid that locks around a target up to 7 tiles away and deals 12 damage, then links on to 3 more enemies within 3 tiles, each taking 60% of that. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Cinch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Hauls tight every strand you have on the target, dealing 16 damage and leaving it 15% easier to wound for 6 seconds. It uses up every affliction you have on the target and deals 60% more damage for each."
+  },
+  {
+   "name": "Windlass Anchor",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "cooldown": 30,
+   "desc": "Anchors a line of hair 6 tiles long ahead of you for 5 seconds. It drags every enemy near it inward, and anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Link by Link",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every hit you land loops another strand around that enemy: a stack builds on it, up to 6. When it reaches 6, they all pull tight at once: a blow strikes that enemy for 27% of your weapon damage per stack (163% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

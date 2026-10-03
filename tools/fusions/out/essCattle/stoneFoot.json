@@ -1,0 +1,85 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Plod and Thump",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A stamping heel that deals 4 damage and leaves the target 6% easier to wound for 3 seconds. You then move 15% faster for 3s."
+  },
+  {
+   "name": "Forced March Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.04,
+   "scaleCap": 0.4,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "desc": "A thrown blow that deals 30 damage, rising to 2 times that at full reach of 7 tiles. Against a boss or an elite it also deals 5% of their maximum health. Its damage rises 4% for every 100 paces you have run since you last used it (max 40%)."
+  },
+  {
+   "name": "Steady Drove",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 10,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Restores 3 stamina a second for 10 seconds. Fighting beside others pays: +10% per ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Walking It Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Hurled Cocoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a packed cocoon that deals 28 damage to the first enemy it meets and leaves it [Slowed] for 4 seconds, then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Canopy Thrash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Thrashes with every limb, which deals 8 damage to every enemy within 2.5 tiles, with a 40% chance to leave each [Hindered] for 5 seconds."
+  },
+  {
+   "name": "Hand over Hand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "Strings a hauling line 6 tiles long for 5 seconds that drags nearby enemies toward it and slows those it catches by 20% for 3 seconds."
+  },
+  {
+   "name": "Pummel the Stuck",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "blunt",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

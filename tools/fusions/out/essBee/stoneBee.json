@@ -1,0 +1,87 @@
+{
+ "essence": "essBee",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Relay Sting",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a sting into the first enemy it meets for 4 poison damage. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thousand Needles",
+   "template": "volley",
+   "element": "poison",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 20,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 340,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Looses 5 stings in a wide spread, each dealing 6 damage and leaving the target [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on each target spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Tireless Shift",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Restores 3 stamina a second for 8 seconds. The effect grows 10% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Never Resting",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "nature",
+   "cooldownReduction": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Every ability you have comes round 8% sooner, and you regenerate 0.5 health a second."
+  }
+ ]
+}

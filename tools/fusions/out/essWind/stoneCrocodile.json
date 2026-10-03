@@ -1,0 +1,84 @@
+{
+ "essence": "essWind",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "The Wait Ends",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "guaranteedCrit": true,
+   "chargeTo": 160,
+   "desc": "Lunges up to 5 tiles onto a target and clamps, which deals 28 damage and consumes every affliction on it, adding 1.5 times their remaining damage to the hit. It is always a critical hit."
+  },
+  {
+   "name": "Undertow",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 30,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lays a line 5 tiles long ahead of you for 5 seconds that drags nearby enemies inward. It deals 12 damage to each one it catches, stuns it for 1 second and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Stillness Decided",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "cooldown": 45,
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Your critical hit chance rises by 25% for 10 seconds, and you move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Log in the Shallows",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "dodgeBonus": 0.05,
+   "desc": "After 8 seconds without a critical hit, your next strike gains 40% critical hit chance. Once every 8 seconds. Your dodge chance rises by 5%."
+  }
+ ]
+}

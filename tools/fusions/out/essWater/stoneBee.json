@@ -1,0 +1,94 @@
+{
+ "essence": "essWater",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Rain of Stingers",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 350,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "castTime": 0,
+   "desc": "Looses 3 raindrops at once, spread apart. Each one deals 8 damage, with a 60% chance to leave its target [Poisoned] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Tireless Drip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits venomed water at the first enemy it meets. It deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 10 seconds."
+  },
+  {
+   "name": "Sealed Comb",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 12
+   },
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds. A swarm of droplets fights beside you for 12 seconds and deals 3 damage to an enemy every 1.4 seconds."
+  },
+  {
+   "name": "Dew-Carrier",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 3,
+   "familiarRange": 160,
+   "familiarInterval": 1,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Dew Carrier",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A bonded Dew Carrier fights beside you. Every second it deals 3 damage to an enemy within 5 tiles, and anything it hits moves 20% slower for 2 seconds."
+  }
+ ]
+}

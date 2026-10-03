@@ -1,0 +1,80 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Pounding Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Tramples every enemy within 3 tiles for 12 damage and knocks it back 3 tiles, each with a 50% chance of [Sundered] for 6 seconds. Its damage rises 5% for every 100 paces you have covered since you last used it (max 25%)."
+  },
+  {
+   "name": "Sprint Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "A snapping bite that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 4 seconds. You move 15% faster for 2 seconds after you use it."
+  },
+  {
+   "name": "Open Water Run",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "water",
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "dodgeBonus": 0.1,
+   "cooldown": 30,
+   "desc": "Increases your movement speed by 40% and your dodge chance by 10% for 8 seconds."
+  },
+  {
+   "name": "Long Stride",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "moveSpeedPct": 0.12,
+   "resist": {
+    "element": "water",
+    "amount": 0.08
+   },
+   "desc": "You move 12% faster and have 8% water resistance."
+  }
+ ]
+}

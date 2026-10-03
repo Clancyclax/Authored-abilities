@@ -1,0 +1,77 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Lifted Purse",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 7,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a weighted pouch that deals 9 damage to the first enemy it meets and leaves it [Marked] for 6 seconds. It needs an affliction of yours on the target and uses it up."
+  },
+  {
+   "name": "Sleight of Cape",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 18,
+   "range": 112,
+   "confuseDuration": 4,
+   "duration": 4,
+   "maxTargets": 3,
+   "confuseDamageFrac": 1,
+   "confuseDamagePct": 1,
+   "stunOnHit": 0.8,
+   "desc": "Whips your cape wide, dealing 8 damage to up to 3 enemies within 3.5 tiles and turning them against each other for 4 seconds. Each is stunned for 0.8 seconds."
+  },
+  {
+   "name": "Turned Pockets",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "Turns your pockets out: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+  },
+  {
+   "name": "Pocketed Spoils",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you pocket 6 mana. Once every 6 seconds."
+  }
+ ]
+}

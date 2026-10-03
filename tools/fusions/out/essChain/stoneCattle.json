@@ -1,0 +1,82 @@
+{
+ "essence": "essChain",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Ploughed Furrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags a heavy yoke of chain through a cone ahead of you, which deals 13 damage to everything within 4 tiles and knocks it back 3 tiles, with a 50% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Team Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "castTime": 1,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Hauls a weighted chain into an enemy up to 6 tiles away for 28 damage, up to 1.5 times that at full reach; its damage rises 10% for each ally beside you, up to 30%. On a hit, every ally gains 20% damage for 12 seconds."
+  },
+  {
+   "name": "Steady Yoke",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Belled Collar",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 15
+    }
+   ],
+   "desc": "Conjures a collar of links: your critical chance rises by 4%, your critical hits deal 10% more damage, each kill restores 3 health, and your maximum health rises by 15."
+  }
+ ]
+}

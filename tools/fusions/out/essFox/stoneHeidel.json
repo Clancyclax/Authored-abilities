@@ -1,0 +1,83 @@
+{
+ "essence": "essFox",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Churned Turf",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 5,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Stamps a ring of hooves around you, dealing 6 damage to every enemy within 2.5 tiles and slowing each by 20% for 2 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Long Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Hurls a stone that deals 26 damage to the first enemy it meets. Against a boss or an elite it also deals 5% of their maximum health. For 4 seconds after using it, you move 20% faster."
+  },
+  {
+   "name": "Fresh Legs",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 5,
+   "restoreDuration": 8,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Restores 5 stamina a second for 8 seconds. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Last Reserve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 25
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your stamina runs out, you regain 25 stamina. Once every 40 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

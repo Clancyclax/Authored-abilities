@@ -1,0 +1,79 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Second Helping",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 128,
+   "leechOverTime": {
+    "frac": 0.4,
+    "duration": 6,
+    "label": "Digesting"
+   },
+   "chargesMax": 3,
+   "rangeBand": "melee",
+   "desc": "Runs the staff through the first enemy within 4 tiles. It deals 8 damage, and 40% of the damage dealt comes back to you as healing over 6 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Dinner Gong",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 110,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "healOnUse": 10,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Beats the staff on the ground. It deals 26 damage to every enemy within 3.5 tiles, and you regain 10 health. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Bread From the Bindle",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "cooldown": 24,
+   "healAmount": 15,
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Unslings the bundle from the end of the staff and shares it out. It restores 15 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Provisioned",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you are healed, 6 stamina comes back to you. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essBee",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hearthside Prick",
+   "template": "projectileBall",
+   "element": "life",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 340,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 5,
+    "label": "Warmth"
+   },
+   "desc": "Flicks a stinger that deals 4 damage. 25% of the damage it deals comes back as healing over the following 5 seconds, rather than at once."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herd Shove",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "knockback": 80,
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Looses a wide cone ahead of you, dealing 12 damage to everything caught in it and knocking it back 2.5 tiles. Its damage rises 8% for each ally nearby (max +32%)."
+  },
+  {
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "name": "Barn Warmth",
+   "element": "life",
+   "cooldown": 20,
+   "range": 140,
+   "reachUnits": 140,
+   "rangeBand": "medium",
+   "healAmount": 12,
+   "healScope": "party",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 4
+   },
+   "desc": "Restores 12 health to you and every ally within 4.5 tiles, and more the faster you cast. Using it increases your movement speed by 10% for 4 seconds."
+  },
+  {
+   "kind": "passive",
+   "name": "Slow Comfort",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "When you gain health, you receive 30% more healing for 8 seconds. Once every 8 seconds."
+  }
+ ]
+}

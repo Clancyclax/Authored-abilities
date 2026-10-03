@@ -1,0 +1,89 @@
+{
+ "essence": "essCage",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Trampling Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.35,
+    "duration": 3
+   },
+   "desc": "Rushes you up to 7 tiles to the target, then a weapon strike deals 16 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds. Anything struck moves 35% slower for 3 seconds."
+  },
+  {
+   "name": "Hoofbeat Drum",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 2
+   },
+   "desc": "Stamps in a tight circle, which deals 7 damage to every enemy within 2.5 tiles and leaves you moving 20% faster for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Relief Post",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 36,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds. A mount escort fights beside you for 10 seconds, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Long Haul",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 4
+   },
+   "armorBonus": 0.05,
+   "desc": "Every 8 tiles you cover, you recover 3 stamina a second for 4 seconds. Your armour rises by 5%. Once every 12 seconds."
+  }
+ ]
+}

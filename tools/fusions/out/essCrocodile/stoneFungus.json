@@ -1,0 +1,73 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Seeding Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "spreadAfflictions": 112,
+   "desc": "A rotting bite that deals 13 damage and makes the target [Diseased] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Slow Ripening",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "plant",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 288,
+   "corpse": true,
+   "explodeRadius": 112,
+   "mineSeconds": 30,
+   "desc": "Primes up to 3 bodies within 9 tiles for 30 seconds. Each bursts the moment an enemy comes within 2 tiles of it and deals 26 damage to everything within 3.5 tiles."
+  },
+  {
+   "name": "Mulch Bed",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 40,
+   "desc": "Raises a bed of spores where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Creeping Colony",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

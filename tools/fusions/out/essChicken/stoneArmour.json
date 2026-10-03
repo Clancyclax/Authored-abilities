@@ -1,0 +1,88 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spur Through Plate",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Drives a spur through a joint in the target's plate for 30 damage that ignores its armour, and leaves it 15% easier to wound for 8 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Breastplate Clang",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flares your hackles and wings, dealing 12 damage to every enemy within 3 tiles, knocking them back 3 tiles and leaving each [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Mail Over Down",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 20 damage for 8 seconds, and your armour rises by 8%."
+  },
+  {
+   "name": "Feather Upon Feather",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.06,
+   "desc": "Every time you take damage, a layer builds on you, up to 6. At 6 they all spend at once: you gain a shield worth 7% of your maximum health per layer. Unfed, a layer fades every 10 seconds. Your armour also rises by 6% at all times."
+  }
+ ]
+}

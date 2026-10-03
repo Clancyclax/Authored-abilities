@@ -1,0 +1,72 @@
+{
+ "essence": "essFish",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Trailing Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a dart that deals 4 damage and has a 25% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Final Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 256,
+   "maxMult": 2.0,
+   "requiresTargetBelow": 0.25,
+   "desc": "A thrown blow that deals 18 damage, up to 2 times as much at maximum range. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Quarry Sense",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "water",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "desc": "Increases your critical hit chance by 25% for 15 seconds."
+  },
+  {
+   "name": "Chase Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 stamina a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

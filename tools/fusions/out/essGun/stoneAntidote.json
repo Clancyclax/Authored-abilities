@@ -1,0 +1,80 @@
+{
+ "essence": "essGun",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Dose",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 8,
+   "cooldown": 1,
+   "speed": 480,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Needs one of your afflictions on the target: fires a round at an enemy up to 9 tiles away that draws the affliction out, using it up, and deals 8 poison damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lancet",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "spreadAfflictions": 112,
+   "base": 12,
+   "cooldown": 18,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a round that lances an enemy up to 7 tiles away for 12 poison damage, leaves it [Poisoned] for 6 seconds and 10% easier to wound for 4 seconds. Your afflictions on it then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Return to Sender",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "For 10 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Bitter Chamber",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When one of your afflictions on an enemy wears off, your next ability deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

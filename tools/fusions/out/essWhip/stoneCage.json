@@ -1,0 +1,89 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Falling Portcullis",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 16,
+   "volleyCount": 4,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "knockback": 64,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings 4 lashes down side by side out to 5 tiles; each deals 8 damage and drives its target back 2 tiles, with a 40% chance to leave it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Closing Loop",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a loop at the first enemy it meets, which deals 8 damage and leaves it [Slowed] for 3 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Ringmaster's Hush",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 120,
+   "freezeDuration": 4,
+   "freezeRadius": 160,
+   "aoeBand": "large",
+   "castTime": 0.5,
+   "desc": "Cracks the lash once and holds every creature within 5 tiles in place for 4 seconds."
+  },
+  {
+   "name": "The Tamer's Side",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

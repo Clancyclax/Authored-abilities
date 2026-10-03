@@ -1,0 +1,83 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shake Loose",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "spreadAfflictions": 112,
+   "desc": "Seizes the target and shakes it, dealing 14 blunt damage and leaving it 10% easier to wound for 5 seconds. Your afflictions on the target then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Troop Panic",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "confuse": true,
+   "confuseChance": 0.2,
+   "confuseDuration": 2,
+   "desc": "Holds 3 charges, and kills give charges back. Shakes spores over every enemy within 2.5 tiles, dealing 8 nature damage, with a 20% chance per hit to turn the target against its allies for 2 seconds.",
+   "chargesMax": 3
+  },
+  {
+   "name": "Grasping Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "plant",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left with Rot for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Mould Cudgel",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "plant",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Conjures a cudgel of packed fungus that raises your weapon damage by 12% and your attack speed by 5%. Every strike with it leaves Rot in the wound for 2 damage a second for 3 seconds."
+  }
+ ]
+}

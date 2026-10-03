@@ -1,0 +1,78 @@
+{
+ "essence": "essHunt",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Broadhead Count",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 7,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Looses a broadhead at the first enemy in line for 8 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds. It holds 4 charges, and each kill returns one."
+  },
+  {
+   "name": "Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 60,
+   "range": 256,
+   "maxMult": 2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A full-draw shot that deals 28 damage, rising to 2 times that at its full reach of 8 tiles, and leaves the target [Pinned] for 3 seconds. Against a boss or elite it deals a further 5% of the target's maximum health.",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Anchor Hold",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 75,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 54% further."
+  },
+  {
+   "name": "String at Tension",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 25% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

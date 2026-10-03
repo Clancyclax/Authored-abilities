@@ -1,0 +1,69 @@
+{
+  "essence": "essShield",
+  "stone": "stoneEarth",
+  "fusions": [
+    {
+      "name": "Ridgeline",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "rock",
+      "role": "long",
+      "base": 26,
+      "cooldown": 90,
+      "wallKind": "burn",
+      "wallLength": 192,
+      "wallDuration": 8,
+      "wallThickness": 30,
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Raises a ridge of jagged stone 6 tiles long for 8 seconds. It deals 26 damage that ignores armour to each enemy that crosses it and leaves it [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Slab Hurl",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "rock",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 320,
+      "radius": 9,
+      "rangeBand": "medium",
+      "chargesMax": 3,
+      "knockback": 64,
+      "desc": "Breaks a slab off the shield's stone face and throws it. It deals 8 damage to the first enemy it meets and knocks it back 2 tiles. It holds 3 charges, and a kill gives one back."
+    },
+    {
+      "name": "Ground Holds Fast",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "earth",
+      "cooldown": 90,
+      "freezeDuration": 3,
+      "freezeRadius": 128,
+      "aoeBand": "medium",
+      "castTime": 0.5,
+      "desc": "Plants the shield for 0.5 seconds, then the ground seizes every foot near it: every creature within 4 tiles is held in place for 3 seconds."
+    },
+    {
+      "name": "Flagstone Footing",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "earth",
+      "condition": "onRoads",
+      "bonusKind": "armor",
+      "amount": 0.12,
+      "desc": "On paved ground, your armour rises by 12%."
+    }
+  ]
+}

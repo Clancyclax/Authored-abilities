@@ -1,0 +1,105 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Hotfoot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A leaping strike at an enemy up to 6 tiles away that deals 4 fire damage, up to 1.8 times that at the full 6 tiles, and sets it [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Spotfires",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "chain": {
+    "count": 4,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 4,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Throws a spark at the first enemy in a line up to 8 tiles away that deals 26 fire damage, ignoring resistances, then jumps to 4 more enemies within 3.5 tiles, each hit dealing 60% of the first. Every enemy hit is [Burning] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Smoulder Coat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "For 8 seconds, 30% of the damage you take is dealt back to whoever dealt it and sets them [Burning] for 2 damage a second for 4 seconds. You move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Warmth Seeker",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "When you inflict a condition, you regain 2 health a second for 4 seconds. Once every 6 seconds. You have 10% fire resistance."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Quarry at Bay",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 112,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "A finishing thrust that deals 18 damage and uses up every affliction you have on the target, dealing 50% more damage for each one. It leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Past the Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Thrusts through a narrow cone 3.5 tiles long that deals 4 damage to everything in it, with a 30% chance to leave each enemy [Slowed] for 3 seconds. Its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Fetch",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Holds Till You Come",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.1,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Boarhound",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded boarhound runs with you, striking enemies within 5 tiles for 4 damage every 1.1 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

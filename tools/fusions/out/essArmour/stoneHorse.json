@@ -1,0 +1,70 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Gathered Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "desc": "A blow from the full stride that deals 8 damage and leaves the target 12% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%). Holds 3 charges; a kill gives one back.",
+   "base": 8,
+   "cooldown": 1,
+   "range": 84,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargesMax": 3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25
+  },
+  {
+   "name": "Thunder Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "desc": "Sweeps past every enemy within 3.5 tiles, dealing 14 damage and knocking them back 3 tiles. Your movement speed rises 25% for 3 seconds after you use it.",
+   "base": 14,
+   "cooldown": 20,
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "isAoe": true,
+   "range": 112,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Full Gallop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "desc": "Increases your movement speed by 40% for 8 seconds, with +10% dodge chance for it.",
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "dodgeBonus": 0.1,
+   "cooldown": 36
+  },
+  {
+   "name": "Steady Cadence",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "desc": "Every ability you have comes round 7% sooner, and you have 10% physical resistance.",
+   "cooldownReduction": 0.07,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   }
+  }
+ ]
+}

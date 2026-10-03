@@ -1,0 +1,90 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Cloud of Stings",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.15,
+   "scaleCap": 0.6,
+   "desc": "Throws 3 barbed darts at once in a spread out to 6 tiles, and each deals 3 damage. Its damage rises 15% for each affliction the target carries (max 60%)."
+  },
+  {
+   "name": "Hooked Sting",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hpCostPct": 0.05,
+   "desc": "A thrust that deals 8 damage and leaves its barb in the wound, making the target [Poisoned] for 3 damage a second for 6 seconds. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Honeycomb Drop",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Knocks a hive loose with the butt of the shaft. For 12 seconds its swarm stings an enemy within 4 tiles for 3 damage every second, each sting with a 30% chance to leave it [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Work Without Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "desc": "Each time you spend stamina, a stinging bolt leaps to the nearest enemy within 6 tiles and deals 5 damage. Once every 3 seconds."
+  }
+ ]
+}

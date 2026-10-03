@@ -1,0 +1,95 @@
+{
+  "essence": "essShield",
+  "stone": "stoneDog",
+  "fusions": [
+    {
+      "name": "Warning Snap",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.04,
+        "duration": 3
+      },
+      "scaleOn": "alliesNear",
+      "scalePer": 0.08,
+      "scaleCap": 0.32,
+      "desc": "Snaps at the target from behind the shield, which deals 4 damage and leaves it 4% easier to wound for 3 seconds. Its damage rises 8% for each ally beside you, up to 32%."
+    },
+    {
+      "name": "Call the Pack",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 128,
+      "coneAngle": 0.9,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Barks from behind the shield in a cone 4 tiles ahead, dealing 12 damage to everything in it, stunning it for 1 second and leaving it [Marked] for 6 seconds."
+    },
+    {
+      "name": "Hackles Up",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "physical",
+      "cooldown": 24,
+      "tauntRadius": 192,
+      "tauntDuration": 6,
+      "tauntMax": 5,
+      "threatMult": 1,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 8
+      },
+      "desc": "Pulls up to 5 enemies within 6 tiles onto you for 6 seconds. A guard hound fights beside you for 8 seconds, biting for 4 damage every 1.4 seconds."
+    },
+    {
+      "name": "Shared Spoils",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.25,
+        "duration": 4
+      },
+      "allyScaling": {
+        "per": 0.08,
+        "max": 4,
+        "range": 176
+      },
+      "allyRange": 176,
+      "allyMax": 4,
+      "desc": "When you kill an enemy, your physical damage rises by 25% for 4 seconds. Once every 12 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+    }
+  ]
+}

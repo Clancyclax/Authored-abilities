@@ -1,0 +1,77 @@
+{
+ "essence": "essHand",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Branding Iron",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "strikes": 1,
+   "bossPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 12,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Presses a hot iron into the target for 28 fire damage, leaving it [Burning] for 3 damage a second for 6 seconds and [Marked] for 12 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Roped Stray",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Throws a rope loop over one enemy for 4 damage, rising to 1.5 times that at its full reach of 6 tiles. The target moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Warm Pail",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "life",
+   "cooldown": 30,
+   "resource": "hp",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 health a second for 8 seconds."
+  },
+  {
+   "name": "Plough Calluses",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 12, and you regenerate 0.5 health a second."
+  }
+ ]
+}

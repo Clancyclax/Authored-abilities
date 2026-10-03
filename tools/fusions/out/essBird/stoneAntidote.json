@@ -1,0 +1,70 @@
+{
+ "essence": "essBird",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Drawing the Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Flicks a barbed feather into the first enemy it meets for 16 damage, using up every affliction you have on it and dealing 60% more for each one drawn out."
+  },
+  {
+   "name": "Bitter Wingbeat",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "isAoe": true,
+   "range": 64,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A wingbeat deals 3 damage to every enemy within 2 tiles and leaves them [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Moulting Shake",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Shakes up to 2 conditions off you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Above the Miasma",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "wind",
+   "moveSpeedPct": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your movement speed is permanently increased by 8%, and you have 12% poison resistance."
+  }
+ ]
+}

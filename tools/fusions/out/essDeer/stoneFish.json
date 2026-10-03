@@ -1,0 +1,85 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silver Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "speed": 300,
+   "radius": 7,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Looses 3 darting bolts of water that spread apart, each dealing 3 damage. Their damage rises 10% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Upstream Leap",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Springs along a stream of water to an enemy up to 7 tiles away, where it deals 12 water damage and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Wriggle Loose",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Frees you from up to 2 control effects, then your movement speed rises by 25% for 3 seconds."
+  },
+  {
+   "name": "Darting Run",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

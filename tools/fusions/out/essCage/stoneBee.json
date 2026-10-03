@@ -1,0 +1,95 @@
+{
+ "essence": "essCage",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Stinging Cells",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 320,
+   "radius": 6,
+   "range": 200,
+   "isAoe": true,
+   "castTime": 0.2,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 stings at once, spread apart, each dealing 3 damage with a 25% chance to leave the target [Leaden] for 3 seconds."
+  },
+  {
+   "name": "Swarming Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "strikes": 1,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "A weapon strike that deals 11 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds and 30% slower for 3 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Woven Skep",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.4,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets down a hive for 12 seconds. Every second it stings an enemy within 4 tiles and deals 3 damage, with a 30% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Sealing the Comb",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (45% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

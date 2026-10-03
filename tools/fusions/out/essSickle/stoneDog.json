@@ -1,0 +1,93 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Runs you down a target up to 6 tiles away and hamstrings it for 13 damage, leaving it [Slowed] for 4 seconds and 12% easier to wound for 5 seconds.",
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Nip at the Heels",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Nips the target for 8 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Whistle Up a Heeler",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Whistles up a hound that fights beside you for 15 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds, each bite with a 30% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Long Lope",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you regain 2 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

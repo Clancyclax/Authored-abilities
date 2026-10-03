@@ -1,0 +1,71 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clinging Maul",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "stunOnHit": 1.2,
+   "base": 14,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "desc": "Clamps onto a target's back and mauls it with a weapon strike for 14 damage, stunning it for 1.2 seconds and leaving it [Bleeding] for 2 damage a second for 5 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bough-Breaker",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 30,
+   "cooldown": 100,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Leaps and lands with your full weight, dealing 30 damage that ignores armour to every enemy within 3 tiles."
+  },
+  {
+   "name": "Thick Pelt, Light Step",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.18,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "dodgeBonus": 0.08,
+   "desc": "Raises your armour by 18% for 12 seconds, with +8% dodge chance for it."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackOn": "self",
+   "name": "Prodded Too Often",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

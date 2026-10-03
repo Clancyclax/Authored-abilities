@@ -1,0 +1,100 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Encrusting Nibble",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A nibbling weapon strike that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds, with a 30% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Out of Every Hole",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends 3 small biters darting out of the reef in a spread out to 6 tiles, each dealing 6 damage with a 30% chance to leave the target [Bleeding] for 4 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Not Worth the Reach",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds. You move 15% faster for the first 4 seconds."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 10,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.3,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. At 10 they all spend at once: you gain a shield that soaks 2% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

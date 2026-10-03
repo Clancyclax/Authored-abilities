@@ -1,0 +1,93 @@
+{
+ "essence": "essCat",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Riverbank Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes up to 6 tiles to the target and strikes it for 12 damage, leaving it [Bleeding] for 2 damage a second for 4 seconds and [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Darting Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "spammable": true,
+   "speed": 340,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Darts 3 jets of water in a spread, each dealing 6 damage to the first enemy it meets. You move 20% faster for 3 seconds after using it. You hold 4 charges and each kill gives one back."
+  },
+  {
+   "name": "Wriggle Free",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes 2 conditions from you and increases your movement speed by 25% for 4 seconds."
+  },
+  {
+   "name": "Slick Escape",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you gain a ward that absorbs 25% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

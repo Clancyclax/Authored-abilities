@@ -1,0 +1,70 @@
+{
+ "essence": "essRake",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Four-Count Drill",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 128,
+   "maxMult": 1.5,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "desc": "A drilled thrust of the tines that deals 8 damage, rising to 1.5 times that at its full reach of 4 tiles. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Master's Correction",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "desc": "A flawless thrust that deals 28 damage and is always a critical hit, leaving the target 15% easier to wound for 8 seconds.",
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Call the Drill Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "desc": "Increases your attack speed by 25% for 10 seconds, and pulls up to 4 enemies within 5 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Second Pass",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

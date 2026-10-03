@@ -1,0 +1,69 @@
+{
+ "essence": "essBird",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Rapid Knock",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "stunOnHit": 1,
+   "desc": "A heavy peck that deals 15 damage, stuns the target for 1 second and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Levelling Beat",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "isAoe": true,
+   "range": 96,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "Beats down on every enemy within 3 tiles for 26 damage plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Drumroll",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "cooldown": 45,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your attack speed by 30% for 12 seconds."
+  },
+  {
+   "name": "Steady Tapping",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "Each time you strike, you regain 3 stamina. Once every 3 seconds."
+  }
+ ]
+}

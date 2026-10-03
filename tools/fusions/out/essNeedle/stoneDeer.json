@@ -1,0 +1,81 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Gone Before It Stings",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A quick jab that deals 4 damage and leaves the target 6% easier to wound for 4 seconds. You move 10% faster for 2 seconds."
+  },
+  {
+   "name": "Lowered Rack",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 9,
+   "cooldown": 80,
+   "guaranteedCrit": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 8,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Looses 4 antler tines in a spread, each dealing 9 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "On Tenterhooks",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "nature",
+   "cooldown": 40,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "desc": "You spring 2 tiles from where you stood, and your dodge chance rises by 20% for 10 seconds."
+  },
+  {
+   "name": "Level Tines Running",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your critical hit chance rises by 30% for your next strike. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Tangle Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 5,
+   "volleySpread": 0.7,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 strands at once, spread apart, each dealing 2 damage. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Draw the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A whipping kick that deals 12 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Trip Wire",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 16,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 3,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strings a snare of strands at the nearest enemy. It waits up to 30 seconds, then deals 16 damage to each of the first 3 enemies to tread within 2 tiles and leaves them [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Wound Tight",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land binds a strand to that enemy, up to 5. When you reach 5, they all spend at once: a blow strikes it for 20% of your weapon damage per stack (102% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

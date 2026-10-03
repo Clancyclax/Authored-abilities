@@ -1,0 +1,94 @@
+{
+ "essence": "essFish",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Spine Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "executeLadder": true,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.8,
+   "desc": "Usable only on a target at or below 25% health. Drives a venomous spine in for 16 damage and draws out every affliction on the target, adding 1.8 times their remaining damage to the blow."
+  },
+  {
+   "name": "Bitter Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 16,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 bitter darts at once, each dealing 8 damage with a 40% chance to leave the target [Poisoned] for 6 seconds. Your afflictions on each target struck spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Clean Current",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "party",
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Removes 2 conditions from you and every ally in your party. Its effect grows 10% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Spent Venom",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "When one of your afflictions on an enemy runs out, you regain 3 health a second for 4 seconds. Its effect grows 10% for each ally within 5.5 tiles, up to 4 allies. Once every 6 seconds."
+  }
+ ]
+}

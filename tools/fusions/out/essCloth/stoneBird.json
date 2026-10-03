@@ -1,0 +1,71 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Trailing Pennant",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 112,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Sweeps the pennant trailing behind you through a cone 3.5 tiles ahead, dealing 4 damage to everything in it. Its damage rises 8% for every 100 paces you have covered since you last used it (max 40%)."
+  },
+  {
+   "name": "Kite Stoop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 256,
+   "maxMult": 2,
+   "guaranteedCrit": true,
+   "desc": "Drops on an enemy up to 8 tiles away from a cloth kite for 26 damage, up to 2 times as much at full reach. It is always a critical hit."
+  },
+  {
+   "name": "Billowing Glide",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "cooldown": 20,
+   "speedMult": 1.3,
+   "buffDuration": 6,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Glides you 2 tiles on your cloak, then raises your movement speed by 30% and your dodge chance by 10% for 6 seconds."
+  },
+  {
+   "name": "Wind-Filled Cloak",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your cloak fills and you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

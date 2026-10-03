@@ -1,0 +1,74 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Echo Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps once and sends the echo ahead, dealing 4 damage to the first enemy it meets with a 20% chance to leave it [Muddled] for 3 seconds."
+  },
+  {
+   "name": "Let Go the Rafter",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "dark",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 192,
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "Drops onto a target up to 6 tiles away, dealing 30 damage, up to 1.5 times that from the full distance. It always lands as a critical hit, and you heal for 20% of the damage dealt.",
+   "leech": 0.2
+  },
+  {
+   "name": "Soundless Passage",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 9,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "You are veiled for 9 seconds: enemies notice you 60% later. Attacking breaks the veil. You move 20% faster for 4 seconds.",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Dusk Stalker",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "At night, you deal 12% more damage, and your dodge chance rises by 5% at all times."
+  }
+ ]
+}

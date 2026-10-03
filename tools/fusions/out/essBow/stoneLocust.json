@@ -1,0 +1,81 @@
+{
+ "essence": "essBow",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Shaft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "leech": 0.25,
+   "desc": "Fires an arrow that deals 4 damage to the first enemy it meets and heals you for 25% of the damage dealt."
+  },
+  {
+   "name": "Darkening Sky",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.05,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Looses a dense cloud of arrows 5 tiles ahead that deals 26 damage to everything in it, plus 5% of a boss's or elite's maximum health. Its damage rises 8% per affliction on the target (max 40%)."
+  },
+  {
+   "name": "Arrow Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends out a swarm for 12 seconds that stings an enemy within 5 tiles for 3 damage every second, each sting with a 30% chance to leave the target [Weakened] for 5 seconds."
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 5. At 5 they all spend at once: you heal for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

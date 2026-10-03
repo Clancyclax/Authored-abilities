@@ -1,0 +1,72 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Out of the Rafters",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "dark",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "desc": "Swoops you to a target up to 7 tiles away, then deals 14 dark damage and leaves it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Hollow Fang Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "leech": 0.3,
+   "desc": "Throws a hollow dart that deals 4 dark damage to the first enemy it meets and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Soundings",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "dark",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Quick Draught",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 18,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 18
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "Each critical hit you land makes your attacks heal you for 25% of the damage they deal for 6 seconds. Once every 18 seconds."
+  }
+ ]
+}

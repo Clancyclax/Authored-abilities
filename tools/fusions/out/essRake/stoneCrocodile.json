@@ -1,0 +1,82 @@
+{
+ "essence": "essRake",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Jaws From the Shallows",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "bossPct": 0.06,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps the tines shut across a cone 3 tiles long, dealing 28 damage to everything in it and leaving each enemy [Pinned] for 2 seconds. A boss or elite takes a further 6% of its maximum health."
+  },
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "strikes": 1,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Clamps the tines shut and rolls, dealing 24 damage and leaving the target [Bleeding] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Held Level",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds and quickens your movement by 10%. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Still Water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your next strike within 5 seconds has 20% more critical hit chance. Once every 15 seconds."
+  }
+ ]
+}

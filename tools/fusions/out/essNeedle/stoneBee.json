@@ -1,0 +1,80 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Parting Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Costs 4% of your maximum health: a barbed sting that tears free of you, dealing 8 poison damage and leaving the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Alarm Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "spreadAfflictions": 112,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Releases an alarm scent that deals 11 poison damage to every enemy within 3 tiles. Your afflictions on each target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Thousand Small Points",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Calls up a swarm for 12 seconds that stings an enemy within 4 tiles for 3 damage every second, each sting with a 30% chance to leave the target [Poisoned] for 3 seconds."
+  },
+  {
+   "name": "Nectar Run",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: you are healed for 3% of your maximum health per stack (18% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

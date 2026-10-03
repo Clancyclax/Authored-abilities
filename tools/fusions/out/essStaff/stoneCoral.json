@@ -1,0 +1,84 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Poling Off",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 128,
+   "maxMult": 1.5,
+   "knockback": 96,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Sets the staff against a target up to 4 tiles away and shoves off. It deals 12 damage, rising to 1.5 times that at full reach, and knocks the target back 3 tiles."
+  },
+  {
+   "name": "Snapped Branches",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 320,
+   "radius": 6,
+   "range": 160,
+   "castTime": 0,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargesMax": 3,
+   "isAoe": true,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Snaps 3 branches off the growth on the staff and throws them in a spread out to 5 tiles. Each deals 3 damage, with a 35% chance to leave its target [Bleeding] for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Reef on the Piling",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 14,
+   "summonInterval": 1.5,
+   "summonRange": 96,
+   "castTime": 0.8,
+   "desc": "Drives the staff in where you stand for 14 seconds and a reef head grows over it. Its polyps sting an enemy within 3 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Barnacled Haft",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Whenever you strike an enemy, the reef on the staff feeds you: you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fanned Hand",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "chargesMax": 5,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Throws 3 knives in a spread out to 7 tiles, each dealing 3 damage. Holds 5 charges; each use spends one, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Throw",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "consumeAfflictionsPer": 0.5,
+   "base": 15,
+   "cooldown": 12,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Throws a knife that deals 15 damage to the first enemy it meets and uses up every affliction you have on it, dealing 50% more damage for each one."
+  },
+  {
+   "name": "Studied Anatomy",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Ten Thousand Cuts",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 10. The next ability you use spends them all: you deal 3% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

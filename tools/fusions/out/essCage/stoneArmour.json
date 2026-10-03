@@ -1,0 +1,87 @@
+{
+ "essence": "essCage",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Spiked Casing",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that deals 12 damage, stuns the target for 1 second and leaves it 15% easier to wound for 6 seconds and [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Bolted Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A riveting blow deals 8 damage, leaves the target 8% easier to wound for 4 seconds, and has a 30% chance to leave it [Pinned] for 1.5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Layered Shutters",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 20,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.1,
+   "desc": "Closes a steel shutter over you that absorbs the next 20 damage, up to 4 blows, and holds for 6 seconds. Your armour rises by 10% while it holds."
+  },
+  {
+   "name": "Maiden Plating",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.12,
+   "damageReduction": 2,
+   "thornsFrac": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 8
+    }
+   ],
+   "desc": "Conjures spiked plate: every hit you take is 2 lower, your armour rises by 12%, 10% of the damage you take goes back to whoever dealt it, and your maximum health rises by 8."
+  }
+ ]
+}

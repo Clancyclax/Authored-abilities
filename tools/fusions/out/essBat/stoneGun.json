@@ -1,0 +1,66 @@
+{
+ "essence": "essBat",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Sharp Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "resonating",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 256,
+   "maxMult": 2.2,
+   "chargesMax": 3,
+   "desc": "A pinpoint report deals 9 resonating damage, up to 2.2 times that at maximum range. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Overpressure",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "A burst of sound deals 14 resonating damage to every enemy within 3.5 tiles and stuns each for 1.2 seconds."
+  },
+  {
+   "name": "Range Finding",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "resonating",
+   "cooldown": 90,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further.",
+   "rangeMult": 1.4
+  },
+  {
+   "name": "Dry Spell",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "resonating",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 12,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your next strike gains 40% critical hit chance. Once every 12 seconds."
+  }
+ ]
+}

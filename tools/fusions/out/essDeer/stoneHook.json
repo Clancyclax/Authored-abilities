@@ -1,0 +1,79 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Tine",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Hurls a barbed tine that deals 8 piercing damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Snagging Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Your next weapon strike deals 12 piercing damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on it then spread to every enemy within 3 tiles of it."
+  },
+  {
+   "name": "Haul In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 24,
+   "desc": "A challenge that pulls up to 4 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Barb by Barb",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "crit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every critical hit you land sets a barb in that enemy, up to 5. Your next critical hit on it spends them all and strikes it for 34% of your weapon damage per barb (170% at full). Unfed, a barb fades every 4 seconds."
+  }
+ ]
+}

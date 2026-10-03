@@ -1,0 +1,85 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitterleaf Nibble",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A quick nibble that deals 4 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Dregs Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Flicks a bitter pellet that deals 16 poison damage to the first enemy it meets, uses up every affliction you have on it and deals 60% more damage for each one. You move 20% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Run It Off",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 poison conditions from you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Sweat It Out",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Every stretch of ground you cover, you regain 2 health a second for 4 seconds. Once every 6 seconds. You have 10% poison resistance."
+  }
+ ]
+}

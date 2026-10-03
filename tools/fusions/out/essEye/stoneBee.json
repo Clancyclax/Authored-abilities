@@ -1,0 +1,90 @@
+{
+ "essence": "essEye",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scout's Sting",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sting that deals 4 damage and leaves the target [Poisoned] for 1 damage a second for 3 seconds, with a 25% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Waggle Signal",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Fires a scout sting that deals 12 damage to the first enemy it meets and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Pathfinders",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends out a swarm for 12 seconds that stings an enemy within 5 tiles for 3 damage every second, each sting with a 30% chance to leave the target [Marked] for 5 seconds."
+  },
+  {
+   "name": "Dawn to Dusk",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "poison",
+   "cooldownReduction": 0.08,
+   "desc": "Your abilities' cooldowns are 8% shorter."
+  }
+ ]
+}

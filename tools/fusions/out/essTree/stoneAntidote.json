@@ -1,0 +1,77 @@
+{
+ "essence": "essTree",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Taproot Draw",
+   "template": "sunderStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Drives a root into the target that deals 8 damage, leaves it 6% easier to wound for 3 seconds and heals you for 30% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bitter Leaf-Fall",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sheds poisonous leaves in a cone 4 tiles ahead of you. It deals 10 poison damage to every enemy caught in it and leaves each one [Poisoned] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Inner-Bark Poultice",
+   "template": "cleanse",
+   "element": "plant",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "Removes up to 3 poison conditions from you and restores 12 health."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "name": "Tannin Core",
+   "template": "passiveBuff",
+   "element": "poison",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your maximum health rises by 12, and your poison resistance rises by 12%."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essGun",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Death Roll",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "requiresTargetBelow": 0.25,
+   "leech": 0.2,
+   "base": 22,
+   "cooldown": 15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "stackMult": 1,
+   "executeLadder": false,
+   "desc": "Fires at an enemy up to 5 tiles away for 22 damage, consuming every affliction on it and adding their remaining damage to the shot, and you heal for 20% of the damage dealt. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lurker's Shot",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "guaranteedCrit": true,
+   "base": 30,
+   "cooldown": 90,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "desc": "Fires a round at an enemy up to 10 tiles away that deals 30 damage, rising to 1.5 times that at full reach, and always lands as a critical hit."
+  },
+  {
+   "name": "Lie Submerged",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 40,
+   "desc": "Veils you for 10 seconds: enemies notice you 70% later. Attacking breaks the veil."
+  },
+  {
+   "name": "Long Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your next strike gains 40% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

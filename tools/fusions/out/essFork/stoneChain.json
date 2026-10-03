@@ -1,0 +1,86 @@
+{
+ "essence": "essFork",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grapnel Haul",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 440,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "Casts the tines out on a line and hauls yourself along it: you rush a target up to 7 tiles away and strike it for 12 damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rattling Links",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Whirls the links around you, dealing 4 damage to every enemy within 2 tiles. Each blow leaps on to 1 more enemy within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Anchor Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 20,
+   "desc": "Anchors a line of links 5 tiles long ahead of you for 5 seconds that drags every enemy near it inward."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Whipping Slack",
+   "element": "physical",
+   "cooldown": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 160
+   },
+   "desc": "Each time you strike with your weapon, a link lashes the nearest enemy within 5 tiles for 5 damage, then leaps on to 2 more enemies within 3 tiles for 60% of the damage. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Pounce From Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Springs you onto a target up to 7 tiles away and rakes it, which deals 15 damage. It has 50% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Full-Length Stretch",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A stretch with every claw out that deals 6 damage to every enemy within 3 tiles and leaves them [Bleeding] for 1 damage a second for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Nine-Tenths Asleep",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "healOnUse": 12,
+   "cooldown": 36,
+   "desc": "Restores 12 health and increases your dodge chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Do Not Disturb",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

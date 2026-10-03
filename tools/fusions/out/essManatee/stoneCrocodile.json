@@ -1,0 +1,89 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "role": "execute",
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "executeLadder": false,
+   "name": "Drowning Roll",
+   "element": "water",
+   "base": 24,
+   "cooldown": 15,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on an enemy at or below 30% health. Clamps on and rolls it under for 24 damage, adding 1.5 times the remaining damage of every affliction you have on it and using them up, then leaves it [Bleeding] for 2 damage a second for 6 seconds.",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "role": "medium",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "The Wait Ends",
+   "element": "piercing",
+   "base": 13,
+   "cooldown": 16,
+   "chargeTo": 160,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges you to a target up to 5 tiles away, then bites for 13 damage, leaving it 15% easier to wound for 6 seconds and [Slowed] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "name": "Floating Log",
+   "element": "water",
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.35,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 36,
+   "desc": "Veils you for 10 seconds: enemies notice you 65% later, and the veil breaks the moment you attack."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "name": "Basking Whole",
+   "element": "physical",
+   "desc": "The moment you are back at full health, your physical damage rises by 30% for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

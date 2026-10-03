@@ -1,0 +1,85 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Barbed Sacrifice",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.03,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Looses a barbed mote that deals 9 poison damage to the first enemy it meets and leaves it [Poisoned] for 2 damage a second for 4 seconds. Also costs 3% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "isAoe": true,
+   "castTime": 0,
+   "speed": 360,
+   "radius": 6,
+   "rangeBand": "medium",
+   "name": "Pollinate",
+   "element": "arcane",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 14,
+   "volleyCount": 4,
+   "volleySpread": 0.45,
+   "range": 192,
+   "reachUnits": 192,
+   "spreadAfflictions": 128,
+   "desc": "Looses 4 motes of arcana at once in a spread out to 6 tiles, each dealing 4 damage. Your afflictions on each enemy hit spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Glimmer Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "After a 1 second cast, calls up a swarm of arcane motes that fights for 15 seconds, stinging an enemy within 4 tiles for 4 damage every second."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyMana",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 3,
+    "duration": 5
+   },
+   "name": "Never Idle",
+   "element": "arcane",
+   "desc": "When your mana runs out, you restore 3 mana a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

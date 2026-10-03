@@ -1,0 +1,79 @@
+{
+ "essence": "essFox",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Bang and Gone",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Fires a shot that deals 7 damage to the first enemy it meets, with 50% more critical chance against a target that has not been hurt yet. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Parting Blast",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "Fires a blast 3 tiles ahead that deals 14 damage to everything in it and knocks each back 3 tiles. For 3 seconds after firing, you move 30% faster."
+  },
+  {
+   "name": "Sight Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "piercing",
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "blinkOnUse": 96,
+   "desc": "Increases your critical chance by 25% for 12 seconds and slips you 3 tiles from where you stood."
+  },
+  {
+   "name": "Quick Reload",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you land a critical hit, you regain 10 stamina. Once every 4 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

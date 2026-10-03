@@ -1,0 +1,71 @@
+{
+ "essence": "essNet",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Slammed Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "stunOnHit": 1.2,
+   "desc": "Slams a barred mesh shut on the target, dealing 14 damage, leaving it [Stunned] for 1.2 seconds and 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Bar by Bar",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a barred mesh around you, dealing 8 damage to every enemy within 2.5 tiles, with a 50% chance per hit to leave them [Pinned] for 2 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "The Door Drops",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 3,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Holds every creature within 3 tiles in place for 3 seconds. When it lets go, they move 30% slower for 3 seconds."
+  },
+  {
+   "name": "Gapless Weave",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "physical",
+   "armorBonus": 0.06,
+   "desc": "Your afflictions take hold on enemies that are immune to them, and your armour rises by 6%."
+  }
+ ]
+}

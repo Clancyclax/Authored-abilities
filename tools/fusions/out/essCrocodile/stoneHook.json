@@ -1,0 +1,80 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a barbed line that deals 12 damage to the first enemy it meets, stuns it for 1 second and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Tearing Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A wrenching bite that deals 16 damage and draws out every affliction you have on the target, dealing 60% more damage for each one drawn. It leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Snagged Free",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "piercing",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "Removes up to 2 conditions from you. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Taste of the Catch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Beady Aim",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "guaranteedCrit": true,
+   "desc": "Fixes one beady eye on the weak spot and pecks it for 30 damage as a critical hit, leaving the target 12% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Transfixing Stare",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Stares down a narrow cone 5 tiles long, dealing 10 damage to everything in it and stunning each for 1.2 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Sentry's Cry",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder and fights with 1 more Power for 10 seconds."
+  },
+  {
+   "name": "Noted Threat",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a mark builds on that enemy, up to 5. At 5 they all spend at once: a blow strikes that enemy for 27% of your weapon damage per mark. Unfed, a mark fades every 4 seconds."
+  }
+ ]
+}

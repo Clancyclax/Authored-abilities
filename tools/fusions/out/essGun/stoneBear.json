@@ -1,0 +1,83 @@
+{
+ "essence": "essGun",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heavy Calibre",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "bossPct": 0.05,
+   "base": 36,
+   "cooldown": 100,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Fires a heavy round at an enemy up to 7 tiles away that deals 36 damage plus 5% of a boss's or elite's maximum health, and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mauling Buckshot",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "knockback": 112,
+   "base": 14,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.7,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Blasts a cone of buckshot 4 tiles ahead that deals 14 damage to everything in it and knocks it back 3.5 tiles, with a 50% chance to leave each target [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Braced Stock",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds, and your armour rises by 10% while it lasts."
+  },
+  {
+   "name": "Trophy Hide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you gain a shield worth 12% of your maximum health for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

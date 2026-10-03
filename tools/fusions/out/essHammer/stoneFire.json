@@ -1,0 +1,86 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Spark Shower",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "burn",
+    "chance": 0.7,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Strikes hot iron and throws sparks through a cone 3 tiles long, dealing 11 fire damage with a 70% chance to leave each enemy hit [Burning] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "The Quench",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Only strikes a target at or below 25% health, and that threshold rises with each rank. The blow deals 22 damage and puts out every affliction on the target, adding 1.6 times the damage they had left to deal."
+  },
+  {
+   "name": "Slag Runnel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "fire",
+   "cooldown": 24,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Pours a line of slag 5 tiles long ahead of you for 6 seconds. Anything that crosses it is set [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Forge-Hot Head",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "resist_fire",
+     "amount": 0.1
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a maul with a glowing head. Your weapon damage rises by 12% and your fire resistance by 10%, and every strike with it leaves the target [Burning] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

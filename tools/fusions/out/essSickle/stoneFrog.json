@@ -1,0 +1,81 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Tongue's Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "range": 224,
+   "maxMult": 1.6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Lashes a curved blade at a target up to 7 tiles away that deals 4 damage, rising to 1.6 times that at full reach. The target moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Down in One",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "stackMult": 1,
+   "leech": 0.3,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "A cut that deals 20 damage and heals you for 30% of the damage dealt. It consumes every affliction on the target and adds their remaining damage to the blow. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Gathered to the Gullet",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 20,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Lashes a line 6 tiles long ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Reed-Still",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "The moment your stamina is full, your physical damage rises by 30% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

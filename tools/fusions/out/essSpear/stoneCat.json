@@ -1,0 +1,78 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Pounce and Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 192,
+   "desc": "Springs you to a target up to 6 tiles away for a weapon strike that deals 12 damage and makes it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "First Blood",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Throws a javelin that deals 4 damage to the first enemy it meets, with 50% more critical chance against an unwounded enemy."
+  },
+  {
+   "name": "Close on Soft Feet",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 17% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Claw in Reserve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Each time you inflict a condition on an enemy, your next strike has 30% more critical chance. Once every 6 seconds."
+  }
+ ]
+}

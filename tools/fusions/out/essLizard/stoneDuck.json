@@ -1,0 +1,98 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shake Dry",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "template": "breathCone",
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the water off your scales in a cone 3 tiles long, dealing 4 water damage with a 35% chance of [Soaked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cold as Pondwater",
+   "element": "frost",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreResist": true,
+   "debuff": {
+    "key": "freeze",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A bite that deals 30 frost damage, ignores resistances and leaves the target 15% easier to wound for 8 seconds, with a 50% chance of [Frozen] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "name": "Water Off the Back",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.6,
+   "buffDuration": 10,
+   "cooldown": 30,
+   "desc": "For 10 seconds, each condition laid on you has a 60% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "name": "Skim the Pond",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than you cross ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and blows slide off you while you are on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "and you mend faster while you stand on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground."
+  }
+ ]
+}

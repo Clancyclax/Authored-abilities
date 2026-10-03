@@ -1,0 +1,82 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Waiting Jaws",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Snaps shut on a weakened enemy for 20 damage and consumes every affliction on it, adding 1.5 times their remaining damage to the bite, then leaves it [Bleeding] for 3 damage a second for 5 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Clamps on and rolls the target across stinging coral: the roll deals 12 damage, stuns it for 1 second and leaves it [Poisoned] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Sink Below",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "healOnUse": 10,
+   "cooldown": 45,
+   "desc": "Sinks you among the coral heads: for 3 seconds, blows that reach you deal no damage and no condition can take hold of you, and you restore 10 health."
+  },
+  {
+   "name": "Motionless Hours",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "armorBonus": 0.06,
+   "desc": "After 10 seconds without a critical hit, your physical damage rises 30% for 4 seconds. Once every 10 seconds. Your armour rises by 6%."
+  }
+ ]
+}

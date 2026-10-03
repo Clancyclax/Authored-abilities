@@ -1,0 +1,75 @@
+{
+ "essence": "essFork",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Man-Catcher",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You rush a target up to 6 tiles away and catch it between the tines for 12 damage, up to 1.3 times that at full reach, leaving it [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Portcullis Drop",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drives tines down in a ring around you, dealing 26 piercing damage to every enemy within 3 tiles and leaving them [Slowed] for 4 seconds. It ignores armour."
+  },
+  {
+   "name": "Palisade",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "cooldown": 20,
+   "desc": "Plants a row of tines 5 tiles long ahead of you for 6 seconds that enemies cannot pass."
+  },
+  {
+   "name": "Nowhere Left to Run",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against enemies below 50% health."
+  }
+ ]
+}

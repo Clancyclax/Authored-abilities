@@ -1,0 +1,80 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "By the Collar",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "stunOnHit": 1.2,
+   "range": 192,
+   "maxMult": 1.4,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "A cut on a target up to 6 tiles away that deals 12 damage, rising to 1.4 times that at full reach, and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Clench, Then Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A gripping cut that deals 4 damage, leaves the target [Leaden] for 2 seconds and leaves it 6% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Light Work",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Binder's Glove",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.05,
+   "critDamage": 0.15,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "desc": "Conjures a glove: your critical chance rises by 5%, your critical hits deal 0.15x more, each kill returns 3 health and your maximum health rises by 10."
+  }
+ ]
+}

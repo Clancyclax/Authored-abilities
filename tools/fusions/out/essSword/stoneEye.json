@@ -1,0 +1,77 @@
+{
+ "essence": "essSword",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Needle Through a Keyhole",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "maxMult": 1.6,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "desc": "A precise thrust that deals 26 damage, rising to 1.6 times that at its full reach of 4 tiles. It ignores armour."
+  },
+  {
+   "name": "Blade-Glint",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "light",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flashes light from the blade at the first enemy within 7 tiles: it deals 3 damage, with a 40% chance to leave the target [Marked] for 5 seconds."
+  },
+  {
+   "name": "Spellbreaker's Return",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 1,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Marked Beforehand",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "element": "piercing",
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Each time you inflict a condition on an enemy, your critical hit chance rises by 30% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

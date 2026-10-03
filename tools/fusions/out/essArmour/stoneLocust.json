@@ -1,0 +1,72 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "resource",
+   "desc": "Looses 5 biting flyers in a fan, each dealing 3 damage. Holds 4 charges; a kill gives one back.",
+   "cooldown": 1,
+   "chargesMax": 4,
+   "volleyCount": 5,
+   "volleySpread": 0.36,
+   "base": 3,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220
+  },
+  {
+   "name": "Devouring Clot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "long",
+   "desc": "Hurls a clot of locusts that deals 30 damage to the first enemy it meets, then bursts to hit every enemy within 3.5 tiles for 80% of that damage.",
+   "cooldown": 90,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "isAoe": true,
+   "base": 30,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Hanging Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "desc": "Takes 0.5 seconds to loose a cloud for 12 seconds that bites an enemy within 6 tiles for 3 damage every second.",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "cooldown": 45
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 5. At 5 they spend at once and a blow strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 6 seconds.",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune"
+  }
+ ]
+}

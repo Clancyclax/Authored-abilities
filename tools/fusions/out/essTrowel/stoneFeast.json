@@ -1,0 +1,79 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Clear the Board",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.3,
+   "speed": 330,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Flings a blade that deals 16 damage to the first enemy it meets and uses up every affliction you have on it, dealing 60% more damage for each one. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Carving Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.2,
+   "spammable": true,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Cuts a full circle, which deals 3 damage to every enemy within 2 tiles and makes them [Bleeding] for 1 damage a second for 3 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Topping-Out Supper",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "cooldown": 20,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Stocked Larder",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 5
+   },
+   "desc": "When you are healed, you gain a shield worth 10% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

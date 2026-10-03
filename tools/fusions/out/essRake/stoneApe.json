@@ -1,0 +1,77 @@
+{
+ "essence": "essRake",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Termite Fishing",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 160,
+   "maxMult": 1.6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "A probing jab with the haft that deals 4 damage, rising to 1.6 times that at its full reach of 5 tiles. Its damage rises 10% for each affliction on the target, up to 30%.",
+   "spammable": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3
+  },
+  {
+   "name": "Long-Armed Swat",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Swings the haft round you at the full stretch of your arms, dealing 14 damage to every enemy within 3.5 tiles and knocking each back 3 tiles."
+  },
+  {
+   "name": "Knuckle Vault",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 6,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Plants the haft and swings you 4 tiles forward. Your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "name": "Grips Back",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Each time you spend stamina, you deal 25% more physical damage for 4 seconds. Once every 10 seconds. Enemies you strike move 15% slower for 2 seconds."
+  }
+ ]
+}

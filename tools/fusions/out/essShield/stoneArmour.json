@@ -1,0 +1,73 @@
+{
+  "essence": "essShield",
+  "stone": "stoneArmour",
+  "fusions": [
+    {
+      "name": "Peel a Layer",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.06,
+        "duration": 5
+      },
+      "desc": "Hooks the shield's rim under the target's plates, which deals 4 damage and strips 6% of its armour for 5 seconds."
+    },
+    {
+      "name": "Breastplate Toll",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "resonating",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "stunOnHit": 1,
+      "desc": "Slams the shield against your own breastplate. The ring deals 12 damage to every enemy within 3 tiles and stuns them for 1 second."
+    },
+    {
+      "name": "Plate on Plate",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 26,
+      "shieldStrikes": 5,
+      "shieldDuration": 8,
+      "armorBonus": 0.1,
+      "desc": "Raises a barrier that absorbs the next 26 damage and holds for 8 seconds, and your armour rises by 10% while it holds."
+    },
+    {
+      "name": "Lamellar Coat",
+      "kind": "passive",
+      "category": "armor summon",
+      "template": "summonArmor",
+      "element": "physical",
+      "armorBonus": 0.12,
+      "damageReduction": 2,
+      "thornsFrac": 0.05,
+      "itemBuffs": [
+        {
+          "stat": "armor",
+          "amount": 0.05
+        }
+      ],
+      "desc": "Conjures a harness of plates behind the shield: every hit you take is 2 lower, your armour rises by 12%, and 5% of the damage you take goes back to whoever dealt it. The harness adds a further 5% armour."
+    }
+  ]
+}

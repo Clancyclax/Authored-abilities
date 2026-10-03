@@ -1,0 +1,75 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Gap in the Plates",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 72,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A bite through a gap in the target's plates that deals 28 damage, ignores armour, and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Between the Greaves",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You scurry between the legs of every enemy within 2.5 tiles, dealing 7 damage to each with a 40% chance to leave it [Leaden] for 5 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Hollow Suit",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.18,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.06,
+   "desc": "Raises your armour by 18% for 10 seconds, skitters you 2 tiles from where you stood, and gives you 6% more dodge chance."
+  },
+  {
+   "name": "Layer by Layer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (25% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

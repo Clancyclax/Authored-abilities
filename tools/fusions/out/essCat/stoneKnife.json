@@ -1,0 +1,70 @@
+{
+ "essence": "essCat",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Unseen Opening",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A strike that deals 32 damage, always crits and leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Palmed Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 84,
+   "stackMult": 1.2,
+   "executeLadder": false,
+   "requiresTargetBelow": 0,
+   "chargesMax": 3,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Consumes every affliction on the target, adding 1.2 times their remaining damage to this blow, and deals 8 damage. It has 50% more critical chance until something has bled. You hold 3 charges and each kill gives one back."
+  },
+  {
+   "name": "Hidden Riposte",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "slashing",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.4,
+   "buffDuration": 8,
+   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 40% chance to be sent back to its source instead, for 8 seconds."
+  },
+  {
+   "name": "Finding the Seam",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "pierceElement": "slashing",
+   "armorIgnore": 0.15,
+   "cooldownReduction": 0.05,
+   "desc": "Your slashing damage cannot be resisted. Your abilities come round 5% sooner."
+  }
+ ]
+}

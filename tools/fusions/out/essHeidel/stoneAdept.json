@@ -1,0 +1,70 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Judged Distance",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "maxMult": 1.5,
+   "range": 96,
+   "cooldown": 0.8,
+   "hasteOnUse": {
+    "pct": 0.06,
+    "duration": 2
+   },
+   "desc": "A drilled kick at a target up to 3 tiles away that deals 4 damage, rising to 1.5 times that at full reach. Your movement speed rises 6% for 2 seconds after each use."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flawless Rear",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "You rear and stamp, dealing 32 damage to every enemy within 3 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Run the Drill Again",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 5 seconds."
+  },
+  {
+   "name": "Rote Gait",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 6. At 6 they all spend at once: you move and attack 3% faster per stack (16% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

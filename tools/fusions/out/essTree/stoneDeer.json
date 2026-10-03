@@ -1,0 +1,80 @@
+{
+ "essence": "essTree",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Velvet Rub",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Rakes branching tines down the target and deals 5 damage, stripping 8% of its armour for 4 seconds. Your movement speed rises 15% for 3 seconds after you use it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rack Sweep",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Sweeps your branching rack in a full circle and deals 12 damage to every enemy within 3 tiles, knocking them back 2.5 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "kind": "active",
+   "category": "movement",
+   "name": "Understory Dash",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.35,
+   "buffDuration": 6,
+   "cooldown": 24,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 35% for 6 seconds. You finish it 2 tiles from where you stood, with +8% dodge chance."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Second Spring",
+   "element": "plant",
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "regenPerSec": 0.5,
+   "desc": "When your stamina runs out, you restore 15 stamina at once. Once every 30 seconds. You also regenerate 0.5 health a second."
+  }
+ ]
+}

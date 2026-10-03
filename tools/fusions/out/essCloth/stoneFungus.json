@@ -1,0 +1,82 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mildew Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Bursts a spore-laden pad, dealing 9 damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Spore Wad",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a wad of spore-packed batting that deals 4 damage to the first enemy it meets, with a 30% chance per hit to leave it [Diseased] for 5 seconds."
+  },
+  {
+   "name": "Mossy Quilt",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "healScope": "party",
+   "desc": "Spreads a mildewed quilt at your feet for 8 seconds; it restores 3 health a second to you and every ally within 3.5 tiles of it."
+  },
+  {
+   "name": "Creeping Patch",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "nature",
+   "familiarDmg": 3,
+   "familiarRange": 144,
+   "familiarInterval": 1.4,
+   "familiarFamily": "slime",
+   "familiarCreatureName": "Mildew Patch",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A patch of living mildew sewn onto your sleeve fights beside you, striking for 3 damage every 1.4 seconds within 4.5 tiles. Each strike leaves the target [Poisoned] for 2 damage a second for 4 seconds."
+  }
+ ]
+}

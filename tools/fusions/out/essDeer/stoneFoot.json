@@ -1,0 +1,77 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Dust Raiser",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks up a cone of dust 4 tiles long that deals 4 blunt damage to everything in it, with a 30% chance to leave each hit [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Mile Marker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "stunOnHit": 1,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "A hard kick that deals 14 blunt damage, stuns for 1 second and leaves the target 10% easier to wound for 5 seconds. Its damage rises 10% for every 100 paces you have run since you last used it, up to 50%."
+  },
+  {
+   "name": "Long Haul",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 50% for 15 seconds, and your movement speed rises by 15% for 5 seconds."
+  },
+  {
+   "name": "Beaten Track",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "cooldownReduction": 0.08,
+   "desc": "On paved ground, your dodge chance rises by 12%. Your other abilities' cooldowns are 8% shorter."
+  }
+ ]
+}

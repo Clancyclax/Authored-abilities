@@ -1,0 +1,75 @@
+{
+ "essence": "essChain",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Out of Still Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "guaranteedCrit": true,
+   "scaleOn": "targetStamina",
+   "scalePer": 0.05,
+   "scaleCap": 0.5,
+   "desc": "Lunges a hooked chain at an enemy up to 5 tiles away for 30 damage, up to 1.4 times that at full reach. It always lands as a critical hit, and its damage rises 5% for every 10% of health the target still has, up to 50%."
+  },
+  {
+   "name": "Rolling Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1.5,
+   "desc": "A weapon strike that deals 14 damage, stuns the target for 1.5 seconds and leaves it [Bleeding] for 4 damage a second for 5 seconds."
+  },
+  {
+   "name": "Waiting Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 200,
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 60,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Conjures a set of chained iron jaws at the nearest enemy. They wait up to 1 minute; the first enemy to come within 2 tiles springs them, which deals 20 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Drowning Hold",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "You deal 12% more damage to enemies below 50% health."
+  }
+ ]
+}

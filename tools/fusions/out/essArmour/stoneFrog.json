@@ -1,0 +1,80 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Tongue Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "desc": "Snaps a lash 5 tiles long ahead of you that holds for 4 seconds, dragging every enemy near it inward, dealing 8 damage, stunning each for 1 second and leaving it [Soaked] for 6 seconds.",
+   "base": 8,
+   "cooldown": 20,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Snapped Up",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "desc": "Strikes only a target carrying one of your afflictions, using it up, and deals 8 damage.",
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "base": 8,
+   "speed": 360,
+   "radius": 8
+  },
+  {
+   "name": "Springback Barrier",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "desc": "Raises a barrier that absorbs up to 24 damage for 6 seconds. Your movement speed rises 20% for 4 seconds after you use it.",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Coiled Reserve",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they spend at once and you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 10 seconds.",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard"
+  }
+ ]
+}

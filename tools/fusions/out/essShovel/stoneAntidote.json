@@ -1,0 +1,72 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Root It Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Drives the spade in under the rot and levers it out for 18 damage, drawing out every affliction you have on the target and dealing 60% more damage for each one drawn. It leaves the target 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Bitter Bed",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Tips the drawn poison into the soil and turns it over around you, dealing 11 poison damage to every enemy within 3 tiles and leaving them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each one spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Clay Poultice",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "earth",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Packs your wounds with dug clay, removing up to 3 poison conditions from you and restoring 12 health."
+  },
+  {
+   "name": "Fuller's Clay",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "earth",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your armour rises by 8%, and you have 12% poison resistance."
+  }
+ ]
+}

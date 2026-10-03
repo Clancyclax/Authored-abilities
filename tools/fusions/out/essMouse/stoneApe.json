@@ -1,0 +1,99 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Up the Arm",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 160,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You scramble up to 5 tiles onto the target and pound it for 13 damage, leaving it 12% easier to wound for 6 seconds and [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Pilfered Pitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "Throws 3 pilfered objects at once in a spread out to 6 tiles, each dealing 3 damage. Each has 25% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Borrowed Brawn",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Increases your damage by 25% for 12 seconds, and your movement speed by 15% for the first 6 seconds."
+  },
+  {
+   "name": "Stronger Than It Looks",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "power",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "you move faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and blows find you less often"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.08,
+     "text": "and your own blows come faster"
+    }
+   ],
+   "desc": "Raises your Power by 1, and your Power ceiling by 1. From bronze rank you move 5% faster, from silver you have 5% more dodge chance, and from gold you attack 8% faster."
+  }
+ ]
+}

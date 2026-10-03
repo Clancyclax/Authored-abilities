@@ -1,0 +1,84 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sprung Latch",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks an enemy and deals 5 blunt damage, leaving it 5% easier to wound for 3 seconds, with a 20% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dropped Gate",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "Drops a ring of bars around you that deals 26 damage to every enemy within 3 tiles, ignoring armour, and leaves them [Pinned] for 2 seconds. Your movement speed then rises by 30% for 3 seconds."
+  },
+  {
+   "name": "Fence Behind",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 20,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Drops a row of bars 5 tiles long for 6 seconds that nothing crosses, and your movement speed rises by 25% for 4 seconds."
+  },
+  {
+   "name": "Out of Reach",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 10%."
+  }
+ ]
+}

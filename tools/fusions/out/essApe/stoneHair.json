@@ -1,0 +1,88 @@
+{
+ "essence": "essApe",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snaring Tuft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "spammable": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Flings a snarl of strands that deals 7 damage to the first enemy it meets, with a 40% chance to leave it [Pinned] for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Shed Fur",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 strands at once, spread apart, each dealing 2 damage, with a 25% chance per hit to leave the target [Slowed] for 3 seconds. Its damage rises +8% per ally within 5 tiles (max +32%)."
+  },
+  {
+   "name": "Long Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "rangeMult": 1.5,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 50% further."
+  },
+  {
+   "name": "Matted Pelt",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (21% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

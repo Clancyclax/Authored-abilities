@@ -1,0 +1,72 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Thrown and Fetched",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Hurls the spade for 8 damage, rising to 1.6 times that at its full reach of 6 tiles. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Flushed Quarry",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Drives the blade into the ground and breaks open what is hiding under it, dealing 26 earth damage to every enemy within 3.5 tiles. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Buried for Later",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "Digs up what you buried and restores 16 health to you. The healing rises 6% for every 10% of your health already gone, up to 30%."
+  },
+  {
+   "name": "Terrier at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Terrier",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Calls a terrier familiar that digs and fights beside you, biting for 4 damage every 1.2 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

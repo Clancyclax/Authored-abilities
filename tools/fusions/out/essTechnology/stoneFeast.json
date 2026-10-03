@@ -1,0 +1,75 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carving Slicer",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "leech": 0.3,
+   "desc": "A crank slicer takes a cut from the first enemy it meets, which deals 8 damage and heals you for 30% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Lid Off the Cooker",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Opens the valve on a pressure cooker, which deals 26 damage to every enemy within 3.5 tiles. When it hits, your party deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Mess Stove",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "fire",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Sets down a field stove where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3.5 tiles."
+  },
+  {
+   "name": "Sealed Preserves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 6
+   },
+   "desc": "The moment you are back at full health, you gain a shield worth 12% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

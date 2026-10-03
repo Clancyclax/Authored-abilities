@@ -1,0 +1,82 @@
+{
+ "essence": "essFox",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Daydream Spores",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "confuse": true,
+   "confuseChance": 0.3,
+   "confuseDuration": 3,
+   "spreadAfflictions": 112,
+   "desc": "Puffs spores in a ring, dealing 8 nature damage to every enemy within 3 tiles and making each [Poisoned] for 2 damage a second for 5 seconds, with a 30% chance per enemy to turn it against its allies for 3 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Scavenged Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "leech": 0.3,
+   "desc": "A scavenging bite that deals 14 nature damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 30% health. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Mossy Cloak",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "nature",
+   "cooldown": 35,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "healOnUse": 10,
+   "desc": "Veils you for 8 seconds and restores 10 health. Enemies notice you 50% later, you move 10% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Quiet Growth",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you inflict a condition, you regain 3 health a second for 5 seconds. Once every 8 seconds. You gain 5% dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essBow",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Linked Pair",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Fires an arrow that deals 4 damage to the first enemy it meets, then leaps to 1 more enemy within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Reeling Harpoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.3,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a tethered arrow at a target up to 6 tiles away and reels you to it; it deals 13 damage, rising to 1.3 times that at full reach, and leaves the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Binding Net",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 2.5,
+   "freezeRadius": 96,
+   "aoeBand": "small",
+   "castTime": 0.5,
+   "cooldown": 60,
+   "desc": "After a 0.5-second cast, holds every creature within 3 tiles in place for 2.5 seconds."
+  },
+  {
+   "name": "Shackled Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

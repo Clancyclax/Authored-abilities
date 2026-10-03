@@ -1,0 +1,71 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Seam Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 64,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "desc": "A bite that deals 5 damage and leaves the target 6% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Helm Denter",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Launches a hard-shelled bolt at the first enemy in a line up to 8 tiles away that deals 30 damage, plus 5% of its maximum health if it is a boss or elite, and leaves it [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Shell Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "blinkOnUse": 64,
+   "desc": "Raises your armour by 30% for 10 seconds and hops you 2 tiles."
+  },
+  {
+   "name": "Uncrushable",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 240,
+   "desc": "Once every 240 seconds, a blow that would kill you leaves you at 1 health instead."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Seen Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends an arm up to 7 tiles to the target's weak place, dealing 28 damage that ignores resistances, rising to 1.4 times that at full reach, and leaving the target [Exposed] for 8 seconds."
+  },
+  {
+   "name": "All-Round Watch",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks an arm at each enemy within 3.5 tiles, dealing 3 damage, with a 40% chance to leave it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Skin That Sees",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "light",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Your dodge chance rises by 20% for 12 seconds."
+  },
+  {
+   "name": "Clocked",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Each time you inflict a condition, your next strike gains 15% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

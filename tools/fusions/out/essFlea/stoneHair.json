@@ -1,0 +1,87 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Gossamer Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "consumeAffliction": true,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "A thrown blow that deals 7 damage, harder the further it travels, up to 2 times its damage at maximum range. Anything struck moves 25% slower for 3s. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Snarl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3.5 tiles takes 12 damage, with a 50% chance to be left [Pinned] for 2 seconds. Your afflictions on each target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Woven Cover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.0,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Raises a barrier that absorbs the next 18 damage and holds for 8 seconds. You move 15% faster for 4s after using it."
+  },
+  {
+   "name": "Sipped Thread",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

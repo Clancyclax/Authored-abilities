@@ -1,0 +1,75 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Wheeling Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 224,
+   "maxMult": 1.6,
+   "chargesMax": 4,
+   "desc": "Throws the blade wheeling for 7 wind damage, rising to 1.6 times that at its full reach of 7 tiles. Holds 4 charges; each use spends one, and each kill restores one.",
+   "reachUnits": 224,
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Stooping Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "aoeBand": "small",
+   "chargeTo": 224,
+   "desc": "Drops you onto a target up to 7 tiles away and cuts a full circle on landing, dealing 12 damage to every enemy within 2.5 tiles.",
+   "isAoe": true
+  },
+  {
+   "name": "Gleaning Flock",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "wind",
+   "cooldown": 36,
+   "summonKind": "bird",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Calls a flock that follows you for 10 seconds, pecking an enemy within 4 tiles for 3 damage every second. You move 15% faster for 3 seconds after."
+  },
+  {
+   "name": "Falling Faster",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Every few paces you cover, your next ability deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

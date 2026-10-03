@@ -1,0 +1,71 @@
+{
+ "essence": "essPaper",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "name": "Drawn Off",
+   "element": "poison",
+   "role": "resource",
+   "consumeAffliction": true,
+   "base": 8,
+   "cooldown": 1,
+   "leech": 0.25,
+   "desc": "Sends a blotting sheet into the first enemy it meets, dealing 8 damage and healing you for 25% of the damage dealt. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Soiled Blotters",
+   "element": "poison",
+   "role": "medium",
+   "spreadAfflictions": 112,
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.7,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scatters used blotting sheets across a cone 4 tiles long, dealing 12 damage to every enemy in it and leaving each [Poisoned] for 6 seconds. Your afflictions on each enemy hit spread to enemies within 3.5 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "name": "Apothecary's Script",
+   "element": "poison",
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Writes out a remedy that removes up to 2 poison conditions from you and your allies, and restores 10 health."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "name": "Return to Sender",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "desc": "Each condition laid on you has a 20% chance to be sent back to whoever inflicted it."
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "essence": "fire",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Smouldering Shroud",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Throws a burning shroud over an enemy at or below 25% health up to 6 tiles away that deals 18 damage, rising to 1.5 times that at full reach, and sets it [Burning] for 3 damage a second for 4 seconds. It leaves the target [Suppressed], its abilities put out of reach, for 5 seconds."
+  },
+  {
+   "name": "Whirled Sash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 96,
+    "chance": 1,
+    "spreadsLeft": 2
+   },
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Whirls a burning sash that deals 4 damage to every enemy within 2 tiles, with a 30% chance to set each [Burning] for 5 seconds. [Burning] is catching: it passes to up to 2 more enemies within 3 tiles."
+  },
+  {
+   "name": "Sooty Drapes",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "fire",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "party",
+   "desc": "Draws a curtain of smoke over you and every ally near you for 6 seconds. Enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Slow Match",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When one of your afflictions burns down to its end, your next spell deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

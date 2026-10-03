@@ -1,0 +1,87 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Bindweed Bars",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 12,
+   "speed": 330,
+   "radius": 8,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Closes a cage of thorned vine on one enemy, dealing 12 damage and stunning it for 1.2 seconds. The thorns leave it [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Flytrap Clasp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "execute",
+   "cooldown": 16,
+   "base": 16,
+   "range": 96,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps shut on one enemy for 16 damage and uses up every affliction you have on it, dealing 60% more damage for each one. The target is [Pinned] for 2 seconds and 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Hedgerow",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "plant",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 208,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Raises a hedge 6.5 tiles long ahead of you that nothing crosses for 6 seconds. Enemies it strikes move 20% slower for 2 seconds."
+  },
+  {
+   "name": "Wicker Ribs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "desc": "When you are hurt by anything but fire, woven branches close around you as a shield worth 15% of your maximum health for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+  "essence": "essShield",
+  "stone": "stoneCattle",
+  "fusions": [
+    {
+      "name": "Horns Down",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "chargeTo": 224,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "desc": "Rushes up to 7 tiles to the target and rams it shield-first, which deals 14 damage and leaves it 12% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it, up to 25%."
+    },
+    {
+      "name": "Herd Surge",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "scaleOn": "alliesNear",
+      "scalePer": 0.08,
+      "scaleCap": 0.32,
+      "desc": "Surges forward shoulder to shoulder and tramples every enemy within 3.5 tiles, which deals 28 damage that ignores armour. Its damage rises 8% for each ally beside you, up to 32%."
+    },
+    {
+      "name": "Close Ranks",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "range": 160,
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "buffDuration": 10,
+      "partyPower": 1,
+      "partyDmgPct": 0.15,
+      "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+    },
+    {
+      "name": "Plods On",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 4,
+        "duration": 5
+      },
+      "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+    }
+  ]
+}

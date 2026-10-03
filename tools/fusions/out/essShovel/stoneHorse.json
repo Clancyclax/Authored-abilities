@@ -1,0 +1,72 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tent-Peg Pass",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.03,
+   "scaleCap": 0.3,
+   "desc": "A thrust at the gallop that deals 28 damage, rising to 1.5 times that at its full reach of 7 tiles. Every hit is a critical hit. Its damage rises 3% per 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trampled Tilth",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 18,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Stamps the ground to churned earth, dealing 16 damage to every enemy within 4 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Steeplechase Stride",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.06,
+   "desc": "Carries you 3 tiles from where you stood and increases your movement speed by 40% for 8 seconds. Your dodge chance rises by 6%."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "name": "Sparks off the Flints",
+   "element": "lightning",
+   "desc": "Every few paces you cover, a bolt leaps to the nearest enemy within 4 tiles and deals 6 lightning damage. Once every 5 seconds."
+  }
+ ]
+}

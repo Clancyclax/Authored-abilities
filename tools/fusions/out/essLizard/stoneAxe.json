@@ -1,0 +1,83 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lopped and Regrown",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "template": "aoeRing",
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Hacks around you with the edge of your tail, dealing 8 damage to every enemy within 2.5 tiles and leaving them [Bleeding] for 2 damage a second for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stillness, Then the Fall",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "castTime": 1,
+   "guaranteedCrit": true,
+   "desc": "Holds still for 1 second, then drops a chop that deals 30 damage, always strikes critically, and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "name": "Cut Loose",
+   "element": "slashing",
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Severs your own tail to get free: removes up to 2 conditions that hold or stop you, and you move 25% faster for 4 seconds."
+  },
+  {
+   "name": "Knit Behind the Edge",
+   "element": "slashing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

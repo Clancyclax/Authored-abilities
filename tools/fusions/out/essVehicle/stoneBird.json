@@ -1,0 +1,73 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Quill Overboard",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "reachPct": 0.4,
+   "desc": "Drops a quill from overhead onto the first enemy in its path. It deals 4 damage, and its reach is 40% longer."
+  },
+  {
+   "name": "Stoop From Height",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "maxMult": 2,
+   "guaranteedCrit": true,
+   "chargeTo": 256,
+   "desc": "Carries you down onto a target up to 8 tiles away. The stoop deals 28 damage, rising to 2 times that at maximum range, and it is always a critical hit."
+  },
+  {
+   "name": "Updraft Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "teleportRange": 256,
+   "cooldown": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Lifts you over the ground and sets you down at a point up to 8 tiles away. You move 20% faster for 4 seconds after."
+  },
+  {
+   "name": "Coasting Glide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "desc": "When your stamina runs out, you regain 15 stamina. Once every 45 seconds."
+  }
+ ]
+}

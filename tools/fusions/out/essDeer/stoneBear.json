@@ -1,0 +1,78 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rearing Slam",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Rears onto your hind legs and slams down, dealing 13 blunt damage to every enemy within 3 tiles and stunning them for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mauling Rush",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Spends 5% of your maximum health. Your next weapon strike deals 8 damage and leaves the target [Bleeding] for 2 damage a second for 3 seconds, and your movement speed rises by 15% for 2 seconds."
+  },
+  {
+   "name": "Heft in Motion",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Raises your maximum health by 20% for 15 seconds, and your movement speed by 20% for 6 seconds."
+  },
+  {
+   "name": "Bulk to Bolt",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

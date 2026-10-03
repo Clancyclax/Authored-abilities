@@ -1,0 +1,76 @@
+{
+ "essence": "essChain",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Grapple Swoop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "chargeTo": 224,
+   "desc": "Hooks an enemy up to 7 tiles away and swoops you to it along the chain, dealing 12 damage, up to 1.6 times that at full reach."
+  },
+  {
+   "name": "Flight of Hooks",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.7,
+   "spammable": true,
+   "volleyCount": 2,
+   "volleySpread": 0.25,
+   "speed": 420,
+   "radius": 6,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "isAoe": true,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Flicks 2 light hooks out to 9 tiles, each dealing 3 damage, and you move 10% faster for 2 seconds."
+  },
+  {
+   "name": "To the High Perch",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "cooldown": 10,
+   "teleportRange": 224,
+   "dodgeBonus": 0.1,
+   "desc": "Hooks a point up to 7 tiles away and pulls you to it at once. You also gain 10% dodge chance."
+  },
+  {
+   "name": "Swung Momentum",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Every few paces you cover restores 6 stamina. Once every 8 seconds."
+  }
+ ]
+}

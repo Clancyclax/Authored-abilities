@@ -1,0 +1,73 @@
+{
+ "essence": "essBat",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Death Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "leech": 0.2,
+   "desc": "Clamps onto an enemy at or below 30% health and rolls, dealing 24 damage and consuming every affliction on it, adding 1.6 times their remaining damage. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Drop and Clamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "chargeTo": 160,
+   "desc": "You rush an enemy up to 5 tiles away and clamp down for 15 damage, rising to 1.5 times that from the full 5 tiles, and stun it for 1.2 seconds."
+  },
+  {
+   "name": "Hang Still",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "dark",
+   "cooldown": 60,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "name": "Waiting Jaws",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds; once every 10 seconds. You have 25% more critical chance against enemies that have not been hurt yet."
+  }
+ ]
+}

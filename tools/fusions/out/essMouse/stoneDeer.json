@@ -1,0 +1,76 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Stamped Warning",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 25,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A foot-drummed alarm that deals 25 resonating damage to everything within 4 tiles ahead of you. Every ally deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Parting Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "A parting back-kick that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. You move 15% faster for 2 seconds afterward."
+  },
+  {
+   "name": "White-Flag Bolt",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.4,
+   "buffDuration": 6,
+   "cooldown": 20,
+   "blinkOnUse": 96,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 40% for 6 seconds, springs you 3 tiles from where you stood, and gives you 8% more dodge chance."
+  },
+  {
+   "name": "Flinch Reflex",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. The next ability you use spends them all: you move and attack 5% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

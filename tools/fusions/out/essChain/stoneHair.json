@@ -1,0 +1,75 @@
+{
+ "essence": "essChain",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Fine Weave",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Whips a thread-fine link at an enemy up to 6 tiles away that deals 8 damage, up to 1.6 times that at full reach, and leaves it [Bleeding] for 1 damage a second for 8 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Combed Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 6,
+   "volleySpread": 0.5,
+   "speed": 420,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 6 fine strands in a fan out to 5 tiles, each dealing 2 damage."
+  },
+  {
+   "name": "Woven Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "desc": "Weaves a mantle of fine links around you that absorbs the next 22 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Barbs in the Weave",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy that carries an affliction, your damage rises by 12%."
+  }
+ ]
+}

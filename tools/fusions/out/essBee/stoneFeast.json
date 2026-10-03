@@ -1,0 +1,79 @@
+{
+ "essence": "essBee",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Morsel",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "A sting that deals 20 damage and devours every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gorging Swarm",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "leech": 0.15,
+   "desc": "A swarm that deals 28 poison damage, ignoring resistances, to every enemy within 3.5 tiles, and you heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Passed Comb",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 20,
+   "healAmount": 16,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "desc": "Restores 16 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Spoils Carried Home",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. The effect grows 10% for each ally within 5.5 tiles, up to 4 allies. Once every 8 seconds."
+  }
+ ]
+}

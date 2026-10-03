@@ -1,0 +1,78 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tidal Heave",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Heaves a wave through a cone 4 tiles long that deals 10 damage to everything in it and knocks it back 2 tiles. Each has a 60% chance to be [Slowed] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rolling Swell",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Rolls a swell that hits the first enemy within 7 tiles for 28 damage, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Buoyant Calm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 10 seconds."
+  },
+  {
+   "name": "Slow Tide",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you are healed for 5% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

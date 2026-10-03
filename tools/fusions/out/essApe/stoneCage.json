@@ -1,0 +1,69 @@
+{
+ "essence": "essApe",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Bar-Bender's Wrench",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up. You wrench at it for 9 damage and leave it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Closing Arms",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Sweeps both arms inward, dealing 10 damage to every enemy within 3 tiles with a 50% chance to leave each [Pinned] for 2 seconds. Your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Bars Slammed Down",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "rock",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "desc": "Drives a line of bars 5 tiles long into the ground for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Penned Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

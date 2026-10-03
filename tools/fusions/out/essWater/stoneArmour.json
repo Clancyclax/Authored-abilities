@@ -1,0 +1,83 @@
+{
+ "essence": "essWater",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Hydraulic Ram",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.18,
+    "duration": 6
+   },
+   "ignoreArmor": true,
+   "desc": "A jet of water under pressure that deals 28 damage and ignores armour, and leaves the target 18% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Sprung Rivets",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 350,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "castTime": 0,
+   "desc": "Fires 3 rivets from your plating on jets of water, spread apart. Each one deals 5 damage, with a 30% chance to leave its target [Sundered] for 6 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Seawall Stance",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 3,
+   "tauntDuration": 4,
+   "desc": "Reduces the damage you take by 20% for 10 seconds, and draws up to 3 enemies within 5 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Quench-Hardened",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "armor",
+   "amount": 0.12,
+   "resist": {
+    "element": "fire",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 12%, and you carry 10% fire resistance."
+  }
+ ]
+}

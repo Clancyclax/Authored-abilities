@@ -1,0 +1,83 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Envenomed Quiver",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Looses an arrow that deals 8 damage to the first enemy it meets and leaves it [Poisoned] for 2 damage a second for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Tripwire Spread",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 arrows trailing lines in a spread out to 7 tiles. Each deals 8 damage, stuns its target for 1 second and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Strung Across the Path",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Strings a taut line 5 tiles long for 8 seconds. Nothing crosses it, and anything that touches it moves 25% slower for 2 seconds."
+  },
+  {
+   "name": "Fang and Broadhead",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "piercing",
+   "pierceElement": "piercing",
+   "armorIgnore": 0.12,
+   "desc": "Your piercing damage cannot be resisted."
+  }
+ ]
+}

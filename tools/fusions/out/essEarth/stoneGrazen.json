@@ -1,0 +1,75 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd Press",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.24,
+   "desc": "Shoulders outward, dealing 12 damage to every enemy within 2.5 tiles and knocking them back 3 tiles. Its damage rises 8% for each ally nearby (max 24%)."
+  },
+  {
+   "name": "Millstone Chew",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "leech": 0.3,
+   "desc": "A grinding blow that deals 5 damage, leaves the target 5% easier to wound for 4 seconds and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Warm Hollow",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "earth",
+   "healAmount": 14,
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 20,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Fleece Fold",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 6
+   },
+   "desc": "When you are healed, you gain a shield worth 15% of your maximum health for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

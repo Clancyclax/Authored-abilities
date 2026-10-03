@@ -1,0 +1,70 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Burrow Burst",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "template": "aoeRing",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Tunnels you to a target up to 6 tiles away, then erupts, dealing 12 earth damage to every enemy within 3 tiles, with a 50% chance of [Slowed] for 4 seconds.",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Under the Scree",
+   "element": "rock",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "template": "stackStrike",
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Usable only on a target at or below 25% health, a threshold that rises with each rank. Strikes from the ground beneath it for 24 rock damage and uses up every affliction on the target, adding 1.5 times their remaining damage."
+  },
+  {
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "name": "Sandfish Dive",
+   "element": "sand",
+   "dashDist": 160,
+   "cooldown": 8,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Dives under the ground and surfaces 5 tiles ahead. Your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "name": "Sunned on Slate",
+   "element": "rock",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "In daylight, your armour rises by 12%."
+  }
+ ]
+}

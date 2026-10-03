@@ -1,0 +1,78 @@
+{
+ "essence": "essRat",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shake It Dead",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 96,
+   "maxMult": 1.2,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Seizes an enemy up to 3 tiles away and shakes it for 22 damage, rising to 1.2 times that at full reach. Usable only on an enemy at or below 30% health. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "isAoe": true,
+   "coneAngle": 0.9,
+   "name": "Rally the Kennel",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Rats and hounds surge out together in a cone 4 tiles long, dealing 26 damage to everything in it. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Terrier Off the Leash",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 18,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 1,
+   "desc": "Looses a terrier that hunts alongside your rats for 18 seconds, biting an enemy within 4 tiles for 5 damage every 1.2 seconds."
+  },
+  {
+   "name": "Pack Closes Ranks",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, the pack closes around you as a shield worth 12% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

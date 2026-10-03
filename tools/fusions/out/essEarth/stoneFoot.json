@@ -1,0 +1,78 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Rushes you to a target up to 7 tiles away, then deals 12 damage and leaves it 12% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Halting Order",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Brings the ground down on every enemy within 3 tiles, dealing 30 damage to each. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Hobnail Stride",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.2,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "desc": "Raises your armour by 20% for 15 seconds. Your movement speed rises 20% for 5 seconds after you use it."
+  },
+  {
+   "name": "Pilgrim's Plating",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 24,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 24
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 8
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 20% of your maximum health for 8 seconds. Once every 24 seconds."
+  }
+ ]
+}

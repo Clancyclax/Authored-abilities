@@ -1,0 +1,75 @@
+{
+ "essence": "essFork",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snag and Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.4,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "A thrust at a target up to 6 tiles away that deals 12 damage, rising to 1.4 times that at full range. It stuns the target for 1.2 seconds."
+  },
+  {
+   "name": "Barbed Return",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Casts a hooked link at the first enemy it meets that deals 9 damage and leaves it [Bleeding] for 3 damage a second for 5 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Tangle Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.6,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Line Taken In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "Each time you strike with your weapon, you regain 3 stamina. Once every 5 seconds."
+  }
+ ]
+}

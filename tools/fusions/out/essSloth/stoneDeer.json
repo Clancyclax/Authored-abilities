@@ -1,0 +1,74 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneDeer",
+  "fusions": [
+    {
+      "name": "Caught in the Open",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 256,
+      "maxMult": 1.8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "stun",
+        "chance": 0.2,
+        "duration": 1,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A shot at a target up to 8 tiles away that deals 4 damage, rising to 1.8 times that at full reach, with a 20% chance to leave it [Stunned] for 1 second."
+    },
+    {
+      "name": "Hooves Planted",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A stamp that deals 12 damage to every enemy within 3 tiles, knocks them back 3 tiles and leaves them [Slowed] for 5 seconds."
+    },
+    {
+      "name": "Stock Still",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "physical",
+      "immunityDuration": 3,
+      "cooldown": 90,
+      "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you."
+    },
+    {
+      "name": "Saw It Coming",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "physical",
+      "rerollKind": "dodge",
+      "rerollKinds": [
+        "dodge"
+      ],
+      "rerollCooldown": 10,
+      "desc": "Once every 10 seconds, a blow that would have hit you is rolled a second time against your dodge, and the second roll stands."
+    }
+  ]
+}

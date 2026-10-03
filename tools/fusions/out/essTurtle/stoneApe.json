@@ -1,0 +1,83 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneApe",
+ "fusions": [
+  {
+   "name": "Cracked on the Anvil",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Seizes the target and slams it into your shell, which deals 30 damage that ignores armour, leaves it 20% easier to wound for 8 seconds and [Pinned] for 3 seconds.",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Swung by the Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "desc": "Swings a plate of your shell through a cone 3 tiles ahead, which deals 12 damage to everything in it and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Brute Resolve",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "buffStat": "dmg_blunt",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Your blunt damage rises by 25% for 10 seconds, and you restore 12 health.",
+   "healOnUse": 12
+  },
+  {
+   "name": "Knapped Scute",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Shapes a scute from your shell into a weapon. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

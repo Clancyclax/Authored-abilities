@@ -1,0 +1,76 @@
+{
+ "essence": "essGun",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rigging Cutter",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "ignoreArmor": true,
+   "base": 26,
+   "cooldown": 70,
+   "speed": 460,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "desc": "Fires a pair of linked balls into the first enemy in its path for 26 damage, ignoring armour; the link carries on to 2 more enemies within 4 tiles, each taking 60% of that damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bolas Pair",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 2,
+   "volleySpread": 0.15,
+   "speed": 460,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires 2 linked rounds, each dealing 3 damage with a 20% chance to leave the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Grapple Line",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 160,
+   "cooldown": 12,
+   "desc": "Fires a line ahead and hauls you 5 tiles forward along it."
+  },
+  {
+   "name": "Belt-Fed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "physical",
+   "cooldownReduction": 0.08,
+   "desc": "Every ability you have comes round 8% sooner."
+  }
+ ]
+}

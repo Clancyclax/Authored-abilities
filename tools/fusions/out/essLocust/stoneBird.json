@@ -1,0 +1,71 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Long Migration",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Sends a flight of locusts at a target up to 8 tiles away for 4 damage, rising to 2 times that at full reach."
+  },
+  {
+   "name": "Thermal Stoop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 224,
+   "leech": 0.15,
+   "desc": "Rushes you to a target up to 7 tiles away, then the swarm lands with you, dealing 14 damage to every enemy within 3 tiles and healing you for 15% of the damage dealt."
+  },
+  {
+   "name": "Scatter and Regather",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "teleportRange": 224,
+   "cooldown": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a spot up to 7 tiles away. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Fed in Passing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you regain 2 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

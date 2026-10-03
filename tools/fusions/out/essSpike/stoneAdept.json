@@ -1,0 +1,74 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneAdept",
+  "fusions": [
+    {
+      "name": "Rehearsed Lunge",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 96,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "maxMult": 1.5,
+      "desc": "A lunge that reaches up to 3 tiles. It deals 4 damage, rising to 1.5 times that at full reach."
+    },
+    {
+      "name": "Textbook Impalement",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "strikes": 1,
+      "guaranteedCrit": true,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A weapon strike that deals 30 damage and is always a critical hit. It leaves the target [Pinned] for 2 seconds and [Bleeding] for 3 damage a second for 5 seconds."
+    },
+    {
+      "name": "Second Nature",
+      "kind": "active",
+      "category": "buff",
+      "template": "cooldownReset",
+      "element": "physical",
+      "resetCount": 1,
+      "cooldown": 60,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 4
+      },
+      "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 15% faster for 4 seconds."
+    },
+    {
+      "name": "Economy of Motion",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "elementPierce",
+      "element": "physical",
+      "pierceElement": "physical",
+      "armorIgnore": 0.12,
+      "cooldownReduction": 0.05,
+      "desc": "Your physical attacks ignore 12% of the target's armour, and your other abilities come round 5% sooner."
+    }
+  ]
+}

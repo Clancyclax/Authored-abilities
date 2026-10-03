@@ -1,0 +1,83 @@
+{
+ "essence": "essCat",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pinning Paw",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slams a paw down on an enemy for 12 damage, stunning it for 1 second, leaving it [Pinned] for 3 seconds and stripping 10% of its armour for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herding Swipes",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Swipes all around you, dealing 3 damage to every enemy within 2 tiles with a 40% chance to leave each [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Nowhere to Run",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "cooldown": 90,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.5 second cast, freezes every creature within 4 tiles in place for 2 seconds, then leaves them [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Toying with the Caught",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your damage rises by 10%."
+  }
+ ]
+}

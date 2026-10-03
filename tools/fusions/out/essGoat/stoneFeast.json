@@ -1,0 +1,73 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gnaw",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 64,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "leech": 0.25,
+   "desc": "Bites a mouthful out of the target for 9 damage, leaving it 5% easier to wound for 3 seconds, and you heal for 25% of the damage dealt. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ruminant Belch",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "desc": "Belches in a 4-tile cone, dealing 12 poison damage to everything caught. Your afflictions on each one spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Clean Plate",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "cooldown": 20,
+   "range": 288,
+   "base": 0,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "desc": "Eats from every body within 9 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Second Helpings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, 15% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essWhale",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Final Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Cuts down through a weakened enemy, which deals 26 damage and makes the target [Bleeding] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Flensing Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chargesMax": 4,
+   "desc": "A wide stripping cut that deals 7 damage to everything in a cone 3 tiles ahead, with a 50% chance to leave each enemy [Bleeding] for 4 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Flukes Up",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "cooldown": 45,
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 12,
+   "desc": "Increases your critical damage by 40% for 12 seconds."
+  },
+  {
+   "name": "Scrimshaw Cleaver",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a cleaver of carved bone. It increases your weapon damage by 12% and your maximum health by 10, and every strike with it leaves the target [Bleeding] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essBear",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Flung Honeycomb",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a dripping chunk of comb at the first enemy in its path for 4 damage, with a 40% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Robbing the Hive",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 96,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Swats every enemy within 3 tiles for 10 damage and leaves them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Honey Gorge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 25,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 6 seconds."
+  },
+  {
+   "name": "Forager's Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

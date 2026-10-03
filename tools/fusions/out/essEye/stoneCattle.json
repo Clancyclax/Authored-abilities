@@ -1,0 +1,79 @@
+{
+ "essence": "essEye",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Over the Fence",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 260,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a slow bolt that hits the first enemy in its path for 4 damage, with a 25% chance to leave it [Enervated] for 5 seconds, its health, mana and stamina slow to return."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lowered Horns",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 96,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You sweep your horns through a 3-tile cone ahead of you, dealing 12 damage to everything in it, knocking it back 3 tiles and leaving it [Fatigued] for 6 seconds, its Recovery drained."
+  },
+  {
+   "name": "Not to Be Hurried",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 4,
+   "cooldown": 90,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Slow to Anger",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. The next ability you use spends them all: you deal 5% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

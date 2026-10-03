@@ -1,0 +1,79 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 420,
+   "radius": 7,
+   "name": "The Weak Seam Seen",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A sting that deals 28 damage, ignores armour and leaves the target [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sweeping Gaze",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires stingers through a cone 4 tiles long. The cone deals 3 damage to everything in it, with a 35% chance to leave each target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Compound Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "name": "Face Remembered",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 5. Your next critical hit on it spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

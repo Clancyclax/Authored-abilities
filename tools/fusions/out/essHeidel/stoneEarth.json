@@ -1,0 +1,70 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kicked Boulder",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "You kick a boulder out of the ground at the first enemy in line for 30 damage. It bursts on impact, dealing 80% of that to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stamped Fault",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You stamp and the ground jolts, dealing 13 damage to every enemy within 2.5 tiles and stunning them for 1 second. Each hit has a 50% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Bedrock Stance",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "earth",
+   "immunityDuration": 4,
+   "cooldown": 120,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Cobble-Sure",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.15,
+   "resist": {
+    "element": "earth",
+    "amount": 0.08
+   },
+   "desc": "On paved ground, your armour rises by 15%. You carry 8% earth resistance."
+  }
+ ]
+}

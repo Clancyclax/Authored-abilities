@@ -1,0 +1,75 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Singled Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 440,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks the tip at the first enemy it meets, which deals 4 damage, with a 35% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Blinding Backhand",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 112,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lashes across the faces of everything in a cone, which deals 12 damage to every enemy within 3.5 tiles, stuns each for 1 second and leaves it [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Far as the Gaze",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "rangeMult": 1.2727,
+   "buffDuration": 20,
+   "castTime": 0.5,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Every Stripe Noted",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "You deal 12% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

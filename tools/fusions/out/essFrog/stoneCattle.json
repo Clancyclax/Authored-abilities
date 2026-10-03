@@ -1,0 +1,76 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Deep Bellow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "A bellow from your swollen throat rolls 5 tiles ahead of you, dealing 26 damage to everything in the cone. It ignores armour."
+  },
+  {
+   "name": "Headlong Spring",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "stunOnHit": 1.2,
+   "desc": "You butt the target head-first for 14 damage, stunning it for 1.2 seconds and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Army on the Hoof",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Long Wait, Short Strike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 8,
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

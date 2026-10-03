@@ -1,0 +1,83 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Dart Quiver",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 darts dipped in your skin's poison in a spread out to 7 tiles, each dealing 6 damage with a 50% chance to leave the target [Poisoned] for 4 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Long Release",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "maxMult": 2,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Draws your tongue back and looses it at one enemy up to 9 tiles away for 28 damage, rising to 2 times that at its full reach. It ignores armour."
+  },
+  {
+   "name": "Self-Loosed",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 160,
+   "cooldown": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Looses you 5 tiles forward off both legs. Your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "name": "At Full Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

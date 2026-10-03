@@ -1,0 +1,81 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawing Cut",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "consumeAffliction": true,
+   "desc": "A short cut that deals 8 damage and leaves the target 6% easier to wound for 3 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bitter Flick",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.9,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a hatchet that deals 5 poison damage to the first enemy it meets. Each hit has a 30% chance to leave the target [Damped] for 4 seconds, lowering the damage it deals."
+  },
+  {
+   "name": "Bloodletting",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 10,
+   "cooldown": 45,
+   "desc": "Removes up to 3 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Aftertaste",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "When one of your afflictions lifts, your physical damage rises 30% for 6 seconds. Once every 10 seconds. You have 8% poison resistance."
+  }
+ ]
+}

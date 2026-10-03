@@ -1,0 +1,79 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Barge Past",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "A shoulder barge that deals 13 damage, throws the target back 3 tiles and leaves it 15% easier to wound for 6 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Cast-Off Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "Sheds your plating in a blast that deals 28 damage, ignoring armour, to every enemy within 3.5 tiles. You move 25% faster for 5 seconds afterward."
+  },
+  {
+   "name": "Pared-Down Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.3,
+   "cooldown": 36,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Raises your armour by 30% for 10 seconds. Your movement speed rises 15% for 4 seconds after you use it.",
+   "buffDuration": 10
+  },
+  {
+   "name": "Moving Target",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Every stretch of ground you cover, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

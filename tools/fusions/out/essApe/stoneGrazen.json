@@ -1,0 +1,80 @@
+{
+ "essence": "essApe",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Cud Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 4,
+    "label": "Reprieve"
+   },
+   "reachPct": 0.4,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 396,
+   "rangeBand": "long",
+   "desc": "Spits a glob that deals 4 damage to the first enemy it meets. 15% of the damage dealt comes back to you as healing over 4 seconds. Its reach is 40% longer."
+  },
+  {
+   "name": "Leaning Crush",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A slow, leaning blow that deals 28 damage and leaves the target 15% easier to wound for 8 seconds, plus 5% of a boss's or elite's maximum health. Its damage rises +8% per ally within 5 tiles (max +32%)."
+  },
+  {
+   "name": "Barn Warmth",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "party",
+   "desc": "Restores 3 health a second to you and every ally within 5 tiles, for 10 seconds."
+  },
+  {
+   "name": "Patient Chew",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 6
+   },
+   "armorBonus": 0.05,
+   "desc": "When your stamina is full, you regain 2 health a second for 6 seconds. Once every 20 seconds. Your armour rises by 5%."
+  }
+ ]
+}

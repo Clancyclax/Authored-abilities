@@ -1,0 +1,86 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneBee",
+  "fusions": [
+    {
+      "name": "Wingbeat Barbs",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "poison",
+      "role": "basic",
+      "base": 2,
+      "cooldown": 0.6,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.3,
+      "speed": 480,
+      "radius": 5,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "castTime": 0,
+      "debuff": {
+        "key": "poison",
+        "chance": 0.25,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses 3 stingers at once, spread apart; each deals 2 damage and has a 25% chance to leave the target [Poisoned] for 4 seconds."
+    },
+    {
+      "name": "Beeline",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "strikes": 1,
+      "chargeTo": 256,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "You fly up to 8 tiles to the target and sting it. The sting deals 11 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds."
+    },
+    {
+      "name": "Foragers Loosed",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "poison",
+      "summonKind": "swarm",
+      "summonDmg": 2,
+      "summonDuration": 10,
+      "summonInterval": 0.5,
+      "summonRange": 160,
+      "castTime": 0.3,
+      "cooldown": 40,
+      "desc": "Sends out a swarm for 10 seconds that stings an enemy within 5 tiles for 2 damage every half second."
+    },
+    {
+      "name": "Sixth Sting",
+      "kind": "passive",
+      "element": "poison",
+      "category": "stacking",
+      "template": "stacking",
+      "stackOn": "enemy",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "burst",
+      "stackCap": 6,
+      "stackDecay": 4,
+      "stackSpend": "full",
+      "stackScale": 0.8,
+      "stackIcon": "stackVenom",
+      "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. At 6 they all spend at once: a blow strikes that enemy for 27% of your weapon damage per stack (163% at full). Unfed, a stack fades every 4 seconds."
+    }
+  ]
+}

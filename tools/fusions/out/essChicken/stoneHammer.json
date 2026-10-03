@@ -1,0 +1,75 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Coop Quake",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "knockback": 80,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Stamps the floor in a ring, dealing 12 damage to every enemy within 3 tiles and knocking them back 2.5 tiles. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tack Down",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "maxMult": 1.3,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "short",
+   "desc": "Flicks a tack for 5 damage, up to 1.3 times that at its full 4 tiles, with a 40% chance to leave the target [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Driven Home",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "blunt",
+   "cooldown": 45,
+   "powerMult": 1.3,
+   "buffDuration": 12,
+   "desc": "Increases your damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Beaten Soft",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 5. When you reach 5, they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

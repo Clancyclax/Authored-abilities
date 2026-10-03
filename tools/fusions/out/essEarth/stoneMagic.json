@@ -1,0 +1,73 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Crystal Shard",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "chargesMax": 4,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Fires a crystal shard of raw force that deals 7 arcane damage to the first enemy it meets. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Geode Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Looses a resonant burst 5 tiles ahead of you that deals 14 arcane damage to everything in it and stuns them for 1 second."
+  },
+  {
+   "name": "Ley Draw",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "arcane",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "cooldown": 40,
+   "shieldAmount": 26,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "desc": "Raises a barrier of crystal that absorbs the next 26 damage and holds for 10 seconds."
+  },
+  {
+   "name": "Charged Core",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 8 seconds."
+  }
+ ]
+}

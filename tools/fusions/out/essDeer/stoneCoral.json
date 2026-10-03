@@ -1,0 +1,91 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Branching Gore",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Gores an enemy for 14 piercing damage, makes it [Bleeding] for 2 damage a second for 5 seconds and leaves it 10% easier to wound for 5 seconds. Your afflictions on it branch out to every enemy within 4 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Staghorn Shards",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps off 3 antler tines and looses them in a spread, each dealing 3 piercing damage with a 25% chance to leave the target [Bleeding] for 3 seconds."
+  },
+  {
+   "name": "Velvet Regrowth",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "resist": {
+    "element": "water",
+    "amount": 0.1
+   },
+   "desc": "You regain 3 health a second for 8 seconds. You resist water damage by 10%."
+  },
+  {
+   "name": "Crown of Reef",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "piercing",
+   "armorBonus": 0.08,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "thornsFrac": 0.1,
+   "desc": "Conjures armour of coral: every hit you take is 2 lower, your armour rises by 8%, your maximum health by 10, and 10% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

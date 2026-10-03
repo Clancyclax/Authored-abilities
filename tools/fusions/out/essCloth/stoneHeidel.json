@@ -1,0 +1,77 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Flung Cinch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 3
+   },
+   "desc": "Flings a cinch strap that deals 5 damage to the first enemy it meets. Your movement speed rises 10% for 3 seconds after you use it."
+  },
+  {
+   "name": "Trampling Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Drags a weighted blanket round you, dealing 12 damage to every enemy within 3 tiles and knocking them back 3 tiles."
+  },
+  {
+   "name": "Stable Rug",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "Restores 4 stamina a second for 8 seconds. Your movement speed rises 15% for 5 seconds after you use it."
+  },
+  {
+   "name": "Well-Worn Harness",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 4
+   },
+   "armorBonus": 0.06,
+   "desc": "Whenever you spend stamina, you regain 2 stamina a second for 4 seconds. Once every 12 seconds. Your armour rises by 6%."
+  }
+ ]
+}

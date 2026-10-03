@@ -1,0 +1,84 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Rake the Row",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "speed": 360,
+   "radius": 7,
+   "range": 96,
+   "castTime": 0,
+   "chargesMax": 3,
+   "desc": "Rakes 5 curved cuts forward in a spread out to 3 tiles, each dealing 6 damage. Holds 3 charges; each use spends one, and each kill restores one.",
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "isAoe": true
+  },
+  {
+   "name": "Weight Behind the Curve",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "bossPct": 0.06,
+   "leech": 0.2,
+   "desc": "Strikes for 32 damage, leaves the target 20% easier to wound for 8 seconds and heals you for 20% of the damage dealt. Against a boss or an elite it also deals 6% of their maximum health.",
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Stand Tall",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "taunt": true,
+   "tauntRadius": 128,
+   "tauntMax": 4,
+   "tauntDuration": 4,
+   "desc": "Reduces the damage you take by 20% for 10 seconds, and pulls up to 4 enemies within 4 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Lean Winter",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.35,
+    "cooldown": 40,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "When your health falls below 35%, you heal for 30% of all damage you deal for 8 seconds. Once every 40 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneApe",
+  "fusions": [
+    {
+      "name": "Deadweight Hug",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "strikes": 1,
+      "stunOnHit": 1.4,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Crushing"
+      },
+      "desc": "A weapon strike that deals 12 damage, stuns the target for 1.4 seconds and goes on crushing it for 2 damage a second for 6 seconds."
+    },
+    {
+      "name": "Bough Breaker",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Slams down with your full weight, which deals 30 damage to every enemy within 3 tiles and ignores their armour. Everything hit is [Slowed] for 5 seconds."
+    },
+    {
+      "name": "Chest Drum",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "buffStat": "damageReduction",
+      "buffAmount": 0.25,
+      "buffDuration": 10,
+      "taunt": true,
+      "tauntRadius": 160,
+      "tauntMax": 4,
+      "tauntDuration": 6,
+      "cooldown": 36,
+      "desc": "Reduces the damage you take by 25% for 10 seconds, and pulls up to 4 enemies within 5 tiles onto you for 6 seconds."
+    },
+    {
+      "name": "Slow to Anger",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "power",
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackCap": 8,
+      "stackDecay": 10,
+      "stackScale": 1,
+      "stackIcon": "stackKarma",
+      "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you deal 6% more damage per stack (48% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

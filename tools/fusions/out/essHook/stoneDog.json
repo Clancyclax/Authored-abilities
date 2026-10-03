@@ -1,0 +1,86 @@
+{
+ "essence": "essHook",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Hold for the Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Catches the target and holds it open, dealing 28 damage and leaving it 15% easier to wound for 8 seconds. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Lockjaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "desc": "A weapon strike that deals 8 damage, leaves the target [Bleeding] for 2 damage a second for 4 seconds and slows it by 25% for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Short Leash",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 160,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 24,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Pulls up to 4 enemies within 5 tiles onto you and holds their attention for 5 seconds. For 8 seconds an escort fights beside you, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Lurcher at Heel",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.1,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Lurcher",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A bonded hound runs with you, striking enemies within 5 tiles for 4 damage every 1.1 seconds. Anything it bites moves 20% slower for 2 seconds."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Counted Strokes",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 0.9,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "chargesMax": 5,
+   "leech": 0.15,
+   "desc": "Strikes the target for 8 damage, leaves it 8% easier to wound for 5 seconds and heals you for 15% of the damage dealt. Holds 5 charges; each use spends one, and each kill restores one.",
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Flawless Swath",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 1.2,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Sweeps a cone 4 tiles long, dealing 28 damage to everything in it. Every hit is a critical hit.",
+   "isAoe": true
+  },
+  {
+   "name": "Fresh Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 15% faster for 4 seconds after."
+  },
+  {
+   "name": "Gleaner's Second Pass",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "slashing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

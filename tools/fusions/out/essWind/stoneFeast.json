@@ -1,0 +1,78 @@
+{
+ "essence": "essWind",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Passed Down the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "leech": 0.2,
+   "desc": "A sweep of air that deals 11 damage to every enemy within 3 tiles and heals you for 20% of the damage dealt. Your afflictions on each target are carried to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Clean Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Usable only on a target at or below 25% health. A bite that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. You move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Kitchen Smells Carry",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "wind",
+   "cooldown": 30,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 14 health to you and every ally within 5 tiles, and more the faster you cast. You move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Dinner Settles",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you are healed, it also restores 9 stamina. Once every 8 seconds."
+  }
+ ]
+}

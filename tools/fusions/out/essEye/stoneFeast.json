@@ -1,0 +1,86 @@
+{
+ "essence": "essEye",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Choice Cut",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "strikes": 1,
+   "leech": 0.2,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A carving strike that deals 8 damage, heals you for 20% of the damage dealt and leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bigger Than the Stomach",
+   "template": "breathCone",
+   "element": "blood",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You sweep a 4-tile cone ahead of you, dealing 26 damage plus 4% of a boss's or elite's maximum health to everything in it and leaving it [Marked] for 10 seconds."
+  },
+  {
+   "name": "Leftovers",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "blood",
+   "base": 0,
+   "corpse": true,
+   "range": 288,
+   "resource": "hp",
+   "drainFrac": 0.06,
+   "cooldown": 20,
+   "desc": "Draws on every body within 9 tiles, up to 5; each restores 7% of your health."
+  },
+  {
+   "name": "Next Course",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you kill something, you heal for 20% of the damage you deal for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

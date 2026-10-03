@@ -1,0 +1,91 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Coughed-Up Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "cooldown": 0.8,
+   "base": 3,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits 3 swallowed stingers in a spread out to 6 tiles, each dealing 3 damage with a 30% chance to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Barbed Tongue-Tip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Your tongue, tipped with a swallowed stinger, hits the first enemy in its path up to 6 tiles away for 10 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Stinging Spawn",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "Releases a swarm of stinging tadpoles that fights for 15 seconds, biting an enemy within 4 tiles for 4 damage every second."
+  },
+  {
+   "name": "Hive Never Rests",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 14
+   },
+   "desc": "When your stamina runs out, 14 stamina comes back to you. Once every 20 seconds."
+  }
+ ]
+}

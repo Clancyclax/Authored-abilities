@@ -1,0 +1,85 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sunken Jaw",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A clamping bite, usable only on a target at or below 30% health, that deals 22 piercing damage and leaves it 10% easier to wound for 5 seconds and [Diseased] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Larder Burst",
+   "template": "corpseBlast",
+   "element": "necrotic",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.2,
+   "chargesMax": 3,
+   "range": 300,
+   "corpse": true,
+   "explodeRadius": 96,
+   "desc": "Holds 3 charges, and kills give charges back. The nearest body within 9.5 tiles bursts, dealing 8 necrotic damage plus 8% of its maximum health to everything within 3.5 tiles."
+  },
+  {
+   "name": "Mudbank Lurker",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "trap",
+   "summonDuration": 60,
+   "summonDmg": 20,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 96,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "cooldown": 200,
+   "desc": "Sinks a puffball beside the nearest enemy. It waits up to 60 seconds, and the first 2 enemies to come within 3 tiles take 20 damage in a burst of spores."
+  },
+  {
+   "name": "Still Water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "necrotic",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When one of your afflictions runs out on an enemy, your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

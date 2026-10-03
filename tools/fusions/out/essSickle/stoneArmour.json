@@ -1,0 +1,83 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Between the Plates",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "Drives the hook between the plates for 30 damage that ignores armour, and leaves the target 20% easier to wound for 8 seconds.",
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Scrape the Ranks",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags the edge across every enemy within 2 tiles for 4 damage, with a 30% chance to leave each [Sundered] for 4 seconds.",
+   "isAoe": true
+  },
+  {
+   "name": "Hooked Pauldrons",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "lifeOnKill": 5,
+   "desc": "For 8 seconds, 30% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 4 seconds. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Scrap Tithe",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every kill builds a stack on you, up to 4. At 4 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

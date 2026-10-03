@@ -1,0 +1,81 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Wound in Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "maxMult": 1.3,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Your tongue winds around one enemy up to 6 tiles away, dealing 12 damage, rising to 1.3 times that at its full reach, and stunning it for 1.2 seconds. It then moves 30% slower for 3 seconds."
+  },
+  {
+   "name": "Running Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "desc": "Your tongue passes through the first enemy in its path up to 7 tiles away for 26 damage, then through 3 more enemies within 3 tiles, each hit dealing 70% of the original damage. It ignores armour."
+  },
+  {
+   "name": "Damp Dressing",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "ally",
+   "cooldown": 30,
+   "desc": "Wraps the ally who needs it most in a damp dressing, restoring 3 health a second for 8 seconds."
+  },
+  {
+   "name": "Quilted Give",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a ward worth 15% of your maximum health for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

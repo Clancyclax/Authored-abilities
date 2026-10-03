@@ -1,0 +1,78 @@
+{
+ "essence": "essSword",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Unpicked Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "A quick cut along the seams that deals 4 damage and leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Cape Over the Eyes",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps the cloak across and cuts behind it: it deals 12 damage to everything within 3 tiles ahead of you, stuns them for 1 second and leaves them [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Wrapped Forearm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 20,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 16,
+   "shieldStrikes": 3,
+   "shieldDuration": 5,
+   "desc": "Wraps the cloak around your off arm to parry with: it absorbs the next 16 damage, up to 3 blows, and holds for 5 seconds."
+  },
+  {
+   "name": "Tasselled Knot",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.05,
+   "critDamage": 0.15,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures a silk sword-knot: your critical hit chance rises by 5%, your critical hits deal 15% more damage, your attack speed rises by 4%, and each kill returns 3 health."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pounce on the Weak",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "chargeTo": 160,
+   "desc": "Usable only on a target at or below 30% health: you pounce up to 5 tiles onto it and deal 20 damage plus 1.5 times what your afflictions on it have left to deal, using them up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Raking Claws",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rakes gauntlet claws across a cone 2 tiles long, dealing 7 damage with a 30% chance to leave each target [Sundered] for 3 seconds. Holds 3 charges; a kill gives one back."
+  },
+  {
+   "name": "Muffled Steel",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later. Attacking ends it."
+  },
+  {
+   "name": "Ninth Life",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollCooldown": 300,
+   "rerollKinds": [
+    "death"
+   ],
+   "desc": "A killing blow is refused and leaves you at 1 health. Once every 300 seconds."
+  }
+ ]
+}

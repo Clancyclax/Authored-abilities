@@ -1,0 +1,77 @@
+{
+ "essence": "essSword",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Slam the Door",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 160,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 5 tiles away, then deals 12 damage, leaves it [Pinned] for 2.5 seconds and 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Closing Points",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A ring of blade points rises around you and deals 7 damage to every enemy within 2.5 tiles, leaving them [Slowed] for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Driven Palisade",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "slashing",
+   "cooldown": 24,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "desc": "Drives a line of blades 5 tiles long into the ground for 6 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Held in Check",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your armour rises by 12%."
+  }
+ ]
+}

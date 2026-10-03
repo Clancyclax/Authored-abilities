@@ -1,0 +1,69 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flush from Cover",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a clod that deals 4 damage with a 35% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Ground",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 16 damage. It only strikes a target at or below 30% health, and that threshold rises with each rank."
+  },
+  {
+   "name": "Sunk Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "earth",
+   "cooldown": 30,
+   "stealthDuration": 10,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 10 seconds in a hide dug into the ground. Enemies notice you far later and you move 20% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Stopped Earths",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

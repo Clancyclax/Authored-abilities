@@ -1,0 +1,72 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Scent-Marked",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "desc": "A lunge on a target up to 5 tiles away that deals 4 damage, rising to 1.4 times that at full reach, with a 35% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Closing the Gap",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "stackMult": 1.5,
+   "desc": "Uses up every affliction on the target and adds 1.5 times the damage they had left to this blow, which deals 20 damage. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Bull Rush",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 12,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "A short burst of movement that carries you 4 tiles forward. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Weakest of the Herd",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage. Your armour rises by 5%."
+  }
+ ]
+}

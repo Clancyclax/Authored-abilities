@@ -1,0 +1,78 @@
+{
+ "essence": "essBat",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "First to Notice",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "desc": "Sends a sharp click into the first enemy in its path for 4 resonating damage. It has 25% more critical chance against an enemy that has not been hurt yet."
+  },
+  {
+   "name": "Flushed From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Kicks out and deals 12 damage to every enemy within 3 tiles, knocking each back 3 tiles. You move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Startled Bolt",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "cooldown": 12,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Bolts you 4 tiles forward, and you move 25% faster for 4 seconds afterward."
+  },
+  {
+   "name": "Flinch Before the Blow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 3
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When anything but fire hurts you, a shield worth 15% of your maximum health forms for 3 seconds; once every 8 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

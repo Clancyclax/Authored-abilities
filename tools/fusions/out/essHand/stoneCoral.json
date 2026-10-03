@@ -1,0 +1,80 @@
+{
+ "essence": "essHand",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Staghorn Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.5,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Jabs branching fingers at one enemy for 4 damage, rising to 1.5 times that at its full reach of 4 tiles, with a 30% chance to leave it [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Branching Reef",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "rock",
+   "role": "long",
+   "base": 25,
+   "cooldown": 80,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 30,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Raises a reef 5 tiles long for 8 seconds. It deals 25 damage that ignores armour to each enemy that crosses it and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Crust of Lime",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "rock",
+   "cooldown": 36,
+   "armorBonus": 0.18,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 18% for 12 seconds."
+  },
+  {
+   "name": "Built by Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you use an ability, a stack builds on you, up to 5. When you reach 5, they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

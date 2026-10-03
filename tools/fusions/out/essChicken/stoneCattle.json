@@ -1,0 +1,88 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barnyard Stampede",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "Sends a stampede through a cone 5 tiles long, dealing 28 damage to everything in it. If it hits, every ally strikes 15% harder for 12 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kicked Pail",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Kicks a milk pail at the first enemy in line for 4 damage, with a 20% chance to leave it [Slowed] for 2 seconds. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "name": "Trough Break",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 30,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Restores 4 stamina a second for 6 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Slow to Rile",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

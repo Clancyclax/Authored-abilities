@@ -1,0 +1,81 @@
+{
+ "essence": "essGun",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shut the Door",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "requiresTargetBelow": 0.3,
+   "base": 20,
+   "cooldown": 14,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "inescapable",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a round at an enemy up to 8 tiles away that deals 20 damage and leaves it [Inescapable] for 6 seconds, unable to teleport or step aside. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Crossfire Pen",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "stunOnHit": 1,
+   "base": 11,
+   "cooldown": 20,
+   "range": 96,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a ring of rounds that deals 11 damage to every enemy within 3 tiles and stuns each for 1 second, with a 50% chance to leave it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Spring-Loaded Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "desc": "Sets a spring-gun at the nearest enemy. It stays armed for 30 seconds, and the first enemy to come within 2 tiles sets it off for 18 damage in a blast around it."
+  },
+  {
+   "name": "Fish in a Barrel",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage."
+  }
+ ]
+}

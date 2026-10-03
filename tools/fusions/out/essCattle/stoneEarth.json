@@ -1,0 +1,76 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ploughed Furrow",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.4,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Drives your horns through the ground, throwing up a narrow furrow of jagged rock 5 tiles ahead of you that deals 28 rock damage to everything in it. It ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flying Divots",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "speedDown",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks a clod of turf at the first enemy in its path, dealing 4 earth damage, with a 20% chance to leave it [Leaden] for 3 seconds."
+  },
+  {
+   "name": "Salt Lick",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your stamina recovery by 50% for 15 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "name": "Hardpan Underfoot",
+   "element": "earth",
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, a shield worth 8% of your maximum health closes over you for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

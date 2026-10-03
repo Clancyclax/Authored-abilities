@@ -1,0 +1,70 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Stoop From the Gyre",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.8,
+   "requiresTargetBelow": 0.3,
+   "desc": "Usable only on a target at or below 30% health. Dives on a target up to 8 tiles away and deals 20 damage, rising to 1.8 times that at maximum range."
+  },
+  {
+   "name": "Cutting Crosswind",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 112,
+   "coneAngle": 1.3,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Sweeps a gust across a cone 3.5 tiles long that deals 12 damage and knocks each enemy back 3 tiles."
+  },
+  {
+   "name": "Slipstream",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "cooldown": 40,
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "dodgeBonus": 0.1,
+   "blinkOnUse": 64,
+   "desc": "Increases your movement speed by 30% for 8 seconds, with +10% dodge chance for it. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Coasting on Thermals",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "desc": "When your stamina runs out, you regain 15 stamina. Once every 45 seconds."
+  }
+ ]
+}

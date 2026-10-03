@@ -1,0 +1,88 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Grip",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A grasping strike that deals 18 damage, leaves the target [Pinned] for 3 seconds and makes it [Poisoned] for 2 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Steady Cast",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 2,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A thrown shard that deals 28 damage to a target up to 7 tiles away, rising to twice that at full reach. It always strikes critically, and makes the target [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Passed Down the Line",
+   "template": "partyBuff",
+   "element": "plant",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "kind": "passive",
+   "category": "gear summon",
+   "name": "Grown Glove",
+   "template": "summonGear",
+   "element": "plant",
+   "critChance": 0.03,
+   "critDamage": 0.1,
+   "lifeOnKill": 4,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.04
+    }
+   ],
+   "desc": "Conjures a glove of living reef: your critical chance rises by 3%, your critical hits deal 0.1x more, your dodge chance rises by 4%, and each kill returns 4 health."
+  }
+ ]
+}

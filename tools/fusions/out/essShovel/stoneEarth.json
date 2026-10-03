@@ -1,0 +1,79 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Landslip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 240,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "desc": "Levers a boulder loose and sends it rolling. It deals 30 rock damage to the first enemy it meets, then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Spall",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes stone with the blade's edge, spraying chips in a cone 2.5 tiles long for 4 rock damage, with a 30% chance to leave each enemy [Sundered] for 3 seconds."
+  },
+  {
+   "name": "Tumbling Cairn",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "rock",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Piles a cairn that stands for 10 seconds and sheds rocks on an enemy within 4 tiles for 4 damage every second, each hit with a 30% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Dug to Bedrock",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "rock",
+   "buffKind": "maxHp",
+   "amount": 12,
+   "armorBonus": 0.06,
+   "desc": "Your maximum health rises by 12, and your armour rises by 6%."
+  }
+ ]
+}

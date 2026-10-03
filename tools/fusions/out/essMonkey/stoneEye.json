@@ -1,0 +1,76 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Blinding Jab",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "stunOnHit": 1,
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Jabs a target's eyes for 12 damage, stunning it for 1 second, leaving it [Blunted] for 6 seconds and 8% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Held Gaze",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "ignoreResist": true,
+   "base": 26,
+   "cooldown": 75,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stares down everything in a cone 5 tiles ahead of you, dealing 26 damage that ignores resistance and leaving each target [Suppressed] for 3 seconds."
+  },
+  {
+   "name": "Out of Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "arcane",
+   "immunityDuration": 3,
+   "cooldown": 120,
+   "desc": "For 3 seconds, blows that reach you deal no damage, transcendent damage included, and no condition can take hold of you."
+  },
+  {
+   "name": "Double Take",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

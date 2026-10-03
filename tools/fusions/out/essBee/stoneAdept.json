@@ -1,0 +1,93 @@
+{
+ "essence": "essBee",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Waggle Signal",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 15,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a sting that deals 28 damage to the first enemy it reaches and leaves it [Marked] for 15 seconds. When it hits, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drilled Formation",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.2,
+   "speed": 400,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 4,
+   "openerCrit": {
+    "amount": 0.25
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Looses 3 stings in a tight spread, each dealing 3 damage, with 25% more critical chance against a target not yet hurt, and 10% more damage for each ally near you, up to 30%. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Shared Lesson",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles deals 15% more damage and has 1 more Power for 12 seconds."
+  },
+  {
+   "name": "Rehearsed by Many",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again and the second roll stands. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

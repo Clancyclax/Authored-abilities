@@ -1,0 +1,76 @@
+{
+ "essence": "essApe",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Tongue Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "stunOnHit": 1.0,
+   "reachPct": 0.4,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 396,
+   "rangeBand": "long",
+   "desc": "Snaps out a tongue that deals 12 damage to the first enemy it meets and stuns it for 1 second. Its reach is 40% longer."
+  },
+  {
+   "name": "Slick Palm",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chargesMax": 3,
+   "desc": "A bare-fisted strike that deals 7 damage and makes the target [Poisoned] for 2 damage a second for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Marsh Wash",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "healScope": "party",
+   "cleanseTag": "poison",
+   "desc": "Removes up to 3 poison conditions from you and every ally within 5 tiles."
+  },
+  {
+   "name": "Pond Reflex",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "dodgeBonus": 0.06,
+   "desc": "Each time you are hurt by anything other than fire, you regain 3 health a second for 4 seconds. Once every 8 seconds. You have 6% more dodge chance."
+  }
+ ]
+}

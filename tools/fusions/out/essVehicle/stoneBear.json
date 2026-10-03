@@ -1,0 +1,76 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Roadkill",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 34,
+   "cooldown": 75,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "ignoreResist": true,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Rolls over the target with your full weight. The blow deals 34 damage that ignores resistance, leaves the target [Bleeding] for 3 damage a second for 4 seconds and slows it by 30% for 3 seconds."
+  },
+  {
+   "name": "Bulk Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 18,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "desc": "Shoulders your weight through everything in a cone 3 tiles long. It deals 16 damage and knocks each enemy back 3 tiles."
+  },
+  {
+   "name": "Too Heavy to Stop",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 3,
+   "cooldown": 90,
+   "blinkOnUse": 96,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. You finish it 3 tiles from where you stood."
+  },
+  {
+   "name": "Gathering Tonnage",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover, a shield worth 10% of your maximum health settles over you for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

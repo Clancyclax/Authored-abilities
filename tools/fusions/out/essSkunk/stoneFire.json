@@ -1,0 +1,97 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Flashpoint",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "cooldown": 90,
+   "base": 28,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Lights a jet of musk that deals 28 fire damage to the first enemy within 7 tiles and sets it [Burning] for 3 damage a second for 6 seconds, then bursts, hitting every enemy within 3 tiles for 80% of that."
+  },
+  {
+   "name": "Burns Its Own Oil",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 8,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Costs 4% of your maximum health. The musk in your coat catches, dealing 8 fire damage to every enemy within 2.5 tiles and setting them [Burning] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Smudge Pot",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 40,
+   "summonKind": "totem",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.4,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets down a smouldering pot of musk for 10 seconds that burns an enemy within 4 tiles for 3 damage every second, each time with a 30% chance to leave it [Muddled] for 3 seconds."
+  },
+  {
+   "name": "Scorched Hide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "desc": "When you are hurt by anything other than fire, you gain a shield worth 15% of your maximum health for 5 seconds. Once every 12 seconds. You also have 15% fire resistance."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore Slap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A spore-slimed slap that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds, with a 40% chance to leave it [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Seeded Dead",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "corpse": true,
+   "range": 288,
+   "explodeRadius": 112,
+   "mineSeconds": 30,
+   "desc": "Croaks spores onto up to 3 bodies within 9 tiles for 30 seconds. Each one bursts the moment an enemy comes within 2 tiles of it and deals 26 damage to everything within 3.5 tiles."
+  },
+  {
+   "name": "Mossy Pad",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "desc": "Raises a damp mat of moss and spores where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Slow Rot Feeds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Raking Somersault",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes the target as you tumble past it. It deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Tumbling Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "guaranteedCrit": true,
+   "desc": "Pounces on a target up to 6 tiles away and deals 30 damage, rising to 1.6 times that at maximum range. It always crits."
+  },
+  {
+   "name": "Noiseless Lap",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later, and the veil breaks the moment you attack. You move 15% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Second Twist",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

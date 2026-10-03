@@ -1,0 +1,84 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Portcullis Bite",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 70,
+   "stunOnHit": 1.4,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Your jaws shut on the target for 13 damage, stunning it for 1.4 seconds and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Falling Bars",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.45,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps your jaws through a narrow cone 3 tiles ahead, dealing 7 damage with a 40% chance to leave each enemy [Pinned] for 1.5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Sunken Jaws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 18,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "desc": "Sets a pair of jaws under the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 3 tiles takes 18 damage in a blast around it."
+  },
+  {
+   "name": "Locked In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

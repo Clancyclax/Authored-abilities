@@ -1,0 +1,81 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wake Across the Pond",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 64,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You cut across the surface and send a wake 4 tiles ahead of you. It deals 11 water damage to everything in it, knocks each target back 2 tiles and leaves it [Soaked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Taken From Below",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 19,
+   "cooldown": 14,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.7,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A weapon strike from underneath that deals 19 damage, uses up every affliction you have on the target and deals 70% more damage for each one. It then leaves the target [Poisoned] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Returned to Sender",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 9 seconds, each condition laid on you has a 60% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Unrippled Surface",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your mana is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

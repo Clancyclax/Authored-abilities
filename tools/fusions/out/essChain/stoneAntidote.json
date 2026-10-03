@@ -1,0 +1,72 @@
+{
+ "essence": "essChain",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitter Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Casts a hooked link at the first enemy it meets for 8 damage. It needs one of your afflictions on the target and uses it up, and you heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Wormwood Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 30,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Stretches a 6-tile chain ahead of you for 4 seconds that drags nearby enemies inward. It deals 12 damage to each one it catches and leaves it [Poisoned] for 3 damage a second for 5 seconds, and your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Shared Purge",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "desc": "Draws up to 3 poison conditions out of you and out of each of your allies."
+  },
+  {
+   "name": "Back Along the Link",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "reflectWard",
+   "element": "poison",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.2,
+   "buffDuration": 0,
+   "cooldown": 0,
+   "desc": "Each affliction laid on you has a 20% chance to be sent back to whoever inflicted it instead."
+  }
+ ]
+}

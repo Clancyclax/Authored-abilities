@@ -1,0 +1,79 @@
+{
+ "essence": "essShip",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scupper Wash",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 80,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pumps a jet through a cone 3 tiles long, dealing 12 damage to everything in it and knocking each enemy back 2.5 tiles, with a 60% chance to leave each [Damped] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heave It Overboard",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 12,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Throws the poison back at the first enemy within 7 tiles, dealing 16 damage. It uses up every affliction you have on the target and deals 60% more damage for each. For 4 seconds after, you move 15% faster."
+  },
+  {
+   "name": "Pump the Bilges",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "party",
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Removes up to 3 poison conditions from you and your allies and restores 10 health. You move 15% faster for 4 seconds after."
+  },
+  {
+   "name": "Clean Bill of Health",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "poison",
+   "moveSpeedPct": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.12
+   },
+   "desc": "Your movement speed is permanently 8% higher, and you carry 12% poison resistance."
+  }
+ ]
+}

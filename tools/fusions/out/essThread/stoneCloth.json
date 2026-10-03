@@ -1,0 +1,78 @@
+{
+  "essence": "essThread",
+  "stone": "stoneCloth",
+  "fusions": [
+    {
+      "name": "Pull the Loose End",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "execute",
+      "base": 15,
+      "cooldown": 14,
+      "speed": 340,
+      "radius": 8,
+      "consumeAfflictionsPer": 0.6,
+      "desc": "Hooks a loose end on the first enemy it meets and pulls. It deals 15 damage, uses up every affliction you have on the target, and deals 60% more damage for each one."
+    },
+    {
+      "name": "Winding Sheet",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "death",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "ignoreResist": true,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Winds a sheet around every enemy within 3 tiles. It deals 28 damage that ignores resistances and leaves each [Hindered] for 6 seconds."
+    },
+    {
+      "name": "Whipstitch",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "life",
+      "cooldown": 20,
+      "healAmount": 18,
+      "critChance": 0.1,
+      "healScope": "self",
+      "desc": "Stitches a wound shut and binds it. It restores 18 health to you, with a 10% chance to heal critically."
+    },
+    {
+      "name": "Shared Selvedge",
+      "kind": "passive",
+      "category": "gear summon",
+      "template": "summonGear",
+      "element": "physical",
+      "critChance": 0.05,
+      "critDamage": 0.15,
+      "itemBuffs": [
+        {
+          "stat": "maxHp",
+          "amount": 10
+        }
+      ],
+      "allyScaling": {
+        "per": 0.05,
+        "max": 4,
+        "range": 176
+      },
+      "allyRange": 176,
+      "allyMax": 4,
+      "desc": "Conjures a cloak woven of strands: your critical hit chance rises by 5%, your critical hits deal 0.15x more, your maximum health rises by 10 and each kill returns 2 health. Its effect increases by 5% for each ally within 5.5 tiles, up to 4 allies.",
+      "lifeOnKill": 2
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rehearsed Roll",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You roll in place, dealing 28 damage to every enemy within 2 tiles. Every hit is a critical hit and leaves the enemy [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Opening Move",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 70,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "targetStamina",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A quick bite that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. Its damage rises 8% for every tenth of health the target still has, up to 40%."
+  },
+  {
+   "name": "From the Top",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "water",
+   "resetCount": 1,
+   "blinkOnUse": 64,
+   "cooldown": 90,
+   "desc": "You slip 2 tiles back and clear the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Textbook Ambush",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.35
+   },
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Your strikes have 30% more critical chance against an enemy that has not been wounded yet. After 10 seconds without a critical hit, your next strike has 35% more critical chance."
+  }
+ ]
+}

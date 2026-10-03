@@ -1,0 +1,85 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Lock-Jawed",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A bite that deals 20 damage, holds the target [Pinned] for 3 seconds and leaves it 12% easier to wound for 6 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Loosed Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slips a pack that deals 8 damage to every enemy within 3 tiles, with a 30% chance to leave each [Slowed] for 2 seconds. Its damage rises 8% for each ally near you, up to 32%. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Rebaited",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Hound That Holds",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A bonded hound runs with you and bites enemies within 4 tiles for 4 damage every 1.2 seconds. Anything it bites moves 20% slower for 2 seconds."
+  }
+ ]
+}

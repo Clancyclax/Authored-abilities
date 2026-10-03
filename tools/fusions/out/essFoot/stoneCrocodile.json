@@ -1,0 +1,77 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Shallows Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Kicks off and lunges up to 6 tiles onto a target, clamping on for 15 damage and leaving it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rolled Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "chargeTo": 160,
+   "desc": "Launches up to 5 tiles onto a target at or below 25% health, seizes it by the leg and rolls, dealing 22 damage. It uses up every affliction on the target and adds 1.6 times their remaining damage to the blow."
+  },
+  {
+   "name": "Coiled Haunches",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "water",
+   "powerMult": 1.3,
+   "buffDuration": 10,
+   "castTime": 1.5,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Holds still for 1.5 seconds, then your damage rises by 30% for 10 seconds and your movement speed by 25% for 4 seconds."
+  },
+  {
+   "name": "Breath Held Long",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next ability deals 40% more damage. Once every 15 seconds."
+  }
+ ]
+}

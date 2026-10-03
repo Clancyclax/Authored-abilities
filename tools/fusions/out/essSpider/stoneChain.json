@@ -1,0 +1,99 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Linked Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a strand that deals 4 damage to the first enemy it meets, with a 25% chance to leave it [Pinned] for 1.5 seconds. It then leaps to 2 more enemies within 3 tiles for 60% of that."
+  },
+  {
+   "name": "Shared Shackle",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A weapon strike that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Tethered to Me",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Strung Together",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.05,
+   "critDamage": 0.15,
+   "lifeOnKill": 2,
+   "allyScaling": {
+    "per": 0.05,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Your critical hit chance rises by 5%, your critical hits deal 0.15x more, each kill returns 2 health and your maximum health rises by 10. Each of these rises 5% for each ally within 5.5 tiles, up to 4 allies.",
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Under the Gorget",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "ignoreArmor": true,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "desc": "Lunges at an enemy up to 4 tiles away and bites the throat beneath its plate, which deals 28 damage, rising to 1.3 times that at full reach. The bite ignores armour."
+  },
+  {
+   "name": "Buckle Gnaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "desc": "A bite at the fastenings that deals 4 damage and leaves the target 6% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Spiked Collar",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 7,
+   "thornsFrac": 0.4,
+   "lifeOnKill": 5,
+   "desc": "For 7 seconds, 40% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Closing Ranks",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "When your health falls below 35%, you gain a shield worth 25% of your maximum health for 6 seconds. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies. Once every 30 seconds."
+  }
+ ]
+}

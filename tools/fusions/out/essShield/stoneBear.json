@@ -1,0 +1,83 @@
+{
+  "essence": "essShield",
+  "stone": "stoneBear",
+  "fusions": [
+    {
+      "name": "Den Roar",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 20,
+      "range": 160,
+      "coneAngle": 0.9,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "powerDown",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Roars over the shield's rim in a cone 5 tiles ahead, dealing 14 damage to everything in it, stunning it for 1.2 seconds and leaving it [Weakened] for 6 seconds.",
+      "stunOnHit": 1.2
+    },
+    {
+      "name": "Whole Weight Behind",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "hpCostPct": 0.05,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Throws your full bulk behind the shield at a cost of 5% of your maximum health, which deals 9 damage and leaves the target 8% easier to wound for 4 seconds. Its damage rises 8% for every tenth of your health already gone, up to 40%."
+    },
+    {
+      "name": "Full Height",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "buffStat": "maxHp",
+      "buffAmount": 0.2,
+      "buffDuration": 12,
+      "healOnUse": 10,
+      "desc": "Rears to full height behind the shield: your maximum health rises by 20% for 12 seconds, and it restores 10 health."
+    },
+    {
+      "name": "Winter Den",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "desc": "When your health falls below 50%, you regain 3 health a second for 8 seconds. Once every 60 seconds.",
+      "isTriggered": true,
+      "cooldown": 60,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 60
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 8
+      }
+    }
+  ]
+}

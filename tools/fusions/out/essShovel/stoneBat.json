@@ -1,0 +1,67 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Long Fang",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "maxMult": 1.5,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "hpCostPct": 0.04,
+   "leech": 0.3,
+   "desc": "Thrusts the blade's tip out for 8 damage, rising to 1.5 times that at its full reach of 3 tiles, and heals you for 30% of the damage dealt. Each use costs 4% of your maximum health."
+  },
+  {
+   "name": "Sounding Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rings the blade against the ground. The echo deals 26 resonating damage to every enemy within 4 tiles, ignoring armour, and leaves each one [Marked] for 8 seconds."
+  },
+  {
+   "name": "Undermine",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "dark",
+   "cooldown": 12,
+   "teleportRange": 192,
+   "dodgeBonus": 0.08,
+   "desc": "You drop into the ground and come up at a spot up to 6 tiles away. You gain +8% dodge chance."
+  },
+  {
+   "name": "Gravedigger's Hours",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "At night, you deal 12% more damage."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Sporefall",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.3,
+   "desc": "Looses a cone of spores 4 tiles ahead that deals 8 damage to everything in it. It needs one of your afflictions on the target and uses it up, and you heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Spreading Itch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.7,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a bite at the first enemy it meets, dealing 12 damage, with a 70% chance to leave it [Diseased] for 8 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Mending Mist",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 30,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Using it increases your movement speed by 20% for 4s."
+  },
+  {
+   "name": "Plague Vector",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "nature",
+   "regenPerSec": 0.8,
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You regenerate 0.8 health a second, permanently."
+  }
+ ]
+}

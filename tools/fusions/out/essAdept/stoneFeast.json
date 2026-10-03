@@ -1,0 +1,35 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Carving Stroke",
+   "kind": "active", "category": "attack", "template": "sunderStrike", "element": "slashing", "role": "resource",
+   "base": 8, "cooldown": 1, "spammable": true, "range": 80,
+   "sunder": { "amount": 0.06, "duration": 3 },
+   "consumeAffliction": true, "leech": 0.2,
+   "desc": "A carver's cut that deals 8 damage, leaves the target 6% easier to wound for 3 seconds, and heals you for 20% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Shared Table",
+   "kind": "active", "category": "attack", "template": "aoeRing", "element": "physical", "role": "long",
+   "base": 28, "cooldown": 120, "range": 96, "isAoe": true, "aoeBand": "medium",
+   "partyBuffOnHit": { "pct": 0.15, "dur": 15 },
+   "desc": "Deals 28 damage to every enemy within 3 tiles. When it hits, you and your allies deal 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Passing Plates",
+   "kind": "active", "category": "healing", "template": "aoeHealPulse", "element": "life",
+   "healAmount": 14, "range": 128, "reachUnits": 128, "rangeBand": "melee", "healScope": "party", "cooldown": 20,
+   "desc": "Restores 14 health to you and every ally within 4 tiles."
+  },
+  {
+   "name": "Second Helping",
+   "kind": "passive", "category": "triggered", "template": "triggeredPassive", "element": "physical",
+   "isTriggered": true, "cooldown": 10,
+   "trigger": { "on": "kill", "cooldown": 10 },
+   "effect": { "kind": "healingTakenBuff", "amount": 0.3, "duration": 8 },
+   "desc": "Each time you kill something, every heal reaching you is worth 30% more for 8 seconds. Once every 10 seconds."
+  }
+ ]
+}

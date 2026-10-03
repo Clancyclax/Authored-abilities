@@ -1,0 +1,76 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Torpor Sting",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Holds 3 charges, and kills give charges back. A strike that deals 7 damage, slows the target by 25% for 3 seconds and leaves it [Poisoned] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Noonday Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 1.4,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Fires a spore at a target up to 8 tiles away that deals 26 damage plus 5% of a boss's or elite's maximum health, rising to 1.4 times that at full reach. It leaves the target [Hindered] for 5 seconds."
+  },
+  {
+   "name": "Cold Stillness",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "life",
+   "immunityDuration": 5,
+   "healOnUse": 15,
+   "cooldown": 150,
+   "desc": "For 5 seconds, blows that reach you deal no damage and no condition can take hold of you. You regain 15 health."
+  },
+  {
+   "name": "Sunfed Cap",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "nature",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "regenPerSec": 0.5,
+   "desc": "In daylight, your damage rises by 12%. You regenerate 0.5 health a second."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thousandth Repetition",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "template": "rangeStrike",
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "A tongue-lash at a target up to 6 tiles away that deals 28 damage, rising to 1.5 times that at full reach. It always strikes critically."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Opening Form",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "template": "projectileBall",
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Flicks your tongue at the first enemy within 6 tiles for 5 damage. It has 30% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "name": "Motionless Focus",
+   "element": "physical",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 60,
+   "healOnUse": 10,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds, and you regain 10 health at once."
+  },
+  {
+   "name": "Long Wait, Clean Cut",
+   "element": "physical",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your next spell deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

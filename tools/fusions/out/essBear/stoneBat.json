@@ -1,0 +1,70 @@
+{
+ "essence": "essBear",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Sounding Growl",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A growl pitched to echo strikes the first enemy in its path for 7 damage, with a 50% chance to leave it [Leaden] for 4 seconds. It holds 3 charges, and each kill gives a charge back."
+  },
+  {
+   "name": "Dusk Feeding",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 160,
+   "leech": 0.2,
+   "desc": "Drops up to 5 tiles onto the target and bites for 14 damage, leaving it 10% easier to wound for 4 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Torpor's End",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 5,
+   "restoreDuration": 6,
+   "healOnUse": 10,
+   "desc": "Shakes off your torpor: you restore 10 health at once and 5 stamina a second for 6 seconds."
+  },
+  {
+   "name": "Moonless Prowl",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "shadow",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "At night, you deal 10% more damage."
+  }
+ ]
+}

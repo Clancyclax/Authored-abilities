@@ -1,0 +1,74 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Rake Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Strikes an enemy and uses up one of your afflictions on it. The strike deals 9 damage and leaves the enemy 10% easier to wound for 5 seconds. Usable only on an enemy carrying one of your afflictions."
+  },
+  {
+   "name": "Bitter Slurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "healOnUse": 8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "A burst that deals 11 damage to every enemy within 3 tiles and leaves them [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it, and you restore 8 health."
+  },
+  {
+   "name": "Lime Poultice",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "nature",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 40,
+   "desc": "Removes up to 3 conditions from you and restores 12 health."
+  },
+  {
+   "name": "Tight Pointing",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 8%, and your poison resistance rises by 10%."
+  }
+ ]
+}

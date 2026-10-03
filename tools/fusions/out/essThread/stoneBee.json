@@ -1,0 +1,94 @@
+{
+  "essence": "essThread",
+  "stone": "stoneBee",
+  "fusions": [
+    {
+      "name": "Sewing Swarm",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "poison",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.35,
+      "speed": 320,
+      "radius": 7,
+      "range": 192,
+      "isAoe": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses 3 stingers at once, spread apart. Each stinger deals 3 damage, with a 30% chance to leave its target [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Barb Left In",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "poison",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "strikes": 1,
+      "hpCostPct": 0.05,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 3
+      },
+      "desc": "Costs 5% of your maximum health. A weapon strike that deals 8 damage and leaves a barb on a strand in the wound: the target is [Poisoned] for 2 damage a second for 5 seconds and moves 20% slower for 3 seconds."
+    },
+    {
+      "name": "Trailing Hive",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "poison",
+      "cooldown": 40,
+      "summonKind": "swarm",
+      "summonDmg": 3,
+      "summonDuration": 12,
+      "summonInterval": 1,
+      "summonRange": 128,
+      "castTime": 0.3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.3,
+        "duration": 1.5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "After a 0.3 second cast, looses a swarm for 12 seconds. Every second it stings an enemy within 4 tiles and deals 3 damage, with a 30% chance to leave the target [Pinned] for 1.5 seconds."
+    },
+    {
+      "name": "Nectar Run",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "nature",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "heal",
+      "stackCap": 5,
+      "stackDecay": 4,
+      "stackSpend": "full",
+      "stackOn": "enemy",
+      "stackScale": 1,
+      "stackIcon": "stackVenom",
+      "desc": "Every hit you land ties a strand to that enemy, up to 5. At 5 they all spend at once and draw back to you, healing you for 5% of your maximum health per strand. Unfed, a strand fades every 4 seconds."
+    }
+  ]
+}

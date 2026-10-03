@@ -1,0 +1,85 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Meat for the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "leech": 0.2,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Throws a hunting javelin that deals 28 damage to the first enemy it meets and heals you for 20% of the damage dealt. When it hits, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Skewers for Everyone",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 5,
+    "label": "Sated"
+   },
+   "desc": "Throws 3 skewers at once in a spread out to 6 tiles, and each deals 3 damage. 30% of the damage dealt comes back to you as healing over 5 seconds."
+  },
+  {
+   "name": "Carved Off the Spit",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "blood",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Carves the roast and shares it out: it restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Its healing rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Game Bag",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blood",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 3,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 3. At 3 they all spend at once: you heal for 5% of your maximum health per stack (15% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Dragged Under",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "requiresTargetBelow": 0.3,
+   "stunOnHit": 1,
+   "base": 20,
+   "cooldown": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "leech": 0.25,
+   "desc": "Usable only on a target at or below 30% health. Clamps onto it from up to 4 tiles away for 20 damage, rising to 1.5 times that at full reach, stuns it for 1 second and heals you for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thrashing Roll",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "knockback": 80,
+   "base": 11,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Tumbles you through the shallows, dealing 11 damage to every enemy within 2.5 tiles, knocking each back 2.5 tiles and leaving it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Bait on the Bank",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 6,
+   "cooldown": 30,
+   "taunt": {
+    "radius": 160,
+    "duration": 4,
+    "max": 4
+   },
+   "desc": "Draws up to 4 enemies within 5 tiles onto you for 4 seconds, and you take 20% less damage for 6 seconds."
+  },
+  {
+   "name": "Heart Left Ashore",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 300,
+   "desc": "Once every 300 seconds, a blow that would kill you leaves you at 1 health instead."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essSword",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Shed Them All",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Sweeps the flat of the blade in a full circle that deals 12 damage to every enemy within 3 tiles and knocks them back 3 tiles."
+  },
+  {
+   "name": "Mind Like Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 84,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "ignoreResist": true,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A cut that deals 28 damage, ignores resistances, and leaves the target 15% easier to wound for 6 seconds and [Damped] for 8 seconds."
+  },
+  {
+   "name": "Runoff",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 9,
+   "desc": "For 9 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Bob Under, Come Up",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

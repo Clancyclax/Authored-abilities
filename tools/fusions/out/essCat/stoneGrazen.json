@@ -1,0 +1,77 @@
+{
+ "essence": "essCat",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Kneading Paws",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "life",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "leech": 0.2,
+   "desc": "A swipe that deals 5 damage, leaves the target 6% easier to wound for 4 seconds and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Watchful Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "life",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "A pounce that deals 28 damage, up to 1.5 times at maximum range. Your allies strike 20% harder for 15 seconds after it lands."
+  },
+  {
+   "name": "Purring Circle",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "life",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Raises a warm circle where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Lingering Warmth",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you gain health, you regain 2 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

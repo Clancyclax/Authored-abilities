@@ -1,0 +1,76 @@
+{
+ "essence": "essWater",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Lees",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.25,
+   "desc": "Pulls a surge of water at the first enemy it meets that deals 16 damage and uses up every affliction you have on it, with 60% more damage for each one used. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Stockpot",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Costs 4% of your maximum health. Sends out a ring of broth that deals 8 damage to every enemy within 2.5 tiles. Its damage rises 10% for each ally near you (max 30%)."
+  },
+  {
+   "name": "Toast All Round",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "water",
+   "cooldown": 45,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "healOnUse": 8,
+   "desc": "You restore 8 health, and every ally within 5 tiles strikes 15% harder for 10 seconds and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Salt Thirst",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you heal for 15% of the damage you deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

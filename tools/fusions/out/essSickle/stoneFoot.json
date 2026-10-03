@@ -1,0 +1,78 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Gaining Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Throws a curved blade at a target up to 7 tiles away that deals 8 damage, rising to 1.4 times that at full reach. Its damage rises +5% per 100 paces you have run since you last used it (max +30%). Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Column Right",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sweeps a full circle that deals 30 damage to every enemy within 4 tiles. When it hits, your allies strike 20% harder for 12 seconds."
+  },
+  {
+   "name": "Mower's Stride",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 50,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "Increases your stamina recovery by 50% for 15 seconds and your movement speed by 25% for 5 seconds."
+  },
+  {
+   "name": "Hedgerow Pickings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

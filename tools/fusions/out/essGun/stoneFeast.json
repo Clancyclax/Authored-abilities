@@ -1,0 +1,81 @@
+{
+ "essence": "essGun",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pot Shot",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "chargesMax": 5,
+   "base": 7,
+   "cooldown": 1,
+   "speed": 500,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "leech": 0.1,
+   "desc": "Fires a round into the first enemy in its path for 7 damage, and you heal for 10% of the damage dealt. Holds 5 charges; each use spends one, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gorging Volley",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "ignoreResist": true,
+   "base": 18,
+   "cooldown": 75,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 440,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.3,
+    "duration": 6,
+    "label": "Repast"
+   },
+   "desc": "Fires 3 rounds in a spread, each dealing 18 damage and ignoring resistances. 30% of the damage dealt comes back to you as healing over the next 6 seconds."
+  },
+  {
+   "name": "Share the Bag",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "cooldown": 30,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, 1% more for every 1% of cast speed you have."
+  },
+  {
+   "name": "Second Helping",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 20% of the damage you deal for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

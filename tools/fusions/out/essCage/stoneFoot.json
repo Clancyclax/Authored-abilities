@@ -1,0 +1,78 @@
+{
+ "essence": "essCage",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Stamp Order",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "maxMult": 1.2,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stunOnHit": 1.2,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 4
+   },
+   "desc": "A stamping blow on a target up to 3 tiles away that deals 14 damage, rising to 1.2 times that at full reach, and stuns it for 1.2 seconds. Anything struck moves 30% slower for 4 seconds."
+  },
+  {
+   "name": "Column Halt",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A stamping wave in a cone 3 tiles long deals 4 damage to everything caught in it. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Garrison Step",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.15,
+   "buffDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Reduces the damage you take by 15% for 10 seconds. Your movement speed rises 20% for 6 seconds after you use it."
+  },
+  {
+   "name": "Sentry Stride",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "moveSpeedPct": 0.1,
+   "resist": {
+    "element": "physical",
+    "amount": 0.08
+   },
+   "desc": "You move 10% faster and have 8% physical resistance."
+  }
+ ]
+}

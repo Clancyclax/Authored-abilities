@@ -1,0 +1,73 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Level Regard",
+   "template": "projectileBall",
+   "element": "light",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 460,
+   "radius": 8,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a bolt of light along your gaze, dealing 26 damage that ignores resistances and leaving the target [Marked] for 10 seconds.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "All-Round Watch",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "light",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looks all the way round you at once, dealing 11 damage to every enemy within 3.5 tiles, with a 50% chance to leave each [Marked] for 6 seconds. Your afflictions on each one spread to enemies within 3 tiles of it."
+  },
+  {
+   "name": "Settled Sight",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "light",
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "castTime": 0.5,
+   "cooldown": 60,
+   "healOnUse": 8,
+   "desc": "Increases your critical hit chance by 25% for 15 seconds and restores 8 health.",
+   "kind": "active"
+  },
+  {
+   "name": "Never Fully Asleep",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "light",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 10%.",
+   "kind": "passive"
+  }
+ ]
+}

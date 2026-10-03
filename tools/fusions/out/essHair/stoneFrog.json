@@ -1,0 +1,82 @@
+{
+ "essence": "essHair",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sudden Reel",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "guaranteedCrit": true,
+   "desc": "Snaps a strand out that deals 30 damage to the first enemy it meets. Every hit is a critical hit."
+  },
+  {
+   "name": "Pond Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Bursts strands out round you, dealing 7 damage to every enemy within 3.5 tiles. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Sudden Spring",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "cooldown": 15,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 7 tiles away. Using it increases your movement speed by 15% for 3s."
+  },
+  {
+   "name": "Lily Mooring",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than you cross ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.15,
+     "text": "and the crossing rests you"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and nothing that has to wade can reach you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 10% faster over it, from silver your stamina recovers 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

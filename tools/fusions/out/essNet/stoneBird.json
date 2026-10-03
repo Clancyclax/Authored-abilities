@@ -1,0 +1,77 @@
+{
+ "essence": "essNet",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Fowler's Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 2,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A gliding throw that deals 4 damage, rising to 2 times that at its full reach of 7 tiles, with a 25% chance to leave the target [Pinned] for 1 second."
+  },
+  {
+   "name": "Flush the Covey",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "wind",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Snaps a mesh open around you, dealing 12 damage to every enemy within 3 tiles and throwing them back 2 tiles. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Updraft",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "dashDist": 160,
+   "cooldown": 10,
+   "desc": "Throws a mesh up into the wind and rides it forward, carrying you 5 tiles at once."
+  },
+  {
+   "name": "Momentum of the Glide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Every few paces you cover, your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

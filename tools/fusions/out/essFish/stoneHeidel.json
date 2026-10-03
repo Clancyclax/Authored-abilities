@@ -1,0 +1,71 @@
+{
+ "essence": "essFish",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Drumming Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 8,
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Fires a bolt of water that deals 6 damage. It holds 4 charges, and each kill gives one back. For 3 seconds after using it you move 15% faster."
+  },
+  {
+   "name": "Stampede Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 288,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "huge",
+   "guaranteedCrit": true,
+   "desc": "Sends a wake 9 tiles long ahead of you, dealing 30 damage to everything in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Second Wind",
+   "kind": "active",
+   "category": "restore",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 20,
+   "desc": "Increases your stamina recovery by 50% for 20 seconds."
+  },
+  {
+   "name": "Tireless Tide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "When you spend stamina, you regain 3 stamina. Once every 8 seconds."
+  }
+ ]
+}

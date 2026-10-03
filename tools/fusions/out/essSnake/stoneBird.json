@@ -1,0 +1,79 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Canopy Glide",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1.8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You glide onto an enemy up to 7 tiles away and bite. The bite deals 13 damage, rising to 1.8 times that from the full 7 tiles, and leaves the target [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Egg-Tooth Crack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargesMax": 3,
+   "desc": "A sharp bite that deals 8 damage and leaves the target 10% easier to wound for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Flattened Ribs",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "cooldown": 12,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "You flatten your body and glide 4 tiles forward, then move 25% faster for 3 seconds."
+  },
+  {
+   "name": "Stalker's Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your critical hit chance rises by 25% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essFork",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Echo Tine",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 128,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 128,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a ringing note off the tines into the first enemy it meets for 3 resonating damage. It echoes on to 2 more enemies within 4 tiles for 50% of the damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shrill Ring",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Strikes the tines together, dealing 12 resonating damage to every enemy within 3 tiles and stunning them for 1 second."
+  },
+  {
+   "name": "Held Pitch",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "resonating",
+   "freezeDuration": 2,
+   "freezeRadius": 96,
+   "aoeBand": "medium",
+   "cooldown": 30,
+   "desc": "Holds every creature within 3 tiles in place for 2 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Answering Note",
+   "element": "resonating",
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "desc": "When you land a critical hit, a note rings off the tines and strikes the nearest enemy within 6 tiles for 6 damage. Once every 4 seconds."
+  }
+ ]
+}

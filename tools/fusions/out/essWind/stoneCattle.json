@@ -1,0 +1,81 @@
+{
+ "essence": "essWind",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Storm-Driven Stampede",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 192,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Rushes to an enemy up to 6 tiles away and tramples, which deals 12 damage to every enemy within 2.5 tiles. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Bellwether's Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 160,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Charges a target up to 5 tiles away and butts it, which deals 26 damage and leaves it 12% easier to wound for 6 seconds. If it hits, every ally deals 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Backs to the Gale",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 4,
+   "tauntDuration": 5,
+   "desc": "Reduces the damage you take by 20% for 12 seconds, and pulls up to 4 enemies within 5 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Plodding On",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full-Draw Lunge",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "guaranteedCrit": true,
+   "desc": "A lunge loosed at a target up to 7 tiles away that deals 26 damage, up to 2 times that at full range, and is always a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Waterline Pin",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a barbed bolt that deals 4 damage, with a 20% chance to leave the target [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Drawn and Still",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.3,
+   "buffDuration": 10,
+   "castTime": 2,
+   "cooldown": 40,
+   "desc": "After holding still for 2 seconds, your critical hit chance rises by 30% for 10 seconds."
+  },
+  {
+   "name": "Held Tension",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next ability deals 40% more damage. Once every 12 seconds."
+  }
+ ]
+}

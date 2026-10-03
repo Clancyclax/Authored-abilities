@@ -1,0 +1,73 @@
+{
+ "essence": "essNet",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Winding Sheet",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 96,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "Winds a close weave around a target at or below 30% health, dealing 18 damage and using up every affliction on it to add 1.5 times their remaining damage to the hit."
+  },
+  {
+   "name": "Smothering Fold",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a drape of close weave across a cone 3 tiles long, dealing 4 damage to everything caught in it, with a 40% chance per hit to leave it [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Gauze Wrap",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "hotPerSec": 3,
+   "hotDuration": 6,
+   "healScope": "self",
+   "cooldown": 24,
+   "desc": "Binds your wounds in an open-weave gauze: you regain 3 health a second for 6 seconds."
+  },
+  {
+   "name": "Warp and Weft",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a row of weave builds on you, up to 5. When you reach 5, they all spend at once: you gain a shield that soaks 7% of your maximum health per row (35% at full). Unfed, a row fades every 10 seconds."
+  }
+ ]
+}

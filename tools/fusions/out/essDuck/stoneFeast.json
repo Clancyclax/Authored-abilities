@@ -1,0 +1,69 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Bread Snatch",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 8,
+   "leech": 0.3,
+   "desc": "Snatches a bite out of a target that deals 4 damage, healing you for 30% of the damage dealt.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Gorging Frenzy",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "healOnUse": 15,
+   "desc": "Feeds on everything around you at once, dealing 26 damage to every enemy within 3 tiles. Every hit is a critical hit, and you restore 15 health.",
+   "kind": "active",
+   "category": "attack"
+  },
+  {
+   "name": "Crumbs for All",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "cooldown": 20,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles. The amount rises 1% for each 1% of cast speed.",
+   "kind": "active"
+  },
+  {
+   "name": "Fuel for the Flyway",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you regain health, you also regain 3 stamina a second for 4 seconds. Once every 10 seconds.",
+   "kind": "passive"
+  }
+ ]
+}

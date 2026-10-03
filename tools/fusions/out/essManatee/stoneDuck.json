@@ -1,0 +1,96 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "role": "basic",
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spammable": true,
+   "name": "Shaken Droplets",
+   "element": "water",
+   "base": 3,
+   "cooldown": 0.8,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes the water off your back at a target for 3 damage, with a 40% chance to leave it [Soaked] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "role": "medium",
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Upended Wash",
+   "element": "water",
+   "base": 12,
+   "cooldown": 14,
+   "coneAngle": 0.8,
+   "knockback": 80,
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Tips your bulk forward and throws a wash over a cone 4 tiles long, dealing 12 damage, knocking everything in it back 2.5 tiles and leaving it [Damped] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "name": "Off the Oiled Back",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.6,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "armorBonus": 0.1,
+   "desc": "For 8 seconds, each debuff laid on you has a 60% chance to be sent back to its source instead, and your armour rises by 10%."
+  },
+  {
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "name": "Raft at Rest",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you cross it faster than you cross ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.12,
+     "text": "and you mend faster while you float on it"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.06,
+     "text": "and blows slide off you while you are on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While on it, from bronze rank you move 10% faster, from silver your health regenerates 12% faster, and from gold your dodge chance rises by 6%."
+  }
+ ]
+}

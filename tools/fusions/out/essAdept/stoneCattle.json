@@ -1,0 +1,38 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "name": "Stampede Front",
+   "kind": "active", "category": "attack", "template": "breathCone", "element": "blunt", "role": "medium",
+   "base": 13, "cooldown": 16, "range": 128, "coneAngle": 0.8, "isAoe": true, "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Drives forward through a wide cone 4 tiles long, dealing 13 damage to everything in it and knocking it back 3 tiles."
+  },
+  {
+   "name": "Yoke-Breaker",
+   "kind": "active", "category": "attack", "template": "sunderStrike", "element": "blunt", "role": "resource",
+   "base": 8, "cooldown": 1.1, "spammable": true, "range": 80,
+   "sunder": { "amount": 0.08, "duration": 4 },
+   "hpCostPct": 0.05,
+   "desc": "A heavy, even blow that deals 8 damage and leaves the target 8% easier to wound for 4 seconds. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Ruminate",
+   "kind": "active", "category": "healing", "template": "selfHot", "element": "life",
+   "healScope": "self", "hotPerSec": 3, "hotDuration": 8, "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Herd Endurance",
+   "kind": "passive", "category": "passive buff", "template": "attrBoost", "element": "physical",
+   "attr": "recovery", "raisesCap": 1,
+   "riders": [
+    { "rank": "bronze", "stat": "hpRegen", "amount": 0.12, "text": "the small hurts close on their own" },
+    { "rank": "silver", "stat": "staminaRegen", "amount": 0.12, "text": "you get your breath back between things" },
+    { "rank": "gold", "stat": "cooldownReduction", "amount": 0.06, "text": "and everything you have comes round again sooner" }
+   ],
+   "desc": "Raises your Recovery by 1, and your Recovery ceiling by 1. From bronze rank your health recovers 12% faster, from silver your stamina recovers 12% faster, and from gold your abilities come round 6% sooner."
+  }
+ ]
+}

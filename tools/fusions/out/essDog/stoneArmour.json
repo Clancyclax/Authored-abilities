@@ -1,0 +1,92 @@
+{
+ "essence": "essDog",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Guard's Lunge",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "desc": "Rushes up to 6 tiles to the target and bites for 12 damage, leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Between the Plates",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Clamps onto the target with your weapon and deals 28 damage that ignores armour, making it [Bleeding] for 3 damage a second for 5 seconds and 30% slower for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Barding for Two",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 9
+   },
+   "desc": "Raises a barrier that absorbs the next 20 damage and raises your armour by 10% for 6 seconds. A barded hound escort fights beside you for 9 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Takes the Blows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "allyScaling": {
+    "per": 0.06,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack. Unfed, a stack fades every 10 seconds. The effect grows 6% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

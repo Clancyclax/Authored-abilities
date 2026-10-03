@@ -1,0 +1,83 @@
+{
+ "essence": "essFork",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Three Stings",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "volleyCount": 3,
+   "volleySpread": 0.2,
+   "speed": 400,
+   "radius": 5,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.2,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Darts all three tines out as stings, each dealing 3 poison damage to the first enemy it meets within 4 tiles. Each hit has a 20% chance to leave the target [Poisoned] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barb Left Behind",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Drives a barbed tine into the first enemy within 5 tiles for 16 piercing damage, using up every one of your afflictions on it and dealing 50% more for each."
+  },
+  {
+   "name": "Hive Tempo",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "poison",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Increases your attack speed by 25% for 12 seconds. For the first 8 seconds a swarm fights beside you, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Pooled Venom",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land builds a stack of venom on that enemy, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

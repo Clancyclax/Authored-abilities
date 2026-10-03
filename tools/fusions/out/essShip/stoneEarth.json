@@ -1,0 +1,79 @@
+{
+ "essence": "essShip",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Keel on Shingle",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slams down, dealing 28 damage that ignores armour to every enemy within 3 tiles and leaving each [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shed Ballast",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 9,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Heaves a ballast stone at the first enemy within 6 tiles for 8 damage. For 2 seconds after, you move 10% faster. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Settled Low",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "rock",
+   "cooldown": 36,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "desc": "The damage you take is reduced by 20% for 10 seconds."
+  },
+  {
+   "name": "Good Holding Ground",
+   "element": "rock",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, a shield worth 12% of your maximum health holds for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

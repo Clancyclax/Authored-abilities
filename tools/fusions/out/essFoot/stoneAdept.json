@@ -1,0 +1,74 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Closing Drill",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "chargesMax": 4,
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.6,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A lunging kick at a target up to 5 tiles away that deals 7 damage, up to 1.6 times that from the full distance. Its damage rises 5% for every 100 paces you have run since you last used it, up to 30%. Holds 4 charges, and a kill gives one back."
+  },
+  {
+   "name": "Form Breaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "requiresTargetBelow": 0.25,
+   "base": 22,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "A spinning kick at a target at or below 25% health that deals 22 damage and leaves it 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Kata of the Road",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 6
+   },
+   "desc": "Your critical hit chance rises by 20% for 12 seconds and your movement speed by 20% for 6 seconds."
+  },
+  {
+   "name": "Ten Thousand Steps",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "Each time you cover a long stretch of ground, your next strike within 5 seconds gains 12% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

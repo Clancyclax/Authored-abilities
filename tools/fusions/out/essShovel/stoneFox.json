@@ -1,0 +1,77 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Under the Henhouse Wire",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A low strike that deals 30 damage, ignoring armour, and leaves the target 15% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Dirt in the Eyes",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a spadeful of dirt in a cone 4 tiles long, dealing 10 damage to everything caught in it, stunning each for 1 second and leaving it [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Decoy Den",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 180,
+   "summonKind": "trap",
+   "summonInterval": 0,
+   "summonDuration": 60,
+   "summonDmg": 20,
+   "summonRange": 96,
+   "summonCharges": 2,
+   "summonBlast": 80,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "desc": "Digs a false den at the nearest enemy. It waits up to 60 seconds, and the first 2 enemies to come within 3 tiles set it off: it deals 20 damage in a blast 2.5 tiles across."
+  },
+  {
+   "name": "Always a Back Door",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "earth",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

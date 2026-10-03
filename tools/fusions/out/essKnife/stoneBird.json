@@ -1,0 +1,78 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shrike's Larder",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "consumeAfflictionsPer": 0.6,
+   "base": 16,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Impales the target for 16 damage and uses up every affliction you have on it, dealing 60% more damage for each one. It leaves the target [Pinned] for 3 seconds and 8% easier to wound for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stoop From the Sun",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "chargeTo": 256,
+   "base": 14,
+   "cooldown": 14,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "desc": "Dives you onto a target up to 8 tiles away and stabs for 14 damage, rising to 1.6 times that at full reach."
+  },
+  {
+   "name": "High Perch",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "blinkOnUse": 96,
+   "desc": "Glides you 3 tiles from where you stood, and increases your critical hit chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Gathered Speed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "After you cover enough ground, your next spell deals 25% more damage. Once every 8 seconds."
+  }
+ ]
+}

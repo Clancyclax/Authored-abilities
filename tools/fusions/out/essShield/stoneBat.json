@@ -1,0 +1,84 @@
+{
+  "essence": "essShield",
+  "stone": "stoneBat",
+  "fusions": [
+    {
+      "name": "Gong Shriek",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "resonating",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 16,
+      "range": 160,
+      "coneAngle": 0.6,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Strikes the shield's face. The sound deals 11 damage to everything in a narrow cone 5 tiles ahead, stuns it for 1 second and leaves it [Blunted] for 5 seconds."
+    },
+    {
+      "name": "Sounding Ping",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "resonating",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 380,
+      "radius": 7,
+      "rangeBand": "medium",
+      "chain": {
+        "count": 1,
+        "radius": 96,
+        "frac": 0.6
+      },
+      "chainCount": 1,
+      "chainRange": 96,
+      "chainDamagePct": 0.6,
+      "debuff": {
+        "key": "marked",
+        "chance": 0.3,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Bounces a pulse of sound off the shield's face that deals 3 damage to the first enemy it meets, then echoes to 1 more enemy within 3 tiles for 60% of that damage. Each hit has a 30% chance to leave the target [Marked] for 5 seconds."
+    },
+    {
+      "name": "Roost in Shadow",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "dark",
+      "cooldown": 30,
+      "stealthDuration": 6,
+      "stealthAlpha": 0.3,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 0,
+      "stealthScope": "party",
+      "desc": "Hides you and your allies for 6 seconds. Enemies notice all of you 60% later, and the veil breaks for anyone who attacks."
+    },
+    {
+      "name": "Dusk Sentry",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "dark",
+      "condition": "night",
+      "bonusKind": "armor",
+      "amount": 0.12,
+      "desc": "At night, your armour rises by 12%."
+    }
+  ]
+}

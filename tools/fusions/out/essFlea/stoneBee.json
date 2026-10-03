@@ -1,0 +1,87 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Many Small Mouths",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A swarm of bites that deals 3 damage to every enemy within 2.5 tiles, rising by 10% for each ally near you, up to 40%."
+  },
+  {
+   "name": "Barb Left Behind",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.2,
+   "desc": "Fires a barb at the first enemy in a line up to 6 tiles away, usable only on a target at or below 30% health. It deals 22 damage, leaves the target [Poisoned] for 6 seconds, and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Humming Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 40,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.3,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a swarm of fleas for 12 seconds. Every second it bites an enemy within 4 tiles for 3 damage, with a 30% chance to leave the target [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Never Idle",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 2% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

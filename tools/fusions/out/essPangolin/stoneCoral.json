@@ -1,0 +1,84 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Budded Shard",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Snaps off a scale and throws it at the first enemy it meets, dealing 7 damage and leaving it [Bleeding] for 2 damage a second for 3 seconds. Holds 4 charges; each use spends one and each kill gives one back."
+  },
+  {
+   "name": "Razor Shelf",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 112,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags your tail through a cone 3.5 tiles ahead of you, dealing 26 damage to everything in it and leaving each target [Bleeding] for 6 seconds. It ignores armour."
+  },
+  {
+   "name": "Reef Shelter",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "healScope": "party",
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Grows a reef around where you stand for 8 seconds. You and any ally within 3.5 tiles of it regain 3 health a second."
+  },
+  {
+   "name": "Accreted Shell",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 4. At 4 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (28% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

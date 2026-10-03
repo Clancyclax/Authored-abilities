@@ -1,0 +1,65 @@
+{
+ "essence": "essBird",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Speck on the Horizon",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "speed": 420,
+   "radius": 8,
+   "reachPct": 0.4,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a bolt at the first enemy in its path for 28 damage that ignores its resistances, and leaves it [Marked] for 10 seconds. Its reach is 40% longer."
+  },
+  {
+   "name": "Cull the Weakest",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 17,
+   "cooldown": 15,
+   "range": 84,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.4,
+   "executeLadder": true,
+   "desc": "Usable only on a target at or below 25% health. Stoops onto it for 17 damage and uses up every affliction on it, adding 1.4 times their remaining damage to the blow."
+  },
+  {
+   "name": "Hawk's Focus",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Spots the Straggler",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

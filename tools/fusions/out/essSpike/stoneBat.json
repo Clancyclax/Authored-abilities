@@ -1,0 +1,80 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneBat",
+  "fusions": [
+    {
+      "name": "Twin Punctures",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A weapon strike deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 5 seconds."
+    },
+    {
+      "name": "Hairpin Shriek",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "resonating",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 128,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 64,
+      "debuff": {
+        "key": "slowCast",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A shriek across a cone 4 tiles ahead deals 12 damage to everything in it, knocks each target back 2 tiles and leaves it [Muddled] for 5 seconds."
+    },
+    {
+      "name": "Sounding the Dark",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfCritBuff",
+      "element": "dark",
+      "critChanceBonus": 0.25,
+      "buffDuration": 12,
+      "cooldown": 45,
+      "castTime": 0.3,
+      "desc": "You place each strike by its echo: your critical hit chance rises by 25% for 12 seconds."
+    },
+    {
+      "name": "Lapping the Wound",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blood",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.2,
+        "duration": 5
+      },
+      "desc": "When you land a critical hit, your attacks heal you for 20% of the damage they deal for 5 seconds. Once every 15 seconds."
+    }
+  ]
+}

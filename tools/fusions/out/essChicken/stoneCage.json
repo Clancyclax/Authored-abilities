@@ -1,0 +1,89 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fox in the Henhouse",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 160,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Rushes up to 5 tiles onto the target and pecks it for 12 damage, leaving it [Pinned] for 2 seconds and 10% easier to wound for 4 seconds. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Latch Clatter",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.15,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Batters every enemy within 2 tiles for 3 damage, with a 15% chance to leave each [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Coop Slats",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "cooldown": 30,
+   "desc": "Throws up a slatted fence 5 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Safe Behind Bars",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you afflict an enemy, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

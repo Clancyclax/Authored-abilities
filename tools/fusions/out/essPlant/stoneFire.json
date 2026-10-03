@@ -1,0 +1,87 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Resin Brand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 9,
+   "hpCostPct": 0.05,
+   "speed": 330,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Burns 5% of your maximum health as fuel to throw a brand of resin at one enemy, dealing 9 damage and setting it [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Backburn Front",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 12,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends fire through dry brush across a cone 5 tiles long, dealing 12 damage and leaving every enemy hit [Burning] for 5 seconds. Your afflictions on each enemy hit spread to enemies within 3.5 tiles of it."
+  },
+  {
+   "name": "Charcoal Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and attackers are set [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Ashfall Mulch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "When one of your afflictions on an enemy runs out, you regain 3 health a second for 3 seconds. Once every 6 seconds."
+  }
+ ]
+}

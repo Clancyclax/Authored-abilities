@@ -1,0 +1,86 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Undercut",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "stunOnHit": 1.2,
+   "desc": "Usable only on an enemy at or below 25% health: the bite deals 18 damage, consumes every affliction on the target and adds 1.5 times their remaining damage, and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Ankle-High Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Chops low across everything within 2.5 tiles ahead of you, dealing 4 damage and leaving each target [Bleeding] for 1 damage a second for 4 seconds, with a 30% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Dropped Timber",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Drops a felled trunk across the ground as a barrier 5 tiles long for 6 seconds. Nothing crosses it. You move 20% faster for 4 seconds afterward."
+  },
+  {
+   "name": "Widening Kerf",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. At 6 they all spend at once: a blow strikes it for 20% of your weapon damage per stack (122% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneCage",
+  "fusions": [
+    {
+      "name": "Closing Circle",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 3,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A ring around you that deals 7 damage to every enemy within 3 tiles and leaves them [Slowed] for 3 seconds. Holds 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "Dropped Gate",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 15,
+      "speed": 560,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "requiresTargetBelow": 0.3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Usable only on an enemy at or below 30% health. A bolt that deals 20 damage to the first enemy in its path and leaves the target [Pinned] for 2 seconds. You move 20% faster for 4 seconds afterwards."
+    },
+    {
+      "name": "Every Latch at Once",
+      "kind": "active",
+      "category": "buff",
+      "template": "timeFreeze",
+      "element": "physical",
+      "freezeDuration": 2.5,
+      "freezeRadius": 128,
+      "aoeBand": "medium",
+      "castTime": 0.3,
+      "cooldown": 75,
+      "blinkOnUse": 64,
+      "desc": "After a 0.3-second cast, holds every creature within 4 tiles in place for 2.5 seconds, and you finish it 2 tiles from where you stood."
+    },
+    {
+      "name": "Penned Quarry",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.1,
+      "dodgeBonus": 0.05,
+      "desc": "Against enemies carrying one of your afflictions, you deal 10% more damage. Your dodge chance rises by 5%."
+    }
+  ]
+}

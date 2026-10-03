@@ -1,0 +1,89 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "name": "Fangs of the Hill",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "earth",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 300,
+   "radius": 9,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Breaks 3 stone fangs out of the ground in a spread out to 5 tiles; each deals 6 damage and has a 50% chance to leave its target [Sundered] for 4 seconds. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy at or below 30% health. Digs the target out and bites, which deals 20 damage and consumes every affliction on it, adding 1.2 times their remaining damage. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Dug In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "earth",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 22,
+   "shieldStrikes": 5,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "Digs you into a scrape that absorbs the next 22 damage, up to 5 blows, for 8 seconds. Your armour rises by 10% while it holds."
+  },
+  {
+   "name": "Kicked-Up Scree",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

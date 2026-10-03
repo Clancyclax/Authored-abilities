@@ -1,0 +1,83 @@
+{
+ "essence": "essWind",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Leeward Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 160,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you to a target up to 5 tiles away for a raking strike that deals 12 damage, leaves it 10% easier to wound for 5 seconds and [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Toying Swats",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1.1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 400,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up. Bats 3 claw-cuts of air at it, spread apart, each of which deals 5 damage."
+  },
+  {
+   "name": "Soft-Footed Passage",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "wind",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds: enemies notice you 60% later and you move 22% faster. Attacking ends it."
+  },
+  {
+   "name": "Stalk, Then Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover gives your next strike 25% more critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

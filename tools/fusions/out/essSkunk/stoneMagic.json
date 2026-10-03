@@ -1,0 +1,79 @@
+{
+ "essence": "essSkunk",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Unfiltered",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Hurls a bolt of musk and raw arcana at the first enemy within 7 tiles that deals 30 damage, ignores resistances and leaves the target [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Sympathetic Reek",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 18,
+   "spreadAfflictions": 96,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 3 bolts of musk-laced arcana in a spread out to 7 tiles. Each bolt deals 6 damage, and your afflictions on each enemy hit spread to every enemy within 3 tiles of it."
+  },
+  {
+   "name": "Carries Further",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "arcane",
+   "cooldown": 90,
+   "rangeMult": 1.5,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 65% further."
+  },
+  {
+   "name": "Residue as Reagent",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Each time you inflict a condition, your next spell deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

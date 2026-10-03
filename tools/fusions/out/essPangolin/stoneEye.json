@@ -1,0 +1,83 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Outstared",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 460,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fixes your gaze on the first enemy it meets, dealing 11 arcane damage, stunning it for 1.2 seconds and leaving it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Thrown Glare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "light",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flashes light off your scales in a cone 4 tiles ahead of you, dealing 26 light damage to everything in it and leaving each target [Blunted] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Seen Coming",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "armorBonus": 0.18,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08,
+   "desc": "For 10 seconds your armour rises by 18% and your dodge chance by 8%."
+  },
+  {
+   "name": "Watchful Overlap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "name": "Drink the Softened",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.4,
+   "desc": "Usable only on an enemy carrying one of your afflictions, and uses one of them up. You drink from it, which deals 8 damage and heals you for 40% of the damage dealt."
+  },
+  {
+   "name": "Tenderise",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "A bite that deals 4 damage, leaves the target [Poisoned] for 1 damage a second for 5 seconds and makes it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Raid the Larder",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "cooldown": 20,
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 256,
+   "desc": "Feeds from every body within 8 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Hung for Later",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make builds a stack on you, up to 4. At 4 they all spend at once: you heal for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

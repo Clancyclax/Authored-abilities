@@ -1,0 +1,80 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Flail Head",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 160,
+   "maxMult": 1.6,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Whirls the spade-head out on its tether for 13 damage, rising to 1.6 times that at its full reach of 5 tiles, and stuns the target for 1 second."
+  },
+  {
+   "name": "Picket Pin",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a tethering stake that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Dragline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Drags a chained scoop along a 6-tile line ahead of you for 5 seconds, hauling nearby enemies toward it and slowing those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Work-Song Cadence",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you move and attack 3% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

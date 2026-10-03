@@ -1,0 +1,84 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Bitter Cargo",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Draws the poison back out of a target up to 6 tiles away as you pass. It deals 18 damage, rising to 1.5 times that at maximum range, and uses up every affliction you have on the target for 60% more damage each."
+  },
+  {
+   "name": "Urgent Dispatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Rushes you to a target up to 6 tiles away and vents the poison you have drawn across a cone 3 tiles long. It deals 12 damage and leaves each enemy [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "House Call",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "nature",
+   "cleanseCount": 3,
+   "healScope": "party",
+   "cooldown": 45,
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 3 conditions from you and from each ally, and restores 10 health to you. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Clean Getaway",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "When a condition on you ends, you regain 3 health a second for 4 seconds. Once every 12 seconds. You have 10% poison resistance."
+  }
+ ]
+}

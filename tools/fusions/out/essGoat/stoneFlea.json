@@ -1,0 +1,74 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Ledge to Ledge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "Bounds you up to 7 tiles onto the target and deals 16 damage, leaving it [Diseased] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Nipping Bound",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "desc": "Hops in on a target up to 5 tiles away and deals 4 damage, rising to 1.5 times that from the full 5 tiles."
+  },
+  {
+   "name": "Cliff Skip",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "teleportRange": 224,
+   "cooldown": 14,
+   "dodgeBonus": 0.15,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Bounds you instantly to a point up to 7 tiles away. You move 20% faster for 3 seconds after you use it, with 15% more dodge chance while it lasts."
+  },
+  {
+   "name": "Springing Gait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each stretch of ground you cover raises your physical damage by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

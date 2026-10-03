@@ -1,0 +1,66 @@
+{
+ "essence": "essWasp",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Eaten From Inside",
+   "template": "corpseBlast",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 60,
+   "corpse": true,
+   "range": 288,
+   "explodeRadius": 112,
+   "desc": "Bursts the nearest body within 9 tiles: it deals 28 damage plus 8% of that body's maximum health to everything within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 380,
+   "radius": 7,
+   "name": "Last Course",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 12,
+   "requiresTargetBelow": 0.25,
+   "leech": 0.3,
+   "desc": "Usable only on a target at or below 25% health. A sting that deals 18 damage and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Passed Mouth to Mouth",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "healScope": "party",
+   "cooldown": 24,
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "name": "Stocked for the Brood",
+   "element": "poison",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill you make stocks a cell, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per cell (20% at full). Unfed, a cell empties every 10 seconds."
+  }
+ ]
+}

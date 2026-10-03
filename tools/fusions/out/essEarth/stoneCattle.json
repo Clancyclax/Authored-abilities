@@ -1,0 +1,74 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stampede Ram",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 86,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "You charge up to 7 tiles into the target, dealing 12 damage and leaving it 12% easier to wound for 5 seconds. It deals 5% more for every 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herd Quake",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "You stamp the ground, dealing 26 damage to every enemy within 3 tiles; if it hits, every ally strikes 20% harder for 12 seconds."
+  },
+  {
+   "name": "Ploughed Berm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "You plough a furrow and throw up a berm of earth 6 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Slow Temper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you deal 4% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

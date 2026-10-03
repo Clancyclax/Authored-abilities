@@ -1,0 +1,79 @@
+{
+ "essence": "essDog",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Dummy Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Feints, then bites for 7 damage, leaving the target 8% easier to wound for 4 seconds and with a 50% chance to leave it [Leaden] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Lead Astray",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 18,
+   "range": 224,
+   "lockSeconds": 3,
+   "knockback": 64,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Silences one enemy within 7 tiles for 3 seconds and deals 8 damage, taking its next action away and knocking it back 2 tiles."
+  },
+  {
+   "name": "Decoy Trail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 6 seconds. Enemies notice you 60% later, you move 20% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Sly Opening",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Each time you afflict something, your next strike gains 15% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

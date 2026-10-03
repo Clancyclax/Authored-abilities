@@ -1,0 +1,76 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fetlock Nip",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 72,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up: a kick at its heels that deals 8 damage and leaves it 5% easier to wound for 3 seconds, with a 50% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herding Circle",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "desc": "You circle the pack, dealing 12 damage to every enemy within 3 tiles. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Bay Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "A challenge that pulls up to 5 enemies within 6 tiles onto you for 6 seconds. A hound fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Carriage Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "wolf",
+   "familiarCreatureName": "Carriage Hound",
+   "desc": "Calls a bonded hound that runs at your heels and strikes enemies within 4.5 tiles for 4 damage every 1.2 seconds."
+  }
+ ]
+}

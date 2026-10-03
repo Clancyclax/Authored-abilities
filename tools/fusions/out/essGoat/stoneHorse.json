@@ -1,0 +1,73 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Running Thunder",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 36,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "huge",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Thunders forward in a cone 5 tiles long, dealing 36 damage to everything caught in it. When it hits, your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Rear Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "chargesMax": 4,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Kicks the target for 8 damage and leaves it 8% easier to wound for 4 seconds. Holds 4 charges; each kill restores one."
+  },
+  {
+   "name": "Gallop Break",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 10,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Springs you 5 tiles forward. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Drumming Pace",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 6. The next ability you use spends them all: you move and attack 5% faster per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

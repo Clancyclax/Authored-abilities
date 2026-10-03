@@ -1,0 +1,84 @@
+{
+ "essence": "might",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Hind-Leg Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "knockback": 112,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Kicks out behind you. It deals 12 damage, knocks the target back 3.5 tiles and leaves it 10% easier to wound for 4 seconds. You move 20% faster for 3 seconds afterwards."
+  },
+  {
+   "name": "Tine Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rakes antlers through a cone 2.5 tiles long. It deals 4 damage to everything in it, with a 30% chance to leave each [Sundered] for 4 seconds."
+  },
+  {
+   "name": "Locked Antlers",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 24,
+   "reflectKind": "damage",
+   "reflectFrac": 0.35,
+   "reflectChance": 1,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 35% of the damage you take is shoved back onto whoever dealt it."
+  },
+  {
+   "name": "Startled into Fury",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "Each time you are hurt by anything other than fire, your physical damage rises by 30% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

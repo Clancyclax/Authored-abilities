@@ -1,0 +1,76 @@
+{
+ "essence": "essFish",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Run Down the Wounded",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 12,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Usable only on a target at or below 30% health. A snapping dart deals 18 damage and leaves it [Bleeding] for 5 seconds. Its damage rises 10% for each ally beside you, up to 40%."
+  },
+  {
+   "name": "Many Mouths",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Tears into everything around you, dealing 28 damage to every enemy within 3.5 tiles, and you and your allies strike 20% harder for 15 seconds."
+  },
+  {
+   "name": "Snapping Pack",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDuration": 10,
+   "summonDmg": 4,
+   "summonRange": 160,
+   "summonInterval": 1,
+   "castTime": 0.5,
+   "desc": "Calls a pack of dogfish that fights for 10 seconds, biting an enemy within 5 tiles for 4 damage every second."
+  },
+  {
+   "name": "Holding the Scent",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

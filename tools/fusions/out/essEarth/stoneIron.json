@@ -1,0 +1,75 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Slag Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Fires a bolt of iron filings that deals 8 damage to the first enemy it meets, with a 25% chance of leaving it [Exposed] for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Heavy Ore",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 34,
+   "cooldown": 100,
+   "range": 256,
+   "maxMult": 1.6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "desc": "Hurls a lump of ore that deals 34 damage, rising to 1.6 times that at its full reach of 8 tiles. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Spiteful Return",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "earth",
+   "buffDuration": 8,
+   "thornsFrac": 0.6,
+   "cooldown": 30,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Accreted Armour",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.06,
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (45% at full). Unfed, a stack fades every 10 seconds. It also hardens your armour by 6% at all times."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essWind",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Antler Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A hooking antler strike that deals 4 damage and leaves the target 5% easier to wound for 3 seconds, then you move 10% faster for 2 seconds."
+  },
+  {
+   "name": "Flushed From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1.1,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 400,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 3,
+   "desc": "Looses 4 slivers of air, spread apart, each of which deals 5 damage with a 30% chance to leave the target [Slowed] for 3 seconds. Holds 3 charges; a kill gives one back.",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Gone at a Sound",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "wind",
+   "cooldown": 14,
+   "teleportRange": 224,
+   "dodgeBonus": 0.1,
+   "desc": "Springs you instantly to a spot up to 7 tiles away, and your dodge chance rises by 10%."
+  },
+  {
+   "name": "Ears Already Turning",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "wind",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a dodge that fails is rolled again, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essFox",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Harrying Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A quick bite that deals 4 damage and leaves the target 8% easier to wound for 3 seconds. Its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Point the Pack",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A strike on a target up to 7 tiles away that deals 26 damage, rising to 1.5 times that at full reach, and leaves it [Marked] for 8 seconds. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Long-Grass Hush",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 36,
+   "stealthDuration": 6,
+   "stealthScope": "party",
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "desc": "Veils you and your allies for 6 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Poacher's Lurcher",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Lurcher",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Calls a lurcher familiar that fights beside you, striking an enemy within 4.5 tiles for 4 damage every 1.2 seconds. Anything it strikes is slowed by 20% for 2 seconds."
+  }
+ ]
+}

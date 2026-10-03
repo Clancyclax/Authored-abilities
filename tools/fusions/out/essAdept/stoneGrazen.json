@@ -1,0 +1,76 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Cropping Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "healOnUse": 4,
+   "desc": "Takes a mouthful from every enemy within 2.5 tiles, which deals 7 damage and restores 4 health to you. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Cut from the Herd",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "A culling blow that deals 22 damage and leaves the target 15% easier to wound for 6 seconds. Its damage rises 8% for each ally near you (max 32%). Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Winter Byre",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 36,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Creates a field where you stand for 10 seconds that restores 3 health a second to you and any ally within 3.5 tiles of it."
+  },
+  {
+   "name": "Chores Before Dawn",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 8. At 8 they all spend at once: you are healed for 3% of your maximum health per stack (24% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

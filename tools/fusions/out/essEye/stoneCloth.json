@@ -1,0 +1,77 @@
+{
+ "essence": "essEye",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hooding Throw",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "speed": 380,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a weighted hood that hits the first enemy in its path for 12 damage, stuns it for 1.2 seconds and leaves it [Suppressed] for 3 seconds, its abilities out of reach."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Needle Fan",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a fan of needles 3 tiles ahead of you, dealing 7 damage to everything in it, with a 30% chance per hit to leave it [Hindered] for 3 seconds, its attacks slowed. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Behind the Curtain",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "light",
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 0,
+   "stealthScope": "party",
+   "cooldown": 45,
+   "desc": "Veils you and your allies for 5 seconds: enemies notice you 50% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Folded Light",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "light",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your dodge chance rises by 10%."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essWhip",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Colony on the Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Flicks a sea-whip frond at an enemy up to 6 tiles away, which deals 4 damage, up to 1.8 times that at full reach, and leaves it [Bleeding] for 1 damage a second for 5 seconds. Its damage rises 10% for each affliction already on the target (max 40%)."
+  },
+  {
+   "name": "Feeding Fronds",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "leech": 0.2,
+   "desc": "Sweeps a stinging frond around you that deals 7 damage to every enemy within 3 tiles, and you heal for 20% of the damage dealt. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Gorgonian Grove",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Grows a stand of sea whips around you for 8 seconds; it restores 3 health a second to you and every ally within 4 tiles of it."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a polyp buds on your lash, up to 6. At 6 they all spend at once: you are healed for 3% of your maximum health per polyp (18% at full). Unfed, a polyp fades every 6 seconds."
+  }
+ ]
+}

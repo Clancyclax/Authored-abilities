@@ -1,0 +1,78 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Noticed Flaw",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 15,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.6,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a spicule into the flaw you noticed: it deals 15 damage to the first enemy it meets, uses up every affliction you have on it and deals 60% more damage for each one, and leaves it [Marked] for 10 seconds."
+  },
+  {
+   "name": "Lidless Thousand",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Stings everything in a cone 4 tiles long for 4 damage. Its damage rises 8% for each affliction already on the target, up to 40%."
+  },
+  {
+   "name": "Gorgon's Regard",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "rock",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "desc": "Your stare stiffens flesh into coral, holding every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Watched Wounds",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 10,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 10. Your next critical hit on it spends them all: a blow strikes it for 20% of your weapon damage per stack (204% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

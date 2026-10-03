@@ -1,0 +1,76 @@
+{
+ "essence": "essBow",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Studied Weakness",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Looses an arrow at a target up to 8 tiles away that deals 16 damage, uses up every affliction you have on it and deals 50% more damage for each one, then leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Sweeping Gaze",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "range": 224,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a fan of arrows 7 tiles ahead of you that deals 25 damage to everything in it and leaves each target [Marked] for 10 seconds. It ignores resistances."
+  },
+  {
+   "name": "Far Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.36,
+   "buffDuration": 20,
+   "cooldown": 75,
+   "desc": "For 20 seconds, your attacks and spells reach 50% further."
+  },
+  {
+   "name": "Unbroken Stare",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 10,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.7,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 10. Your next critical hit on it spends them all: a blow strikes it for 24% of your weapon damage per stack (238% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

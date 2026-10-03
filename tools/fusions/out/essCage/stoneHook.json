@@ -1,0 +1,94 @@
+{
+ "essence": "essCage",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Throws a barbed hook that deals 8 damage, rising to 1.5 times that at its full reach of 7 tiles, and leaves the target [Bleeding] for 2 damage a second for 5 seconds. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Grapple Lines",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 2 hooked lines, each dealing 8 damage, with a 40% chance to leave the target [Slowed] for 4 seconds. Your afflictions on a target hit spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Snagline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "desc": "Drags every enemy near a baited line ahead of you inward for 6 seconds. Anything struck moves 25% slower for 2 seconds. The wall is 6 tiles long."
+  },
+  {
+   "name": "Catch and Hold",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "desc": "Each time you afflict an enemy, a shield worth 15% of your maximum health closes over you for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

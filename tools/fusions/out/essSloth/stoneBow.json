@@ -1,0 +1,75 @@
+{
+ "essence": "essSloth",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Loose When Ready",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 288,
+   "maxMult": 2,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 3
+   },
+   "desc": "An arrow loosed at a target up to 9 tiles away that deals 4 damage, rising to 2 times that at full reach, and slows the target by 20% for 3 seconds."
+  },
+  {
+   "name": "The Long Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 80,
+   "castTime": 2,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 352,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "After a 2-second draw, fires an arrow that deals 34 damage to the first enemy it meets and ignores its armour."
+  },
+  {
+   "name": "No Need to Walk",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.4,
+   "buffDuration": 30,
+   "castTime": 1.5,
+   "cooldown": 100,
+   "desc": "After a 1.5-second cast, your attacks and spells reach 40% further for 30 seconds."
+  },
+  {
+   "name": "Tension Kept",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "seconds": 10,
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essFish",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Closing Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "Sends a grasping current that deals 10 damage and leaves the target [Pinned] for 3 seconds. Your afflictions on it spread to enemies within 3 tiles."
+  },
+  {
+   "name": "Squeeze Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 15 damage. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Loosened Grip",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 60,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "allyScaling": {
+    "per": 0.11,
+    "max": 4,
+    "range": 180
+   },
+   "allyGrant": {
+    "power": 1,
+    "dmgPct": 0.33
+   },
+   "perAllyGain": {
+    "resistPct": 0.22,
+    "dotChancePct": 0.22
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Removes 2 conditions from you. Fighting beside others pays: +11% per ally within 5.5 tiles, capped at 4."
+  },
+  {
+   "name": "Steady Shoal",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "crit",
+   "amount": 0.06,
+   "armorBonus": 0.12,
+   "regenPerSec": 1,
+   "desc": "Your critical hit chance rises by 6%. It also hardens your armour by 12% and regenerates 1 health a second, permanently."
+  }
+ ]
+}

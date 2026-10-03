@@ -1,0 +1,85 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Polyp Fan",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Opens a fan of stinging threads in a cone 3 tiles long, which deals 3 damage to everything in it, with a 30% chance to leave each [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Spawning Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lobs an egg sac that deals 28 damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 5 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Air Bell",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Spins a bell of air where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3.5 tiles."
+  },
+  {
+   "name": "Calcified Lattice",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every time you land a hit, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (34% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

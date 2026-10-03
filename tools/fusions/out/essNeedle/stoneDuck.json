@@ -1,0 +1,77 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Pinned Mid-Paddle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Flicks a pinfeather that deals 8 damage to the first enemy it meets, with a 50% chance to leave it [Pinned] for 1.5 seconds. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Moulting Shake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Shakes off water and pinfeathers, dealing 4 water damage to every enemy within 2.5 tiles. Each hit has a 40% chance to leave the target [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Preened Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Removes 3 conditions from you. Your movement speed rises 15% for 4 seconds."
+  },
+  {
+   "name": "Never Flustered",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "crit",
+   "amount": 0.08,
+   "cooldownReduction": 0.05,
+   "desc": "Your critical strike chance rises by 8%, and your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

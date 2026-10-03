@@ -1,0 +1,72 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Shoulder Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Barges around you and deals 4 blunt damage to every enemy within 2 tiles. Its damage rises 10% for each ally near you, up to 30%."
+  },
+  {
+   "name": "Bull Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 2,
+   "bossPct": 0.05,
+   "desc": "Charges an enemy up to 7 tiles away and deals 26 blunt damage, rising to double that at 7 tiles, plus 5% of its maximum health if it is a boss or elite."
+  },
+  {
+   "name": "Shared Heat",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "nature",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "cooldown": 45,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Well Fed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 8
+   },
+   "desc": "While you are at full health, a shield worth 20% of your maximum health closes over you for 8 seconds. Once every 20 seconds."
+  }
+ ]
+}

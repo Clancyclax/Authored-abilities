@@ -1,0 +1,79 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneBear",
+ "fusions": [
+  {
+   "name": "Heavyweight Hindkick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "knockback": 112,
+   "desc": "A two-footed kick with your whole weight behind it. It deals 30 damage, throws the target back 3.5 tiles and leaves it 15% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Bluff Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 160,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you at an enemy up to 5 tiles away and rears up, dealing 11 damage to every enemy within 2.5 tiles, with a 50% chance to leave each [Weakened] for 4 seconds."
+  },
+  {
+   "name": "Denning Leap",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "hp",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 30,
+   "blinkOnUse": 64,
+   "desc": "You spring 2 tiles aside, then restore 4 health a second for 6 seconds."
+  },
+  {
+   "name": "Winter Fat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "The moment your stamina runs out, you gain a shield worth 15% of your maximum health for 4 seconds. Once every 20 seconds."
+  }
+ ]
+}

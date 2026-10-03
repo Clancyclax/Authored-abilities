@@ -1,0 +1,79 @@
+{
+ "essence": "essBear",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Barnacled Rake",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 72,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes the target with reef-crusted claws for 12 damage, leaves it 8% easier to wound for 4 seconds and sets it [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Brittle Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 7,
+   "range": 200,
+   "isAoe": true,
+   "chargesMax": 3,
+   "desc": "Tears loose reef growth from your hide and flings 3 shards in a spread, each dealing 5 damage. It holds 3 charges, and each kill gives a charge back."
+  },
+  {
+   "name": "Reef Den",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "water",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 96,
+   "healScope": "party",
+   "desc": "Grows a reef den where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Accreting Crust",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "regenPerSec": 0.5,
+   "desc": "Every time you take damage, the reef on you grows a stack, up to 6. At 6 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (34% at full). Unfed, a stack fades every 10 seconds. You also regenerate 0.5 health a second."
+  }
+ ]
+}

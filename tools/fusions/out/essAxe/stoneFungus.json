@@ -1,0 +1,88 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mildew Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A swing that deals 4 damage to everything within 2.5 tiles ahead of you; each hit has a 40% chance to leave the target [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Puffball Hatchet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "desc": "Throws a hatchet that needs one of your afflictions on the target and uses it up, dealing 9 damage with a 60% chance to leave the target [Diseased] for 8 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Fruiting Haft",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "nature",
+   "cooldown": 60,
+   "powerMult": 1.25,
+   "buffDuration": 15,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your damage by 25% for 15 seconds. For 10 of those seconds a cloud of spores fights beside you, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Good Mulch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you heal for 20% of the damage you deal for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneFeast",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Carve the Roast",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "leech": 0.25,
+   "desc": "Carves into an enemy at or below 25% health for 16 damage, adding 1.4 times the remaining damage of every affliction you have on it and using them up. You heal for 25% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trencherman's Cleave",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "leech": 0.15,
+   "desc": "Hacks an arc that deals 7 damage to everything within 2.5 tiles ahead of you and heals you for 15% of the damage dealt. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Butcher the Carcass",
+   "kind": "active",
+   "category": "restore",
+   "template": "corpseDrain",
+   "element": "physical",
+   "base": 5,
+   "corpse": true,
+   "resource": "hp",
+   "drainFrac": 0.07,
+   "range": 256,
+   "cooldown": 20,
+   "desc": "Butchers every body within 8 tiles, up to 5; each gives back 7% of your health."
+  },
+  {
+   "name": "Second Helping",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 12
+   },
+   "desc": "When you kill an enemy, you restore 12 stamina. Once every 8 seconds."
+  }
+ ]
+}

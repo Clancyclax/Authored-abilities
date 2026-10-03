@@ -1,0 +1,82 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cull the Ailing",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Leaps up to 6 tiles to the target and deals 14 slashing damage, 10% more for each affliction already on it, up to 50% more, and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Scratch Fever",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A scratch that deals 4 slashing damage and leaves the target with Rot for 1 damage a second for 4 seconds. You move 10% faster for 2 seconds after."
+  },
+  {
+   "name": "Soft Landing",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "nature",
+   "immunityDuration": 4,
+   "cooldown": 90,
+   "healOnUse": 10,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you, and you restore 10 health."
+  },
+  {
+   "name": "Spare Lives",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 50%, you regain 4 health a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

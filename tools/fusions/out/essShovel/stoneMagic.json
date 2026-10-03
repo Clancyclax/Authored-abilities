@@ -1,0 +1,78 @@
+{
+ "essence": "essShovel",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Strip the Overburden",
+   "template": "sunderStrike",
+   "element": "arcane",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A scraping cut that deals 5 damage and leaves the target 8% easier to wound for 3 seconds, with a 30% chance to leave it [Exposed] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Down to the Ley",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Cuts into a ley line under the target for 34 damage, rising to 1.6 times that at its full reach of 6 tiles, and ignoring the target's resistances."
+  },
+  {
+   "name": "Dowsed Well",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 45,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "desc": "Restores 4 mana a second for 8 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyMana",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 15
+   },
+   "name": "The Lower Lode",
+   "element": "arcane",
+   "desc": "When your mana runs out, you restore 15 mana. Once every 30 seconds."
+  }
+ ]
+}

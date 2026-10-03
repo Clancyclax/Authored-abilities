@@ -1,0 +1,98 @@
+{
+  "essence": "essThread",
+  "stone": "stoneCrocodile",
+  "fusions": [
+    {
+      "name": "Spooled Under",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "water",
+      "role": "execute",
+      "base": 22,
+      "cooldown": 16,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "requiresTargetBelow": 0.3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Usable only on a target at or below 30% health. You clamp on and roll, winding the line round the target. The roll deals 22 damage and leaves it [Pinned] for 3 seconds and 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Sunken Tripwire",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "guaranteedCrit": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Snaps a hidden line taut across a cone 4 tiles long. It deals 28 damage to everything in it. Every hit is a critical hit and leaves the target [Slowed] for 4 seconds."
+    },
+    {
+      "name": "Snare That Waits",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "physical",
+      "cooldown": 90,
+      "summonKind": "trap",
+      "summonDmg": 22,
+      "summonDuration": 30,
+      "summonInterval": 0,
+      "summonRange": 64,
+      "summonCharges": 1,
+      "summonBlast": 64,
+      "summonArmDelay": 1,
+      "trapDelivery": "spawned",
+      "castTime": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Takes 1 second to set a snare line at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles is caught: the snare deals 22 damage and leaves it [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Snap Shut",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 6
+      },
+      "desc": "When one of your conditions on an enemy runs out, your physical damage rises 30% for 6 seconds. Once every 20 seconds."
+    }
+  ]
+}

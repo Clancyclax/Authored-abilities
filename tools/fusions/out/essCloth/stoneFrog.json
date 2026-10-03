@@ -1,0 +1,86 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Wrung Droplet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a thread-wrapped bead of water that deals 4 damage to the first enemy it meets, with a 30% chance per hit to leave it [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Snapped Up",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.3,
+   "requiresTargetBelow": 0.25,
+   "desc": "Lashes a sticky thread at an enemy up to 7 tiles away that is at or below 25% health, dealing 24 damage, up to 1.3 times as much at full reach."
+  },
+  {
+   "name": "Spring Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDuration": 20,
+   "summonDmg": 16,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 80,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a coiled thread trap beside the nearest enemy, where it waits up to 20 seconds. The first 2 enemies to come within 2 tiles take 16 damage in a blast 2.5 tiles across and are [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Coiled Reserve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "The moment your stamina runs out, a coiled thread springs loose and restores 10 stamina. Once every 30 seconds."
+  }
+ ]
+}

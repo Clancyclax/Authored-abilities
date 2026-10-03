@@ -1,0 +1,75 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lidless Stare",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "stunOnHit": 1.4,
+   "desc": "Your stare fixes on the first enemy in its path: it deals 12 damage and stuns the target for 1.4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unbroken Regard",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A look held on an enemy up to 8 tiles away deals 26 damage, rising to 1.8 times that at full reach, and ignores resistances. The target is left [Marked] for 10 seconds."
+  },
+  {
+   "name": "Slow Sway",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "desc": "Your swaying gaze holds every creature within 4 tiles in place for 2 seconds. When it lets go, they move 30% slower for 3 seconds."
+  },
+  {
+   "name": "Never Looks Away",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Host to Host",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a flea at the first enemy in a line up to 6 tiles away that deals 7 damage, then hops on to 3 more enemies within 3 tiles, each hit dealing 60% of the first. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Linked Infestation",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "desc": "A burst of bites that deals 12 damage to every enemy within 3 tiles, and your afflictions on each of them spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Shortened Tether",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "cooldown": 30,
+   "desc": "Lays a line of links 6 tiles long for 5 seconds that drags nearby enemies toward it and slows those it catches by 20% for 2 seconds."
+  },
+  {
+   "name": "Jump Ship",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "lightning",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "When you kill an enemy, a bolt leaps to the nearest enemy within 6 tiles for 8 lightning damage, then on to 2 more within 3 tiles at 60%. Once every 6 seconds."
+  }
+ ]
+}

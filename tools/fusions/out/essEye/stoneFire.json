@@ -1,0 +1,75 @@
+{
+ "essence": "essEye",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Burning Glass",
+   "template": "rangeStrike",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Focuses heat on a target up to 7 tiles away for 4 damage, rising to 1.4 times that at full reach, and sets it [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kindling Point",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "speed": 480,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Fires a bolt that hits the first enemy in its path for 15 damage and uses up every affliction you have on it, dealing 60% more damage for each one."
+  },
+  {
+   "name": "Staring at the Sun",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 10,
+   "thornsFrac": 0.35,
+   "cooldown": 30,
+   "desc": "For 10 seconds, 35% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Caught Spark",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

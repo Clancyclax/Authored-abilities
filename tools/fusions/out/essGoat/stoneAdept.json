@@ -1,0 +1,72 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Perfect Form",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 96,
+   "maxMult": 1.5,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "guaranteedCrit": true,
+   "desc": "Lunges horns-first at a target up to 3 tiles away, dealing 30 damage, rising to 1.5 times that at full reach. The hit always lands as a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Practice Stone",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Kicks a stone at the first enemy in its path, dealing 4 damage. It has 50% more critical chance against an enemy that has not been wounded yet."
+  },
+  {
+   "name": "Again, Harder",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Footwork Drills",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 6. The next ability you use spends them all: you deal 4% more damage per stack (22% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

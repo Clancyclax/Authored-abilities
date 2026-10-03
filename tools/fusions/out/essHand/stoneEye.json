@@ -1,0 +1,79 @@
+{
+ "essence": "essHand",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Poke in the Pupil",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.35,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "desc": "A two-finger jab that deals 4 damage, leaves the target 6% easier to wound for 4 seconds, and has a 35% chance to leave it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Open-Palm Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 192,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looks down a narrow cone 6 tiles long through an eye in your raised palm, dealing 28 arcane damage that ignores resistance to everything in it and leaving each target [Marked] for 10 seconds."
+  },
+  {
+   "name": "Hamsa Ward",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectChance": 0.4,
+   "reflectFrac": 0.4,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is sent back to whoever dealt it."
+  },
+  {
+   "name": "Double Take",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

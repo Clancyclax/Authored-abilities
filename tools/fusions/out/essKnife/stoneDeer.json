@@ -1,0 +1,75 @@
+{
+ "essence": "essKnife",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Parting Flick",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.7,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Throws a knife that deals 4 damage to the first enemy it meets. You move 15% faster for 2 seconds after."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Break Cover",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "medium",
+   "stunOnHit": 1,
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Bursts out with the blade drawn, dealing 12 damage to every enemy within 3 tiles and stunning each for 1 second. You move 25% faster for 3 seconds after."
+  },
+  {
+   "name": "Startle Reflex",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "blinkOnUse": 96,
+   "desc": "Springs you 3 tiles from where you stood and clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Stung Into Motion",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything other than fire, your physical damage rises by 20% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

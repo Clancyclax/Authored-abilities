@@ -1,0 +1,79 @@
+{
+ "essence": "essShark",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Scalding Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A weapon strike that costs 5% of your maximum health, deals 9 fire damage and sets the target [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rolling Boil",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "fire",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Scalds every enemy within 3.5 tiles for 10 fire damage and sets each [Burning] for 2 damage a second for 5 seconds. Your afflictions on each target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Warm-Blooded Surge",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Raises your attack speed by 30% for 12 seconds."
+  },
+  {
+   "name": "Blood Heat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cave Shriek",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You shriek into the rock ahead, dealing 3 damage to everything in a cone 4 tiles ahead, with a 25% chance to leave each one [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stalactite Drop",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "speed": 400,
+   "radius": 10,
+   "requiresTargetBelow": 0.25,
+   "desc": "Brings a spike of cave stone down on an enemy at or below 25% health, dealing 26 damage."
+  },
+  {
+   "name": "Roost Overhead",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "earth",
+   "immunityDuration": 3,
+   "blinkOnUse": 64,
+   "cooldown": 60,
+   "desc": "You flit up onto the rock overhead, landing 2 tiles away; for 3 seconds blows deal no damage to you and no condition can take hold of you."
+  },
+  {
+   "name": "Sunless Hide",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "night",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "dodgeBonus": 0.04,
+   "desc": "At night, your armour rises by 12%. You gain +4% dodge chance at all times."
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Pinning Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps on the target's foot, dealing 12 damage, stunning it for 1 second and leaving it [Pinned] for 2 seconds and [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Closing Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Paces a tight ring around you, dealing 28 damage to every enemy within 4 tiles, ignoring their resistances, and leaving each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Barred Path",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Raises a line of bars 5 tiles long for 6 seconds that nothing can cross. You move 20% faster for 3 seconds."
+  },
+  {
+   "name": "Restless Pacing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "Each time you cover a long stretch of ground, a shield worth 12% of your maximum health closes over you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

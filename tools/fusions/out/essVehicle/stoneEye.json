@@ -1,0 +1,83 @@
+{
+ "essence": "essVehicle",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Full Lamps",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "light",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "stun",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Turns both carriage lamps on everything in a cone 4 tiles long. The glare deals 26 damage that ignores resistance and leaves each enemy [Stunned] for 1.5 seconds."
+  },
+  {
+   "name": "Bearing Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 224,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fixes on a target up to 7 tiles away and rushes you to it. The blow deals 14 damage, rising to 1.5 times that at maximum range, and leaves the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Lookout's Perch",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.3,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "castTime": 0,
+   "desc": "For 20 seconds, your attacks and spells reach 30% further."
+  },
+  {
+   "name": "Watched Approach",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover, your critical hit chance rises by 30% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

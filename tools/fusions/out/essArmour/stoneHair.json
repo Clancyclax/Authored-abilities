@@ -1,0 +1,75 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Tangled Volley",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Looses 5 strands in a fan, each dealing 3 damage, with a 40% chance to leave the target [Slowed] for 4 seconds. Your afflictions on a target hit spread to every enemy within 3 tiles.",
+   "cooldown": 14,
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "volleyCount": 5,
+   "volleySpread": 0.36,
+   "base": 3,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220
+  },
+  {
+   "name": "Reeled Strand",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "desc": "Strikes only a target carrying one of your afflictions, using it up: deals 7 damage, up to 1.6 times as much at 5 tiles.",
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.6,
+   "consumeAffliction": true
+  },
+  {
+   "name": "Woven Screen",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "desc": "Weaves a screen of strands 5 tiles long that nothing crosses for 8 seconds.",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "cooldown": 30
+  },
+  {
+   "name": "Combed Links",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "desc": "Conjures armour of woven strands: every hit you take is 2 lower, your armour rises by 10%, your dodge chance rises by 3%, and 5% of the damage you take goes back to whoever dealt it.",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.05,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.03
+    }
+   ]
+  }
+ ]
+}

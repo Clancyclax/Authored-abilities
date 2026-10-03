@@ -1,0 +1,77 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "name": "Bring It Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 12,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Sets the swarm on an enemy at or below 30% health for 20 damage. Its damage rises 10% for each ally beside you (max 40%)."
+  },
+  {
+   "name": "Pack in Full Cry",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A cone of sound 5 tiles ahead of you deals 26 resonating damage to everything in it. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Faithful Scavengers",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cleanseCount": 2,
+   "healScope": "ally",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "desc": "The swarm eats up to 2 conditions off the ally who needs it most, and they regain 10 health."
+  },
+  {
+   "name": "Husk Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Husk Hound",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A bonded hound runs with you, biting enemies within 5 tiles for 4 damage every 1.2 seconds and leaving them [Bleeding] for 2 damage a second for 4 seconds. Each kill restores 3 health to you.",
+   "lifeOnKill": 3
+  }
+ ]
+}

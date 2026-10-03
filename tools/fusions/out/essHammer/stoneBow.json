@@ -1,0 +1,73 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Fowler's Blunt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a blunt-headed arrow that deals 5 damage to the first enemy in its path, with a 30% chance to leave it [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Loosed at Full Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 288,
+   "maxMult": 2.2,
+   "guaranteedCrit": true,
+   "desc": "Draws the hammer back and throws it at a target up to 9 tiles away for 28 damage, rising to 2.2 times that at full reach. It always lands as a critical hit."
+  },
+  {
+   "name": "Lengthened Haft",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "castTime": 1,
+   "desc": "After a 1-second cast, your attacks and spells reach 54% further for 15 seconds."
+  },
+  {
+   "name": "String Pulled Taut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "After 10 seconds without a critical hit, your critical chance rises by 30% for your next strike. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneCage",
+ "fusions": [
+  {
+   "name": "Grille Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1.4,
+   "stunOnHit": 1.5,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 4
+   },
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Throws an iron grille at a target up to 6 tiles away that deals 12 damage, rising to 1.4 times that at full reach. It stuns the target for 1.5 seconds, and the target moves 30% slower for 4 seconds."
+  },
+  {
+   "name": "Portcullis Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 96,
+   "coneAngle": 1.4,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Drops a gate across the front, which deals 30 damage to everything within 3 tiles ahead of you. Every hit is a critical hit and leaves the target [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Standstill",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "physical",
+   "freezeDuration": 4,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "After a 1-second cast, holds every creature within 4 tiles in place for 4 seconds, then leaves each of them moving 30% slower for 3 seconds."
+  },
+  {
+   "name": "Warden's Side",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, your armour is 10% higher."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "essence": "essBird",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Smothering Billow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "isAoe": true,
+   "range": 128,
+   "coneAngle": 0.9,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Billows your wings over a cone 4 tiles long, dealing 10 damage to everything in it and stunning it for 1 second."
+  },
+  {
+   "name": "Unpicking Peck",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 6,
+   "consumeAffliction": true,
+   "desc": "Darts a quill at a target carrying one of your afflictions for 8 damage, using that affliction up."
+  },
+  {
+   "name": "Woven Nest",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "physical",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "healScope": "party",
+   "desc": "Weaves a nest 3 tiles around where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Tucked Under the Wing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "The moment your stamina runs out, a shield worth 15% of your maximum health closes over you for 4 seconds. Once every 20 seconds."
+  }
+ ]
+}

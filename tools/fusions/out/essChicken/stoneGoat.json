@@ -1,0 +1,78 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hard Knock",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Butts the target for 14 damage, knocks it back 3 tiles and leaves it 12% easier to wound for 5 seconds. Its damage rises 8% for each ally beside you, up to 32%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cornered Flurry",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.04,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Flaps and kicks in a ring, dealing 8 damage to every enemy within 3 tiles. Each use costs 4% of your maximum health, and its damage rises 6% for every tenth of your health already gone, up to 30%."
+  },
+  {
+   "name": "Peck Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.6,
+   "lifeOnKill": 5,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Dig In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 8
+   },
+   "desc": "When your health falls below 30%, you gain a shield worth 25% of your maximum health for 8 seconds. Once every 60 seconds."
+  }
+ ]
+}

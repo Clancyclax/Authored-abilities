@@ -1,0 +1,74 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Far-Sighted Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.8,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Sights and throws a weighted thread at an enemy up to 8 tiles away, which deals 4 damage, rising to 1.8 times that at maximum range, and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Nothing Hidden",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a fang at the first enemy it meets, which deals 30 damage that ignores armour and leaves it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Eight Ways Watching",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your dodge chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Second Look",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that fails to crit is rolled again, and the second roll stands."
+  }
+ ]
+}

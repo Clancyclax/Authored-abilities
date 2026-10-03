@@ -1,0 +1,74 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Ground",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "requiresTargetBelow": 0.25,
+   "desc": "Only strikes a target at or below 25% health. A lunge at a target up to 7 tiles away that deals 18 damage, up to 1.8 times that at full range."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Skittish Nip",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 70,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 2
+   },
+   "desc": "A quick bite that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. Your movement speed rises 12% for 2 seconds."
+  },
+  {
+   "name": "Startled Plunge",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "water",
+   "speedMult": 1.3,
+   "buffDuration": 5,
+   "blinkOnUse": 64,
+   "cooldown": 20,
+   "desc": "You lurch 2 tiles away and your movement speed rises 30% for 5 seconds."
+  },
+  {
+   "name": "Flinch-Set Scales",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "When you are hurt by anything but fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

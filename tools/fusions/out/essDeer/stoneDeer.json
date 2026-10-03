@@ -1,0 +1,70 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Twelve-Point Leap",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 2,
+   "bossPct": 0.05,
+   "desc": "Leaps at an enemy up to 7 tiles away and deals 30 piercing damage, rising to double that at 7 tiles, plus 5% of its maximum health if it is a boss or elite."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Startle Kick",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Kicks out around you, dealing 4 blunt damage to every enemy within 2 tiles, and your movement speed rises by 15% for 2 seconds."
+  },
+  {
+   "name": "Flushed From Cover",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 128,
+   "cooldown": 6,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 4
+   },
+   "desc": "Bursts 4 tiles forward, then your movement speed rises by 30% for 4 seconds."
+  },
+  {
+   "name": "Every Blow Slipped",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you dodge builds a stack on you, up to 6. The next ability you use spends them all: you deal 3% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

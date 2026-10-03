@@ -1,0 +1,87 @@
+{
+ "essence": "essWolf",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "name": "Locked Jaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "stunOnHit": 1.5,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "Locks your jaws on the target, which deals 13 damage, stuns it for 1.5 seconds and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Driven to the Crossing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "bossPct": 0.05,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "allyScaling": {
+    "per": 0.08,
+    "max": 4,
+    "range": 176
+   },
+   "allyRange": 176,
+   "allyMax": 4,
+   "desc": "Bursts out of the shallows through a cone 3 tiles long, which deals 28 damage to everything in it. Against a boss or an elite it also deals 5% of their maximum health. The effect grows 8% for each ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Fast, Then Gorge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 45,
+   "healAmount": 22,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 22 health to you, rising 8% for every 10% of your health already gone (max 40%). The heal has a 10% chance to crit."
+  },
+  {
+   "name": "The Long Wait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "After 8 seconds without a critical hit, your next strike gains 40% critical hit chance. Once every 10 seconds. Anything you strike moves 15% slower for 2 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Pounce from Nowhere",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 2.5,
+   "ignoreArmor": true,
+   "desc": "Leaps at an enemy up to 8 tiles away and deals 26 piercing damage, rising to 2.5 times that at 8 tiles. It ignores the target's armour."
+  },
+  {
+   "name": "Skittish Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bites an enemy and deals 4 piercing damage, leaving it 5% easier to wound for 3 seconds. Each bite has a 25% chance to leave it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Double Spring",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 256,
+   "cooldown": 12,
+   "dodgeBonus": 0.15,
+   "desc": "Steps you instantly to a point up to 8 tiles away and raises your dodge chance by 15% for the moment you land."
+  },
+  {
+   "name": "Hop to Hop",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 128
+   },
+   "desc": "When you strike with your weapon, a second bite leaps to the nearest enemy within 4 tiles and deals 5 damage. Once every 4 seconds."
+  }
+ ]
+}

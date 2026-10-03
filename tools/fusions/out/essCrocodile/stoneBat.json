@@ -1,0 +1,75 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Night Feeding",
+   "template": "imbueStrike",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "leech": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A bite that deals 8 damage, makes the target [Bleeding] for 2 damage a second for 4 seconds, and heals you for 30% of the damage dealt. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bellowing Echo",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You bellow a cone of sound 4 tiles ahead, dealing 10 damage and stunning each enemy for 0.8 seconds, with a 50% chance of [Leaden] for 4 seconds."
+  },
+  {
+   "name": "Flit Beneath",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "teleportRange": 160,
+   "cooldown": 12,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 5 tiles away, and your movement speed rises 15% for 4 seconds."
+  },
+  {
+   "name": "After Dusk",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "At night, your damage rises by 12%."
+  }
+ ]
+}

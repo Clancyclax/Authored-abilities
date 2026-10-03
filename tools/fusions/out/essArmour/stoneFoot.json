@@ -1,0 +1,67 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Column Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "desc": "A blow thrown from the line of march that deals 5 damage, up to 1.4 times as much at 5 tiles. Its damage rises 4% for every 100 paces you have run since you last used it (max 24%).",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.4,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.04,
+   "scaleCap": 0.24
+  },
+  {
+   "name": "Phalanx Push",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "desc": "Shoves everything in a wide cone ahead of you, dealing 12 damage to each and knocking them back 3.5 tiles.",
+   "cooldown": 20,
+   "knockback": 112,
+   "base": 12,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Marching Order",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "desc": "Raises your armour by 20% for 12 seconds. Your movement speed rises 20% for 5 seconds after you use it.",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   }
+  },
+  {
+   "name": "Long-Haul Gait",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "desc": "Your movement speed is permanently increased by 8%, and you have 10% physical resistance.",
+   "moveSpeedPct": 0.08,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   }
+  }
+ ]
+}

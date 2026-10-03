@@ -1,0 +1,88 @@
+{
+ "essence": "essTree",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Green Shaft",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a green shaft that deals 5 damage to the first enemy it meets, with a 30% chance to take root in it and leave it [Pinned] for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Yew at Full Draw",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Bends a yew stave to its limit and looses a shaft that deals 30 damage, rising to twice that at its full reach of 8 tiles. It ignores armour."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "name": "Spring-Pole Snare",
+   "template": "activeSummon",
+   "element": "plant",
+   "summonKind": "trap",
+   "summonDmg": 20,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rigs a spring snare at the nearest enemy. It waits up to 30 seconds; when an enemy comes within 2 tiles it springs, deals 20 damage to everything within 2 tiles and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "name": "Creaking Strain",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 6. Your next critical hit on it spends them all: a blow strikes it for 27% of your weapon damage per stack (163% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

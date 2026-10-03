@@ -1,0 +1,94 @@
+{
+ "essence": "essTree",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Staghorn Shard",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "desc": "Snaps a branch off your own body and throws it; it deals 8 damage, rising to 1.5 times that at its full reach of 6 tiles. Also costs 4% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Prop-Root Reef",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 28,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 3
+   },
+   "spreadAfflictions": 96,
+   "desc": "Raises a 5-tile line of encrusted stilt roots ahead of you for 6 seconds. It deals 10 damage to anything that crosses it, leaves it [Bleeding] for 2 damage a second for 5 seconds and slows it by 25% for 3 seconds. Your afflictions on it spread to every enemy within 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "restore",
+   "name": "Drinking the Tide",
+   "template": "resourceRestore",
+   "element": "water",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30,
+   "desc": "Restores 3 mana a second for 8 seconds, and 10 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "movement",
+   "name": "Mangrove Stilts",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "your health regenerates faster"
+    },
+    {
+     "rank": "silver",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you move faster"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "your dodge chance rises"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank your health regenerates 15% faster, from silver you move 10% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

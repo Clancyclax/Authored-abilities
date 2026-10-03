@@ -1,0 +1,77 @@
+{
+ "essence": "essSickle",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Bite on Arrival",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "chargeTo": 224,
+   "leech": 0.25,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Bounds you to a target up to 7 tiles away; the cut deals 14 damage, rising to 1.5 times that at full reach, and heals you for 25% of the damage dealt."
+  },
+  {
+   "name": "Host to Host",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "desc": "Flings a crescent that deals 7 damage to the first enemy it meets, then hops to 3 more enemies within 3 tiles, each hit dealing 70% of the original damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Ten Hops",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "You leap 3 tiles and gain 20% attack speed for 10 seconds."
+  },
+  {
+   "name": "Blood Meal",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essRabbit",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Frozen in the Gaze",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 480,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "stunOnHit": 1.4,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fixes a stare on the first enemy in its path, dealing 12 damage, stunning it for 1.4 seconds and leaving it [Exposed] for 6 seconds."
+  },
+  {
+   "name": "Seen Faltering",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.3,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "chargeTo": 224,
+   "desc": "Usable only on an enemy at or below 30% health. You bolt up to 7 tiles onto it and strike for 20 damage, consuming every affliction you have on it and adding 1.3 times their remaining damage."
+  },
+  {
+   "name": "Sentinel's Signal",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Second Look",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, a strike that fails to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneChain",
+  "fusions": [
+    {
+      "name": "Ripped Loose",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.4,
+      "chargesMax": 3,
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 3
+      },
+      "desc": "Hooks the target on a barbed line at up to 6 tiles and rips it loose. The pull deals 9 damage, rising to 1.4 times that at full reach, and the target moves 30% slower for 3 seconds. Holds 3 charges; a kill gives one back."
+    },
+    {
+      "name": "Morning Star Whirl",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 0.8,
+      "chain": {
+        "count": 2,
+        "radius": 96,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 96,
+      "chainDamagePct": 0.6,
+      "desc": "Whirls a studded weight on its links. The whirl deals 12 damage to every enemy within 3 tiles and stuns each for 0.8 seconds, then leaps to 2 more enemies within 3 tiles for 60% of the damage."
+    },
+    {
+      "name": "Grapnel Haul",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "physical",
+      "teleportRange": 224,
+      "cooldown": 14,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Throws a barbed hook to a spot up to 7 tiles away and hauls you to it instantly. You move 20% faster for 3 seconds afterwards."
+    },
+    {
+      "name": "Next Link",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 5,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 5
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 7,
+        "range": 128
+      },
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 3
+      },
+      "desc": "When you kill an enemy, a barbed line lashes from the body to the nearest enemy within 4 tiles. The lash deals 7 damage and slows the target by 25% for 3 seconds. Once every 5 seconds."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essWheel",
+ "stone": "stoneAdept",
+ "fusions": [
+  {
+   "name": "Rote Quarter-Turn",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Holds 4 charges; each use spends one, and each kill gives one back. A cut that deals 8 damage and leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Juggler's Cascade",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "long",
+   "base": 12,
+   "cooldown": 75,
+   "volleyCount": 4,
+   "volleySpread": 0.35,
+   "speed": 340,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "isAoe": true,
+   "castTime": 0.5,
+   "guaranteedCrit": true,
+   "desc": "After a 0.5 second cast, looses 4 clubs at once, spread apart. Each club deals 12 damage and always crits."
+  },
+  {
+   "name": "Muscle Memory Loop",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 60,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds after."
+  },
+  {
+   "name": "Again From the Top",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that fails to crit is rolled again for a crit, and the second roll stands."
+  }
+ ]
+}

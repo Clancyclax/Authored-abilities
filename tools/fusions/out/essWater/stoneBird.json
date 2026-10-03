@@ -1,0 +1,92 @@
+{
+ "essence": "essWater",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Gannet's Plunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 224,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You plunge up to 7 tiles onto the target. It deals 13 damage, leaves the target 10% easier to wound for 4 seconds and [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Squall Wingbeat",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "A wingbeat drives a squall through a cone 3 tiles deep that deals 7 damage to every enemy in it, and you move 15% faster for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Tethered Diver",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "cooldown": 36,
+   "summonKind": "bird",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "castTime": 0.3,
+   "lifeOnKill": 4,
+   "desc": "Sends out a cormorant for 10 seconds. Every 1.2 seconds it dives on an enemy within 5 tiles and deals 3 damage, and each kill it makes restores 4 health to you."
+  },
+  {
+   "name": "Petrel Patter",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you cross it faster than ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.06,
+     "text": "and your dodge chance rises while you are on it"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you cross it 15% faster than ground, and from silver your dodge chance rises by 6% while you are on it."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "essence": "essHeidel",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wading Splash",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "base": 3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "cooldown": 0.9,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You kick up 3 spreading splashes, each dealing 3 damage with a 30% chance of [Soaked] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unruffled Hoof",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "range": 80,
+   "ignoreResist": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A full-weight kick that deals 30 damage, ignoring resistance, and leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Water off the Withers",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "Each condition laid on you has a 50% chance to be sent back to its source instead, for 9 seconds."
+  },
+  {
+   "name": "Shrug and Plod",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "Each time you are hurt by anything other than fire, you restore 8 stamina. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essApe",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Puddle Slap",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slaps water over every enemy within 2 tiles for 3 damage, with a 50% chance to leave each [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Skipped Stone",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 7,
+   "chain": {
+    "count": 2,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "stunOnHit": 0.8,
+   "desc": "Skips a flat stone into the target for 10 damage and stuns it for 0.8 seconds; it then leaps to 2 more enemies within 4 tiles, each hit dealing 60% of that."
+  },
+  {
+   "name": "Rolls Right Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever laid it instead."
+  },
+  {
+   "name": "Unruffled",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.5,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "Once your health falls below 50%, every heal reaching you is worth 30% more for 8 seconds. Once every 30 seconds."
+  }
+ ]
+}

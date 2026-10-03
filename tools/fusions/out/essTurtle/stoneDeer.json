@@ -1,0 +1,79 @@
+{
+ "essence": "essTurtle",
+ "stone": "stoneDeer",
+ "fusions": [
+  {
+   "name": "Shed and Regrown",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "hpCostPct": 0.04,
+   "leechOverTime": {
+    "frac": 0.4,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Throws a tine at a cost of 4% of your maximum health, which deals 9 damage to the first enemy it meets. 40% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "name": "Startle Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Stamps the ground, which deals 11 damage to every enemy within 3 tiles and stuns them for 0.8 seconds. Your movement speed rises 25% for 4 seconds afterward."
+  },
+  {
+   "name": "Leap into Cover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.25,
+   "buffDuration": 8,
+   "cooldown": 36,
+   "blinkOnUse": 96,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Springs you 3 tiles from where you stood and pulls you into your shell: your armour rises by 25% for 8 seconds, and your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Spooked Stride",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 6. When you reach 6, they all spend at once: you move and attack 4% faster per stack (22% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

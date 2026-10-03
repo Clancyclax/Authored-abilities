@@ -1,0 +1,80 @@
+{
+ "essence": "essDog",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Last Mile",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "A finishing blow that deals 14 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%). Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Wear Them Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "slowPct": 0.25,
+   "knockback": 64,
+   "desc": "Harries every enemy within 3 tiles: it deals 10 damage, strips 12% armour for 6 seconds, slows each by 25% and knocks each back 2 tiles."
+  },
+  {
+   "name": "Trotting Pace",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 4 stamina a second for 6 seconds. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Warmed Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover, your physical damage rises 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

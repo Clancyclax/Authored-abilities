@@ -1,0 +1,73 @@
+{
+ "essence": "essBear",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "name": "Stooping Descent",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 72,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 224,
+   "stunOnHit": 1,
+   "desc": "Bounds up to 7 tiles onto the target and lands for 14 damage, leaving it [Stunned] for 1 second and 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Downdraft Roar",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "isAoe": true,
+   "aoeBand": "large",
+   "range": 160,
+   "coneAngle": 0.7,
+   "ignoreResist": true,
+   "desc": "Roars a gale in a cone 5 tiles long, dealing 26 damage to everything in it. The damage ignores resistances."
+  },
+  {
+   "name": "Lofted Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "wind",
+   "cooldown": 8,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Carries you 5 tiles forward in one bound. Your movement speed rises 20% for 3 seconds after you land."
+  },
+  {
+   "name": "Tailwind Lope",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Every few paces you cover restores 7 stamina. Once every 6 seconds."
+  }
+ ]
+}

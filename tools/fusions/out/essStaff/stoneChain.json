@@ -1,0 +1,84 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Flung Third",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 160,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "rangeBand": "medium",
+   "desc": "Whips the end section of the staff out on its links at the first enemy within 5 tiles. It deals 4 damage, then swings on to 1 more enemy within 3 tiles for 60% of that."
+  },
+  {
+   "name": "Snaking Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Lets the linked sections unfold through a cone 4 tiles long. It deals 12 damage to everything in it and stuns each target for 1 second, with a 50% chance to leave it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Reeling Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "desc": "Lays the unfolded sections in a line 5 tiles long ahead of you for 5 seconds. It drags every enemy near it inward."
+  },
+  {
+   "name": "Link by Link",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every hit you land wraps a link of the staff's chain round that enemy as a stack, up to 6. Your next critical hit on it spends them all: a blow strikes that enemy for 34% of your weapon damage per stack (204% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

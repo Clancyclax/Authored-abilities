@@ -1,0 +1,84 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "name": "Sprung Jaw",
+   "element": "arcane",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 160,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You lunge up to 5 tiles to the target and strike it for 13 damage, leaving it [Pinned] for 2 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "isAoe": true,
+   "aoeBand": "medium",
+   "name": "Still Water Breaks",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 112,
+   "castTime": 1.2,
+   "guaranteedCrit": true,
+   "desc": "After a 1.2 second cast, arcana bursts from you, dealing 30 damage to every enemy within 3.5 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Lurking Glyph",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "desc": "After a 1 second cast, sets a glyph at the nearest enemy that arms after 1 second and waits up to 30 seconds. The first enemy to come within 2 tiles sets it off, and it deals 22 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "ledger",
+   "stackBuild": "cast",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "crit",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you use an ability, a stack builds on you, up to 6. Your next critical hit spends them all: a blow strikes the nearest enemy within 8 tiles for 27% of your weapon damage per stack (163% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

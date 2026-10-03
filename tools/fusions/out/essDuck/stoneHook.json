@@ -1,0 +1,76 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snagging Dab",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "desc": "Flicks a hooked bead of water that deals 4 damage with a 25% chance to leave the target [Pinned] for 1.5 seconds."
+  },
+  {
+   "name": "Tearing Free",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Reaches into one of your afflictions on the target, dealing 9 damage, using it up and leaving the target 10% easier to wound for 5 seconds. It needs one of your afflictions on the target."
+  },
+  {
+   "name": "Baited Cry",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "wind",
+   "cooldown": 24,
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A cry that pulls up to 5 enemies within 7 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Barbed Reward",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Each time you afflict something, you regain 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

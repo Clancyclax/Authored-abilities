@@ -1,0 +1,87 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Carrier's Bite",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Rushes up to 6 tiles to the target and bites for 12 piercing damage, leaving Rot for 2 damage a second for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Kennel Cough",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Howls a cone of spores 5 tiles long that deals 26 resonating damage to everything in it, with a 40% chance per hit to leave it [Diseased] for 8 seconds. If it hits, you and your allies deal 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Faithful Remains",
+   "kind": "active",
+   "category": "summon",
+   "template": "raiseDead",
+   "element": "necrotic",
+   "base": 5,
+   "range": 300,
+   "corpse": true,
+   "summonFamily": "skeleton",
+   "summonDuration": 30,
+   "summonDmg": 5,
+   "cooldown": 90,
+   "desc": "The nearest body within 9.5 tiles rises and fights at your side for 30 seconds. It deals 5 damage a hit."
+  },
+  {
+   "name": "Mosshound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "nature",
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Mosshound",
+   "familiarDmg": 4,
+   "familiarRange": 128,
+   "familiarInterval": 1.2,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "A bonded hound runs with you, biting enemies within 4 tiles for 4 damage every 1.2 seconds and leaving Rot for 2 damage a second for 4 seconds."
+  }
+ ]
+}

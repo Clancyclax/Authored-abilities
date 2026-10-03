@@ -1,0 +1,77 @@
+{
+  "essence": "essSpike",
+  "stone": "stoneDeer",
+  "fusions": [
+    {
+      "name": "Prick, Then Away",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.06,
+        "duration": 3
+      },
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 2
+      },
+      "desc": "A quick jab deals 4 damage and leaves the target 6% easier to wound for 3 seconds. You move 15% faster for 2 seconds after it."
+    },
+    {
+      "name": "Frozen Mid-Stride",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "maxMult": 1.4,
+      "stunOnHit": 1.2,
+      "desc": "Throws a spike up to 6 tiles. It deals 12 damage, rising to 1.4 times that at full reach, and stuns the target for 1.2 seconds."
+    },
+    {
+      "name": "Brace and Bolt",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "piercing",
+      "cooldown": 24,
+      "buffDuration": 6,
+      "thornsFrac": 0.5,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "For 6 seconds, 50% of the damage you take is dealt back to whoever dealt it, and you move 20% faster for 3 seconds."
+    },
+    {
+      "name": "Blooded Points",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "piercing",
+      "stackShape": "boon",
+      "stackBuild": "kill",
+      "stackPay": "haste",
+      "stackCap": 5,
+      "stackDecay": 6,
+      "stackSpend": "nextCast",
+      "stackOn": "self",
+      "stackScale": 1,
+      "stackIcon": "stackFortune",
+      "desc": "Every time you kill an enemy, a stack builds on you, up to 5. The next ability you use spends them all: you move and attack 5% faster per stack (23% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
+}

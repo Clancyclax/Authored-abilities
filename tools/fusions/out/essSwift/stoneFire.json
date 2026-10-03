@@ -1,0 +1,86 @@
+{
+  "essence": "essSwift",
+  "stone": "stoneFire",
+  "fusions": [
+    {
+      "name": "Jumped the Break",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "fire",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 14,
+      "strikes": 1,
+      "spreadAfflictions": 144,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "desc": "A strike that deals 11 damage and sets the target [Burning] for 3 damage a second for 4 seconds. Your afflictions on the target spread to every enemy within 4.5 tiles."
+    },
+    {
+      "name": "Flash Point",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "fire",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 16,
+      "speed": 560,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "consumeAfflictionsPer": 0.6,
+      "desc": "Sends a spark that deals 16 damage to the first enemy it meets and uses up every affliction you have on it, dealing 60% more damage for each."
+    },
+    {
+      "name": "Scorched Wake",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "fire",
+      "wallKind": "burn",
+      "wallLength": 160,
+      "wallDuration": 5,
+      "wallThickness": 30,
+      "base": 4,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Burning"
+      },
+      "cooldown": 20,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Leaves a line of flame 5 tiles long in front of you for 5 seconds. It deals 4 damage to each enemy that crosses it and sets it [Burning] for 2 damage a second for 3 seconds. You move 25% faster for 4 seconds after you use it."
+    },
+    {
+      "name": "Friction Heat",
+      "kind": "passive",
+      "element": "fire",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 1
+      },
+      "desc": "Each time you spend stamina, your next spell deals 25% more damage. Once every 6 seconds."
+    }
+  ]
+}

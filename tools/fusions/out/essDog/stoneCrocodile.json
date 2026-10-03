@@ -1,0 +1,77 @@
+{
+ "essence": "essDog",
+ "stone": "stoneCrocodile",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Roll and Drown",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Clamps onto the target for 16 water damage, using up every affliction you have on it for 60% more damage each, and leaves it 12% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Out of the Shallows",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 128,
+   "maxMult": 1.5,
+   "hpCostPct": 0.04,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Lunges at a target up to 4 tiles away and deals 8 damage, up to 1.5 times that at full range, leaving it 30% slower for 2 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "name": "Playing Dead",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 40,
+   "stealthDuration": 10,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 10 seconds: enemies notice you 70% later. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Still Water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "openerCrit": {
+    "amount": 0.2
+   },
+   "desc": "When you have gone a while without a critical hit, your critical hit chance rises by 25% for 5 seconds, once every 10 seconds. You have 20% more critical hit chance against an enemy that has not been hurt yet."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Trampling Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Rushes you up to 7 tiles to the target and tramples it for 14 damage, up to 1.5 times as much at 7 tiles.",
+   "base": 14,
+   "cooldown": 18,
+   "range": 224,
+   "maxMult": 1.5,
+   "chargeTo": 224
+  },
+  {
+   "name": "Dust Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "desc": "Kicks up a cone of grit ahead of you, dealing 4 damage to everything caught in it, with a 30% chance to leave each [Blunted] for 4 seconds.",
+   "cooldown": 0.9,
+   "spammable": true,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "base": 4,
+   "range": 128,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "small"
+  },
+  {
+   "name": "Settled Pace",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "desc": "Restores 4 stamina a second for 8 seconds. Your movement speed rises 15% for 5 seconds after you use it.",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   }
+  },
+  {
+   "name": "Tireless Plates",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "Each time you spend stamina, you gain a shield worth 8% of your maximum health for 6 seconds. Once every 8 seconds.",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 6
+   }
+  }
+ ]
+}

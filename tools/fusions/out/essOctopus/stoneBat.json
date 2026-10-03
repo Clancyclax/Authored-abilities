@@ -1,0 +1,71 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Clinging Sip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "leech": 0.25,
+   "desc": "Throws an arm over the first enemy it meets and bites, dealing 4 damage and healing you for 25% of the damage dealt."
+  },
+  {
+   "name": "Shriek in the Murk",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "dark",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Vents a cloud of ink and shrieks through it, dealing 10 damage to every enemy within 3.5 tiles, stunning each for 1 second and leaving it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Cloak Turned Inside Out",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "dark",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 24,
+   "desc": "Raises a barrier that absorbs the next 18 damage and holds for 6 seconds."
+  },
+  {
+   "name": "Dusk Skin",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "dark",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "At night your dodge chance rises by 12%."
+  }
+ ]
+}

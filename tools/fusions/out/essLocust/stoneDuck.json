@@ -1,0 +1,87 @@
+{
+ "essence": "essLocust",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "name": "Dabbling Skim",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Skips a knot of locusts into the first enemy it meets for 4 water damage, with a 40% chance to leave it [Soaked] for 5 seconds, then on to 1 more enemy within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Settling Deluge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "The swarm drops on every enemy within 3.5 tiles for 28 water damage and leaves them [Soaked] for 6 seconds. It ignores resistances."
+  },
+  {
+   "name": "Unruffled Gulp",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "water",
+   "immunityDuration": 3,
+   "cooldown": 120,
+   "healOnUse": 10,
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. You regain 10 health at once."
+  },
+  {
+   "name": "Shrugged and Swallowed",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a stack builds on you, up to 4. At 4 they all spend at once: you are healed for 5% of your maximum health per stack (20% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

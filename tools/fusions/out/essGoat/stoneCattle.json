@@ -1,0 +1,71 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneCattle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stampede",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 192,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.04,
+   "desc": "Charges through a 6-tile cone ahead of you, trampling everything caught for 30 damage plus 4% of a boss's or elite's maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Weight of the Herd",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Shoves the target for 4 damage, leaving it 5% easier to wound for 3 seconds. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%)."
+  },
+  {
+   "name": "Chewing the Cud",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 30,
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "desc": "Chews the cud, restoring 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Slow to Rile",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (45% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

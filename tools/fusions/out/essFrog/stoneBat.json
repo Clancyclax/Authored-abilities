@@ -1,0 +1,78 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneBat",
+ "fusions": [
+  {
+   "name": "Pitch Past Hearing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A croak pitched above hearing rolls 5 tiles ahead of you, dealing 12 damage to everything in the cone, stunning it for 1 second and leaving it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Taken on the Wing",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "cooldown": 0.8,
+   "base": 4,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "leech": 0.3,
+   "desc": "Your tongue snaps at the first enemy in its path up to 6 tiles away, dealing 4 damage. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Flutter-Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "dark",
+   "speedMult": 1.3,
+   "buffDuration": 6,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "cooldown": 24,
+   "desc": "Increases your movement speed by 30% for 6 seconds. You finish it 2 tiles from where you stood, with 10% more dodge chance."
+  },
+  {
+   "name": "Mouthful of Moths",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your attacks heal you for 20% of the damage they deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

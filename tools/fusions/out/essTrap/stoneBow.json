@@ -1,0 +1,83 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneBow",
+ "fusions": [
+  {
+   "name": "Tripwire Quarrel",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 288,
+   "maxMult": 1.8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Trips a crossbow held at full draw. Its bolt deals 30 damage to a target up to 9 tiles away, rising to 1.8 times that at full reach, ignores armour and leaves the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Loaded Rack",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 420,
+   "radius": 6,
+   "range": 224,
+   "isAoe": true,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "Trips a rack of set bows that looses 3 arrows in a spread out to 7 tiles. Each arrow deals 3 damage, with 30% more critical chance against a target that has not been hurt yet."
+  },
+  {
+   "name": "Spring Gun",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 5,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "desc": "Stakes a cocked crossbow into the ground for 12 seconds. It shoots an enemy within 6 tiles every 1.5 seconds for 5 damage."
+  },
+  {
+   "name": "Held at Full Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your stamina is full, your next ability deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essChain",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Slow Tow",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a trailing link at the first enemy it meets that deals 4 damage, with a 40% chance to leave it [Enervated] for 4 seconds."
+  },
+  {
+   "name": "Ebb Pull",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "desc": "Draws a sweep of links through a cone ahead of you that deals 10 damage to everything within 4 tiles and knocks it back 2 tiles."
+  },
+  {
+   "name": "Slack Water",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Easing Tide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "Each time a condition on you expires, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

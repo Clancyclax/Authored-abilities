@@ -1,0 +1,81 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneDuck",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Splash Landing",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Bounds to an enemy up to 6 tiles away and lands in a splash that deals 11 water damage to every enemy within 3 tiles and leaves them [Soaked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ruffled",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Kicks an enemy and deals 4 water damage, leaving it 5% easier to wound for 3 seconds. Its damage rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Settling Feathers",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 6,
+   "cooldown": 24,
+   "blinkOnUse": 64,
+   "desc": "You spring 2 tiles aside, then restore 3 mana a second for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Rolls Off the Back",
+   "element": "water",
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When non-fire damage hits you, you gain a shield worth 15% of your maximum health for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

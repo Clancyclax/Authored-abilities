@@ -1,0 +1,78 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Butcher's Block",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "stackMult": 1.5,
+   "executeLadder": true,
+   "leech": 0.2,
+   "desc": "Usable only on an enemy at or below 30% health. A falling chop that deals 20 damage, uses up every affliction on the target and adds 1.5 times their remaining damage. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "strikes": 1,
+   "name": "Even Portions",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "leech": 0.1,
+   "desc": "A cleaving strike that deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on it are shared out to every enemy within 3.5 tiles, and you heal for 10% of the damage dealt."
+  },
+  {
+   "name": "Whetted Appetite",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "dmg_slashing",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "healOnUse": 10,
+   "cooldown": 60,
+   "desc": "Increases your slashing damage by 25% for 15 seconds and restores 10 health."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "element": "slashing",
+   "lifeOnKill": 4,
+   "name": "Next Carcass",
+   "desc": "Each kill restores 4 health. When you kill an enemy, your physical damage also rises by 25% for 5 seconds, once every 6 seconds."
+  }
+ ]
+}

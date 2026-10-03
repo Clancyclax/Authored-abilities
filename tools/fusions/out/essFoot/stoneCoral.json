@@ -1,0 +1,99 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneCoral",
+ "fusions": [
+  {
+   "name": "Reef-Cut Soles",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Spends 4% of your maximum health to stamp coral spurs up through the ground, dealing 8 damage to every enemy within 2.5 tiles and leaving them [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "name": "Slow Accretion",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 70,
+   "strikes": 1,
+   "bossPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A kick that seeds stinging coral on the target's legs, dealing 28 damage plus 4% of a boss's or elite's maximum health. It leaves the target [Leaden] for 8 seconds and [Poisoned] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Sown Spurs",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "water",
+   "summonKind": "trap",
+   "summonDmg": 14,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 3,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Grows a bed of coral spurs at the nearest enemy. It waits up to 30 seconds, then deals 14 damage to each of the first 3 enemies to tread within 2 tiles and leaves them [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Shoal Wader",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.15,
+     "text": "you move over it faster than over ground"
+    }
+   ],
+   "desc": "You can walk across open water and stand on it."
+  }
+ ]
+}

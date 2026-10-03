@@ -1,0 +1,76 @@
+{
+  "essence": "essSloth",
+  "stone": "stoneAxe",
+  "fusions": [
+    {
+      "name": "Canopy Drop",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "slashing",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 16,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 7
+      },
+      "chargeTo": 192,
+      "desc": "Drops you onto a target up to 6 tiles away, then the falling axe deals 16 damage and leaves it 15% easier to wound for 7 seconds."
+    },
+    {
+      "name": "Hobbling Toss",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1.2,
+      "spammable": true,
+      "range": 192,
+      "maxMult": 1.5,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "chargesMax": 3,
+      "bindOnHit": {
+        "slowPct": 0.4,
+        "duration": 4
+      },
+      "desc": "Throws the axe at a target up to 6 tiles away that deals 7 damage, rising to 1.5 times that at full reach, and slows the target by 40% for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Whetstone Hour",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "slashing",
+      "powerMult": 1.35,
+      "buffDuration": 20,
+      "castTime": 2,
+      "cooldown": 75,
+      "desc": "After a 2-second pause to whet the edge, increases your damage by 35% for 20 seconds."
+    },
+    {
+      "name": "Stump Sitter",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 3,
+        "duration": 5
+      },
+      "desc": "Each time you kill an enemy, you recover 3 stamina a second for 5 seconds. Once every 8 seconds."
+    }
+  ]
+}

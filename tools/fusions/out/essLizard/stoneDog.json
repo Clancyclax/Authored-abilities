@@ -1,0 +1,81 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneDog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Taste the Trail",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "template": "rangeStrike",
+   "range": 192,
+   "maxMult": 1.3,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks your tongue at a target up to 6 tiles away for 4 damage, rising to 1.3 times that at full reach, with a 40% chance of [Marked] for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Run to Ground",
+   "element": "poison",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 16,
+   "template": "imbueStrike",
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "requiresTargetBelow": 0.3,
+   "chargeTo": 224,
+   "desc": "Usable only on a target at or below 30% health. Rushes you to a target up to 7 tiles away, then bites with your weapon for 20 damage and leaves it [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "name": "Downwind Together",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "cooldown": 36,
+   "desc": "Veils you and your allies for 6 seconds. While veiled you move 11% faster and enemies notice you 60% later. The veil breaks the moment you attack."
+  },
+  {
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "name": "Heel-Trained Monitor",
+   "element": "piercing",
+   "familiarCreatureName": "Monitor",
+   "familiarFamily": "lizard",
+   "familiarDmg": 4,
+   "familiarInterval": 1.3,
+   "familiarRange": 128,
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded monitor follows at your heel and fights beside you, biting enemies within 4 tiles for 4 damage every 1.3 seconds. Anything it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

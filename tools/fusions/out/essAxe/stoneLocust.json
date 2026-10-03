@@ -1,0 +1,83 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Cloud of Cuts",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "A cone of cuts that deals 4 damage to everything within 2.5 tiles ahead of you. Its damage rises 8% per affliction the target carries (max +40%)."
+  },
+  {
+   "name": "Gnawing Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "chargesMax": 5,
+   "chain": {
+    "count": 3,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 3,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "desc": "Throws a hatchet that deals 8 damage, then leaps to 3 more enemies within 3 tiles, each hit dealing 50% of the original damage. Holds 5 charges, and kills give charges back."
+  },
+  {
+   "name": "Stripping Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "desc": "Sends out a swarm for 12 seconds that gnaws an enemy within 5 tiles for 3 damage every second."
+  },
+  {
+   "name": "Rising Appetite",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises by 30% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

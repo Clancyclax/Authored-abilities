@@ -1,0 +1,94 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Creeping Rust",
+   "template": "projectileBall",
+   "element": "necrotic",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "speed": 320,
+   "radius": 9,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Fires a spore that deals 28 necrotic damage, ignoring armour, leaves the target [Sundered] for 8 seconds and gives it Rot for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flake and Spall",
+   "template": "aoeRing",
+   "element": "necrotic",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Rot"
+   },
+   "desc": "Costs 5% of your maximum health. Sheds a layer of fungal plate that deals 9 necrotic damage to every enemy within 2.5 tiles and gives them Rot for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Bracket Shell",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "plant",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "regenPerSec": 0.5,
+   "cooldown": 30,
+   "desc": "Grows a shell that absorbs the next 20 damage for 8 seconds and raises your armour by 10%. You also regenerate 0.5 health a second at all times."
+  },
+  {
+   "name": "Regrown Layers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When a blow that is not fire damages you, you gain a ward worth 12% of your maximum health for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

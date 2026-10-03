@@ -1,0 +1,91 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneBird",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Skimmed Spicule",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Skims a coral spicule at the first enemy in front of you for 4 damage. Its damage rises 10% for every 100 paces you have flown or run since you last used it, up to 50%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gull's Drop",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 224,
+   "maxMult": 2,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Carries a coral head aloft and drops it on an enemy up to 7 tiles away for 30 damage, rising to twice that at full reach. It ignores armour."
+  },
+  {
+   "name": "Lifted Carapace",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "wind",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 16,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.05,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "cooldown": 24,
+   "desc": "Grows a light shell over you that absorbs the next 16 damage and holds for 6 seconds, and raises your armour by 5% while it holds. Your movement speed rises 25% for 4 seconds."
+  },
+  {
+   "name": "Wavetop Glide",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "you skim over it faster than over ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "hpRegen",
+     "amount": 0.15,
+     "text": "and the reef below mends you while you are over it"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and nothing that has to wade can reach you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 10% faster over it, from silver your health recovers 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

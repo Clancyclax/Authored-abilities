@@ -1,0 +1,84 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Stray Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "desc": "Sends a bolt of raw force into the first enemy it meets, dealing 5 damage. It then leaps to 1 more enemy within 3.5 tiles, dealing 60% of the original damage."
+  },
+  {
+   "name": "Unfiltered Trample",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "ignoreResist": true,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Lets raw force out in every direction, which deals 28 damage to every enemy within 3.5 tiles and ignores resistances."
+  },
+  {
+   "name": "Slow Rumination",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 40,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Restores 3 mana a second for 8 seconds. Fighting beside others pays: +10% per ally within 5.5 tiles, up to 4 allies."
+  },
+  {
+   "name": "Shielded by Spellwork",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.06,
+    "duration": 6
+   },
+   "desc": "Each time you spend mana, you gain a shield worth 6% of your maximum health for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

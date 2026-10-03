@@ -1,0 +1,75 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneArmour",
+ "fusions": [
+  {
+   "name": "Seam Finder",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike driven between the plates that deals 30 damage, ignores armour, and makes the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Steel-Shod Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Rushes you to a target up to 6 tiles away, then deals 12 damage and leaves it 12% easier to wound for 5 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Angled Plates",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.2,
+   "dodgeBonus": 0.08,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Raises your armour by 20% and your dodge chance by 8% for 10 seconds."
+  },
+  {
+   "name": "Fitted Harness",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "thornsFrac": 0.06,
+   "itemBuffs": [
+    {
+     "stat": "dodgeChance",
+     "amount": 0.03
+    }
+   ],
+   "desc": "Conjures armour that moves with you: every hit you take is 2 lower, your armour rises by 10%, your dodge chance rises by 3%, and 6% of the damage you take goes back to whoever dealt it."
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "name": "Wildfire Weave",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "cursedMana",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a bolt of fire that deals 12 damage and sets the target [Burning] for 3 damage a second for 5 seconds, with a 50% chance of [Cursed Channel] for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "executeLadder": false,
+   "name": "Flashover",
+   "element": "fire",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "desc": "Ignites every affliction on the target at once, dealing 20 damage plus 1.6 times the damage they had left to deal, then sets it [Burning] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 30% health.",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   }
+  },
+  {
+   "name": "Mantle of Cinders",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "fire",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "cooldown": 30,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it, and they are set [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 3
+   },
+   "name": "Fuel for Thought",
+   "element": "fire",
+   "desc": "When you inflict a condition on an enemy, you restore 3 mana. Once every 3 seconds."
+  }
+ ]
+}

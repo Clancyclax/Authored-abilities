@@ -1,0 +1,81 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stamping Ring",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps the reef flat, dealing 6 damage to every enemy within 2 tiles. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "name": "Kicked-Up Shard",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Kicks a shard of reef at the first enemy in its path that deals 30 damage. It ignores resistances. Its damage rises 10% for every 100 paces you have run since you last used it (max 50%)."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Unflagging Tide",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 20,
+   "healOnUse": 8,
+   "cooldown": 70,
+   "desc": "Increases your stamina recovery by 40% for 20 seconds, and restores 8 health at once."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Hoofbeat Reserve",
+   "element": "water",
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 5
+   },
+   "armorBonus": 0.05,
+   "desc": "Each time you spend stamina, 2 stamina a second comes back to you for 5 seconds. Once every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

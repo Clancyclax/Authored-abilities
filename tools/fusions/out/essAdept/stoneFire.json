@@ -1,0 +1,82 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneFire",
+ "fusions": [
+  {
+   "name": "Flicked Ember",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Flicks an ember that deals 4 fire damage to the first enemy it meets and sets it [Burning] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Stoke the Coals",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "fire",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 2,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "A strike that deals 15 fire damage and consumes the damage over time on the target, adding twice its remaining damage to the hit. Usable only on an enemy at or below 30% health. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Tended Flame",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your fire damage by 25% for 12 seconds."
+  },
+  {
+   "name": "Tempered Edge",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "fire",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Conjures a fire-forged weapon. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it sets the target [Burning] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

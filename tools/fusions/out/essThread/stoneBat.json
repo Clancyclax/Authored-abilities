@@ -1,0 +1,68 @@
+{
+  "essence": "essThread",
+  "stone": "stoneBat",
+  "fusions": [
+    {
+      "name": "Subsonic Chord",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "resonating",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Plucks the strands strung around you, sending a note that deals 10 damage to every enemy within 3 tiles, stuns them for 1 second and leaves them [Marked] for 6 seconds."
+    },
+    {
+      "name": "Latched Feeder",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "dark",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "consumeAffliction": true,
+      "leech": 0.3,
+      "desc": "Needs one of your afflictions on the target and uses it up. Latches a strand onto the first enemy it meets that deals 8 damage and heals you for 30% of the damage dealt."
+    },
+    {
+      "name": "Echo Along the Wire",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "resonating",
+      "cooldown": 24,
+      "reflectKind": "damage",
+      "reflectFrac": 0.3,
+      "reflectChance": 1,
+      "buffDuration": 6,
+      "desc": "For 6 seconds, 30% of the damage you take echoes back along the strand to whoever dealt it."
+    },
+    {
+      "name": "Every Tremor Counted",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "dark",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "dodgeBonus": 0.05,
+      "desc": "Against enemies carrying your afflictions, you deal 12% more damage. Your dodge chance rises by 5%."
+    }
+  ]
+}

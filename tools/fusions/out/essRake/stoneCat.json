@@ -1,0 +1,77 @@
+{
+ "essence": "essRake",
+ "stone": "stoneCat",
+ "fusions": [
+  {
+   "name": "Scratching Post",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A quick scratch that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds.",
+   "spammable": true
+  },
+  {
+   "name": "Pounce and Unzip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargeTo": 160,
+   "desc": "You spring up to 5 tiles onto the target and drag your claws down it for 14 damage, leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Covered Over",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "earth",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Scrapes up to 2 conditions off you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Playing With It",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. Your next critical hit on it spends them all: you deal 6% more damage per stack for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

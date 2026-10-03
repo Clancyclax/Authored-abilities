@@ -1,0 +1,81 @@
+{
+ "essence": "essPlant",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Felling Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 14,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 80,
+   "leech": 0.25,
+   "desc": "Chops one enemy for 14 damage, knocking it back 2.5 tiles and leaving it 15% easier to wound for 6 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Timber Fall",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 75,
+   "base": 28,
+   "range": 160,
+   "coneAngle": 0.5,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fells a trunk across a cone 5 tiles long, dealing 28 damage that ignores armour to every enemy under it and leaving each [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Coppice",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "plant",
+   "cooldown": 20,
+   "healAmount": 14,
+   "critChance": 0,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 14 health to you. The healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Sugaring Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you land a critical hit, you gain 20% lifedrain for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

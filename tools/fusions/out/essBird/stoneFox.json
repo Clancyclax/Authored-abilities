@@ -1,0 +1,78 @@
+{
+ "essence": "essBird",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Borrowed Voice",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "resonating",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 6,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mimicked cry into the first enemy it meets for 4 damage, with a 30% chance of leaving it [Stalled] for 4 seconds, so its abilities come back slower."
+  },
+  {
+   "name": "Pilfering Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "stunOnHit": 0.8,
+   "leech": 0.2,
+   "desc": "A strike from the flank that deals 13 damage, stuns the target for 0.8 seconds and leaves it 10% easier to wound for 4 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Lost Trail",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and enemies notice you far later. You move 20% faster while veiled, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Opening Gambit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

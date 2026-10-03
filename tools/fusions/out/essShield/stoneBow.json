@@ -1,0 +1,82 @@
+{
+  "essence": "essShield",
+  "stone": "stoneBow",
+  "fusions": [
+    {
+      "name": "Over the Rim",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "long",
+      "maxMult": 1.6,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses an arrow over the shield's rim that deals 4 damage, rising to 1.6 times that at its full reach of 7 tiles, with a 30% chance to leave the target [Hindered] for 3 seconds."
+    },
+    {
+      "name": "Through the Slit",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "long",
+      "base": 10,
+      "cooldown": 90,
+      "castTime": 1,
+      "volleyCount": 4,
+      "volleySpread": 0.3,
+      "speed": 420,
+      "radius": 6,
+      "range": 256,
+      "reachUnits": 256,
+      "rangeBand": "long",
+      "isAoe": true,
+      "desc": "Draws for 1 second behind the shield, then looses 4 arrows at once, spread apart, each dealing 10 damage that ignores armour.",
+      "ignoreArmor": true
+    },
+    {
+      "name": "Pavise Battery",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "piercing",
+      "cooldown": 45,
+      "summonKind": "turret",
+      "summonDmg": 5,
+      "summonDuration": 15,
+      "summonInterval": 1.5,
+      "summonRange": 192,
+      "castTime": 1,
+      "desc": "Spends 1 second planting a standing shield with an arrow slit. It holds for 15 seconds and looses an arrow at an enemy within 6 tiles every 1.5 seconds, each dealing 5 damage."
+    },
+    {
+      "name": "Drawn by Every Blow",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "boon",
+      "stackBuild": "taken",
+      "stackPay": "power",
+      "stackCap": 8,
+      "stackDecay": 6,
+      "stackSpend": "nextCast",
+      "stackOn": "self",
+      "stackScale": 0.6,
+      "stackIcon": "stackFortune",
+      "desc": "Every time you take damage, a stack builds on you, up to 8. The next ability you use spends them all: you deal 4% more damage per stack (29% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+    }
+  ]
+}

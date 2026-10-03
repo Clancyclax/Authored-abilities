@@ -1,0 +1,84 @@
+{
+ "essence": "essWater",
+ "stone": "stoneEye",
+ "fusions": [
+  {
+   "name": "Pellucid",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes the target from up to 7 tiles away: it deals 26 damage, rising to 1.5 times that at full reach, and ignores resistances. The target is left [Marked] for 8 seconds."
+  },
+  {
+   "name": "Brine in the Lashes",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 350,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "castTime": 0,
+   "desc": "Flicks 3 drops of brine at once, spread apart. Each one deals 2 damage, with a 35% chance to leave its target [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Mirror Pond",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "cooldown": 30,
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 1,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Droplet Lens",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "crit",
+   "amount": 0.08,
+   "resist": {
+    "element": "water",
+    "amount": 0.1
+   },
+   "desc": "Your critical strike chance rises by 8%, and you carry 10% water resistance."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "essence": "essFox",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Passed Blame",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "confuse": true,
+   "confuseChance": 0.25,
+   "confuseDuration": 3,
+   "desc": "Flings a weighted link that deals 7 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles for 60% of that. Each enemy hit has a 25% chance to be turned against its allies for 3 seconds. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Tied Bootlaces",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Knots together the feet of every enemy within 3 tiles, dealing 10 damage, stunning them for 1 second and leaving them [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Slip the Links",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "control",
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 control conditions from you. Your movement speed rises 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Tethered Prey",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you afflict an enemy, you deal 25% more physical damage for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

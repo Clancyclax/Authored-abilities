@@ -1,0 +1,85 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneAxe",
+ "fusions": [
+  {
+   "name": "Falling Fan",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings several arms down in a fan 2.5 tiles ahead, dealing 4 damage to everything in the cone, with a 25% chance to leave each target [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Headsman's Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Holds a weakened enemy still with your arms and brings the edge down for 22 damage, consuming every affliction on it and adding 1.5 times their remaining damage to the hit, then leaves it [Pinned] for 2 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Lopped and Still Gripping",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.2,
+   "summonRange": 96,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "desc": "Cuts one of your own arms free. It stays where it falls for 12 seconds and strikes an enemy within 3 tiles for 4 damage every 1.2 seconds."
+  },
+  {
+   "name": "Felling Count",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 8,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every hit you land adds a stack to that enemy, up to 8. At 8 they all spend at once: a blow strikes it for 27% of your weapon damage per stack (218% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

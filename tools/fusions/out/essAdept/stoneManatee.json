@@ -1,0 +1,79 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Slow Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pushes a slow swell through a cone 4 tiles ahead of you, which deals 11 damage to everything in it, knocks them back 3 tiles and leaves them [Hindered] for 5 seconds."
+  },
+  {
+   "name": "In Its Own Time",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 100,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "A slow, heavy blow that deals 32 damage and leaves the target 15% easier to wound for 8 seconds. It is always a critical hit."
+  },
+  {
+   "name": "No Great Hurry",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 60,
+   "cleanseCount": 4,
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes up to 4 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Smooth Is Fast",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "While you are at full health, your next ability deals 25% more damage. Once every 12 seconds."
+  }
+ ]
+}

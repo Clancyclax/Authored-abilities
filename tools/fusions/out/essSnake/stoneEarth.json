@@ -1,0 +1,91 @@
+{
+ "essence": "essSnake",
+ "stone": "stoneEarth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fang of Bedrock",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a fang of stone that deals 28 rock damage to the first enemy it meets and leaves it [Poisoned] for 6 seconds, then shatters, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ground-In Grit",
+   "template": "imbueStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Costs 4% of your maximum health. A weapon strike that deals 8 damage, leaves the target [Poisoned] for 2 damage a second for 3 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Under the Flat Rock",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 60,
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets a flat stone with a viper under it at the nearest enemy. It waits up to 20 seconds, and the viper deals 18 damage to the first enemy to come within 2 tiles and leaves it [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Felt Through Flagstones",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "rock",
+   "condition": "onRoads",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "On paved ground, your dodge chance rises by 12%."
+  }
+ ]
+}

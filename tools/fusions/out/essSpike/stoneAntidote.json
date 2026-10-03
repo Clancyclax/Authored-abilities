@@ -1,0 +1,71 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneAntidote",
+ "fusions": [
+  {
+   "name": "Lance the Abscess",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.3,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "Usable only on an enemy at or below 30% health, a threshold that rises with each rank. A lancing stab deals 18 damage and draws out every affliction on the target, adding 1.3 times their remaining damage."
+  },
+  {
+   "name": "Bitter Quills",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays quills tipped with drawn venom across a cone 4 tiles ahead. The spray deals 12 damage to everything in it and leaves each target [Poisoned] for 6 seconds. Your afflictions on each target spread to enemies within 3.5 tiles of it."
+  },
+  {
+   "name": "Bled Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "cooldown": 30,
+   "healOnUse": 10,
+   "desc": "You lance your own wounds: removes up to 3 poisons from you and restores 10 health."
+  },
+  {
+   "name": "Needle Finds a Vein",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You have 10% poison resistance."
+  }
+ ]
+}

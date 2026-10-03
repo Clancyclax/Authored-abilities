@@ -1,0 +1,85 @@
+{
+ "essence": "essRake",
+ "stone": "stoneCloth",
+ "fusions": [
+  {
+   "name": "Snagged Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a hooked tine on a thread that deals 4 damage, with a 35% chance to leave the target [Slowed] for 3 seconds.",
+   "spammable": true
+  },
+  {
+   "name": "Frayed to Nothing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cards the tines through a cone 4 tiles long, dealing 26 damage that ignores resistances and leaving each enemy [Exposed] for 8 seconds."
+  },
+  {
+   "name": "Carded Batting",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldAmount": 22,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "desc": "Wraps you in combed padding that absorbs the next 22 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Rag-Bag Dressing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 50%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essRake",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Link by Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "chargesMax": 4,
+   "desc": "Casts the hooked head out on its links for 7 damage, then on to 2 more enemies within 3 tiles for 60% of that. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Grapple Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 224,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Hooks the target and hauls you up to 7 tiles onto it, dealing 13 damage, slowing it by 30% for 3 seconds and leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Reeled In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Pulls up to 5 enemies within 6 tiles onto you and holds their attention for 5 seconds."
+  },
+  {
+   "name": "Held at Haft's Length",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1,
+   "desc": "Your armour is 10% higher against enemies carrying your afflictions."
+  }
+ ]
+}

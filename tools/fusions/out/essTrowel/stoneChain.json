@@ -1,0 +1,91 @@
+{
+ "essence": "essTrowel",
+ "stone": "stoneChain",
+ "fusions": [
+  {
+   "name": "Running Bond",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spammable": true,
+   "speed": 330,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Throws a link on a chain that deals 4 damage to the first enemy it meets, then leaps to 2 more enemies within 3 tiles for 50% of the damage. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Unlinking",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A wrenching blow that deals 16 damage and tears out every affliction you have on the target, dealing 60% more damage for each one torn out. It leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Come Along",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 20,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Lays a line of links 6 tiles long ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Through-Stone Tally",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackIcon": "stackKarma",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 6. At 6 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (204% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

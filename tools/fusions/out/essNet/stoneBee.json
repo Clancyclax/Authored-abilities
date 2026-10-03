@@ -1,0 +1,96 @@
+{
+ "essence": "essNet",
+ "stone": "stoneBee",
+ "fusions": [
+  {
+   "name": "Bagged Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mesh bag of stinging workers that bursts on the first enemy it meets, dealing 26 damage to it and 80% of that to every enemy within 3 tiles. Each one hit is [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Honeyed Cords",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.5,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A lash of honey-smeared cords that deals 4 damage, rising to 1.5 times that at its full reach of 4 tiles. It leaves the target [Poisoned] for 1 damage a second for 4 seconds and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Dripping Comb",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 30,
+   "desc": "Hangs a lattice of honeycomb where you stand. For 8 seconds it restores 3 health a second to you and any ally within 3 tiles of it."
+  },
+  {
+   "name": "Tethered Hive",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 2,
+   "familiarRange": 128,
+   "familiarInterval": 1,
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Skep Swarm",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded swarm travels with you in a mesh skep, stinging enemies within 4 tiles for 2 damage every second. Each sting leaves the target [Poisoned] for 1 damage a second for 3 seconds and slows it by 15% for 2 seconds."
+  }
+ ]
+}
