@@ -1,71 +1,80 @@
 {
- "essence": "essHammer",
- "stone": "stoneNeedle",
- "fusions": [
-  {
-   "name": "Seam Driver",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "piercing",
-   "role": "long",
-   "base": 28,
-   "cooldown": 90,
-   "range": 80,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 6
-   },
-   "ignoreArmor": true,
-   "desc": "A narrow-headed blow that deals 28 damage, ignores armour and leaves the target 10% easier to wound for 6 seconds."
-  },
-  {
-   "name": "Driven Tacks",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "piercing",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.8,
-   "spammable": true,
-   "debuff": {
-    "key": "pinned",
-    "chance": 0.2,
-    "duration": 2,
-    "stacks": 1,
-    "potency": 1
-   },
-   "volleyCount": 3,
-   "volleySpread": 0.3,
-   "speed": 340,
-   "radius": 6,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "isAoe": true,
-   "desc": "Flicks 3 tacks at once, spread apart, each dealing 3 damage with a 20% chance to leave the target [Pinned] for 2 seconds."
-  },
-  {
-   "name": "Aimed Hand",
-   "kind": "active",
-   "category": "buff",
-   "template": "selfCritBuff",
-   "element": "piercing",
-   "cooldown": 60,
-   "critChanceBonus": 0.25,
-   "buffDuration": 15,
-   "desc": "Increases your critical hit chance by 25% for 15 seconds."
-  },
-  {
-   "name": "Nail Head",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "piercing",
-   "buffKind": "crit",
-   "amount": 0.1,
-   "desc": "Your critical strike chance rises by 10%."
-  }
- ]
+  "essence": "essHammer",
+  "stone": "stoneNeedle",
+  "fusions": [
+    {
+      "name": "Seam Driver",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 80,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 6
+      },
+      "ignoreArmor": true,
+      "desc": "A narrow-headed blow that deals 28 damage, ignores armour and leaves the target 10% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Driven Tacks",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.2,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "volleyCount": 3,
+      "volleySpread": 0.3,
+      "speed": 340,
+      "radius": 6,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "desc": "Flicks 3 tacks at once, spread apart, each dealing 3 damage with a 20% chance to leave the target [Pinned] for 2 seconds."
+    },
+    {
+      "name": "Aimed Hand",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfCritBuff",
+      "element": "piercing",
+      "cooldown": 60,
+      "critChanceBonus": 0.25,
+      "buffDuration": 15,
+      "desc": "Increases your critical hit chance by 25% for 15 seconds."
+    },
+    {
+      "name": "Nail Head",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.3,
+        "charges": 1
+      },
+      "desc": "When you land a critical hit, your next ability deals 30% more damage. Once every 6 seconds."
+    }
+  ]
 }
