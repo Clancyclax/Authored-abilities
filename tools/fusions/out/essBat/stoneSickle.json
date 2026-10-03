@@ -1,68 +1,76 @@
 {
- "essence": "essBat",
- "stone": "stoneSickle",
- "fusions": [
-  {
-   "name": "Reaping Hook",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "slashing",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "range": 90,
-   "reachUnits": 90,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.15,
-    "duration": 6
-   },
-   "guaranteedCrit": true,
-   "desc": "A curved cut that deals 30 damage, is always a critical hit and leaves the target 15% easier to wound for 6 seconds."
-  },
-  {
-   "name": "Hooked Fang",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "slashing",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "speed": 340,
-   "radius": 8,
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "leech": 0.25,
-   "chargesMax": 3,
-   "desc": "Throws a hooked fang that deals 7 damage to the first enemy it meets, and you heal for 25% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "name": "Gathered Harvest",
-   "kind": "active",
-   "category": "healing",
-   "template": "selfHeal",
-   "element": "dark",
-   "cooldown": 20,
-   "healAmount": 18,
-   "critChance": 0.1,
-   "healScope": "self",
-   "scaleOn": "selfDepletion",
-   "scalePer": 0.08,
-   "scaleCap": 0.4,
-   "desc": "Restores 18 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%)."
-  },
-  {
-   "name": "Bent Grass",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "dark",
-   "buffKind": "crit",
-   "amount": 0.08,
-   "regenPerSec": 0.5,
-   "desc": "Your critical strike chance rises by 8%. You also regenerate 0.5 health a second."
-  }
- ]
+  "essence": "essBat",
+  "stone": "stoneSickle",
+  "fusions": [
+    {
+      "name": "Reaping Hook",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "slashing",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 90,
+      "reachUnits": 90,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "guaranteedCrit": true,
+      "desc": "A curved cut that deals 30 damage, is always a critical hit and leaves the target 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Hooked Fang",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "slashing",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "leech": 0.25,
+      "chargesMax": 3,
+      "desc": "Throws a hooked fang that deals 7 damage to the first enemy it meets, and you heal for 25% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Gathered Harvest",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "dark",
+      "cooldown": 20,
+      "healAmount": 18,
+      "critChance": 0.1,
+      "healScope": "self",
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Restores 18 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+    },
+    {
+      "name": "Bent Grass",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "dark",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.25,
+        "duration": 5
+      },
+      "desc": "When you kill an enemy, your critical hit chance rises by 25% for 5 seconds. Once every 6 seconds."
+    }
+  ]
 }
