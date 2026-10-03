@@ -1,76 +1,76 @@
 {
- "essence": "essCoral",
- "stone": "stoneSnake",
- "fusions": [
-  {
-   "name": "Venom Dart",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "poison",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "speed": 360,
-   "radius": 8,
-   "dot": {
-    "dmgPerTick": 3,
-    "ticks": 6,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Poisoned"
-   },
-   "spreadAfflictions": 112,
-   "desc": "Spits a dart of venom that deals 12 damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "Ripened Fang",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "poison",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 14,
-   "range": 80,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 6
-   },
-   "consumeAfflictionsPer": 0.7,
-   "desc": "A fang strike that deals 16 damage and uses up every affliction you have on the target, dealing 70% more damage for each. The target is 10% easier to wound for 6 seconds."
-  },
-  {
-   "name": "Antivenom Sip",
-   "kind": "active",
-   "category": "restore",
-   "template": "cleanse",
-   "element": "poison",
-   "cleanseCount": 3,
-   "cleanseTag": "poison",
-   "healScope": "self",
-   "healOnUse": 12,
-   "cooldown": 30,
-   "desc": "Clears up to 3 poison conditions from you and restores 12 health."
-  },
-  {
-   "name": "Coiled Wait",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "poison",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.25,
-    "charges": 1
-   },
-   "desc": "Each time you afflict something, your next ability deals 25% more damage. Once every 8 seconds."
-  }
- ]
+  "essence": "essCoral",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Venom Dart",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "speed": 360,
+      "radius": 8,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "spreadAfflictions": 112,
+      "desc": "Spits a dart of venom that deals 12 damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+    },
+    {
+      "name": "Ripened Fang",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 80,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 6
+      },
+      "desc": "A fang strike that deals 8 damage and needs one of your afflictions on the target, which it uses up. The target is 10% easier to wound for 6 seconds.",
+      "consumeAffliction": true
+    },
+    {
+      "name": "Antivenom Sip",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "poison",
+      "cleanseCount": 3,
+      "cleanseTag": "poison",
+      "healScope": "self",
+      "healOnUse": 12,
+      "cooldown": 30,
+      "desc": "Clears up to 3 poison conditions from you and restores 12 health."
+    },
+    {
+      "name": "Coiled Wait",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 1
+      },
+      "desc": "Each time you afflict something, your next ability deals 25% more damage. Once every 8 seconds."
+    }
+  ]
 }

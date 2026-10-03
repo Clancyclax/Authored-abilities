@@ -1,90 +1,86 @@
 {
- "essence": "essDog",
- "stone": "stoneNet",
- "fusions": [
-  {
-   "name": "Circle Up",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 30,
-   "range": 110,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "stunOnHit": 1.2,
-   "desc": "Circles the quarry in, dealing 12 damage to every enemy within 3.5 tiles and stunning them for 1.2 seconds."
-  },
-  {
-   "name": "Snag Bites",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 86,
-   "sunder": {
-    "amount": 0.08,
-    "duration": 3
-   },
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.3,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Snaps for 4 damage and leaves the target 8% easier to wound for 3 seconds, with a 30% chance of [Slowed] for 3 seconds."
-  },
-  {
-   "name": "Catch Line",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "physical",
-   "cooldown": 75,
-   "summonKind": "trap",
-   "summonDmg": 16,
-   "summonDuration": 25,
-   "summonInterval": 0,
-   "summonRange": 64,
-   "summonCharges": 1,
-   "summonBlast": 64,
-   "summonArmDelay": 1,
-   "trapDelivery": "spawned",
-   "castTime": 1,
-   "debuff": {
-    "key": "pinned",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Takes 1 second to set a snare at the nearest enemy. It waits up to 25 seconds, and the first enemy to come within 2 tiles takes 16 damage and is [Pinned] for 3 seconds."
-  },
-  {
-   "name": "Drag the Catch",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 2,
-    "duration": 4
-   },
-   "desc": "Each time you inflict a condition, you regain 2 health a second for 4 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneNet",
+  "fusions": [
+    {
+      "name": "Circle Up",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 30,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1.2,
+      "desc": "Circles the quarry in, dealing 12 damage to every enemy within 3.5 tiles and stunning them for 1.2 seconds."
+    },
+    {
+      "name": "Snag Bites",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 86,
+      "debuff": {
+        "key": "cooldownSlow",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Snaps for 4 damage, with a 30% chance of [Stalled] for 4 seconds."
+    },
+    {
+      "name": "Catch Line",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "physical",
+      "cooldown": 75,
+      "summonKind": "trap",
+      "summonDmg": 16,
+      "summonDuration": 25,
+      "summonInterval": 0,
+      "summonRange": 64,
+      "summonCharges": 1,
+      "summonBlast": 64,
+      "summonArmDelay": 1,
+      "trapDelivery": "spawned",
+      "castTime": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Takes 1 second to set a snare at the nearest enemy. It waits up to 25 seconds, and the first enemy to come within 2 tiles takes 16 damage and is [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Drag the Catch",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 2,
+        "duration": 4
+      },
+      "desc": "Each time you inflict a condition, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+    }
+  ]
 }

@@ -1,75 +1,84 @@
 {
- "essence": "essCoral",
- "stone": "stoneRat",
- "fusions": [
-  {
-   "name": "Fouling Bite",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "poison",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 12,
-   "range": 80,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 6
-   },
-   "debuff": {
-    "key": "disease",
-    "chance": 1,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "spreadAfflictions": 112,
-   "desc": "A bite that deals 12 damage, leaves the target 10% easier to wound for 6 seconds and [Diseased] for 8 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "Flung Chips",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "piercing",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.9,
-   "spammable": true,
-   "isAoe": true,
-   "speed": 380,
-   "radius": 6,
-   "volleyCount": 3,
-   "volleySpread": 0.5,
-   "range": 192,
-   "desc": "Flings 3 chips of reef at once, spread apart, each dealing 3 damage."
-  },
-  {
-   "name": "Seeded Colony",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "water",
-   "summonKind": "swarm",
-   "summonDmg": 3,
-   "summonDuration": 20,
-   "summonInterval": 1,
-   "summonRange": 128,
-   "castTime": 1,
-   "cooldown": 60,
-   "summonCreatureName": "Reef Rats",
-   "desc": "Seeds a colony of reef rats that fights for 20 seconds. Every second they bite an enemy within 4 tiles for 3 damage."
-  },
-  {
-   "name": "Last Off the Wreck",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "water",
-   "buffKind": "maxHp",
-   "amount": 12,
-   "regenPerSec": 0.8,
-   "desc": "Your maximum health rises by 12. You also regenerate 0.8 health a second, permanently."
-  }
- ]
+  "essence": "essCoral",
+  "stone": "stoneRat",
+  "fusions": [
+    {
+      "name": "Fouling Bite",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 12,
+      "range": 80,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 6
+      },
+      "debuff": {
+        "key": "disease",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A bite that deals 12 damage, knocks the target back 2.5 tiles, leaves it 10% easier to wound for 6 seconds and [Diseased] for 8 seconds.",
+      "knockback": 80
+    },
+    {
+      "name": "Flung Chips",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "isAoe": true,
+      "speed": 380,
+      "radius": 6,
+      "volleyCount": 3,
+      "volleySpread": 0.5,
+      "range": 192,
+      "desc": "Flings 3 chips of reef at once, spread apart, each dealing 3 damage."
+    },
+    {
+      "name": "Seeded Colony",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "water",
+      "summonKind": "swarm",
+      "summonDmg": 3,
+      "summonDuration": 20,
+      "summonInterval": 1,
+      "summonRange": 128,
+      "castTime": 1,
+      "cooldown": 60,
+      "summonCreatureName": "Reef Rats",
+      "desc": "Seeds a colony of reef rats that fights for 20 seconds. Every second they bite an enemy within 4 tiles for 3 damage."
+    },
+    {
+      "name": "Last Off the Wreck",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "desc": "When your health falls below 30%, you regain 3 health a second for 6 seconds. Once every 60 seconds.",
+      "isTriggered": true,
+      "cooldown": 60,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 60,
+        "frac": 0.3
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 6
+      }
+    }
+  ]
 }

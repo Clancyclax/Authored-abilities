@@ -1,66 +1,72 @@
 {
- "essence": "essDog",
- "stone": "stoneShip",
- "fusions": [
-  {
-   "name": "Bow Wave",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "water",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 15,
-   "range": 224,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 96,
-   "desc": "Surges forward in a cone that deals 12 damage to everything caught in it and knocks it back 3 tiles."
-  },
-  {
-   "name": "Full Sail",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "wind",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 192,
-   "maxMult": 1.8,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.1,
-   "scaleCap": 0.5,
-   "desc": "Runs at an enemy for 5 damage, up to 1.8 times as much at its maximum range. The damage rises 10% per tile you have travelled, up to 50%."
-  },
-  {
-   "name": "Tack Hard",
-   "kind": "active",
-   "category": "movement",
-   "template": "dash",
-   "element": "wind",
-   "cooldown": 12,
-   "dashDist": 160,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 4
-   },
-   "desc": "A short burst of movement that carries you 5 tiles forward. You move 20% faster for 4 seconds."
-  },
-  {
-   "name": "Sea Legs",
-   "kind": "passive",
-   "category": "movement",
-   "template": "passiveMove",
-   "element": "wind",
-   "moveSpeedPct": 0.1,
-   "resist": {
-    "element": "wind",
-    "amount": 0.1
-   },
-   "desc": "Your movement speed is permanently increased by 10%, and you have 10% wind resistance."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneShip",
+  "fusions": [
+    {
+      "name": "Bow Wave",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 15,
+      "range": 224,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "desc": "Surges forward in a cone that deals 12 damage to everything caught in it and knocks it back 3 tiles."
+    },
+    {
+      "name": "Full Sail",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "wind",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 192,
+      "maxMult": 1.8,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.1,
+      "scaleCap": 0.5,
+      "desc": "Runs at an enemy for 5 damage, up to 1.8 times as much at its maximum range. The damage rises 10% per tile you have travelled, up to 50%."
+    },
+    {
+      "name": "Tack Hard",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "wind",
+      "cooldown": 12,
+      "dashDist": 160,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "A short burst of movement that carries you 5 tiles forward. You move 20% faster for 4 seconds."
+    },
+    {
+      "name": "Sled Team Stride",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 6
+      },
+      "desc": "Every few paces you cover, you regain 6 stamina. Once every 8 seconds."
+    }
+  ]
 }

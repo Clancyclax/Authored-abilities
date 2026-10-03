@@ -1,79 +1,79 @@
 {
- "essence": "essCoral",
- "stone": "stoneOctopus",
- "fusions": [
-  {
-   "name": "Arm over Arm",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "water",
-   "role": "medium",
-   "base": 4,
-   "cooldown": 14,
-   "strikes": 4,
-   "bindOnHit": {
-    "slowPct": 0.2,
-    "duration": 3
-   },
-   "spreadAfflictions": 112,
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 3,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Poisoned"
-   },
-   "desc": "Strikes four times with reaching arms, each blow dealing 4 damage. Anything struck moves 20% slower for 3 seconds, and the target is [Poisoned] for 1 damage a second for 3 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "Pigment Cloud",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "nature",
-   "role": "long",
-   "base": 28,
-   "cooldown": 90,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "range": 110,
-   "guaranteedCrit": true,
-   "debuff": {
-    "key": "critChanceDown",
-    "chance": 1,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Releases a cloud of pigment that deals 28 damage to every enemy within 3.5 tiles. Every hit is a critical hit and leaves the target [Blunted] for 8 seconds."
-  },
-  {
-   "name": "Den Mate",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "water",
-   "summonKind": "minion",
-   "summonDmg": 6,
-   "summonDuration": 25,
-   "summonInterval": 2,
-   "summonRange": 128,
-   "castTime": 1,
-   "cooldown": 75,
-   "summonCreatureName": "Reef Octopus",
-   "desc": "Calls a reef octopus for 25 seconds. Every 2 seconds it grabs an enemy within 4 tiles for 6 damage."
-  },
-  {
-   "name": "Slipping the Grip",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "water",
-   "condition": "vsDebuffed",
-   "bonusKind": "dodge",
-   "amount": 0.12,
-   "desc": "Against enemies carrying a condition, your dodge chance rises by 12%."
-  }
- ]
+  "essence": "essCoral",
+  "stone": "stoneOctopus",
+  "fusions": [
+    {
+      "name": "Arm over Arm",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "water",
+      "role": "medium",
+      "base": 4,
+      "cooldown": 14,
+      "strikes": 4,
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 3
+      },
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Strikes four times with reaching arms, each blow dealing 4 damage. Anything struck moves 20% slower for 3 seconds and is stunned for 1 second, and the target is [Poisoned] for 1 damage a second for 3 seconds.",
+      "stunOnHit": 1.0
+    },
+    {
+      "name": "Pigment Cloud",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "nature",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "range": 110,
+      "guaranteedCrit": true,
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Releases a cloud of pigment that deals 28 damage to every enemy within 3.5 tiles. Every hit is a critical hit and leaves the target [Blunted] for 8 seconds."
+    },
+    {
+      "name": "Den Mate",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "water",
+      "summonKind": "minion",
+      "summonDmg": 6,
+      "summonDuration": 25,
+      "summonInterval": 2,
+      "summonRange": 128,
+      "castTime": 1,
+      "cooldown": 75,
+      "summonCreatureName": "Reef Octopus",
+      "desc": "Calls a reef octopus for 25 seconds. Every 2 seconds it grabs an enemy within 4 tiles for 6 damage."
+    },
+    {
+      "name": "Slipping the Grip",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "water",
+      "condition": "vsDebuffed",
+      "bonusKind": "dodge",
+      "amount": 0.12,
+      "desc": "Against enemies carrying a condition, your dodge chance rises by 12%."
+    }
+  ]
 }

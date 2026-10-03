@@ -1,65 +1,66 @@
 {
- "essence": "essDog",
- "stone": "stoneOctopus",
- "fusions": [
-  {
-   "name": "Eight Holds",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "physical",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "spreadAfflictions": 112,
-   "desc": "Bites for 12 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "Scrum",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 1.0,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "spammable": true,
-   "scaleOn": "targetAfflictions",
-   "scalePer": 0.08,
-   "scaleCap": 0.4,
-   "desc": "Thrashes at every enemy within 3 tiles, dealing 4 damage. The damage rises 8% for each affliction on the target, up to 40%."
-  },
-  {
-   "name": "Wrestler's Hold",
-   "kind": "active",
-   "category": "defensive",
-   "template": "thornsBuff",
-   "element": "physical",
-   "cooldown": 30,
-   "buffDuration": 8,
-   "thornsFrac": 0.5,
-   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
-  },
-  {
-   "name": "Idle Paws",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "cooldownPassive",
-   "element": "physical",
-   "cooldownReduction": 0.08,
-   "armorBonus": 0.06,
-   "desc": "Every ability you have comes round 8% sooner. Your armour rises by 6%."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneOctopus",
+  "fusions": [
+    {
+      "name": "Eight Holds",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "spreadAfflictions": 112,
+      "desc": "Bites for 12 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+    },
+    {
+      "name": "Scrum",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 1,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "spammable": true,
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Thrashes at every enemy within 3 tiles, dealing 4 damage. The damage rises 8% for each affliction on the target, up to 40%."
+    },
+    {
+      "name": "Wrestler's Hold",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "physical",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.5,
+      "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+    },
+    {
+      "name": "Worry the Wounded",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "You deal 12% more damage to enemies carrying an affliction."
+    }
+  ]
 }

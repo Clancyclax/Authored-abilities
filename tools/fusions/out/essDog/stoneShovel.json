@@ -1,75 +1,83 @@
 {
- "essence": "essDog",
- "stone": "stoneShovel",
- "fusions": [
-  {
-   "name": "Dig In",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "earth",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 16,
-   "strikes": 1,
-   "chargeTo": 160,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Rushes 5 tiles to the target and tears at it for 14 damage, making it [Slowed] for 3 seconds and [Bleeding] for 2 damage a second for 4 seconds."
-  },
-  {
-   "name": "Clod Flurry",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "earth",
-   "role": "basic",
-   "base": 3,
-   "cooldown": 0.8,
-   "spammable": true,
-   "volleyCount": 3,
-   "volleySpread": 0.35,
-   "speed": 380,
-   "radius": 6,
-   "range": 192,
-   "isAoe": true,
-   "desc": "Kicks up 3 clods at once in a spread out to 6 tiles, each dealing 3 damage."
-  },
-  {
-   "name": "Heaped Barricade",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "earth",
-   "cooldown": 30,
-   "wallKind": "block",
-   "wallLength": 192,
-   "wallDuration": 8,
-   "wallThickness": 26,
-   "desc": "Heaps up a barricade 6 tiles across ahead of you for 8 seconds that blocks enemies."
-  },
-  {
-   "name": "Packed Ground",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "earth",
-   "buffKind": "armor",
-   "amount": 0.1,
-   "regenPerSec": 0.5,
-   "desc": "Your armour rises by 10%. You also regenerate 0.5 health a second."
-  }
- ]
+  "essence": "essDog",
+  "stone": "stoneShovel",
+  "fusions": [
+    {
+      "name": "Dig In",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "earth",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "strikes": 1,
+      "chargeTo": 160,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Rushes 5 tiles to the target and tears at it for 14 damage, making it [Slowed] for 3 seconds and [Bleeding] for 2 damage a second for 4 seconds."
+    },
+    {
+      "name": "Clod Flurry",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "earth",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.35,
+      "speed": 380,
+      "radius": 6,
+      "range": 192,
+      "isAoe": true,
+      "desc": "Kicks up 3 clods at once in a spread out to 6 tiles, each dealing 3 damage."
+    },
+    {
+      "name": "Heaped Barricade",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "earth",
+      "cooldown": 30,
+      "wallKind": "block",
+      "wallLength": 192,
+      "wallDuration": 8,
+      "wallThickness": 26,
+      "desc": "Heaps up a barricade 6 tiles across ahead of you for 8 seconds that blocks enemies."
+    },
+    {
+      "name": "Stashed Reserve",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 40,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 40
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 15
+      },
+      "desc": "When your stamina runs out, you regain 15 stamina. Once every 40 seconds."
+    }
+  ]
 }

@@ -1,84 +1,80 @@
 {
- "essence": "essCoral",
- "stone": "stoneShark",
- "fusions": [
-  {
-   "name": "Scenting the Wound",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "blood",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 15,
-   "strikes": 1,
-   "consumeAfflictionsPer": 0.6,
-   "dot": {
-    "dmgPerTick": 3,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "A bite that deals 16 damage, uses up every affliction you have on the target and deals 60% more damage for each one, then leaves it [Bleeding] for 3 damage a second for 4 seconds."
-  },
-  {
-   "name": "Churned Water",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "water",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "range": 96,
-   "hpCostPct": 0.05,
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 3,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "You churn the water around you, dealing 9 damage to every enemy within 3 tiles and leaving each [Bleeding] for 1 damage a second for 3 seconds. It costs 5% of your maximum health."
-  },
-  {
-   "name": "Feeding Tide",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "water",
-   "buffStat": "attackSpeed",
-   "buffAmount": 0.3,
-   "buffDuration": 12,
-   "cooldown": 45,
-   "escort": {
-    "dmg": 4,
-    "interval": 1.4,
-    "duration": 8
-   },
-   "desc": "Increases your attack speed by 30% for 12 seconds. While it lasts, a school of reef sharks fights beside you for 8 seconds, striking for 4 every 1.4 seconds."
-  },
-  {
-   "name": "Taste Remembered",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "blood",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "lifedrainBuff",
-    "amount": 0.2,
-    "duration": 6
-   },
-   "desc": "When you kill something, you heal for 20% of the damage you deal for 6 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essCoral",
+  "stone": "stoneShark",
+  "fusions": [
+    {
+      "name": "Scenting the Wound",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "blood",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 15,
+      "strikes": 1,
+      "consumeAfflictionsPer": 0.6,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A bite that deals 16 damage, uses up every affliction you have on the target and deals 60% more damage for each one, then leaves it [Bleeding] for 3 damage a second for 4 seconds."
+    },
+    {
+      "name": "Churned Water",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "range": 96,
+      "hpCostPct": 0.05,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "You churn the water around you, dealing 9 damage to every enemy within 3 tiles and leaving each [Bleeding] for 1 damage a second for 3 seconds. It costs 5% of your maximum health."
+    },
+    {
+      "name": "Chum Frenzy",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "water",
+      "buffStat": "attackSpeed",
+      "buffAmount": 0.3,
+      "buffDuration": 12,
+      "cooldown": 45,
+      "desc": "Increases your attack speed by 30% for 12 seconds and restores 10 health.",
+      "healOnUse": 10
+    },
+    {
+      "name": "Taste Remembered",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blood",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.2,
+        "duration": 6
+      },
+      "desc": "When you kill something, you heal for 20% of the damage you deal for 6 seconds. Once every 8 seconds."
+    }
+  ]
 }

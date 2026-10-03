@@ -1,81 +1,81 @@
 {
- "essence": "essCoral",
- "stone": "stoneShovel",
- "fusions": [
-  {
-   "name": "Hurled Spoil",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "earth",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 12,
-   "range": 192,
-   "maxMult": 1.6,
-   "stunOnHit": 1.0,
-   "desc": "Hurls a slab of seabed up to 6 tiles that deals 14 damage, rising to 1.6 times that at full reach, and stuns the target for 1 second."
-  },
-  {
-   "name": "Spade Edge",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "earth",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 70,
-   "sunder": {
-    "amount": 0.06,
-    "duration": 4
-   },
-   "debuff": {
-    "key": "speedDown",
-    "chance": 1,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A short chop that deals 5 damage, leaves the target 6% easier to wound for 4 seconds and [Leaden] for 3 seconds."
-  },
-  {
-   "name": "Buried Polyps",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "earth",
-   "summonKind": "trap",
-   "summonDuration": 40,
-   "cooldown": 120,
-   "summonDmg": 24,
-   "summonRange": 96,
-   "summonInterval": 0,
-   "summonCharges": 2,
-   "summonBlast": 80,
-   "summonArmDelay": 0.1,
-   "trapDelivery": "spawned",
-   "desc": "Buries a nest of stinging polyps beneath the nearest enemy. It waits 40 seconds, and the first 2 enemies to come within 3 tiles take 24 damage in a blast around it."
-  },
-  {
-   "name": "Dug In",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "earth",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "spendStamina",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.1,
-    "duration": 5
-   },
-   "desc": "When you spend stamina, a shield worth 10% of your maximum health closes over you for 5 seconds. Once every 15 seconds."
-  }
- ]
+  "essence": "essCoral",
+  "stone": "stoneShovel",
+  "fusions": [
+    {
+      "name": "Hurled Spoil",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "earth",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 12,
+      "range": 192,
+      "maxMult": 1.6,
+      "stunOnHit": 1.0,
+      "desc": "Hurls a slab of seabed up to 6 tiles that deals 14 damage, rising to 1.6 times that at full reach, and stuns the target for 1 second."
+    },
+    {
+      "name": "Spade Edge",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "earth",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 70,
+      "sunder": {
+        "amount": 0.06,
+        "duration": 4
+      },
+      "debuff": {
+        "key": "speedDown",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A short chop that deals 5 damage, leaves the target 6% easier to wound for 4 seconds and [Leaden] for 3 seconds."
+    },
+    {
+      "name": "Buried Polyps",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "earth",
+      "summonKind": "trap",
+      "summonDuration": 40,
+      "cooldown": 120,
+      "summonDmg": 24,
+      "summonRange": 96,
+      "summonInterval": 0,
+      "summonCharges": 2,
+      "summonBlast": 80,
+      "summonArmDelay": 0.1,
+      "trapDelivery": "spawned",
+      "desc": "Buries a nest of stinging polyps beneath the nearest enemy. It waits 40 seconds, then bursts for 24 damage in a blast around it that hits the first 2 enemies to come within 3 tiles."
+    },
+    {
+      "name": "Dug In",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "healingTakenBuff",
+        "amount": 0.3,
+        "duration": 6
+      },
+      "desc": "When you spend stamina, healing you receive rises by 30% for 6 seconds. Once every 15 seconds."
+    }
+  ]
 }
