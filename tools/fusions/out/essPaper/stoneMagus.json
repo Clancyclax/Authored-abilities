@@ -1,69 +1,74 @@
 {
- "essence": "essPaper",
- "stone": "stoneMagus",
- "fusions": [
-  {
-   "name": "Full Stop",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 14,
-   "speed": 420,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "medium",
-   "requiresTargetBelow": 0.25,
-   "desc": "Usable only on an enemy at or below 25% health. Sends a full stop into the first enemy it meets that deals 22 damage."
-  },
-  {
-   "name": "Spoken Edict",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "radiant",
-   "role": "long",
-   "base": 26,
-   "cooldown": 90,
-   "range": 128,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "guaranteedCrit": true,
-   "desc": "Reads out an edict that deals 26 damage to every enemy within 4 tiles. Every hit is a critical hit."
-  },
-  {
-   "name": "Counter-Script",
-   "kind": "active",
-   "category": "defensive",
-   "template": "reflectWard",
-   "element": "arcane",
-   "reflectKind": "spell",
-   "reflectFrac": 0.3,
-   "reflectChance": 0.5,
-   "buffDuration": 6,
-   "cooldown": 30,
-   "desc": "For 6 seconds, your counter-script returns 30% of the elemental damage you take to whoever dealt it."
-  },
-  {
-   "name": "Corrected Spelling",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "restoreResource",
-    "resource": "mana",
-    "amount": 4
-   },
-   "desc": "Each time you spend mana, 4 mana is returned to you. Once every 6 seconds."
-  }
- ]
+  "essence": "essPaper",
+  "stone": "stoneMagus",
+  "fusions": [
+    {
+      "name": "Full Stop",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "execute",
+      "base": 22,
+      "cooldown": 14,
+      "speed": 420,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "medium",
+      "requiresTargetBelow": 0.25,
+      "desc": "Usable only on an enemy at or below 25% health. Sends a full stop into the first enemy it meets that deals 22 damage."
+    },
+    {
+      "name": "Spoken Edict",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "radiant",
+      "speed": 380,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "role": "long",
+      "base": 12,
+      "cooldown": 90,
+      "volleyCount": 3,
+      "volleySpread": 0.4,
+      "isAoe": true,
+      "guaranteedCrit": true,
+      "desc": "Reads out 3 edicts at once, spread apart; each deals 12 damage and always lands as a critical hit.",
+      "range": 256
+    },
+    {
+      "name": "Counter-Script",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "arcane",
+      "reflectKind": "spell",
+      "reflectFrac": 0.3,
+      "reflectChance": 0.5,
+      "buffDuration": 6,
+      "cooldown": 30,
+      "desc": "For 6 seconds, your counter-script returns 30% of the elemental damage you take to whoever dealt it."
+    },
+    {
+      "name": "Corrected Spelling",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "mana",
+        "amount": 4
+      },
+      "desc": "Each time you spend mana, 4 mana is returned to you. Once every 6 seconds."
+    }
+  ]
 }

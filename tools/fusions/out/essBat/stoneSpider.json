@@ -1,0 +1,89 @@
+{
+ "essence": "essBat",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Threads Between",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "dark",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3 tiles takes a lash of silk that deals 10 damage and leaves it [Slowed] for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Silk Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "leech": 0.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a line of silk that deals 4 damage to the first enemy it meets, with a 25% chance to leave it [Pinned] for 2 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Web Trap",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "cooldown": 180,
+   "summonKind": "trap",
+   "summonDuration": 60,
+   "summonDmg": 20,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 88,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned",
+   "desc": "Spins a web onto the nearest enemy. It waits 60 seconds, and the first 2 enemies to come within 3 tiles take 20 damage in a blast around it."
+  },
+  {
+   "name": "Strand Tugged",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When a condition you inflicted runs its course, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

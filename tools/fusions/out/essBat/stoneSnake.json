@@ -1,0 +1,69 @@
+{
+ "essence": "essBat",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Venom Draught",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "leech": 0.3,
+   "desc": "Spends 5% of your maximum health on a fang of venom that deals 9 damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 6 seconds. You heal for 30% of the damage dealt."
+  },
+  {
+   "name": "Patient Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.2,
+   "executeLadder": true,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Usable only on a target at or below 20% health, a threshold that rises with each rank. A strike that deals 18 damage and uses up every affliction on the target, adding 1.4 times their remaining damage and 50% more damage for each one."
+  },
+  {
+   "name": "Shed Skin",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "poison",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes up to 3 conditions from you, and you regain 10 health."
+  },
+  {
+   "name": "Warm Side",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "regenPerSec": 0.5,
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You also regenerate 0.5 health a second."
+  }
+ ]
+}

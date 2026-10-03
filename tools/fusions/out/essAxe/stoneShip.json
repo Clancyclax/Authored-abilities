@@ -1,75 +1,77 @@
 {
- "essence": "essAxe",
- "stone": "stoneShip",
- "fusions": [
-  {
-   "name": "Boarding Swing",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "slashing",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 14,
-   "strikes": 1,
-   "chargeTo": 224,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Rushes you to a target up to 7 tiles away for a chop that deals 13 damage and makes it [Bleeding] for 2 damage a second for 4 seconds."
-  },
-  {
-   "name": "Heeling Sweep",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "slashing",
-   "role": "long",
-   "base": 26,
-   "cooldown": 80,
-   "range": 112,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreArmor": true,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "desc": "Leans into a full sweep that deals 26 damage to every enemy within 3.5 tiles and ignores armour. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
-  },
-  {
-   "name": "Running Before the Wind",
-   "kind": "active",
-   "category": "movement",
-   "template": "dash",
-   "element": "wind",
-   "dashDist": 128,
-   "cooldown": 8,
-   "hasteOnUse": {
-    "pct": 0.2,
-    "duration": 3
-   },
-   "desc": "Carries you 4 tiles forward. Your movement speed rises 20% for 3 seconds afterward."
-  },
-  {
-   "name": "Wind Filling the Sail",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "wind",
-   "stackShape": "boon",
-   "stackBuild": "hit",
-   "stackPay": "haste",
-   "stackCap": 5,
-   "stackDecay": 6,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 1,
-   "stackIcon": "stackFortune",
-   "desc": "Every hit you land builds a stack on you, up to 5. At 5 they all spend at once: you move and attack 5% faster per stack (25% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
-  }
- ]
+  "essence": "essAxe",
+  "stone": "stoneShip",
+  "fusions": [
+    {
+      "name": "Boarding Swing",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "slashing",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "strikes": 1,
+      "chargeTo": 224,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Rushes you to a target up to 7 tiles away for a chop that deals 13 damage and makes it [Bleeding] for 2 damage a second for 4 seconds."
+    },
+    {
+      "name": "Heeling Sweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "slashing",
+      "role": "long",
+      "base": 26,
+      "cooldown": 80,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreArmor": true,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.05,
+      "scaleCap": 0.25,
+      "desc": "Leans into a full sweep that deals 26 damage to every enemy within 3.5 tiles and ignores armour. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+    },
+    {
+      "name": "Running Before the Wind",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "wind",
+      "dashDist": 128,
+      "cooldown": 8,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Carries you 4 tiles forward. Your movement speed rises 20% for 3 seconds afterward."
+    },
+    {
+      "name": "Weather Gauge",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "desc": "Every 8 tiles you cover raises your physical damage by 25% for 5 seconds. Once every 8 seconds.",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.25,
+        "duration": 5
+      }
+    }
+  ]
 }

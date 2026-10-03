@@ -1,0 +1,89 @@
+{
+ "essence": "essBat",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Gnawing Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "leech": 0.25,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a bite of shadow that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Diseased] for 8 seconds. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Over the Side",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "dark",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A rush of wings across a cone 4 tiles long that deals 8 damage to everything in it. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Scurrying Tide",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "dark",
+   "cooldown": 50,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 14,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Musters a swarm that fights for 14 seconds, biting an enemy within 4 tiles for 3 damage every second. Each kill the swarm makes restores 4 health."
+  },
+  {
+   "name": "Last Off the Wreck",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 30%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

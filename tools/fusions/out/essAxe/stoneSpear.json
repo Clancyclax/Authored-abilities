@@ -1,68 +1,70 @@
 {
- "essence": "essAxe",
- "stone": "stoneSpear",
- "fusions": [
-  {
-   "name": "Hafted Javelin",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "long",
-   "base": 32,
-   "cooldown": 80,
-   "speed": 480,
-   "radius": 8,
-   "reachUnits": 352,
-   "rangeBand": "long",
-   "explodeRadius": 112,
-   "splashFrac": 0.8,
-   "desc": "Hurls the blade on a long haft, dealing 32 damage to the first enemy it meets and 80% of that to every enemy within 3.5 tiles of it."
-  },
-  {
-   "name": "Long Reach Hew",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "slashing",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 14,
-   "range": 192,
-   "maxMult": 1.5,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "knockback": 96,
-   "desc": "A long-hafted chop at a target up to 6 tiles away that deals 14 damage, rising to 1.5 times that at full reach, and knocks it back 3 tiles."
-  },
-  {
-   "name": "Lengthened Haft",
-   "kind": "active",
-   "category": "buff",
-   "template": "rangeBuff",
-   "element": "piercing",
-   "rangeMult": 1.4,
-   "buffDuration": 20,
-   "castTime": 0.5,
-   "cooldown": 70,
-   "desc": "For 20 seconds, your attacks and spells reach 40% further."
-  },
-  {
-   "name": "Ready the Throw",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "piercing",
-   "stackShape": "boon",
-   "stackBuild": "hit",
-   "stackPay": "burst",
-   "stackCap": 4,
-   "stackDecay": 6,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 1,
-   "stackIcon": "stackEye",
-   "desc": "Every hit you land builds a stack on you, up to 4. At 4 they all spend at once: you strike the nearest enemy within 8 tiles for 34% of your weapon damage per stack (136% at full). Unfed, a stack fades every 6 seconds."
-  }
- ]
+  "essence": "essAxe",
+  "stone": "stoneSpear",
+  "fusions": [
+    {
+      "name": "Hafted Javelin",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "long",
+      "base": 32,
+      "cooldown": 80,
+      "speed": 480,
+      "radius": 8,
+      "reachUnits": 352,
+      "rangeBand": "long",
+      "explodeRadius": 112,
+      "splashFrac": 0.8,
+      "desc": "Hurls the blade on a long haft, dealing 32 damage to the first enemy it meets and 80% of that to every enemy within 3.5 tiles of it."
+    },
+    {
+      "name": "Outreach Chop",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 192,
+      "maxMult": 1.5,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "knockback": 96,
+      "desc": "A long-hafted chop at a target up to 6 tiles away that deals 14 damage, rising to 1.5 times that at full reach, and knocks it back 3 tiles."
+    },
+    {
+      "name": "Lengthened Haft",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "piercing",
+      "rangeMult": 1.4,
+      "buffDuration": 20,
+      "castTime": 0.5,
+      "cooldown": 70,
+      "desc": "For 20 seconds, your attacks and spells reach 40% further."
+    },
+    {
+      "name": "Ready the Throw",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "desc": "Each strike you land sends a thrown point at the nearest enemy within 8 tiles that deals 10 damage. Once every 6 seconds.",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "strike",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 10,
+        "range": 256
+      }
+    }
+  ]
 }

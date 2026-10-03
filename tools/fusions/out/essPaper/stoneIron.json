@@ -1,69 +1,70 @@
 {
- "essence": "essPaper",
- "stone": "stoneIron",
- "fusions": [
-  {
-   "name": "Gall-Ink Blot",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 80,
-   "reachUnits": 80,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.08,
-    "duration": 4
-   },
-   "desc": "Flicks a blot of corrosive ink that deals 4 damage and leaves the target 8% easier to wound for 4 seconds."
-  },
-  {
-   "name": "Clasped Codex",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "range": 110,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreResist": true,
-   "desc": "Swings a clasped codex around you that deals 30 damage to every enemy within 3.5 tiles and ignores resistances."
-  },
-  {
-   "name": "Unyielding Covers",
-   "kind": "active",
-   "category": "buff",
-   "template": "immunityBuff",
-   "element": "physical",
-   "immunityDuration": 4,
-   "cooldown": 120,
-   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
-  },
-  {
-   "name": "Cold Binding",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 12,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 12
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.15,
-    "duration": 5
-   },
-   "desc": "When anything but fire hurts you, your covers close: you gain a ward of 15% of your maximum health for 5 seconds. Once every 12 seconds."
-  }
- ]
+  "essence": "essPaper",
+  "stone": "stoneIron",
+  "fusions": [
+    {
+      "name": "Gall-Ink Blot",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 80,
+      "reachUnits": 80,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "desc": "Flicks a blot of corrosive ink that deals 4 damage and leaves the target 8% easier to wound for 4 seconds."
+    },
+    {
+      "name": "Clasped Codex",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "blunt",
+      "speed": 380,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "ignoreResist": true,
+      "desc": "Hurls a clasped codex into the first enemy it meets that deals 30 damage and ignores resistances."
+    },
+    {
+      "name": "Unyielding Covers",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "physical",
+      "immunityDuration": 4,
+      "cooldown": 120,
+      "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you."
+    },
+    {
+      "name": "Cold Binding",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.15,
+        "duration": 5
+      },
+      "desc": "When anything but fire hurts you, your covers close: you gain a ward of 15% of your maximum health for 5 seconds. Once every 12 seconds."
+    }
+  ]
 }

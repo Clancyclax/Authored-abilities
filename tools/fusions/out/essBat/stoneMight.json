@@ -1,0 +1,82 @@
+{
+ "essence": "essBat",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Plummet",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 18,
+   "cooldown": 14,
+   "range": 90,
+   "reachUnits": 90,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "stunOnHit": 1.2,
+   "desc": "Drops from above onto the target for a blow that deals 18 damage, stuns it for 1.2 seconds and leaves it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Wingbeat Gale",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A beat of the wings across a cone 4 tiles long that deals 4 damage to everything in it, each with a 30% chance to be left [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Laden Wings",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "cooldown": 40,
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "desc": "Increases your damage by 25% for 12 seconds. Your movement speed rises 15% for 6 seconds after you use it."
+  },
+  {
+   "name": "Tailwind Weight",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you cover a long stretch of ground, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

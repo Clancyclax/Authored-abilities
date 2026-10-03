@@ -1,76 +1,83 @@
 {
- "essence": "essNeedle",
- "stone": "stoneFork",
- "fusions": [
-  {
-   "name": "Second Tine",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "chargesMax": 4,
-   "speed": 420,
-   "radius": 6,
-   "reachUnits": 300,
-   "rangeBand": "long",
-   "chain": {
-    "count": 1,
-    "radius": 110,
-    "frac": 0.7
-   },
-   "chainCount": 1,
-   "chainRange": 110,
-   "chainDamagePct": 0.7,
-   "desc": "Throws a point that deals 7 damage to the first enemy it meets, then splits off to 1 more enemy within 3.5 tiles for 70% of that. Holds up to 4 charges; kills give charges back."
-  },
-  {
-   "name": "Both Ways at Once",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "piercing",
-   "role": "medium",
-   "base": 11,
-   "cooldown": 10,
-   "stunOnHit": 1,
-   "volleyCount": 2,
-   "volleySpread": 0.6,
-   "speed": 360,
-   "radius": 6,
-   "range": 220,
-   "reachUnits": 220,
-   "rangeBand": "medium",
-   "isAoe": true,
-   "castTime": 0,
-   "desc": "Looses 2 points that fly apart, each dealing 11 damage and stunning what it hits for 1 second."
-  },
-  {
-   "name": "Prong After Prong",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "piercing",
-   "cooldown": 40,
-   "buffStat": "attackSpeed",
-   "buffAmount": 0.25,
-   "buffDuration": 10,
-   "desc": "Increases your attack speed by 25% for 10 seconds."
-  },
-  {
-   "name": "Both Points Tried",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
-   "element": "piercing",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 8,
-   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
-  }
- ]
+  "essence": "essNeedle",
+  "stone": "stoneFork",
+  "fusions": [
+    {
+      "name": "Second Tine",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "chargesMax": 4,
+      "speed": 420,
+      "radius": 6,
+      "reachUnits": 300,
+      "rangeBand": "long",
+      "chain": {
+        "count": 1,
+        "radius": 110,
+        "frac": 0.7
+      },
+      "chainCount": 1,
+      "chainRange": 110,
+      "chainDamagePct": 0.7,
+      "desc": "Throws a point that deals 7 damage to the first enemy it meets, then splits off to 1 more enemy within 3.5 tiles for 70% of that. Holds up to 4 charges; kills give charges back."
+    },
+    {
+      "name": "Both Ways at Once",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 10,
+      "stunOnHit": 1,
+      "volleyCount": 2,
+      "volleySpread": 0.6,
+      "speed": 360,
+      "radius": 6,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "isAoe": true,
+      "castTime": 0,
+      "desc": "Looses 2 points that fly apart, each dealing 11 damage and stunning what it hits for 1 second."
+    },
+    {
+      "name": "Doubled Back",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "piercing",
+      "reflectKind": "debuff",
+      "reflectChance": 0.5,
+      "reflectFrac": 0.2,
+      "buffDuration": 10,
+      "cooldown": 30,
+      "desc": "For 10 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead."
+    },
+    {
+      "name": "Where It Branches",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "lightning",
+      "isTriggered": true,
+      "cooldown": 5,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 5
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 6,
+        "range": 160
+      },
+      "desc": "When you land a critical hit, a second point leaps to the nearest enemy within 5 tiles and deals 6 lightning damage. Once every 5 seconds."
+    }
+  ]
 }

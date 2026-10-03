@@ -1,0 +1,78 @@
+{
+ "essence": "essBat",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Pilfered Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "shadow",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "leech": 0.25,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a dart of shadow at the first enemy it meets that deals 4 damage, and you heal for 25% of the damage dealt. It has a 30% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Tumble Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "confuse": true,
+   "confuseChance": 1,
+   "confuseDuration": 3,
+   "desc": "Tumbles through a crowd, dealing 10 damage to every enemy within 3 tiles, knocking each back 2 tiles and turning it against its allies for 3 seconds."
+  },
+  {
+   "name": "Branch Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 16,
+   "teleportRange": 192,
+   "dodgeBonus": 0.15,
+   "desc": "Steps you instantly to a point up to 6 tiles away, with 15% more dodge chance for it."
+  },
+  {
+   "name": "Sleight of Wing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "shadow",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, your attacks heal you for 20% of the damage they deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

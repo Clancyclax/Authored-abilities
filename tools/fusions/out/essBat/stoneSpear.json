@@ -1,0 +1,77 @@
+{
+ "essence": "essBat",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Plunging Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "ignoreArmor": true,
+   "desc": "A thrown point that deals 30 damage, rising to 1.8 times that at its full reach of 8 tiles, and ignores armour."
+  },
+  {
+   "name": "Impaling Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "stunOnHit": 1.0,
+   "chain": {
+    "count": 2,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 112,
+   "chainDamagePct": 0.6,
+   "desc": "Sends a lance into the first enemy it meets that deals 11 damage and stuns it for 1 second. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Longer Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "wind",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "desc": "For 15 seconds, your attacks and spells reach 1.4 times as far."
+  },
+  {
+   "name": "Thrown Rhythm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "lifeOnKill": 4,
+   "desc": "When you strike an enemy, you restore 4 stamina and each kill restores 4 health. Once every 5 seconds."
+  }
+ ]
+}

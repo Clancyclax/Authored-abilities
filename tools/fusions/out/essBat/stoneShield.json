@@ -1,0 +1,73 @@
+{
+ "essence": "essBat",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Buffet",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Beats the air flat against everything near you, dealing 12 damage to every enemy within 3 tiles and knocking each back 3 tiles."
+  },
+  {
+   "name": "Rim Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 90,
+   "reachUnits": 90,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "leech": 0.2,
+   "chargesMax": 3,
+   "desc": "A hard edge-first blow that deals 8 damage and leaves the target 12% easier to wound for 5 seconds. You heal for 20% of the damage dealt. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Turned Aside",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.6,
+   "lifeOnKill": 6,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 6 health."
+  },
+  {
+   "name": "Glancing Blow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When an enemy strikes you, a ward absorbs damage equal to 12% of your maximum health for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

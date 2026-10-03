@@ -1,87 +1,87 @@
 {
- "essence": "essArmour",
- "stone": "stoneRake",
- "fusions": [
-  {
-   "name": "Scrape the Leavings",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "physical",
-   "role": "execute",
-   "desc": "Rakes a target at or below 30% health, a threshold that rises with each rank, consuming every affliction on it to deal 18 damage plus 1.2 times their remaining damage, with a 50% chance to leave it [Sundered] for 5 seconds.",
-   "base": 18,
-   "cooldown": 14,
-   "range": 90,
-   "reachUnits": 90,
-   "rangeBand": "melee",
-   "stackMult": 1.2,
-   "requiresTargetBelow": 0.3,
-   "executeLadder": true,
-   "debuff": {
-    "key": "sunder",
-    "chance": 0.5,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   }
-  },
-  {
-   "name": "Tine Drag",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "physical",
-   "role": "basic",
-   "desc": "Drags the tines through a cone 3 tiles ahead, dealing 4 damage, with a 25% chance to leave each target [Hindered] for 3 seconds.",
-   "spammable": true,
-   "base": 4,
-   "cooldown": 0.9,
-   "range": 96,
-   "coneAngle": 0.6,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "debuff": {
-    "key": "slowAttack",
-    "chance": 0.25,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   }
-  },
-  {
-   "name": "Patched From Scraps",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "physical",
-   "desc": "Rakes up scrap to patch your plate, gaining a barrier that absorbs the next 3 hits, up to 18 damage, for 8 seconds.",
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 18,
-   "shieldStrikes": 3,
-   "shieldDuration": 8,
-   "cooldown": 30
-  },
-  {
-   "name": "Pick Over the Fallen",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "kill",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.15,
-    "duration": 5
-   },
-   "desc": "When you kill an enemy, you gain a shield worth 15% of your maximum health for 5 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essArmour",
+  "stone": "stoneRake",
+  "fusions": [
+    {
+      "name": "Scrape the Leavings",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "physical",
+      "role": "execute",
+      "desc": "Rakes a target at or below 30% health, a threshold that rises with each rank, consuming every affliction on it to deal 18 damage plus 1.2 times their remaining damage, with a 50% chance to leave it [Sundered] for 5 seconds.",
+      "base": 18,
+      "cooldown": 14,
+      "range": 90,
+      "reachUnits": 90,
+      "rangeBand": "melee",
+      "stackMult": 1.2,
+      "requiresTargetBelow": 0.3,
+      "executeLadder": true,
+      "debuff": {
+        "key": "sunder",
+        "chance": 0.5,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Tine Drag",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "basic",
+      "desc": "Drags the tines through a cone 3 tiles ahead, dealing 4 damage, with a 25% chance to leave each target [Hindered] for 3 seconds.",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.9,
+      "range": 96,
+      "coneAngle": 0.6,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.25,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Patched From Scraps",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "desc": "Rakes up scrap to patch your plate, gaining a barrier that absorbs the next 3 hits, up to 18 damage, for 8 seconds.",
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 18,
+      "shieldStrikes": 3,
+      "shieldDuration": 8,
+      "cooldown": 30
+    },
+    {
+      "name": "Pick Over the Fallen",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 5
+      },
+      "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+    }
+  ]
 }

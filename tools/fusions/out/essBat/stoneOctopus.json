@@ -1,0 +1,87 @@
+{
+ "essence": "essBat",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Eight at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "dark",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 1.0,
+   "spammable": true,
+   "volleySpread": 0.7,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "volleyCount": 8,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 5,
+    "label": "Reprieve"
+   },
+   "desc": "Looses 8 ink darts in a wide spread, each dealing 2 damage. 15% of the damage it deals comes back as healing over the following 5 seconds."
+  },
+  {
+   "name": "Ink Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a gout of ink that deals 7 damage to the first enemy it meets and has a 60% chance to leave it [Blunted] for 6 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Slipped Grasp",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "dark",
+   "cooldown": 36,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 10,
+   "desc": "Each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead, for 10 seconds."
+  },
+  {
+   "name": "Cloud in the Water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "dark",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 40%, a ward absorbs damage equal to 25% of your maximum health for 6 seconds. Once every 40 seconds."
+  }
+ ]
+}
