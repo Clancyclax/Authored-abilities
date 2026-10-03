@@ -3,7 +3,7 @@
  "stone": "stoneHook",
  "fusions": [
   {
-   "name": "Reel and Rip",
+   "name": "Barbed Haul",
    "kind": "active",
    "category": "attack",
    "template": "projectileBall",
@@ -23,28 +23,29 @@
    "desc": "Hooks the target with a barbed line and rips it free, dealing 16 piercing damage and using up every affliction you have on it for 60% more damage each. You move 20% faster for 3 seconds after."
   },
   {
-   "name": "Barbed Scratch",
+   "name": "Gaffing Leap",
    "kind": "active",
    "category": "attack",
    "template": "imbueStrike",
    "element": "piercing",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
    "strikes": 1,
    "dot": {
-    "dmgPerTick": 1,
-    "ticks": 3,
+    "dmgPerTick": 2,
+    "ticks": 4,
     "tickMs": 1000,
     "critChance": 0.05,
     "label": "Bleeding"
    },
    "bindOnHit": {
-    "slowPct": 0.1,
-    "duration": 2
+    "slowPct": 0.15,
+    "duration": 3
    },
-   "desc": "A scratch that deals 4 piercing damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and slows it by 10% for 2 seconds."
+   "desc": "You rush the target from up to 6 tiles away and hook it, dealing 12 piercing damage and leaving it [Bleeding] for 2 damage a second for 4 seconds and slowed by 15% for 3 seconds.",
+   "chargeTo": 192,
+   "range": 192
   },
   {
    "name": "Snare Line",
@@ -65,15 +66,15 @@
    "desc": "Lays a snare line 5 tiles long for 5 seconds that drags every enemy near it inward. You move 20% faster for 3 seconds after you use it."
   },
   {
-   "name": "Wrong End of It",
+   "name": "Snagged Quarry",
    "kind": "passive",
    "category": "passive buff",
    "template": "passiveConditional",
    "element": "piercing",
    "condition": "vsDebuffed",
-   "bonusKind": "dodge",
+   "bonusKind": "dmg",
    "amount": 0.1,
-   "desc": "Against an enemy carrying one of your afflictions, your dodge chance rises by 10%."
+   "desc": "Against an enemy carrying one of your afflictions, your damage rises by 10%."
   }
  ]
 }

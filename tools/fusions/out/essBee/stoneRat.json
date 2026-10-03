@@ -1,0 +1,81 @@
+{
+  "essence": "essBee",
+  "stone": "stoneRat",
+  "fusions": [
+    {
+      "name": "Gnaw and Fester",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "chargesMax": 5,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Diseased"
+      },
+      "desc": "Throws a sting that deals 7 damage and leaves the target [Diseased] for 2 damage a second for 6 seconds. It uses up to 5 charges, and kills return one."
+    },
+    {
+      "name": "Plague Cloud",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "long",
+      "base": 28,
+      "cooldown": 120,
+      "range": 300,
+      "coneAngle": 0.76,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 15
+      },
+      "desc": "A cone that deals 28 damage to everything caught in it. Allies strike 20% harder for 15 seconds after it hits."
+    },
+    {
+      "name": "Nest Ration",
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "element": "poison",
+      "cooldown": 30,
+      "healAmount": 12,
+      "healScope": "party",
+      "range": 96,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "desc": "Restores 12 health to you and every ally within 3 tiles."
+    },
+    {
+      "name": "Flee the Nest",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 90,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 90
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 4,
+        "duration": 6
+      },
+      "desc": "When your health falls low, you regain 4 health a second for 6 seconds. Once every 90 seconds."
+    }
+  ]
+}

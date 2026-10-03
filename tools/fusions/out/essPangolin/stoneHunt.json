@@ -1,0 +1,77 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneHunt",
+  "fusions": [
+    {
+      "name": "Scent Snap",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 360,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.5,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Snaps a scale at the first enemy it meets, dealing 5 damage with a 50% chance of [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Quarry Marker",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "long",
+      "base": 34,
+      "cooldown": 120,
+      "range": 90,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 8
+      },
+      "bossPct": 0.05,
+      "desc": "A crushing blow that deals 34 damage and leaves the target 20% easier to wound for 8 seconds. Bosses and elites take a further 5% of their maximum health."
+    },
+    {
+      "name": "Fall In Behind",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "desc": "Every ally within 5 tiles strikes 15% harder and fights with 1 more power for 10 seconds, and you move 20% faster for 4 seconds.",
+      "range": 160,
+      "buffDuration": 10,
+      "partyPower": 1,
+      "partyDmgPct": 0.15,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "reachUnits": 160,
+      "rangeBand": "medium"
+    },
+    {
+      "name": "Run-Down Resolve",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "armorBonus": 0.06,
+      "desc": "Against afflicted enemies, your damage rises by 12% and your armour by 6%."
+    }
+  ]
+}

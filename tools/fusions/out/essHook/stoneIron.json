@@ -14,7 +14,7 @@
    "range": 80,
    "isAoe": true,
    "aoeBand": "small",
-   "stunOnHit": 1.0,
+   "stunOnHit": 1,
    "desc": "Drops a cold iron anchor around you, dealing 12 damage to every enemy within 2.5 tiles and stunning them for 1 second."
   },
   {
@@ -25,7 +25,7 @@
    "element": "physical",
    "role": "resource",
    "base": 8,
-   "cooldown": 1.0,
+   "cooldown": 1,
    "consumeAffliction": true,
    "sunder": {
     "amount": 0.1,
@@ -40,12 +40,17 @@
    "name": "Moored Fast",
    "kind": "active",
    "category": "defensive",
-   "template": "armorBuff",
+   "template": "absorbShield",
    "element": "physical",
-   "cooldown": 40,
-   "armorBonus": 0.25,
-   "buffDuration": 10,
-   "desc": "Raises your armour by 25% for 10 seconds."
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds, and raises your armour by 10% while it lasts.",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "shieldStrikes": 4
   },
   {
    "name": "Unbending Shank",

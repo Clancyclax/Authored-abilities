@@ -1,0 +1,75 @@
+{
+ "essence": "essBear",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trawl Fling",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 160,
+   "maxMult": 1.5,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a heavy mesh that deals 14 damage, rising to 1.5 times that at maximum range, and stuns the target for 1 second. It has a 50% chance of [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Cinch Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 120,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Rakes a cone ahead of you, dealing 8 damage to everything caught in it. Each hit has a 35% chance of [Slowed] for 3 seconds. You have 4 charges, and kills give them back."
+  },
+  {
+   "name": "Haul Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "pullForce": 28,
+   "desc": "Drops a line of netting 6 tiles long ahead of you for 8 seconds, dragging every enemy near it inward."
+  },
+  {
+   "name": "Tight Mesh",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your armour is 12% higher."
+  }
+ ]
+}

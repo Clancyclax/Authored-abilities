@@ -1,0 +1,84 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silver Shunt",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 80,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Slams a scaled shoulder into the target, dealing 12 damage, knocking it back 2.5 tiles and leaving it 15% easier to wound for 6 seconds. You move 20% faster for 4 seconds."
+  },
+  {
+   "name": "Scale Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Flicks overlapping plates at every enemy within 3 tiles, dealing 4 damage with a 30% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Slip the Net",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Curls you into a slick ball for 6 seconds: you move 10% faster, enemies notice you 60% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Shed and Scatter",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.4,
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "dodgeBonus": 0.08,
+   "desc": "When your health falls below 40%, you gain a shield worth 30% of your maximum health for 6 seconds and +8% dodge chance. Once every 60 seconds."
+  }
+ ]
+}

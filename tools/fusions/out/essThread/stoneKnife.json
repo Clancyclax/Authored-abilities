@@ -1,0 +1,72 @@
+{
+ "essence": "essThread",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Paring Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "desc": "A quick slash that deals 5 damage, leaves the target 5% easier to wound for 4 seconds and makes the target [Bleeding] for 1 damage a second for 4 seconds.",
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Snip the Tie",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "desc": "Consumes every affliction on the target, adding 60% of their remaining damage to this blow for each one, which deals 20 damage. It only strikes a target at or below 25% health.",
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.6,
+   "executeLadder": true,
+   "reachUnits": 84,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Slipped Hem",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "slashing",
+   "cooldown": 10,
+   "desc": "A short burst of movement that carries you 4 tiles forward. Your movement speed rises 20% for 3 seconds after you use it.",
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Edge Kept Close",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "slashing",
+   "desc": "Your critical strike chance rises by 10%.",
+   "buffKind": "crit",
+   "amount": 0.1
+  }
+ ]
+}

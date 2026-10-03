@@ -1,0 +1,69 @@
+{
+ "essence": "essThread",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Peened Rivet",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "desc": "A flattening blow that deals 16 damage, stuns the target for 1.2 seconds and leaves it 15% easier to wound for 6 seconds.",
+   "range": 80,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Drive Every Stake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "desc": "Every enemy within 3 tiles takes 9 damage. It needs one of your afflictions on the target and uses it up.",
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true
+  },
+  {
+   "name": "Hammered Home",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "blunt",
+   "cooldown": 30,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health.",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 5
+  },
+  {
+   "name": "Settled Seam",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "desc": "When you kill an enemy, your physical damage rises 30% for 5 seconds. Once every 8 seconds.",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   }
+  }
+ ]
+}

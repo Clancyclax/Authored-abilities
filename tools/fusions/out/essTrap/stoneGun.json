@@ -1,0 +1,73 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Tripwire Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "cooldown": 15,
+   "desc": "A shot that deals 28 damage. It only fires at a target at or below 25% of its health.",
+   "base": 28,
+   "speed": 420,
+   "radius": 6,
+   "requiresTargetBelow": 0.25
+  },
+  {
+   "name": "Scatter Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "Fires a wide cone that deals 14 damage to everything in it and stuns it for 1 second.",
+   "base": 14,
+   "range": 192,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1
+  },
+  {
+   "name": "Powder Mine",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "cooldown": 80,
+   "desc": "Conjures a charge onto the nearest enemy. It waits 25 seconds, and the first enemy to come within 2 tiles takes 32 damage in a blast around it.",
+   "summonKind": "trap",
+   "summonDuration": 25,
+   "summonDmg": 32,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 96,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned"
+  },
+  {
+   "name": "Spring-Fired Reflex",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 256
+   },
+   "desc": "When you land a critical hit, a shot cracks to the nearest enemy within 8 tiles, dealing 8 damage. Once every 6 seconds."
+  }
+ ]
+}

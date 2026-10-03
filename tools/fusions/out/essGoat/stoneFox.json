@@ -1,81 +1,82 @@
 {
- "essence": "essGoat",
- "stone": "stoneFox",
- "fusions": [
-  {
-   "name": "Sidestep Shove",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "physical",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 16,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "small",
-   "knockback": 80,
-   "confuse": true,
-   "confuseChance": 0.4,
-   "confuseDuration": 3,
-   "desc": "Feints one way and barges the other, dealing 14 damage to every enemy within 3 tiles and knocking them 2.5 tiles back. Each has a 40% chance to be confused for 3 seconds."
-  },
-  {
-   "name": "Played False",
-   "kind": "active",
-   "category": "attack",
-   "template": "stackStrike",
-   "element": "physical",
-   "role": "execute",
-   "base": 16,
-   "cooldown": 14,
-   "range": 84,
-   "stackMult": 1.5,
-   "executeLadder": true,
-   "requiresTargetBelow": 0.3,
-   "consumeAfflictionsPer": 0.5,
-   "openerCrit": {
-    "amount": 0.5
-   },
-   "desc": "Butts a target at or below 30% health for 16 damage, consuming every affliction on it to add 1.5 times their remaining damage to the hit, and 50% more damage for each one consumed. It has 50% more critical chance against an enemy that has not been wounded yet."
-  },
-  {
-   "name": "Decoy Charge",
-   "kind": "active",
-   "category": "defensive",
-   "template": "tauntPull",
-   "element": "physical",
-   "cooldown": 28,
-   "tauntRadius": 192,
-   "tauntDuration": 5,
-   "tauntMax": 4,
-   "threatMult": 1,
-   "escort": {
-    "dmg": 4,
-    "interval": 1.4,
-    "duration": 9
-   },
-   "desc": "Pulls up to 4 enemies within 6 tiles onto you for 5 seconds. A decoy fights beside you for 9 seconds, striking for 4 every 1.4 seconds."
-  },
-  {
-   "name": "Baited Opening",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.25,
-    "duration": 4
-   },
-   "armorBonus": 0.05,
-   "desc": "When anything but fire hurts you, your next strike gains 25% critical hit chance. Once every 8 seconds. Your armour rises by 5%."
-  }
- ]
+  "essence": "essGoat",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Sidestep Shove",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "knockback": 80,
+      "confuse": true,
+      "confuseChance": 0.4,
+      "confuseDuration": 3,
+      "desc": "Feints one way and barges the other, dealing 14 damage to every enemy within 3 tiles and knocking them 2.5 tiles back. Each has a 40% chance to be confused for 3 seconds."
+    },
+    {
+      "name": "Played False",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "range": 86,
+      "chargesMax": 3,
+      "openerCrit": {
+        "amount": 0.5
+      },
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "desc": "Feints high and butts the target low, dealing 6 damage and leaving it 10% easier to wound for 5 seconds. It has 50% more critical chance against an enemy that has not been wounded yet. Holds 3 charges; each kill restores one."
+    },
+    {
+      "name": "Decoy Charge",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "physical",
+      "cooldown": 28,
+      "tauntRadius": 192,
+      "tauntDuration": 5,
+      "tauntMax": 4,
+      "threatMult": 1,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 9
+      },
+      "desc": "Pulls up to 4 enemies within 6 tiles onto you for 5 seconds. A decoy fights beside you for 9 seconds, striking for 4 every 1.4 seconds."
+    },
+    {
+      "name": "Baited Opening",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.25,
+        "duration": 4
+      },
+      "armorBonus": 0.05,
+      "desc": "When anything but fire hurts you, your next strike gains 25% critical hit chance. Once every 8 seconds. Your armour rises by 5%."
+    }
+  ]
 }

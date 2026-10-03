@@ -50,14 +50,23 @@
    "desc": "For 20 seconds, your attacks and spells reach 30% further."
   },
   {
-   "name": "Anvil Skull",
+   "name": "Ramming Skull",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "blunt",
-   "pierceElement": "blunt",
-   "armorIgnore": 0.2,
-   "desc": "Your blunt attacks ignore 20% of the target's armour."
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you strike an enemy, your physical damage rises by 33% for 4 seconds. Once every 12 seconds."
   }
  ]
 }

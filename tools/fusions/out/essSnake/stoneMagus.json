@@ -61,13 +61,23 @@
    "desc": "Increases your casting speed by 25% for 12 seconds."
   },
   {
-   "name": "Practised Patience",
+   "name": "Spell on the Scent",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "cooldownPassive",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "arcane",
-   "cooldownReduction": 0.08,
-   "desc": "Every ability you have comes round 8% sooner."
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you inflict a condition on an enemy, your next spell deals 30% more damage. Once every 8 seconds."
   }
  ]
 }

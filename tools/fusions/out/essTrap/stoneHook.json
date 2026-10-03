@@ -1,0 +1,67 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "cooldown": 90,
+   "desc": "A cast jaw that deals 30 damage, up to 1.5 times that at maximum range, plus 5% of a boss or elite enemy's maximum health.",
+   "base": 30,
+   "maxMult": 1.5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Quick Gaff",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "Flicks a gaff that deals 4 damage and has a 30% chance of making the target [Bleeding] for 4 seconds.",
+   "base": 4,
+   "spammable": true,
+   "speed": 400,
+   "radius": 6,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Snagging Call",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "Pulls up to 5 enemies within 8 tiles onto you for 6 seconds.",
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1
+  },
+  {
+   "name": "Sharpened Barbs",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "piercing",
+   "desc": "Your critical strike chance rises by 10%. You also regenerate 0.5 health a second, permanently.",
+   "buffKind": "crit",
+   "amount": 0.1,
+   "regenPerSec": 0.5
+  }
+ ]
+}

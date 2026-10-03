@@ -1,0 +1,74 @@
+{
+ "essence": "essThread",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Still Air",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "desc": "Lays a cone of slack cord ahead of you, dealing 14 damage to everything caught in it. Your afflictions on them spread to every enemy within 3 tiles.",
+   "range": 240,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "spreadAfflictions": 96
+  },
+  {
+   "name": "Basking Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "desc": "Casts a strand that deals 4 damage. The target is [Hindered], attacking 25% slower for 3 seconds.",
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Held Still",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 120,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you.",
+   "immunityDuration": 4
+  },
+  {
+   "name": "Warm Reserve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your health is full, your critical hit chance rises by 30% for your next strike. Once every 20 seconds.",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   }
+  }
+ ]
+}

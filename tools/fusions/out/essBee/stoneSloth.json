@@ -1,0 +1,80 @@
+{
+  "essence": "essBee",
+  "stone": "stoneSloth",
+  "fusions": [
+    {
+      "name": "Slow Reckoning",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "long",
+      "base": 30,
+      "cooldown": 150,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.15,
+        "duration": 8
+      },
+      "bossPct": 0.05,
+      "desc": "A heavy sting that deals 30 damage, leaves the target 15% easier to wound for 8 seconds and deals 5% of a boss's or elite's maximum health."
+    },
+    {
+      "name": "Slumber Haze",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "range": 300,
+      "coneAngle": 0.76,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.4,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A cone that deals 3 damage to everything caught in it. Each hit has a 40% chance of [Slowed] for 5 seconds.",
+      "spammable": true
+    },
+    {
+      "name": "Idle Mend",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "nature",
+      "cooldown": 40,
+      "hotPerSec": 3,
+      "hotDuration": 10,
+      "healScope": "self",
+      "desc": "Restores 3 health a second to you for 10 seconds."
+    },
+    {
+      "name": "Unhurried Comb",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "nature",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 3,
+        "duration": 6
+      },
+      "desc": "When your stamina runs out, you restore 3 stamina a second for 6 seconds. Once every 30 seconds."
+    }
+  ]
+}

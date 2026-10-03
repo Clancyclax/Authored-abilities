@@ -1,0 +1,67 @@
+{
+ "essence": "essBear",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 128,
+   "range": 140,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sweeps a wide cone ahead of you, dealing 14 damage to everything caught in it and leaving each [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Long Harvest",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 200,
+   "maxMult": 2.0,
+   "bossPct": 0.05,
+   "desc": "A long sweeping blow that deals 30 damage, rising to 2 times that at maximum range, and 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Gathered Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Reaper's Eye",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "slashing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against enemies below half health, you deal 15% more damage."
+  }
+ ]
+}

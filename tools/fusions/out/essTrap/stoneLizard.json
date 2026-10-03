@@ -1,0 +1,83 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Dead Still Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "frost",
+   "role": "long",
+   "cooldown": 90,
+   "desc": "A shot that deals 32 damage and freezes the target [Frozen] for 1.5 seconds. Every hit is a critical hit.",
+   "base": 32,
+   "speed": 380,
+   "radius": 7,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "freeze",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Chill Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "frost",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "Sweeps a ring of cold that deals 8 damage to every enemy within 3 tiles and leaves it [Slowed] for 2 seconds. Holds 4 charges, and kills give charges back.",
+   "base": 8,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Hold Still",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 180,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands. Your movement speed rises 20% for 3 seconds after you use it.",
+   "immunityDuration": 4,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Sunlit Reset",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you restore 3 stamina a second for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

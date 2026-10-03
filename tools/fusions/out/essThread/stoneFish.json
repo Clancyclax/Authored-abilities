@@ -1,0 +1,82 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silvered Skein",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "desc": "Sends a strand into the first enemy it meets, dealing 4 damage, then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage.",
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Cast and Reel",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "desc": "A thrown line that deals 14 damage, up to 2 times that at maximum range, and stuns the target for 1.2 seconds.",
+   "range": 220,
+   "maxMult": 2,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2
+  },
+  {
+   "name": "Slip the Knot",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 45,
+   "desc": "Removes 2 conditions from you and increases your movement speed by 25% for 6 seconds.",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Cut Loose",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "desc": "When your health falls below 35%, the cords around you slacken into a shield worth 25% of your maximum health for 6 seconds. Once every 30 seconds.",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   }
+  }
+ ]
+}

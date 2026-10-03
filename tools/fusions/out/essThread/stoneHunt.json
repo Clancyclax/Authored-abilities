@@ -1,0 +1,64 @@
+{
+ "essence": "essThread",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "desc": "Casts a line that deals 9 damage. Its damage rises +8% per affliction the target carries (max +40%). Each kill returns a charge, up to 3.",
+   "chargesMax": 3,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "scaleDelay": 6
+  },
+  {
+   "name": "Quarry's Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 40,
+   "cooldown": 90,
+   "desc": "A long cast that deals 40 damage, up to 1.3 times that at maximum range, and strips 5% of a boss's or elite's maximum health.",
+   "range": 260,
+   "maxMult": 1.3,
+   "reachUnits": 260,
+   "rangeBand": "long",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Paid-Out Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 40% further.",
+   "rangeMult": 1.4,
+   "buffDuration": 15
+  },
+  {
+   "name": "Closing In",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "desc": "Against enemies at low health, you deal 20% more damage.",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.2
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essThread",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Plumb Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "desc": "Fires a weighted line that deals 9 damage. Each kill returns a charge, up to 4.",
+   "chargesMax": 4,
+   "speed": 700,
+   "radius": 6,
+   "reachUnits": 420,
+   "rangeBand": "long"
+  },
+  {
+   "name": "Scattershot Web",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "desc": "Looses a burst of strands in a cone, dealing 30 damage to everything caught in it. Every hit is a critical hit.",
+   "range": 230,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "guaranteedCrit": true
+  },
+  {
+   "name": "Tripwire Charge",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDuration": 20,
+   "summonDmg": 30,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 96,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned",
+   "desc": "Conjures a trap onto the nearest enemy. It waits 20 seconds, and the first enemy to come within 3 tiles takes 30 damage in a blast around it."
+  },
+  {
+   "name": "Reload",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you kill an enemy, your next spell deals 50% more damage. Once every 10 seconds.",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.5,
+    "charges": 1
+   }
+  }
+ ]
+}

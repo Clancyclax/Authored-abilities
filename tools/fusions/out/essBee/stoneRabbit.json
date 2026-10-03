@@ -1,0 +1,81 @@
+{
+  "essence": "essBee",
+  "stone": "stoneRabbit",
+  "fusions": [
+    {
+      "name": "Bolting Barb",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 12,
+      "range": 210,
+      "reachUnits": 210,
+      "rangeBand": "medium",
+      "maxMult": 1.6,
+      "chargeTo": 224,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.1,
+      "scaleCap": 0.5,
+      "desc": "You rush to the target first, then it takes a thrown sting that deals 12 damage, up to 1.6 times its damage at maximum range. Its damage rises 10% per tile you ran, up to 50%."
+    },
+    {
+      "name": "Hind Kick Spray",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "range": 200,
+      "coneAngle": 0.76,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A short cone that deals 3 damage to everything caught in it. Each hit has a 30% chance of [Slowed] for 4 seconds.",
+      "spammable": true
+    },
+    {
+      "name": "Flushing Dash",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "physical",
+      "cooldown": 10,
+      "dashDist": 160,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "A short burst of movement that carries you 5 tiles forward. Your movement speed rises 20% for 3 seconds after you use it."
+    },
+    {
+      "name": "Zigzag Focus",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "duration": 6
+      },
+      "desc": "When you have moved a long way, your critical hit chance rises 15% for 6 seconds. Once every 12 seconds."
+    }
+  ]
+}

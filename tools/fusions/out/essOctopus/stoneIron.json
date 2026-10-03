@@ -1,0 +1,72 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Cold Bar Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 160,
+   "maxMult": 1.5,
+   "stunOnHit": 1.2,
+   "desc": "Swings a rigid arm that deals 14 damage and stuns the target for 1.2 seconds, rising to 1.5 times that at the full 5 tiles."
+  },
+  {
+   "name": "Corroding Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays a cone of brine 5 tiles ahead, dealing 4 damage to everything in it, with a 30% chance to leave each target [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Hull Held Tight",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 30,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "desc": "Raises a barrier that absorbs the next 30 damage and holds for 10 seconds."
+  },
+  {
+   "name": "Cold Blood",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "armor",
+   "amount": 0.15,
+   "resist": {
+    "element": "physical",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 15% and you resist 10% of physical damage."
+  }
+ ]
+}

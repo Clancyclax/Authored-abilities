@@ -1,0 +1,69 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Hind-Arm Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 96,
+   "desc": "Kicks back with the two rearmost arms, dealing 18 damage, knocking the target back 3 tiles and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Stampede Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 36,
+   "cooldown": 100,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Beats every arm against the ground in rhythm, dealing 36 damage to every enemy within 4 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Full Gallop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 45,
+   "speedMult": 1.5,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08,
+   "desc": "Increases your movement speed by 50% and your dodge chance by 8% for 10 seconds."
+  },
+  {
+   "name": "Drumming Rhythm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you strike, your physical damage rises 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

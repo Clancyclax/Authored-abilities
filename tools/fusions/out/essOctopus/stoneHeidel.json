@@ -1,0 +1,71 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Churned Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 5,
+   "desc": "Drives a cone of water 5 tiles ahead, dealing 7 damage to everything in it. Holds 5 charges; each use spends one and each kill restores one."
+  },
+  {
+   "name": "Gallop Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1.8,
+   "chargeTo": 224,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "desc": "Rushes you up to 7 tiles to the target and strikes it for 16 damage, rising to 1.8 times that at the full 6 tiles. Its damage rises 10% for every 100 paces you have run since you last used it, up to 50%."
+  },
+  {
+   "name": "Second Wind",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 40,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 10,
+   "desc": "Restores 4 stamina a second for 10 seconds."
+  },
+  {
+   "name": "Shared Load",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "Each time you spend stamina, spare arms take up the load and you regain 3 stamina. Once every 6 seconds."
+  }
+ ]
+}

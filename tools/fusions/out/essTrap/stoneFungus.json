@@ -1,0 +1,80 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Spore Bloom",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "Bursts a cloud that deals 10 damage to every enemy within 3.5 tiles and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each spread to every enemy within 3.5 tiles.",
+   "base": 10,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112
+  },
+  {
+   "name": "Rot Harvest",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "death",
+   "role": "execute",
+   "cooldown": 15,
+   "desc": "A strike that deals 20 damage and leaves the target 10% easier to wound for 6 seconds. It only strikes a target at or below 30% of its health, and uses up every affliction on it for 60% more damage each.",
+   "base": 20,
+   "range": 84,
+   "requiresTargetBelow": 0.3,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Creeping Mat",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 40,
+   "desc": "Raises a mat of mould where you stand. For 12 seconds it restores 3 health a second to you and any ally inside it.",
+   "healPerSec": 3,
+   "fieldDuration": 12,
+   "range": 125,
+   "rangeBand": "melee",
+   "reachUnits": 125,
+   "healScope": "party"
+  },
+  {
+   "name": "Slow Contagion",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, you regain 2 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essBear",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Rampart Press",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "knockback": 96,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Slams a wide cone ahead of you, dealing 14 damage to everything caught in it and knocking it back 3 tiles."
+  },
+  {
+   "name": "Riposte",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "desc": "A counter-blow that deals 8 damage and leaves the target 10% easier to wound for 4 seconds. You have 4 charges, and kills give them back."
+  },
+  {
+   "name": "Held Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 28,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier that absorbs the next 28 damage and holds for 8 seconds, and hardens your armour by 10% while it holds."
+  },
+  {
+   "name": "Winded Guard",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you gain a ward that soaks 25% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

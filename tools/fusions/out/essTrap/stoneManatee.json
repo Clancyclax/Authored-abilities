@@ -1,0 +1,76 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drift Net",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "Sweeps a cone that deals 4 damage to everything in it and has a 30% chance of [Slowed] for 2 seconds.",
+   "base": 4,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Tidal Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "A surge that deals 12 damage, up to 1.5 times that at maximum range, and knocks the target back 2 tiles. It leaves the target [Slowed] for 3 seconds.",
+   "base": 12,
+   "maxMult": 1.5,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Calm Water",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 24,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles.",
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "rangeBand": "melee",
+   "reachUnits": 110
+  },
+  {
+   "name": "Lazy Current",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "water",
+   "desc": "Every ability you have comes round 6% sooner. You also regenerate 0.8 health a second, permanently.",
+   "cooldownReduction": 0.06,
+   "regenPerSec": 0.8
+  }
+ ]
+}

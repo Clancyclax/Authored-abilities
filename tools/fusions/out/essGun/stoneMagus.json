@@ -1,81 +1,83 @@
 {
- "essence": "essGun",
- "stone": "stoneMagus",
- "fusions": [
-  {
-   "name": "Final Clause",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "execute",
-   "base": 24,
-   "cooldown": 15,
-   "speed": 420,
-   "radius": 8,
-   "reachUnits": 288,
-   "rangeBand": "medium",
-   "requiresTargetBelow": 0.25,
-   "desc": "Fires an inscribed round at a target at or below 25% health, dealing 24 damage."
-  },
-  {
-   "name": "Recited Volley",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "arcane",
-   "role": "medium",
-   "base": 5,
-   "cooldown": 18,
-   "volleyCount": 3,
-   "volleySpread": 0.4,
-   "isAoe": true,
-   "speed": 380,
-   "radius": 7,
-   "range": 256,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "stunOnHit": 0.8,
-   "debuff": {
-    "key": "slowCast",
-    "chance": 0.4,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Fires 3 inscribed rounds in a spread, each dealing 5 damage and stunning the target for 0.8 seconds, with a 40% chance to leave it [Muddled] for 6 seconds."
-  },
-  {
-   "name": "Warding Script",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "arcane",
-   "cooldown": 30,
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 20,
-   "shieldStrikes": 4,
-   "shieldDuration": 8,
-   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds."
-  },
-  {
-   "name": "Practiced Litany",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "arcane",
-   "stackShape": "boon",
-   "stackBuild": "cast",
-   "stackPay": "power",
-   "stackCap": 5,
-   "stackDecay": 6,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 1.0,
-   "stackIcon": "stackFortune",
-   "desc": "Every time you use an ability, a stack builds on you, up to 5. When you reach 5 they all spend at once: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
-  }
- ]
+  "essence": "essGun",
+  "stone": "stoneMagus",
+  "fusions": [
+    {
+      "name": "Final Clause",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "execute",
+      "base": 24,
+      "cooldown": 15,
+      "speed": 420,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "medium",
+      "requiresTargetBelow": 0.25,
+      "desc": "Fires an inscribed round at a target at or below 25% health, dealing 24 damage."
+    },
+    {
+      "name": "Recited Volley",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "arcane",
+      "role": "medium",
+      "base": 5,
+      "cooldown": 18,
+      "volleyCount": 3,
+      "volleySpread": 0.4,
+      "isAoe": true,
+      "speed": 380,
+      "radius": 7,
+      "range": 256,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "stunOnHit": 0.8,
+      "debuff": {
+        "key": "slowCast",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fires 3 inscribed rounds in a spread, each dealing 5 damage and stunning the target for 0.8 seconds, with a 40% chance to leave it [Muddled] for 6 seconds."
+    },
+    {
+      "name": "Warding Script",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "arcane",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 20,
+      "shieldStrikes": 4,
+      "shieldDuration": 8,
+      "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds."
+    },
+    {
+      "name": "Practiced Litany",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.3,
+        "charges": 1
+      },
+      "desc": "Each time you spend mana, your next ability deals 30% more damage. Once every 8 seconds."
+    }
+  ]
 }

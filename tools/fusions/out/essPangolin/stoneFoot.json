@@ -1,0 +1,66 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneFoot",
+  "fusions": [
+    {
+      "name": "Battering Run",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "speed": 300,
+      "radius": 9,
+      "reachUnits": 300,
+      "rangeBand": "medium",
+      "knockback": 96,
+      "desc": "Sends a tightly curled ball of scales into the first enemy it meets, dealing 14 damage and knocking it back 3 tiles."
+    },
+    {
+      "name": "Forced March",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 220,
+      "maxMult": 2,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "hpCostPct": 0.05,
+      "desc": "Drives a heavy blow along the ground that deals 9 damage, rising to 2 times that at maximum range. Costs 5% of your maximum health."
+    },
+    {
+      "name": "Column Discipline",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 45,
+      "buffStat": "damageReduction",
+      "buffAmount": 0.2,
+      "buffDuration": 15,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 5
+      },
+      "desc": "Reduces the damage you take by 20% for 15 seconds, and you move 25% faster for 5 seconds."
+    },
+    {
+      "name": "Paved Footing",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "onRoads",
+      "bonusKind": "dodge",
+      "amount": 0.1,
+      "armorBonus": 0.08,
+      "desc": "On paved ground, your dodge chance rises by 10% and your armour by 8%."
+    }
+  ]
+}

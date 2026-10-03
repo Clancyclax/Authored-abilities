@@ -1,0 +1,94 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Bounding Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "Throws a snapping jaw that deals 8 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. Holds 4 charges, and kills give charges back.",
+   "base": 8,
+   "speed": 380,
+   "radius": 7,
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Clatter Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "Looses 3 small jaws at once, each dealing 4 damage. Each hit has a 25% chance of [Slowed] for 2 seconds.",
+   "base": 4,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "speed": 320,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Burrow Litter",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "desc": "Conjures a litter of small jaws onto the nearest enemy. They wait 30 seconds, and the first 4 enemies to come within 1.5 tiles take 7 damage in a blast around it. Your movement speed rises 20% for 5 seconds.",
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 7,
+   "summonRange": 48,
+   "summonInterval": 0,
+   "summonCharges": 4,
+   "summonBlast": 40,
+   "summonArmDelay": 0.3,
+   "trapDelivery": "spawned",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   }
+  },
+  {
+   "name": "Pogo Reflex",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each time you cover a long stretch of ground, you deal 25% more damage for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

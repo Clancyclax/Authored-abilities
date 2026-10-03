@@ -55,18 +55,24 @@
    "desc": "Spends 1 second settling behind your shield, then holds every creature within 4 tiles in place for 4 seconds. Afterwards they move 30% slower for 3 seconds."
   },
   {
-   "name": "Buoyant Bulk",
+   "name": "Drifting Reserve",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "water",
-   "buffKind": "maxHp",
-   "amount": 14,
-   "resist": {
-    "element": "water",
-    "amount": 0.1
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
    },
-   "desc": "Your maximum health rises by 14, and you have 10% water resistance."
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 8
+   },
+   "desc": "When you run out of stamina, you recover 3 stamina a second for 8 seconds. Once every 30 seconds."
   }
  ]
 }

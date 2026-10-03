@@ -1,0 +1,70 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "desc": "Looses 2 strands at once, spread apart, each dealing 4 damage.",
+   "spammable": true,
+   "volleyCount": 2,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 250,
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Double Pin",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "desc": "Consumes every affliction on the target, adding 60% of their remaining damage to this blow for each one, which deals 20 damage. It only strikes a target at or below 25% health.",
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.6,
+   "executeLadder": true,
+   "reachUnits": 84,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Branch Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "For 8 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead.",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 8
+  },
+  {
+   "name": "Second Draw",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands.",
+   "rerollKind": "crit",
+   "rerollCooldown": 10,
+   "rerollKinds": [
+    "crit"
+   ]
+  }
+ ]
+}

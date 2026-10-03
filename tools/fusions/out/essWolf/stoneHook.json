@@ -1,85 +1,82 @@
 {
- "essence": "essWolf",
- "stone": "stoneHook",
- "fusions": [
-  {
-   "name": "Snag the Straggler",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "piercing",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 15,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "requiresTargetBelow": 0.25,
-   "sunder": {
-    "amount": 0.15,
-    "duration": 5
-   },
-   "desc": "Usable only on an enemy at or below 25% health. A barbed bite that deals 22 damage and leaves it 15% easier to wound for 5 seconds."
-  },
-  {
-   "name": "Barbed Sweep",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "piercing",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.9,
-   "spammable": true,
-   "range": 96,
-   "coneAngle": 0.9,
-   "isAoe": true,
-   "aoeBand": "small",
-   "debuff": {
-    "key": "bleed",
-    "chance": 0.2,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A raking snap through a cone 3 tiles ahead of you deals 4 damage to everything caught in it, each with a 20% chance of [Bleeding] for 4 seconds."
-  },
-  {
-   "name": "Drag Into the Circle",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "physical",
-   "cooldown": 24,
-   "wallKind": "pull",
-   "wallLength": 160,
-   "wallDuration": 5,
-   "wallThickness": 26,
-   "pullForce": 32,
-   "bindOnHit": {
-    "slowPct": 0.2,
-    "duration": 2
-   },
-   "desc": "Sets a catching point 5 tiles across ahead of you for 5 seconds, dragging every enemy near it inward. Anything struck moves 20% slower for 2 seconds."
-  },
-  {
-   "name": "Caught and Kept",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "piercing",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "lifedrainBuff",
-    "amount": 0.1,
-    "duration": 4
-   },
-   "desc": "When you inflict a condition, you heal for 10% of the damage you deal for 4 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essWolf",
+  "stone": "stoneHook",
+  "fusions": [
+    {
+      "name": "Snag the Straggler",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 22,
+      "cooldown": 15,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "requiresTargetBelow": 0.25,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 5
+      },
+      "desc": "Usable only on an enemy at or below 25% health. A barbed bite that deals 22 damage and leaves it 15% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Caught by the Haunch",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "desc": "A snap that deals 4 damage to the first enemy it meets and hooks it, slowing it 20% for 2 seconds.",
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      },
+      "reachUnits": 160,
+      "rangeBand": "medium",
+      "speed": 420,
+      "radius": 6
+    },
+    {
+      "name": "Drag Into the Circle",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "cooldown": 24,
+      "wallKind": "pull",
+      "wallLength": 160,
+      "wallDuration": 5,
+      "wallThickness": 26,
+      "pullForce": 32,
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      },
+      "desc": "Sets a catching point 5 tiles across ahead of you for 5 seconds, dragging every enemy near it inward. Anything struck moves 20% slower for 2 seconds."
+    },
+    {
+      "name": "Caught and Kept",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.1,
+        "duration": 4
+      },
+      "desc": "When you inflict a condition, you heal for 10% of the damage you deal for 4 seconds. Once every 10 seconds."
+    }
+  ]
 }

@@ -1,79 +1,79 @@
 {
- "essence": "essTree",
- "stone": "stoneHunt",
- "fusions": [
-  {
-   "name": "Canopy Sighting",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "plant",
-   "role": "long",
-   "base": 26,
-   "cooldown": 80,
-   "bossPct": 0.05,
-   "reachPct": 0.5,
-   "maxMult": 1.2,
-   "debuff": {
-    "key": "marked",
-    "chance": 1,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "range": 256,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "desc": "From high in your crown you loose a thrown spike that deals 26 damage plus 5% of a boss's or elite's maximum health, reaching 50% further, and leaves the target [Marked] for 8 seconds."
-  },
-  {
-   "name": "Brought to Ground",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "plant",
-   "role": "execute",
-   "base": 20,
-   "cooldown": 14,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "requiresTargetBelow": 0.3,
-   "bindOnHit": {
-    "slowPct": 0.2,
-    "duration": 2
-   },
-   "desc": "Strikes a target at or below 30% of its health, dealing 20 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds. Anything struck moves 20% slower for 2 seconds as roots catch it."
-  },
-  {
-   "name": "Trunk to Trunk",
-   "kind": "active",
-   "category": "movement",
-   "template": "teleport",
-   "element": "plant",
-   "teleportRange": 256,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 5
-   },
-   "cooldown": 12,
-   "desc": "Steps you through the trees to a point up to 8 tiles away. Your movement speed rises 15% for 5 seconds after."
-  },
-  {
-   "name": "Scent Through the Soil",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "plant",
-   "condition": "targetLowHp",
-   "bonusKind": "dmg",
-   "amount": 0.12,
-   "desc": "Against a target at low health, your damage rises by 12%."
-  }
- ]
+  "essence": "essTree",
+  "stone": "stoneHunt",
+  "fusions": [
+    {
+      "name": "Spotter's Spike",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "plant",
+      "role": "long",
+      "base": 26,
+      "cooldown": 80,
+      "bossPct": 0.05,
+      "reachPct": 0.5,
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "range": 256,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "desc": "From high in your crown you loose a thrown spike that deals 26 damage plus 5% of a boss's or elite's maximum health, reaching 50% further (up to 1.2 times the damage at full reach), and leaves the target [Marked] for 8 seconds.",
+      "maxMult": 1.2
+    },
+    {
+      "name": "Brought to Ground",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "plant",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 14,
+      "strikes": 1,
+      "requiresTargetBelow": 0.3,
+      "desc": "Strikes a target at or below 30% of its health, dealing 20 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds. Anything struck moves 20% slower for 2 seconds as roots catch it.",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      }
+    },
+    {
+      "name": "Trunk to Trunk",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "plant",
+      "teleportRange": 256,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 5
+      },
+      "cooldown": 12,
+      "desc": "Steps you through the trees to a point up to 8 tiles away. Your movement speed rises 15% for 5 seconds after."
+    },
+    {
+      "name": "Scent Through the Soil",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "plant",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "Against a target at low health, your damage rises by 12%."
+    }
+  ]
 }

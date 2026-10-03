@@ -1,0 +1,73 @@
+{
+ "essence": "essBear",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drag Furrow",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.5,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Drags a claw through every enemy within 2 tiles, dealing 8 damage. Its damage rises +10% per affliction on each target (max +50%). You have 4 charges, and kills give them back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Furrow",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 90,
+   "maxMult": 1,
+   "requiresTargetBelow": 0.3,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A finishing drag that deals 22 damage, then consumes every affliction on the target for 60% more damage each. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Scraped Together",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 25,
+   "healAmount": 20,
+   "critChance": 0.12,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 20 health to you, with a 12% chance to critically heal. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Gleaned Spoils",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you kill an enemy, you regain 8 stamina. Once every 4 seconds."
+  }
+ ]
+}

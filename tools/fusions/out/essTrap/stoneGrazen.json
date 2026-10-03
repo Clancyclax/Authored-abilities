@@ -1,0 +1,79 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Pasture Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "Snaps jaws shut around you, dealing 8 damage to every enemy within 3 tiles. Holds 4 charges, and kills give charges back. Its damage rises with the allies near you.",
+   "base": 8,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.06,
+   "scaleCap": 0.3
+  },
+  {
+   "name": "Herd Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "long",
+   "cooldown": 90,
+   "desc": "A lobbed jaw that deals 30 damage, up to 1.5 times that at maximum range. Allies deal 20% more damage for 12 seconds after it hits.",
+   "base": 30,
+   "maxMult": 1.5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   }
+  },
+  {
+   "name": "Warm Den",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 40,
+   "desc": "Restores 3 health a second to the ally who needs it most, for 10 seconds. For 6 seconds, an escort strikes beside you for 4 every 1.5 seconds.",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "ally",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.5,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Waiting Bait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When your health is full, your next spell deals 40% more damage. Once every 20 seconds."
+  }
+ ]
+}

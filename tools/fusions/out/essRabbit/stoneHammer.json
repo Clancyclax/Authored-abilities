@@ -61,21 +61,23 @@
    "desc": "Holds every creature within 4 tiles in place for 2 seconds, and you move 25% faster for 3 seconds after you use it."
   },
   {
-   "name": "Coiled Weight",
+   "name": "Stomp Echo",
    "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "blunt",
-   "stackShape": "boon",
-   "stackBuild": "dodge",
-   "stackPay": "power",
-   "stackCap": 5,
-   "stackDecay": 6,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 1.0,
-   "stackIcon": "stackFortune",
-   "desc": "Every blow you avoid builds a stack on you, up to 5. At 5 they all spend at once: you deal 6% more damage per stack, 30% at full, for 6 seconds. Unfed, a stack fades every 6 seconds."
+   "desc": "Once every 12 seconds, a strike makes your next blows deal 30% more physical damage for 4 seconds.",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   }
   }
  ]
 }

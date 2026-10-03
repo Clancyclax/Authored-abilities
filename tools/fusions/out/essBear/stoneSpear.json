@@ -1,0 +1,69 @@
+{
+ "essence": "essBear",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Pinning Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 260,
+   "maxMult": 2.0,
+   "guaranteedCrit": true,
+   "desc": "A hard hurled blow that deals 34 damage, rising to 2 times that at maximum range. Every hit is a critical hit."
+  },
+  {
+   "name": "Reaching Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 130,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "spammable": true,
+   "desc": "A long jab that deals 5 damage and leaves the target 5% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Doorway Stand",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 40,
+   "tauntRadius": 192,
+   "tauntDuration": 8,
+   "tauntMax": 4,
+   "threatMult": 1.5,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you for 8 seconds, and they strike 50% harder while held."
+  },
+  {
+   "name": "Aimed True",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 256
+   },
+   "desc": "When you land a critical hit, a bolt leaps to the nearest enemy within 8 tiles, dealing 8 damage. Once every 4 seconds."
+  }
+ ]
+}

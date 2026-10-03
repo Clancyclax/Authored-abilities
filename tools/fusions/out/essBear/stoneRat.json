@@ -1,0 +1,78 @@
+{
+ "essence": "essBear",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Gnawing Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 70,
+   "maxMult": 1.3,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spammable": true,
+   "desc": "A quick bite that deals 4 damage. It has a 25% chance of [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Vermin Stampede",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "ignoreArmor": true,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Tramples every enemy within 3.5 tiles for 28 damage. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. The blow ignores armour."
+  },
+  {
+   "name": "Scrabble Free",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Removes up to 3 conditions from you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Warren Mate",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 3,
+   "familiarRange": 120,
+   "familiarInterval": 1.2,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Dire Rat",
+   "desc": "Calls a bonded familiar that fights beside you, striking for 3 damage."
+  }
+ ]
+}

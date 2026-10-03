@@ -1,0 +1,71 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneHammer",
+  "fusions": [
+    {
+      "name": "Flatten",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 14,
+      "range": 84,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 6
+      },
+      "requiresTargetBelow": 0.3,
+      "desc": "Usable only on an enemy at or below 30% health. A crushing tail blow that deals 20 damage and leaves the target 20% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Plate Slam",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "stunOnHit": 1.2,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "Slams down on your plates, dealing 12 damage to every enemy within 3.5 tiles and stunning each for 1.2 seconds."
+    },
+    {
+      "name": "Levelled Rampart",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "blunt",
+      "cooldown": 30,
+      "desc": "Raises a wall 4 tiles long that blocks enemies for 8 seconds.",
+      "wallKind": "block",
+      "wallLength": 128,
+      "wallDuration": 8,
+      "wallThickness": 26
+    },
+    {
+      "name": "Hammering Back",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.4,
+        "duration": 6
+      },
+      "armorBonus": 0.06,
+      "desc": "When you are hurt by something other than fire, your physical damage rises by 40% for 6 seconds. Once every 20 seconds."
+    }
+  ]
+}

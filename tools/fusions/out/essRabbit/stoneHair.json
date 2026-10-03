@@ -62,23 +62,21 @@
    "desc": "Raises a barrier that absorbs the next 18 damage and holds for 6 seconds, raises your armour by 5%, and you move 15% faster for 3 seconds."
   },
   {
-   "name": "Only Fur Caught",
+   "name": "Shed in Passing",
    "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
+   "category": "stacking",
+   "template": "stacking",
    "element": "physical",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.15,
-    "duration": 3
-   },
-   "desc": "When you are hurt, you gain a ward worth 15% of your maximum health for 3 seconds. Once every 10 seconds."
+   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack, 35% at full. Unfed, a stack fades every 10 seconds.",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackWard"
   }
  ]
 }

@@ -1,0 +1,84 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Sporing Lines",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "desc": "Every enemy within 3.5 tiles takes 6 damage and is [Diseased], so healing does less for them, for 6 seconds. Each kill returns a charge, up to 4.",
+   "chargesMax": 4,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Root Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "desc": "A strike that deals 14 damage and makes the target [Poisoned] for 3 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 4 tiles.",
+   "range": 86,
+   "spreadAfflictions": 128,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   }
+  },
+  {
+   "name": "Underlying Mat",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "desc": "Spreads a mat of strands where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it.",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party"
+  },
+  {
+   "name": "Fruiting Body",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "desc": "When you put a condition on an enemy, healing you receive is 30% stronger for 5 seconds. Once every 8 seconds.",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 5
+   }
+  }
+ ]
+}

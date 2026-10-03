@@ -1,0 +1,72 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Long Haul Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "desc": "Throws a weighted cord that deals 8 damage. Its damage rises +5% per tile you have travelled (max +40%). Each kill returns a charge, up to 4.",
+   "chargesMax": 4,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4
+  },
+  {
+   "name": "Drag the Column",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "desc": "Hauls a wide cone of cord ahead of you, dealing 14 damage to everything caught in it and knocking each back 3 tiles.",
+   "range": 260,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "knockback": 96
+  },
+  {
+   "name": "Forced Stride",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 40,
+   "desc": "Increases your movement speed by 30% for 8 seconds. You finish it 2 tiles from where you stood.",
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "blinkOnUse": 64
+  },
+  {
+   "name": "Second Wind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your stamina runs out, you regain 15 stamina. Once every 20 seconds.",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   }
+  }
+ ]
+}

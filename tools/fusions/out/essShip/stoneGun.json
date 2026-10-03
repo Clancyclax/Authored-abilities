@@ -19,7 +19,7 @@
    "range": 288,
    "reachUnits": 288,
    "rangeBand": "long",
-   "castTime": 1.0,
+   "castTime": 1,
    "ignoreArmor": true,
    "desc": "Looses 5 shots in a fanned salvo; each one deals 25 damage and ignores armour."
   },
@@ -37,7 +37,7 @@
    "radius": 6,
    "reachUnits": 256,
    "rangeBand": "medium",
-   "desc": "Fires a shot from the rail into the first enemy it meets, and it deals 5 damage."
+   "desc": "Fires a shot into the first enemy it meets, and it deals 5 damage."
   },
   {
    "name": "Powder Monkeys",
@@ -49,10 +49,14 @@
    "buffStat": "attackSpeed",
    "buffAmount": 0.3,
    "buffDuration": 12,
-   "desc": "Your attack speed rises by 30% for 12 seconds."
+   "desc": "Your attack speed rises by 30% for 12 seconds, and you move 15% faster for 4 seconds after you use it.",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   }
   },
   {
-   "name": "Return Fire",
+   "name": "Chase Guns",
    "kind": "passive",
    "category": "triggered",
    "template": "triggeredPassive",
@@ -60,7 +64,7 @@
    "isTriggered": true,
    "cooldown": 4,
    "trigger": {
-    "on": "crit",
+    "on": "moveDistance",
     "cooldown": 4
    },
    "effect": {
@@ -68,7 +72,7 @@
     "damage": 8,
     "range": 256
    },
-   "desc": "When you land a critical hit, a shot fires at the nearest enemy within 8 tiles and deals 8 damage. Once every 4 seconds."
+   "desc": "After you cover enough ground, a shot fires at the nearest enemy within 8 tiles and deals 8 damage. Once every 4 seconds."
   }
  ]
 }

@@ -55,21 +55,23 @@
    "desc": "For 6 seconds, 30% of the elemental damage you take is returned to whoever dealt it, and you move 20% faster for 3 seconds after you use it."
   },
   {
-   "name": "Hardened by Near Misses",
+   "name": "Cold Reserve",
    "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "stackShape": "ledger",
-   "stackBuild": "dodge",
-   "stackPay": "ward",
-   "stackCap": 6,
-   "stackDecay": 10,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 1.0,
-   "stackIcon": "stackWard",
-   "desc": "Every blow you avoid builds a stack on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack, 42% at full. Unfed, a stack fades every 10 seconds."
+   "desc": "When your stamina runs out, you gain a ward worth 25% of your maximum health for 5 seconds. Once every 30 seconds.",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   }
   }
  ]
 }

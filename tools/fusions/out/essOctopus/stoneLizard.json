@@ -1,0 +1,69 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Still, Then Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 38,
+   "cooldown": 90,
+   "speed": 440,
+   "radius": 7,
+   "ignoreResist": true,
+   "desc": "Holds motionless, then lashes an arm for 38 damage that ignores resistances."
+  },
+  {
+   "name": "Tail Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "desc": "A quick flick of an arm that deals 4 damage and leaves the target 6% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Shed the Arm",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "cooldown": 25,
+   "healAmount": 22,
+   "critChance": 0.1,
+   "healScope": "self",
+   "desc": "Drops a wounded arm and regrows it, restoring 22 health to you, with a 10% chance to heal critically."
+  },
+  {
+   "name": "Basking Recovery",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 30%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

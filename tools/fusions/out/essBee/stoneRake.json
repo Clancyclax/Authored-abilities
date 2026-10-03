@@ -1,0 +1,70 @@
+{
+  "essence": "essBee",
+  "stone": "stoneRake",
+  "fusions": [
+    {
+      "name": "Windrow Cut",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "nature",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.12,
+        "duration": 6
+      },
+      "spreadAfflictions": 112,
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.1,
+      "scaleCap": 0.4,
+      "desc": "A raking blow that deals 14 damage and leaves the target 12% easier to wound for 6 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles. Its damage rises 10% per affliction on the target, up to 40%."
+    },
+    {
+      "name": "Tidy Sweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chain": {
+        "count": 1,
+        "radius": 96,
+        "frac": 0.6
+      },
+      "chainCount": 1,
+      "chainRange": 96,
+      "chainDamagePct": 0.6,
+      "desc": "Every enemy within 3.5 tiles takes 4 damage. It then leaps to 1 more enemy within 3 tiles, dealing 60% of the original damage.",
+      "spammable": true
+    },
+    {
+      "name": "Swept Clean",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "physical",
+      "cooldown": 45,
+      "cleanseCount": 3,
+      "healScope": "self",
+      "desc": "Removes up to 3 conditions from you."
+    },
+    {
+      "name": "Leavings Cling",
+      "kind": "passive",
+      "category": "affliction",
+      "template": "virulence",
+      "element": "nature",
+      "desc": "Your afflictions take hold on an enemy that is immune to them."
+    }
+  ]
+}

@@ -63,15 +63,23 @@
    "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds. Your movement speed rises 15% for 4 seconds after you use it."
   },
   {
-   "name": "Grey Hide",
+   "name": "Last Plate",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "buffKind": "armor",
-   "amount": 0.1,
-   "regenPerSec": 0.5,
-   "desc": "Your armour rises by 10%. You also regenerate 0.5 health a second, permanently."
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls low, a shield worth 25% of your maximum health covers you for 7 seconds. Once every 40 seconds."
   }
  ]
 }

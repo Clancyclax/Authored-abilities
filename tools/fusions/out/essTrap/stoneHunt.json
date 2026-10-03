@@ -1,0 +1,74 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "cooldown": 15,
+   "desc": "A thrown jaw that deals 22 damage, up to 1.5 times that at maximum range. It only strikes a target at or below 25% of its health.",
+   "base": 22,
+   "maxMult": 1.5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25
+  },
+  {
+   "name": "Set Scent",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "Sends a bolt that deals 12 damage and leaves the target [Marked] for 8 seconds, so your abilities bite deeper. Your afflictions on the target spread to every enemy within 4 tiles.",
+   "base": 12,
+   "speed": 380,
+   "radius": 7,
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Lie in Wait",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "desc": "Increases your critical hit chance by 25% for 15 seconds.",
+   "critChanceBonus": 0.25,
+   "buffDuration": 15
+  },
+  {
+   "name": "Trapline Hound",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "desc": "Calls a bonded hound that fights beside you, striking for 5 damage. It also makes its target [Bleeding] for 2 damage a second for 4 seconds.",
+   "familiarDmg": 5,
+   "familiarRange": 160,
+   "familiarInterval": 1.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "familiarFamily": "slime",
+   "familiarCreatureName": "Trapline Hound"
+  }
+ ]
+}

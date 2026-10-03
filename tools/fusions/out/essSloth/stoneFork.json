@@ -1,89 +1,95 @@
 {
- "essence": "essSloth",
- "stone": "stoneFork",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Split Decision",
-   "template": "projectileBall",
-   "element": "piercing",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "speed": 360,
-   "radius": 8,
-   "reachUnits": 256,
-   "rangeBand": "medium",
-   "chain": {
-    "count": 2,
-    "radius": 110,
-    "frac": 0.6
-   },
-   "chainCount": 2,
-   "chainRange": 110,
-   "chainDamagePct": 0.6,
-   "spreadAfflictions": 112,
-   "debuff": {
-    "key": "slowCast",
-    "chance": 0.5,
-    "duration": 5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Throws a bolt that deals 12 damage to the first enemy it meets, then branches to 2 more enemies within 3.5 tiles for 60% of that damage. Each hit has a 50% chance to leave the target [Muddled] for 5 seconds, and your afflictions on the first target spread to enemies within 3.5 tiles."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Tine After Tine",
-   "template": "imbueStrike",
-   "element": "piercing",
-   "role": "resource",
-   "base": 4,
-   "cooldown": 1,
-   "strikes": 2,
-   "chargesMax": 3,
-   "debuff": {
-    "key": "pinned",
-    "chance": 0.25,
-    "duration": 1.5,
-    "stacks": 1,
-    "potency": 1
-   },
-   "dot": {
-    "dmgPerTick": 1,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "Two quick prongs, each of which deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance to leave the target [Pinned] for 1.5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
-  },
-  {
-   "kind": "active",
-   "category": "defensive",
-   "name": "Crook of the Bough",
-   "template": "armorBuff",
-   "element": "piercing",
-   "armorBonus": 0.2,
-   "dodgeBonus": 0.1,
-   "buffDuration": 12,
-   "cooldown": 40,
-   "desc": "You wedge yourself in place: your armour rises by 20% and your dodge chance by 10% for 12 seconds."
-  },
-  {
-   "kind": "passive",
-   "category": "passive buff",
-   "name": "Either Way",
-   "template": "fateReroll",
-   "element": "piercing",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 12,
-   "desc": "Once every 12 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
-  }
- ]
+  "essence": "essSloth",
+  "stone": "stoneFork",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Split Decision",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "chain": {
+        "count": 2,
+        "radius": 110,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 110,
+      "chainDamagePct": 0.6,
+      "spreadAfflictions": 112,
+      "debuff": {
+        "key": "slowCast",
+        "chance": 0.5,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Throws a bolt that deals 12 damage to the first enemy it meets, then branches to 2 more enemies within 3.5 tiles for 60% of that damage. Each hit has a 50% chance to leave the target [Muddled] for 5 seconds, and your afflictions on the first target spread to enemies within 3.5 tiles."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Tine After Tine",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "resource",
+      "base": 4,
+      "cooldown": 1,
+      "strikes": 2,
+      "chargesMax": 3,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.25,
+        "duration": 1.5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Two quick prongs, each of which deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds, with a 25% chance to leave the target [Pinned] for 1.5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "kind": "active",
+      "category": "defensive",
+      "name": "Crook of the Bough",
+      "template": "armorBuff",
+      "element": "piercing",
+      "armorBonus": 0.2,
+      "dodgeBonus": 0.1,
+      "buffDuration": 12,
+      "cooldown": 40,
+      "desc": "You wedge yourself in place: your armour rises by 20% and your dodge chance by 10% for 12 seconds."
+    },
+    {
+      "name": "Second Tine",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 6,
+        "range": 224
+      },
+      "desc": "When you kill an enemy, a bolt leaps to the nearest enemy within 7 tiles, dealing 6 damage. Once every 8 seconds."
+    }
+  ]
 }

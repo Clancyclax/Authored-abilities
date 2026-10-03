@@ -1,0 +1,74 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneHorse",
+  "fusions": [
+    {
+      "name": "Trample Run",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "chargeTo": 224,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "You rush up to 7 tiles forward and trample, dealing 14 damage to every enemy within 3 tiles."
+    },
+    {
+      "name": "Iron-Shod Shove",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "long",
+      "base": 40,
+      "cooldown": 120,
+      "range": 88,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 8
+      },
+      "ignoreArmor": true,
+      "desc": "Kicks the target with a hind-leg of scales, dealing 40 damage and leaving it 20% easier to wound for 8 seconds. The blow ignores armour."
+    },
+    {
+      "name": "Cantering Guard",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 45,
+      "buffStat": "damageReduction",
+      "buffAmount": 0.2,
+      "buffDuration": 12,
+      "hasteOnUse": {
+        "pct": 0.3,
+        "duration": 5
+      },
+      "desc": "Reduces the damage you take by 20% for 12 seconds, and you move 30% faster for 5 seconds."
+    },
+    {
+      "name": "Gathered Pace",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.25,
+        "duration": 4
+      },
+      "armorBonus": 0.06,
+      "desc": "Every few tiles you cover, your physical damage rises by 25% for 4 seconds. Your armour is 6% higher at all times. Once every 8 seconds."
+    }
+  ]
+}

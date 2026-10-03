@@ -1,72 +1,74 @@
 {
- "essence": "essHammer",
- "stone": "stoneHammer",
- "fusions": [
-  {
-   "name": "Anvil-Flat",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "long",
-   "base": 40,
-   "cooldown": 120,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.25,
-    "duration": 8
-   },
-   "ignoreArmor": true,
-   "desc": "A two-handed blow that deals 40 damage, ignores armour and leaves the target 25% easier to wound for 8 seconds."
-  },
-  {
-   "name": "Ringing Floor",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 18,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "small",
-   "stunOnHit": 1.2,
-   "desc": "Strikes the ground twice in one motion, dealing 14 damage to every enemy within 3 tiles and stunning each for 1.2 seconds."
-  },
-  {
-   "name": "Trip-Forge",
-   "kind": "active",
-   "category": "summon",
-   "template": "activeSummon",
-   "element": "blunt",
-   "cooldown": 45,
-   "summonKind": "turret",
-   "summonDmg": 6,
-   "summonInterval": 1.5,
-   "summonDuration": 12,
-   "summonRange": 96,
-   "castTime": 0.5,
-   "desc": "Sets down a trip-forge that lasts 12 seconds and pounds the nearest enemy within 3 tiles every 1.5 seconds for 6 damage."
-  },
-  {
-   "name": "Struck in Time",
-   "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
-   "element": "blunt",
-   "stackShape": "boon",
-   "stackBuild": "hit",
-   "stackPay": "burst",
-   "stackCap": 6,
-   "stackDecay": 10,
-   "stackSpend": "full",
-   "stackOn": "self",
-   "stackScale": 1.0,
-   "stackIcon": "stackKarma",
-   "desc": "Every blow you land builds a stack on you, up to 6. At 6, they all spend at once, and a blow strikes the nearest enemy within 8 tiles for 34% of your weapon damage per stack."
-  }
- ]
+  "essence": "essHammer",
+  "stone": "stoneHammer",
+  "fusions": [
+    {
+      "name": "Anvil-Flat",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "long",
+      "base": 40,
+      "cooldown": 120,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.25,
+        "duration": 8
+      },
+      "ignoreArmor": true,
+      "desc": "A two-handed blow that deals 40 damage, ignores armour and leaves the target 25% easier to wound for 8 seconds."
+    },
+    {
+      "name": "Ringing Floor",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 18,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "small",
+      "stunOnHit": 1.2,
+      "desc": "Strikes the ground twice in one motion, dealing 14 damage to every enemy within 3 tiles and stunning each for 1.2 seconds."
+    },
+    {
+      "name": "Pounding Rig",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "blunt",
+      "cooldown": 45,
+      "summonKind": "turret",
+      "summonDmg": 6,
+      "summonInterval": 1.5,
+      "summonDuration": 12,
+      "summonRange": 96,
+      "castTime": 0.5,
+      "desc": "Sets down a trip-forge that lasts 12 seconds and pounds the nearest enemy within 3 tiles every 1.5 seconds for 6 damage."
+    },
+    {
+      "name": "Peened Over",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "strike",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.15,
+        "duration": 5
+      },
+      "desc": "Each blow you land gives you a ward worth 15% of your maximum health for 5 seconds. Once every 8 seconds."
+    }
+  ]
 }

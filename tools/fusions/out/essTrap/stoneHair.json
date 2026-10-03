@@ -1,0 +1,74 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Taut Strand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "Draws a strand across the target for 9 damage, using up one of your afflictions on it.",
+   "base": 9,
+   "speed": 400,
+   "radius": 6,
+   "consumeAffliction": true
+  },
+  {
+   "name": "Matted Web",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 15,
+   "desc": "Throws a mass of strands that deals 11 damage to everything in the cone and stuns it for 0.8 seconds. Each hit leaves the target [Slowed] for 3 seconds.",
+   "base": 11,
+   "range": 160,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Knitting Threads",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "cooldown": 12,
+   "desc": "Restores 18 health to you, and has a 10% chance to be a critical heal.",
+   "healAmount": 18,
+   "healScope": "self",
+   "critChance": 0.1
+  },
+  {
+   "name": "Loose Ends",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 3,
+    "range": 160
+   },
+   "desc": "When a condition on you ends, a strand lashes the nearest enemy within 5 tiles, dealing 3 damage. Once every 5 seconds."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essThread",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Grapple Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "desc": "Sends a barbed line that deals 12 damage, then hauls you to the target.",
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "chargeTo": 200
+  },
+  {
+   "name": "Barbed Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "desc": "A flicked barb that deals 5 damage and makes the target [Bleeding] for 1 damage a second for 4 seconds.",
+   "spammable": true,
+   "range": 180,
+   "maxMult": 1.3,
+   "reachUnits": 180,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Haul In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "desc": "Calls up to 5 enemies within 8 tiles onto you for 6 seconds.",
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1
+  },
+  {
+   "name": "Caught Fast",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "desc": "Against enemies carrying your afflictions, you deal 15% more damage.",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.15
+  }
+ ]
+}

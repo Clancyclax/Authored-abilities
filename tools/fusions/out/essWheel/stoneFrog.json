@@ -1,88 +1,86 @@
 {
- "essence": "essWheel",
- "stone": "stoneFrog",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Snatched From Afar",
-   "template": "stackStrike",
-   "element": "nature",
-   "role": "execute",
-   "base": 22,
-   "cooldown": 14,
-   "range": 192,
-   "reachUnits": 192,
-   "rangeBand": "medium",
-   "requiresTargetBelow": 0.25,
-   "stackMult": 1.2,
-   "executeLadder": true,
-   "desc": "Reels out a lash at a target up to 6 tiles away that is at or below 25% health, dealing 22 damage, consuming every affliction on it and adding 1.2 times their remaining damage to this blow."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Coiled Kick",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 12,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "knockback": 112,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.06,
-   "scaleCap": 0.3,
-   "desc": "A two-legged kick that deals 14 damage, knocks the target back 3.5 tiles and leaves it 10% easier to wound for 5 seconds. Its damage rises 6% for every 100 paces you have travelled since you last used it (max 30%)."
-  },
-  {
-   "name": "Coiled Release",
-   "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
-   "element": "water",
-   "speedMult": 1.25,
-   "buffDuration": 6,
-   "blinkOnUse": 96,
-   "dodgeBonus": 0.1,
-   "cooldown": 24,
-   "desc": "Springs you 3 tiles from where you stood, then increases your movement speed by 25% for 6 seconds, with +10% dodge chance for it."
-  },
-  {
-   "name": "Ripple Skipper",
-   "kind": "passive",
-   "category": "movement",
-   "template": "waterWalk",
-   "element": "water",
-   "isMovement": true,
-   "source": "essence",
-   "riders": [
+  "essence": "essWheel",
+  "stone": "stoneFrog",
+  "fusions": [
     {
-     "rank": "bronze",
-     "stat": "moveSpeed",
-     "amount": 0.1,
-     "text": "you move 10% faster"
+      "kind": "active",
+      "category": "attack",
+      "name": "Snatched From Afar",
+      "template": "stackStrike",
+      "element": "nature",
+      "role": "execute",
+      "base": 22,
+      "cooldown": 14,
+      "range": 192,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "requiresTargetBelow": 0.25,
+      "stackMult": 1.2,
+      "executeLadder": true,
+      "desc": "Reels out a lash at a target up to 6 tiles away that is at or below 25% health, dealing 22 damage, consuming every affliction on it and adding 1.2 times their remaining damage to this blow."
     },
     {
-     "rank": "silver",
-     "stat": "attackSpeed",
-     "amount": 0.06,
-     "text": "you attack 6% faster"
+      "kind": "active",
+      "category": "attack",
+      "name": "Hairspring Kick",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 12,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "knockback": 112,
+      "desc": "Springs you to a target up to 5 tiles away and kicks it for 14 damage, knocking it back 3.5 tiles and leaving it 10% easier to wound for 5 seconds.",
+      "chargeTo": 160
     },
     {
-     "rank": "gold",
-     "stat": "dodgeChance",
-     "amount": 0.08,
-     "text": "your dodge chance rises by 8%"
+      "name": "Coiled Release",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "water",
+      "speedMult": 1.25,
+      "buffDuration": 6,
+      "blinkOnUse": 96,
+      "dodgeBonus": 0.1,
+      "cooldown": 24,
+      "desc": "Springs you 3 tiles from where you stood, then increases your movement speed by 25% for 6 seconds, with +10% dodge chance for it."
+    },
+    {
+      "name": "Ripple Skipper",
+      "kind": "passive",
+      "category": "movement",
+      "template": "waterWalk",
+      "element": "water",
+      "isMovement": true,
+      "source": "essence",
+      "riders": [
+        {
+          "rank": "bronze",
+          "stat": "moveSpeed",
+          "amount": 0.1,
+          "text": "you move 10% faster"
+        },
+        {
+          "rank": "silver",
+          "stat": "attackSpeed",
+          "amount": 0.06,
+          "text": "you attack 6% faster"
+        },
+        {
+          "rank": "gold",
+          "stat": "dodgeChance",
+          "amount": 0.08,
+          "text": "your dodge chance rises by 8%"
+        }
+      ],
+      "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver you attack 6% faster, and from gold your dodge chance rises by 8%."
     }
-   ],
-   "desc": "You walk on water and swamp as on solid ground. While you are on water or swamp, from bronze rank you move 10% faster, from silver you attack 6% faster, and from gold your dodge chance rises by 8%."
-  }
- ]
+  ]
 }

@@ -3,21 +3,26 @@
  "stone": "stoneHand",
  "fusions": [
   {
-   "name": "Wrung Dry",
+   "name": "Tightening Knot",
    "kind": "active",
    "category": "attack",
-   "template": "stackStrike",
+   "template": "sunderStrike",
    "element": "poison",
-   "role": "execute",
-   "base": 22,
+   "role": "medium",
+   "base": 14,
    "cooldown": 14,
+   "stunOnHit": 1.2,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A crushing bite that deals 14 poison damage, stuns the target for 1.2 seconds and leaves it 10% easier to wound for 5 seconds. Its damage rises 10% for each affliction already on the target, up to 40%.",
    "range": 80,
    "reachUnits": 80,
    "rangeBand": "melee",
-   "stackMult": 1.5,
-   "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "desc": "Usable only on an enemy at or below 25% health, a threshold that rises with each rank. You grip and bite for 22 poison damage, consuming every affliction on the target and adding 1.5 times their remaining damage."
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   }
   },
   {
    "name": "Grip and Bite",

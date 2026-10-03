@@ -1,0 +1,74 @@
+{
+ "essence": "essPangolin",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "leech": 0.15,
+   "knockback": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Shoves outward with your whole flank, dealing 11 damage to every enemy within 3 tiles, knocking each back 2.5 tiles and healing you for 15% of the damage dealt."
+  },
+  {
+   "name": "Grazing Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.2,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "leech": 0.1,
+   "desc": "Lashes a tail at a target up to 5 tiles away, dealing 4 damage and healing you for 10% of the damage dealt."
+  },
+  {
+   "name": "Warm Hollow",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 40,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 128,
+   "healScope": "party",
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Curls around a patch of ground 4 tiles across for 10 seconds, restoring 3 health a second to you and your allies inside it."
+  },
+  {
+   "name": "Huddle Down",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "frac": 0.5,
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you regain 4 health a second for 6 seconds. Once every 40 seconds."
+  }
+ ]
+}

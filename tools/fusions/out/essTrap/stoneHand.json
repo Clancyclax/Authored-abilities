@@ -1,0 +1,79 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Pinch Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "A grasping snap that deals 5 damage, leaves the target 8% easier to wound for 4 seconds and has a 20% chance of [Pinned] for 1 second.",
+   "base": 5,
+   "spammable": true,
+   "range": 84,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Closing Fist",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "cooldown": 14,
+   "desc": "Closes a fist of force on the target for 20 damage. It only strikes a target at or below 25% of its health, and uses up every affliction on it for 50% more damage each.",
+   "base": 20,
+   "speed": 400,
+   "radius": 6,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.5
+  },
+  {
+   "name": "Defused Spring",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "Removes 2 conditions from you. Your movement speed rises 15% for 4 seconds after you use it.",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When your stamina is full, you gain 20% critical chance for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

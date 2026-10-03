@@ -1,0 +1,71 @@
+{
+ "essence": "essBear",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Scent and Chomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 10,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "desc": "A bite that needs one of your afflictions on the target and uses it up, dealing 10 damage and leaving the target 10% easier to wound for 4 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Blood in the Water",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "bossPct": 0.05,
+   "leech": 0.15,
+   "range": 120,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Thrashes a wide cone ahead of you, dealing 28 damage to everything caught in it and 5% of a boss's or elite's maximum health. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Closing Circle",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "desc": "Increases your critical hit chance by 25% for 15 seconds."
+  },
+  {
+   "name": "Fed and Fierce",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 8
+   },
+   "desc": "When you kill an enemy, you heal for 25% of the damage you deal for 8 seconds. Once every 10 seconds."
+  }
+ ]
+}

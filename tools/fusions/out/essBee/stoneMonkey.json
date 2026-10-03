@@ -1,0 +1,89 @@
+{
+  "essence": "essBee",
+  "stone": "stoneMonkey",
+  "fusions": [
+    {
+      "name": "Pilfered Venom",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "consumeAffliction": true,
+      "desc": "Needs one of your afflictions on the target and uses it up. Throws a sting that deals 9 damage and leaves the target [Muddled] for 5 seconds.",
+      "debuff": {
+        "key": "slowCast",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Pelting Scatter",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "medium",
+      "base": 5,
+      "cooldown": 16,
+      "volleySpread": 0.4,
+      "speed": 300,
+      "radius": 7,
+      "range": 240,
+      "rangeBand": "medium",
+      "reachUnits": 240,
+      "isAoe": true,
+      "volleyCount": 4,
+      "knockback": 64,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Flings 4 stings in a spread, each dealing 5 damage and knocking the target back 2 tiles. Each hit has a 30% chance of [Hindered] for 6 seconds."
+    },
+    {
+      "name": "Cluster Cover",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "physical",
+      "cooldown": 40,
+      "stealthDuration": 8,
+      "stealthAlpha": 0.35,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 15,
+      "stealthScope": "self",
+      "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 15% faster, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Sticky Fingers",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 6
+      },
+      "desc": "When you inflict a condition, you restore 6 stamina. Once every 8 seconds."
+    }
+  ]
+}

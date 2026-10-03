@@ -1,0 +1,68 @@
+{
+ "essence": "essBear",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Underfoot Scratch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 70,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "spammable": true,
+   "desc": "A quick scratch that deals 5 damage and leaves the target 5% easier to wound for 4 seconds. For 2 seconds after you use it, you move 10% faster."
+  },
+  {
+   "name": "Pounce From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.6,
+   "executeLadder": true,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A pounce that deals 18 damage, then consumes every affliction on the target, adding 1.6 times their remaining damage to this blow. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Burrow In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 40,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 20% faster while veiled, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Dusk Den",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "night",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "At night, your armour is 12% higher."
+  }
+ ]
+}

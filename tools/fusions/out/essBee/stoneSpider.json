@@ -1,0 +1,91 @@
+{
+ "essence": "essBee",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Silk Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 144,
+   "desc": "A sting that deals 10 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to enemies within 4.5 tiles."
+  },
+  {
+   "name": "Tether Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 210,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A thrown line that deals 8 damage, up to 1.8 times its damage at maximum range, and has a 40% chance of [Slowed] for 4 seconds. It uses up to 3 charges, and kills return one."
+  },
+  {
+   "name": "Waiting Web",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 120,
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 20,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 88,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned",
+   "castTime": 1.0,
+   "desc": "Conjures a web trap onto the nearest enemy. It waits 30 seconds, and the first 2 enemies to come within 3 tiles take 20 damage in a blast around it."
+  },
+  {
+   "name": "Thread Familiar",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "familiarFamily": "bee",
+   "familiarCreatureName": "Silk Drone",
+   "desc": "Calls a bonded familiar of poison that fights beside you, striking for 4 damage. It also applies poison, dealing 3 damage per tick for 4 ticks."
+  }
+ ]
+}

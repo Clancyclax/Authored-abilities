@@ -1,0 +1,68 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "name": "Glimmer Bolt",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 300,
+      "rangeBand": "medium",
+      "chargesMax": 4,
+      "desc": "Sends a raw bolt of arcana into the first enemy it meets, dealing 8 damage. Holds 4 charges; each use spends one and each kill gives one back."
+    },
+    {
+      "name": "Unshaped Burst",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "arcane",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "knockback": 96,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "Releases raw arcana from under your plates, dealing 14 damage to every enemy within 3 tiles and knocking each back 3 tiles."
+    },
+    {
+      "name": "Bare Current",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "arcane",
+      "cooldown": 40,
+      "buffDuration": 12,
+      "desc": "Increases your damage by 30% for 12 seconds.",
+      "powerMult": 1.3
+    },
+    {
+      "name": "Spent Spark",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.3,
+        "charges": 1
+      },
+      "armorBonus": 0.08,
+      "desc": "When you spend mana, your next spell deals 30% more damage. Your armour is 8% higher at all times. Once every 8 seconds."
+    }
+  ]
+}

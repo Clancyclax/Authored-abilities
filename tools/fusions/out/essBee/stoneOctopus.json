@@ -1,0 +1,83 @@
+{
+  "essence": "essBee",
+  "stone": "stoneOctopus",
+  "fusions": [
+    {
+      "name": "Eightfold Salvo",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "poison",
+      "role": "medium",
+      "base": 4,
+      "cooldown": 18,
+      "volleySpread": 0.9,
+      "speed": 300,
+      "radius": 7,
+      "range": 240,
+      "rangeBand": "medium",
+      "reachUnits": 240,
+      "isAoe": true,
+      "volleyCount": 8,
+      "knockback": 64,
+      "debuff": {
+        "key": "poison",
+        "chance": 0.35,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses 8 stings at once, spread apart, each dealing 4 damage and knocking the target back 2 tiles. Each hit has a 35% chance of [Poisoned] for 8 seconds."
+    },
+    {
+      "name": "Long Reach",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "poison",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 210,
+      "reachUnits": 210,
+      "rangeBand": "medium",
+      "maxMult": 1.6,
+      "hpCostPct": 0.05,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Costs 5% of your maximum health. A thrown sting that deals 8 damage, up to 1.6 times its damage at maximum range, and leaves the target [Poisoned] for 2 damage a second for 5 seconds."
+    },
+    {
+      "name": "Deep Reserves",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "water",
+      "cooldown": 55,
+      "buffStat": "regenStamina",
+      "buffAmount": 0.5,
+      "buffDuration": 18,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 8
+      },
+      "desc": "Increases your stamina recovery by 50% for 18 seconds. While it lasts, an escort fights beside you, striking for 4 every 1.4 seconds for 8 seconds."
+    },
+    {
+      "name": "Many Hands",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "cooldownPassive",
+      "element": "water",
+      "cooldownReduction": 0.08,
+      "armorBonus": 0.08,
+      "desc": "Every ability you have comes round 8% sooner. Your armour rises by 8%."
+    }
+  ]
+}

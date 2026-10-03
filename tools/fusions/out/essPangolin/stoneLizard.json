@@ -1,0 +1,69 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneLizard",
+  "fusions": [
+    {
+      "name": "Tail Whip",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 15,
+      "range": 88,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "stunOnHit": 1,
+      "desc": "Whips a scaled tail into the target, dealing 12 damage, stunning it for 1 second and leaving it 12% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Basking Spit",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 300,
+      "rangeBand": "medium",
+      "chargesMax": 4,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Spits a glob that deals 7 damage to the first enemy it meets and hinders its attacks for 3 seconds. Holds 4 charges; each use spends one and each kill gives one back."
+    },
+    {
+      "name": "Regrown Scale",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "physical",
+      "cooldown": 30,
+      "hotPerSec": 3,
+      "hotDuration": 8,
+      "healScope": "self",
+      "desc": "Regrows damaged plates, restoring 3 health a second to you for 8 seconds."
+    },
+    {
+      "name": "Basking Hide",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "day",
+      "bonusKind": "armor",
+      "amount": 0.12,
+      "desc": "In daylight, your armour rises by 12%."
+    }
+  ]
+}

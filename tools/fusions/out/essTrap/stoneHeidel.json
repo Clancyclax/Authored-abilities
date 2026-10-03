@@ -1,0 +1,77 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Gallop Clamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "You charge to the target and snap shut on it for 14 damage, pinning it [Pinned] for 1.5 seconds and leaving it 12% easier to wound for 5 seconds.",
+   "base": 14,
+   "range": 86,
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Hoofprint",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "A thrown jaw that deals 5 damage, up to 1.4 times that at maximum range.",
+   "base": 5,
+   "spammable": true,
+   "maxMult": 1.4,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Untiring Pace",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 40,
+   "desc": "Increases your movement speed by 30% for 10 seconds, with +8% dodge chance for it.",
+   "speedMult": 1.3,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08
+  },
+  {
+   "name": "Second Wind Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you spend stamina, you restore 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

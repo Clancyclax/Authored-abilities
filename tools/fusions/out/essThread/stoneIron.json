@@ -1,0 +1,72 @@
+{
+ "essence": "essThread",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Link by Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "desc": "Fires a heavy link that deals 9 damage. Costs 5% of your maximum health.",
+   "hpCostPct": 0.05,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long"
+  },
+  {
+   "name": "Drag Chain",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "desc": "Every enemy within 3.5 tiles takes 30 damage, ignoring their armour.",
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true
+  },
+  {
+   "name": "Bound Plate",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 25 damage and holds for 8 seconds.",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 25,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1
+  },
+  {
+   "name": "Tightened Mail",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you take damage that is not fire, the strands cinch into a shield worth 15% of your maximum health for 4 seconds. Once every 15 seconds.",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   }
+  }
+ ]
+}

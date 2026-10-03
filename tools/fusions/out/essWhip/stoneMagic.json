@@ -1,80 +1,80 @@
 {
- "essence": "essWhip",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "name": "Spark Along the Thong",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "arcane",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 224,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "speed": 520,
-   "radius": 6,
-   "chain": {
-    "count": 1,
-    "radius": 96,
-    "frac": 0.5
-   },
-   "chainCount": 1,
-   "chainRange": 96,
-   "chainDamagePct": 0.5,
-   "desc": "Flicks raw arcana at the first enemy in reach for 4 damage; it then leaps to 1 more enemy within 3 tiles for 50% of that."
-  },
-  {
-   "name": "Ring of Raw Force",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "arcane",
-   "role": "long",
-   "base": 28,
-   "cooldown": 100,
-   "range": 112,
-   "reachUnits": 112,
-   "rangeBand": "melee",
-   "isAoe": true,
-   "aoeBand": "medium",
-   "ignoreResist": true,
-   "desc": "Cracks the lash in a charged circle that deals 28 damage to every enemy within 3.5 tiles, ignoring their resistances."
-  },
-  {
-   "name": "Tapped Current",
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "element": "arcane",
-   "cooldown": 30,
-   "resource": "mana",
-   "overTime": true,
-   "restorePerSec": 3,
-   "restoreDuration": 8,
-   "desc": "Restores 3 mana a second for 8 seconds."
-  },
-  {
-   "name": "Charged Tip",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "nextSpellDamage",
-    "amount": 0.25,
-    "charges": 1
-   },
-   "desc": "When you spend mana, your next spell deals 25% more damage. Once every 8 seconds."
-  }
- ]
+  "essence": "essWhip",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "name": "Spark Along the Thong",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "speed": 520,
+      "radius": 6,
+      "chain": {
+        "count": 1,
+        "radius": 96,
+        "frac": 0.5
+      },
+      "chainCount": 1,
+      "chainRange": 96,
+      "chainDamagePct": 0.5,
+      "desc": "Flicks raw arcana at the first enemy in reach for 4 damage; it then leaps to 1 more enemy within 3 tiles for 50% of that."
+    },
+    {
+      "name": "Ring of Raw Force",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "arcane",
+      "role": "long",
+      "base": 28,
+      "cooldown": 100,
+      "range": 112,
+      "reachUnits": 112,
+      "rangeBand": "melee",
+      "isAoe": true,
+      "aoeBand": "medium",
+      "ignoreResist": true,
+      "desc": "Cracks the lash in a charged circle that deals 28 damage to every enemy within 3.5 tiles, ignoring their resistances."
+    },
+    {
+      "name": "Looped Back",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "arcane",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.5,
+      "reflectChance": 0.5,
+      "buffDuration": 8,
+      "cooldown": 30,
+      "desc": "For 8 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead."
+    },
+    {
+      "name": "Charged Tip",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 1
+      },
+      "desc": "When you spend mana, your next spell deals 25% more damage. Once every 8 seconds."
+    }
+  ]
 }

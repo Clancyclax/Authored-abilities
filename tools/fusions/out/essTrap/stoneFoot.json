@@ -1,0 +1,78 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Switchback Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "A thrown jaw that deals 14 damage, up to 2 times that at maximum range. Your afflictions on the target spread to every enemy within 3.5 tiles.",
+   "base": 14,
+   "maxMult": 2,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spreadAfflictions": 112
+  },
+  {
+   "name": "Blister Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "A quick snap that deals 5 damage, leaves the target 8% easier to wound for 4 seconds and has a 30% chance of [Slowed] for 2 seconds.",
+   "base": 5,
+   "spammable": true,
+   "range": 84,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Tripline Mile",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "Strings a line of jaws 7 tiles long for 10 seconds, dragging every enemy near it inward. Anything struck moves 30% slower for 3 seconds.",
+   "wallKind": "pull",
+   "wallLength": 224,
+   "wallDuration": 10,
+   "wallThickness": 26,
+   "pullForce": 28,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Stride Ledger",
+   "kind": "passive",
+   "category": "movement",
+   "template": "passiveMove",
+   "element": "physical",
+   "desc": "Your movement speed is permanently increased by 10%. A jaw-escort fights beside you for 8 seconds, striking for 4 every 1.5 seconds.",
+   "moveSpeedPct": 0.1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.5,
+    "duration": 8
+   }
+  }
+ ]
+}

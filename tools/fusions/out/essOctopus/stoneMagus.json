@@ -1,0 +1,64 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Three-Part Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 380,
+   "radius": 8,
+   "chargesMax": 3,
+   "desc": "Casts a bolt through three arms in turn that deals 8 damage. Holds 3 charges; each use spends one and each kill restores one."
+  },
+  {
+   "name": "Word of Binding",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 22,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "desc": "Speaks a binding word, dealing 12 damage to every enemy within 3.5 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Spell Said Twice",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "cooldown": 120,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Practiced Cadence",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.2,
+    "charges": 1
+   },
+   "desc": "Each time you spend mana, your next spell deals 20% more damage. Once every 6 seconds."
+  }
+ ]
+}

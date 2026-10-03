@@ -1,0 +1,78 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Quarry Marked",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 192,
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Reaches an arm across the gap, dealing 30 damage plus 5% of a boss's or elite's maximum health, rising to 1.5 times that at the full 6 tiles. The target is [Marked] for 10 seconds."
+  },
+  {
+   "name": "Scent Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 400,
+   "radius": 8,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks an arm tip that deals 5 damage and has a 40% chance to leave the target [Marked] for 6 seconds."
+  },
+  {
+   "name": "Closing In",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 50,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "name": "Taste of the Kill",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises 30% for 6 seconds. Once every 6 seconds."
+  }
+ ]
+}

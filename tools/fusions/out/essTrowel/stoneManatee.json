@@ -19,22 +19,30 @@
     "duration": 8
    },
    "bossPct": 0.05,
-   "desc": "A slow, heavy press of the trowel that deals 28 damage plus 5% of a boss's or elite's maximum health and leaves the target 15% easier to wound for 8 seconds."
+   "desc": "A press of the trowel that deals 28 damage plus 5% of a boss's or elite's maximum health and leaves the target 15% easier to wound for 8 seconds."
   },
   {
    "name": "Lazy Wake",
    "kind": "active",
    "category": "attack",
-   "template": "aoeRing",
+   "template": "projectileBall",
    "element": "water",
    "role": "medium",
    "base": 12,
    "cooldown": 16,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "small",
    "knockback": 96,
-   "desc": "Rolls a wave of slurry out around you, dealing 12 damage to every enemy within 3 tiles and knocking them back 3 tiles."
+   "desc": "Rolls a wave of slurry at a target up to 8 tiles away that deals 12 damage, knocks it back 3 tiles and leaves it [Soaked] for 5 seconds.",
+   "speed": 300,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   }
   },
   {
    "name": "Drifting Mend",

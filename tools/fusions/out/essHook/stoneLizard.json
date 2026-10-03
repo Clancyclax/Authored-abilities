@@ -6,24 +6,20 @@
    "name": "Sunlit Ambush",
    "kind": "active",
    "category": "attack",
-   "template": "imbueStrike",
+   "template": "sunderStrike",
    "element": "physical",
    "role": "long",
    "base": 28,
    "cooldown": 90,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 4,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "guaranteedCrit": true,
    "range": 86,
    "reachUnits": 86,
    "rangeBand": "melee",
-   "desc": "A strike from total stillness that deals 28 damage, is always a critical hit and leaves the target [Bleeding] for 2 damage a second for 4 seconds."
+   "desc": "A strike that deals 28 damage, ignores armour and leaves the target 15% easier to wound for 6 seconds.",
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   }
   },
   {
    "name": "Tail Lash",
@@ -33,7 +29,7 @@
    "element": "physical",
    "role": "resource",
    "base": 7,
-   "cooldown": 1.0,
+   "cooldown": 1,
    "range": 64,
    "isAoe": true,
    "aoeBand": "small",

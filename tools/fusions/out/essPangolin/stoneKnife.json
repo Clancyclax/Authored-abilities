@@ -1,0 +1,78 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneKnife",
+  "fusions": [
+    {
+      "name": "Seam Cut",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "slashing",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 14,
+      "range": 84,
+      "stackMult": 1.5,
+      "requiresTargetBelow": 0.25,
+      "executeLadder": false,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "desc": "Usable only on an enemy at or below 25% health. Slips a scale-edge between its plates for 18 damage, consuming every affliction on it and adding 1.5 times their remaining damage to the blow."
+    },
+    {
+      "name": "Probing Edge",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "slashing",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 76,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "consumeAffliction": true,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A quick cut that deals 8 damage and leaves the target [Bleeding] for 2 damage a second for 4 seconds. It needs one of your afflictions on the target and uses it up."
+    },
+    {
+      "name": "Find the Seam",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfCritBuff",
+      "element": "physical",
+      "cooldown": 40,
+      "desc": "Your critical hit chance rises by 25% for 10 seconds.",
+      "critChanceBonus": 0.25,
+      "buffDuration": 10
+    },
+    {
+      "name": "Long Wait Edge",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "slashing",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.3,
+        "strikes": 1
+      },
+      "armorBonus": 0.06,
+      "desc": "After several hits without a critical hit, your next strike gains 30% critical hit chance. Your armour is 6% higher at all times. Once every 8 seconds."
+    }
+  ]
+}

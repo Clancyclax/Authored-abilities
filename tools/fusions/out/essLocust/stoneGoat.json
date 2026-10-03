@@ -1,71 +1,79 @@
 {
- "essence": "essLocust",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Eats Anything",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1.0,
-   "strikes": 1,
-   "range": 84,
-   "reachUnits": 84,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "chargesMax": 4,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 3,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
-   "desc": "A tearing bite that deals 8 damage, leaves the target [Bleeding] for 2 damage a second for 3 seconds and makes it 10% easier to wound for 5 seconds. Holds up to 4 charges, and kills give charges back."
-  },
-  {
-   "name": "Headlong Crush",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "blunt",
-   "role": "medium",
-   "base": 13,
-   "cooldown": 14,
-   "range": 112,
-   "coneAngle": 0.7,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 80,
-   "desc": "The swarm butts forward in a cone 3.5 tiles ahead of you, dealing 13 damage to everything in it and knocking them back 2.5 tiles."
-  },
-  {
-   "name": "Clinging Mass",
-   "kind": "active",
-   "category": "defensive",
-   "template": "armorBuff",
-   "element": "blunt",
-   "cooldown": 40,
-   "armorBonus": 0.2,
-   "buffDuration": 12,
-   "desc": "Your swarm locks onto you, raising your armour by 20% for 12 seconds."
-  },
-  {
-   "name": "Grazes on Thorns",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "blunt",
-   "buffKind": "armor",
-   "amount": 0.1,
-   "regenPerSec": 0.5,
-   "desc": "Your armour rises by 10%, and you regenerate 0.5 health a second."
-  }
- ]
+  "essence": "essLocust",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Eats Anything",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1.0,
+      "strikes": 1,
+      "range": 84,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "chargesMax": 4,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A tearing bite that deals 8 damage, leaves the target [Bleeding] for 2 damage a second for 3 seconds and makes it 10% easier to wound for 5 seconds. Holds up to 4 charges, and kills give charges back."
+    },
+    {
+      "name": "Headlong Crush",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "blunt",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 112,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 80,
+      "desc": "The swarm butts forward in a cone 3.5 tiles ahead of you, dealing 13 damage to everything in it and knocking them back 2.5 tiles."
+    },
+    {
+      "name": "Clinging Mass",
+      "kind": "active",
+      "category": "defensive",
+      "template": "armorBuff",
+      "element": "blunt",
+      "cooldown": 40,
+      "armorBonus": 0.2,
+      "buffDuration": 12,
+      "desc": "Your swarm locks onto you, raising your armour by 20% for 12 seconds."
+    },
+    {
+      "name": "Cleared Pasture",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 5
+      },
+      "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+    }
+  ]
 }

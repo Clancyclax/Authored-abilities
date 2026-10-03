@@ -1,0 +1,75 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Ram Rail",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "A headlong blow that deals 16 damage, knocks the target back 3 tiles, pins it [Pinned] where it lands for 2 seconds and leaves it 15% easier to wound for 6 seconds.",
+   "base": 16,
+   "range": 86,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Stamp Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "Stamps the ground, dealing 9 damage to every enemy within 3 tiles. It costs 4% of your maximum health.",
+   "base": 9,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04
+  },
+  {
+   "name": "Barbed Footing",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it.",
+   "buffDuration": 8,
+   "thornsFrac": 0.6
+  },
+  {
+   "name": "Dug-In Heels",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health falls below 50%, you gain a ward that soaks 30% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

@@ -26,22 +26,25 @@
    "desc": "A slow sting that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 10 seconds."
   },
   {
+   "name": "Slack Tide",
    "kind": "active",
    "category": "attack",
-   "name": "Tide Comes Due",
-   "template": "stackStrike",
+   "template": "imbueStrike",
    "element": "water",
    "role": "execute",
    "base": 20,
+   "strikes": 1,
    "cooldown": 16,
-   "range": 84,
-   "reachUnits": 84,
-   "rangeBand": "melee",
-   "stackMult": 1.5,
    "requiresTargetBelow": 0.25,
-   "executeLadder": true,
-   "consumeAfflictionsPer": 0.7,
-   "desc": "Usable only on a target at or below 25% health: a blow that deals 20 damage plus 1.5 times the remaining damage of every affliction on it, using them all up with 70% more damage for each one."
+   "leech": 0.2,
+   "desc": "Usable only on a target at or below 25% health: a sting that deals 20 damage, leaves it [Poisoned] for 2 damage a second for 6 seconds and heals you for 20% of the damage dealt.",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   }
   },
   {
    "name": "Float and Mend",

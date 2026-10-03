@@ -1,0 +1,77 @@
+{
+ "essence": "essThread",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Tuned Tangle",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "desc": "Looses a cone of charged strands, dealing 4 damage to everything caught in it. Each hit has a 30% chance of [Muddled], slowing the target's casting for 5 seconds.",
+   "spammable": true,
+   "range": 240,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Unraveling Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 40,
+   "cooldown": 90,
+   "desc": "A cast that deals 40 damage, up to 1.3 times that at maximum range, ignoring the target's resistances.",
+   "range": 240,
+   "maxMult": 1.3,
+   "reachUnits": 240,
+   "rangeBand": "long",
+   "ignoreResist": true
+  },
+  {
+   "name": "Drawn from the Weave",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 40,
+   "desc": "Restores 4 mana a second for 8 seconds.",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8
+  },
+  {
+   "name": "Backflow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "desc": "When you spend mana, your next spell deals 30% more damage. Once every 8 seconds.",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   }
+  }
+ ]
+}

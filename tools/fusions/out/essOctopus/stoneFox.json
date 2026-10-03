@@ -1,0 +1,75 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Palmed Coin",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 192,
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "Slips an arm out of nowhere that deals 32 damage and is always a critical hit, rising to 1.5 times that at the full 6 tiles."
+  },
+  {
+   "name": "Wrong Arm",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "dark",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings ink with one arm while another strikes, dealing 10 damage to every enemy within 3.5 tiles, knocking each back 2 tiles and leaving it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Shell and Switch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds and raises your movement speed by 20% while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Count Short",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When your strikes go a while without a critical hit, your critical hit chance rises by 30% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

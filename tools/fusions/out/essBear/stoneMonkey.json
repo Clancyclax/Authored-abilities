@@ -1,0 +1,78 @@
+{
+ "essence": "essBear",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Snatch and Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "chargeTo": 192,
+   "desc": "You rush up to the target, then a quick grab deals 16 damage and leaves it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Ruckus",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "hpCostPct": 0.04,
+   "confuse": true,
+   "confuseChance": 0.5,
+   "confuseDuration": 3,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Cuffs every enemy within 3.5 tiles, each hit dealing 8 damage and having a 50% chance to confuse the target for 3 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Decoy Roar",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 5,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 8
+   },
+   "desc": "Pulls up to 6 enemies within 8 tiles onto you for 5 seconds. An escort fights beside you for 8 seconds, striking for 3 every 1.2 seconds."
+  },
+  {
+   "name": "Pocketed Gains",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, you regain 3 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essThread",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Slow Spool",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "desc": "Every enemy within 3 tiles takes 3 damage and is [Hindered], attacking 20% slower for 3 seconds.",
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Drowsing Draw",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "desc": "A strike that deals 8 damage, makes the target [Slowed] for 3 seconds and leaves it [Bleeding] for 1 damage a second for 4 seconds. It needs one of your afflictions on the target and uses it up.",
+   "strikes": 1,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Lull",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 90,
+   "desc": "Holds every creature within 5 tiles in place for 3 seconds.",
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "large"
+  },
+  {
+   "name": "Easy Current",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "desc": "When your mana runs out, you regain 15 mana. Once every 40 seconds.",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "emptyMana",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 15
+   }
+  }
+ ]
+}

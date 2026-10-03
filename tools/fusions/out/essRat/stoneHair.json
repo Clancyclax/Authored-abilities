@@ -20,26 +20,29 @@
     "stacks": 1,
     "potency": 1
    },
-   "spreadAfflictions": 112,
-   "desc": "Lashes a tangle of matted hair at one enemy up to 6 tiles away that deals 12 damage, rising to 1.2 times that at full reach, and leaves it [Pinned] for 2 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+   "desc": "Lashes a tangle of matted hair at one enemy up to 6 tiles away that deals 12 damage, rising to 1.2 times that at full reach, knocks it 2 tiles back and leaves it [Pinned] for 2 seconds.",
+   "knockback": 64
   },
   {
-   "name": "Shed Bristles",
+   "name": "Loose Strands",
    "kind": "active",
    "category": "attack",
-   "template": "volley",
-   "element": "piercing",
+   "template": "projectileBall",
+   "element": "physical",
    "role": "basic",
    "base": 3,
    "cooldown": 0.9,
    "spammable": true,
-   "volleyCount": 6,
-   "volleySpread": 0.7,
-   "isAoe": true,
    "speed": 320,
-   "radius": 5,
-   "range": 176,
-   "desc": "Your swarm flicks 6 shed bristles in a wide spray, each dealing 3 damage."
+   "radius": 7,
+   "desc": "Flicks a clump of matted hair at the first enemy in line, dealing 3 damage with a 40% chance to leave it [Slowed] for 4 seconds.",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
   },
   {
    "name": "Woven Burrow Mouth",
@@ -63,7 +66,7 @@
    "stackShape": "ledger",
    "stackSpend": "full",
    "stackOn": "self",
-   "stackScale": 1.0,
+   "stackScale": 1,
    "stackIcon": "stackWard",
    "stackBuild": "taken",
    "stackPay": "ward",

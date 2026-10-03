@@ -1,0 +1,87 @@
+{
+  "essence": "essBee",
+  "stone": "stoneMouse",
+  "fusions": [
+    {
+      "name": "Skitter Prick",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "chain": {
+        "count": 2,
+        "radius": 96,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 96,
+      "chainDamagePct": 0.6,
+      "desc": "Sends a sting that deals 4 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage.",
+      "spammable": true
+    },
+    {
+      "name": "Darting Rush",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 12,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "chargeTo": 192,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "You rush to the target first, then strike for 13 damage, leaving it 12% easier to wound for 5 seconds. Your move speed rises 20% for 4 seconds."
+    },
+    {
+      "name": "Beneath Notice",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "physical",
+      "cooldown": 45,
+      "stealthDuration": 8,
+      "stealthAlpha": 0.3,
+      "aggroMult": 0.3,
+      "stealthSpeedPct": 25,
+      "stealthScope": "self",
+      "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 25% faster, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Quiet Footing",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 2,
+        "duration": 4
+      },
+      "desc": "When you have moved a long way, you restore 2 stamina a second for 4 seconds. Once every 10 seconds."
+    }
+  ]
+}

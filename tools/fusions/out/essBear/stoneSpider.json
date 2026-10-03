@@ -1,0 +1,80 @@
+{
+ "essence": "essBear",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Snaring Strand",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 150,
+   "maxMult": 1.4,
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lashing strand that deals 9 damage. Each hit has a 50% chance of [Slowed] for 3 seconds. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Silk Cocoon",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 150,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Spews a wide cone of silk ahead of you, dealing 28 damage to everything caught in it. The blow ignores resistances. Each hit has a 60% chance of [Slowed] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "name": "Far Anchor",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.5,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "For 12 seconds, your attacks and spells reach 50% further."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "name": "Taut Silk",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "When you inflict a condition, your next strike has 15% more critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

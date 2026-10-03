@@ -1,63 +1,70 @@
 {
- "essence": "essHand",
- "stone": "stoneGoat",
- "fusions": [
-  {
-   "name": "Butting Shove",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 14,
-   "range": 64,
-   "isAoe": true,
-   "aoeBand": "small",
-   "knockback": 96,
-   "desc": "Shoves out with both palms and your head down, dealing 12 damage to every enemy within 2 tiles and knocking each back 3 tiles."
-  },
-  {
-   "name": "Stubborn Grapple",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 8,
-   "cooldown": 1,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "hpCostPct": 0.05,
-   "sunder": {
-    "amount": 0.1,
-    "duration": 5
-   },
-   "desc": "Spends 5% of your maximum health to lock onto the target, dealing 8 damage and leaving it 10% easier to wound for 5 seconds."
-  },
-  {
-   "name": "White-Knuckle Hold",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "earth",
-   "cooldown": 40,
-   "buffStat": "damageReduction",
-   "buffAmount": 0.25,
-   "buffDuration": 10,
-   "desc": "You dig your fingers in and refuse to move: you take 25% less damage for 10 seconds."
-  },
-  {
-   "name": "Crag Clinger",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "earth",
-   "buffKind": "maxHp",
-   "amount": 12,
-   "armorBonus": 0.06,
-   "desc": "Your maximum health rises by 12 and your armour by 6%, so nothing shifts you from where you hold on."
-  }
- ]
+  "essence": "essHand",
+  "stone": "stoneGoat",
+  "fusions": [
+    {
+      "name": "Butting Shove",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 64,
+      "isAoe": true,
+      "aoeBand": "small",
+      "knockback": 96,
+      "desc": "Shoves out with both palms and your head down, dealing 12 damage to every enemy within 2 tiles and knocking each back 3 tiles."
+    },
+    {
+      "name": "Stubborn Grapple",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "hpCostPct": 0.05,
+      "desc": "Spends 5% of your maximum health to lock onto the target, dealing 8 damage, leaving it 10% easier to wound for 5 seconds and giving it a 40% chance to be [Pinned] for 2 seconds.",
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.4,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      }
+    },
+    {
+      "name": "White-Knuckle Hold",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "earth",
+      "cooldown": 40,
+      "buffStat": "damageReduction",
+      "buffAmount": 0.25,
+      "buffDuration": 10,
+      "desc": "You dig your fingers in and refuse to move: you take 25% less damage for 10 seconds."
+    },
+    {
+      "name": "Crag Clinger",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveBuff",
+      "element": "earth",
+      "buffKind": "maxHp",
+      "amount": 12,
+      "armorBonus": 0.06,
+      "desc": "Your maximum health rises by 12 and your armour by 6%, so nothing shifts you from where you hold on."
+    }
+  ]
 }

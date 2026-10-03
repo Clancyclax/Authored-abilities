@@ -1,0 +1,84 @@
+{
+  "essence": "essBee",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Buckler Bash",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "stunOnHit": 1.2,
+      "desc": "A bash that deals 12 damage, stuns the target for 1.2 seconds and leaves it 10% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Twin Needles",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "volleySpread": 0.25,
+      "speed": 300,
+      "radius": 7,
+      "range": 240,
+      "rangeBand": "medium",
+      "reachUnits": 240,
+      "isAoe": true,
+      "volleyCount": 2,
+      "desc": "Looses 2 stings at once, spread apart, each dealing 3 damage.",
+      "spammable": true
+    },
+    {
+      "name": "Honeycomb Guard",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 24,
+      "shieldStrikes": 4,
+      "shieldDuration": 8,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 10
+      },
+      "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds. While it lasts, an escort fights beside you, striking for 4 every 1.4 seconds for 10 seconds."
+    },
+    {
+      "name": "Turned Aside",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 6
+      },
+      "desc": "When you take damage, a shield soaks 20% of your maximum health for 6 seconds. Once every 20 seconds."
+    }
+  ]
+}

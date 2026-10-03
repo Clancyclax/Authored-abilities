@@ -1,0 +1,71 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnaw Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "Looses 5 small jaws at once, each dealing 3 damage. Holds 5 charges, and kills give charges back.",
+   "base": 3,
+   "volleyCount": 5,
+   "volleySpread": 0.8,
+   "speed": 300,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "chargesMax": 5
+  },
+  {
+   "name": "Strip the Field",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "cooldown": 90,
+   "desc": "Hurls a mass of jaws that deals 28 damage and bursts for 80% of it on every enemy within 3 tiles.",
+   "base": 28,
+   "speed": 360,
+   "radius": 8,
+   "explodeRadius": 96,
+   "splashFrac": 0.8
+  },
+  {
+   "name": "Stripped Stores",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 40,
+   "desc": "Restores 3 stamina a second for 8 seconds.",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8
+  },
+  {
+   "name": "Crumbs Gathered",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 5 seconds."
+  }
+ ]
+}

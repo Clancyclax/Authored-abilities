@@ -1,0 +1,74 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "First Syllable",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "cooldown": 1,
+   "desc": "A spoken blow that deals 8 damage, up to 1.5 times that at maximum range. Holds 3 charges, and kills give charges back.",
+   "base": 8,
+   "maxMult": 1.5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargesMax": 3
+  },
+  {
+   "name": "Binding Verse",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "cooldown": 100,
+   "desc": "Speaks a verse that deals 28 damage to every enemy within 3.5 tiles, plus 5% of a boss or elite enemy's maximum health, and leaves each [Suppressed] for 3 seconds.",
+   "base": 28,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "suppressed",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Reach of the Word",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "arcane",
+   "cooldown": 60,
+   "desc": "For 15 seconds, your attacks and spells reach 40% further.",
+   "rangeMult": 1.4,
+   "buffDuration": 15
+  },
+  {
+   "name": "Final Clause",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyMana",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 12
+   },
+   "desc": "When your mana runs out, you restore 12 mana. Once every 30 seconds."
+  }
+ ]
+}

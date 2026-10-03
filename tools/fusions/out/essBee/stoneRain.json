@@ -1,0 +1,81 @@
+{
+  "essence": "essBee",
+  "stone": "stoneRain",
+  "fusions": [
+    {
+      "name": "Squall Line",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "medium",
+      "base": 8,
+      "cooldown": 18,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 64,
+      "desc": "Every enemy within 3.5 tiles takes 8 damage, is knocked back 2 tiles and has a 50% chance of [Soaked] for 6 seconds.",
+      "debuff": {
+        "key": "wet",
+        "chance": 0.5,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Stormdrop",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "guaranteedCrit": true,
+      "desc": "A sting that deals 28 damage. It is always a critical hit."
+    },
+    {
+      "name": "Cloudburst Mend",
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "element": "water",
+      "cooldown": 20,
+      "healAmount": 14,
+      "healScope": "party",
+      "range": 110,
+      "reachUnits": 110,
+      "rangeBand": "melee",
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 4
+      },
+      "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast. Your movement speed rises 15% for 4 seconds after you use it."
+    },
+    {
+      "name": "Soaked Calm",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "fullMana",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 5
+      },
+      "desc": "When your mana is full, you regain 3 health a second for 5 seconds. Once every 15 seconds."
+    }
+  ]
+}

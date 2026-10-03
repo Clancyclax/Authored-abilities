@@ -1,0 +1,73 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Stitch Bites",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "desc": "Three quick strikes, each dealing 6 damage and making the target [Bleeding] for 1 damage a second for 4 seconds. Costs 4% of your maximum health.",
+   "strikes": 3,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Spring on the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "desc": "You rush to the target along a tether and strike it for 14 damage, leaving it 15% easier to wound for 6 seconds.",
+   "range": 90,
+   "chargeTo": 200,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Anchored Leap",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 10,
+   "desc": "Steps you instantly to a point up to 7 tiles away and gives you +15% dodge chance.",
+   "teleportRange": 224,
+   "dodgeBonus": 0.15
+  },
+  {
+   "name": "Slack Taken Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you kill an enemy, you regain 12 stamina. Once every 4 seconds.",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 12
+   }
+  }
+ ]
+}

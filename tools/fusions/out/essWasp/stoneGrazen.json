@@ -61,21 +61,24 @@
    "desc": "Raises a barrier that absorbs the next 20 damage and raises your armour by 5% for 8 seconds. An escort of stingers fights beside you, striking for 4 every 1.4 seconds for 10 seconds."
   },
   {
-   "name": "Patience Wears Thin",
+   "name": "Warm Hollow",
    "kind": "passive",
-   "category": "stacking",
-   "template": "stacking",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "nature",
-   "stackShape": "ledger",
-   "stackBuild": "taken",
-   "stackPay": "power",
-   "stackCap": 6,
-   "stackDecay": 12,
-   "stackSpend": "nextCast",
-   "stackOn": "self",
-   "stackScale": 1,
-   "stackIcon": "stackKarma",
-   "desc": "Every time you take damage, a stack builds on you, up to 6. The next ability you use spends them all, and you deal +6% damage per stack for 6 seconds. Unfed, a stack fades every 12 seconds."
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.5
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 8
+   },
+   "desc": "When your health falls below 50%, you regain 3 health a second for 8 seconds. Once every 45 seconds."
   }
  ]
 }

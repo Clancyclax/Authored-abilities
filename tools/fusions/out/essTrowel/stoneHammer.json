@@ -3,19 +3,20 @@
  "stone": "stoneHammer",
  "fusions": [
   {
-   "name": "Tap It Level",
+   "name": "Tamping Block",
    "kind": "active",
    "category": "attack",
-   "template": "aoeRing",
+   "template": "projectileBall",
    "element": "blunt",
    "role": "medium",
-   "base": 12,
-   "cooldown": 16,
-   "range": 96,
-   "isAoe": true,
-   "aoeBand": "small",
-   "stunOnHit": 1,
-   "desc": "Brings the trowel's heel down, dealing 12 damage to every enemy within 3 tiles and stunning them for 1 second."
+   "base": 14,
+   "cooldown": 15,
+   "stunOnHit": 1.2,
+   "desc": "Hurls a tamping block at a target up to 8 tiles away that deals 14 damage and stuns it for 1.2 seconds.",
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium"
   },
   {
    "name": "Bedded Flat",
@@ -52,14 +53,21 @@
    "desc": "Increases your damage by 25% for 12 seconds, and you move 15% faster for 4 seconds."
   },
   {
-   "name": "Struck True",
+   "name": "Compacted Blows",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "elementPierce",
+   "category": "stacking",
+   "template": "stacking",
    "element": "blunt",
-   "pierceElement": "blunt",
-   "armorIgnore": 0.12,
-   "desc": "Your blunt damage ignores 12% of armour."
+   "desc": "Every time you land a hit, a stack builds on you, up to 6. When you reach 6, they all spend at once: a blow strikes the nearest enemy within 8 tiles for 20% of your weapon damage per stack (122% at full). Unfed, a stack fades every 8 seconds.",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard"
   }
  ]
 }

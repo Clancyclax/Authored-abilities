@@ -1,0 +1,90 @@
+{
+  "essence": "essBee",
+  "stone": "stoneNet",
+  "fusions": [
+    {
+      "name": "Winnowing Curtain",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "physical",
+      "role": "medium",
+      "base": 6,
+      "cooldown": 18,
+      "wallKind": "pull",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "pullForce": 32,
+      "bindOnHit": {
+        "slowPct": 0.2,
+        "duration": 2
+      },
+      "stunOnHit": 1,
+      "desc": "Raises a wall of wings 5 tiles long for 6 seconds, dragging every enemy near it inward and dealing 6 damage to what it catches and stunning it for 1 second. Anything struck moves 20% slower for 2 seconds."
+    },
+    {
+      "name": "Hobbling Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "chargesMax": 4,
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.4,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "chain": {
+        "count": 1,
+        "radius": 110,
+        "frac": 0.6
+      },
+      "chainCount": 1,
+      "chainRange": 110,
+      "chainDamagePct": 0.6,
+      "desc": "Throws a sting that deals 8 damage and pins the target [Pinned] for 2 seconds. The sting then leaps to 1 more enemy within 3.5 tiles, dealing 60% of the original damage. It uses up to 4 charges, and kills return one."
+    },
+    {
+      "name": "Call to the Comb",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "physical",
+      "cooldown": 40,
+      "tauntRadius": 256,
+      "tauntDuration": 6,
+      "tauntMax": 5,
+      "threatMult": 1,
+      "desc": "Pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+    },
+    {
+      "name": "Catch and Hold",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 6,
+        "range": 300
+      },
+      "desc": "When you inflict a condition, a bolt leaps to the nearest enemy within 9.5 tiles, dealing 6 damage. Once every 10 seconds."
+    }
+  ]
+}

@@ -39,7 +39,7 @@
    "speed": 280,
    "radius": 8,
    "range": 224,
-   "stunOnHit": 1.0,
+   "stunOnHit": 1,
    "desc": "Two rats burst out on diverging paths, each dealing 11 damage and stunning what it hits for 1 second."
   },
   {
@@ -62,17 +62,23 @@
    "desc": "Takes 0.5 seconds to plant a rat nest on the nearest enemy. It waits 20 seconds, and deals 14 damage in a blast 2.5 tiles across to the first 2 enemies that come within 2.5 tiles of it."
   },
   {
-   "name": "Other Way Round",
+   "name": "Second Tunnel",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 10,
-   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+   "desc": "Each time you land a critical hit, a second rat bolts at the nearest enemy within 6 tiles and deals 6 damage. Once every 4 seconds.",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   }
   }
  ]
 }

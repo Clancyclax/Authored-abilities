@@ -1,0 +1,75 @@
+{
+  "essence": "essPangolin",
+  "stone": "stoneFox",
+  "fusions": [
+    {
+      "name": "Bait Bolt",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 300,
+      "rangeBand": "medium",
+      "consumeAffliction": true,
+      "desc": "Sends a bolt into the first enemy it meets, dealing 8 damage. It needs one of your afflictions on the target and uses it up."
+    },
+    {
+      "name": "Hollow Rustle",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 200,
+      "isAoe": true,
+      "desc": "Rattles 3 loose scales in a spread, each dealing 3 damage with a 30% chance of [Blunted] for 4 seconds.",
+      "volleyCount": 3,
+      "volleySpread": 0.4,
+      "speed": 300,
+      "radius": 6,
+      "reachUnits": 230,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Decoy Curl",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "physical",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.4,
+      "confuse": true,
+      "confuseChance": 0.3,
+      "confuseDuration": 3,
+      "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and each attacker has a 30% chance to turn on its own allies for 3 seconds."
+    },
+    {
+      "name": "Dusk Bulwark",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "night",
+      "bonusKind": "dodge",
+      "amount": 0.12,
+      "armorBonus": 0.08,
+      "desc": "At night, your dodge chance rises by 12% and your armour by 8%."
+    }
+  ]
+}

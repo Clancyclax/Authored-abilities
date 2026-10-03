@@ -1,86 +1,86 @@
 {
- "essence": "essLizard",
- "stone": "stoneHeidel",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Mounted Rush",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 15,
-   "range": 72,
-   "reachUnits": 72,
-   "rangeBand": "melee",
-   "chargeTo": 224,
-   "sunder": {
-    "amount": 0.12,
-    "duration": 5
-   },
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.5,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Rides you to a target up to 7 tiles away and strikes it for 14 damage, leaving it 12% easier to wound for 5 seconds, with a 50% chance of [Slowed] for 3 seconds."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Hoof-Kicked Dust",
-   "template": "breathCone",
-   "element": "earth",
-   "role": "basic",
-   "spammable": true,
-   "base": 4,
-   "cooldown": 0.9,
-   "range": 80,
-   "coneAngle": 0.9,
-   "isAoe": true,
-   "aoeBand": "small",
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.25,
-    "duration": 3,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Kicks up a cone of dust 2.5 tiles long that deals 4 damage to everything in it, with a 25% chance of [Slowed] for 3 seconds."
-  },
-  {
-   "name": "Warm Flank",
-   "kind": "active",
-   "category": "buff",
-   "template": "statBuff",
-   "element": "fire",
-   "buffStat": "regenHealth",
-   "buffAmount": 0.6,
-   "buffDuration": 20,
-   "cooldown": 60,
-   "desc": "Presses your cold blood to the warmth of your mount: your health regeneration rises 60% for 20 seconds."
-  },
-  {
-   "name": "Long Ride Mending",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "spendStamina",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 2,
-    "duration": 3
-   },
-   "desc": "When you spend stamina, you regain 2 health a second for 3 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essLizard",
+  "stone": "stoneHeidel",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Mounted Rush",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 15,
+      "range": 72,
+      "reachUnits": 72,
+      "rangeBand": "melee",
+      "chargeTo": 224,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.5,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Rides you to a target up to 7 tiles away and strikes it for 14 damage, leaving it 12% easier to wound for 5 seconds, with a 50% chance of [Slowed] for 3 seconds."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Hoof-Kicked Dust",
+      "template": "breathCone",
+      "element": "earth",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.9,
+      "range": 80,
+      "coneAngle": 0.9,
+      "isAoe": true,
+      "aoeBand": "small",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.25,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Kicks up a cone of dust 2.5 tiles long that deals 4 damage to everything in it, with a 25% chance of [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Warm Flank",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "fire",
+      "buffStat": "regenHealth",
+      "buffAmount": 0.6,
+      "buffDuration": 20,
+      "cooldown": 60,
+      "desc": "Your health regeneration rises 60% for 20 seconds."
+    },
+    {
+      "name": "Second Wind Under Sun",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 15
+      },
+      "desc": "When your stamina runs out, you regain 15 stamina. Once every 30 seconds."
+    }
+  ]
 }

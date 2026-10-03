@@ -1,0 +1,68 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Anvil Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "cooldown": 14,
+   "desc": "A crushing blow that deals 18 damage, stuns the target for 1.2 seconds and leaves it 20% easier to wound for 6 seconds.",
+   "base": 18,
+   "range": 86,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Pile Driver",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "cooldown": 100,
+   "desc": "Drives jaws into the ground, dealing 30 damage to every enemy within 3.5 tiles, plus 5% of a boss or elite enemy's maximum health.",
+   "base": 30,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Plate Flat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "desc": "Raises your armour by 30% for 10 seconds.",
+   "armorBonus": 0.3,
+   "buffDuration": 10
+  },
+  {
+   "name": "Peen Reflex",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you deal 30% more damage for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

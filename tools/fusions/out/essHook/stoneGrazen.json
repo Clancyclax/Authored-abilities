@@ -12,13 +12,6 @@
    "base": 26,
    "cooldown": 90,
    "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 3,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Bleeding"
-   },
    "partyBuffOnHit": {
     "pct": 0.2,
     "dur": 15
@@ -26,7 +19,15 @@
    "range": 96,
    "reachUnits": 96,
    "rangeBand": "melee",
-   "desc": "A sweeping crook blow that deals 26 damage and leaves the target [Bleeding] for 2 damage a second for 3 seconds. On a hit, every ally in your party deals 20% more damage for 15 seconds."
+   "desc": "A sweeping crook blow that deals 26 damage, leaves the target [Bleeding] for 2 damage a second for 3 seconds and heals you for 20% of the damage dealt. On a hit, every ally in your party deals 20% more damage for 15 seconds.",
+   "leech": 0.2,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
   },
   {
    "name": "Drive the Flock",
@@ -66,15 +67,24 @@
    "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
   },
   {
-   "name": "Thick Winter Coat",
+   "name": "Lambing Shelter",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "buffKind": "maxHp",
-   "amount": 0.1,
-   "regenPerSec": 0.5,
-   "desc": "Your maximum health rises by 10%, and you regenerate 0.5 health a second."
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "When your health falls below 40%, healing you receives is 40% stronger for 8 seconds. Once every 30 seconds."
   }
  ]
 }

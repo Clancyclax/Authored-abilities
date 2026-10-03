@@ -1,0 +1,84 @@
+{
+  "essence": "essBee",
+  "stone": "stoneSkunk",
+  "fusions": [
+    {
+      "name": "Musk Cloud",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "medium",
+      "base": 4,
+      "cooldown": 16,
+      "range": 300,
+      "coneAngle": 0.76,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "A cone of musk that deals 4 damage to everything caught in it, knocks it back 3 tiles and leaves it [Damped] for 8 seconds.",
+      "knockback": 96,
+      "debuff": {
+        "key": "dampen",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Reeking Tip",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "A sting that deals 4 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds.",
+      "spammable": true
+    },
+    {
+      "name": "Return to Sender",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "poison",
+      "cooldown": 30,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.25,
+      "reflectChance": 0.5,
+      "buffDuration": 8,
+      "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+    },
+    {
+      "name": "Spray Reply",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 8,
+        "range": 192
+      },
+      "desc": "When you take damage, a bolt leaps to the nearest enemy within 6 tiles, dealing 8 damage. Once every 8 seconds."
+    }
+  ]
+}

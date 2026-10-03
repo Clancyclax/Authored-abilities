@@ -1,0 +1,84 @@
+{
+ "essence": "essBear",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Uprooting Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 18,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 0.6,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "A heavy swipe that deals 16 damage and leaves the target 15% easier to wound for 6 seconds. It has a 60% chance to leave the target [Caged] for 3 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Spore Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "leech": 0.15,
+   "chargesMax": 4,
+   "desc": "Spits a spore that deals 7 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. You heal for 15% of the damage dealt. You have 4 charges, and kills give them back."
+  },
+  {
+   "name": "Rootbed",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 40,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "desc": "Raises a growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Taproot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you strike, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

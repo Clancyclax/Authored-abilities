@@ -1,0 +1,82 @@
+{
+  "essence": "essBee",
+  "stone": "stoneSceptre",
+  "fusions": [
+    {
+      "name": "Royal Decree",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "desc": "A sting that deals 30 damage. Allies strike 20% harder for 12 seconds after it hits."
+    },
+    {
+      "name": "Edict Pulse",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "desc": "Every enemy within 3.5 tiles takes 12 damage, is knocked back 3 tiles and is [Marked] for 6 seconds.",
+      "debuff": {
+        "key": "marked",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Court's Reach",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "physical",
+      "cooldown": 90,
+      "rangeMult": 1.4,
+      "buffDuration": 20,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 8
+      },
+      "desc": "For 20 seconds, your attacks and spells reach 40% further. While it lasts, an escort fights beside you, striking for 4 every 1.4 seconds for 8 seconds."
+    },
+    {
+      "name": "Queen's Mandate",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "gainHealth",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "healingTakenBuff",
+        "amount": 0.3,
+        "duration": 8
+      },
+      "desc": "When you gain health, the healing you receive rises 30% for 8 seconds. Once every 20 seconds."
+    }
+  ]
+}

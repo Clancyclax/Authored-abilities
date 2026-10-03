@@ -1,0 +1,70 @@
+{
+ "essence": "essThread",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Reaching Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "desc": "A thrown grasp that deals 8 damage, up to 1.5 times that at maximum range. Each kill returns a charge, up to 4.",
+   "range": 200,
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "reachUnits": 200,
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Lent Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "desc": "Two strikes, each dealing 12 damage and making the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles.",
+   "strikes": 2,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Pass It Along",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds, and fights with 1 more power while it holds.",
+   "range": 160,
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.2,
+   "reachUnits": 160,
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Spare Pair",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "desc": "Calls a bonded familiar of force that fights beside you, striking for 3 damage every 1.2 seconds within 5 tiles.",
+   "familiarDmg": 3,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "medusa",
+   "familiarCreatureName": "Cord-Hand"
+  }
+ ]
+}

@@ -1,83 +1,85 @@
 {
- "essence": "essTree",
- "stone": "stoneManatee",
- "fusions": [
-  {
-   "name": "Drifting Seed Pods",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "water",
-   "role": "basic",
-   "spammable": true,
-   "base": 3,
-   "cooldown": 0.9,
-   "volleyCount": 2,
-   "volleySpread": 0.4,
-   "speed": 170,
-   "radius": 8,
-   "range": 200,
-   "isAoe": true,
-   "reachUnits": 230,
-   "rangeBand": "medium",
-   "desc": "Sets 2 floating seed pods drifting out, spread apart, each dealing 3 damage."
-  },
-  {
-   "name": "Unhurried Fell",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "water",
-   "role": "long",
-   "base": 30,
-   "cooldown": 100,
-   "speed": 150,
-   "radius": 12,
-   "ignoreArmor": true,
-   "debuff": {
-    "key": "wet",
-    "chance": 1,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "reachUnits": 320,
-   "rangeBand": "long",
-   "desc": "Sets a waterlogged mangrove log drifting at the first enemy in its path, dealing 30 damage that ignores armour and leaving the target [Soaked] for 6 seconds."
-  },
-  {
-   "name": "Seagrass Meadow",
-   "kind": "active",
-   "category": "healing",
-   "template": "bloomField",
-   "element": "water",
-   "healPerSec": 3,
-   "fieldDuration": 12,
-   "healScope": "party",
-   "cooldown": 40,
-   "range": 128,
-   "reachUnits": 128,
-   "rangeBand": "melee",
-   "desc": "Grows a meadow of seagrass where you stand. For 12 seconds it restores 3 health a second to you and any ally inside it, within 4 tiles."
-  },
-  {
-   "name": "Unhurried Mending",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "hurtNonFire",
-    "cooldown": 15
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 2,
-    "duration": 5
-   },
-   "desc": "When you take damage that is not fire, you regain 2 health a second for 5 seconds. Once every 15 seconds."
-  }
- ]
+  "essence": "essTree",
+  "stone": "stoneManatee",
+  "fusions": [
+    {
+      "name": "Drifting Seed Pods",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.9,
+      "range": 80,
+      "isAoe": true,
+      "desc": "Sets seed pods drifting out around you, dealing 4 damage to every enemy within 2.5 tiles, with a 25% chance to leave each [Soaked] for 4 seconds.",
+      "aoeBand": "small",
+      "debuff": {
+        "key": "wet",
+        "chance": 0.25,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Drift of Timber",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "long",
+      "base": 30,
+      "cooldown": 100,
+      "speed": 150,
+      "radius": 12,
+      "ignoreArmor": true,
+      "debuff": {
+        "key": "wet",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "desc": "Sets a waterlogged mangrove log drifting at the first enemy in its path, dealing 30 damage that ignores armour and leaving the target [Soaked] for 6 seconds."
+    },
+    {
+      "name": "Seagrass Meadow",
+      "kind": "active",
+      "category": "healing",
+      "template": "bloomField",
+      "element": "water",
+      "healPerSec": 3,
+      "fieldDuration": 12,
+      "healScope": "party",
+      "cooldown": 40,
+      "range": 128,
+      "reachUnits": 128,
+      "rangeBand": "melee",
+      "desc": "Grows a meadow of seagrass where you stand. For 12 seconds it restores 3 health a second to you and any ally inside it, within 4 tiles."
+    },
+    {
+      "name": "Unhurried Mending",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 2,
+        "duration": 5
+      },
+      "desc": "When you take damage that is not fire, you regain 2 health a second for 5 seconds. Once every 15 seconds."
+    }
+  ]
 }

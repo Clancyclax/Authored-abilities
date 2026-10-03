@@ -1,80 +1,80 @@
 {
- "essence": "essLizard",
- "stone": "stoneMagic",
- "fusions": [
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Prismatic Ray",
-   "template": "rangeStrike",
-   "element": "arcane",
-   "role": "long",
-   "base": 30,
-   "cooldown": 90,
-   "range": 224,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "maxMult": 1.4,
-   "ignoreResist": true,
-   "desc": "Shifts your skin to the colour of raw arcana and fires a ray at a target up to 7 tiles away that deals 30 damage, rising to 1.4 times that at full reach, and ignores resistances."
-  },
-  {
-   "kind": "active",
-   "category": "attack",
-   "name": "Shifting Mote",
-   "template": "sunderStrike",
-   "element": "arcane",
-   "role": "basic",
-   "spammable": true,
-   "base": 4,
-   "cooldown": 0.8,
-   "range": 64,
-   "reachUnits": 64,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.05,
-    "duration": 3
-   },
-   "debuff": {
-    "key": "expose",
-    "chance": 0.25,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "A quick arcane strike that deals 4 damage and leaves the target 5% easier to wound for 3 seconds, with a 25% chance of [Exposed] for 4 seconds."
-  },
-  {
-   "name": "Sun on the Mana",
-   "kind": "active",
-   "category": "restore",
-   "template": "resourceRestore",
-   "element": "arcane",
-   "resource": "mana",
-   "overTime": true,
-   "restorePerSec": 4,
-   "restoreDuration": 8,
-   "cooldown": 40,
-   "desc": "Lies still and basks in ambient arcana: restores 4 mana a second for 8 seconds."
-  },
-  {
-   "name": "Spent Power Mends",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "arcane",
-   "isTriggered": true,
-   "cooldown": 6,
-   "trigger": {
-    "on": "spendMana",
-    "cooldown": 6
-   },
-   "effect": {
-    "kind": "regenBurst",
-    "perSec": 2,
-    "duration": 3
-   },
-   "desc": "When you spend mana, you regain 2 health a second for 3 seconds. Once every 6 seconds."
-  }
- ]
+  "essence": "essLizard",
+  "stone": "stoneMagic",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Prismatic Ray",
+      "template": "rangeStrike",
+      "element": "arcane",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "range": 224,
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "maxMult": 1.4,
+      "ignoreResist": true,
+      "desc": "Fires a ray at a target up to 7 tiles away that deals 30 damage, rising to 1.4 times that at full reach, and ignores resistances."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Shifting Mote",
+      "template": "sunderStrike",
+      "element": "arcane",
+      "role": "basic",
+      "spammable": true,
+      "base": 4,
+      "cooldown": 0.8,
+      "range": 64,
+      "reachUnits": 64,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.05,
+        "duration": 3
+      },
+      "debuff": {
+        "key": "expose",
+        "chance": 0.25,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A quick arcane strike that deals 4 damage and leaves the target 5% easier to wound for 3 seconds, with a 25% chance of [Exposed] for 4 seconds."
+    },
+    {
+      "name": "Sun on the Mana",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "arcane",
+      "resource": "mana",
+      "overTime": true,
+      "restorePerSec": 4,
+      "restoreDuration": 8,
+      "cooldown": 40,
+      "desc": "Restores 4 mana a second for 8 seconds."
+    },
+    {
+      "name": "Leaking Sparks",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "spendMana",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 9,
+        "range": 192
+      },
+      "desc": "When you spend mana, a bolt of raw arcana strikes the nearest enemy within 6 tiles and deals 9 damage. Once every 10 seconds."
+    }
+  ]
 }

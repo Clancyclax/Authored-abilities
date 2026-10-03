@@ -1,0 +1,83 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Decoy Coin",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "Flicks a lure that deals 4 damage and has a 25% chance of turning the target against its allies for 2 seconds.",
+   "base": 4,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "confuse": true,
+   "confuseChance": 0.25,
+   "confuseDuration": 2
+  },
+  {
+   "name": "Cheat's Reveal",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 16,
+   "desc": "Deals 12 damage to every enemy within 3 tiles and stuns it for 1 second. Each hit leaves the target [Muddled] for 5 seconds.",
+   "base": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Dropped Purse",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "Pulls up to 5 enemies within 8 tiles onto you for 5 seconds. For 8 seconds, an escort strikes beside you for 5 every 1.5 seconds.",
+   "tauntRadius": 256,
+   "tauntDuration": 5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 5,
+    "interval": 1.5,
+    "duration": 8
+   }
+  },
+  {
+   "name": "Sleeve Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you strike, you gain 30% critical chance for 4 seconds. Once every 8 seconds. You also gain +5% dodge chance.",
+   "dodgeBonus": 0.05
+  }
+ ]
+}

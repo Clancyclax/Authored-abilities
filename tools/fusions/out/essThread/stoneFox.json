@@ -1,0 +1,78 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Crossed Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "desc": "Throws a net of crossing strands in a cone, dealing 4 damage to everything caught in it. Each hit has a 30% chance of [Blunted], lowering the target's critical chance for 6 seconds.",
+   "spammable": true,
+   "range": 240,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Palmed Purse",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 60,
+   "desc": "A sly cast that deals 30 damage and strips 5% of a boss's or elite's maximum health.",
+   "range": 200,
+   "maxMult": 1.2,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Veiled Tie",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 10% faster, and the veil breaks the moment you attack.",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self"
+  },
+  {
+   "name": "Marked Cards",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "After a run of strikes without a critical hit, your critical hit chance rises by 50% for your next strike. Once every 10 seconds.",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.5,
+    "strikes": 1
+   }
+  }
+ ]
+}

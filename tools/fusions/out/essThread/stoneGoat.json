@@ -1,0 +1,70 @@
+{
+ "essence": "essThread",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Butting Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 12,
+   "desc": "Every enemy within 3.5 tiles takes 16 damage and is knocked back 3.5 tiles.",
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 112
+  },
+  {
+   "name": "Short Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "desc": "A quick jab that deals 5 damage and leaves the target 5% easier to wound for 4 seconds.",
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Staked Footing",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "cooldown": 36,
+   "desc": "Raises your armour by 25% for 12 seconds. Your movement speed rises 10% for 5 seconds after you use it.",
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 5
+   }
+  },
+  {
+   "name": "Planted Hooves",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "desc": "Every time you take damage, a stake is driven in, up to 6. At 6 they all spend at once: you gain a shield that soaks 5% of your maximum health per stake (30% at full). Unfed, a stake fades every 8 seconds.",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "essence": "essThread",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Swarming Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.7,
+   "desc": "Looses 4 strands at once, spread apart, each dealing 3 damage.",
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 230,
+   "rangeBand": "medium"
+  },
+  {
+   "name": "Stripped Bare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "desc": "Sends a strand that deals 14 damage and makes the target [Diseased], so healing does less for them, for 6 seconds. Your afflictions on the target spread to every enemy within 4 tiles.",
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Cloud on a Cord",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "desc": "Conjures a trap onto the nearest enemy. It waits 30 seconds, and the first 2 enemies to come within 3 tiles take 14 damage in a blast around it.",
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 14,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 96,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned"
+  },
+  {
+   "name": "Gorge Gained",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you kill an enemy, you regain 3 stamina a second for 4 seconds. Once every 6 seconds.",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 4
+   }
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+  "essence": "essBee",
+  "stone": "stoneSickle",
+  "fusions": [
+    {
+      "name": "Grain Cutter",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "nature",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 3,
+      "desc": "Every enemy within 3.5 tiles takes 9 damage, and you heal for 20% of the damage dealt. It uses up to 3 charges, and kills return one.",
+      "leech": 0.2
+    },
+    {
+      "name": "Last Cut",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "nature",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 14,
+      "range": 84,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "executeLadder": true,
+      "stackMult": 0.6,
+      "requiresTargetBelow": 0.25,
+      "consumeAfflictionsPer": 0.6,
+      "desc": "A curved cut that deals 16 damage and uses up every affliction on the target, adding 0.6 times their remaining damage. It only strikes a target at or below 25% health."
+    },
+    {
+      "name": "Harvest Mend",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "nature",
+      "cooldown": 18,
+      "critChance": 0.12,
+      "healAmount": 14,
+      "healScope": "self",
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Restores 14 health to you. Its healing rises 8% for every 10% of your health already gone, up to 40%. It has a 12% chance to heal critically."
+    },
+    {
+      "name": "Gleaned Strength",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "nature",
+      "isTriggered": true,
+      "cooldown": 4,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 4
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 8
+      },
+      "desc": "When you kill an enemy, you restore 8 stamina. Once every 4 seconds."
+    }
+  ]
+}

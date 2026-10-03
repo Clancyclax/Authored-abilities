@@ -1,0 +1,72 @@
+{
+ "essence": "essOctopus",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Snapped Tongue",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 34,
+   "cooldown": 80,
+   "speed": 420,
+   "radius": 8,
+   "bossPct": 0.05,
+   "desc": "A tongue-like arm snaps out, dealing 34 damage plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Spat Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 192,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a cone of water 6 tiles ahead, dealing 4 damage to everything in it, with a 30% chance to leave each target [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Spring Off the Rock",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 8,
+   "dashDist": 160,
+   "desc": "A sudden spring that carries you 5 tiles forward."
+  },
+  {
+   "name": "Damp Hide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you are hurt by anything but fire, your damp skin closes the wound: you regain 3 health a second for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

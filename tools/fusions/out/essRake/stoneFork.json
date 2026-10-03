@@ -59,17 +59,23 @@
    "desc": "Crosses the tines before you, raising your armour by 20% and your dodge chance by 8% for 12 seconds."
   },
   {
-   "name": "Second Branch",
+   "name": "Splintered Haft",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "fateReroll",
-   "element": "physical",
-   "rerollKind": "crit",
-   "rerollKinds": [
-    "crit"
-   ],
-   "rerollCooldown": 10,
-   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 4,
+    "range": 128
+   },
+   "desc": "Each time you strike, a splinter of the tines flies to the nearest enemy within 4 tiles and deals 4 damage. Once every 6 seconds."
   }
  ]
 }

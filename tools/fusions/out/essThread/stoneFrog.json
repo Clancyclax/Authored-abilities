@@ -1,0 +1,77 @@
+{
+ "essence": "essThread",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Tongue-Tied",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "desc": "Flicks a sticky strand that deals 5 damage and makes the target [Slowed], moving 30% slower for 3 seconds.",
+   "spammable": true,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Startle Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "desc": "Every enemy within 3.5 tiles takes 14 damage and is stunned for 1 second.",
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1
+  },
+  {
+   "name": "Springboard Knot",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 8,
+   "desc": "A short burst of movement that carries you 5 tiles forward. Your movement speed rises 20% for 3 seconds after you use it.",
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Sudden Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "desc": "When you spend stamina, your physical damage rises 30% for 4 seconds. Once every 10 seconds.",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   }
+  }
+ ]
+}

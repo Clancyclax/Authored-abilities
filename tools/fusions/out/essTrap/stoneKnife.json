@@ -1,0 +1,79 @@
+{
+ "essence": "essTrap",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Palmed Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "basic",
+   "cooldown": 0.8,
+   "desc": "A quick cut that deals 5 damage, leaves the target 8% easier to wound for 4 seconds and makes it [Bleeding] for 1 damage a second for 4 seconds.",
+   "base": 5,
+   "spammable": true,
+   "range": 84,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Sheathed Verdict",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "cooldown": 14,
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow for 20 damage. It only strikes a target at or below 30% of its health.",
+   "base": 20,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "consumeAfflictionsPer": 0.6,
+   "executeLadder": false
+  },
+  {
+   "name": "Hush",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds. Enemies notice you far later, and you move 15% faster. The veil breaks the moment you attack.",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self"
+  },
+  {
+   "name": "Dry Spell Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "After a run of strikes without a critical hit, you gain 30% critical chance for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+  "essence": "essBee",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Coiled Strike",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "stunOnHit": 1,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.1,
+      "scaleCap": 0.4,
+      "desc": "A strike that deals 12 damage, stuns the target for 1 second, leaves it 10% easier to wound for 5 seconds and [Poisoned] for 3 damage a second for 6 seconds. Its damage rises 10% per affliction on the target, up to 40%."
+    },
+    {
+      "name": "Twilight Lance",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "ignoreResist": true,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 8,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "A sting that deals 28 damage, ignores resistances and leaves the target [Poisoned] for 3 damage a second for 8 seconds."
+    },
+    {
+      "name": "Patient Coils",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "poison",
+      "cooldown": 30,
+      "resource": "stamina",
+      "overTime": true,
+      "restorePerSec": 3,
+      "restoreDuration": 7,
+      "escort": {
+        "dmg": 4,
+        "interval": 1.4,
+        "duration": 5
+      },
+      "desc": "Restores 3 stamina a second for 7 seconds. While it lasts, an escort fights beside you, striking for 4 every 1.4 seconds for 5 seconds."
+    },
+    {
+      "name": "Venom Relay",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 7,
+        "range": 300
+      },
+      "desc": "When you kill an enemy, a bolt leaps to the nearest enemy within 9.5 tiles, dealing 7 damage and leaving it [Poisoned] for 2 damage a second for 4 seconds. Once every 8 seconds.",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      }
+    }
+  ]
+}

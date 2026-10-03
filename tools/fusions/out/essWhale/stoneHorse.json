@@ -1,64 +1,72 @@
 {
- "essence": "essWhale",
- "stone": "stoneHorse",
- "fusions": [
-  {
-   "name": "Thundering Pod",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "blunt",
-   "role": "long",
-   "base": 30,
-   "cooldown": 110,
-   "range": 128,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "guaranteedCrit": true,
-   "desc": "The pod thunders through around you, dealing 30 damage to every enemy within 4 tiles, and every hit is a critical hit."
-  },
-  {
-   "name": "Pounding Stride",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "blunt",
-   "role": "resource",
-   "base": 9,
-   "cooldown": 1,
-   "hpCostPct": 0.05,
-   "range": 86,
-   "rangeBand": "melee",
-   "reachUnits": 86,
-   "sunder": {
-    "amount": 0.08,
-    "duration": 4
-   },
-   "desc": "Costs 5% of your maximum health. A heavy blow that deals 9 damage and leaves the target 8% easier to wound for 4 seconds."
-  },
-  {
-   "name": "Running Swell",
-   "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
-   "element": "water",
-   "cooldown": 28,
-   "speedMult": 1.35,
-   "buffDuration": 8,
-   "blinkOnUse": 64,
-   "dodgeBonus": 0.08,
-   "desc": "Increases your movement speed by 35% for 8 seconds. You finish it 2 tiles from where you stood, with +8% dodge chance for it."
-  },
-  {
-   "name": "Coast Road Run",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
-   "element": "water",
-   "condition": "onRoads",
-   "bonusKind": "dmg",
-   "amount": 0.1,
-   "desc": "On paved ground, your damage rises by 10%."
-  }
- ]
+  "essence": "essWhale",
+  "stone": "stoneHorse",
+  "fusions": [
+    {
+      "name": "Sounding Gallop",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "blunt",
+      "role": "long",
+      "base": 30,
+      "cooldown": 110,
+      "range": 128,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "guaranteedCrit": true,
+      "desc": "The pod thunders through around you, dealing 30 damage to every enemy within 4 tiles, and every hit is a critical hit."
+    },
+    {
+      "name": "Pounding Stride",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "hpCostPct": 0.05,
+      "range": 86,
+      "rangeBand": "melee",
+      "reachUnits": 86,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "desc": "Costs 5% of your maximum health. A heavy blow that deals 9 damage and leaves the target 8% easier to wound for 4 seconds."
+    },
+    {
+      "name": "Running Swell",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "water",
+      "cooldown": 28,
+      "speedMult": 1.35,
+      "buffDuration": 8,
+      "blinkOnUse": 64,
+      "dodgeBonus": 0.08,
+      "desc": "Increases your movement speed by 35% for 8 seconds. You finish it 2 tiles from where you stood, with +8% dodge chance for it."
+    },
+    {
+      "name": "Hoofbeat Heart",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.2,
+        "duration": 6
+      },
+      "desc": "When your stamina is full, you deal 20% more physical damage for 6 seconds. Once every 15 seconds."
+    }
+  ]
 }
