@@ -1,0 +1,96 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneNet",
+  "fusions": [
+    {
+      "name": "Drawn Mesh",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "poison",
+      "cooldown": 20,
+      "role": "medium",
+      "base": 11,
+      "strikes": 1,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "stunOnHit": 1,
+      "bindOnHit": {
+        "slowPct": 0.3,
+        "duration": 4
+      },
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned",
+        "healFrac": 0.5
+      },
+      "desc": "Drags a net of mycelium across the target, dealing 11 damage, stunning it for 1 second and slowing it 30% for 4 seconds. It is [Poisoned] for 2 damage a second for 5 seconds, and you heal for 50% of the damage the poison deals."
+    },
+    {
+      "name": "Long Cast",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 192,
+      "maxMult": 1.4,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Throws a spore at a target up to 6 tiles away that deals 4 damage, rising to 1.4 times that at full reach, with a 30% chance to leave it [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Draw Tight",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "life",
+      "cooldown": 40,
+      "tauntRadius": 256,
+      "tauntDuration": 6,
+      "tauntMax": 5,
+      "threatMult": 1,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.4,
+        "duration": 9
+      },
+      "familiarFamily": "slime",
+      "familiarCreatureName": "Sporeling",
+      "desc": "Pulls up to 5 enemies within 8 tiles onto you for 6 seconds. While it lasts, a sporeling fights beside you for 9 seconds, striking for 3 every 1.4 seconds."
+    },
+    {
+      "name": "Snagged Prey",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "life",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 6
+      },
+      "desc": "When you inflict a condition on an enemy, a ward absorbs damage equal to 20% of your maximum health for 6 seconds. Once every 15 seconds."
+    }
+  ]
+}

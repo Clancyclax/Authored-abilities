@@ -1,0 +1,75 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Sweeping Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rakes a cone 5 tiles ahead, dealing 11 damage to everything in it, stunning it for 0.8 seconds and leaving it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Long Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 210,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2.2,
+   "hpCostPct": 0.05,
+   "desc": "A thrown blow that deals 9 damage, up to 2.2 times that at maximum range. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Leave It Tidy",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 60,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "desc": "Removes up to 3 conditions from you."
+  },
+  {
+   "name": "Clear the Ground",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "When a condition on you runs out, you regain 3 health a second for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

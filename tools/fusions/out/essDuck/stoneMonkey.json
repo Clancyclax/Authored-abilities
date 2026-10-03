@@ -1,0 +1,75 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Dabbled Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a scrap of weed that deals 4 damage and has a 30% chance to leave the target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Swiped Purse",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAffliction": true,
+   "desc": "A quick peck that deals 8 damage and leaves the target 10% easier to wound for 4 seconds. Needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Nimble Paddling",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your attack speed by 25% for 10 seconds."
+  },
+  {
+   "name": "Fiddled Knot",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you afflict an enemy, you regain 8 stamina. Once every 6 seconds."
+  }
+ ]
+}

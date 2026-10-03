@@ -1,0 +1,74 @@
+{
+ "essence": "essGoat",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Hardseed Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a hard seed that deals 7 damage to the first enemy it meets, with a 40% chance to leave it [Slowed] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Pulled Root",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "plant",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Draws out every affliction you have on the target, dealing 50% more damage for each one drawn. The strike itself deals 15 damage and leaves the target 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Greener Pasture",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "cooldown": 36,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 128,
+   "healScope": "party",
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "desc": "Raises a patch of grazing where you stand. For 10 seconds it restores 3 health a second to you and any ally within 4 tiles of it."
+  },
+  {
+   "name": "Sun on the Slope",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "plant",
+   "condition": "day",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "regenPerSec": 0.5,
+   "desc": "In daylight, your armour rises by 12%. You regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

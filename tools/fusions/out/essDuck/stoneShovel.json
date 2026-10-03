@@ -1,0 +1,74 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Flung Clod",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "knockback": 80,
+   "debuff": {
+    "key": "dodgeDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a clod of mud that deals 12 damage, knocks the target back 2.5 tiles and leaves it [Leaden] for 5 seconds."
+  },
+  {
+   "name": "Dredge Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 160,
+   "reachUnits": 160,
+   "maxMult": 1.3,
+   "hpCostPct": 0.05,
+   "desc": "Tosses silt at a target up to 5 tiles away for 9 damage, rising to 1.3 times that at full reach. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Bank Up",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "cooldown": 50,
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "desc": "Raises your maximum health by 20% for 15 seconds."
+  },
+  {
+   "name": "Dug In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you recover 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneMonkey",
+  "fusions": [
+    {
+      "name": "Flung Mote",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "volleyCount": 3,
+      "volleySpread": 0.36,
+      "isAoe": true,
+      "speed": 265,
+      "radius": 7,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 0.25,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Flicks 3 spore clusters at once, spread apart, each dealing 4 damage. Each hit has a 25% chance to leave the target [Blunted] for 6 seconds."
+    },
+    {
+      "name": "Picked Over",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "consumeAffliction": true,
+      "chain": {
+        "count": 1,
+        "radius": 110,
+        "frac": 0.6
+      },
+      "chainCount": 1,
+      "chainRange": 110,
+      "chainDamagePct": 0.6,
+      "speed": 360,
+      "radius": 8,
+      "desc": "Plucks an affliction off a target and throws it back as a spore that deals 8 damage. It needs one of your afflictions on the target and uses it up, then leaps to 1 more enemy within 3.5 tiles for 60% of the damage."
+    },
+    {
+      "name": "Untied Knots",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "life",
+      "cooldown": 40,
+      "cleanseCount": 3,
+      "healScope": "self",
+      "healOnUse": 12,
+      "desc": "Removes up to 3 conditions from you and restores 12 health."
+    },
+    {
+      "name": "Deft Decay",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "life",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 4
+      },
+      "desc": "When a condition on you expires, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+    }
+  ]
+}

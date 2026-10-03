@@ -1,0 +1,76 @@
+{
+ "essence": "essGoat",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Folded Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Throws a folded dart that deals 5 damage to the first enemy it meets. Its damage rises +5% for every 100 paces you have run since you last used it (max +25%)."
+  },
+  {
+   "name": "Signed Decree",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 32,
+   "cooldown": 120,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "desc": "Brings a decree down on the target, dealing 32 damage and leaving it 12% easier to wound for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Posted Notice",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Margin Note",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next spell deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Rampart Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "You slam the target for 14 damage and stun it for 1 second, leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Bearing Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "desc": "Hits every enemy within 2.5 tiles, dealing 8 damage to each. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Guarded Stride",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "blunt",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds, hardening your armour by 10%."
+  },
+  {
+   "name": "Taken in Stride",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.14,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks 8% of your maximum health per stack (48% at full) before your health takes damage. Unfed, a stack fades every 10s."
+  }
+ ]
+}

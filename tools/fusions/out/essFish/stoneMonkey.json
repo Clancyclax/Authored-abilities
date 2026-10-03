@@ -1,0 +1,76 @@
+{
+ "essence": "essFish",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Fingerling Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a scale that deals 4 damage, then leaps to 1 more enemy within 3.5 tiles for 60% of the damage."
+  },
+  {
+   "name": "Snatch and Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 180,
+   "maxMult": 1.6,
+   "chargeTo": 192,
+   "desc": "A grabbing lunge that rushes you up to 6 tiles to the target, deals 14 damage and hits up to 1.6 times harder at maximum range."
+  },
+  {
+   "name": "Sleight of Scale",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "water",
+   "cooldown": 90,
+   "resetCount": 1,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 25% for 4s after you use it."
+  },
+  {
+   "name": "Pocketed Scraps",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Each time you kill an enemy, you recover 8 stamina. You gain 5% dodge chance."
+  }
+ ]
+}

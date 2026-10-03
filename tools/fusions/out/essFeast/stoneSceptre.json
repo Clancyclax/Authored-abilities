@@ -1,0 +1,80 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Royal Rap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "radiant",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "stunOnHit": 1.2,
+   "leech": 0.2,
+   "desc": "A rap with the sceptre that deals 14 radiant damage and stuns the target for 1.2 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Decree of Plenty",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "radiant",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Sends a decree that deals 28 radiant damage to the first enemy it meets. When it hits, you and every ally deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Table Command",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "radiant",
+   "cooldown": 45,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "healOnUse": 10,
+   "desc": "Every ally within 6 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds. You restore 10 health when you cast it."
+  },
+  {
+   "name": "Bountiful Court",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "radiant",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.4,
+    "duration": 6
+   },
+   "desc": "Each time you spend mana, you receive 40% more healing for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

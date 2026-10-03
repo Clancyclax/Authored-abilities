@@ -1,0 +1,80 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Skitter Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a bolt at the first enemy it meets, dealing 4 damage, with a 30% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Gnawing Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "A quick bite that deals 10 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds and leaves it 8% easier to wound for 4 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Behind the Skirting",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 20% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Dusk Scurry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "At night, your dodge chance rises by 12%."
+  }
+ ]
+}

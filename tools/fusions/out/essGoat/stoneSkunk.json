@@ -1,0 +1,73 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneSkunk",
+  "fusions": [
+    {
+      "name": "Warning Spray",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "resource",
+      "base": 5,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 3,
+      "debuff": {
+        "key": "powerDown",
+        "chance": 0.5,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sprays a short cone, dealing 5 damage to everything caught in it, with a 50% chance to leave each [Weakened] for 6 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Handstand Kick",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "ignoreResist": true,
+      "desc": "A kick from the front hooves that deals 28 damage, ignores resistances and leaves the target 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Bad Reputation",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "poison",
+      "cooldown": 40,
+      "stealthDuration": 10,
+      "stealthAlpha": 0.5,
+      "aggroMult": 0.2,
+      "stealthSpeedPct": 0,
+      "stealthScope": "self",
+      "desc": "Veils you for 10 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Thick Skin",
+      "kind": "passive",
+      "category": "affliction",
+      "template": "virulence",
+      "element": "poison",
+      "resist": {
+        "element": "poison",
+        "amount": 0.12
+      },
+      "desc": "Your afflictions take hold on an enemy that is immune to them. You also carry 12% poison resistance."
+    }
+  ]
+}

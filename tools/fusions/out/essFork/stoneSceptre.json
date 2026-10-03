@@ -1,0 +1,77 @@
+{
+ "essence": "essFork",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Edict by Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "radiant",
+   "role": "long",
+   "desc": "Levels the haft and thrusts, dealing 32 damage, up to 1.6 times that at maximum range. Your party deals 20% more damage for 12 seconds after it hits.",
+   "base": 32,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 1.6,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   }
+  },
+  {
+   "name": "Sentence Passed",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "radiant",
+   "role": "execute",
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to this blow, which deals 20 damage. It only strikes a target at or below 30% health.",
+   "base": 20,
+   "cooldown": 18,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true
+  },
+  {
+   "name": "Raised Standard",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "desc": "Increases your damage reduction by 20% for 12 seconds, and pulls up to 5 enemies within 6 tiles onto you for 5 seconds.",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "taunt": true,
+   "tauntRadius": 192,
+   "tauntMax": 5,
+   "tauntDuration": 5
+  },
+  {
+   "name": "Acclaim",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "radiant",
+   "desc": "When you kill an enemy, your critical chance rises by 20% for 6 seconds. Once every 8 seconds.",
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "isTriggered": true,
+   "cooldown": 8
+  }
+ ]
+}

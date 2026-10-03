@@ -1,0 +1,90 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Bolt and Boot",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "leech": 0.15,
+   "desc": "Bolts up to 7 tiles to the target and kicks it for 13 damage. You heal for 15% of the damage dealt. For 4s after using it, you move 20% faster."
+  },
+  {
+   "name": "Burrow Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "isAoe": true,
+   "speed": 340,
+   "radius": 6,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "range": 192,
+   "reachUnits": 192,
+   "volleyCount": 3,
+   "volleySpread": 0.5,
+   "chargesMax": 3,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 3,
+    "label": "Gleaned"
+   },
+   "desc": "Looses 3 pellets at once, spread apart, each dealing 5 damage. 15% of the damage dealt returns to you as healing over 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Greens on the Run",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "healOnUse": 10,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Restores 4 stamina a second for 6 seconds. You restore 10 health when you cast it. Your movement speed rises 20% for 4s after you use it."
+  },
+  {
+   "name": "Fed Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you gain health, you regain 3 stamina a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

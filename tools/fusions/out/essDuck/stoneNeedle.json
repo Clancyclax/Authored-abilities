@@ -1,0 +1,76 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Pinpoint Bill",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "critDamageDown",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Jabs a needle-fine bolt that deals 8 damage and leaves the target [Dulled] for 5 seconds. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Stitch Barrage",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 10,
+   "cooldown": 90,
+   "volleyCount": 4,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 224,
+   "ignoreArmor": true,
+   "desc": "Loosens 4 pins in a spread, each dealing 10 damage and ignoring armour."
+  },
+  {
+   "name": "Sharpened Eye",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 60,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "desc": "Your critical chance rises by 25% for 15 seconds."
+  },
+  {
+   "name": "Gap in the Guard",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

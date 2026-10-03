@@ -1,0 +1,72 @@
+{
+ "essence": "essHair",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Landslide",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreResist": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Drops a mass of packed strands on the target, dealing 30 earth damage that ignores resistance and leaving it 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Clod Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Lobs a knot of earth-caked strands at the first enemy it meets, dealing 4 earth damage."
+  },
+  {
+   "name": "Backfilled Wound",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "earth",
+   "cooldown": 25,
+   "critChance": 0.1,
+   "healAmount": 18,
+   "healScope": "self",
+   "desc": "Packs your strands over your wounds, restoring 18 health to you, with a 10% chance to critically heal."
+  },
+  {
+   "name": "Turned Sod",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you strike an enemy, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

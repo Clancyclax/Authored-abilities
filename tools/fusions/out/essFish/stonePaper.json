@@ -1,0 +1,71 @@
+{
+ "essence": "essFish",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Folded Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 200,
+   "maxMult": 1.5,
+   "desc": "Sails a folded dart that deals 4 damage, up to 1.5 times that at maximum range."
+  },
+  {
+   "name": "Inked Contract",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "speed": 330,
+   "radius": 8,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Throws an inked bolt that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Written Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "water",
+   "cooldown": 70,
+   "buffDuration": 20,
+   "rangeMult": 1.4,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Clean Copy",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your stamina fills, your next spell deals 30% more damage. Once every 15 seconds."
+  }
+ ]
+}

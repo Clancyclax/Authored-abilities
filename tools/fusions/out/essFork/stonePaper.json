@@ -1,0 +1,81 @@
+{
+ "essence": "essFork",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Folded Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "desc": "Throws a folded tine that deals 4 damage, then skips on to 1 more enemy within 3 tiles for 60% of the damage.",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 440,
+   "radius": 6,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Final Clause",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "desc": "Consumes every affliction on the target, adding 1.6 times their remaining damage to this blow, which deals 18 damage. It only strikes a target at or below 25% health.",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true
+  },
+  {
+   "name": "Posted Notice",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "desc": "Every ally within 6 tiles strikes 20% harder for 12 seconds and fights with 1 more Power while it holds.",
+   "partyDmgPct": 0.2,
+   "partyPower": 1,
+   "buffDuration": 12,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "cooldown": 45
+  },
+  {
+   "name": "Margin Notes",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "desc": "When you spend mana, your next spell deals 25% more damage. Once every 8 seconds.",
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "isTriggered": true,
+   "cooldown": 8
+  }
+ ]
+}

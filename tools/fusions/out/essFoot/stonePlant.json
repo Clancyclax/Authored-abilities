@@ -1,0 +1,82 @@
+{
+ "essence": "essFoot",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Tangleroot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a bolt into the first enemy it meets, dealing 11 damage and making it [Poisoned] for 2 damage a second for 6 seconds, with a 40% chance of [Pinned] for 2 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Seedfall Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hits every enemy within 3.5 tiles, dealing 28 damage to each plus 5% of a boss's or elite's maximum health, stunning it for 0.8 seconds and leaving it [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Growing Gait",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Deep Roots",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "maxHp",
+   "amount": 0.1,
+   "regenPerSec": 1,
+   "desc": "Your maximum health rises by 10%. It also regenerates 1 health a second, permanently."
+  }
+ ]
+}

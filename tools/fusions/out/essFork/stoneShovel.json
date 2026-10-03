@@ -1,0 +1,74 @@
+{
+ "essence": "essFork",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Heaved Spoil",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "medium",
+   "desc": "Flings a clod from the tines that deals 13 damage, up to 1.5 times that at maximum range, and knocks the target back 2.5 tiles.",
+   "base": 13,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "knockback": 80
+  },
+  {
+   "name": "Overturn",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "resource",
+   "desc": "Costs 5% of your maximum health. Turns the earth in a ring that deals 9 damage to every enemy within 3 tiles.",
+   "base": 9,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05
+  },
+  {
+   "name": "Pit and Cover",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "desc": "Digs a pit by the nearest enemy that waits for up to 45 seconds. The first enemy to come within 3 tiles springs it, dealing 22 damage to everything within 2 tiles and leaving it [Pinned] for 2 seconds.",
+   "summonKind": "trap",
+   "summonDuration": 45,
+   "cooldown": 150,
+   "summonDmg": 22,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Dug In Deep",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "earth",
+   "desc": "Your maximum health rises by 12%. You also regenerate 0.4 health a second, permanently.",
+   "buffKind": "maxHp",
+   "amount": 0.12,
+   "regenPerSec": 0.4
+  }
+ ]
+}

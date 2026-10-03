@@ -1,0 +1,79 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Harvest Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "chargesMax": 3,
+   "spammable": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 112,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Reaps a cone 3.5 tiles long, dealing 7 damage to everything in it, with a 40% chance per hit to leave it [Bleeding] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Cut Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "A sweeping blow on a target up to 7 tiles away that deals 22 damage, rising to 1.5 times that at full reach. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Gleaned Strength",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3 tiles."
+  },
+  {
+   "name": "Harvest Home",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

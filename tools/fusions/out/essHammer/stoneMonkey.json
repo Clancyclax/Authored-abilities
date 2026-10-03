@@ -1,0 +1,69 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Cracked Coconut",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Throws a hard-shelled nut that deals 7 damage, rising to 1.5 times that at its full reach of 6 tiles. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Cymbal Clash",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "stunOnHit": 1.2,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Slams the head down with a clang, dealing 12 damage to every enemy within 2.5 tiles and stunning them for 1.2 seconds."
+  },
+  {
+   "name": "Fidget Rhythm",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your attack speed by 30% for 15 seconds."
+  },
+  {
+   "name": "Pocketed Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "Each time you strike, you recover 3 stamina. Once every 5 seconds."
+  }
+ ]
+}

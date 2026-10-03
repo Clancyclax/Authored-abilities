@@ -1,0 +1,70 @@
+{
+ "essence": "essHair",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Pilfering Strand",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "consumeAffliction": true,
+   "desc": "A strand picks at a target up to 7 tiles away that carries one of your afflictions, uses it up and deals 8 damage, rising to 1.5 times that at full reach."
+  },
+  {
+   "name": "Swinging Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "Hooks a target up to 7 tiles away and swings you to it, landing a blow for 13 damage that leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Branch Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 9,
+   "teleportRange": 224,
+   "desc": "Throws a strand to a branch and lets you step to a point up to 7 tiles away at once."
+  },
+  {
+   "name": "Idle Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you inflict a condition, you regain 4 stamina. Once every 5 seconds."
+  }
+ ]
+}

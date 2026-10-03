@@ -1,0 +1,72 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Pocketed Pebble",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.2,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a pebble that deals 4 damage. Each hit has a 20% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Prised Keystone",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Wrenches out a keystone that deals 16 damage, consuming every affliction on the target and adding 1.5 times their remaining damage to the blow. It only strikes a target at or below 25% health, and that threshold rises with each rank."
+  },
+  {
+   "name": "Cliff Scramble",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "cooldown": 36,
+   "armorBonus": 0.2,
+   "buffDuration": 10,
+   "dodgeBonus": 0.15,
+   "blinkOnUse": 64,
+   "desc": "Raises your armour by 20% and your dodge chance by 15% for 10 seconds. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Rehearsed Handholds",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "boon",
+   "stackBuild": "crit",
+   "stackPay": "power",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a critical hit, a stack builds on you, up to 10. The next ability you use spends them all: you deal 3% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

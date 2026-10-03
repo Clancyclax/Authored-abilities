@@ -1,0 +1,80 @@
+{
+ "essence": "essGun",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Swarm Fire",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.8,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "isAoe": true,
+   "volleyCount": 3,
+   "spammable": true,
+   "desc": "Fires 3 rounds; each round deals 2 damage."
+  },
+  {
+   "name": "Carrier's Slug",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "speed": 360,
+   "radius": 8,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a slug that deals 14 damage and has a 60% chance of [Diseased] for 8 seconds. Your afflictions on the target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Gnaw Through",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 40,
+   "healAmount": 20,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 20 health to you, with a 10% chance to crit. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Still Breathing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

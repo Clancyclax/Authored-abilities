@@ -1,0 +1,71 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Flung Crockery",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 10,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "knockback": 80,
+   "leech": 0.2,
+   "desc": "Hurls a crock that deals 14 blunt damage to the first enemy it meets and knocks it back 2.5 tiles. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Overturned Board",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 112,
+   "bossPct": 0.05,
+   "healOnUse": 14,
+   "desc": "Heaves the board over, dealing 32 damage to every enemy within 3.5 tiles, plus 5% of the maximum health of any boss or elite it hits. You restore 14 health."
+  },
+  {
+   "name": "Gorged Frame",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 70,
+   "buffStat": "maxHp",
+   "buffAmount": 0.2,
+   "buffDuration": 20,
+   "healOnUse": 15,
+   "desc": "Raises your maximum health by 20% for 20 seconds. You restore 15 health when you cast it."
+  },
+  {
+   "name": "Muscle on the Bone",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you gain health, your physical damage rises by 30% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

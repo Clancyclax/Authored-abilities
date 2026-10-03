@@ -1,0 +1,80 @@
+{
+ "essence": "essGun",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Plunging Drizzle",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 224,
+   "maxMult": 1.8,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drops a shot from above that deals 11 damage, up to 1.8 times that at maximum range, with a 60% chance of [Soaked] for 6 seconds. Your afflictions on the target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Cloudburst Mortar",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 8,
+   "cooldown": 100,
+   "volleySpread": 0.6,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "isAoe": true,
+   "volleyCount": 6,
+   "guaranteedCrit": true,
+   "desc": "Lobs 6 shells that each deal 8 damage; every hit is a critical hit."
+  },
+  {
+   "name": "Grey Curtain",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.08,
+   "desc": "Raises a barrier that absorbs the next 18 damage and holds for 6 seconds, and raises your armour by 8% while it holds."
+  },
+  {
+   "name": "Slicker Reload",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "desc": "When your stamina runs out, you regain 15 stamina. Once every 30 seconds."
+  }
+ ]
+}

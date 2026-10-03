@@ -1,0 +1,72 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Crown-Heavy Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "long",
+   "base": 40,
+   "cooldown": 120,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "desc": "A crown-heavy blow that deals 40 damage plus 5% of a boss's or elite's maximum health, and leaves the target 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Edict of the Ledge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 20,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Commands the ground to rise under every enemy within 4 tiles, dealing 15 damage and stunning each for 1 second."
+  },
+  {
+   "name": "Rank and Rampart",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "earth",
+   "cooldown": 45,
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Unmoved Seat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 8
+   },
+   "desc": "When your health falls below 50%, you gain a ward that absorbs 30% of your maximum health for 8 seconds. Once every 60 seconds."
+  }
+ ]
+}

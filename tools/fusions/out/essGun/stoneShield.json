@@ -1,0 +1,76 @@
+{
+  "essence": "essGun",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Slammed Barricade",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 18,
+      "range": 224,
+      "maxMult": 1.8,
+      "stunOnHit": 1,
+      "desc": "Fires a slug that deals 14 damage, up to 1.8 times that at maximum range, and leaves the target [Stunned] for 1 second."
+    },
+    {
+      "name": "Covering Fire",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "range": 160,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.25,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "spammable": true,
+      "desc": "Sweeps a cone that deals 3 damage to everything in it, each with a 25% chance of [Hindered] for 3 seconds."
+    },
+    {
+      "name": "Draw Fire",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "physical",
+      "cooldown": 30,
+      "tauntRadius": 256,
+      "tauntDuration": 8,
+      "tauntMax": 6,
+      "threatMult": 1.5,
+      "desc": "Pulls up to 6 enemies within 8 tiles onto you for 8 seconds, with 1.5 times the usual threat."
+    },
+    {
+      "name": "Bulwark Closes",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 40,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 40,
+        "frac": 0.35
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 6
+      },
+      "desc": "Once your health falls below 35%, a shield worth 25% of your maximum health closes over you for 6 seconds. Once every 40 seconds."
+    }
+  ]
+}

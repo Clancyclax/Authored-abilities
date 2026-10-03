@@ -1,0 +1,75 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 176,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "huge",
+   "consumeAffliction": true,
+   "desc": "Sweeps a cone ahead of you, dealing 8 damage to everything caught in it. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Reaped Wound",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "speed": 360,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Throws a curved blade that deals 14 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Gleaned Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "nature",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Second Cut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your critical hit chance rises by 15% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

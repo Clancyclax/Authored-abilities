@@ -1,0 +1,90 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Tripline",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a strand that deals 8 damage to the first enemy it meets, with a 50% chance to leave it [Slowed] for 4 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Spat Webbing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 192,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a wide cone of webbing, dealing 10 damage to everything caught in it and making each [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Strung Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 32,
+   "wallKind": "block",
+   "wallLength": 224,
+   "wallDuration": 8,
+   "wallThickness": 20,
+   "desc": "Strings a barrier 7 tiles long that holds for 8 seconds."
+  },
+  {
+   "name": "Silk Ledger",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you hit an enemy, a mark builds on it, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack. Unfed, a mark fades every 4 seconds."
+  }
+ ]
+}

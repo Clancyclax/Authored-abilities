@@ -1,0 +1,67 @@
+{
+  "essence": "essGun",
+  "stone": "stoneSpear",
+  "fusions": [
+    {
+      "name": "Skewering Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 20,
+      "speed": 360,
+      "radius": 8,
+      "stunOnHit": 1.2,
+      "desc": "Fires a round that deals 16 damage and leaves the target [Stunned] for 1.2 seconds."
+    },
+    {
+      "name": "Impaling Line",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "long",
+      "base": 14,
+      "cooldown": 90,
+      "volleySpread": 0.02,
+      "speed": 300,
+      "radius": 7,
+      "range": 224,
+      "isAoe": true,
+      "volleyCount": 3,
+      "bossPct": 0.05,
+      "desc": "Fires 3 rounds in a line; each deals 14 damage plus 5% of a boss or elite's maximum health."
+    },
+    {
+      "name": "Pointed Landing",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "piercing",
+      "cooldown": 18,
+      "teleportRange": 224,
+      "desc": "Steps you instantly to a point up to 7 tiles away."
+    },
+    {
+      "name": "Second Throw",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 6,
+        "range": 192
+      },
+      "desc": "Each time you kill something, a bolt strikes the nearest enemy within 6 tiles for 6 damage. Once every 6 seconds."
+    }
+  ]
+}

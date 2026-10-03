@@ -1,0 +1,77 @@
+{
+ "essence": "essGun",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Seed Pellet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.15,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spammable": true,
+   "desc": "Fires a seed that deals 4 damage, with a 15% chance of leaving the target [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Rooting Salvo",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 22,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3 tiles takes 12 damage and has a 50% chance of [Pinned] for 2 seconds. Your afflictions on them spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Sprouting Emplacement",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "escort": {
+    "dmg": 3,
+    "interval": 1.4,
+    "duration": 12
+   },
+   "desc": "Restores 3 health a second to you for 8 seconds. A turret of vines fights beside you for 12 seconds, striking for 3 every 1.4 seconds."
+  },
+  {
+   "name": "Steady Growth",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "crit",
+   "amount": 0.08,
+   "regenPerSec": 1,
+   "desc": "Your critical strike chance rises by 8%. It also regenerates 1 health a second, permanently."
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "essence": "essHammer",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Pressed Seal",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bruised"
+   },
+   "spreadAfflictions": 128,
+   "desc": "A stamp of the head that deals 12 damage and leaves the target [Bruised] for 2 damage a second for 4 seconds. Your afflictions on the target spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Folded Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "spammable": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Throws a folded dart that deals 6 damage to the first enemy it meets, with a 30% chance to leave it [Muddled] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Quick Draft",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your cast speed by 30% for 15 seconds."
+  },
+  {
+   "name": "Fine Print",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Against a target low on health, your damage rises by 15%."
+  }
+ ]
+}

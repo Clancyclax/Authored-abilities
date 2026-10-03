@@ -1,0 +1,74 @@
+{
+ "essence": "essFoot",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Curled Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "You slam into the target for 15 damage, knocking it back 2.5 tiles and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Scale Spin",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spammable": true,
+   "desc": "Spins into every enemy within 2.5 tiles, dealing 4 damage to each."
+  },
+  {
+   "name": "Roll Away",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.6,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it. Your movement speed rises 20% for 4s after you use it."
+  },
+  {
+   "name": "Curled Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your stamina runs out, a shield worth 15% of your maximum health closes over you for 4 seconds. Once every 30 seconds.",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   }
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essFork",
+ "stone": "stoneSkunk",
+ "fusions": [
+  {
+   "name": "Reeking Warning",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "desc": "Sprays a cone of musk that deals 10 damage to everything caught in it, knocks each back 3 tiles and has a 50% chance to leave it [Poisoned] for 6 seconds.",
+   "base": 10,
+   "cooldown": 16,
+   "range": 150,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Musked Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "desc": "Flicks a tine tipped with musk that deals 4 damage and makes the target [Poisoned] for 2 damage a second for 4 seconds.",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   }
+  },
+  {
+   "name": "Hunter's Regret",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "desc": "For 10 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead.",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 10,
+   "cooldown": 40
+  },
+  {
+   "name": "Marked and Avoided",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "desc": "Your armour rises by 10% against enemies carrying your afflictions.",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.1
+  }
+ ]
+}

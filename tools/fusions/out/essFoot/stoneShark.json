@@ -1,0 +1,82 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Scent Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "leech": 0.15,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "You surge up to 6 tiles onto the target and bite for 14 damage, 10% more for each affliction on it (up to 30%), healing for 15% of the damage dealt and leaving it 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Circling Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Hits every enemy within 3.5 tiles, dealing 8 damage to each and leaving it [Bleeding] for 2 damage a second for 4 seconds. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Feeding Pass",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your attack speed by 25% for 10 seconds."
+  },
+  {
+   "name": "Taste of Blood",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.1,
+    "duration": 3
+   },
+   "desc": "When you strike an enemy, 10% of the damage you deal heals you for the next 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

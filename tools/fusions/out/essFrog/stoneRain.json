@@ -1,0 +1,77 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Drizzle Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 6,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a thin stream that deals 3 damage and has a 25% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Cloudburst Croak",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A croak that brings down a downpour, dealing 28 damage to every enemy within 4 tiles. Every ally strikes 20% harder for 12 seconds when it lands."
+  },
+  {
+   "name": "Soaking Round",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "range": 128,
+   "healAmount": 14,
+   "healScope": "party",
+   "desc": "Restores 14 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Wet Season",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

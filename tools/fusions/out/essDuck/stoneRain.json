@@ -1,0 +1,85 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Cloudburst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 36,
+   "cooldown": 120,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Calls a downpour that deals 36 damage to every enemy within 4 tiles and leaves each [Soaked] for 8 seconds. Your party deals 20% more damage for 15 seconds after it lands."
+  },
+  {
+   "name": "Skipping Drops",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Skips a drop of water that deals 8 damage, then hops to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Wet Feathers",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "You regain 3 health a second for 8 seconds."
+  },
+  {
+   "name": "Runoff",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 3
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When anything but fire hurts you, a shield worth 15% of your maximum health forms for 3 seconds; once every 8 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

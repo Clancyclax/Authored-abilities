@@ -1,0 +1,79 @@
+{
+ "essence": "essFish",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Strike from Coil",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 88,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "spreadAfflictions": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A sudden strike that deals 12 damage, leaves the target [Poisoned] for 2 damage a second for 6 seconds and 10% easier to wound for 5 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Venom Reckoning",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Strikes a target at or below 25% health for 14 damage, consuming every affliction on it for 1.8 times their remaining damage. Its damage rises 8% for each ally within 5.5 tiles, up to 40%."
+  },
+  {
+   "name": "Shed Skin",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 45,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "desc": "Removes up to 3 conditions from you."
+  },
+  {
+   "name": "Warm Side Forward",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.6,
+   "familiarFamily": "snake",
+   "familiarCreatureName": "Water Snake",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Calls a bonded water snake that fights beside you, striking for 4 damage every 1.6 seconds within 5 tiles. It leaves [Poisoned] for 2 damage a second for 4 seconds."
+  }
+ ]
+}

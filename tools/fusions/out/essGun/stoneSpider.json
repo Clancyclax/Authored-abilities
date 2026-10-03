@@ -1,0 +1,71 @@
+{
+ "essence": "essGun",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Pounce on the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "range": 150,
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "You rush up to 6 tiles to the target, which takes 15 damage and is left 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Web Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 200,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spammable": true,
+   "desc": "Sprays a cone of strands that deals 3 damage to everything in it, with a 40% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Hide the Party",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 40,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "desc": "Veils you and your allies for 8 seconds. Enemies notice you at 40% of the usual rate and you move 10% faster; the veil breaks the moment you attack."
+  },
+  {
+   "name": "Taut Strands",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

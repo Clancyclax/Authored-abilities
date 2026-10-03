@@ -1,0 +1,71 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Drumfoot",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Stamps the head down, dealing 4 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Sprint Smash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "chargeTo": 224,
+   "desc": "You sprint up to 7 tiles at the target; the blow deals 14 damage and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Flushed Out",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 8,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "A burst of movement that carries you 5 tiles forward. For 4 seconds after using it you move 25% faster."
+  },
+  {
+   "name": "Running Start",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "After you cover enough ground, your next ability deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

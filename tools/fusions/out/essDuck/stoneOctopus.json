@@ -1,0 +1,79 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Quad Splash",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.45,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 192,
+   "desc": "Flicks 4 jets of water in a spread, each dealing 3 damage."
+  },
+  {
+   "name": "Murk Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "speed": 360,
+   "radius": 8,
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a gout of dark water that deals 14 damage, stuns the target for 0.8 seconds and leaves it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Slip Away",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "cooldown": 14,
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 7 tiles away. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Cloud Cover",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, a shield worth 25% of your maximum health closes over you for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Shale Jaws",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.15,
+   "hpCostPct": 0.05,
+   "desc": "A bite of jagged rock that deals 9 damage, leaves the target [Bleeding] for 2 damage a second for 4 seconds and heals you for 15% of the damage dealt. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Silt Frenzy",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "earth",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Rips into a wounded target for 18 damage, consuming every affliction on it and adding 1.6 times their remaining damage to the blow. It only strikes a target at or below 25% health, and that threshold rises with each rank."
+  },
+  {
+   "name": "Churned Shallows",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "cooldown": 38,
+   "buffStat": "critChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "taunt": true,
+   "tauntRadius": 160,
+   "tauntMax": 3,
+   "tauntDuration": 4,
+   "desc": "Increases your critical hit chance by 20% for 12 seconds and pulls up to 3 enemies within 5 tiles onto you for 4 seconds."
+  },
+  {
+   "name": "Scent of Weakness",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.06,
+   "desc": "Against enemies below half health, you deal 12% more damage. Your armour also rises by 6%."
+  }
+ ]
+}

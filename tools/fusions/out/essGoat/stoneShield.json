@@ -1,0 +1,81 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Bulwark Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "knockback": 112,
+   "desc": "Drives your guard into the target, dealing 14 damage, leaving it 12% easier to wound for 5 seconds and knocking it back 3.5 tiles."
+  },
+  {
+   "name": "Hurled Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Hurls the rim, dealing 30 damage to the first enemy it meets and ignoring resistances. It rebounds to 1 more enemy within 3.5 tiles for 60% of the original damage."
+  },
+  {
+   "name": "Braced Wall",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 28,
+   "shieldStrikes": 3,
+   "shieldDuration": 10,
+   "desc": "Raises a barrier that absorbs the next 28 damage and holds for 10 seconds."
+  },
+  {
+   "name": "Guard Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.08,
+    "duration": 3
+   },
+   "desc": "Each time you strike, you gain a ward that soaks 8% of your maximum health for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

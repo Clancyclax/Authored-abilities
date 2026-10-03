@@ -1,0 +1,67 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Dive",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "requiresTargetBelow": 0.3,
+   "leech": 0.2,
+   "desc": "Usable only on an enemy at or below 30% health. Swoops in a curved line for 20 damage, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Gleaning Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Sweeps a curve around you, dealing 6 damage to every enemy within 3 tiles. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Gleaned Bounty",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "cooldown": 24,
+   "range": 112,
+   "healAmount": 15,
+   "healScope": "party",
+   "desc": "Restores 15 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Second Cut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your damage rises 30% for 5 seconds. Once every 6 seconds."
+  }
+ ]
+}

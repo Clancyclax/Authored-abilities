@@ -1,0 +1,78 @@
+{
+ "essence": "essFork",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Cold Prick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "basic",
+   "desc": "A quick thrust that deals 4 damage and makes the target [Poisoned] for 2 damage a second for 5 seconds.",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   }
+  },
+  {
+   "name": "Coiled Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "long",
+   "desc": "Strikes from the coil, dealing 30 damage, up to 1.5 times that at maximum range, and making the target [Poisoned] for 3 damage a second for 6 seconds. It also deals 5% of a boss or elite target's maximum health.",
+   "base": 30,
+   "cooldown": 90,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bossPct": 0.05
+  },
+  {
+   "name": "Gathered to Strike",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "poison",
+   "desc": "Increases your damage by 30% for 12 seconds.",
+   "powerMult": 1.3,
+   "buffDuration": 12,
+   "cooldown": 45
+  },
+  {
+   "name": "Venom That Takes",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 8% poison resistance for as long as you carry it.",
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   }
+  }
+ ]
+}

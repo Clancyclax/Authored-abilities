@@ -1,0 +1,63 @@
+{
+ "essence": "essHair",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Gap Finder",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 36,
+   "cooldown": 75,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Threads one stiffened strand through a target up to 8 tiles away, dealing 36 piercing damage that ignores armour."
+  },
+  {
+   "name": "Quick Darn",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "A fast jab that deals 4 piercing damage and leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Honed Ends",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 50,
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "desc": "Splits every strand to a point, increasing your critical hit chance by 25% for 15 seconds."
+  },
+  {
+   "name": "Weak Seam",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying a condition, you deal 12% more damage."
+  }
+ ]
+}

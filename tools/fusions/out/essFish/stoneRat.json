@@ -1,0 +1,77 @@
+{
+ "essence": "essFish",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Bilge Scraps",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Flings scraps that deal 3 damage and leave the target [Diseased] for 1 damage a second for 4 seconds. Its damage rises 8% for each ally within 5.5 tiles, up to 40%."
+  },
+  {
+   "name": "Overrun",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Pours over every enemy within 3.5 tiles for 14 damage and leaves them [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on them spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Last Off the Ship",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 5,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Bilge Brood",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 3,
+   "familiarRange": 144,
+   "familiarInterval": 1.0,
+   "familiarFamily": "rat",
+   "familiarCreatureName": "Bilge Rat",
+   "desc": "Calls a bonded bilge rat that fights beside you, striking for 3 damage every 1 second within 4.5 tiles."
+  }
+ ]
+}

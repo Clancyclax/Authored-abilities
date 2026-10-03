@@ -1,0 +1,76 @@
+{
+ "essence": "essFeast",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Folded Menu",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.12,
+   "desc": "Flicks a folded menu that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Marked] for 6 seconds. You heal for 12% of the damage dealt."
+  },
+  {
+   "name": "Signed Writ",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "leech": 0.2,
+   "desc": "Throws a sealed writ that deals 28 damage, up to 1.5 times that at maximum range, and always lands as a critical hit. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Account Settled",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "cooldown": 50,
+   "buffStat": "healingReceived",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases the healing you receive by 30% for 15 seconds."
+  },
+  {
+   "name": "Tallied Bill",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

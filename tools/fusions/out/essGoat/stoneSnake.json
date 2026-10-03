@@ -1,0 +1,82 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Patient Fang",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Strikes from range, dealing 18 damage and making the target [Poisoned] for 3 damage a second for 6 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Quick Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chargesMax": 4,
+   "desc": "A quick weapon bite that deals 6 damage and makes the target [Poisoned] for 1 damage a second for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Turned Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+  },
+  {
+   "name": "Held Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your critical hit chance rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

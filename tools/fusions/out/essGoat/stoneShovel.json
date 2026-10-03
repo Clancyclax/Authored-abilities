@@ -1,0 +1,77 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneShovel",
+  "fusions": [
+    {
+      "name": "Heaved Clod",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "earth",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 192,
+      "maxMult": 1.8,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "stunOnHit": 1,
+      "desc": "Heaves a clod at a target up to 6 tiles away, dealing 14 damage, up to 1.8 times that at full reach, and stunning it for 1 second."
+    },
+    {
+      "name": "Churned Ground",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "earth",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1.1,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "hpCostPct": 0.04,
+      "desc": "Churns the earth around you, dealing 7 damage to every enemy within 2.5 tiles. Costs 4% of your maximum health."
+    },
+    {
+      "name": "Pitfall",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "earth",
+      "cooldown": 180,
+      "summonKind": "trap",
+      "summonDuration": 60,
+      "summonDmg": 24,
+      "summonRange": 96,
+      "summonInterval": 0,
+      "summonCharges": 2,
+      "summonBlast": 96,
+      "summonArmDelay": 0.5,
+      "trapDelivery": "spawned",
+      "desc": "Digs a pit trap onto the nearest enemy. It waits 60 seconds, and the first 2 enemies to come within 3 tiles take 24 damage in a blast around it."
+    },
+    {
+      "name": "Dug In",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 60,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 60,
+        "frac": 0.4,
+        "rearmAbove": 0.6
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.3,
+        "duration": 6
+      },
+      "desc": "When your health falls below 40%, you gain a ward that soaks 30% of your maximum health for 6 seconds."
+    }
+  ]
+}

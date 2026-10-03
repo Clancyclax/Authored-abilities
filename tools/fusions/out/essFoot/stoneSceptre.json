@@ -1,0 +1,73 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Royal Decree",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "radiant",
+   "role": "long",
+   "base": 26,
+   "cooldown": 120,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "Sends a bolt of edict into the first enemy it meets, dealing 26 damage. If it lands, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Heralded Arrival",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "radiant",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 16,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 0.8,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Hits every enemy within 4 tiles, dealing 11 damage to each and stunning it for 0.8 seconds. Its damage rises 10% for each ally within 5.5 tiles of you (max 40%)."
+  },
+  {
+   "name": "Long Arm of Law",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "radiant",
+   "cooldown": 90,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Standing Order",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "radiant",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "While you are at full health, your next ability deals 25% more damage. Once every 12 seconds."
+  }
+ ]
+}

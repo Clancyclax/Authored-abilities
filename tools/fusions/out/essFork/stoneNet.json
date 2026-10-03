@@ -1,0 +1,83 @@
+{
+ "essence": "essFork",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Cast the Weave",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Throws a knotted line that deals 12 damage and has a 40% chance to leave the target [Pinned] for 2 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles.",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112
+  },
+  {
+   "name": "Drawn Shut",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "desc": "Pulls the tines tight in a ring, dealing 34 damage to every enemy within 3.5 tiles and [Slowing] them for 4 seconds. Every hit is a critical hit.",
+   "base": 34,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Gathered In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "desc": "Hauls up to 5 enemies within 7 tiles onto you for 6 seconds.",
+   "tauntRadius": 224,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 24
+  },
+  {
+   "name": "Snagged Runner",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you inflict a condition, a bolt strikes the nearest enemy within 5 tiles and deals 6 damage. Once every 8 seconds.",
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "isTriggered": true,
+   "cooldown": 8
+  }
+ ]
+}

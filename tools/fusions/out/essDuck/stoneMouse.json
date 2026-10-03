@@ -1,0 +1,70 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Reed Nibble",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 160,
+   "reachUnits": 160,
+   "maxMult": 1.3,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes a target up to 5 tiles away for 7 damage, rising to 1.3 times that at full reach, and leaves it [Slowed] for 3 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Underfoot Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 12,
+   "range": 80,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on an enemy at or below 25% health. Deals 18 damage and leaves the target 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Cover of Reeds",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 24,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds. Enemies notice you far later, you move 10% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Dusk Scurry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "wind",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "At night, your dodge chance rises by 12%."
+  }
+ ]
+}

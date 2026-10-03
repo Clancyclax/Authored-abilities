@@ -1,0 +1,75 @@
+{
+  "essence": "essGun",
+  "stone": "stoneShark",
+  "fusions": [
+    {
+      "name": "Feeding Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "physical",
+      "role": "execute",
+      "base": 18,
+      "cooldown": 12,
+      "range": 200,
+      "stackMult": 1.5,
+      "requiresTargetBelow": 0.3,
+      "executeLadder": true,
+      "desc": "Strikes a target at or below 30% health for 18 damage, adding 1.5 times the remaining damage of every affliction on it, which are used up."
+    },
+    {
+      "name": "Taste of Blood",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blood",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "range": 150,
+      "hpCostPct": 0.05,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Costs 5% of your maximum health and deals 9 damage, makes the target [Bleeding] for 2 damage a second for 5 seconds and leaves it 10% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Closing Circle",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "blood",
+      "cooldown": 45,
+      "powerMult": 1.3,
+      "buffDuration": 12,
+      "desc": "Increases your damage by 30% for 12 seconds."
+    },
+    {
+      "name": "Fresh Wake",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blood",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.2,
+        "duration": 5
+      },
+      "desc": "When you kill something, you heal for 20% of the damage you deal for 5 seconds. Once every 8 seconds."
+    }
+  ]
+}

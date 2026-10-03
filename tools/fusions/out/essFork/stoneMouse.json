@@ -1,0 +1,65 @@
+{
+ "essence": "essFork",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Skittering Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "desc": "A quick poke that deals 4 damage and leaves the target 5% easier to wound for 3 seconds.",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Under the Boots",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "desc": "Darts a ring of jabs around you that deals 6 damage to every enemy within 3 tiles. Holds 4 charges, and kills give charges back.",
+   "base": 6,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4
+  },
+  {
+   "name": "Between the Walls",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "desc": "Veils you for 6 seconds, raising your move speed by 10% while it holds. Enemies notice you far later, and the veil breaks the moment you attack.",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "cooldown": 24
+  },
+  {
+   "name": "Gloom Runner",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "desc": "At night, your dodge chance rises by 10%.",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.1
+  }
+ ]
+}

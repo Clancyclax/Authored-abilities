@@ -1,0 +1,75 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Eventual Peck",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "Pecks for 11 damage, leaves the target 10% easier to wound for 6 seconds and [Stalled] for 8 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Drifting Dive",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 40,
+   "cooldown": 120,
+   "speed": 360,
+   "radius": 8,
+   "ignoreResist": true,
+   "desc": "Drifts a bolt that deals 40 damage and ignores the target's resistances."
+  },
+  {
+   "name": "Slow Recovery",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 60,
+   "buffStat": "regenHealth",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "desc": "Increases your health recovery by 50% for 15 seconds."
+  },
+  {
+   "name": "Unhurried Calm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "When a condition on you runs out, you regain 3 health a second for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

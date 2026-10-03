@@ -1,0 +1,76 @@
+{
+ "essence": "essFish",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Inexorable Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 90,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "A slow heavy blow that deals 28 damage, leaves the target 15% easier to wound for 8 seconds and is always a critical hit."
+  },
+  {
+   "name": "Drowsy Ripple",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "melee",
+   "hpCostPct": 0.03,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a ripple that deals 7 damage to every enemy within 3 tiles. Each hit has a 40% chance of [Hindered], slowing the target's attacks for 5 seconds. It costs 3% of your maximum health."
+  },
+  {
+   "name": "Held Stillness",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 120,
+   "freezeDuration": 4,
+   "freezeRadius": 190,
+   "aoeBand": "large",
+   "desc": "Holds every creature within 6 tiles in place for 4 seconds."
+  },
+  {
+   "name": "Arrives Eventually",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.5,
+    "duration": 5
+   },
+   "desc": "After a long run without a critical hit, your critical chance rises 50% for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

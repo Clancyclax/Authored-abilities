@@ -1,0 +1,81 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Landfall, Eventually",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "long",
+   "base": 36,
+   "cooldown": 100,
+   "speed": 200,
+   "radius": 12,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rolls a slow boulder that deals 36 damage plus 5% of a boss's or elite's maximum health and always leaves the target [Slowed] for 6 seconds."
+  },
+  {
+   "name": "Creeping Silt",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Silt rises around you, dealing 3 damage to every enemy within 3 tiles. Each hit has a 40% chance to leave [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Slow Settling",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.15,
+   "buffDuration": 12,
+   "healOnUse": 10,
+   "desc": "Reduces the damage you take by 15% for 12 seconds and restores 10 health to you at once."
+  },
+  {
+   "name": "Settled Reserve",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "desc": "When your stamina runs out, you recover 15 stamina. Once every 30 seconds."
+  }
+ ]
+}

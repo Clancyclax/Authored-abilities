@@ -1,0 +1,80 @@
+{
+ "essence": "essFork",
+ "stone": "stoneShip",
+ "fusions": [
+  {
+   "name": "Bellied Gust",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "wind",
+   "role": "resource",
+   "desc": "A bolt of wind that deals 8 damage, then leaps to 1 more enemy within 3 tiles for 60% of the damage. Holds 3 charges, and kills give charges back.",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Broadside Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "desc": "Swings the haft broadside, dealing 14 damage, leaving the target 12% easier to wound for 5 seconds and knocking it back 3.5 tiles.",
+   "base": 14,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "knockback": 112
+  },
+  {
+   "name": "Fair Wind",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "desc": "Increases your movement speed by 35% for 10 seconds.",
+   "speedMult": 1.35,
+   "buffDuration": 10,
+   "cooldown": 40
+  },
+  {
+   "name": "Sea Legs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you have travelled a distance on foot, you restore 2 stamina a second for 5 seconds. Once every 10 seconds.",
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 5
+   },
+   "isTriggered": true,
+   "cooldown": 10
+  }
+ ]
+}

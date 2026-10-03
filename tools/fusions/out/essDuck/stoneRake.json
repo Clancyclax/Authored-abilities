@@ -1,0 +1,71 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Drag Furrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "desc": "Combs the ground in a cone 4 tiles long, dealing 11 damage to every enemy in it. Your afflictions on a target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Tine Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 90,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "desc": "Jabs for 4 damage and leaves the target 6% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Gather In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Up to 5 enemies within 8 tiles turn on you for 6 seconds."
+  },
+  {
+   "name": "Tidy Ground",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

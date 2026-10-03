@@ -1,0 +1,70 @@
+{
+ "essence": "essFork",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Crescent Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "desc": "Draws the tines round in a curve, dealing 4 damage to every enemy within 3 tiles.",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium"
+  },
+  {
+   "name": "Late Harvest",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "desc": "Consumes every affliction on the target, adding 1.6 times their remaining damage to this blow, which deals 20 damage. It only strikes a target at or below 25% health.",
+   "base": 20,
+   "cooldown": 12,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true
+  },
+  {
+   "name": "Binding the Sheaf",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "desc": "Restores 3 stamina a second for 8 seconds.",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "cooldown": 30
+  },
+  {
+   "name": "Swathe",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "desc": "When you kill an enemy, a bolt strikes the nearest enemy within 4 tiles and deals 8 damage. Once every 5 seconds.",
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 128
+   },
+   "isTriggered": true,
+   "cooldown": 5
+  }
+ ]
+}

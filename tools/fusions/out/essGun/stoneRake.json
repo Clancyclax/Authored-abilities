@@ -1,0 +1,70 @@
+{
+  "essence": "essGun",
+  "stone": "stoneRake",
+  "fusions": [
+    {
+      "name": "Raking Sweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 16,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "desc": "Every enemy within 3.5 tiles takes 10 damage and is knocked back 3 tiles."
+    },
+    {
+      "name": "Gleaning Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "hpCostPct": 0.04,
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Costs 4% of your maximum health and deals 8 damage, plus 8% for each affliction on the target (max 40%)."
+    },
+    {
+      "name": "Gathered Powder",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "physical",
+      "cooldown": 24,
+      "resource": "stamina",
+      "overTime": true,
+      "restorePerSec": 3,
+      "restoreDuration": 7,
+      "desc": "Restores 3 stamina a second for 7 seconds."
+    },
+    {
+      "name": "Stray Leavings",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "strike",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 4,
+        "range": 160
+      },
+      "desc": "When you strike an enemy, a bolt hits the nearest other enemy within 5 tiles for 4 damage. Once every 8 seconds."
+    }
+  ]
+}

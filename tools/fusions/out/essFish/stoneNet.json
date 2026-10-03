@@ -1,0 +1,71 @@
+{
+ "essence": "essFish",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Weighted Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "speed": 320,
+   "radius": 10,
+   "stunOnHit": 1.2,
+   "desc": "Throws a weighted mesh that deals 14 damage and stuns the target for 1.2 seconds."
+  },
+  {
+   "name": "Drawstring Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "melee",
+   "hpCostPct": 0.05,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Closes a ring around you that deals 7 damage to every enemy within 3 tiles. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Gathering Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 210,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "desc": "Draws a wall 6.5 tiles long across the water for 6 seconds, dragging every enemy near it inward."
+  },
+  {
+   "name": "Catch Feeds",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "desc": "Each time you inflict a condition on an enemy, you recover 5 stamina."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "You rush up to 6 tiles to the target and strike it for 16 damage, leaving it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Trample Lane",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Tramples every enemy within 3.5 tiles, dealing 30 damage to each, and every hit is a critical hit. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Heavy Going",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "cooldown": 60,
+   "powerMult": 1.3,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 30% for 12 seconds. Your movement speed rises 20% for 4s after you use it."
+  },
+  {
+   "name": "Weight of Miles",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "Every few paces you cover, your physical damage rises by 25% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

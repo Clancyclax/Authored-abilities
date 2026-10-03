@@ -1,0 +1,70 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Dragline Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 30,
+   "stunOnHit": 0.8,
+   "desc": "Draws a 6-tile seam of shifting gravel ahead of you for 5 seconds that drags nearby enemies inward, dealing 12 damage to each and stunning it for 0.8 seconds."
+  },
+  {
+   "name": "Cobble Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a cobble that deals 5 damage and leaps to 1 more enemy within 3.5 tiles, dealing 60% of the original damage."
+  },
+  {
+   "name": "Hold the Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "earth",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Weight on the Bound",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.06,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage. Your armour also rises by 6%."
+  }
+ ]
+}

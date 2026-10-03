@@ -1,0 +1,72 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Flint Lance",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "long",
+   "base": 35,
+   "cooldown": 90,
+   "range": 260,
+   "maxMult": 2,
+   "ignoreArmor": true,
+   "desc": "A thrown shard of flint that deals 35 damage, up to 2 times that at maximum range, and ignores armour."
+  },
+  {
+   "name": "Fissure Needles",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "earth",
+   "role": "resource",
+   "base": 4,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "castTime": 0.3,
+   "chargesMax": 3,
+   "desc": "Looses 3 splinters of rock at once, spread apart, each dealing 4 damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Slipped Through the Crack",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "earth",
+   "cooldown": 10,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Carries you 5 tiles forward. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Splinter Answer",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "desc": "Each critical hit sends a shard to the nearest enemy within 8 tiles, dealing 6 damage. Once every 6 seconds."
+  }
+ ]
+}

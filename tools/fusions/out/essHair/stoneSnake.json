@@ -1,0 +1,79 @@
+{
+ "essence": "essHair",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Fang Exchange",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Strikes with a strand that uses up one of your afflictions on the target, dealing 9 poison damage, leaving it 10% easier to wound for 5 seconds and [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Coil and Wait",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Whips a venomed strand at a target up to 6 tiles away, dealing 30 poison damage that rises to 1.5 times that at full reach and ignores resistance, and leaving it [Poisoned] for 3 damage a second for 6 seconds."
+  },
+  {
+   "name": "Sloughed Skin",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "poison",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Sheds a layer of strands that restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Venomed Blood",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 10% poison resistance for as long as you carry it."
+  }
+ ]
+}

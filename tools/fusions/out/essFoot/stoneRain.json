@@ -1,0 +1,84 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Downpour Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 3,
+   "cooldown": 1,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 292,
+   "rangeBand": "medium",
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lets loose 5 spread-out streaks, each dealing 3 damage and leaving the target [Soaked] for 6 seconds, cold and lightning biting deeper and fire less. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Slick Heel",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 64,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A blow that deals 13 damage, knocks the target back 2 tiles and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Wet Pavement",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 45,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "desc": "Increases your dodge chance by 20% for 12 seconds."
+  },
+  {
+   "name": "Puddle Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, you regain 2 stamina a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

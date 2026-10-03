@@ -1,0 +1,79 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Mudslide",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "speed": 320,
+   "radius": 10,
+   "knockback": 64,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a sodden clot of mud that deals 14 damage to the first enemy it meets and knocks it back 2 tiles. The hit has a 60% chance to leave it [Soaked] for 8 seconds."
+  },
+  {
+   "name": "Hailstone Barrage",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "ice",
+   "role": "long",
+   "base": 8,
+   "cooldown": 75,
+   "volleyCount": 6,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 240,
+   "castTime": 0.5,
+   "ignoreResist": true,
+   "desc": "Drops 6 hailstones spread apart, each dealing 8 damage and ignoring resistances."
+  },
+  {
+   "name": "Soaking Mantle",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 24,
+   "healAmount": 16,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Restores 16 health to you and every ally within 4 tiles."
+  },
+  {
+   "name": "Runoff Recovery",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you are hurt by anything but fire, you regain 3 health a second for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

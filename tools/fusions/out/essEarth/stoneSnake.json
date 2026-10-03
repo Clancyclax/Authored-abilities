@@ -1,0 +1,69 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Spat Grit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "consumeAffliction": true,
+   "desc": "Spits venom-wet gravel that deals 9 damage. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Adder in the Scree",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 250,
+   "maxMult": 1.6,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A strike from nowhere that deals 34 damage, up to 1.6 times that at maximum range, and leaves the target [Poisoned] for 3 damage a second for 6 seconds. Every hit is a critical hit."
+  },
+  {
+   "name": "Cast Skin",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "earth",
+   "cooldown": 30,
+   "cleanseCount": 2,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Removes up to 2 poison conditions from you. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Patient Poison",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 8% poison resistance for as long as you carry it."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneSkunk",
+ "fusions": [
+  {
+   "name": "Warning Spritz",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "desc": "Spits a stinking jet that deals 7 poison damage to the first enemy it meets, with a 30% chance to leave it [Weakened] for 5 seconds, draining its Power. You heal for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Rank Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 24,
+   "cooldown": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 128,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "healOnUse": 12,
+   "desc": "Lets off a stench, dealing 24 poison damage to every enemy within 4 tiles, ignoring resistances, and leaving them [Poisoned] for 3 damage a second for 6 seconds. You restore 12 health."
+  },
+  {
+   "name": "Musk Coat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "cooldown": 28,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 5,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Hard to Stomach",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 4
+   },
+   "desc": "When a non-fire blow hurts you, you regain 4 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

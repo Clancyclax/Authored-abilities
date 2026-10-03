@@ -1,0 +1,73 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Grasping Pitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 240,
+   "maxMult": 1.6,
+   "desc": "A flung clod that deals 4 damage, up to 1.6 times that at maximum range."
+  },
+  {
+   "name": "Eightfold Rockfall",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "earth",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 15,
+   "volleyCount": 6,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 7,
+   "range": 220,
+   "castTime": 0.4,
+   "knockback": 64,
+   "desc": "Hurls 6 stones at once, spread apart, each dealing 4 damage and knocking its target back 2 tiles."
+  },
+  {
+   "name": "Stone Limbs",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 45,
+   "summonKind": "totem",
+   "summonDmg": 5,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 14,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to raise a stone totem beside you for 14 seconds. It strikes enemies within 4 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Many Hands Brace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you inflict a condition, you gain a ward that absorbs 20% of your maximum health for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

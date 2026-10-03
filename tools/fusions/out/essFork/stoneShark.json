@@ -1,0 +1,69 @@
+{
+ "essence": "essFork",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Scent Taken",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "desc": "Needs one of your afflictions on the target and uses it up. A thrust that deals 9 damage, up to 1.8 times that at maximum range.",
+   "base": 9,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAffliction": true
+  },
+  {
+   "name": "Rushing Maw",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "desc": "Lunges the tines wide in a cone that deals 36 damage to everything caught in it, and 5% of a boss or elite target's maximum health.",
+   "base": 36,
+   "cooldown": 120,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05
+  },
+  {
+   "name": "Blood in the Water",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "blood",
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 8 health.",
+   "thornsFrac": 0.5,
+   "buffDuration": 8,
+   "lifeOnKill": 8,
+   "cooldown": 30
+  },
+  {
+   "name": "Taste of It",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "desc": "When you kill an enemy, you heal for 25% of the damage you deal for 6 seconds. Once every 8 seconds.",
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "isTriggered": true,
+   "cooldown": 8
+  }
+ ]
+}

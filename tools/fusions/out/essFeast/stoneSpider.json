@@ -1,0 +1,90 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Silk Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.12,
+   "desc": "Flicks a strand that deals 4 poison damage to the first enemy it meets, with a 35% chance to leave it [Slowed] for 4 seconds. You heal for 12% of the damage dealt."
+  },
+  {
+   "name": "Wrapped and Drained",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.6,
+   "leech": 0.25,
+   "desc": "Binds the target in silk, dealing 14 poison damage, leaving it 10% easier to wound for 4 seconds, using up every affliction you have on it and dealing 60% more damage for each one. You heal for 25% of the damage dealt."
+  },
+  {
+   "name": "Webbed Larder",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 180,
+   "summonKind": "trap",
+   "summonDuration": 60,
+   "summonDmg": 20,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 80,
+   "summonArmDelay": 0.2,
+   "trapDelivery": "spawned",
+   "healOnUse": 10,
+   "castTime": 1.2,
+   "desc": "Spins a trap onto the nearest enemy that waits 1 minute; the first 2 enemies to come within 3 tiles take 20 damage in a blast around it. You restore 10 health when you cast it."
+  },
+  {
+   "name": "Spiderling Pantry",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 150,
+   "familiarInterval": 1.4,
+   "familiarFamily": "insect",
+   "familiarCreatureName": "Larder Spiderling",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poison"
+   },
+   "desc": "Calls a bonded familiar of poison that fights beside you, striking for 3 damage. It also applies poison, dealing 2 damage per tick for 4 ticks."
+  }
+ ]
+}

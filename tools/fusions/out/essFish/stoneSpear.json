@@ -1,0 +1,71 @@
+{
+ "essence": "essFish",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Aimed Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 230,
+   "maxMult": 2.2,
+   "hpCostPct": 0.05,
+   "desc": "Throws a spear that deals 9 damage, up to 2.2 times that at maximum range. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Barbed Flight",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 7,
+   "cooldown": 14,
+   "isAoe": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 7,
+   "range": 230,
+   "knockback": 80,
+   "desc": "Looses 3 spears in a spread, each dealing 7 damage and knocking its target back 2.5 tiles."
+  },
+  {
+   "name": "Hurled Self",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "cooldown": 18,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Throws you instantly to a point up to 6 tiles away. Your movement speed rises 20% for 4s after you use it."
+  },
+  {
+   "name": "Point Struck",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 180
+   },
+   "desc": "Each critical hit sends a spear to the nearest enemy within 5.5 tiles, dealing 6 damage."
+  }
+ ]
+}

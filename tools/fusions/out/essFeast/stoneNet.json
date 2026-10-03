@@ -1,0 +1,86 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Cast Wide",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "desc": "Casts a weighted line that deals 7 water damage to the first enemy it meets, with a 40% chance to leave it [Slowed] for 4 seconds. You heal for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Drawn Tight",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 20,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 224,
+   "coneAngle": 0.8,
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mesh across the cone ahead, dealing 10 damage to everything caught in it and leaving them [Pinned] for 2 seconds. Your afflictions on each spread to enemies within 4 tiles of it."
+  },
+  {
+   "name": "Strung Awning",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 224,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "healOnUse": 12,
+   "desc": "Strings a mesh wall 7 tiles long that blocks enemies for 8 seconds. You restore 12 health when you cast it."
+  },
+  {
+   "name": "Catch Basin",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Each time you inflict a condition on an enemy, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

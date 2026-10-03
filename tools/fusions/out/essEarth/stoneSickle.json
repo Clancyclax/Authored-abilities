@@ -1,0 +1,76 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Harvest Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "A curved sweep of flint that deals 7 damage to every enemy within 3 tiles. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Crescent Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 340,
+   "radius": 9,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Throws a curved flint blade that deals 12 damage and leaves the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Gathered In",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "earth",
+   "cooldown": 30,
+   "healAmount": 22,
+   "healScope": "self",
+   "critChance": 0.1,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 22 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Reaper's Footing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your physical damage rises 25% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "essence": "essFish",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Windrow Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Rakes a ring around you that deals 11 damage to every enemy within 3.5 tiles and knocks them back 3 tiles."
+  },
+  {
+   "name": "Fine-Tooth Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 84,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "hpCostPct": 0.04,
+   "desc": "Drags a blow across the target for 8 damage and leaves it 10% easier to wound for 5 seconds. It costs 4% of your maximum health."
+  },
+  {
+   "name": "Tidy Silt",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "water",
+   "cooldown": 40,
+   "armorBonus": 0.15,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 15% for 12 seconds."
+  },
+  {
+   "name": "Gleaned Strength",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essGoat",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Curled Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Rolls into a spinning ball, dealing 12 damage to every enemy within 3 tiles and knocking each back 3 tiles."
+  },
+  {
+   "name": "Tuck and Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Jabs for 4 damage and leaves the target 6% easier to wound for 4 seconds. Its damage rises +5% for every 10% of your health already gone (max +25%)."
+  },
+  {
+   "name": "Seams Closed",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 36,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 26,
+   "shieldStrikes": 4,
+   "shieldDuration": 10,
+   "armorBonus": 0.06,
+   "desc": "Raises a barrier that absorbs the next 26 damage and holds for 10 seconds. Your armour rises by 6%."
+  },
+  {
+   "name": "Overlap",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.05,
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack before your health takes damage. Unfed, a stack fades every 10 seconds. Your armour rises by 5%."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Cloudburst Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Slams the ground, dealing 12 water damage to every enemy within 3 tiles and leaving them [Soaked] for 6 seconds. Your afflictions on each enemy spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Thunderhead",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "lightning",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "shocked",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Hurls a charged mass that deals 30 lightning damage to the first enemy it meets and leaves it [Shocked] for 4 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Washed Clear",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 45,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "desc": "Removes up to 3 conditions from you."
+  },
+  {
+   "name": "Rising Level",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. At 8 they all spend at once: you are healed for 3% of your maximum health per stack (24% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

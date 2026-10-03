@@ -1,0 +1,76 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Skipping Stones",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 7,
+   "chain": {
+    "count": 2,
+    "radius": 95,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 95,
+   "chainDamagePct": 0.6,
+   "desc": "Skips a flat stone across the ground that deals 4 damage and leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Dust-Kick Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 170,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "desc": "Kicks a cone of grit ahead of you, dealing 7 damage to everything caught in it. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Scree Sprint",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "earth",
+   "cooldown": 24,
+   "speedMult": 1.4,
+   "buffDuration": 6,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 40% and your dodge chance by 10% for 6 seconds."
+  },
+  {
+   "name": "Hard Ground Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "armorBonus": 0.05,
+   "desc": "Every 6 tiles you cover restores 6 stamina. Once every 5 seconds. Your armour also rises by 5%."
+  }
+ ]
+}

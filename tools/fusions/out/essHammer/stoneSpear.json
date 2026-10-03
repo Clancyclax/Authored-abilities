@@ -1,0 +1,71 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Hurled Maul",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "range": 256,
+   "maxMult": 2,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "desc": "Hurls the head at a target up to 8 tiles away for 30 damage, rising to twice that at full reach. It ignores armour."
+  },
+  {
+   "name": "Haft Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "strikes": 1,
+   "stunOnHit": 1.0,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A jab with the haft that deals 11 damage, stuns the target for 1 second and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Point Forward",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 6,
+   "dashDist": 128,
+   "desc": "A short burst of movement that carries you 4 tiles forward."
+  },
+  {
+   "name": "Dry Spell Spike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you go a while without a critical hit, your critical hit chance rises by 30% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

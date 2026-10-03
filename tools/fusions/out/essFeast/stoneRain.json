@@ -1,0 +1,85 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Light Drizzle",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "spammable": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.12,
+   "desc": "Flicks a spatter of rain that deals 4 water damage to the first enemy it meets, with a 30% chance to leave it [Soaked] for 5 seconds. You heal for 12% of the damage dealt."
+  },
+  {
+   "name": "Squall Front",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 224,
+   "coneAngle": 0.8,
+   "knockback": 96,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "leech": 0.15,
+   "desc": "A wall of rain deals 10 water damage to everything in the cone, knocks it back 3 tiles and leaves it [Soaked] for 5 seconds. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Cistern Drip",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 36,
+   "healScope": "ally",
+   "hotPerSec": 3,
+   "hotDuration": 12,
+   "desc": "Restores 3 health a second to the ally who needs it most, for 12 seconds."
+  },
+  {
+   "name": "Downspout",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you gain mana, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

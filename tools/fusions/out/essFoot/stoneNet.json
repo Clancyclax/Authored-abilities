@@ -1,0 +1,75 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Snare Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a bolt that hits the first enemy in its path for 12 damage, stuns it for 1 second and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Haul Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hauls in every enemy within 3.5 tiles, dealing 30 damage to each and leaving it [Slowed] for 4 seconds. The blow ignores their elemental resistances."
+  },
+  {
+   "name": "Gathered Slack",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 260,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Closing Mesh",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your damage rises by 12%."
+  }
+ ]
+}

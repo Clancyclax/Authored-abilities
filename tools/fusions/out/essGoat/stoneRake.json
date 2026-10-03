@@ -1,0 +1,76 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Gathered Scree",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 12,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Hurls a heap of raked scree that deals 30 damage to the first enemy it meets, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Tine Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "maxMult": 1.4,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.1,
+    "duration": 2
+   },
+   "desc": "Drags a tine across a target up to 4 tiles away, dealing 4 damage, up to 1.4 times that at full reach. It moves 10% slower for 2 seconds."
+  },
+  {
+   "name": "Gleaning",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 36,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Lean Pickings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "lifeOnKill": 3,
+   "desc": "When you kill an enemy, you regain 8 stamina. Once every 6 seconds. Each kill also restores 3 health."
+  }
+ ]
+}

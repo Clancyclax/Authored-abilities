@@ -1,0 +1,80 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Arm's Length",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "Reaches out to a target up to 5 tiles away, dealing 8 damage, up to 1.5 times that at full reach. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Eight-Way Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 13,
+   "range": 84,
+   "chargeTo": 160,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes you up to 5 tiles onto the target and deals 13 damage and leaves the target 10% easier to wound for 4 seconds. Each hit has a 60% chance to leave it [Hindered] for 6 seconds."
+  },
+  {
+   "name": "Slip the Knot",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "desc": "Removes up to 3 conditions from you."
+  },
+  {
+   "name": "Bolt Hole",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.35,
+    "rearmAbove": 0.5
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "dodgeBonus": 0.08,
+   "desc": "When your health falls below 35%, you regain 4 health a second for 6 seconds. Your dodge chance rises by 8%."
+  }
+ ]
+}

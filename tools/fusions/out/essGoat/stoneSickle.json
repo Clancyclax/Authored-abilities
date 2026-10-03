@@ -1,0 +1,76 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneSickle",
+  "fusions": [
+    {
+      "name": "Stubble Cut",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "slashing",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "A quick cut that deals 4 damage and makes the target [Bleeding] for 1 damage a second for 3 seconds."
+    },
+    {
+      "name": "Reaping Arc",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "slashing",
+      "role": "execute",
+      "base": 20,
+      "cooldown": 14,
+      "range": 192,
+      "maxMult": 1.6,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "requiresTargetBelow": 0.25,
+      "desc": "Throws a reaping arc at a target up to 6 tiles away, dealing 20 damage, up to 1.6 times that at full reach. Usable only on an enemy at or below 25% health."
+    },
+    {
+      "name": "Second Cutting",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "nature",
+      "cooldown": 30,
+      "healAmount": 18,
+      "critChance": 0.1,
+      "healScope": "self",
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Restores 18 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%). Each heal has a 10% chance to be critical."
+    },
+    {
+      "name": "Harvest Tally",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "slashing",
+      "isTriggered": true,
+      "cooldown": 5,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 5
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 2
+      },
+      "desc": "When you kill an enemy, your next 2 spells deal 25% more damage. Once every 5 seconds."
+    }
+  ]
+}

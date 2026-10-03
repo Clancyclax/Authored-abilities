@@ -1,0 +1,75 @@
+{
+ "essence": "essFish",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Silk Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a strand of silk that deals 4 damage. Each hit has a 40% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Web Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 18,
+   "range": 144,
+   "coneAngle": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "desc": "Bursts a web out in a cone 4.5 tiles long that deals 11 damage to everything in it and stuns it for 1 second."
+  },
+  {
+   "name": "Anchored Lines",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 50,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "desc": "Increases your stamina recovery by 50% for 15 seconds."
+  },
+  {
+   "name": "Web Watcher",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.4,
+   "familiarFamily": "spider",
+   "familiarCreatureName": "Web Spider",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Calls a bonded web spider that fights beside you, striking for 4 damage every 1.4 seconds within 5 tiles. It leaves [Poisoned] for 1 damage a second for 5 seconds."
+  }
+ ]
+}

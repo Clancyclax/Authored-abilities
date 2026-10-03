@@ -1,0 +1,72 @@
+{
+  "essence": "essGun",
+  "stone": "stoneSloth",
+  "fusions": [
+    {
+      "name": "Inevitable Round",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "long",
+      "base": 36,
+      "cooldown": 120,
+      "range": 224,
+      "maxMult": 2,
+      "bossPct": 0.06,
+      "desc": "Fires a round that deals 36 damage, up to 2 times that at maximum range, plus 6% of a boss or elite's maximum health."
+    },
+    {
+      "name": "Idle Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "debuff": {
+        "key": "cooldownSlow",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "spammable": true,
+      "desc": "Fires a round that deals 5 damage, with a 30% chance of [Stalled] for 4 seconds."
+    },
+    {
+      "name": "Hung Rest",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "nature",
+      "cooldown": 45,
+      "hotPerSec": 3,
+      "hotDuration": 10,
+      "healScope": "self",
+      "desc": "Restores 3 health a second to you for 10 seconds."
+    },
+    {
+      "name": "Unbothered Aim",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "fullHealth",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.25,
+        "strikes": 1
+      },
+      "desc": "While you are at full health, your next strike gains 25% critical hit chance. Once every 10 seconds."
+    }
+  ]
+}

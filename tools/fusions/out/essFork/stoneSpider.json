@@ -1,0 +1,82 @@
+{
+ "essence": "essFork",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Spun Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "medium",
+   "desc": "Sprays a cone of silk that deals 10 damage to everything caught in it and [Slows] each for 4 seconds. Your afflictions on them spread to every enemy within 4 tiles.",
+   "base": 10,
+   "cooldown": 16,
+   "range": 150,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 128
+  },
+  {
+   "name": "Bound Prey",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "desc": "Casts a silk-wrapped tine that deals 36 damage and makes the target [Poisoned] for 3 damage a second for 6 seconds. It also deals 5% of a boss or elite target's maximum health.",
+   "base": 36,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "bossPct": 0.05
+  },
+  {
+   "name": "Strand Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "desc": "Strings a line of silk 5 tiles long ahead of you for 8 seconds that enemies cannot pass.",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "cooldown": 25
+  },
+  {
+   "name": "Anchored Threads",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "desc": "Every hit you land binds a stack of silk on that enemy, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 6 seconds.",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackOn": "enemy",
+   "stackSpend": "full",
+   "stackScale": 1,
+   "stackIcon": "stackVenom"
+  }
+ ]
+}

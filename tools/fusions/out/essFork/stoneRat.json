@@ -1,0 +1,93 @@
+{
+ "essence": "essFork",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Gutter Contagion",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "desc": "Flicks a filthy tine that deals 4 damage and has a 25% chance to leave the target [Diseased] for 6 seconds, then hops to 2 more enemies within 3 tiles for 60% of the damage.",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Scurrying Horde",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "desc": "A mob pours out around you, dealing 32 damage to every enemy within 3.5 tiles. It ignores resistances.",
+   "base": 32,
+   "cooldown": 100,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true
+  },
+  {
+   "name": "Hold-Fast Pack",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "desc": "Sends out a swarm for 14 seconds that gnaws an enemy within 4 tiles for 3 damage every second, each bite with a 30% chance to leave it [Diseased] for 5 seconds.",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 14,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 50,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Last Off the Ship",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your health falls below 30%, you regain 4 health a second for 6 seconds. Once every 60 seconds.",
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "isTriggered": true,
+   "cooldown": 60
+  }
+ ]
+}

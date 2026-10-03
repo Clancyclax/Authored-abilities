@@ -1,0 +1,79 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Unhurried Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 20,
+   "cooldown": 20,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1.6,
+   "sunder": {
+    "amount": 0.14,
+    "duration": 6
+   },
+   "desc": "A slow, heavy blow that deals 20 damage and stuns the target for 1.6 seconds, leaving it 14% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Slow Reckoning",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hits every enemy within 3.5 tiles, dealing 7 damage to each, with a 40% chance each of [Stalled] for 6 seconds, its abilities coming back slower. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Settled Weight",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "desc": "Reduces the damage you take by 20% for 12 seconds."
+  },
+  {
+   "name": "Arrives Eventually",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

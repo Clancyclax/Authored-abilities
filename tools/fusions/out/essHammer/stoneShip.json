@@ -1,0 +1,72 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneShip",
+ "fusions": [
+  {
+   "name": "Ballast Heave",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "knockback": 112,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Heaves a ballast weight that deals 14 damage to the first enemy it meets and knocks it back 3.5 tiles."
+  },
+  {
+   "name": "Broadside",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "long",
+   "base": 13,
+   "cooldown": 80,
+   "ignoreResist": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 360,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 3 heavy weights at once, spread apart, each dealing 13 damage and ignoring resistances."
+  },
+  {
+   "name": "Full Canvas",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 40,
+   "speedMult": 1.35,
+   "buffDuration": 10,
+   "desc": "Increases your movement speed by 35% for 10 seconds."
+  },
+  {
+   "name": "Swell Rider",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

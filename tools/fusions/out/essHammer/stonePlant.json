@@ -1,0 +1,81 @@
+{
+ "essence": "essHammer",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Driven Stake",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 2,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bruised"
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A stake driven home deals 7 damage and leaves the target [Pinned] for 2 seconds and [Bruised] for 1 damage a second for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Taproot Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "bossPct": 0.05,
+   "healOnUse": 5,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Drives the head into the ground, dealing 30 damage to every enemy within 3 tiles and restoring 5 health to you. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Slow Sap",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Fed by the Fallen",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "Each time you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

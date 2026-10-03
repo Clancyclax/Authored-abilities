@@ -1,0 +1,75 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Spade Edge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "basic",
+   "base": 6,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Drives a rock edge into the target, dealing 6 damage and leaving it 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Hurled Clod",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.1,
+   "range": 230,
+   "maxMult": 1.8,
+   "hpCostPct": 0.04,
+   "desc": "A hurled clod that deals 8 damage, up to 1.8 times that at maximum range, and costs 4% of your maximum health."
+  },
+  {
+   "name": "Buried Charge",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 120,
+   "summonKind": "trap",
+   "summonDmg": 24,
+   "summonDuration": 40,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Takes 1 second to bury a trap at the nearest enemy. It waits up to 40 seconds, and the first enemy to come within 2 tiles sets it off: it deals 24 damage in a blast around it."
+  },
+  {
+   "name": "Spoil Heap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Each kill restores 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essEarth",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Tine Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "desc": "Drags a stone tine across the target, dealing 5 damage and leaving it 6% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Gathered Windrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 96,
+   "desc": "Sweeps the ground into a ring that deals 11 damage to every enemy within 3.5 tiles and leaves each [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on each spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Heaped Berm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "desc": "Heaps a 6-tile berm of earth across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Gleaned Tempo",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 10,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackVenom",
+   "desc": "Every time you land a hit, a stack builds on you, up to 10. The next ability you use spends them all: you move and attack 3% faster per stack (27% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

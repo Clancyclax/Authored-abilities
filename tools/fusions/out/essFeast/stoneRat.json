@@ -1,0 +1,84 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Plague Courier",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "leech": 0.25,
+   "desc": "Sends a diseased rat that deals 7 poison damage to the first enemy it meets and heals you for 25% of the damage dealt. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Gnawing Horde",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "long",
+   "base": 6,
+   "cooldown": 60,
+   "isAoe": true,
+   "speed": 340,
+   "radius": 6,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "range": 192,
+   "reachUnits": 192,
+   "volleyCount": 5,
+   "volleySpread": 0.7,
+   "ignoreResist": true,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 5,
+    "label": "Gnawed"
+   },
+   "desc": "Looses 5 rats at once, spread apart, each dealing 6 poison damage and ignoring resistances. 20% of the damage dealt returns to you as healing over 5 seconds."
+  },
+  {
+   "name": "Cellar Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 90,
+   "summonKind": "swarm",
+   "summonDuration": 20,
+   "summonDmg": 4,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "lifeOnKill": 3,
+   "castTime": 1,
+   "desc": "Sends out a swarm of rats that lasts 20 seconds, biting enemies within 4 tiles for 4 damage every 1.2 seconds. Each kill restores 3 health to you."
+  },
+  {
+   "name": "Gnawed Free",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 5,
+    "duration": 6
+   },
+   "desc": "When your health falls below half, you regain 5 health a second for 6 seconds. Once every 40 seconds."
+  }
+ ]
+}

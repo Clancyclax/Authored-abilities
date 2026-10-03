@@ -1,0 +1,70 @@
+{
+ "essence": "essDuck",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Folded Flock",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "wind",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 15,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 224,
+   "spreadAfflictions": 96,
+   "desc": "Launches 5 folded gliders in a fan, each dealing 4 damage. Your afflictions on a target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Penned Verdict",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "wind",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.2,
+   "range": 192,
+   "reachUnits": 192,
+   "maxMult": 1.3,
+   "consumeAffliction": true,
+   "desc": "Strikes a target up to 6 tiles away for 9 damage, rising to 1.3 times that at full reach. Needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Fresh Edition",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "cooldown": 45,
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your cast speed by 25% for 12 seconds."
+  },
+  {
+   "name": "Blank Page",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "The moment your mana is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

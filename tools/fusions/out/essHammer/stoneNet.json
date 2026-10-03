@@ -1,0 +1,83 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Drawn Cord",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Draws a 5-tile line of cord across the ground for 5 seconds, dragging enemies near it inward. It deals 6 damage to each enemy it catches and slows it by 20% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Weighted Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Hurls a weighted bundle that deals 30 damage to the first enemy it meets and leaves it [Pinned] for 3 seconds, then bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Gathered In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "desc": "Pulls up to 6 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Tightening Weave",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "Each time you inflict a condition, your physical damage rises 30% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneShark",
+  "fusions": [
+    {
+      "name": "Smell of Blood",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "piercing",
+      "role": "execute",
+      "base": 24,
+      "cooldown": 15,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 3,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "requiresTargetBelow": 0.3,
+      "scaleOn": "targetAfflictions",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "A strike that deals 24 damage and makes the target [Bleeding] for 3 damage a second for 5 seconds. Its damage rises +8% per affliction the target carries (max +40%). Usable only on an enemy at or below 30% health."
+    },
+    {
+      "name": "Breaching Charge",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargeTo": 224,
+      "desc": "Rushes you up to 7 tiles, then deals 12 damage to every enemy within 3 tiles of where you land."
+    },
+    {
+      "name": "Feeding Run",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "physical",
+      "cooldown": 45,
+      "powerMult": 1.35,
+      "buffDuration": 12,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 5
+      },
+      "desc": "Increases your damage by 35% for 12 seconds. For 5 seconds after using it, you move 15% faster."
+    },
+    {
+      "name": "Trailing Prey",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.15,
+      "desc": "Against enemies at low health, your damage rises by 15%."
+    }
+  ]
+}

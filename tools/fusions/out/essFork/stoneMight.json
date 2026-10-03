@@ -1,0 +1,70 @@
+{
+ "essence": "essFork",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Overhand Drive",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "desc": "A two-handed thrust that deals 14 damage, leaves the target 15% easier to wound for 6 seconds and knocks it back 3 tiles.",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96
+  },
+  {
+   "name": "Pinning Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "desc": "Drives the butt of the haft into the ground, dealing 30 damage to every enemy within 3.5 tiles. Every hit is a critical hit.",
+   "base": 30,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true
+  },
+  {
+   "name": "Weight Behind It",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "desc": "Increases your damage by 35% for 12 seconds.",
+   "powerMult": 1.35,
+   "buffDuration": 12,
+   "cooldown": 45
+  },
+  {
+   "name": "Leaning In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you strike, your physical damage rises by 30% for 4 seconds. Once every 10 seconds.",
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "isTriggered": true,
+   "cooldown": 10
+  }
+ ]
+}

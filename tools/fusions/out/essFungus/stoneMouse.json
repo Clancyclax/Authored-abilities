@@ -1,0 +1,86 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneMouse",
+  "fusions": [
+    {
+      "name": "Skittering Blight",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 12,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "chargeTo": 192,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 6
+      },
+      "debuff": {
+        "key": "disease",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "You rush to the target, then bite for 12 damage and leave it 12% easier to wound for 6 seconds. The hit has a 40% chance to leave it [Diseased] for 6 seconds."
+    },
+    {
+      "name": "Cellar Dust",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 160,
+      "coneAngle": 0.75,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 4,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Kicks up a cone of spores 5 tiles long that deals 7 damage to everything caught in it. Each hit has a 30% chance to leave the target [Slowed] for 3 seconds. You hold 4 charges, and kills give them back."
+    },
+    {
+      "name": "Underfoot Dash",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "poison",
+      "cooldown": 24,
+      "speedMult": 1.4,
+      "buffDuration": 6,
+      "dodgeBonus": 0.1,
+      "desc": "Increases your movement speed by 40% for 6 seconds, with 10% more dodge chance for it."
+    },
+    {
+      "name": "Burrowed Colony",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "life",
+      "isTriggered": true,
+      "cooldown": 60,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 60
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.25,
+        "duration": 6
+      },
+      "desc": "When your health falls below 35%, a ward of mycelium absorbs damage equal to 25% of your maximum health for 6 seconds. Once every 60 seconds."
+    }
+  ]
+}

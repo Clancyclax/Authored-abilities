@@ -1,0 +1,75 @@
+{
+ "essence": "essFish",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Spadework",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 84,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Digs the blade in for 4 damage and leaves the target 8% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Landslide",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Heaves a slide of silt over every enemy within 3.5 tiles, dealing 30 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Pit Dug Ahead",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "rock",
+   "cooldown": 360,
+   "summonKind": "trap",
+   "summonDuration": 120,
+   "summonDmg": 24,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 88,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned",
+   "desc": "Digs a pit under the nearest enemy. It waits 2 minutes, and the first 2 enemies to come within 3 tiles take 24 damage in a blast around it."
+  },
+  {
+   "name": "Buried Deep",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 90,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 90
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health runs low, you regain 4 health a second for 5 seconds. Once every 90 seconds."
+  }
+ ]
+}

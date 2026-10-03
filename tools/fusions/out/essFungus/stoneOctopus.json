@@ -1,0 +1,86 @@
+{
+ "essence": "essFungus",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Reaching Tendrils",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "medium",
+   "base": 3,
+   "cooldown": 14,
+   "volleyCount": 8,
+   "volleySpread": 0.9,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends out 8 tendrils of spores at once, spread apart, each dealing 3 damage with a 40% chance to leave the target [Poisoned] for 6 seconds. Your afflictions on a target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Final Squeeze",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.5,
+   "executeLadder": true,
+   "desc": "Squeezes a target at or below 25% health for 14 damage, using up every affliction on it and adding 0.5 times their remaining damage."
+  },
+  {
+   "name": "Mottled Cap",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "life",
+   "cooldown": 35,
+   "stealthDuration": 7,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "healOnUse": 12,
+   "desc": "Veils you for 7 seconds, and you move 10% faster while it lasts. Enemies notice you far later, and the veil breaks the moment you attack. You regain 12 health."
+  },
+  {
+   "name": "Inkcap Familiar",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 3,
+   "familiarRange": 160,
+   "familiarInterval": 1.4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "familiarFamily": "slime",
+   "familiarCreatureName": "Inkcap",
+   "desc": "A bonded inkcap familiar fights beside you, striking an enemy within 5 tiles for 3 damage every 1.4 seconds. Each strike leaves it [Poisoned] for 2 damage a second for 4 seconds."
+  }
+ ]
+}

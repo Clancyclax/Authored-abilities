@@ -1,0 +1,81 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Pry Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "desc": "Pries at the target's guard, dealing 4 damage and leaving it 5% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Pocketed Pebble",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a pebble past the plates, dealing 30 damage and ignoring armour, then it leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Clamber",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 14,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Sleight of Hoof",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Each time you inflict a condition, you regain 5 stamina. Once every 6 seconds. Your dodge chance rises by 5%."
+  }
+ ]
+}

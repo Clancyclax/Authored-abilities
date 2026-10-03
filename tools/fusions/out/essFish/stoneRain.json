@@ -1,0 +1,74 @@
+{
+ "essence": "essFish",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Drizzle Mist",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes a fine mist in a cone 4 tiles long that deals 4 damage to everything in it. Each hit has a 30% chance of [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Marked Downpour",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 220,
+   "maxMult": 1.5,
+   "guaranteedCrit": true,
+   "desc": "Drops a column of water that deals 30 damage, up to 1.5 times that at maximum range. It is always a critical hit."
+  },
+  {
+   "name": "Soothing Fall",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 18,
+   "range": 110,
+   "healAmount": 16,
+   "healScope": "party",
+   "desc": "Restores 16 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Storm Sense",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "When something other than fire hurts you, you gain a ward that soaks 20% of your maximum health for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

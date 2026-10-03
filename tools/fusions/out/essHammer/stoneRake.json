@@ -1,0 +1,68 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Tine Scrape",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "desc": "A short drag of the head that deals 5 damage and leaves the target 6% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Sweep Together",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "spreadAfflictions": 128,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sweeps the head around you, dealing 12 damage to every enemy within 3 tiles. Your afflictions on each enemy spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Long Handle",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 90,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Windrow Tally",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Each time you kill an enemy, you recover 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneShip",
+ "fusions": [
+  {
+   "name": "Broadside",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 210,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2.2,
+   "knockback": 96,
+   "desc": "A thrown blow that deals 16 damage, up to 2.2 times that at maximum range, and knocks the target back 3 tiles."
+  },
+  {
+   "name": "Swell and Break",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Hits every enemy within 4 tiles, dealing 28 damage to each and ignoring their armour. Its damage rises 8% for each ally within 5.5 tiles of you (max 32%)."
+  },
+  {
+   "name": "Fair Wind",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "water",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.12,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 12% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Sea Legs",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your next strike gains 15% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

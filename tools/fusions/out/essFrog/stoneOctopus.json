@@ -1,0 +1,77 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Inked Mouthful",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 8,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits ink that deals 8 damage and has a 50% chance to leave the target [Blunted] for 6 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Eight-Way Splash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "base": 2,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 180,
+   "coneAngle": 1.1,
+   "isAoe": true,
+   "aoeBand": "huge",
+   "desc": "Looses 8 jets in a wide fan, dealing 2 damage to everything caught in it."
+  },
+  {
+   "name": "Jet Kick",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 7,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "A short jetting burst that carries you 5 tiles forward. You move 25% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Arm Reach",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "familiarFamily": "aquatic",
+   "familiarCreatureName": "Inkling",
+   "desc": "Calls a bonded familiar of water that fights beside you, striking for 4 damage. It also leaves [Poisoned], dealing 2 damage per tick for 4 ticks."
+  }
+ ]
+}

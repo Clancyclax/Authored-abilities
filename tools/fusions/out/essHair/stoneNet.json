@@ -1,0 +1,75 @@
+{
+ "essence": "essHair",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Drawstring Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Casts a mesh of strands over every enemy within 3.5 tiles, dealing 12 damage and stunning each for 1.2 seconds."
+  },
+  {
+   "name": "Hauled Weft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Casts a strand at the first enemy it meets for 7 damage, then on to 2 more enemies within 3 tiles, each taking 60% of that. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Picket Weave",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "desc": "Raises a wall of woven strands 6 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Snagging Loops",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every time you hit an enemy, a stack builds on it, up to 5. When you reach 5, they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

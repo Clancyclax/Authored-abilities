@@ -1,0 +1,68 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneMight",
+  "fusions": [
+    {
+      "name": "Dislodge",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "blunt",
+      "role": "medium",
+      "base": 16,
+      "cooldown": 14,
+      "range": 192,
+      "maxMult": 2,
+      "reachUnits": 192,
+      "rangeBand": "medium",
+      "knockback": 96,
+      "desc": "Hurls your whole weight at a target up to 6 tiles away, dealing 16 damage, up to twice that at full reach, and knocking it back 3 tiles."
+    },
+    {
+      "name": "Quarry Fall",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "rock",
+      "role": "long",
+      "base": 34,
+      "cooldown": 100,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "guaranteedCrit": true,
+      "desc": "Stamps down, dealing 34 damage to every enemy within 3 tiles. Every hit is a critical hit."
+    },
+    {
+      "name": "Counter-Butt",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "physical",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.6,
+      "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+    },
+    {
+      "name": "Rolling Scree",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 5
+      },
+      "armorBonus": 0.06,
+      "desc": "When you kill an enemy, your damage rises 30% for 5 seconds. Once every 8 seconds. Your armour rises by 6%."
+    }
+  ]
+}

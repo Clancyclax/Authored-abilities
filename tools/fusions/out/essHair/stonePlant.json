@@ -1,0 +1,75 @@
+{
+ "essence": "essHair",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Creeping Runners",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Sends runners of hair along the ground to every enemy within 3.5 tiles, dealing 12 nature damage and leaving each [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Pinning Tendril",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A tendril of hair drives into a target up to 6 tiles away for 7 nature damage, rising to 1.5 times that at full reach. Each hit has a 30% chance to leave it [Pinned] for 2 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "name": "Greening Patch",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "desc": "Roots your strands into the ground where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Sap Rise",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "armor",
+   "amount": 0.06,
+   "regenPerSec": 0.8,
+   "desc": "Your armour rises by 6%. It also regenerates 0.8 health a second, permanently."
+  }
+ ]
+}

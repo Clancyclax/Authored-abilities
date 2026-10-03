@@ -1,0 +1,74 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Scent Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blood",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to a bite that deals 24 damage. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Circling Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Churns the water around you, dealing 12 damage to every enemy within 3 tiles and making each [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on each spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Gorge",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "blood",
+   "cooldown": 40,
+   "healAmount": 22,
+   "critChance": 0.1,
+   "healScope": "self",
+   "desc": "Restores 22 health at once to whoever in your party is worst off."
+  },
+  {
+   "name": "Blood in the Water",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 8
+   },
+   "desc": "When you kill an enemy, 25% of the damage you deal heals you for 8 seconds. Once every 12 seconds."
+  }
+ ]
+}

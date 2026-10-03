@@ -1,0 +1,78 @@
+{
+ "essence": "essFish",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Cutting Crescent",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 90,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Cuts a target at or below 30% health for 16 damage, consuming every affliction on it for 1.4 times their remaining damage. Your movement speed rises 15% for 4s after you use it."
+  },
+  {
+   "name": "Scything Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 128,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Sweeps a cone 4 tiles long that deals 4 damage to everything in it. Its damage rises 8% for each ally within 5.5 tiles, up to 40%."
+  },
+  {
+   "name": "Windfall Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "nature",
+   "cooldown": 18,
+   "healAmount": 20,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 20 health to you. Its healing rises 8% for every tenth of your health already gone, up to 40%."
+  },
+  {
+   "name": "Reaped Momentum",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises 30% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

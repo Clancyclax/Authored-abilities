@@ -1,0 +1,73 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Snare Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a ring around you, dealing 10 damage to every enemy within 3 tiles; each hit has a 50% chance to leave the target [Slowed] for 6 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Weighted Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "chargesMax": 4,
+   "desc": "Throws a weighted line at a target up to 6 tiles away, dealing 8 damage, up to 1.6 times that at full reach. Anything struck moves 15% slower for 2 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Drawn Tight",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Knotted Odds",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying a condition, your damage rises by 12%."
+  }
+ ]
+}

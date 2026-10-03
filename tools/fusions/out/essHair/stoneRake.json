@@ -1,0 +1,77 @@
+{
+ "essence": "essHair",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Comb Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "hpCostPct": 0.04,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Drags a comb of strands across the target at a cost of 4% of your maximum health, dealing 9 slashing damage and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Windrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "Sweeps a strand across the ground into the first enemy it meets, dealing 28 damage. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Gather In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Drags up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Gleanings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "lifeOnKill": 3,
+   "desc": "When you kill an enemy, you regain 6 stamina and 3 health. Once every 3 seconds."
+  }
+ ]
+}

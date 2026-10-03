@@ -1,0 +1,71 @@
+{
+ "essence": "essFork",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Thorn Seed",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "desc": "Spits a thorned seed that deals 4 damage and has a 30% chance to leave the target [Slowed] for 3 seconds.",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Briar Stand",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "desc": "Plants the tines and raises briars that deal 30 damage to every enemy within 3.5 tiles. Your party deals 20% more damage for 12 seconds after it hits.",
+   "base": 30,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   }
+  },
+  {
+   "name": "Rooted Tine",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "nature",
+   "desc": "Plants the haft and raises a growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it.",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "cooldown": 30
+  },
+  {
+   "name": "Deep Taproot",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "desc": "Your maximum health rises by 10%. You also regenerate 0.6 health a second, permanently.",
+   "buffKind": "maxHp",
+   "amount": 0.1,
+   "regenPerSec": 0.6
+  }
+ ]
+}

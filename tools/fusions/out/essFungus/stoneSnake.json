@@ -1,0 +1,71 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Barbed Spit",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 8,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "speed": 360,
+      "radius": 8,
+      "desc": "Spits a spore that deals 4 damage and leaves the target [Poisoned] for 2 damage a second for 8 seconds."
+    },
+    {
+      "name": "Venom Reckoning",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "poison",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 16,
+      "range": 84,
+      "reachUnits": 84,
+      "rangeBand": "melee",
+      "stackMult": 0.7,
+      "requiresTargetBelow": 0.25,
+      "consumeAfflictionsPer": 0.7,
+      "executeLadder": true,
+      "desc": "Strikes a target at or below 25% health for 16 damage, using up every affliction on it and adding 0.7 times their remaining damage."
+    },
+    {
+      "name": "Coiled Venom",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "poison",
+      "cooldown": 40,
+      "buffStat": "dmg_poison",
+      "buffAmount": 0.3,
+      "buffDuration": 12,
+      "healOnUse": 10,
+      "desc": "Increases your poison damage by 30% for 12 seconds and restores 10 health."
+    },
+    {
+      "name": "Venom Tolerance",
+      "kind": "passive",
+      "category": "affliction",
+      "template": "virulence",
+      "element": "poison",
+      "resist": {
+        "element": "poison",
+        "amount": 0.1
+      },
+      "regenPerSec": 0.8,
+      "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 10% poison resistance and regenerate 0.8 health a second."
+    }
+  ]
+}

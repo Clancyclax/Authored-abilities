@@ -1,0 +1,68 @@
+{
+  "essence": "essFungus",
+  "stone": "stonePaper",
+  "fusions": [
+    {
+      "name": "Illegible Mould",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 12,
+      "range": 160,
+      "coneAngle": 0.75,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "spreadAfflictions": 112,
+      "debuff": {
+        "key": "disease",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Breathes a smear of spores 5 tiles long that deals 11 damage to everything caught in it, each hit with a 40% chance to leave the target [Diseased] for 6 seconds. Your afflictions on a target spread to every enemy within 3.5 tiles."
+    },
+    {
+      "name": "Smeared Print",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "leech": 0.15,
+      "speed": 360,
+      "radius": 8,
+      "desc": "Presses a spore print onto the target that deals 4 damage. You heal for 15% of the damage dealt."
+    },
+    {
+      "name": "Marginal Notes",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "life",
+      "cooldown": 50,
+      "buffStat": "healingReceived",
+      "buffAmount": 0.4,
+      "buffDuration": 14,
+      "healOnUse": 10,
+      "desc": "Healing you receive rises 40% for 14 seconds, and you regain 10 health."
+    },
+    {
+      "name": "Cross-Reference",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "poison",
+      "condition": "vsDebuffed",
+      "bonusKind": "dmg",
+      "amount": 0.12,
+      "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+    }
+  ]
+}

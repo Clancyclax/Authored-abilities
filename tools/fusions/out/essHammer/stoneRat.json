@@ -1,0 +1,86 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Gnawing Pound",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "spammable": true,
+   "stackMult": 0.8,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "range": 90,
+   "reachUnits": 90,
+   "rangeBand": "melee",
+   "desc": "Needs one of your afflictions on the target, and uses it up. Pounds the target for 7 damage, consuming every affliction on it and adding 0.8 times their remaining damage to the blow."
+  },
+  {
+   "name": "Pest Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 14,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "speed": 340,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Looses 4 gnawing pests at once, spread apart, each dealing 6 poison damage with a 35% chance to leave the target [Diseased] for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Last Off the Ship",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 20,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Survivor's Share",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you regain 4 health a second for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

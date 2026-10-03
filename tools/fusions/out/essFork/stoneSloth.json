@@ -1,0 +1,79 @@
+{
+ "essence": "essFork",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Eventual Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "desc": "A slow, certain thrust that deals 15 damage, stuns the target for 1.4 seconds and leaves it [Hindered] for 6 seconds.",
+   "base": 15,
+   "cooldown": 20,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "stunOnHit": 1.4,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Unhurried Verdict",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "desc": "Settles the haft and thrusts, dealing 40 damage, up to 2 times that at maximum range. Every hit is a critical hit.",
+   "base": 40,
+   "cooldown": 120,
+   "range": 224,
+   "maxMult": 2,
+   "reachUnits": 224,
+   "rangeBand": "long",
+   "guaranteedCrit": true
+  },
+  {
+   "name": "Lie Still",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "desc": "Restores 2 health a second to you for 12 seconds.",
+   "hotPerSec": 2,
+   "hotDuration": 12,
+   "healScope": "self",
+   "cooldown": 40
+  },
+  {
+   "name": "Rested at Last",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your stamina runs out, you restore 15 stamina. Once every 60 seconds.",
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "isTriggered": true,
+   "cooldown": 60
+  }
+ ]
+}

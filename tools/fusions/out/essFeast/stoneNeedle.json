@@ -1,0 +1,74 @@
+{
+ "essence": "essFeast",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Thread the Gap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "hpCostPct": 0.05,
+   "leech": 0.2,
+   "desc": "Costs 5% of your maximum health. Throws a needle that deals 8 damage, up to 1.8 times that at maximum range. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Seam Ripper",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "leech": 0.2,
+   "desc": "A thin thrust that deals 28 damage, ignores armour and leaves the target 20% easier to wound for 8 seconds. You heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Darned Quick",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 16,
+   "healAmount": 24,
+   "critChance": 0.3,
+   "healScope": "ally",
+   "desc": "Restores 24 health to the ally who needs it most, with a 30% chance to heal critically."
+  },
+  {
+   "name": "Sharp After Supper",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you gain health, your critical chance rises by 30% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

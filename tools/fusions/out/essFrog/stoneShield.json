@@ -1,0 +1,67 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Rebuff",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Shoves outward, dealing 12 damage to every enemy within 3 tiles and knocking each back 3 tiles."
+  },
+  {
+   "name": "Spare Plank",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 340,
+   "radius": 9,
+   "chargesMax": 3,
+   "desc": "Hurls a plank that deals 8 damage to the first enemy it meets. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Thrown Back",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source for 8 seconds."
+  },
+  {
+   "name": "Glancing Hide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When you are hurt by anything but fire, you gain a ward that soaks 25% of your maximum health for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

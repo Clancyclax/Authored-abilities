@@ -1,0 +1,85 @@
+{
+ "essence": "essFrog",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Flicked Pebble",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a pebble that deals 4 damage, then hops to 1 more enemy within 3 tiles for 60% of the damage."
+  },
+  {
+   "name": "Lift the Purse",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 96,
+   "desc": "A quick tongue-snatch that deals 12 damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and 15% easier to wound for 6 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Vine Swing",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "nature",
+   "cooldown": 9,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. Using it increases your movement speed by 15% for 3 seconds."
+  },
+  {
+   "name": "Sticky Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you land a critical hit, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

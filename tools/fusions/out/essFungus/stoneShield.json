@@ -1,0 +1,75 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Capped Shove",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "knockback": 96,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 5
+      },
+      "desc": "Shoves with a hard cap for 12 damage, knocking the target back 3 tiles and leaving it 15% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Venting Gills",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "poison",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "hpCostPct": 0.04,
+      "leech": 0.3,
+      "desc": "Vents spores in a ring, dealing 8 damage to every enemy within 3 tiles and costing 4% of your maximum health. You heal for 30% of the damage dealt."
+    },
+    {
+      "name": "Bracket Barrier",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "life",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 25,
+      "shieldStrikes": 4,
+      "shieldDuration": 10,
+      "desc": "Raises a barrier that absorbs the next 25 damage and holds for 10 seconds."
+    },
+    {
+      "name": "Parasol Veil",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "life",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 6
+      },
+      "desc": "When you take non-fire damage, a ward absorbs damage equal to 20% of your maximum health for 6 seconds. Once every 30 seconds."
+    }
+  ]
+}

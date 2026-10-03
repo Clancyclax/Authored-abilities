@@ -1,0 +1,73 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneRat",
+  "fusions": [
+    {
+      "name": "Rind Rasp",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "spammable": true,
+      "range": 80,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "chargesMax": 5,
+      "desc": "Gnaws at the target, dealing 8 damage and leaving it 8% easier to wound for 4 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+    },
+    {
+      "name": "Flung Refuse",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "speed": 380,
+      "radius": 7,
+      "reachUnits": 320,
+      "rangeBand": "long",
+      "stunOnHit": 1,
+      "desc": "Flings rubbish that deals 12 poison damage to the first enemy it meets and stuns it for 1 second."
+    },
+    {
+      "name": "Gnawing Horde",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "poison",
+      "cooldown": 60,
+      "summonKind": "swarm",
+      "summonDuration": 15,
+      "summonDmg": 4,
+      "summonInterval": 1.2,
+      "summonRange": 128,
+      "desc": "Calls a swarm that fights beside you for 15 seconds, striking for 4 damage every 1.2 seconds against enemies within 4 tiles."
+    },
+    {
+      "name": "Scavenged Strength",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "gainHealth",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.25,
+        "duration": 4
+      },
+      "desc": "When you gain health, your damage rises 25% for 4 seconds. Once every 8 seconds."
+    }
+  ]
+}

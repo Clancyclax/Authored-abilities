@@ -1,0 +1,70 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Backwash Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "desc": "A wing slam that deals 14 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Takeoff Gust",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 160,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.04,
+   "desc": "Beats both wings in a cone 5 tiles long, dealing 8 damage to every enemy in it. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Settled Mass",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "dodgeBonus": 0.08,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 25% and your dodge chance by 8% for 12 seconds."
+  },
+  {
+   "name": "Heavy Flyer",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "Every few tiles you cover, your damage rises 30% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

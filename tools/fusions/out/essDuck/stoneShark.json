@@ -1,0 +1,79 @@
+{
+ "essence": "essDuck",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Scent Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 90,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "chargeTo": 160,
+   "desc": "Rushes up to 5 tiles to a target and bites for 12 damage, making it [Bleeding] for 3 damage a second for 5 seconds and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Feeding Circle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Whirls through the water, dealing 28 damage to every enemy within 3.5 tiles, 10% more for each affliction on it (up to 40%). Also deals 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Frenzied Strokes",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 50,
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your critical damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Gorge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your attacks heal you for 25% of the damage they deal for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

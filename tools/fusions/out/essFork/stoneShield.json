@@ -1,0 +1,71 @@
+{
+ "essence": "essFork",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Staved Forward",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "desc": "Thrusts the haft crosswise, dealing 12 damage, leaving the target 12% easier to wound for 5 seconds and stunning it for 1.2 seconds.",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "stunOnHit": 1.2
+  },
+  {
+   "name": "Reach Riposte",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "desc": "A guarded thrust that deals 7 damage, up to 1.6 times that at maximum range. Holds 4 charges, and kills give charges back.",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chargesMax": 4
+  },
+  {
+   "name": "Planted Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "desc": "Raises your armour by 30% for 10 seconds.",
+   "armorBonus": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40
+  },
+  {
+   "name": "Fallback Line",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When your health falls below 35%, you gain a ward that soaks 30% of your maximum health for 8 seconds. Once every 60 seconds.",
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 8
+   },
+   "isTriggered": true,
+   "cooldown": 60
+  }
+ ]
+}

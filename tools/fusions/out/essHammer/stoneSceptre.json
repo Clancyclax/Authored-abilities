@@ -1,0 +1,76 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Edict Struck",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Brings the head down on a target up to 7 tiles away for 26 damage, rising to 1.5 times that at full reach. When it hits, you and your allies deal 20% more damage for 12 seconds."
+  },
+  {
+   "name": "Sentence Carried Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A finishing blow that deals 20 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Raised Standard",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "partyDmgPct": 0.2,
+   "partyPower": 1,
+   "buffDuration": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Standing Order",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your critical hit chance rises by 20% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

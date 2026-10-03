@@ -1,0 +1,75 @@
+{
+ "essence": "essFish",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Ink Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spews a cone of ink 5 tiles long that deals 12 damage to everything in it and knocks it back 2 tiles. Each hit has a 60% chance of [Blunted], lowering the target's critical chance for 8 seconds."
+  },
+  {
+   "name": "Eight-Arm Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 9,
+   "hpCostPct": 0.05,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Lashes out for 8 damage, then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the damage. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Jet Away",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 12,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "Carries you 5 tiles in a burst. Your movement speed rises 30% for 3s after you use it."
+  },
+  {
+   "name": "Many Hands",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "water",
+   "cooldownReduction": 0.08,
+   "armorBonus": 0.06,
+   "desc": "Every ability you have comes round 8% sooner. Your armour rises by 6%."
+  }
+ ]
+}

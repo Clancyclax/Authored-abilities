@@ -1,0 +1,73 @@
+{
+ "essence": "essGoat",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Last Shaft",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 100,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "bossPct": 0.06,
+   "desc": "Hurls a shaft that deals 32 damage to the first enemy it meets. Against a boss or an elite it also deals 6% of their maximum health."
+  },
+  {
+   "name": "Fan of Points",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "castTime": 0.4,
+   "isAoe": true,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "knockback": 64,
+   "desc": "Throws 3 shafts at once, spread apart, each dealing 5 damage and knocking back what it hits by 2 tiles."
+  },
+  {
+   "name": "Long Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 80,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Doorway Aim",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "desc": "Each critical hit throws a point at the nearest enemy within 8 tiles, dealing 6 damage. Once every 5 seconds."
+  }
+ ]
+}

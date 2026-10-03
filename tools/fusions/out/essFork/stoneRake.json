@@ -1,0 +1,77 @@
+{
+ "essence": "essFork",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Scratch Pile",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Rakes the haft in a circle, dealing 11 damage to every enemy within 3.5 tiles and making each [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on them spread to every enemy within 3.5 tiles.",
+   "base": 11,
+   "cooldown": 15,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112
+  },
+  {
+   "name": "Windrow Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "desc": "Drags the tines through the target, dealing 8 damage and leaving it 12% easier to wound for 5 seconds. Holds 3 charges, and kills give charges back.",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargesMax": 3
+  },
+  {
+   "name": "Raked Clear",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "desc": "Removes up to 3 conditions from you.",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 40
+  },
+  {
+   "name": "Gleanings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "desc": "When you kill an enemy, you restore 8 stamina. Once every 4 seconds.",
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "isTriggered": true,
+   "cooldown": 4
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "essence": "essFork",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Eye of the Gap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "desc": "A thrust from the full length of the haft that deals 30 damage, up to 1.8 times that at maximum range. It ignores armour.",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "ignoreArmor": true
+  },
+  {
+   "name": "Stitching Prick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "desc": "Drives the tip through the weak seam, dealing 7 damage and leaving the target 10% easier to wound for 5 seconds. Holds 4 charges, and kills give charges back.",
+   "base": 7,
+   "cooldown": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargesMax": 4
+  },
+  {
+   "name": "Threaded Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "desc": "Increases your critical hit chance by 25% for 15 seconds.",
+   "critChanceBonus": 0.25,
+   "buffDuration": 15,
+   "cooldown": 60
+  },
+  {
+   "name": "Weak Spot Ledger",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "desc": "Your damage rises by 10% against enemies carrying your afflictions.",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1
+  }
+ ]
+}

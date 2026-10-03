@@ -1,0 +1,76 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneShovel",
+  "fusions": [
+    {
+      "name": "Spadeful of Loam",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 20,
+      "stunOnHit": 1.2,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "speed": 360,
+      "radius": 8,
+      "desc": "Flings a clod of rotting loam that deals 14 damage and stuns the target for 1.2 seconds. It leaves the target [Poisoned] for 2 damage a second for 5 seconds."
+    },
+    {
+      "name": "Graveside Puffballs",
+      "kind": "active",
+      "category": "attack",
+      "template": "corpseMine",
+      "element": "poison",
+      "role": "long",
+      "base": 20,
+      "cooldown": 90,
+      "range": 288,
+      "corpse": true,
+      "explodeRadius": 112,
+      "mineSeconds": 30,
+      "bossPct": 0.05,
+      "desc": "Primes up to 3 bodies within 9 tiles. Each bursts for 20 damage the moment an enemy comes near it, and the burst reaches 3.5 tiles. It deals 5% of a boss's or elite's maximum health."
+    },
+    {
+      "name": "Heaped Mound",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "life",
+      "cooldown": 40,
+      "wallKind": "block",
+      "wallLength": 128,
+      "wallDuration": 10,
+      "wallThickness": 28,
+      "healOnUse": 10,
+      "desc": "Heaps a wall of earth 4 tiles long for 10 seconds. Nothing crosses it. You regain 10 health."
+    },
+    {
+      "name": "Fertile Ground",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "life",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "gainHealth",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.3,
+        "charges": 1
+      },
+      "desc": "When you gain health, your next spell deals 30% more damage. Once every 15 seconds."
+    }
+  ]
+}

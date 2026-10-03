@@ -1,0 +1,78 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Seam Runner",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Fires a bolt that hits the first enemy in its path for 8 damage and leaves it [Exposed] for 5 seconds."
+  },
+  {
+   "name": "Pinpoint Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 24,
+   "cooldown": 90,
+   "range": 210,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "ignoreArmor": true,
+   "desc": "A thrown blow that deals 24 damage, up to 2 times that at maximum range, and ignores the target's armour."
+  },
+  {
+   "name": "Through the Gap",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "piercing",
+   "cooldown": 8,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "A short burst of movement that carries you 5 tiles forward. Your movement speed rises 20% for 3s after you use it."
+  },
+  {
+   "name": "Stitched Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Each time you afflict something, your next strike gains 15% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

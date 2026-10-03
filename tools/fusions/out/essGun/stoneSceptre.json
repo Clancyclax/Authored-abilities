@@ -1,0 +1,65 @@
+{
+  "essence": "essGun",
+  "stone": "stoneSceptre",
+  "fusions": [
+    {
+      "name": "Decree Shot",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "radiant",
+      "role": "long",
+      "base": 30,
+      "cooldown": 100,
+      "range": 224,
+      "maxMult": 1.8,
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "desc": "Fires a shot that deals 30 damage, up to 1.8 times that at maximum range; allies deal 20% more damage for 12 seconds after it hits."
+    },
+    {
+      "name": "Parade Pair",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "piercing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "volleySpread": 0.1,
+      "speed": 300,
+      "radius": 7,
+      "range": 224,
+      "isAoe": true,
+      "volleyCount": 2,
+      "spammable": true,
+      "desc": "Fires 2 rounds side by side; each round deals 3 damage."
+    },
+    {
+      "name": "Raise the Standard",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "radiant",
+      "cooldown": 40,
+      "range": 160,
+      "buffDuration": 10,
+      "partyPower": 1,
+      "partyDmgPct": 0.2,
+      "desc": "Every ally within 5 tiles strikes 20% harder for 10 seconds, and fights with 1 more power while it holds."
+    },
+    {
+      "name": "Executive Order",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "radiant",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.15,
+      "desc": "Against enemies at low health, you deal 15% more damage."
+    }
+  ]
+}

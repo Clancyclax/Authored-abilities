@@ -1,0 +1,79 @@
+{
+ "essence": "essFoot",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Cuts a cone 4 tiles ahead, dealing 12 damage to everything in it. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Last Furrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 10,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "A strike that deals 10 damage to a target at or below 25% health, consuming every affliction on it and adding 1.6 times their remaining damage to the blow."
+  },
+  {
+   "name": "Reaper's Lunge",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "slashing",
+   "cooldown": 6,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.12,
+    "duration": 4
+   },
+   "desc": "A short burst of movement that carries you 4 tiles forward. Your movement speed rises 12% for 4s after you use it."
+  },
+  {
+   "name": "Swath Cleared",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 4 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

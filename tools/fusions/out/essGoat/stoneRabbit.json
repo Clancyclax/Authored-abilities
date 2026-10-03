@@ -1,0 +1,76 @@
+{
+  "essence": "essGoat",
+  "stone": "stoneRabbit",
+  "fusions": [
+    {
+      "name": "Warren Thump",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.7,
+      "spammable": true,
+      "range": 80,
+      "sunder": {
+        "amount": 0.05,
+        "duration": 4
+      },
+      "hasteOnUse": {
+        "pct": 0.1,
+        "duration": 3
+      },
+      "desc": "Kicks for 4 damage and leaves the target 5% easier to wound for 4 seconds. For 3 seconds after using it, you move 10% faster."
+    },
+    {
+      "name": "Bolt and Bite",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "slashing",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "strikes": 1,
+      "chargeTo": 224,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Bolts up to 7 tiles onto the target with a weapon strike that deals 14 damage and makes it [Bleeding] for 2 damage a second for 4 seconds."
+    },
+    {
+      "name": "Startled Leap",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "physical",
+      "cooldown": 6,
+      "dashDist": 160,
+      "desc": "A short burst of movement that carries you 5 tiles forward."
+    },
+    {
+      "name": "Springloaded",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "gainStamina",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.2,
+        "duration": 4
+      },
+      "desc": "When you gain stamina, your critical hit chance rises by 20% for 4 seconds. Once every 8 seconds."
+    }
+  ]
+}

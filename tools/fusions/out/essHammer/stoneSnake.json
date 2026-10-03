@@ -1,0 +1,73 @@
+{
+ "essence": "essHammer",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Fang Tap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A quick glancing tap that deals 4 poison damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Waiting Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "ignoreResist": true,
+   "range": 192,
+   "maxMult": 1.5,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "A lunging blow on a target up to 6 tiles away that deals 28 damage, rising to 1.5 times that at full reach. It ignores resistances."
+  },
+  {
+   "name": "Shed Skin",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cooldown": 40,
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 10,
+   "desc": "Removes up to 3 conditions from you and restores 10 health."
+  },
+  {
+   "name": "Warm Side",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When a condition on you expires, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

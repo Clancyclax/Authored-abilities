@@ -1,0 +1,78 @@
+{
+  "essence": "essGun",
+  "stone": "stoneNet",
+  "fusions": [
+    {
+      "name": "Cross-Stitch Salvo",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "medium",
+      "base": 6,
+      "cooldown": 16,
+      "volleySpread": 0.3,
+      "speed": 300,
+      "radius": 7,
+      "range": 224,
+      "isAoe": true,
+      "volleyCount": 3,
+      "spreadAfflictions": 128,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.4,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Fires 3 rounds that each deal 6 damage, each with a 40% chance of [Slowed] for 4 seconds. Your afflictions on a target spread to enemies within 4 tiles."
+    },
+    {
+      "name": "Weighted Lead",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "blunt",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 15,
+      "speed": 360,
+      "radius": 8,
+      "consumeAfflictionsPer": 0.6,
+      "desc": "Deals 16 damage, uses up every affliction you have on the target and adds 60% more damage for each."
+    },
+    {
+      "name": "Haul Line",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "cooldown": 24,
+      "wallKind": "pull",
+      "wallLength": 192,
+      "wallDuration": 8,
+      "wallThickness": 26,
+      "pullForce": 32,
+      "desc": "Pulls a line of snare 6 tiles long ahead of you for 8 seconds, dragging every enemy near it inward."
+    },
+    {
+      "name": "Trailing Weights",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 6,
+        "range": 192
+      },
+      "desc": "Each time you afflict something, a bolt leaps to the nearest other enemy within 6 tiles for 6 damage. Once every 6 seconds."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "essence": "essFungus",
+  "stone": "stoneRake",
+  "fusions": [
+    {
+      "name": "Windrow Drag",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Diseased"
+      },
+      "spreadAfflictions": 128,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "desc": "A dragging strand that deals 12 damage and leaves the target [Diseased] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+    },
+    {
+      "name": "Litter Flick",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "debuff": {
+        "key": "powerDown",
+        "chance": 0.25,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "speed": 360,
+      "radius": 8,
+      "desc": "Flicks a spore that deals 4 damage and has a 25% chance to leave the target [Weakened] for 5 seconds."
+    },
+    {
+      "name": "Gleaned Remains",
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "element": "life",
+      "cooldown": 20,
+      "range": 110,
+      "healAmount": 12,
+      "healScope": "party",
+      "reachUnits": 110,
+      "rangeBand": "melee",
+      "desc": "Rakes the leavings into a rich mulch that restores 12 health to you and every ally within 3.5 tiles."
+    },
+    {
+      "name": "Compost Heap",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "life",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 5
+      },
+      "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 8 seconds."
+    }
+  ]
+}

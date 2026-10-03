@@ -1,0 +1,74 @@
+{
+ "essence": "essHair",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Spatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.32,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "desc": "Shakes 3 beads of water off your strands, spread apart, each dealing 3 water damage."
+  },
+  {
+   "name": "Cloudburst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "desc": "Sends a heavy wave of water down a strand at the first enemy it meets, dealing 12 water damage and knocking it back 2.5 tiles."
+  },
+  {
+   "name": "Dripping Eaves",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 12,
+   "range": 110,
+   "healAmount": 14,
+   "healScope": "party",
+   "desc": "Lets water run down every strand to you and every ally within 3.5 tiles, restoring 14 health to each."
+  },
+  {
+   "name": "Wet Slate",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you regain 2 mana a second for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}
