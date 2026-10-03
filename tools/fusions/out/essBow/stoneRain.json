@@ -1,86 +1,86 @@
 {
- "essence": "essBow",
- "stone": "stoneRain",
- "fusions": [
-  {
-   "name": "Downpour",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "water",
-   "role": "resource",
-   "base": 6,
-   "cooldown": 1.0,
-   "volleyCount": 3,
-   "volleySpread": 0.5,
-   "isAoe": true,
-   "speed": 330,
-   "radius": 7,
-   "range": 240,
-   "debuff": {
-    "key": "wet",
-    "chance": 1,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "chargesMax": 3,
-   "desc": "Looses 3 arrows at once, spread apart, each dealing 6 damage and leaving the target [Soaked] for 6 seconds. It holds 3 charges, and each kill gives one back."
-  },
-  {
-   "name": "Thunderhead Arrow",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "lightning",
-   "role": "medium",
-   "base": 11,
-   "cooldown": 16,
-   "debuff": {
-    "key": "wet",
-    "chance": 1,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "spreadAfflictions": 112,
-   "speed": 360,
-   "radius": 7,
-   "desc": "Looses an arrow that deals 11 damage to the first enemy it meets, leaves it [Soaked] for 6 seconds and spreads your afflictions on it to every enemy within 3.5 tiles."
-  },
-  {
-   "name": "Grey Curtain",
-   "kind": "active",
-   "category": "defensive",
-   "template": "stealthVeil",
-   "element": "water",
-   "cooldown": 40,
-   "stealthDuration": 8,
-   "stealthAlpha": 0.4,
-   "aggroMult": 0.5,
-   "stealthSpeedPct": 0,
-   "stealthScope": "party",
-   "desc": "Veils you and your allies for 8 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
-  },
-  {
-   "name": "Fresh After Falling",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "inflictCondition",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 2,
-    "duration": 5
-   },
-   "desc": "When you inflict a condition, you restore 2 stamina a second for 5 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essBow",
+  "stone": "stoneRain",
+  "fusions": [
+    {
+      "name": "Downpour",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "water",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "volleyCount": 3,
+      "volleySpread": 0.5,
+      "isAoe": true,
+      "speed": 330,
+      "radius": 7,
+      "range": 240,
+      "debuff": {
+        "key": "wet",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "chargesMax": 3,
+      "desc": "Looses 3 arrows at once, spread apart, each dealing 6 damage and leaving the target [Soaked] for 6 seconds. It holds 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "Thunderhead",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "lightning",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 16,
+      "debuff": {
+        "key": "wet",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "stunOnHit": 1,
+      "speed": 360,
+      "radius": 7,
+      "desc": "Looses a lightning arrow that deals 10 damage to the first enemy it meets, leaves it [Soaked] for 6 seconds and stuns it for 1 second."
+    },
+    {
+      "name": "Grey Curtain",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "water",
+      "cooldown": 40,
+      "stealthDuration": 8,
+      "stealthAlpha": 0.4,
+      "aggroMult": 0.5,
+      "stealthSpeedPct": 0,
+      "stealthScope": "party",
+      "desc": "Veils you and your allies for 8 seconds. Enemies notice you far later, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Fresh After Falling",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 2,
+        "duration": 5
+      },
+      "desc": "When you inflict a condition, you restore 2 stamina a second for 5 seconds. Once every 10 seconds."
+    }
+  ]
 }

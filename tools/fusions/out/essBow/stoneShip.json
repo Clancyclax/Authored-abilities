@@ -1,71 +1,68 @@
 {
- "essence": "essBow",
- "stone": "stoneShip",
- "fusions": [
-  {
-   "name": "Broadside",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "wind",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 15,
-   "range": 192,
-   "coneAngle": 0.7,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 96,
-   "desc": "Looses a broad cone of arrows ahead of you, dealing 10 damage to everything caught in it and knocking each back 3 tiles."
-  },
-  {
-   "name": "Drifting Arrow",
-   "kind": "active",
-   "category": "attack",
-   "template": "rangeStrike",
-   "element": "wind",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "range": 224,
-   "maxMult": 1.4,
-   "reachUnits": 224,
-   "rangeBand": "medium",
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.05,
-   "scaleCap": 0.25,
-   "desc": "Looses an arrow at a target up to 7 tiles away that deals 5 damage, rising to 1.4 times that at full reach. Its damage rises 5% per 100 paces you run since you last used it (max 25%)."
-  },
-  {
-   "name": "Fair Wind",
-   "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
-   "element": "wind",
-   "cooldown": 40,
-   "speedMult": 1.3,
-   "buffDuration": 10,
-   "desc": "Increases your movement speed by 30% for 10 seconds."
-  },
-  {
-   "name": "Following Sea",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "wind",
-   "isTriggered": true,
-   "cooldown": 8,
-   "trigger": {
-    "on": "moveDistance",
-    "cooldown": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.15,
-    "duration": 5
-   },
-   "desc": "When you have moved a long stretch, your critical hit chance rises 15% for 5 seconds. Once every 8 seconds."
-  }
- ]
+  "essence": "essBow",
+  "stone": "stoneShip",
+  "fusions": [
+    {
+      "name": "Broadside",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "wind",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 15,
+      "range": 192,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "desc": "Looses a broad cone of arrows ahead of you, dealing 10 damage to everything caught in it and knocking each back 3 tiles."
+    },
+    {
+      "name": "Swivel Gun",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "wind",
+      "role": "long",
+      "base": 28,
+      "cooldown": 80,
+      "explodeRadius": 96,
+      "splashFrac": 0.8,
+      "isAoe": true,
+      "speed": 340,
+      "radius": 8,
+      "desc": "Looses a heavy arrow that deals 28 damage to the first enemy it meets and 80% of that to every enemy within 3 tiles of it."
+    },
+    {
+      "name": "Fair Wind",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "wind",
+      "cooldown": 40,
+      "speedMult": 1.3,
+      "buffDuration": 10,
+      "desc": "Increases your movement speed by 30% for 10 seconds. Foes more than 3 tiles away lose track of you."
+    },
+    {
+      "name": "Following Sea",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "duration": 5
+      },
+      "desc": "When you have moved a long stretch, your critical hit chance rises 15% for 5 seconds. Once every 8 seconds."
+    }
+  ]
 }
