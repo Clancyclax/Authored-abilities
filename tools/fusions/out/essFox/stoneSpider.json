@@ -1,0 +1,77 @@
+{
+ "essence": "essFox",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Silk Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1.0,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "stunOnHit": 0.8,
+   "desc": "Shoots a line of silk that deals 10 damage to the first enemy it meets, leaves it [Pinned] for 1.5 seconds and stunned for 0.8 seconds."
+  },
+  {
+   "name": "Web Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "wallKind": "burn",
+   "wallLength": 128,
+   "wallDuration": 5,
+   "wallThickness": 28,
+   "chargesMax": 3,
+   "desc": "Strings a web 4 tiles long for 5 seconds that deals 6 damage to each enemy crossing it. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Spun Lookout",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 50,
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to spin a lookout that stands for 15 seconds and strikes an enemy within 5 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Anchor Lines",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. The next ability you use spends them all: you deal 4% more damage per stack (20% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+  "essence": "essFox",
+  "stone": "stoneSkunk",
+  "fusions": [
+    {
+      "name": "Warning Spray",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 15,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "powerDown",
+        "chance": 1,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "stunOnHit": 0.8,
+      "desc": "Spits a squirt that deals 10 damage to the first enemy it meets and leaves it [Weakened] for 6 seconds. It also stuns the target for 0.8 seconds."
+    },
+    {
+      "name": "Full Reek",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "long",
+      "base": 24,
+      "cooldown": 80,
+      "range": 280,
+      "coneAngle": 0.75,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "confuse": true,
+      "confuseChance": 0.4,
+      "confuseDuration": 4,
+      "guaranteedCrit": true,
+      "desc": "Sprays a wide cone that deals 24 damage to everything caught in it. Every hit is a critical hit, and each hit has a 40% chance to turn the target against its allies for 4 seconds."
+    },
+    {
+      "name": "Foul Retort",
+      "kind": "active",
+      "category": "defensive",
+      "template": "thornsBuff",
+      "element": "poison",
+      "cooldown": 30,
+      "buffDuration": 8,
+      "thornsFrac": 0.5,
+      "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+    },
+    {
+      "name": "Not Twice",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "poison",
+      "condition": "vsDebuffed",
+      "bonusKind": "dodge",
+      "amount": 0.12,
+      "desc": "Against enemies carrying your afflictions, your dodge chance rises by 12%."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "essence": "essFox",
+  "stone": "stoneMight",
+  "fusions": [
+    {
+      "name": "Barrel Through",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 86,
+      "chargeTo": 192,
+      "sunder": {
+        "amount": 0.12,
+        "duration": 5
+      },
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Rushes up to 6 tiles to the target and drives a shoulder into it, dealing 14 damage and leaving it 12% easier to wound for 5 seconds. You move 20% faster for 3 seconds afterward."
+    },
+    {
+      "name": "Pried Open",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "long",
+      "base": 28,
+      "cooldown": 90,
+      "range": 112,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "desc": "Bursts open the guard of every enemy within 3.5 tiles and deals 28 damage to each. Every hit is a critical hit.",
+      "guaranteedCrit": true
+    },
+    {
+      "name": "Heavy Hand, Light Step",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfPower",
+      "element": "physical",
+      "cooldown": 45,
+      "powerMult": 1.3,
+      "buffDuration": 12,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 4
+      },
+      "desc": "Increases your damage by 30% for 12 seconds. You move 20% faster for 4 seconds after using it."
+    },
+    {
+      "name": "Jar Lid Pop",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 5
+      },
+      "desc": "When you land a critical hit, your physical damage rises by 30% for 5 seconds. Once every 8 seconds."
+    }
+  ]
+}

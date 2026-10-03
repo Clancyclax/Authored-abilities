@@ -1,0 +1,80 @@
+{
+ "essence": "essFox",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Rim Bash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 86,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Slams the edge of a guard forward for 12 damage, stunning the target for 1.2 seconds and leaving it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Skipped Stone",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Skims a rim-edge disc that deals 8 damage to the first enemy it meets and leaps to 1 more enemy within 3.5 tiles for 60% of the damage. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Raised Decoy",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 36,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.05,
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds, and raises your armour by 5% while it stands."
+  },
+  {
+   "name": "Glancing Blows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 4,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackWard",
+   "desc": "Every blow you avoid builds a stack on you, up to 4. At 4 they all spend at once: you gain a shield that soaks 6% of your maximum health per stack (24% at full). Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}

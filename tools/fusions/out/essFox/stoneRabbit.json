@@ -1,0 +1,74 @@
+{
+  "essence": "essFox",
+  "stone": "stoneRabbit",
+  "fusions": [
+    {
+      "name": "Bolt and Boot",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 12,
+      "range": 86,
+      "chargeTo": 160,
+      "sunder": {
+        "amount": 0.14,
+        "duration": 4
+      },
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 3
+      },
+      "desc": "Bolts up to 5 tiles to the target and kicks it for 13 damage, leaving it 14% easier to wound for 4 seconds. You move 25% faster for 3 seconds afterward."
+    },
+    {
+      "name": "Alarm Stamp",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "resource",
+      "base": 5,
+      "cooldown": 1,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 3,
+      "desc": "Stamps the ground and deals 5 damage to every enemy within 3 tiles. Holds 3 charges, and kills give charges back."
+    },
+    {
+      "name": "Bolt Hole",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "physical",
+      "cooldown": 28,
+      "speedMult": 1.4,
+      "buffDuration": 8,
+      "blinkOnUse": 64,
+      "dodgeBonus": 0.1,
+      "desc": "Increases your movement speed by 40% for 8 seconds. You finish it 2 tiles from where you stood, with +10% dodge chance for it."
+    },
+    {
+      "name": "Startled Leap",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 6
+      },
+      "desc": "Each time you cover a stretch of ground, you restore 6 stamina. Once every 10 seconds."
+    }
+  ]
+}

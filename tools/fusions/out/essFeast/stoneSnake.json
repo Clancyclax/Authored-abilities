@@ -1,90 +1,90 @@
 {
- "essence": "essFeast",
- "stone": "stoneSnake",
- "fusions": [
-  {
-   "name": "Quiet Fang",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "poison",
-   "role": "resource",
-   "base": 7,
-   "cooldown": 1,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "hpCostPct": 0.04,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 5,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Poisoned"
-   },
-   "sunder": {
-    "amount": 0.06,
-    "duration": 4
-   },
-   "leech": 0.2,
-   "desc": "Costs 4% of your maximum health. A strike that deals 7 poison damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. You heal for 20% of the damage dealt."
-  },
-  {
-   "name": "Venom Passed Round",
-   "kind": "active",
-   "category": "attack",
-   "template": "imbueStrike",
-   "element": "poison",
-   "role": "medium",
-   "base": 10,
-   "cooldown": 14,
-   "strikes": 1,
-   "dot": {
-    "dmgPerTick": 2,
-    "ticks": 6,
-    "tickMs": 1000,
-    "critChance": 0.05,
-    "label": "Poisoned"
-   },
-   "spreadAfflictions": 128,
-   "leech": 0.15,
-   "desc": "A bite that deals 10 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on it are shared out to every enemy within 4 tiles, and you heal for 15% of the damage dealt."
-  },
-  {
-   "name": "Warm Side Out",
-   "kind": "active",
-   "category": "healing",
-   "template": "selfHeal",
-   "element": "poison",
-   "cooldown": 20,
-   "healAmount": 20,
-   "healScope": "self",
-   "desc": "Restores 20 health to you, with a 10% critical chance. Its healing rises +8% for every tenth of your health already gone (max +40%).",
-   "critChance": 0.1,
-   "scaleOn": "selfDepletion",
-   "scalePer": 0.08,
-   "scaleCap": 0.4
-  },
-  {
-   "name": "Coiled Patience",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "poison",
-   "isTriggered": true,
-   "cooldown": 15,
-   "trigger": {
-    "on": "critDrought",
-    "cooldown": 15,
-    "seconds": 8
-   },
-   "effect": {
-    "kind": "critChance",
-    "amount": 0.4,
-    "duration": 4
-   },
-   "lifeOnKill": 3,
-   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Each kill restores 3 health to you. Once every 15 seconds."
-  }
- ]
+  "essence": "essFeast",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Quiet Fang",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "hpCostPct": 0.04,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "leech": 0.2,
+      "desc": "Costs 4% of your maximum health. A strike that deals 7 poison damage, leaves the target 6% easier to wound for 4 seconds and [Poisoned] for 2 damage a second for 5 seconds. You heal for 20% of the damage dealt.",
+      "sunder": {
+        "amount": 0.06,
+        "duration": 4
+      }
+    },
+    {
+      "name": "Venom Passed Round",
+      "kind": "active",
+      "category": "attack",
+      "template": "imbueStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 14,
+      "strikes": 1,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "spreadAfflictions": 128,
+      "leech": 0.15,
+      "desc": "A bite that deals 10 damage and leaves the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on it are shared out to every enemy within 4 tiles, and you heal for 15% of the damage dealt."
+    },
+    {
+      "name": "Warm Side Out",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "poison",
+      "cooldown": 20,
+      "healAmount": 20,
+      "healScope": "self",
+      "desc": "Restores 20 health to you, with a 10% critical chance. Its healing rises +8% for every tenth of your health already gone (max +40%).",
+      "critChance": 0.1,
+      "scaleOn": "selfDepletion",
+      "scalePer": 0.08,
+      "scaleCap": 0.4
+    },
+    {
+      "name": "Coiled Patience",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 15,
+        "seconds": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.4,
+        "duration": 4
+      },
+      "lifeOnKill": 3,
+      "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Each kill restores 3 health to you. Once every 15 seconds."
+    }
+  ]
 }

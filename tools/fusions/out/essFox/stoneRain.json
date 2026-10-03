@@ -1,0 +1,78 @@
+{
+  "essence": "essFox",
+  "stone": "stoneRain",
+  "fusions": [
+    {
+      "name": "Grey Mizzle",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "debuff": {
+        "key": "wet",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "spammable": true,
+      "desc": "Flicks a spatter of rain that deals 4 damage to the first enemy it meets and leaves it [Soaked] for 4 seconds with a 30% chance."
+    },
+    {
+      "name": "Sheeting Downpour",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "long",
+      "base": 26,
+      "cooldown": 80,
+      "range": 128,
+      "isAoe": true,
+      "aoeBand": "wide",
+      "ignoreResist": true,
+      "desc": "A curtain of rain falls on every enemy within 4 tiles, dealing 26 damage to each. It ignores resistances."
+    },
+    {
+      "name": "Overcast Cover",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "water",
+      "cooldown": 60,
+      "stealthDuration": 7,
+      "stealthAlpha": 0.35,
+      "aggroMult": 0.5,
+      "stealthSpeedPct": 0,
+      "stealthScope": "party",
+      "desc": "Veils you and your allies for 7 seconds. Enemies notice you 50% later, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Smelling Weather",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 9,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 9
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 2,
+        "duration": 5
+      },
+      "desc": "When you inflict a condition, you restore 2 stamina a second for 5 seconds. Once every 9 seconds."
+    }
+  ]
+}

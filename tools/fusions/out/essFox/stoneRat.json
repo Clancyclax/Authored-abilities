@@ -1,0 +1,86 @@
+{
+  "essence": "essFox",
+  "stone": "stoneRat",
+  "fusions": [
+    {
+      "name": "Gnaw Gnaw",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "range": 80,
+      "sunder": {
+        "amount": 0.05,
+        "duration": 3
+      },
+      "debuff": {
+        "key": "disease",
+        "chance": 0.25,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "spammable": true,
+      "desc": "A fast bite that deals 4 damage and leaves the target [Diseased] for 3 seconds with a 25% chance."
+    },
+    {
+      "name": "Plague Scurry",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 22,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "spreadAfflictions": 128,
+      "desc": "Releases fleas that deal 12 damage to every enemy within 3 tiles and leave each [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+    },
+    {
+      "name": "Abandon Ship",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "physical",
+      "cooldown": 50,
+      "summonKind": "swarm",
+      "summonDmg": 3,
+      "summonDuration": 10,
+      "summonInterval": 1,
+      "summonRange": 160,
+      "castTime": 0.4,
+      "desc": "Looses a swarm for 10 seconds that stings an enemy within 5 tiles for 3 damage every second."
+    },
+    {
+      "name": "Climbing Out",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 120,
+      "trigger": {
+        "on": "emptyHealth",
+        "cooldown": 120
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 5,
+        "duration": 6
+      },
+      "desc": "When your health runs out, you regain 5 health a second for 6 seconds. Once every 120 seconds."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Royal Edict",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "light",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 224,
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "desc": "Hurls you at an enemy up to 7 tiles away, dealing 30 damage, up to 1.5 times as much at maximum range, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Silence in Court",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "light",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 22,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Strikes a ring around you, dealing 12 damage to every enemy within 3.5 tiles and stunning each for 1.2 seconds."
+  },
+  {
+   "name": "Proclamation",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "light",
+   "cooldown": 40,
+   "range": 160,
+   "buffDuration": 10,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Tithe Collected",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you strike with your weapon, you heal for 15% of the damage you deal for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

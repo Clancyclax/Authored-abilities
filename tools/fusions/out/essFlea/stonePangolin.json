@@ -1,0 +1,67 @@
+{
+ "essence": "essFlea",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Curled Tumble",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 100,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "desc": "Rolls over every enemy within 3 tiles, dealing 14 damage and knocking each back 2.5 tiles."
+  },
+  {
+   "name": "Launch from the Curl",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hpCostPct": 0.05,
+   "desc": "Springs from a curl into the first enemy in a line up to 7 tiles away, dealing 8 damage. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Seams Closed",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.3,
+   "buffDuration": 12,
+   "desc": "Raises your armour by 30% for 12 seconds."
+  },
+  {
+   "name": "Sealed Ball",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you gain a shield that soaks 30% of your maximum health for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

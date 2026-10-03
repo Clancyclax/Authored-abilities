@@ -60,15 +60,23 @@
    }
   },
   {
-   "name": "Dug In Deep",
+   "name": "Heaped Bank",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "earth",
-   "desc": "Your maximum health rises by 12%. You also regenerate 0.4 health a second, permanently.",
-   "buffKind": "maxHp",
-   "amount": 0.12,
-   "regenPerSec": 0.4
+   "desc": "When you strike, you regain 2 health a second for 5 seconds. Once every 15 seconds.",
+   "trigger": {
+    "on": "strike",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "isTriggered": true,
+   "cooldown": 15
   }
  ]
 }

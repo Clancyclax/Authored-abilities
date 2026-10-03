@@ -1,0 +1,77 @@
+{
+  "essence": "essFox",
+  "stone": "stoneOctopus",
+  "fusions": [
+    {
+      "name": "Ink Pellet",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "shadow",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "spreadAfflictions": 96,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 1,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Spits a pellet of ink that deals 12 shadow damage to the first enemy it meets and leaves it [Hindered] for 5 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+    },
+    {
+      "name": "Many Hands",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "resource",
+      "base": 3,
+      "cooldown": 1,
+      "volleySpread": 0.36,
+      "speed": 265,
+      "radius": 7,
+      "range": 220,
+      "isAoe": true,
+      "volleyCount": 8,
+      "hpCostPct": 0.04,
+      "desc": "Lashes out in 8 quick strikes at once, spread apart, each dealing 3 damage. Costs 4% of your maximum health."
+    },
+    {
+      "name": "Slipped Moorings",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "water",
+      "cooldown": 14,
+      "teleportRange": 192,
+      "dodgeBonus": 0.1,
+      "desc": "Steps you instantly to a point up to 6 tiles away, with 10% more dodge chance while you do."
+    },
+    {
+      "name": "Cloud and Away",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 45,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 45
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.3,
+        "duration": 6
+      },
+      "desc": "When your health falls below 30%, a ward of ink wraps you that absorbs 30% of your maximum health for 6 seconds. Once every 45 seconds."
+    }
+  ]
+}

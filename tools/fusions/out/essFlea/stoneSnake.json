@@ -1,0 +1,68 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Venom Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "spreadAfflictions": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lunges a venomous bite that deals 12 damage and makes the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Patient Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 16,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A bite that deals 14 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to this blow. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Coiled Poise",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "poison",
+   "cooldown": 50,
+   "critChanceBonus": 0.3,
+   "buffDuration": 15,
+   "desc": "Increases your critical hit chance by 30% for 15 seconds."
+  },
+  {
+   "name": "Venom Carrier",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 10% poison resistance for as long as you carry it."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Crescent Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 100,
+   "coneAngle": 1.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "desc": "Sweeps a wide arc 3 tiles ahead, dealing 14 damage to everything in it. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Last Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 192,
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "desc": "Hurls you at an enemy at or below 25% health up to 6 tiles away, dealing 24 damage, up to 1.5 times as much at maximum range."
+  },
+  {
+   "name": "Gathered Sheaf",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "nature",
+   "cooldown": 20,
+   "healAmount": 16,
+   "healScope": "self",
+   "critChance": 0.1,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you, rising by 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Gleaning",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you kill an enemy, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

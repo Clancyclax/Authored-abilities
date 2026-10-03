@@ -1,0 +1,73 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Spadeful Thump",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 100,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "desc": "Thumps the ground in a ring, dealing 14 damage to every enemy within 3 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Flung Dirt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a clod that deals 5 damage with a 30% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Buried Rest",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "earth",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Turned Over",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 5. When you reach 5, they all spend at once: you deal 4% more damage per stack for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

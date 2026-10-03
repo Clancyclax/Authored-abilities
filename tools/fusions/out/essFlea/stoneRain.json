@@ -1,0 +1,78 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Pelting Drops",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.2,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 drops at once, spread apart, each dealing 3 damage with a 20% chance to leave the target [Soaked] for 4 seconds."
+  },
+  {
+   "name": "Cloudburst Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 20,
+   "range": 192,
+   "maxMult": 1.5,
+   "stunOnHit": 1.0,
+   "desc": "Hurls you down onto an enemy up to 6 tiles away, dealing 16 damage, up to 1.5 times as much at maximum range, and stunning it for 1 second."
+  },
+  {
+   "name": "Drip Dry",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 6 seconds."
+  },
+  {
+   "name": "Slick Coat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "When you take damage that is not fire, you gain a shield that soaks 20% of your maximum health for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

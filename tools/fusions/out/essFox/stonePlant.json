@@ -1,0 +1,79 @@
+{
+ "essence": "essFox",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Seed Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned",
+    "healFrac": 0.4
+   },
+   "knockback": 64,
+   "desc": "Spits a seed that deals 10 damage to the first enemy it meets and [Poisoned] for 2 damage a second for 6 seconds. You heal for 40% of the damage the poison deals. The seed knocks the target back 2 tiles."
+  },
+  {
+   "name": "Bramble Fence",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "plant",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "wallKind": "burn",
+   "wallLength": 96,
+   "wallDuration": 5,
+   "wallThickness": 28,
+   "chargesMax": 3,
+   "desc": "Raises a line of briars 3 tiles long for 5 seconds that deals 6 damage to each enemy crossing it. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Shade Rest",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "cooldown": 36,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Restores 3 health a second to you for 8 seconds. You move 15% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Roots Down",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every blow you avoid builds a stack on you, up to 4. At 4 they all spend at once: you heal 8% of your maximum health per stack (32% at full). Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}

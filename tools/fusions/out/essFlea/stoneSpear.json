@@ -1,0 +1,74 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Point at the Door",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "maxMult": 2,
+   "ignoreArmor": true,
+   "desc": "Throws you point-first at an enemy up to 8 tiles away, dealing 30 damage ignoring armour, up to 2 times as much at maximum range."
+  },
+  {
+   "name": "Skewered Row",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a thin shaft that deals 4 damage. It then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Couched Stance",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "piercing",
+   "cooldown": 40,
+   "powerMult": 1.25,
+   "buffDuration": 10,
+   "desc": "Increases your damage by 25% for 10 seconds."
+  },
+  {
+   "name": "Aimed Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, your physical damage rises by 25% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

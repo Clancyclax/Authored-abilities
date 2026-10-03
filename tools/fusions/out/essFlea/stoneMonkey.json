@@ -1,0 +1,70 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Palmed Barb",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "desc": "Flicks a barbed pin that deals 8 damage to an enemy carrying one of your afflictions, uses that affliction up and heals you for 20% of the damage dealt."
+  },
+  {
+   "name": "Swing and Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "desc": "Swings across up to 6 tiles to the target, then strikes it for 12 damage, leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Hand Over Hand",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 10,
+   "teleportRange": 224,
+   "dodgeBonus": 0.1,
+   "desc": "Steps you instantly to a point up to 7 tiles away, with +10% dodge chance."
+  },
+  {
+   "name": "Lifted Purse",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "When you inflict a condition, you regain 3 stamina. Once every 6 seconds."
+  }
+ ]
+}

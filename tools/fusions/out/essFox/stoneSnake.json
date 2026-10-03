@@ -1,0 +1,85 @@
+{
+  "essence": "essFox",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Fang Under the Rug",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1,
+      "speed": 340,
+      "radius": 8,
+      "reachUnits": 256,
+      "rangeBand": "medium",
+      "desc": "Strikes with a venom dart that deals 7 damage to the first enemy it meets and leaves it [Slowed] for 4 seconds. Costs 4% of your maximum health.",
+      "hpCostPct": 0.04,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 1,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      }
+    },
+    {
+      "name": "Coil and Spring",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "poison",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 86,
+      "desc": "Springs from a coil and bites for 13 damage, leaving the target [Poisoned] for 2 damage a second for 5 seconds and 10% easier to wound for 5 seconds. The bite stuns it for 0.8 seconds.",
+      "stunOnHit": 0.8,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      }
+    },
+    {
+      "name": "Warm Side Out",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "poison",
+      "cooldown": 24,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.25,
+      "reflectChance": 0.55,
+      "buffDuration": 7,
+      "desc": "For 7 seconds, each debuff laid on you has a 55% chance to be sent back to whoever inflicted it instead."
+    },
+    {
+      "name": "Patient Venom",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "nextSpellDamage",
+        "amount": 0.25,
+        "charges": 1
+      },
+      "desc": "When you inflict a condition, your next spell deals 25% more damage. Once every 8 seconds."
+    }
+  ]
+}

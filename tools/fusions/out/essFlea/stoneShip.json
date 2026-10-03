@@ -1,0 +1,73 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneShip",
+ "fusions": [
+  {
+   "name": "Bow Wave",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "speed": 320,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "desc": "Sends a swell at the first enemy in a line up to 7 tiles away, dealing 14 damage and knocking it back 3 tiles."
+  },
+  {
+   "name": "Full Broadside",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 8,
+   "range": 240,
+   "reachUnits": 240,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Looses 3 iron balls at once, spread apart, each dealing 26 damage and ignoring armour."
+  },
+  {
+   "name": "Trimmed Sails",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "wind",
+   "cooldown": 50,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.2,
+   "buffDuration": 15,
+   "desc": "Increases your attack speed by 20% for 15 seconds."
+  },
+  {
+   "name": "Tailwind",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you travel a good distance, your physical damage rises by 30% for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essFox",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Spade Swing",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 13,
+   "range": 86,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "A flat swing that deals 15 damage and knocks the target back 3 tiles, leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Tremor Shuffle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Stamps and shakes the ground, dealing 30 damage to every enemy within 3.5 tiles. Every hit is a critical hit."
+  },
+  {
+   "name": "Pitfall",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 16,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to dig a pit that stays armed for 30 seconds. The first enemy to come within 2 tiles of it falls in and takes 16 damage."
+  },
+  {
+   "name": "Dug In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "After you cover a stretch of ground, you regain 3 health a second for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

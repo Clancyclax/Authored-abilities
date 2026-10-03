@@ -1,0 +1,74 @@
+{
+ "essence": "essFlea",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Cast Mesh",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Throws a mesh that deals 12 damage to the first enemy it meets and stuns it for 1.2 seconds."
+  },
+  {
+   "name": "Spun Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Looses 3 strands at once, spread apart, each dealing 6 damage. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Bait Drop",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A lure that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Basin Catch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When a condition on you ends, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}
