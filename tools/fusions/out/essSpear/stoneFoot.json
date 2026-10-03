@@ -1,0 +1,82 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Mile-Weighted Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 256,
+   "maxMult": 1.8,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "knockback": 80,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "A throw that deals 12 damage, rising to 1.8 times that at full range, and knocks the target back 2.5 tiles. Its damage rises 5% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "name": "Step and Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A jab in stride that deals 5 damage and leaves the target 5% easier to wound for 3 seconds. You move 10% faster for 2 seconds after."
+  },
+  {
+   "name": "Column on the Road",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "desc": "Every ally within 5 tiles deals 15% more damage for 12 seconds, and fights with 1 more Power while it holds."
+  },
+  {
+   "name": "Legs Under the Lunge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you have covered enough ground, your physical damage rises by 25% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

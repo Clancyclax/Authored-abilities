@@ -1,0 +1,86 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 16,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 360,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Feeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Looses 5 darts in a wide spread, each dealing 4 damage. 15% of the damage comes back as healing over 6 seconds, and your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Picked to the Stalk",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A thrust that deals 15 damage and uses up every affliction you have on the target, adding 60% more damage for each one, and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Loosed Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Shakes a swarm loose from the haft. For 12 seconds it bites an enemy within 4 tiles for 3 damage every second, and each kill it makes restores 4 health to you."
+  },
+  {
+   "name": "Gorged on the Field",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, 15% of the damage you deal heals you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

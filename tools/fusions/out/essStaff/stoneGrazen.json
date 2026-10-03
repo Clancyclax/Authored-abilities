@@ -1,0 +1,75 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Herding Sweep",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 70,
+   "range": 128,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "desc": "You swing the staff wide through a cone 4 tiles long, dealing 26 damage to everything in it. When it hits, your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Crook for Stragglers",
+   "template": "rangeStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "You reach the staff out to rap an enemy up to 5 tiles away for 7 damage, up to 1.4 times that at full reach, and 8% more for each ally near you, up to 32%. Holds 4 charges; each use spends one and each kill restores one."
+  },
+  {
+   "name": "Gathered Close",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "nature",
+   "healAmount": 16,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "cooldown": 20,
+   "desc": "You thump the staff to call your allies in, restoring 16 health to you and every ally within 4 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Barn-Warm Company",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 6,
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land with the staff builds a stack of shared warmth on you, up to 6. At 6 they all spend at once and heal you for 5% of your maximum health per stack (30% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

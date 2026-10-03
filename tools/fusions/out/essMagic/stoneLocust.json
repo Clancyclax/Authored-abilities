@@ -1,0 +1,86 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Gnawing Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a cloud of arcane locusts that deals 12 damage to every enemy within 3.5 tiles, with a 50% chance of [Enervated] for 6 seconds. Your afflictions on each target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Ravening Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 3,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 3,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "bossPct": 0.04,
+   "desc": "Sends a swarm of arcana into the first enemy it meets, dealing 26 damage plus 4% of a boss's or elite's maximum health. It then leaps to 3 more enemies within 4 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Conjured Plague",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "arcane",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "summonDuration": 12,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to conjure a swarm of arcane locusts for 12 seconds. It devours enemies within 4 tiles for 3 damage every 1 second."
+  },
+  {
+   "name": "Gorged on Arcana",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, 20% of the damage you deal heals you for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

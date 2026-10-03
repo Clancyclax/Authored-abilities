@@ -1,0 +1,83 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Numbing Bite",
+   "template": "imbueStrike",
+   "element": "frost",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.04,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Frostbitten"
+   },
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. Strikes with your weapon for a chilling blow that deals 8 damage and leaves the target 8% easier to wound for 4 seconds, with a 30% chance of [Slowed] for 3 seconds. It also leaves the target [Frostbitten] for 1 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Chill Shove",
+   "template": "aoeRing",
+   "element": "frost",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shoves out with your cold bulk, dealing 12 damage to every enemy within 3 tiles and knocking them back 2.5 tiles, with a 50% chance of [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Torpor Shell",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "frost",
+   "immunityDuration": 4,
+   "cooldown": 90,
+   "desc": "You go still and cold: for 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Winter-Proof Hide",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "frost",
+   "buffKind": "armor",
+   "amount": 0.1,
+   "resist": {
+    "element": "frost",
+    "amount": 0.1
+   },
+   "desc": "Your armour rises by 10%, and you carry 10% frost resistance."
+  }
+ ]
+}

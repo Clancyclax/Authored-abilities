@@ -1,0 +1,80 @@
+{
+ "essence": "essApe",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Scooped Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 140,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scoops up the ground with both hands and sprays a cone of dirt, dealing 3 damage to everything caught in it. Each hit has a 25% chance to leave the target [Blunted] for 3 seconds."
+  },
+  {
+   "name": "Spade-Hand Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Drives a flattened hand down into the target edge-first, dealing 30 damage that ignores armour and leaving it 15% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Heaped Earthwork",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 32,
+   "desc": "Digs and heaps a bank of earth 5 tiles long ahead of you that blocks enemies for 8 seconds."
+  },
+  {
+   "name": "Dug In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

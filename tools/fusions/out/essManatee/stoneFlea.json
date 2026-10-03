@@ -1,0 +1,87 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Leap and Settle",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You spring up to 7 tiles onto the target and settle on it, dealing 14 damage, leaving it 12% easier to wound for 6 seconds and [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Skipping Nips",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "leech": 0.15,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a biting speck that deals 3 damage to the first enemy it meets, then hops to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. You heal for 15% of the damage dealt."
+  },
+  {
+   "name": "Unlikely Bound",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "teleportRange": 192,
+   "healOnUse": 12,
+   "cooldown": 20,
+   "desc": "Steps you instantly to a point up to 6 tiles away, and you regain 12 health as you land."
+  },
+  {
+   "name": "Hop Between Rests",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

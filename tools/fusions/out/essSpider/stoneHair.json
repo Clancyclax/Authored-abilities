@@ -1,0 +1,71 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Flicked Bristles",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks barbed bristles in a cone out to 4 tiles, which deals 3 damage to everything caught in it, with a 30% chance to leave each [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Bound in Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "strikes": 3,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Strikes an enemy 3 times with strand-wrapped blows; each deals 10 damage and leaves it [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Bristling Coat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "cooldown": 30,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Felt Through the Setae",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "At night, your dodge chance rises by 12%."
+  }
+ ]
+}

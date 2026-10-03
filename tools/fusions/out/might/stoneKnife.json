@@ -1,0 +1,88 @@
+{
+ "essence": "might",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Buried to the Hilt",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "stackMult": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A blow that deals 30 damage, is always a critical hit, uses up every affliction on the target, adding the damage they had left, and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Fanned Blades",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "chargesMax": 4,
+   "volleyCount": 2,
+   "volleySpread": 0.35,
+   "speed": 400,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws 2 heavy blades at once in a spread; each deals 6 damage, with a 30% chance to leave the target [Bleeding] for 4 seconds. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Hold the Edge Back",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Edge Comes Out",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 3
+   },
+   "desc": "When you have gone a while without a critical hit, your physical damage rises 40% for 3 seconds. Once every 10 seconds."
+  }
+ ]
+}

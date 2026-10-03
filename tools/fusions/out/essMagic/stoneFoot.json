@@ -1,0 +1,83 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Road-Worn Lance",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Hurls a lance of arcana up to 9 tiles that deals 30 damage, rising to 1.5 times at full range, plus 5% of a boss's or elite's maximum health. Its damage rises 5% for every 100 paces you have run since you last used it, up to 30%."
+  },
+  {
+   "name": "Heel Glyph",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps a glyph under your heel that deals 4 damage to every enemy within 2 tiles, with a 20% chance of [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Marching Meditation",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 40,
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 8
+   },
+   "desc": "Restores 3 mana a second for 10 seconds. Your movement speed rises 15% for 8 seconds after you use it."
+  },
+  {
+   "name": "Milestone Charge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "After you cover enough ground, your next spell deals 25% more damage. Once every 10 seconds."
+  }
+ ]
+}

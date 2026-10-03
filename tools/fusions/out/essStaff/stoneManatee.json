@@ -1,0 +1,74 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Unhurried Swing",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 128,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "castTime": 1.5,
+   "bossPct": 0.05,
+   "desc": "After a 1.5-second wind-up, you swing the staff through a wide cone 4 tiles long, dealing 30 damage plus 5% of a boss's or elite's maximum health to everything in it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drifting Prod",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Soaked"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A slow, wet prod with the staff that deals 4 damage, leaves the target [Soaked] for 1 damage a second for 4 seconds and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Drift Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.05,
+   "cooldown": 30,
+   "desc": "You turn the staff slowly before you, raising a barrier that absorbs the next 20 damage and holds for 8 seconds. Your armour rises 5% while it holds."
+  },
+  {
+   "name": "Nothing Urgent",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "maxHp",
+   "amount": 0.1,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises 10%, and you regenerate 0.5 health a second."
+  }
+ ]
+}

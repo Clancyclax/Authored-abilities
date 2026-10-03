@@ -1,0 +1,89 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Tucked Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 480,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Flicks a hidden blade that deals 7 damage to the first enemy it meets and leaves it [Bleeding] for 1 damage a second for 8 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Propeller Scar",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "strikes": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 12,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A hidden cut that deals 28 damage that ignores armour and leaves the target [Bleeding] for 3 damage a second for 12 seconds."
+  },
+  {
+   "name": "Old Scars Close",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "water",
+   "healAmount": 16,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "cooldown": 20,
+   "desc": "Restores 16 health to you. Its healing rises 8% for every 10% of your health already gone (max 40%)."
+  },
+  {
+   "name": "Edge Under the Hide",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "slashing",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a hidden blade. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Bleeding] for 1 damage a second for 6 seconds."
+  }
+ ]
+}

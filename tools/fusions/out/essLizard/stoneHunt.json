@@ -1,0 +1,74 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Lunge",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Usable only on a target at or below 30% health. Lunges you to it from up to 7 tiles away for a bite that deals 26 damage and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Feeding Circle",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes every enemy within 3.5 tiles for a blow that deals 26 damage and leaves them [Marked] for 10 seconds. If it hits, every ally deals 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Watching from Afar",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "castTime": 1,
+   "desc": "After 1 second of stillness, your attacks and spells reach 30% further for 15 seconds."
+  },
+  {
+   "name": "Waiting Out the Bite",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "poison",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against enemies below 50% health."
+  }
+ ]
+}

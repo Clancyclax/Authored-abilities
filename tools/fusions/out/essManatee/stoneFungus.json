@@ -1,0 +1,79 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Shed Spores",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes out spores grown from your own body at the cost of 4% of your maximum health, dealing 7 damage to everything in a cone 4 tiles long with a 40% chance to leave each [Poisoned] for 10 seconds."
+  },
+  {
+   "name": "Overnight Fruiting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "speed": 140,
+   "radius": 10,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lobs a slow, swollen cap that bursts on the first enemy it meets, dealing 28 damage to it and 80% of that to every enemy within 3.5 tiles, and leaving the target [Poisoned] for 2 damage a second for 10 seconds."
+  },
+  {
+   "name": "Mycelium Mat",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 12,
+   "range": 125,
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 45,
+   "desc": "Spreads a mat of growth where you stand. For 12 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Larger Each Morning",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%. It also regenerates 0.5 health a second, permanently."
+  }
+ ]
+}

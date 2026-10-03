@@ -1,0 +1,79 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Wrong-Hand Release",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 460,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Throws from the hand the target isn't watching, dealing 12 damage, stunning it for 1 second and leaving it [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Grin at the Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "openerCrit": {
+    "amount": 0.3
+   },
+   "desc": "A thrust that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage. It only strikes a target at or below 25% health, a threshold that rises with each rank, and has 30% more critical chance against an unwounded foe."
+  },
+  {
+   "name": "Feint, Then Mean It",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 60,
+   "resetCount": 1,
+   "blinkOnUse": 64,
+   "desc": "Steps you 2 tiles from where you stood and clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Opening Made",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 3
+   },
+   "desc": "When you inflict a condition on an enemy, your physical damage rises by 20% for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

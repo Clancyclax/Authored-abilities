@@ -1,0 +1,79 @@
+{
+ "essence": "might",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Ceaseless Kicking",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks out in a cone 3 tiles long, which deals 4 damage to everything in it, with a 30% chance to leave each enemy [Fatigued] for 5 seconds."
+  },
+  {
+   "name": "Run It Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "stackMult": 1,
+   "desc": "Tramples a target at or below 25% health. It deals 22 damage and uses up every affliction on the target, adding the damage they had left."
+  },
+  {
+   "name": "Long-Ridden Lungs",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 18,
+   "desc": "Your stamina recovers 50% faster for 18 seconds."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 5,
+    "duration": 4
+   },
+   "armorBonus": 0.08,
+   "desc": "When your stamina runs out, you restore 5 stamina a second for 4 seconds. Once every 15 seconds. Your armour rises by 8%."
+  }
+ ]
+}

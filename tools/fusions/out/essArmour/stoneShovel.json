@@ -1,0 +1,75 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Spade-Edge Chop",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "resource",
+   "desc": "Chops with the spade's edge, dealing 8 damage and leaving the target 10% easier to wound for 5 seconds. Holds 3 charges, and kills give charges back.",
+   "base": 8,
+   "cooldown": 1.0,
+   "chargesMax": 3,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Scraped Footing",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "earth",
+   "role": "basic",
+   "desc": "Churns the ground within 2 tiles, dealing 3 damage to every enemy and stripping 5% armour and 20% movement speed for 3 seconds.",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "reachUnits": 64,
+   "rangeBand": "melee",
+   "slowPct": 0.2,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   }
+  },
+  {
+   "name": "Thrown-Up Berm",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "earth",
+   "desc": "Digs up a berm 5 tiles long that blocks enemies for 8 seconds.",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "cooldown": 30
+  },
+  {
+   "name": "Banked Earthworks",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "earth",
+   "stackShape": "ledger",
+   "stackOn": "self",
+   "stackBuild": "hit",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land banks a stack on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

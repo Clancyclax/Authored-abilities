@@ -1,0 +1,82 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Bare Stalks",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "nature",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "range": 224,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "bossPct": 0.04,
+   "desc": "Looses a stripping swarm in a wide cone ahead of you, dealing 25 damage to everything caught in it. Against a boss or an elite it also deals 4% of their maximum health."
+  },
+  {
+   "name": "Hopping Swarmer",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "speed": 560,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flings a locust that deals 6 damage to the first enemy it meets, then hops to 2 more enemies within 3 tiles, each hit dealing 60% of that. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Cloud Descends",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 0.8,
+   "summonRange": 192,
+   "castTime": 0.3,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Takes 0.3 seconds to loose a cloud for 10 seconds that bites an enemy within 6 tiles for 3 damage every 0.8 seconds. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Onward to Greener Rows",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackSpend": "full",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "haste",
+   "stackCap": 3,
+   "stackDecay": 10,
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 3. At 3 they all spend at once: you move and attack 5% faster per stack (14% at full) for 6 seconds. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

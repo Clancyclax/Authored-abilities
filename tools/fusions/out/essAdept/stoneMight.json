@@ -1,0 +1,72 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Clean Leverage",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 18,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "desc": "A drilled hip-and-shoulder blow that deals 18 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Whole-Body Stamp",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "ignoreArmor": true,
+   "desc": "After a 1 second wind-up to set your feet, you stamp down and deal 34 damage to every enemy within 3 tiles, ignoring their armour."
+  },
+  {
+   "name": "Full Extension",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "critDamage",
+   "buffAmount": 0.35,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Increases your critical damage by 35% for 12 seconds."
+  },
+  {
+   "name": "Perfect Contact",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

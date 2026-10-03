@@ -1,0 +1,65 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Behind the Knee",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1,
+   "desc": "You catch an enemy behind the knee with the staff's crook, dealing 11 damage, stunning it for 1 second and leaving it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gathering Crook",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.04,
+   "desc": "You sweep the crook of the staff through every enemy within 3 tiles, dealing 26 damage plus 4% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Hauled Into Reach",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "You snag up to 4 enemies within 6 tiles on the crook and pull them onto you for 5 seconds."
+  },
+  {
+   "name": "Already Snagged",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against an enemy already caught by one of your conditions."
+  }
+ ]
+}

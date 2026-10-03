@@ -1,0 +1,81 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Parting Current",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "chargesMax": 3,
+   "volleyCount": 2,
+   "volleySpread": 0.6,
+   "speed": 300,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 2 jets of water that split apart, each dealing 7 damage with a 50% chance to leave the target [Soaked] for 8 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Twin Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "strikes": 2,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Strikes twice with both points, dealing 26 damage that ignores armour and leaving the target [Bleeding] for 2 damage a second for 10 seconds."
+  },
+  {
+   "name": "Halved Burden",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 6,
+   "cooldown": 30,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 6 health."
+  },
+  {
+   "name": "The Other Path",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "water",
+   "rerollKind": "death",
+   "rerollKinds": [
+    "death"
+   ],
+   "rerollCooldown": 120,
+   "desc": "Once every 120 seconds, a blow that would kill you leaves you at 1 health instead."
+  }
+ ]
+}

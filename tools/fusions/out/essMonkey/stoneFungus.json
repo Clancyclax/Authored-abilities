@@ -1,0 +1,80 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Shaken Spores",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "poison",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes spores from your fur over a cone 3 tiles ahead, dealing 3 damage to everything in it with a 25% chance to leave each [Poisoned] for 4 seconds."
+  },
+  {
+   "name": "Smeared Palm",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Smears spores into the target with an open palm, dealing 12 damage and leaving it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Lichen Grooming",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "ally",
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to the ally who needs it most, for 8 seconds."
+  },
+  {
+   "name": "Feeding Mycelium",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Each time you inflict a condition, your attacks heal you for 10% of the damage they deal for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

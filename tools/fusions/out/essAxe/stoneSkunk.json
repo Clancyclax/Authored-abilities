@@ -1,0 +1,82 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneSkunk",
+ "fusions": [
+  {
+   "name": "Reeking Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A chop that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it then spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Fouling Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a cone 3 tiles long, dealing 6 damage to everything in it with a 30% chance per hit to leave it [Blunted] for 5 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Carcass Reek",
+   "kind": "active",
+   "category": "affliction",
+   "template": "corpseMiasma",
+   "element": "poison",
+   "base": 4,
+   "corpse": true,
+   "range": 288,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "miasmaSeconds": 8,
+   "explodeRadius": 112,
+   "cooldown": 30,
+   "desc": "The nearest body within 9 tiles rots where it lies for 8 seconds, and leaves every enemy within 3.5 tiles of it [Poisoned] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Clinging Warning",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.08
+   },
+   "desc": "Your afflictions take hold on enemies that are immune to them. You have 8% poison resistance."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Plague Carrier",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.4,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "A jabbing bite that deals 12 damage, leaves the target 10% easier to wound for 6 seconds and has a 40% chance to leave it [Diseased] for 8 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Pinprick Supper",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blood",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.15,
+   "desc": "A quick prick that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and heals you for 15% of the damage dealt."
+  },
+  {
+   "name": "Hop and Aim",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "critChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds, and you hop 2 tiles when you use it."
+  },
+  {
+   "name": "Sudden Elsewhere",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 2
+   },
+   "desc": "Every few paces you cover, you deal 30% more physical damage for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stripping Cloud",
+   "template": "weakenRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "slowPct": 0.15,
+   "spreadAfflictions": 96,
+   "desc": "Whirls a cloud of spines around you, dealing 10 damage to every enemy within 3 tiles, stripping 12% of their armour for 6 seconds and slowing each by 15%. Your afflictions on each target spread to enemies within 3 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Strip to the Stalk",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "desc": "Needs one of your afflictions on the target and uses it up. Flicks a barb that deals 8 damage to the first enemy it meets within 7 tiles, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Spined Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "cooldown": 45,
+   "desc": "Takes 0.5 seconds to loose a cloud of spined insects for 12 seconds. It deals 3 damage to an enemy within 6 tiles every second, each bite with a 30% chance to leave it [Sundered] for 6 seconds."
+  },
+  {
+   "name": "Gorged on the Field",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "power",
+   "stackCap": 3,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 3. At 3 they all spend at once: you deal 6% more damage per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

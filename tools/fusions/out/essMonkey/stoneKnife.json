@@ -1,0 +1,75 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Palmed Blade",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "consumeAfflictionsPer": 0.6,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Flicks a hidden blade at the first enemy in line up to 6 tiles away, dealing 18 damage and using up every affliction you have on it, with 60% more damage for each. Against something unwounded it has 50% more critical chance."
+  },
+  {
+   "name": "Flurry of Nicks",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "strikes": 3,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lands 3 quick nicks for 6 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Palmed and Ready",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.3,
+   "buffDuration": 10,
+   "cooldown": 60,
+   "desc": "Increases your critical hit chance by 30% for 10 seconds."
+  },
+  {
+   "name": "Waits for an Opening",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you have gone a while without a critical hit, your critical chance rises by 25% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

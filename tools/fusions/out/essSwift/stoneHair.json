@@ -1,0 +1,85 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Razor Tresses",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.1,
+    "duration": 1
+   },
+   "desc": "Whips two fine strands across the target, dealing 3 damage and leaving it [Bleeding] for 1 damage a second for 3 seconds. Anything struck moves 10% slower for 1 second."
+  },
+  {
+   "name": "Braid Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "stunOnHit": 1,
+   "desc": "Cracks a braid at a target up to 5 tiles away, which deals 12 damage, rising to 1.5 times that at full reach, and stuns it for 1 second."
+  },
+  {
+   "name": "Woven Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Raises a barrier that absorbs the next 18 damage and holds for 6 seconds. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Static Bristle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "lightning",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "Each time you cover a long stretch of ground, you gain a shield worth 10% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

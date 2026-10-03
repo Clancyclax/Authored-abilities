@@ -1,0 +1,74 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lulling Nudge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.1,
+   "speed": 260,
+   "radius": 8,
+   "reachUnits": 160,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A soft bump that deals 6 damage, with a 40% chance to leave the target [Hindered] for 5 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Slow Current",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 112,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "A rolling wash deals 10 damage to everything within 3.5 tiles ahead of you and leaves them [Soaked] for 6 seconds. Your afflictions on them spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Drift Off",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Reduces the damage you take by 20% for 12 seconds."
+  },
+  {
+   "name": "Unbothered",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Both Ways at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "disruptive",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxTargets": 3,
+   "confuseDuration": 5,
+   "duration": 5,
+   "confuseDamageFrac": 1,
+   "confuseDamagePct": 1,
+   "ignoreResist": true,
+   "desc": "Feints two ways at once at up to 3 enemies within 4 tiles, which deals 26 damage to each, ignoring their resistances. They turn against each other for 5 seconds."
+  },
+  {
+   "name": "Split Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "leech": 0.2,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a jab at the first enemy in line up to 7 tiles away, dealing 4 damage. It then splits to 1 more enemy within 3 tiles for 60% of the damage, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Took the Other Path",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your dodge chance by 20% for 8 seconds. While it lasts, a second you peels off the other way and fights beside you, striking for 4 every 1.4 seconds for 10 seconds."
+  },
+  {
+   "name": "Either Way Lands",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

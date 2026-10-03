@@ -1,0 +1,64 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Plate-Splitting Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "desc": "Hurls your spear up to 8 tiles, dealing 30 damage, up to 1.5 times as much at full range, and ignoring the target's armour.",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.5,
+   "ignoreArmor": true
+  },
+  {
+   "name": "Hedge of Points",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "piercing",
+   "role": "medium",
+   "desc": "Plants a hedge of spearpoints 5 tiles long for 6 seconds that blocks enemies. Each enemy that runs into it takes 10 damage and is knocked 2.5 tiles back.",
+   "base": 10,
+   "cooldown": 18,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "knockback": 80
+  },
+  {
+   "name": "Lowered Rush",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "piercing",
+   "desc": "Rushes you 4 tiles forward. You move 20% faster for 3 seconds afterwards.",
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "cooldown": 8
+  },
+  {
+   "name": "Braced Point",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "desc": "Against an enemy carrying any of your conditions, your damage rises by 10%. Your armour rises by 6%.",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "armorBonus": 0.06
+  }
+ ]
+}

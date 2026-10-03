@@ -1,0 +1,86 @@
+{
+ "essence": "essNet",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Fist",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 10,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a mesh at an enemy at or below 30% health that clenches shut on it, dealing 26 damage and leaving it [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grasping Sweep",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 112,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.2,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sweeps a grasping mesh through a cone 3.5 tiles ahead, dealing 4 damage to everything in it, with a 20% chance to leave each [Hindered] for 2 seconds."
+  },
+  {
+   "name": "Many Knotted Fingers",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "minion",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "castTime": 0.8,
+   "cooldown": 45,
+   "desc": "Calls up a pair of hands knotted from your mesh for 12 seconds; they grab at enemies within 4 tiles, striking for 4 damage every 1.2 seconds."
+  },
+  {
+   "name": "Reeled Back In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When one of your conditions on an enemy runs out, you gather your mesh back in and regain 8 stamina. Once every 6 seconds."
+  }
+ ]
+}

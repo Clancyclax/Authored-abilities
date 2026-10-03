@@ -1,0 +1,74 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Measured Litany",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "long",
+   "base": 8,
+   "cooldown": 80,
+   "castTime": 1.5,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 360,
+   "radius": 7,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "ignoreResist": true,
+   "desc": "Takes 1.5 seconds to recite, then looses 4 words of power at once, spread apart, each dealing 8 damage that ignores resistances."
+  },
+  {
+   "name": "Spoken Correction",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "Speaks a correcting word that deals 9 damage to the first enemy it meets. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Recited Again",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "resetCount": 1,
+   "castTime": 1.5,
+   "cooldown": 90,
+   "desc": "Takes 1.5 seconds to recite, then clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Measured Breath",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "mana",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you spend mana, you regain 2 mana a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

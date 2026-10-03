@@ -1,0 +1,77 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Darting Slivers",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 380,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Looses 3 silver slivers in a spread, each dealing 3 damage."
+  },
+  {
+   "name": "Under the Gill Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "stunOnHit": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Slides a needle under the target's guard, dealing 12 damage, stunning it for 1 second and leaving it [Bleeding] for 2 damage a second for 4 seconds. For 3 seconds afterwards, you move 20% faster."
+  },
+  {
+   "name": "Through the Mesh",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 30,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "desc": "Increases your dodge chance by 20% for 8 seconds, and you slip 2 tiles from where you stood."
+  },
+  {
+   "name": "Never Quite Caught",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "water",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 12,
+   "desc": "Once every 12 seconds, a blow that would have hit you rolls your dodge a second time, and the second roll stands."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Peg Driven Home",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 28,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1,
+   "executeLadder": true,
+   "desc": "You bring the staff down two-handed on an enemy at or below 25% health, a threshold that rises with each rank, dealing 28 damage and using up every affliction on it to add their remaining damage to the blow."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Levelling Blow",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You slam the staff flat against the ground, dealing 15 damage to every enemy within 3 tiles and knocking each 2.5 tiles back. Each has a 30% chance to be [Sundered] for 5 seconds."
+  },
+  {
+   "name": "Weighted Head",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "buffStat": "dmg_blunt",
+   "buffAmount": 0.3,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "You choke down to the end of the staff and swing it as a maul: your blunt damage rises 30% for 15 seconds."
+  },
+  {
+   "name": "Flattened Guard",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "blunt",
+   "pierceElement": "blunt",
+   "armorIgnore": 0.12,
+   "desc": "Your blunt damage, staff blows among them, cannot be resisted, and ignores 12% of the target's armour."
+  }
+ ]
+}

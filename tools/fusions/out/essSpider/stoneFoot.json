@@ -1,0 +1,80 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "End of the Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Strikes an enemy up to 6 tiles away that is at or below 25% health, which deals 18 damage, rising to 1.5 times that at full reach. Its damage rises 5% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Drumming Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps on the strands around you, which deals 12 damage to every enemy within 3 tiles, stuns each for 1 second and leaves it [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Single File",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 10,
+   "stealthScope": "party",
+   "cooldown": 40,
+   "desc": "Veils you and your allies for 8 seconds, and you all move 10% faster while veiled. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Fed by the Road",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover, your attacks heal you for 15% of the damage they deal for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

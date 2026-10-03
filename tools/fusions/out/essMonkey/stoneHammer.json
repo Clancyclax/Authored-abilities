@@ -1,0 +1,74 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Nutcracker Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Cracks the target with a held stone for 30 damage that ignores armour, leaving it 20% easier to wound for 8 seconds. You move 20% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Two-Fisted Pounding",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pounds the ground with both fists, dealing 7 damage to every enemy within 2.5 tiles with a 30% chance to leave each [Slowed] for 2 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Find the Soft Spot",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "buffStat": "critDamage",
+   "buffAmount": 0.35,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your critical damage by 35% for 15 seconds."
+  },
+  {
+   "name": "Knows Where It Cracks",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "blunt",
+   "pierceElement": "blunt",
+   "armorIgnore": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "Your blunt attacks ignore 12% of the target's armour. It also reduces the cooldown of every other ability you have by 5%."
+  }
+ ]
+}

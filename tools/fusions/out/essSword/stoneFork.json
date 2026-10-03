@@ -1,0 +1,77 @@
+{
+ "essence": "essSword",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Tine-Split Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks the blade's tip at the first enemy within 6 tiles, dealing 4 damage. It then splits to 1 more enemy within 3 tiles, dealing 60% of the original damage."
+  },
+  {
+   "name": "Both Ways at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "volleyCount": 2,
+   "volleySpread": 1.2,
+   "speed": 420,
+   "radius": 6,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 3,
+   "desc": "Cuts in two directions at once, out to 3 tiles, each cut dealing 7 damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Forked Parry",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 24,
+   "reflectKind": "spell",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 6,
+   "desc": "For 6 seconds, 30% of the elemental damage you take is turned aside and dealt back to whoever dealt it."
+  },
+  {
+   "name": "Second Branch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "slashing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

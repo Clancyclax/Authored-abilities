@@ -1,0 +1,78 @@
+{
+ "essence": "essSword",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mildewed Nick",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A shallow cut that deals 4 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Spores Along the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "slowPct": 0.15,
+   "spreadAfflictions": 128,
+   "desc": "Sweeps the blade around you, dealing 10 damage to every enemy within 3 tiles, stripping 10% of their armour for 6 seconds and slowing them by 15%. Your afflictions on each enemy hit spread to every enemy within 4 tiles of it."
+  },
+  {
+   "name": "Blade Left to Seed",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 50,
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 96,
+   "summonDuration": 15,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to drive a blade into the ground beside you for 15 seconds. It sheds spores on enemies within 3 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Slow Colonies",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land on an enemy builds a stack on it, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

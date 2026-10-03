@@ -1,0 +1,78 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Anchor Lines",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 16,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 28,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Strings a 5-tile web ahead of you for 5 seconds that draws nearby enemies inward. It deals 9 damage to each one it catches and leaves it [Pinned] for 2 seconds; your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wrapped and Drained",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "leech": 0.15,
+   "desc": "A biting finish that deals 18 damage and consumes every affliction on the target, adding 1.5 times their remaining damage, and heals you for 15% of the damage dealt. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Tripwire",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 16,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 60,
+   "desc": "Takes 1 second to string a tripwire at the nearest enemy. It waits up to 20 seconds, and the first enemy to come within 2 tiles sets it off: it deals 16 damage in a blast around it."
+  },
+  {
+   "name": "Felt Through the Silk",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying any of your afflictions, your damage rises by 10%."
+  }
+ ]
+}

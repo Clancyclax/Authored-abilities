@@ -1,0 +1,72 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Bite on Landing",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 256,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You leap up to 8 tiles onto the target and bite, dealing 12 damage and leaving it [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Rebound Hops",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 5,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "You drop on the spot, dealing 7 damage to every enemy within 2 tiles, and move 15% faster for 2 seconds afterwards. Holds 5 charges, and each kill gives one back."
+  },
+  {
+   "name": "Gone Across the Room",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 256,
+   "cooldown": 12,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Springs you instantly to a point up to 8 tiles away. You move 25% faster for 3 seconds after you land."
+  },
+  {
+   "name": "Never Where It Landed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "dodge",
+   "rerollKinds": [
+    "dodge"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a failed dodge is rolled a second time, and the second roll stands."
+  }
+ ]
+}

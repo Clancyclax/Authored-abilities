@@ -1,0 +1,77 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Springboard Crash",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "You spring high off the bent staff and crash down, dealing 30 damage to every enemy within 3 tiles. Every hit is a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Damp Flick",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You snap the wet end of the staff to fling a gob of water at the first enemy within 5 tiles, dealing 4 damage with a 30% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Lily-Pad Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "dashDist": 160,
+   "cooldown": 9,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 2
+   },
+   "desc": "You pole-hop 5 tiles forward on the staff, then move 20% faster for 2 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Coiled Crouch",
+   "element": "water",
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 3
+   },
+   "desc": "When your stamina fills, you crouch low on the staff and your physical damage rises 30% for 3 seconds. Once every 10 seconds."
+  }
+ ]
+}

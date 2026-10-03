@@ -1,0 +1,82 @@
+{
+ "essence": "might",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "chargesMax": 4,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "desc": "Drives a bolt of force into the first enemy it meets, which deals 8 damage, then splits off to 1 more enemy within 4 tiles for 60% of that. Holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Both Ways at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.6,
+   "speed": 300,
+   "radius": 9,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "knockback": 80,
+   "desc": "Thrusts out 2 bolts of force in diverging directions; each deals 12 damage and knocks its target back 2.5 tiles."
+  },
+  {
+   "name": "Turned Aside",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "buffDuration": 8,
+   "armorBonus": 0.1,
+   "desc": "For 8 seconds, 30% of the damage you take is sent back to whoever dealt it, and your armour rises by 10%."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 192
+   },
+   "desc": "When you land a critical hit, the excess force branches into the nearest enemy within 6 tiles and deals 8 damage. Once every 4 seconds."
+  }
+ ]
+}

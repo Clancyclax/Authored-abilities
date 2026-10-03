@@ -1,0 +1,81 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Glamour Spark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "confuse": true,
+   "confuseChance": 0.15,
+   "confuseDuration": 2,
+   "desc": "Flicks a spark of illusion that deals 4 damage, with a 15% chance to confuse the target for 2 seconds."
+  },
+  {
+   "name": "Bewildering Flash",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a cone of illusory light 5 tiles ahead that deals 12 damage, stuns everything caught for 1 second, and has a 50% chance of [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Veil of Glamour",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "arcane",
+   "cooldown": 30,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "party",
+   "desc": "Veils you and nearby allies for 5 seconds, moving 15% faster. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Bided Ruse",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you have gone a while without a critical hit, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

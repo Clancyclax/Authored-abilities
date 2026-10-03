@@ -1,0 +1,82 @@
+{
+ "essence": "essApe",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Rod of Rank",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "maxMult": 1.3,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Brings a raised rod down on an enemy up to 5 tiles away for 30 damage, growing the further it reaches, up to 1.3 times at full reach. On a hit, your allies' damage rises by 20% for 15 seconds."
+  },
+  {
+   "name": "Cowing Glare",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stunOnHit": 0.8,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "slowPct": 0.15,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rears up and glares down every enemy within 3 tiles, dealing 10 damage, stunning each for 0.8 seconds and stripping 10% of their armour and 15% of their movement speed for 5 seconds. Each hit has a 50% chance to leave the target [Weakened] for 6 seconds."
+  },
+  {
+   "name": "Unchallenged",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 120,
+   "immunityDuration": 4,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Deference Owed",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "allyScaling": {
+    "per": 0.09,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands. Its effect increases by 9% for each ally within 5.5 tiles, up to 4 allies."
+  }
+ ]
+}

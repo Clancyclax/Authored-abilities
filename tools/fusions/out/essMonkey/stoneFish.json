@@ -1,0 +1,83 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Darting Shoal",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 420,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Flicks 3 darting jets of water from your fingers at once, spread apart, each dealing 3 damage up to 6 tiles away. You move 10% faster for 2 seconds after using it."
+  },
+  {
+   "name": "Slipstream Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "chargeTo": 192,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slips through to an enemy up to 6 tiles away and deals 12 damage, up to 1.5 times that from full range, leaving it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Slides Right Off",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to slip off and land on whoever laid it instead."
+  },
+  {
+   "name": "Wriggle Room",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 4. At 4 they all spend at once: you move and attack 5% faster per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

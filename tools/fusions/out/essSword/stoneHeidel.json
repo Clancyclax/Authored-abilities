@@ -1,0 +1,69 @@
+{
+ "essence": "essSword",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Sabre Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "Rides you to a target up to 7 tiles away, then deals 13 damage and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Unflagging Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "desc": "A wide cut that deals 7 damage to everything within 3 tiles ahead of you. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Sabre Canter",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.3,
+   "buffDuration": 8,
+   "desc": "Increases your movement speed by 30% for 8 seconds."
+  },
+  {
+   "name": "Fresh Legs, Fresh Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "strikes": 1
+   },
+   "desc": "The moment your stamina is full, your crit chance rises by 20% for your next strike. Once every 15 seconds."
+  }
+ ]
+}

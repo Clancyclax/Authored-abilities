@@ -1,0 +1,78 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Quick Nick",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A quick strike with your weapon that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thrown from Cover",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "speed": 520,
+   "radius": 5,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Usable only on a target at or below 30% health. Throws a hidden blade that deals 24 damage, with 50% more critical chance against a target nothing has wounded yet."
+  },
+  {
+   "name": "Blend In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "stealthScope": "self",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 10,
+   "cooldown": 30,
+   "desc": "Shifts your colours to match the ground: you are veiled for 8 seconds, enemies notice you 70% later, and you move 10% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Back to Stillness",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your next strike has 20% more critical chance. Once every 10 seconds."
+  }
+ ]
+}

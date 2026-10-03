@@ -1,0 +1,73 @@
+{
+ "essence": "essSword",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Loaded Slivers",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargesMax": 5,
+   "desc": "Fires a sliver of the blade at the first enemy within 9 tiles, dealing 7 damage. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Point-Blank Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "fire",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A cut at arm's length that deals 32 damage, is always a critical hit, stuns the target for 1 second and sets it [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Cocked and Ready",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your critical hit chance by 25% for 10 seconds."
+  },
+  {
+   "name": "Ricochet Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "desc": "When you land a critical hit, a shard leaps to the nearest enemy within 6 tiles, dealing 6 damage. Once every 5 seconds."
+  }
+ ]
+}

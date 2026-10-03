@@ -1,0 +1,86 @@
+{
+ "essence": "fire",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Galloping Blaze",
+   "template": "rangeStrike",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A thundering blow of flame that deals 12 damage, up to 2 times as much at its full 7-tile reach, knocks the target back 3 tiles and sets it [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Ridden Down",
+   "template": "sunderStrike",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAfflictionsPer": 0.5,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A trampling blow that deals 16 damage and leaves the target 10% easier to wound for 5 seconds. It uses up every affliction you have on the target, dealing 50% more damage for each one."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "element": "fire",
+   "name": "Blazing Mare",
+   "template": "activeSummon",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 12,
+   "summonInterval": 1.2,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 45,
+   "desc": "Takes 0.5 seconds to call a mare of flame that fights beside you for 12 seconds, striking for 5 damage every 1.2 seconds. Your movement speed rises 20% for 4 seconds after you call it."
+  },
+  {
+   "name": "Built-Up Momentum",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "Every 6 tiles you cover, your next spell deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

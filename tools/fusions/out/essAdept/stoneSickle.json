@@ -1,0 +1,80 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Low Crescent",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A low curved cut 2.5 tiles ahead of you that deals 4 damage to everything in it, with a 25% chance to leave each one [Bleeding] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Reaping Hook",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "desc": "Hooks the blade behind the target and draws it through, which deals 22 damage and consumes every affliction on it, adding 1.6 times their remaining damage. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Into the Swathe",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "slashing",
+   "powerMult": 1.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 25% for 12 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Sheaf Bound",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you heal for 15% of the damage you deal for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

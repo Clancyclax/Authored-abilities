@@ -1,0 +1,95 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Spat Slug",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 640,
+   "radius": 6,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a slug of glue and venom that deals 30 damage, plus 5% of the target's maximum health if it is a boss or elite, and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Glue Buckshot",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "speed": 520,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "chargesMax": 5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires 3 pellets of glue in a tight spread out to 7 tiles, each of which deals 5 damage, with a 30% chance to leave its target [Slowed] for 3 seconds. Holds 5 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Tripwire Charge",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "fire",
+   "summonKind": "trap",
+   "summonDmg": 22,
+   "summonDuration": 30,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 80,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "cooldown": 90,
+   "desc": "Takes 1 second to string a tripwire at the nearest enemy. It waits up to 30 seconds, and the first enemy to come within 2 tiles sets it off: it deals 22 damage in a blast around it."
+  },
+  {
+   "name": "Holding Fire",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

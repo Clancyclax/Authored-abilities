@@ -1,0 +1,92 @@
+{
+ "essence": "fire",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Forking Brand",
+   "template": "projectileBall",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 128,
+    "frac": 0.8
+   },
+   "chainCount": 1,
+   "chainRange": 128,
+   "chainDamagePct": 0.8,
+   "desc": "Throws a brand that deals 9 damage to the first enemy it meets, then forks to 1 more enemy within 4 tiles for 80% of the original damage. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Two-Pronged Gout",
+   "template": "volley",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "volleyCount": 2,
+   "volleySpread": 0.5,
+   "speed": 300,
+   "radius": 8,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 2 gouts of flame that split apart, each dealing 12 damage and setting the target [Burning] for 5 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "element": "fire",
+   "name": "Parted Flames",
+   "template": "reflectWard",
+   "reflectKind": "spell",
+   "reflectChance": 0.4,
+   "reflectFrac": 0.4,
+   "buffDuration": 6,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "cooldown": 30,
+   "desc": "For 6 seconds, 40% of the elemental damage you take is split off and sent back to whoever dealt it. You have 15% fire resistance."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "element": "fire",
+   "name": "Second Prong",
+   "template": "stacking",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 2,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 0.6,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you land a hit, a stack builds on that enemy, up to 2. When you reach 2, they all spend at once: a second blow of flame strikes that enemy for 20% of your weapon damage per stack (41% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

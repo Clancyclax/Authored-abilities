@@ -1,0 +1,77 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Driven to the Head",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Hammers a spike home, dealing 28 damage plus 5% of a boss's or elite's maximum health, and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Tacked Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 15,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Strikes the ground around you, dealing 10 damage to every enemy within 2.5 tiles, stunning each for 1 second, with a 30% chance to leave it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Boarded and Nailed",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "blunt",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 128,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "desc": "Nails up a barricade 4 tiles long that blocks enemies for 6 seconds."
+  },
+  {
+   "name": "Each Blow Drives Deeper",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "blunt",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land drives a stack into that enemy, up to 6. Your next critical hit on it spends them all: you deal 6% more damage per stack (36% at full) for 6 seconds. Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

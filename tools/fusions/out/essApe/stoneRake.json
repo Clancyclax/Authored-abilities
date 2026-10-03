@@ -1,0 +1,76 @@
+{
+ "essence": "essApe",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Spread-Finger Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 112,
+   "desc": "Drags your spread fingers across a cone ahead of you, dealing 11 damage and making each enemy [Bleeding] for 2 damage a second for 4 seconds. Your afflictions on each spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Gleaning Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "stackMult": 0.8,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "range": 90,
+   "reachUnits": 90,
+   "rangeBand": "melee",
+   "desc": "Needs one of your afflictions on the target, and uses it up. Swipes the target for 7 damage, consuming every affliction on it and adding 0.8 times their remaining damage to the blow."
+  },
+  {
+   "name": "Raked Into a Heap",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 20,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 40,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Hooks your long arms around a point ahead of you for 4 seconds, dragging every enemy near it into a heap. Anything struck moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Gathers the Stragglers",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against wounded enemies low on health, your damage rises by 12%."
+  }
+ ]
+}

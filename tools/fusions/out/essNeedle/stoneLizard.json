@@ -1,0 +1,70 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Flick From the Rock",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "stunOnHit": 1,
+   "speed": 500,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "desc": "Flicks a point at the first enemy in line, dealing 12 damage and stunning it for 1 second."
+  },
+  {
+   "name": "Shed Spines",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Sheds a ring of spines, dealing 8 damage to every enemy within 2.5 tiles. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Still as Basking",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "earth",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.2,
+   "aggroMult": 0.2,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds: enemies notice you 80% later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Sun-Warmed Strike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When your stamina is full, your next ability deals 40% more damage. Once every 10 seconds."
+  }
+ ]
+}

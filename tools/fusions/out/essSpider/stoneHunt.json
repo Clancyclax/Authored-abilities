@@ -1,0 +1,70 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Mark the Quarry",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a strand at an enemy up to 6 tiles away, which deals 4 damage, rising to 1.5 times that at full reach, with a 30% chance to leave it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Finish the Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "speed": 420,
+   "radius": 7,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "requiresTargetBelow": 0.25,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Usable only on a target at or below 25% health. Fires a venom dart that deals 18 damage, rising 8% for each affliction on the target (max 40%)."
+  },
+  {
+   "name": "Closing Quiet",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 60,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Scent of the Faltering",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy below half health, your damage rises 12%."
+  }
+ ]
+}

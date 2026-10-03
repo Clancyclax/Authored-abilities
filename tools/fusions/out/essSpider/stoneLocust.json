@@ -1,0 +1,78 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping Swarm",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Looses a ring of biting spiderlings, which deals 11 damage to every enemy within 3.5 tiles and leaves each [Poisoned] for 2 damage a second for 4 seconds. Your afflictions on each target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Strip and Sip",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "leech": 0.2,
+   "desc": "Spits a bolt that deals 7 damage to the first enemy it meets and heals you for 20% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Brood Let Loose",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "cooldown": 45,
+   "desc": "Takes 0.5 seconds to loose a brood of spiderlings for 12 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Gorged on Plenty",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 15,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every kill you make builds a stack on you, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 15 seconds."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Bearing Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "desc": "Puts the full weight of your plate behind one blow that deals 38 damage, ignores the target's armour and leaves it 20% easier to wound for 8 seconds.",
+   "base": 38,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Heave Them Off",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Throws your weight outward, dealing 12 damage to every enemy within 3 tiles and knocking them 3 tiles back.",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96
+  },
+  {
+   "name": "Burst the Bonds",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "desc": "Strains against your bonds and removes up to 3 conditions from you. You move 20% faster for 4 seconds afterwards.",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 45,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Return the Weight",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you take damage that is not fire, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

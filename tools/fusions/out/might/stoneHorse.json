@@ -1,0 +1,76 @@
+{
+ "essence": "might",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Full-Gallop Shoulder",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "chargeTo": 256,
+   "desc": "You rush up to 8 tiles to the target and drive into it, which deals 16 damage and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Stampede Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 80,
+   "range": 160,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "large",
+   "guaranteedCrit": true,
+   "desc": "Thunders through a narrow cone 5 tiles long, which deals 28 damage to everything in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Barded Charger",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 6
+   },
+   "desc": "Reduces the damage you take by 20% for 12 seconds, and your movement speed rises 30% for 6 seconds."
+  },
+  {
+   "name": "Momentum Carried",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you have covered a stretch of ground, your physical damage rises 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hidden Spur",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "strikes": 1,
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that snaps a hidden spur from the hilt, which deals 30 damage, always crits, and leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spring Fan",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A sprung fan throws 3 blades that each deal 6 damage, with a 30% chance to leave the target [Bleeding] for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Stropping Spindle",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "slashing",
+   "buffStat": "critDamage",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Runs your edges over a spinning strop, raising your critical damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Spring-Loaded Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, a concealed edge springs out: your crit chance rises by 40% for your next strike. Once every 8 seconds."
+  }
+ ]
+}

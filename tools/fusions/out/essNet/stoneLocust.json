@@ -1,0 +1,83 @@
+{
+ "essence": "essNet",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swarm-Stuffed Sack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 9,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hpCostPct": 0.04,
+   "leechOverTime": {
+    "frac": 0.25,
+    "duration": 6,
+    "label": "Gorged"
+   },
+   "desc": "Throws a mesh sack stuffed with conjured locusts that bursts on the first enemy it meets, dealing 8 damage; 25% of the damage comes back to you as healing over 6 seconds. Costs 4% of your maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Cloud in the Seine",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Your mesh fills with a devouring swarm around you, dealing 26 damage that ignores armour to every enemy within 3.5 tiles and leaving each [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Plague Let Out",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "desc": "Opens your mesh and lets out a cloud of conjured locusts for 10 seconds; it swarms enemies within 4 tiles, striking for 3 damage every second."
+  },
+  {
+   "name": "Gorging Season",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, the swarm caught in your mesh gorges on it: for 5 seconds you heal for 20% of the damage you deal. Once every 15 seconds."
+  }
+ ]
+}

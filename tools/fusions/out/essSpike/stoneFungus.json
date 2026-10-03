@@ -1,0 +1,91 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spore-Tipped Stab",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "chargesMax": 4,
+   "desc": "A stab that deals 7 damage and leaves the target [Poisoned] for 1 damage a second for 6 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Fruiting Eruption",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "disease",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "contagion": {
+    "max": 2,
+    "radius": 160,
+    "chance": 0.3,
+    "spreadsLeft": 2
+   },
+   "desc": "Fungal spines burst from the ground around you, dealing 28 damage to every enemy within 3.5 tiles, plus 4% of a boss's or elite's maximum health, and leave each [Diseased] for 8 seconds. The disease is catching: it finds up to 2 more enemies within 5 tiles on its own, 30% of the time."
+  },
+  {
+   "name": "Bracket Shelf",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "plant",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "resist": {
+    "element": "poison",
+    "amount": 0.15
+   },
+   "cooldown": 40,
+   "desc": "For 12 seconds, your armour rises by 20% and your poison resistance by 15%."
+  },
+  {
+   "name": "Mycelial Spear",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "poison",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Conjures a spear of hardened fungus. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Poisoned] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

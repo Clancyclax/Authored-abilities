@@ -1,0 +1,77 @@
+{
+ "essence": "essArmour",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Rolling Ram",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Curls up and rolls you up to 7 tiles into the target, dealing 13 damage, up to 1.6 times as much from the full 7 tiles.",
+   "base": 13,
+   "cooldown": 15,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "chargeTo": 224
+  },
+  {
+   "name": "Scale Flare",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "desc": "Flares the edges of your scales, dealing 4 damage to every enemy within 2 tiles and leaving them [Bleeding] for 1 damage a second for 3 seconds.",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   }
+  },
+  {
+   "name": "Curl Tight",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "desc": "Curls into your plates, gaining a barrier that absorbs the next 5 hits, up to 24 damage, for 6 seconds and raising your armour by 10%.",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 5,
+   "shieldDuration": 6,
+   "armorBonus": 0.1,
+   "cooldown": 24
+  },
+  {
+   "name": "Shingled Back",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackOn": "self",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, another scale settles over you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

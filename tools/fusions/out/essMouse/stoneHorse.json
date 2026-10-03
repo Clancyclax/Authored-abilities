@@ -1,0 +1,75 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Whole Nest Runs",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 5
+   },
+   "desc": "Every enemy within 3.5 tiles is trampled for 30 damage that ignores armour. You move 30% faster for 5 seconds afterward."
+  },
+  {
+   "name": "Gallop Up the Spine",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 72,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 1,
+   "executeLadder": false,
+   "chargeTo": 224,
+   "desc": "Rushes up to 7 tiles to the target and strikes for 14 damage, consuming every affliction on it and adding 1.2 times their remaining damage."
+  },
+  {
+   "name": "Stampede of Paws",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 10,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 40,
+   "desc": "Calls a swarm that fights for 10 seconds, biting an enemy within 4 tiles for 3 damage every second."
+  },
+  {
+   "name": "Thunder in the Floorboards",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "After you run a stretch, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

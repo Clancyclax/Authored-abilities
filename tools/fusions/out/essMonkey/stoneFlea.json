@@ -1,0 +1,75 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Nip and Spring",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "leech": 0.25,
+   "desc": "Springs a biting nip at the first enemy in line up to 8 tiles away, dealing 6 damage and healing you for 25% of it. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Pinball Bounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Ricochets off every enemy within 3 tiles in turn, dealing 12 damage to each and stunning them for 1 second. You move 20% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Across the Table",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 224,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "cooldown": 12,
+   "desc": "Steps you instantly to a point up to 7 tiles away, and you move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Fresh Host",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "Each time you cover enough ground, your attacks heal you for 15% of the damage they deal for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

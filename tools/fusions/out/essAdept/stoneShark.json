@@ -1,0 +1,70 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Pass",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A lunging bite on a target up to 6 tiles away that deals 22 damage, rising to 1.5 times that at full reach, and makes it [Bleeding] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Circling Cut",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "A turning slash that deals 4 damage to every enemy within 2 tiles. Your movement speed rises 10% for 2 seconds after."
+  },
+  {
+   "name": "Turn Behind",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "teleportRange": 160,
+   "cooldown": 12,
+   "dodgeBonus": 0.05,
+   "desc": "Steps you instantly to a spot up to 5 tiles away. Your dodge chance rises by 5%."
+  },
+  {
+   "name": "Scent in the Water",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against an enemy at low health, your damage rises by 12%."
+  }
+ ]
+}

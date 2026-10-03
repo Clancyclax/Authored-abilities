@@ -1,0 +1,87 @@
+{
+ "essence": "essNet",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bursting Charge",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "speed": 560,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a packed charge that bursts open into a mesh on the first enemy it meets, dealing 34 damage and 80% of that to every enemy within 3.5 tiles, and leaving each [Pinned] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tethered Round",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 256,
+   "maxMult": 1.3,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "desc": "Fires a round at a target already caught in one of your afflictions, using that affliction up, and deals 8 damage, up to 1.3 times that at its full reach of 8 tiles."
+  },
+  {
+   "name": "Launcher on a Tripod",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 192,
+   "castTime": 0.8,
+   "cooldown": 50,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sets up a conjured launcher for 15 seconds that fires mesh shot at enemies within 6 tiles, striking for 4 damage every 1.5 seconds with a 30% chance to leave each target [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Sighted on the Snared",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition, your critical chance rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essAxe",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Felled Trunk",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "plant",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.4,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Fells a trunk across a narrow cone 5 tiles long, dealing 32 damage to everything under it. Every hit is a critical hit."
+  },
+  {
+   "name": "Rooting Hack",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A chop that sinks sap-laced roots into the target, dealing 7 damage, slowing it by 25% for 2 seconds and leaving it [Poisoned] for 1 damage a second for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Stacked Deadfall",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "plant",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "cooldown": 30,
+   "desc": "Drops a row of felled trunks 5 tiles long for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Coppice Growth",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "plant",
+   "cooldownReduction": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Every ability you have comes round 8% sooner, and you regenerate 0.5 health a second."
+  }
+ ]
+}

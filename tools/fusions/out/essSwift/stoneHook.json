@@ -1,0 +1,86 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Reel Yourself In",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "maxMult": 1.3,
+   "chargeTo": 256,
+   "debuff": {
+    "key": "bleed",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a barbed line at a target up to 8 tiles away and hauls you to it. The hit deals 13 damage, rising to 1.3 times that at full reach, and leaves it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Tear the Barb Free",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rips a barb out of the target, dealing 9 damage and leaving it [Bleeding] for 2 damage a second for 3 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Drag Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "cooldown": 24,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Snags a line 5 tiles long ahead of you for 4 seconds, dragging every enemy near it inward. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Snag the Next",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 256
+   },
+   "desc": "When you kill an enemy, a barb flies to the nearest enemy within 8 tiles, dealing 8 damage. Once every 4 seconds."
+  }
+ ]
+}

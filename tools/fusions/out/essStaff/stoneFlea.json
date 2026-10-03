@@ -1,0 +1,77 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bound and Land",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "You plant the staff and vault onto an enemy up to 7 tiles away. The landing deals 13 damage and leaves the target 12% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pogo Spin",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "You bounce on the planted staff and spin, dealing 7 damage to every enemy within 2 tiles, then move 10% faster for 2 seconds. Holds 4 charges; each use spends one and each kill restores one."
+  },
+  {
+   "name": "Across the Table",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 10,
+   "teleportRange": 288,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "You plant the staff and spring to a point up to 9 tiles away in an instant, then move 15% faster for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Spring in the Stride",
+   "element": "physical",
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each stretch of ground you cover on the staff stores a spring: your physical damage rises 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

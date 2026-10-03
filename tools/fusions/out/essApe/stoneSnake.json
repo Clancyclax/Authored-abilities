@@ -1,0 +1,80 @@
+{
+ "essence": "essApe",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Spat Bile",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 320,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Spits a gob of venomous bile that deals 11 damage to the first enemy it meets and leaves it [Poisoned] for 3 damage a second for 5 seconds. Your afflictions on it spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Strangling Coil",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "consumeAfflictionsPer": 0.6,
+   "stackMult": 1,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "desc": "Wraps both arms around the target and squeezes for 18 damage, using up every affliction you have on it and dealing 60% more damage for each."
+  },
+  {
+   "name": "Still in the Grass",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "desc": "Goes utterly still and veils you for 8 seconds, and you move 10% faster while veiled. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Waiting Grip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you inflict a condition, your next ability deals 30% more damage. Once every 8 seconds."
+  }
+ ]
+}

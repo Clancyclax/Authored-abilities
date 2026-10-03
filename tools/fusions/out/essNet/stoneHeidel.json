@@ -1,0 +1,76 @@
+{
+ "essence": "essNet",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ride Them Down",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "You charge up to 7 tiles to the target and trample it into your mesh, dealing 14 damage and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Endless Circuit",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "You ride a full circle trailing your mesh, dealing 30 damage to every enemy within 3.5 tiles, always as a critical hit."
+  },
+  {
+   "name": "Second Wind in Harness",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Hauled Onward",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs dry, you lean into the harness of your mesh and regain 4 health a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

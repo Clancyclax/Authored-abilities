@@ -1,0 +1,77 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Long-Held Incantation",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "castTime": 2,
+   "speed": 360,
+   "radius": 9,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "After 2 seconds held motionless, looses a bolt that deals 30 damage and bursts, hitting every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Correcting Word",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.2,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.5,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Speaks a word at it from up to 6 tiles away that deals 8 damage, rising to 1.2 times that at full reach, with a 50% chance of [Muddled] for 4 seconds."
+  },
+  {
+   "name": "Rehearse Again",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "resetCount": 1,
+   "cooldown": 90,
+   "dodgeBonus": 0.1,
+   "desc": "You hold still and run the words once more: clears the cooldown on one of your other abilities, chosen at random from those still waiting, and your dodge chance rises 10%."
+  },
+  {
+   "name": "Waited-For Word",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your mana is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

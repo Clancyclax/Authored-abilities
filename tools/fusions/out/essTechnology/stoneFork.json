@@ -1,0 +1,75 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Split Circuit",
+   "template": "projectileBall",
+   "element": "lightning",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "chain": {
+    "count": 2,
+    "radius": 128,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 128,
+   "chainDamagePct": 0.6,
+   "desc": "Fires a spark that deals 7 damage to the first enemy it meets, then forks to 2 more enemies within 4 tiles, each hit dealing 60% of the original damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Twin-Prong Discharge",
+   "template": "breathCone",
+   "element": "lightning",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 96,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "Arcs current between two prongs across a cone 3 tiles long, which deals 13 damage to everything in it and stuns each enemy for 1 second."
+  },
+  {
+   "name": "Junction Switch",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "lightning",
+   "resetCount": 1,
+   "cooldown": 90,
+   "desc": "Throws a switch that clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Bifurcated Feed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "lightning",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 192
+   },
+   "desc": "Each critical hit splits off a bolt that leaps to the nearest enemy within 6 tiles and deals 6 damage. Once every 4 seconds."
+  }
+ ]
+}

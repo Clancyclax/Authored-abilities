@@ -1,0 +1,65 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Still, Then Sudden",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes the target for 30 damage that is always a critical hit and leaves it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Tail-Whip Spin",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "hpCostPct": 0.05,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Whips your tail round, dealing 8 damage to every enemy within 2.5 tiles."
+  },
+  {
+   "name": "Dropped Tail",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.3,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "cooldown": 30,
+   "desc": "Reduces the damage you take by 30% for 8 seconds, and you finish 2 tiles from where you stood."
+  },
+  {
+   "name": "Sun on the Scales",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "By day, your dodge chance rises by 12%."
+  }
+ ]
+}

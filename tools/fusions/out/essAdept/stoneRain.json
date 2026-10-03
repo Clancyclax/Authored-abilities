@@ -1,0 +1,86 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "First Drop",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A bead of water that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Soaked] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Squall Line",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 12,
+   "cooldown": 70,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 400,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0.6,
+   "ignoreResist": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "After a 0.6 second gather, looses 5 sheets of rain in a fan, each dealing 12 water damage that ignores resistances and rises 10% per affliction on the target (max 30%)."
+  },
+  {
+   "name": "Grey Cover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.5,
+   "stealthSpeedPct": 0,
+   "stealthScope": "party",
+   "cooldown": 30,
+   "desc": "Veils you and your allies for 5 seconds. Enemies notice you far later, and each veil breaks the moment its bearer attacks."
+  },
+  {
+   "name": "Runoff",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 6
+   },
+   "desc": "When a condition you laid on an enemy runs out, you regain 6 mana. Once every 4 seconds."
+  }
+ ]
+}

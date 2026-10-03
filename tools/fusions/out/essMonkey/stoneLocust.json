@@ -1,0 +1,84 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Raiding Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 16,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 380,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 112,
+   "leechOverTime": {
+    "frac": 0.2,
+    "duration": 6,
+    "label": "Reprieve"
+   },
+   "desc": "Looses 5 darting bolts at once, spread wide, each dealing 5 damage. 20% of the damage dealt comes back as healing over 6 seconds, and your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Picked to the Bone",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "nature",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.3,
+   "stackMult": 1.8,
+   "executeLadder": false,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "desc": "Usable only on an enemy at or below 30% health: deals 20 damage plus 1.8 times what your afflictions on it have left to deal, using them up."
+  },
+  {
+   "name": "Plunder Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 45,
+   "desc": "Calls a swarm that harries enemies within 5 tiles for 12 seconds, dealing 4 damage every second. You move 20% faster for 4 seconds after calling it."
+  },
+  {
+   "name": "Gorged and Ready",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 3,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 3. At 3 they all spend at once: you are healed for 5% of your maximum health per stack (15% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

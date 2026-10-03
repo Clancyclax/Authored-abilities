@@ -1,0 +1,74 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Brow-First Shove",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "knockback": 96,
+   "desc": "Rams the haft into the target, dealing 12 blunt damage, knocking it back 3 tiles and leaving it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rockslide Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Throws from the high ground, dealing 30 rock damage to the first enemy it meets and knocking loose stone that hits every enemy within 3.5 tiles for 80% of that."
+  },
+  {
+   "name": "Butt Set in Rock",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "rock",
+   "cooldown": 36,
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "dodgeBonus": 0.08,
+   "desc": "Raises your armour by 25% for 10 seconds, with +8% dodge chance while it lasts."
+  },
+  {
+   "name": "Will Not Be Moved",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When your health falls below 30%, you gain a shield worth 20% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Running Kick",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargesMax": 3,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "A flying kick on a target up to 4 tiles away that deals 7 damage, rising to 1.3 times that at full reach, and 5% more for every 100 paces you have run since you last used it (max 25%). Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bounding Drop",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Bounds up to 6 tiles onto the target and lands with both feet, which deals 15 damage and leaves it 10% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Bolt Hole",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.4,
+   "buffDuration": 5,
+   "blinkOnUse": 64,
+   "cooldown": 20,
+   "desc": "Increases your movement speed by 40% for 5 seconds. You finish it 2 tiles from where you stood."
+  },
+  {
+   "name": "Sprint Into Form",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "After you cover enough ground, your next ability deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

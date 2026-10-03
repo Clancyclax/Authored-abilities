@@ -1,0 +1,69 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Three Quick Stabs",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 3,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Three stabs in a blink that deal 7 damage and leave the target [Bleeding] for 1 damage a second for 4 seconds. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "From the Sleeve",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 70,
+   "speed": 800,
+   "radius": 5,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Flicks a hidden blade at the first enemy in its path, dealing 32 damage that ignores its armour."
+  },
+  {
+   "name": "Gone Before the Draw",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 5,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 30,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you for 5 seconds, and you move 30% faster while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Second Cut",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 6,
+   "desc": "Once every 6 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

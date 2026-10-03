@@ -1,0 +1,84 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "coneAngle": 0.7,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "sunder",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a cloud of points in a cone 4 tiles long, dealing 10 damage to everything in it, with a 40% chance to leave each [Sundered] for 6 seconds. Your afflictions on each one spread to enemies within 3.5 tiles of it."
+  },
+  {
+   "name": "Gnawed Puncture",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "leech": 0.2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Bores into an afflicted target, dealing 8 damage, leaving it [Bleeding] for 1 damage a second for 4 seconds and healing you for 20% of the damage dealt. Usable only on a target carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Grain-Stripping Swarm",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "wind",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonDuration": 10,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "desc": "Releases a swarm that stays for 10 seconds and stings an enemy within 4 tiles for 3 damage every second. It draws the attention of the enemy you last struck."
+  },
+  {
+   "name": "Picked to the Bone",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "wind",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

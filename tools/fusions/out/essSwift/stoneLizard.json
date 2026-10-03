@@ -1,0 +1,75 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Tail Left Behind",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "hpCostPct": 0.05,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "A whipping slash that deals 9 damage and leaves the target 6% easier to wound for 3 seconds. You move 25% faster for 3 seconds afterwards. Also costs 5% of your maximum health."
+  },
+  {
+   "name": "Cold-Blooded Finish",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A darting bite that deals 16 damage and consumes every affliction on the target, adding 1.2 times their remaining damage and 60% more damage for each one. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Basked and Bolting",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 1.5,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 5
+   },
+   "desc": "Takes 1.5 seconds of stillness to soak up warmth, then increases your dodge chance by 20% for 12 seconds. You move 30% faster for 5 seconds afterwards."
+  },
+  {
+   "name": "Sun-Quickened",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "day",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "By day, your dodge chance rises by 10%."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Crushing Vise",
+   "template": "imbueStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Usable only on an enemy at or below 25% health. A weapon strike from a geared gauntlet that clamps shut, which deals 24 damage and leaves the target [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Telescoping Reach",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "chargesMax": 3,
+   "desc": "A telescoping arm punches out at an enemy up to 5 tiles away and deals 8 damage. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Spare Arms",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.2,
+   "summonRange": 128,
+   "cooldown": 50,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to assemble a pair of clockwork arms that fight beside you for 15 seconds, striking an enemy within 4 tiles for 5 damage every 1.2 seconds."
+  },
+  {
+   "name": "Fitted Haft",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "physical",
+   "weaponDmgPct": 0.12,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.06
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 2,
+    "tickMs": 800,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Conjures a tooled weapon whose grip fits your palm: your weapon damage rises by 12%, you attack 6% faster, and every strike with it leaves the target [Bleeding] for 2 damage a tick for 2 ticks."
+  }
+ ]
+}

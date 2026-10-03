@@ -1,0 +1,90 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Lilypad Vault",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "curse",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You spring up to 6 tiles onto an enemy with a toad's hex, dealing 12 damage, rising to 1.5 times at full range, and leaving it [Cursed] for 6 seconds."
+  },
+  {
+   "name": "Deep Croak",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "resonating",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lets out a croak of arcana that deals 28 damage to every enemy within 4 tiles, ignoring resistances, with a 50% chance of [Muddled] for 6 seconds."
+  },
+  {
+   "name": "Slick Film",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 24,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 3,
+   "shieldDuration": 6,
+   "armorBonus": 0,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Coats you in a slick film of arcana that absorbs the next 18 damage and holds for 6 seconds. Your movement speed rises 20% for 3 seconds after you use it."
+  },
+  {
+   "name": "Wet Hide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 4
+   },
+   "desc": "When you take damage that isn't fire, you restore 4 mana. Once every 5 seconds."
+  }
+ ]
+}

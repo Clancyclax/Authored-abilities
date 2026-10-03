@@ -1,0 +1,72 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Drawn Mesh",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Casts a mesh of mail rings 5 tiles long for 5 seconds that drags every enemy near it inward. Each enemy it catches takes 10 damage and is stunned for 0.8 seconds.",
+   "base": 10,
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 0.8
+  },
+  {
+   "name": "Cinched Rings",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "desc": "Cinches the mesh on a target carrying one of your afflictions, using it up to deal 8 damage and leave it [Bleeding] for 1 damage a second for 4 seconds. Anything struck moves 30% slower for 2 seconds.",
+   "base": 8,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "range": 86,
+   "consumeAffliction": true,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   }
+  },
+  {
+   "name": "Haul the Catch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "desc": "Hauls up to 6 enemies within 7 tiles onto you, forcing them to attack you for 5 seconds.",
+   "tauntRadius": 224,
+   "tauntDuration": 5,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "cooldown": 20
+  },
+  {
+   "name": "Tangled Quarry",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "desc": "Against an enemy carrying any of your conditions, your armour rises by 12%.",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12
+  }
+ ]
+}

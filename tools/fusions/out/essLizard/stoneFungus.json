@@ -1,0 +1,78 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spore Puff",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "spreadAfflictions": 112,
+   "healOnUse": 4,
+   "desc": "Puffs spores from your skin, dealing 10 damage to every enemy within 3 tiles and leaving them [Diseased] for 2 damage a second for 6 seconds. Your afflictions on each one spread to enemies within 3.5 tiles, and you regain 4 health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Rooting into the Weak",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.2,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Usable only on a target at or below 25% health. Sends a thread of rot into it from up to 6 tiles away that deals 24 damage, rising to 1.2 times that at full reach, and leaves it [Poisoned] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Moss Bed",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healScope": "party",
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "cooldown": 40,
+   "desc": "Grows a bed of moss where you lie still. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Grown Overnight",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%, and you regenerate 0.5 health a second."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Becalming Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 15,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Breathes a drifting cloud of strands in a cone out to 5 tiles, which deals 11 damage to everything caught in it, stuns each for 1 second and leaves it [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Unhurried Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 25,
+   "cooldown": 75,
+   "strikes": 1,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 10,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A slow bite deals 25 damage, ignores the target's armour and leaves it [Poisoned] for 3 damage a second for 10 seconds."
+  },
+  {
+   "name": "Drift and Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "cooldown": 40,
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Afterward, Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When one of your afflictions lifts, healing you receive rises 30% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

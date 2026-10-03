@@ -1,0 +1,79 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Bend the Knee",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "desc": "Brings your sceptre down, dealing 12 damage to every enemy within 3 tiles and stunning them for 1.2 seconds.",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2
+  },
+  {
+   "name": "Pronounced Sentence",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "long",
+   "desc": "Levels your sceptre and looses a bolt that deals 26 damage with a 50% chance to leave the target [Suppressed] for 5 seconds. When it hits, your party deals 20% more damage for 15 seconds.",
+   "base": 26,
+   "cooldown": 90,
+   "speed": 340,
+   "radius": 9,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "suppressed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Raised Standard",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds.",
+   "partyDmgPct": 0.15,
+   "partyPower": 1,
+   "buffDuration": 10,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "cooldown": 40
+  },
+  {
+   "name": "Weight of Office",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackOn": "self",
+   "stackBuild": "cast",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 12,
+   "stackSpend": "full",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every ability you use builds a stack on you, up to 5. At 5 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (35% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

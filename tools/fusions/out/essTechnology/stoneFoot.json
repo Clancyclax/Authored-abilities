@@ -1,0 +1,76 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Odometer Kick",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "A piston-driven kick that deals 4 damage and leaves the target 5% easier to wound for 4 seconds. Its damage rises 5% for every 100 paces you have run since you last used it, up to 40%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stamping Mill",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "desc": "Drives a geared iron boot into the ground, which deals 28 damage to every enemy within 3.5 tiles. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Folded Mile",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "earth",
+   "teleportRange": 256,
+   "cooldown": 10,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "A geared stride shortens the road and steps you instantly to a point up to 8 tiles away, and you move 15% faster for 5 seconds after."
+  },
+  {
+   "name": "Pedometer Ratchet",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Every 6 tiles you cover clicks a ratchet that restores 6 stamina. Once every 4 seconds."
+  }
+ ]
+}

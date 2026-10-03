@@ -1,0 +1,83 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Spring From the Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "range": 96,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "desc": "Usable only on an enemy at or below 25% health: a sudden spring deals 22 damage and consumes every affliction on the target, adding 1.4 times their remaining damage. It has 50% more critical chance against a target that has not yet been hurt."
+  },
+  {
+   "name": "Damp Nibble",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A springing bite that deals 7 damage, up to 1.5 times as much at its full reach of 5 tiles, and leaves the target [Soaked] for 6 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Under the Duckweed",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "cooldown": 24,
+   "desc": "Veils you for 6 seconds, and you move 15% faster while veiled. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Skips the Puddles",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.1,
+     "text": "and you cross it faster than dry ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.06,
+     "text": "and nothing wading after you can pin you down"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground."
+  }
+ ]
+}

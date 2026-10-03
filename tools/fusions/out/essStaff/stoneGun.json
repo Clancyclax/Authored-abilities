@@ -1,0 +1,70 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Down the Length",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "speed": 600,
+   "radius": 8,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "You sight along the staff and fire a ball of shot at the first enemy within 12 tiles, dealing 32 damage. It bursts on impact, and every enemy within 3.5 tiles takes 80% of that."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Muzzle Kick",
+   "template": "breathCone",
+   "element": "fire",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "A blast of smoke and shot leaves the end of the staff through a cone 4 tiles long, dealing 12 damage to everything in it and knocking each enemy 3 tiles back."
+  },
+  {
+   "name": "Long Barrel",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "fire",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "castTime": 0.5,
+   "desc": "You sight down the staff's length: for 15 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Powder Still Hot",
+   "element": "fire",
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, the staff stays primed: your next ability deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

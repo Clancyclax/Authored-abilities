@@ -1,0 +1,73 @@
+{
+ "essence": "might",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Ringing Ears",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "confuse": true,
+   "confuseChance": 0.35,
+   "confuseDuration": 3,
+   "desc": "Slams the ground, which deals 12 damage to every enemy within 3 tiles and knocks them back 2 tiles. Each has a 35% chance to be confused for 3 seconds and attack its own side."
+  },
+  {
+   "name": "Kick When Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "executeLadder": false,
+   "stackMult": 1,
+   "desc": "A cheap kick usable only on a target at or below 30% health. It deals 24 damage and uses up every affliction on the target, adding the damage they had left."
+  },
+  {
+   "name": "Feint and Wind Up",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 12,
+   "blinkOnUse": 64,
+   "desc": "You sidestep 2 tiles, and your critical hits deal 40% more damage for 12 seconds."
+  },
+  {
+   "name": "Set Up the Patsy",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition on an enemy, your next strike gains 15% critical hit chance. Once every 10 seconds."
+  }
+ ]
+}

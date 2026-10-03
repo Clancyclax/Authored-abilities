@@ -1,0 +1,87 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Leap From Cover",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You leap up to 7 tiles onto an enemy and bite it, which deals 14 damage, leaves it [Pinned] for 2 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Rapid Nips",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "strikes": 2,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Bites twice in quick succession; each bite deals 6 damage and leaves the target [Poisoned] for 2 damage a second for 3 seconds. Your movement speed rises 15% for 3 seconds after you use it. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Dropline Hop",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 224,
+   "cooldown": 8,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Steps you instantly to a point up to 7 tiles away. Your movement speed rises 20% for 3 seconds afterward."
+  },
+  {
+   "name": "Coiled to Pounce",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 5. The next ability you use spends them all: you deal 6% more damage per stack (30% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

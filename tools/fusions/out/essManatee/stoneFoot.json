@@ -1,0 +1,84 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Trudging Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "A stamp that deals 5 damage, leaves the target 5% easier to wound for 4 seconds and has a 25% chance to leave it [Slowed] for 3 seconds. Its damage rises 5% per 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Journey's Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Brings the weight of the road down around you: every enemy within 3.5 tiles is dealt 30 damage plus 5% of a boss's or elite's maximum health, and is left [Leaden] for 8 seconds."
+  },
+  {
+   "name": "Walking It Off",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 6
+   },
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 10 seconds, and your movement speed rises 15% for 6 seconds."
+  },
+  {
+   "name": "Paced Miles",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "earth",
+   "condition": "onRoads",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "On paved ground, your armour rises by 12%."
+  }
+ ]
+}

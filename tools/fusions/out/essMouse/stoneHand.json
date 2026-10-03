@@ -1,0 +1,86 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Pinch and Pocket",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 64,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 1,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "dampen",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Consumes one of your afflictions on the target to pinch it for 8 damage, adding 1.2 times the affliction's remaining damage. Each hit has a 40% chance to leave the target [Damped] for 5 seconds."
+  },
+  {
+   "name": "Finger-Quick Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 27,
+   "cooldown": 90,
+   "strikes": 4,
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A flurry of 4 strikes that deals 27 damage, ignores armour, and leaves the target [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Nimble Knuckles",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "dodgeBonus": 0.06,
+   "desc": "Increases your attack speed by 25% for 15 seconds and gives you 6% more dodge chance."
+  },
+  {
+   "name": "Light Touch",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "attackSpeed",
+     "amount": 0.05,
+     "text": "small hands, quicker work"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.05,
+     "text": "and nothing closes on you in time"
+    }
+   ],
+   "desc": "Raises your Speed by 1, and your Speed ceiling by 1."
+  }
+ ]
+}

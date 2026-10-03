@@ -1,0 +1,76 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Flechette Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "speed": 900,
+   "radius": 5,
+   "reachUnits": 400,
+   "rangeBand": "long",
+   "desc": "Fires a point at high speed into the first enemy it meets, dealing 32 damage that ignores armour."
+  },
+  {
+   "name": "Spray of Pins",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "coneAngle": 0.5,
+   "range": 160,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.15,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Blasts pins in a cone 5 tiles long, dealing 3 damage to everything caught in it, each with a 15% chance to leave it [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Long Barrel",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "fire",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "castTime": 0,
+   "desc": "For 15 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Powder Already Lit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 3
+   },
+   "desc": "When you land a critical hit, you deal 25% more physical damage for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Crushing Edict",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "arcane",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "Brings overwhelming force down on one enemy, dealing 34 damage and leaving it 20% easier to wound for 8 seconds. It is always a critical hit."
+  },
+  {
+   "name": "Spent Vigour",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "desc": "Pays 5% of your maximum health to release a burst of force that deals 9 damage to every enemy within 3 tiles."
+  },
+  {
+   "name": "Gathered Will",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "arcane",
+   "cooldown": 60,
+   "powerMult": 1.35,
+   "buffDuration": 15,
+   "castTime": 1,
+   "desc": "Takes 1 second to gather, then increases your damage by 35% for 15 seconds."
+  },
+  {
+   "name": "Casting Weight",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you spend mana, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

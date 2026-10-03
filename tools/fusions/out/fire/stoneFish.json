@@ -1,0 +1,90 @@
+{
+ "essence": "fire",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Spark Shoal",
+   "template": "volley",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a shoal of 3 sparks that spread apart, each dealing 3 damage. Each hit has a 25% chance to set the target [Burning] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Scatter the School",
+   "template": "projectileBall",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "speed": 340,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "knockback": 80,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Hurls a flame that deals 12 damage to the first enemy it meets and knocks it back 2.5 tiles. It then darts to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "element": "fire",
+   "name": "Through the Boil",
+   "template": "immunityBuff",
+   "immunityDuration": 3,
+   "blinkOnUse": 64,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "cooldown": 45,
+   "desc": "You slip 2 tiles, and for 3 seconds blows that reach you deal no damage and no condition can take hold of you. You have 15% fire resistance."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "element": "fire",
+   "name": "Gleam Off the Scales",
+   "template": "stacking",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you avoid a blow, a spark builds on you, up to 6. When you reach 6, they all spend at once: a blow strikes the nearest enemy within 8 tiles for 17% of your weapon damage per stack (102% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

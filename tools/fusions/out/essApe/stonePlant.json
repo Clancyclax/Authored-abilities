@@ -1,0 +1,79 @@
+{
+ "essence": "essApe",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Thorny Switch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lashes with a thorned branch for 4 damage, making the target [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Rooted Stomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "slowPct": 0.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Stamps the ground so roots grip every enemy within 3 tiles: it deals 10 damage, strips 10% of their armour and 20% of their movement speed for 5 seconds, and has a 50% chance to leave each [Pinned] for 2 seconds. Your afflictions on each spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Nesting Bower",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "physical",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 8,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Bends branches into a leafy nest where you stand. For 8 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Leaf-Fed Bulk",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "physical",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

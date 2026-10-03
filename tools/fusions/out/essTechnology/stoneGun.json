@@ -1,0 +1,74 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Breech Shot",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 75,
+   "speed": 520,
+   "radius": 6,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Fires a heavy round from a breech-loader that deals 34 damage to the first enemy it meets, ignoring its armour."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Buckshot Spread",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 12,
+   "volleyCount": 6,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 420,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "knockback": 80,
+   "desc": "Fires 6 pellets in a wide spread; each one deals 4 damage and knocks its target back 2.5 tiles."
+  },
+  {
+   "name": "Rifled Barrel",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "castTime": 0,
+   "desc": "For 15 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Chambered Round",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Each kill chambers a fresh round: your next ability deals 30% more damage. Once every 6 seconds."
+  }
+ ]
+}

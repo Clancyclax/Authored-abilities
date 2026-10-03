@@ -1,0 +1,67 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Flat-Out Lance",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "guaranteedCrit": true,
+   "desc": "A steam-driven lance thrust at an enemy up to 7 tiles away that deals 30 damage, hitting harder the further it travels, up to 1.8 times at full reach. It is always a critical hit."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stampede Pistons",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "knockback": 96,
+   "desc": "Pistoned hooves hammer the ground around you, which deals 14 damage to every enemy within 3 tiles and knocks them back 3 tiles."
+  },
+  {
+   "name": "Throttle Open",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.35,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "Opens the throttle wide: your movement speed rises by 35% for 8 seconds."
+  },
+  {
+   "name": "Hoofbeat Governor",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover spins up a governor: your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

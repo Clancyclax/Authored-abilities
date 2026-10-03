@@ -1,0 +1,79 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Flatten and Go",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.3,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 3
+   },
+   "desc": "A flattening blow that deals 26 damage and leaves the target 10% easier to wound for 4 seconds. Usable only on an enemy at or below 30% health. You move 30% faster for 3 seconds afterwards."
+  },
+  {
+   "name": "Ground Leveller",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Brings the head down at a run, dealing 14 damage to every enemy within 3 tiles and stunning them for 1.2 seconds."
+  },
+  {
+   "name": "Wound-Up Swing",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "blunt",
+   "powerMult": 1.25,
+   "buffDuration": 10,
+   "cooldown": 45,
+   "castTime": 0,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your damage by 25% for 10 seconds. You move 20% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Momentum Carries",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 3
+   },
+   "desc": "Each time you spend stamina, your physical damage rises by 25% for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Ride-By Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "debuff": {
+    "key": "recoveryDown",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Leans from the saddle to snatch at an enemy up to 5 tiles away for 7 damage, up to 1.5 times that at full reach, with a 25% chance to leave it [Fatigued] for 4 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Trampling Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "Rides through a cone 5 tiles ahead, dealing 12 damage to everything in it and knocking it back 3 tiles. Its damage rises 5% for each stretch of ground you have travelled (max +25%)."
+  },
+  {
+   "name": "Never Winded",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "cooldown": 50,
+   "desc": "Increases your stamina recovery by 50% for 15 seconds. You move 15% faster for 5 seconds after using it."
+  },
+  {
+   "name": "Faithful Mount",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 150,
+   "familiarInterval": 1.2,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "lifeOnKill": 3,
+   "desc": "Calls a bonded heidel that fights beside you, striking for 4 damage. Each kill returns 3 health."
+  }
+ ]
+}

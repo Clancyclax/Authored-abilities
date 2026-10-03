@@ -1,0 +1,88 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Plague Hop",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Leaps to a target up to 7 tiles away and bites it with venom for 13 damage, leaving it [Poisoned] for 2 damage a second for 5 seconds, with a 50% chance of [Diseased] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Nip and Spring",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "leech": 0.25,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Flicks a barbed nip that deals 4 damage and heals you for 25% of the damage dealt. Your movement speed rises 15% for 2 seconds afterward."
+  },
+  {
+   "name": "Ceiling Cling",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "blinkOnUse": 96,
+   "desc": "Springs you 3 tiles and you cling where you land: your dodge chance rises 25% for 10 seconds."
+  },
+  {
+   "name": "Hard to Squash",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "armorBonus": 0.06,
+   "desc": "When your health falls below 30%, you regain 4 health a second for 5 seconds. Once every 30 seconds. Your armour is 6% higher at all times."
+  }
+ ]
+}

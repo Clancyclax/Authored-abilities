@@ -1,0 +1,88 @@
+{
+ "essence": "fire",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Tucked Coal",
+   "template": "stackStrike",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "openerCrit": {
+    "amount": 0.5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A hidden stab that deals 8 damage and sets the target [Burning] for 2 damage a second for 3 seconds, consuming every affliction already on it and adding 1.2 times their remaining damage to the hit. It has 50% more critical chance against a target that has not been hurt yet. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Thrown From the Sleeve",
+   "template": "projectileBall",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "speed": 480,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Flicks a heated blade that deals 22 damage and sets the target [Burning] for 3 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "element": "fire",
+   "name": "Whetted in Coals",
+   "template": "selfCritBuff",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "castTime": 1,
+   "cooldown": 40,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Seared Shut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you regain 3 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

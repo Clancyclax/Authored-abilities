@@ -1,0 +1,75 @@
+{
+ "essence": "essArmour",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Sealed Decree",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "arcane",
+   "role": "long",
+   "desc": "Slaps a sealed decree on one enemy within 7 tiles, dealing 28 damage plus 4% of a boss's or elite's maximum health and silencing it for 4 seconds.",
+   "base": 28,
+   "cooldown": 90,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "lockSeconds": 4,
+   "bossPct": 0.04
+  },
+  {
+   "name": "Creased Dart",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "desc": "Throws a creased dart that deals 4 damage, with a 30% chance to leave the target [Marked] for 6 seconds.",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Warded Script",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "desc": "For 6 seconds, 40% of the elemental damage you take is returned to whoever dealt it.",
+   "reflectKind": "spell",
+   "reflectFrac": 0.4,
+   "reflectChance": 0.4,
+   "buffDuration": 6,
+   "cooldown": 24
+  },
+  {
+   "name": "Folded Lamellar",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "arcane",
+   "desc": "Folds layered paper over you: every hit you take is 2 lower, your armour rises by 10%, and 5% of the damage you take goes back to whoever dealt it. Your armour rises by a further 4%.",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.04
+    }
+   ],
+   "thornsFrac": 0.05
+  }
+ ]
+}

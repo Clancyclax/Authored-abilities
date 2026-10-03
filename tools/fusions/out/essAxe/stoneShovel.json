@@ -1,0 +1,71 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Trench Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "earth",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "wallKind": "burn",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "stunOnHit": 1,
+   "desc": "Cuts a 5-tile trench ahead of you that lasts 5 seconds. It deals 10 damage to each enemy that crosses it and stuns it for 1 second."
+  },
+  {
+   "name": "Spadework",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "chargesMax": 4,
+   "desc": "A flat-bladed chop that deals 7 damage and leaves the target 8% easier to wound for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Dug In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Raises your armour by 25% for 12 seconds."
+  },
+  {
+   "name": "Bury and Brace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, a shield worth 15% of your maximum health closes over you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

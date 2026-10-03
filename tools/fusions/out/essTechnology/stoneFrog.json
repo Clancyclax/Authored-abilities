@@ -1,0 +1,78 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Grapple Tongue",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "stunOnHit": 1,
+   "desc": "Fires a sprung tongue at an enemy up to 7 tiles away, which deals 12 damage and stuns it for 1 second."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Bellows Croak",
+   "template": "breathCone",
+   "element": "resonating",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pumps a croak through a brass bellows across a cone 3 tiles long, which deals 4 damage to everything in it, with a 25% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Coiled Haunches",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "dashDist": 160,
+   "cooldown": 6,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Spring-loaded legs fling you 5 tiles forward, and you move 15% faster for 2 seconds after."
+  },
+  {
+   "name": "Primed Pads",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 9,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 9
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 3
+   },
+   "desc": "While your stamina sits full, your springs stay primed: your crit chance rises by 30% for 3 seconds. Once every 9 seconds."
+  }
+ ]
+}

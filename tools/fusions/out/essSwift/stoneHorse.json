@@ -1,0 +1,65 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "name": "Riding Them Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargeTo": 256,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.25,
+   "desc": "You gallop up to 8 tiles to the target, dealing 13 damage to every enemy within 2.5 tiles of where you stop. Its damage rises 5% for every 100 paces you have run since you last used it (max 25%)."
+  },
+  {
+   "name": "Under the Hooves",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 16,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 4
+   },
+   "consumeAfflictionsPer": 0.5,
+   "desc": "A rearing stamp that deals 24 damage and leaves the target 12% easier to wound for 4 seconds. It uses up every affliction you have on the target, dealing 50% more damage for each."
+  },
+  {
+   "name": "Full Gallop",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "cooldown": 35,
+   "desc": "Increases your movement speed by 40% for 8 seconds."
+  },
+  {
+   "name": "Open Road Charge",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "onRoads",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "On paved ground, your damage rises by 10%."
+  }
+ ]
+}

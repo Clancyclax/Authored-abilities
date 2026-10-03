@@ -1,0 +1,77 @@
+{
+ "essence": "essNet",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Seine the Shallows",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Drags a conjured seine through a cone 5 tiles ahead, dealing 11 damage to everything in it and leaving each [Slowed] for 3 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles, carried through the shoal."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Darting Mesh",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 400,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a small mesh that deals 7 damage to the first enemy it meets, then slips on to 2 more enemies within 3 tiles, each hit dealing 50% of the original damage. Holds 4 charges; kills give charges back."
+  },
+  {
+   "name": "Haul the Shoal",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "water",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Hauls up to 6 enemies within 6 tiles onto you in one sweep of your mesh and holds their attention for 5 seconds."
+  },
+  {
+   "name": "Wriggle Room",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "desc": "Your dodge chance rises by 12% against enemies carrying one of your conditions."
+  }
+ ]
+}

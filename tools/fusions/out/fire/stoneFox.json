@@ -1,0 +1,100 @@
+{
+ "essence": "fire",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Marsh Light",
+   "template": "projectileBall",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 300,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "confuse": true,
+   "confuseChance": 0.15,
+   "confuseDuration": 2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 2,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Sends a flickering light that deals 4 damage and sets the target [Burning] for 1 damage a second for 2 seconds. Each hit has a 15% chance to turn the target against its allies for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Led Astray",
+   "template": "confuseTurn",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxTargets": 3,
+   "confuseDuration": 5,
+   "duration": 5,
+   "confuseDamageFrac": 1,
+   "confuseDamagePct": 1,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lights false fires around up to 3 enemies within 4 tiles, which deals 26 damage to each, ignoring their resistances, and sets them [Burning] for 6 seconds. They turn against each other for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "summon",
+   "element": "fire",
+   "name": "Flickering Double",
+   "template": "activeSummon",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 15,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "burn",
+    "chance": 0.35,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "cooldown": 50,
+   "desc": "Takes 0.5 seconds to call up a flickering copy of yourself that fights beside you for 15 seconds, striking for 5 damage every 1.5 seconds. Each strike has a 35% chance to set the target [Burning] for 5 seconds."
+  },
+  {
+   "name": "Flustered Prey",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "Each time you afflict an enemy, your critical hit chance rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

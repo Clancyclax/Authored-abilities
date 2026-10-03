@@ -1,0 +1,88 @@
+{
+ "essence": "essNet",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trailing Cast",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 360,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.3,
+   "desc": "Casts the mesh you drag behind you, dealing 4 damage to the first enemy it meets. Its damage rises 5% for each stretch of ground you have walked, up to 30%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Heel on the Cords",
+   "template": "stackStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1,
+   "executeLadder": false,
+   "desc": "Stamps down on an enemy at or below 25% health and treads your mesh into it, dealing 22 damage and using up every affliction on it to add their remaining damage to the blow."
+  },
+  {
+   "name": "Ankle Loop",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDmg": 16,
+   "summonDuration": 45,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "cooldown": 140,
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lays a loop of mesh at the nearest enemy's feet. It waits up to 45 seconds, and the first enemy to step within 2 tiles takes 16 damage and is [Leaden] for 6 seconds."
+  },
+  {
+   "name": "Coiled on the March",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Each time you cover a long stretch of ground, you coil up the mesh you drag behind you and regain 3 stamina a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

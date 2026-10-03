@@ -1,0 +1,82 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Twist the Barb",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "bindOnHit": {
+    "slowPct": 0.25,
+    "duration": 2
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A barbed strike deals 9 damage, slows the target by 25% for 2 seconds and leaves it [Bleeding] for 2 damage a second for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snagging Cast",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.8,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.3,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a fan of barbed lines through a cone ahead of you, dealing 12 damage to everything within 4 tiles, with a 30% chance to leave each [Pinned] for 1.5 seconds. Your afflictions on each target spread to enemies within 3.5 tiles of it."
+  },
+  {
+   "name": "Barbed Dragline",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 4,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "cooldown": 20,
+   "desc": "Casts a barbed line 5 tiles long ahead of you for 4 seconds, dragging every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Snagged Close",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "armor",
+   "amount": 0.12,
+   "desc": "Against an enemy carrying one of your afflictions, your armour rises by 12%."
+  }
+ ]
+}

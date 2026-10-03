@@ -1,0 +1,74 @@
+{
+ "essence": "essApe",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Slow Reckoning",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 18,
+   "stunOnHit": 1.2,
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "desc": "A slow, heavy overhand blow for 16 damage that stuns the target for 1.2 seconds, consuming every affliction on it and adding 1.2 times their remaining damage to the blow."
+  },
+  {
+   "name": "Lazy Swipe",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1,
+   "spammable": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "slowPct": 0.15,
+   "desc": "Swings an arm round lazily, dealing 3 damage to every enemy within 2.5 tiles and stripping 15% of their movement speed and 5% of their armour for 3 seconds."
+  },
+  {
+   "name": "Unbothered Bulk",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Settles your weight and stops caring: your armour rises by 25% for 12 seconds."
+  },
+  {
+   "name": "Outlasted",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 3
+   },
+   "desc": "When a condition on you runs out, you regain 3 health a second for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

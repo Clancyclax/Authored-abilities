@@ -1,0 +1,88 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Biting Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "execute",
+   "desc": "A strike that deals 18 damage, consuming every affliction you have on the target for 60% more damage per affliction, leaves it [Bleeding] for 2 damage a second for 4 seconds and leaves it 15% easier to wound for 6 seconds.",
+   "base": 18,
+   "cooldown": 14,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "range": 86,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   }
+  },
+  {
+   "name": "Shed Denticles",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "desc": "Sheds 3 of your armoured scales at once, spread apart, each dealing 4 damage with a 30% chance to leave the target [Bleeding] for 4 seconds.",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 340,
+   "radius": 5,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Rasping Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "water",
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it, and they are left [Bleeding] for 2 damage a second for 3 seconds.",
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "cooldown": 30
+  },
+  {
+   "name": "Drawn to the Wound",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "desc": "Against an enemy below half health, your damage rises by 12%. Your armour rises by 5%.",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "armorBonus": 0.05
+  }
+ ]
+}

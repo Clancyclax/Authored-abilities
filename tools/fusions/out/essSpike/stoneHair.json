@@ -1,0 +1,96 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shaken Loose",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 360,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "castTime": 0,
+   "isAoe": true,
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes loose 5 quills in a wide spread, each dealing 10 damage to the first enemy it meets within 6 tiles, with a 40% chance to leave it [Bleeding] for 5 seconds. Your afflictions on each target spread to enemies within 3 tiles of it."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Finest Needle",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A hair-fine needle deals 16 damage and uses up every affliction you have on the target, dealing 60% more for each one. It leaves the target 10% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Strand Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "piercing",
+   "summonKind": "trap",
+   "summonDmg": 12,
+   "summonDuration": 20,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "cooldown": 60,
+   "desc": "Lays a snare of quilled strands at the nearest enemy. It waits up to 20 seconds, and when an enemy comes within 2 tiles it closes and deals 12 damage to every enemy within 2 tiles, leaving them [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Coat of Bristles",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "piercing",
+   "armorBonus": 0.08,
+   "damageReduction": 1,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "thornsFrac": 0.15,
+   "desc": "Conjures a coat of stiff quills: every hit you take is 1 lower, your armour rises by 8%, 15% of the damage you take goes back to whoever dealt it, and your maximum health rises by 10."
+  }
+ ]
+}

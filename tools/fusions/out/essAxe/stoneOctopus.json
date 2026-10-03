@@ -1,0 +1,73 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Every Arm Swings",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "desc": "Swings blades in every direction at once, dealing 4 damage to every enemy within 3 tiles."
+  },
+  {
+   "name": "Many-Armed Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 14,
+   "strikes": 3,
+   "stunOnHit": 1.2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Grips the target and chops it 3 times, each strike dealing 5 damage, then stuns it for 1.2 seconds and leaves it [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Cut Limb Fights On",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "summonKind": "minion",
+   "summonDmg": 5,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "A severed arm keeps fighting for 12 seconds, striking an enemy within 4 tiles for 5 damage every 1.5 seconds."
+  },
+  {
+   "name": "Arm Over Arm",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "haste",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land builds a stack on you, up to 8. At 8 they all spend at once: you move and attack 4% faster per stack (29% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

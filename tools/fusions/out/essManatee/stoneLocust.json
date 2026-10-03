@@ -1,0 +1,84 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping the Meadow",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "leech": 0.2,
+   "desc": "Costs 4% of your maximum health; every enemy within 2.5 tiles is dealt 6 damage, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Swarming Graze",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 240,
+   "radius": 10,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Sends a buzzing cloud into the first enemy it meets, dealing 12 damage and leaving it [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Endless Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 20,
+   "summonInterval": 1.5,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "cooldown": 60,
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends out a swarm for 20 seconds that bites an enemy within 5 tiles for 3 damage every 1.5 seconds, each bite with a 30% chance to leave the target [Enervated] for 4 seconds."
+  },
+  {
+   "name": "Gorging Season",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 3,
+   "stackDecay": 15,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every kill you make builds a stack on you, up to 3. At 3 they all spend at once: you are healed for 5% of your maximum health per stack (15% at full). Unfed, a stack fades every 15 seconds."
+  }
+ ]
+}

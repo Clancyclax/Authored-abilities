@@ -1,0 +1,84 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneHorse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Full-Tilt Thrust",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "bossPct": 0.05,
+   "desc": "Hurls a lance-length spike at an enemy up to 8 tiles away that deals 30 damage, rising to 1.8 times as much at full reach, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stampede",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.9,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "knockback": 96,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Tramples through a cone ahead of you on spiked hooves, dealing 12 damage to everything within 4 tiles and knocking each back 3 tiles, with a 40% chance to leave each [Bleeding] for 4 seconds."
+  },
+  {
+   "name": "Lance Raised",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "piercing",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "cooldown": 24,
+   "desc": "Raises a barrier that absorbs up to 18 damage for 6 seconds. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Gathered Momentum",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Every 6 tiles you cover raises your physical damage by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

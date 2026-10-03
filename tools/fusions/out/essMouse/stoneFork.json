@@ -1,0 +1,71 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Two-Pronged Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.7,
+   "strikes": 2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Jabs the target twice, dealing 3 damage and leaving it [Bleeding] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Either Way",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "volleyCount": 2,
+   "volleySpread": 0.9,
+   "speed": 360,
+   "radius": 8,
+   "range": 224,
+   "isAoe": true,
+   "stunOnHit": 1,
+   "desc": "Looses 2 bites in diverging directions, each dealing 10 damage and stunning what it hits for 1 second."
+  },
+  {
+   "name": "Double Back",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 96,
+   "cooldown": 6,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "desc": "Darts you 3 tiles forward, and you move 25% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Second Guess",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

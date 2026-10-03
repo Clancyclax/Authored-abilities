@@ -1,0 +1,70 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Snagged Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "stunOnHit": 0.8,
+   "desc": "Casts a snagging line to a point ahead of you for 6 seconds, dragging every enemy near it inward. Each enemy it catches is dealt 10 damage and stunned for 0.8 seconds."
+  },
+  {
+   "name": "Barbed Reel",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Casts a barbed hook that deals 16 damage to the first enemy it meets and uses up every affliction you have on it, adding 50% more damage for each."
+  },
+  {
+   "name": "Working the Barb Free",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 10,
+   "cooldown": 60,
+   "desc": "Removes up to 3 conditions from you, and you regain 10 health."
+  },
+  {
+   "name": "Line Stays Taut",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, 15% of the damage you deal heals you for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

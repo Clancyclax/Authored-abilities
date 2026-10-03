@@ -1,0 +1,70 @@
+{
+ "essence": "essSword",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "name": "Ram the Pommel",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 84,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "knockback": 96,
+   "desc": "Drives the pommel forward, dealing 13 damage, knocking the target back 3 tiles and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Crag-Top Plunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "maxMult": 1.4,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "A plunging thrust at an enemy up to 5 tiles away that deals 30 damage, rising to 1.4 times that at full reach, and ignores armour."
+  },
+  {
+   "name": "Point-Out Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Won't Give Ground",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.4
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 40%, your physical damage rises by 30% for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

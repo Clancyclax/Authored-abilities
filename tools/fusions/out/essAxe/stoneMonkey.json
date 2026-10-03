@@ -1,0 +1,87 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Ricochet Hatchet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flips a hatchet that deals 4 damage to the first enemy it meets, then glances to 1 more enemy within 3 tiles for 60% of that damage."
+  },
+  {
+   "name": "Wrist Snatch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snatches at the target's weapon arm and chops, dealing 12 damage, stunning it for 1 second, and leaving it [Hindered] for 5 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Sleight of Hand",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Duck and Return",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "power",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you avoid builds a stack on you, up to 4. The next ability you use spends them all: you deal 6% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

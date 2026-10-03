@@ -1,0 +1,77 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Sticky Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Lashes a sticky line at an enemy up to 5 tiles away, which deals 7 damage, rising to 1.4 times that at full reach, and slows it by 30% for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Swallowed Whole",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "Usable only on a target at or below 30% health. Engulfs it, which deals 22 damage and uses up every affliction on it, adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Sink Into the Reeds",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "Veils you for 8 seconds and restores 12 health. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Poised to Spring",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "The moment your stamina is full, your critical hit chance rises by 25% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

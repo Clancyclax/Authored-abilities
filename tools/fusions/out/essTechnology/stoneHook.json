@@ -1,0 +1,70 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Snag Line",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A weapon strike trailing a barbed line that deals 4 damage, leaves the target [Bleeding] for 1 damage a second for 3 seconds and slows it by 20% for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gaff Winch",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "requiresTargetBelow": 0.25,
+   "desc": "Usable only on an enemy at or below 25% health. Fires a winched gaff at an enemy up to 6 tiles away, which deals 24 damage."
+  },
+  {
+   "name": "Haul-In Lines",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "tauntRadius": 192,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "Fires barbed lines that reel up to 5 enemies within 6 tiles onto you and hold their attention for 6 seconds."
+  },
+  {
+   "name": "Barbed Pawl",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "Against enemies carrying your afflictions, you deal 10% more damage."
+  }
+ ]
+}

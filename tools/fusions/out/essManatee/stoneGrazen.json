@@ -1,0 +1,76 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Shared Pasture",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 320,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "leech": 0.15,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Spits a mouthful of cud that deals 4 damage to the first enemy it meets, and you heal for 15% of the damage dealt. Its damage rises 8% for each ally near you (max 32%)."
+  },
+  {
+   "name": "Barn-Warm Lowing",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "life",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 15
+   },
+   "debuff": {
+    "key": "dampen",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lows a warm cone 5 tiles long, dealing 26 damage to everything in it and leaving each [Damped] for 8 seconds. On a hit, you and your allies deal 20% more damage for 15 seconds."
+  },
+  {
+   "name": "Huddle Close",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "life",
+   "healAmount": 14,
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 20,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Long Winter Barn",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "cooldownPassive",
+   "element": "nature",
+   "cooldownReduction": 0.06,
+   "armorBonus": 0.08,
+   "desc": "Every ability you have comes round 6% sooner. Your armour rises by 8%."
+  }
+ ]
+}

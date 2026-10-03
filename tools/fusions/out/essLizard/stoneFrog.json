@@ -1,0 +1,81 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Burst from the Reeds",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "long",
+   "base": 32,
+   "cooldown": 75,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "chargeTo": 192,
+   "desc": "Springs from where you crouch to a target up to 6 tiles away and strikes it for 32 damage, always a critical hit, leaving it 15% easier to wound for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wet-Skin Splash",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "healOnUse": 2,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slaps the damp ground, dealing 4 damage to every enemy within 2 tiles, with a 30% chance of [Soaked] for 5 seconds. You regain 2 health."
+  },
+  {
+   "name": "Spring and Mend",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "resource": "stamina",
+   "restoreAmount": 20,
+   "blinkOnUse": 96,
+   "healOnUse": 6,
+   "cooldown": 20,
+   "desc": "Springs you 3 tiles and restores 20 stamina. Your damp skin knits, restoring 6 health to whoever in your party is worst off."
+  },
+  {
+   "name": "Coiled Haunches",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When your stamina is full, your physical damage rises 30% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

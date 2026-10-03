@@ -1,0 +1,77 @@
+{
+ "essence": "essSword",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Across the Table",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "chargeTo": 224,
+   "desc": "Leaps you onto an enemy up to 7 tiles away and runs it through, dealing 12 damage, rising to 1.5 times that at full reach."
+  },
+  {
+   "name": "Biting Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 80,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Nicks everything within 2.5 tiles ahead of you, dealing 4 damage with a 30% chance to leave each one [Bleeding] for 3 seconds."
+  },
+  {
+   "name": "Spring-Heeled Tempo",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "blinkOnUse": 96,
+   "desc": "Increases your attack speed by 25% for 12 seconds and hops you 3 tiles from where you stood."
+  },
+  {
+   "name": "Every Hop a Lunge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "Every 6 tiles you cover, your next ability deals 30% more damage. Once every 5 seconds."
+  }
+ ]
+}

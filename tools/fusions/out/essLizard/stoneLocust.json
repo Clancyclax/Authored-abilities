@@ -1,0 +1,78 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Strip the Afflicted",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "consumeAffliction": true,
+   "healOnUse": 2,
+   "desc": "Needs one of your afflictions on a target and uses it up. Every enemy within 3 tiles takes a blow that deals 7 damage, and you regain 2 health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Swarm-Borne Venom",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits a glob of venom that deals 12 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Called Cloud",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "nature",
+   "summonKind": "swarm",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "lifeOnKill": 4,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "Calls a cloud of locusts for you to feed on for 12 seconds; it strikes enemies within 4 tiles for 4 damage every second. Each kill you make restores 4 health."
+  },
+  {
+   "name": "Gorged",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 20,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you kill an enemy, a stack builds on you, up to 5. At 5 they all spend at once and you are healed for 5% of your maximum health per stack. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

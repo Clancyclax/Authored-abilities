@@ -1,0 +1,83 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spore Canister",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 260,
+   "radius": 10,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lobs a sealed canister of spores that deals 30 damage to the first enemy it meets and 80% of that to every enemy within 3.5 tiles, and leaves them [Poisoned] for 3 damage a second for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Inoculating Needle",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. A weapon strike through a culture needle that deals 8 damage and leaves the target [Diseased] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Humidor Vent",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "totem",
+   "summonDmg": 4,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "summonDuration": 15,
+   "cooldown": 60,
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to set down a humming spore vent for 15 seconds. It mists an enemy within 4 tiles for 4 damage every 1.5 seconds."
+  },
+  {
+   "name": "Fruiting Timer",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 6,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.7,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land sets a spore timer on that enemy, up to 6. Your next critical hit on it spends them all: the spores fruit at once and strike it for 24% of your weapon damage per timer (143% at full). Unfed, a timer fades every 4 seconds."
+  }
+ ]
+}

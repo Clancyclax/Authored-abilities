@@ -1,0 +1,78 @@
+{
+ "essence": "essSword",
+ "stone": "stoneLocust",
+ "fusions": [
+  {
+   "name": "Stripping Whirl",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1.0,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 4,
+   "leech": 0.15,
+   "desc": "Whirls the blade, dealing 6 damage to every enemy within 2.5 tiles and healing you for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Gnaw to the Bone",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 15,
+   "cooldown": 14,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A grinding cut that deals 15 damage and uses up every affliction you have on the target, dealing 60% more damage for each one. It leaves the target [Bleeding] for 2 damage a second for 5 seconds and 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Cloud of Shards",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "slashing",
+   "cooldown": 45,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "summonDuration": 10,
+   "castTime": 0,
+   "desc": "Looses a swarm of blade shards around you for 10 seconds. It cuts enemies within 4 tiles for 3 damage every 1 second."
+  },
+  {
+   "name": "Stripped Field",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "slashing",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "haste",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackKarma",
+   "desc": "Every kill builds a stack on you, up to 4. When you reach 4, they all spend at once: you move and attack 5% faster per stack (18% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

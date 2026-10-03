@@ -1,0 +1,92 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Pried Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "debuff": {
+    "key": "powerDown",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on an enemy at or below 25% health: deals 22 damage plus 1.5 times what your afflictions on it have left to deal, using them up, and leaves it [Weakened] for 8 seconds."
+  },
+  {
+   "name": "Wring Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up: wrings it with both hands for 8 damage, leaving it 8% easier to wound for 4 seconds and [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Caught Mid-Swing",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 18,
+   "shieldDuration": 6,
+   "shieldStrikes": 4,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "cooldown": 24,
+   "desc": "Raises a barrier that absorbs the next 18 damage and holds for 6 seconds. You move 15% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Filched Bauble",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "physical",
+   "critChance": 0.06,
+   "critDamage": 0.15,
+   "lifeOnKill": 3,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 12
+    }
+   ],
+   "desc": "Conjures a pilfered trinket: your critical chance rises by 6%, your critical hits deal 0.15x more, your maximum health rises by 12, and each kill returns 3 health."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essApe",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Backhand",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 110,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Backhands a curved arc ahead of you, dealing 7 damage to everything caught in it and making each [Bleeding] for 1 damage a second for 3 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Hooked Reach",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "maxMult": 1.4,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "desc": "Only usable on a target at or below 25% health. Hooks your long arm round an enemy up to 5 tiles away for 24 damage, growing the further it reaches, up to 1.4 times at full reach."
+  },
+  {
+   "name": "Gleaned Mouthful",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 16,
+   "critChance": 0.05,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Stuffs a handful of gathered grain into your mouth and restores 16 health. Its healing rises 8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Every Stalk Counted",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 4,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you make a kill, a stack builds on you, up to 4. When you reach 4, they all spend at once: you are healed for 3% of your maximum health per stack (12% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

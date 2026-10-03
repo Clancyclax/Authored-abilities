@@ -1,0 +1,77 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Tag the Quarry",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 400,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a burr at the first enemy in line up to 8 tiles away, dealing 4 damage with a 25% chance to leave it [Marked] for 6 seconds."
+  },
+  {
+   "name": "Cornered at Last",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "bossPct": 0.05,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 5
+   },
+   "desc": "A closing blow that deals 30 damage plus 5% of a boss's or elite's maximum health, leaving the target 15% easier to wound for 8 seconds. You move 25% faster for 5 seconds after using it."
+  },
+  {
+   "name": "Closing In",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "dmg",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "blinkOnUse": 64,
+   "cooldown": 40,
+   "desc": "Increases your damage by 25% for 12 seconds, and you finish 2 tiles from where you stood."
+  },
+  {
+   "name": "Scent of Weakness",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.05,
+   "desc": "Against an enemy below half health, your damage rises by 12%. You also have 5% more dodge chance."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "name": "Flattened Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "Slaps the water flat around you, dealing 14 damage to every enemy within 3 tiles and stunning each for 1 second."
+  },
+  {
+   "name": "Paddle Comes Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "ignoreArmor": true,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A crushing blow that deals 34 damage that ignores armour, leaves the target 20% easier to wound for 8 seconds and leaves it [Leaden] for 6 seconds."
+  },
+  {
+   "name": "Tempered Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "blunt",
+   "armorBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Raises your armour by 25% for 12 seconds."
+  },
+  {
+   "name": "Anvil Calm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you gain a shield of 12% of your maximum health for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

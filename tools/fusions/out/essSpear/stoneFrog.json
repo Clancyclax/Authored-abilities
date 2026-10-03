@@ -1,0 +1,78 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "name": "Out of the Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "Springs up to 6 tiles onto the target and stabs down, dealing 14 damage and leaving it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Splashdown",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Slaps the shaft flat on the ground, dealing 3 water damage to every enemy within 2.5 tiles, with a 40% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Shed the Slime",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cooldown": 40,
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 12,
+   "desc": "Removes up to 2 conditions from you and restores 12 health."
+  },
+  {
+   "name": "Spring Reset",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "When you land a critical hit, you regain 10 stamina. Once every 6 seconds."
+  }
+ ]
+}

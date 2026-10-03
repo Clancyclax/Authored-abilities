@@ -1,0 +1,72 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Out of Nowhere",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 34,
+   "cooldown": 90,
+   "range": 64,
+   "stackMult": 1,
+   "requiresTargetBelow": 1,
+   "executeLadder": false,
+   "guaranteedCrit": true,
+   "desc": "A strike from hiding that deals 34 damage, always lands as a critical hit, and consumes every affliction on the target, adding their remaining damage."
+  },
+  {
+   "name": "Hidden Pins",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "slashing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 420,
+   "radius": 6,
+   "range": 192,
+   "isAoe": true,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 small blades at once, spread apart, each dealing 6 damage with a 30% chance to leave the target [Bleeding] for 5 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Edge in the Dark",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.35,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you for 8 seconds, and you move 10% faster while veiled. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Always Within Reach",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "pierceElement": "slashing",
+   "armorIgnore": 0.15,
+   "dodgeBonus": 0.05,
+   "desc": "Your slashing damage cannot be resisted. Your dodge chance rises by 5%."
+  }
+ ]
+}

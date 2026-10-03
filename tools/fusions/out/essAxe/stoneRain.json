@@ -1,0 +1,73 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Downpour of Edges",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "long",
+   "base": 12,
+   "cooldown": 75,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "speed": 400,
+   "radius": 7,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0.6,
+   "bossPct": 0.04,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "After a 0.6-second gather, looses 5 falling blades in a fan, each dealing 12 damage and leaving the target [Soaked] for 6 seconds. Against a boss or an elite each blade also deals 4% of their maximum health."
+  },
+  {
+   "name": "Last Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 224,
+   "maxMult": 1.5,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "A falling chop on a target up to 7 tiles away that deals 16 damage, rising to 1.5 times that at full reach, and uses up every affliction you have on it, dealing 50% more damage for each one."
+  },
+  {
+   "name": "Washed-Clean Rest",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Wet Wood Splits",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, your damage rises by 12%."
+  }
+ ]
+}

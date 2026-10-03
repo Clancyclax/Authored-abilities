@@ -1,0 +1,87 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Ridden Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 2,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "You rush up to 7 tiles to an enemy and strike it twice; each strike deals 12 damage and leaves it [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Trampled Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Stamps through the strands around you, which deals 4 damage to every enemy within 2.5 tiles, with a 25% chance to leave each [Slowed] for 2 seconds."
+  },
+  {
+   "name": "Long-Legged Outrider",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Increases your stamina recovery by 50% for 15 seconds. A spider escort fights beside you for 10 seconds, striking for 4 damage every 1.4 seconds."
+  },
+  {
+   "name": "Saddled Weaver",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "poison",
+   "familiarDmg": 5,
+   "familiarRange": 96,
+   "familiarInterval": 1.6,
+   "familiarFamily": "beast",
+   "familiarCreatureName": "Heidel",
+   "mount": true,
+   "mountFamily": "beast",
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A bonded heidel fights beside you, striking enemies within 3 tiles for 5 damage every 1.6 seconds and leaving them [Poisoned] for 2 damage a second for 3 seconds. You can ride it."
+  }
+ ]
+}

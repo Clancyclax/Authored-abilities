@@ -1,0 +1,86 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Unhurried Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "knockback": 96,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 220,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Lobs a heavy, slow point that deals 14 water damage to the first enemy it meets, knocks it back 3 tiles and leaves it [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Swell of the Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "desc": "Turns the shaft in a slow circle, dealing 26 water damage to every enemy within 3.5 tiles. On a hit, every ally near you deals 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Nothing Is Urgent",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 60,
+   "freezeDuration": 2,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Holds every creature within 4 tiles in place for 2 seconds, with a 100% chance to leave each enemy [Slowed] for 4 seconds after."
+  },
+  {
+   "name": "Drifting Mend",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you take non-fire damage, you regain 3 health a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

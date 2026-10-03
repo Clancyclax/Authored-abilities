@@ -1,0 +1,78 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "name": "Gentle Grip",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "strikes": 1,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A grasping strike with your nails that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds. Anything struck moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Firm Hold",
+   "kind": "active",
+   "category": "attack",
+   "template": "abilityLock",
+   "element": "water",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 18,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "lockSeconds": 3,
+   "stunOnHit": 1,
+   "desc": "Seizes one enemy within 7 tiles, dealing 9 damage, stunning it for 1 second and taking its next action away for 3 seconds."
+  },
+  {
+   "name": "Laid-On Palm",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "ally",
+   "cooldown": 30,
+   "desc": "Restores 4 health a second to the ally who needs it most, for 8 seconds."
+  },
+  {
+   "name": "Mender's Ring",
+   "kind": "passive",
+   "category": "gear summon",
+   "template": "summonGear",
+   "element": "life",
+   "critChance": 0.04,
+   "critDamage": 0.1,
+   "lifeOnKill": 4,
+   "itemBuffs": [
+    {
+     "stat": "maxHp",
+     "amount": 10
+    }
+   ],
+   "desc": "Conjures a smooth ring: your maximum health rises by 10, your critical chance rises by 4%, your critical hits deal 0.1x more, and each kill returns 4 health."
+  }
+ ]
+}

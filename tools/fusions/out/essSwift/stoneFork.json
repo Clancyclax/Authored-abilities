@@ -1,0 +1,81 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Split Tine",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 620,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a tine that deals 4 damage to the first enemy it meets, then branches to 1 more enemy within 3 tiles for 50% of that."
+  },
+  {
+   "name": "Two Prongs at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "volleyCount": 2,
+   "volleySpread": 0.3,
+   "speed": 480,
+   "radius": 7,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "stunOnHit": 1,
+   "desc": "Drives 2 prongs out at once, spread apart. Each deals 11 damage and stuns what it hits for 1 second."
+  },
+  {
+   "name": "Other Way Round",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "resetCount": 1,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting. You move 20% faster for 4 seconds afterwards."
+  },
+  {
+   "name": "Every Other Jab",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackSpend": "full",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 2,
+   "stackDecay": 4,
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land builds a stack on that enemy, up to 2. At 2 they both spend at once: a blow strikes that enemy for 27% of your weapon damage per stack (54% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

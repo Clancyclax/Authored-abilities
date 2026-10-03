@@ -1,0 +1,76 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Two Tines Deep",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 2,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 2,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A two-pronged jab that strikes twice, each strike dealing 4 damage, and leaves the target [Bleeding] for 1 damage a second for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Branching Bolt",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 75,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 3,
+    "radius": 128,
+    "frac": 0.5
+   },
+   "chainCount": 3,
+   "chainRange": 128,
+   "chainDamagePct": 0.5,
+   "bossPct": 0.05,
+   "desc": "Hurls a forked spike that deals 26 damage to the first enemy it meets within 9 tiles, plus 5% of its maximum health if it is a boss or elite. It then splits to 3 more enemies within 4 tiles, each hit dealing 50% of the original damage."
+  },
+  {
+   "name": "Sent the Other Way",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "piercing",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever laid it."
+  },
+  {
+   "name": "Second Prong",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 10,
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

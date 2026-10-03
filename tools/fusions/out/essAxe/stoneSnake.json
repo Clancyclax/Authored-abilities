@@ -1,0 +1,85 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Coiled Downstroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "strikes": 1,
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 4,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Uncoils into a chop that deals 30 damage, ignores resistances and leaves the target [Poisoned] for 4 damage a second for 5 seconds."
+  },
+  {
+   "name": "Fang Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 160,
+   "maxMult": 1.3,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A darting chop at a target up to 5 tiles away that deals 4 damage, rising to 1.3 times that at full reach, and leaves it [Poisoned] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Lie Coiled",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "poison",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 10,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you for 6 seconds and raises your movement speed by 10% while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Venom-Grooved Edge",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "poison",
+   "weaponDmgPct": 0.1,
+   "itemBuffs": [
+    {
+     "stat": "attackSpeed",
+     "amount": 0.05
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Conjures a venom-grooved blade. It increases your weapon damage by 10% and your attack speed by 5%, and every strike with it leaves the target [Poisoned] for 2 damage a second for 3 seconds."
+  }
+ ]
+}

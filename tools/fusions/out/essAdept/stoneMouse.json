@@ -1,0 +1,71 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Behind the Skirting",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "strikes": 1,
+   "requiresTargetBelow": 0.25,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A quick bite from below that deals 24 damage and makes the target [Bleeding] for 2 damage a second for 4 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Underfoot Scramble",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 0.8,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "You dart between the legs of every enemy within 2.5 tiles, dealing 11 damage and tripping them into a 0.8 second stun. Your movement speed rises 20% for 3 seconds after."
+  },
+  {
+   "name": "Through the Wainscot",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "dashDist": 128,
+   "cooldown": 8,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A low scurry that carries you 4 tiles forward. Your movement speed rises 15% for 3 seconds after."
+  },
+  {
+   "name": "After Lamplight",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "At night, your dodge chance rises by 12%. Your other abilities' cooldowns are 5% shorter."
+  }
+ ]
+}

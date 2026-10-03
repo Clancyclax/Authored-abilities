@@ -1,0 +1,80 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hobnail Stamp",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "knockback": 80,
+   "desc": "Stamps a studded heel into the ground, dealing 12 damage to every enemy within 3 tiles and knocking each back 2.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Miles in the Kick",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.5,
+   "desc": "A kick from a spiked sole deals 28 damage, ignores armour and leaves the target 15% easier to wound for 8 seconds. Its damage rises 5% for every 100 paces you have run since you last used it (max +50%)."
+  },
+  {
+   "name": "Strewn Caltrops",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "burn",
+   "wallLength": 128,
+   "wallDuration": 8,
+   "wallThickness": 32,
+   "base": 5,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "cooldown": 30,
+   "desc": "Scatters caltrops in a line 4 tiles long in front of you for 8 seconds. The line deals 5 damage to any enemy that crosses it and slows it by 30% for 2 seconds."
+  },
+  {
+   "name": "Kicked-Up Points",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 160
+   },
+   "desc": "Every 6 tiles you cover, a spike kicked up from your heel flies at the nearest enemy within 5 tiles and deals 6 damage. Once every 4 seconds."
+  }
+ ]
+}

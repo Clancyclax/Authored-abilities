@@ -1,0 +1,89 @@
+{
+ "essence": "fire",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Butting Blaze",
+   "template": "imbueStrike",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "strikes": 1,
+   "knockback": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A butting strike that deals 13 damage, knocks the target back 3 tiles and sets it [Burning] for 2 damage a second for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Will Not Be Quenched",
+   "template": "projectileBall",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 320,
+   "radius": 9,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Hurls a flame that deals 30 damage, ignoring the target's resistances, and sets it [Burning] for 3 damage a second for 6 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "element": "fire",
+   "name": "Planted on the Crag",
+   "template": "absorbShield",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.15,
+   "escort": {
+    "dmg": 3,
+    "interval": 1,
+    "duration": 8
+   },
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 6 seconds, and your armour rises by 15%. A ring of flame fights beside you for 8 seconds, striking for 3 every 1 second."
+  },
+  {
+   "name": "Shrugged Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, a shield worth 12% of your maximum health closes over you for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

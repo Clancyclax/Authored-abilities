@@ -1,0 +1,68 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "long",
+   "desc": "Sweeps the curved blade through a wide arc 3 tiles ahead, dealing 28 damage to everything in it and ignoring their armour.",
+   "base": 28,
+   "cooldown": 80,
+   "range": 96,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true
+  },
+  {
+   "name": "Ripe for Cutting",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "slashing",
+   "role": "execute",
+   "desc": "Throws the blade at a target at or below 25% health, dealing 20 damage and leaving it [Sundered] for 6 seconds.",
+   "base": 20,
+   "cooldown": 14,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Hooked Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "slashing",
+   "desc": "For 6 seconds, 30% of the damage aimed at you is turned back on whoever dealt it, and your armour rises by 8%.",
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "buffDuration": 6,
+   "cooldown": 24,
+   "armorBonus": 0.08
+  },
+  {
+   "name": "Curve Past the Plate",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "slashing",
+   "desc": "Your physical attacks ignore 12% of the target's armour.",
+   "pierceElement": "physical",
+   "armorIgnore": 0.12
+  }
+ ]
+}

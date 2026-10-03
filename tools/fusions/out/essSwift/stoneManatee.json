@@ -1,0 +1,81 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lazy Wake",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 160,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pushes a heavy wake ahead of you in a cone, dealing 11 damage to everything caught in it and leaving it [Slowed] for 4 seconds. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Slow Roll Into Them",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 300,
+   "radius": 14,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "desc": "Rolls a great slow swell at the first enemy in its path, dealing 30 damage. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Time Enough to Spare",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 0.5,
+   "cooldown": 90,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 5
+   },
+   "desc": "Holds every creature within 4 tiles in place for 3 seconds. You move 30% faster for 5 seconds after you use it."
+  },
+  {
+   "name": "Drifting Mend",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "Each time you cover a long stretch of ground, you regain 2 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

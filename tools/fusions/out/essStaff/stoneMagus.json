@@ -1,0 +1,69 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Word of Halting",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "speed": 460,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 1.2,
+   "desc": "You point the staff and speak the halting word. A bolt strikes the first enemy within 9 tiles, deals 12 damage and stuns it for 1.2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Recited Over",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "maxMult": 1.3,
+   "consumeAffliction": true,
+   "desc": "On the closing word of a recitation you thrust the staff at an enemy up to 4 tiles away that carries one of your afflictions, using that affliction up. It deals 8 damage, up to 1.3 times that at full reach."
+  },
+  {
+   "name": "Measured Cadence",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "arcane",
+   "buffStat": "castSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "You beat time on the staff as you cast, raising your casting speed by 25% for 15 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Practised Phrasing",
+   "element": "arcane",
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your mana fills, the words line up along the staff and your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

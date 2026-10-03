@@ -1,0 +1,82 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snarl of Strands",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "plant",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "slowPct": 0.25,
+   "stunOnHit": 0.8,
+   "desc": "Lashes strands around every enemy within 3 tiles, dealing 10 damage, stripping 10% armour for 6 seconds, slowing each by 25% and stunning each for 0.8 seconds."
+  },
+  {
+   "name": "Raking Comb",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "strikes": 1,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "A raking strike that deals 9 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds. It needs one of your afflictions on the target and uses it up, and anything struck moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Whisker Sense",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your dodge chance by 25% for 15 seconds."
+  },
+  {
+   "name": "Woven Mantle",
+   "kind": "passive",
+   "category": "armor summon",
+   "template": "summonArmor",
+   "element": "physical",
+   "armorBonus": 0.1,
+   "damageReduction": 2,
+   "itemBuffs": [
+    {
+     "stat": "armor",
+     "amount": 0.04
+    }
+   ],
+   "thornsFrac": 0.08,
+   "desc": "Conjures a mantle of fine strands: every hit you take is 2 lower, your armour rises by 10%, and 8% of the damage you take goes back to whoever dealt it. Your armour rises by a further 4%."
+  }
+ ]
+}

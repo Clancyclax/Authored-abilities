@@ -1,0 +1,91 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Seeded Puncture",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 12,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Drives spores into the target, dealing 11 damage and leaving it [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on it spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Puff of Spines",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.2,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Puffs out fine spines, dealing 3 damage to every enemy within 2 tiles, each with a 20% chance to leave it [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Buried Puffball",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "plant",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 16,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Buries a spined puffball at the nearest enemy that stays armed for 30 seconds. The first enemy to come within 2 tiles bursts it, and it deals 16 damage to every enemy within 2 tiles and leaves each [Poisoned] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Slow Bloom",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "plant",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land seeds a stack on that enemy, up to 5. When it reaches 5, they all burst at once, striking it for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

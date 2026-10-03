@@ -1,0 +1,69 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Stroke",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.2,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Usable only on an enemy at or below 25% health, a threshold that rises with each rank. A finishing thrust deals 20 damage and consumes every affliction on the target, adding 1.2 times their remaining damage."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Brought to Ground",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 480,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a spike at the first enemy it meets within 9 tiles, dealing 12 damage, stunning it for 1 second and leaving it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Quarry in Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 20% for 10 seconds."
+  },
+  {
+   "name": "Wounded Prey",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

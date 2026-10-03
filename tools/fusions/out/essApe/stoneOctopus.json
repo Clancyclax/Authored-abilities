@@ -1,0 +1,67 @@
+{
+ "essence": "essApe",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Arm Over Arm",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "maxMult": 1.6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Reaches out to 6 tiles to grab and yank one enemy, dealing 7 damage that grows the further it reaches, up to 1.6 times at full reach. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Every Limb at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "Grabs at everything within 3 tiles with every limb you have, dealing 14 damage to each enemy and stunning it for 1 second."
+  },
+  {
+   "name": "Ceiling Crawl",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 8,
+   "teleportRange": 192,
+   "dodgeBonus": 0.1,
+   "desc": "Climbs along the ceiling unseen and drops to a point up to 6 tiles away. You have 10% more dodge chance afterwards."
+  },
+  {
+   "name": "Spare Arm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 4,
+    "range": 128
+   },
+   "desc": "When you strike, a spare arm swats the nearest enemy within 4 tiles for 4 damage. Once every 3 seconds."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Couched at the Gallop",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "chargeTo": 256,
+   "maxMult": 1.6,
+   "desc": "You couch the staff and rush an enemy up to 8 tiles away, dealing 12 damage, up to 1.6 times that the further the blow travels."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trampling Arc",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "small",
+   "chargesMax": 3,
+   "desc": "You sweep the staff low at hoof height through a cone 3 tiles long, dealing 7 damage to everything in it. Holds 3 charges; each use spends one and each kill restores one."
+  },
+  {
+   "name": "Second Saddle Wind",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 18,
+   "cooldown": 60,
+   "desc": "You settle into a long-ridden rhythm on the staff, and your stamina recovery rises 50% for 18 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Leans and Keeps Going",
+   "element": "physical",
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you lean on the staff and regain 4 stamina a second for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essNet",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barbed Weave",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A weapon strike that catches the target on barbs woven through your mesh, dealing 7 damage and leaving it [Bleeding] for 2 damage a second for 4 seconds. Holds 4 charges; kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Trotline",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 360,
+   "radius": 8,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "spreadAfflictions": 112,
+   "desc": "Casts 3 barbed lines in a spread, each dealing 10 damage to the first enemy it meets. Your afflictions on each target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Barbed Mantle",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "buffDuration": 8,
+   "thornsFrac": 0.4,
+   "cooldown": 30,
+   "desc": "Wraps you in a barbed mesh: for 8 seconds, 40% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Set the Barb",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land sets a barb of your mesh in that enemy, up to 5. At 5 they all tear free at once and heal you for 5% of your maximum health per barb (25% at full). Unfed, a barb slips out every 4 seconds."
+  }
+ ]
+}

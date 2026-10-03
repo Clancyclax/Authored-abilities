@@ -1,0 +1,85 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barb Torn Free",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "consumeAfflictionsPer": 0.6,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "desc": "Tears the barb loose, dealing 16 damage and leaving the target 15% easier to wound for 6 seconds. It uses up every affliction you have on the target and deals 60% more damage for each one."
+  },
+  {
+   "name": "Snagged",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "maxMult": 1.2,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Flicks a barbed point at a target up to 5 tiles away for 4 damage, rising to 1.2 times that at full reach, and slows it by 20% for 2 seconds."
+  },
+  {
+   "name": "Line of Barbs",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "cooldown": 30,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 24,
+   "pullForce": 32,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Casts a barbed line ahead of you for 5 seconds that drags every enemy near it inward and leaves them [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Snag and Draw",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Each time you afflict something, 15% of the damage you deal heals you for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

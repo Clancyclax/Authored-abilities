@@ -1,0 +1,78 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Leap and Skewer",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 224,
+   "desc": "You leap onto an enemy up to 7 tiles away and drive a spike into it, dealing 14 damage, rising to 1.5 times as much the further you leapt."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Hopping Barb",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "chargesMax": 4,
+   "desc": "Flicks a barb that deals 7 damage to the first enemy it meets within 8 tiles, then hops to 2 more enemies within 3 tiles, each hop dealing 60% of the original damage. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Hard to Swat",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "cooldown": 30,
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it. You move 25% faster for 4 seconds after you use it."
+  },
+  {
+   "name": "Itch Under the Hide",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 0.8,
+   "stackIcon": "stackEye",
+   "desc": "Every time you land a hit, a barb lodges in that enemy, up to 5. Your next critical hit on it spends them all: a blow strikes that enemy for 27% of your weapon damage per stack (136% at full). Unfed, a barb works loose every 4 seconds."
+  }
+ ]
+}

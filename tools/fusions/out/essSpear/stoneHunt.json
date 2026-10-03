@@ -1,0 +1,66 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "A finishing thrust that deals 20 damage and consumes every affliction on the target, adding 1.6 times their remaining damage. It only strikes a target at or below 30% health, a threshold that rises with each rank."
+  },
+  {
+   "name": "Follow the Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 256,
+   "maxMult": 1.6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "consumeAffliction": true,
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A throw that deals 8 damage, rising to 1.6 times that at full range, and leaves the target [Marked] for 6 seconds. Needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Quarry in Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "critChanceBonus": 0.2,
+   "buffDuration": 12,
+   "castTime": 0,
+   "desc": "Increases your critical hit chance by 20% for 12 seconds."
+  },
+  {
+   "name": "No Ground to Hide",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "piercing",
+   "desc": "Your afflictions take hold on an enemy that is immune to them."
+  }
+ ]
+}

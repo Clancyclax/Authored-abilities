@@ -1,0 +1,77 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Barbed Lash",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Lashes a barbed tongue at a target up to 6 tiles away that deals 12 damage, rising to 1.3 times that at full reach. It stuns the target for 1 second and leaves it [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tear the Barb Free",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "strikes": 1,
+   "consumeAfflictionsPer": 0.6,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Strikes with your weapon in a blow that deals 18 damage and uses up every affliction you have on the target, with 60% more damage for each one. The torn wound leaves it [Bleeding] for 3 damage a second for 4 seconds."
+  },
+  {
+   "name": "Snag and Haul",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "teleportRange": 192,
+   "dodgeBonus": 0.15,
+   "cooldown": 12,
+   "desc": "Hooks a point up to 6 tiles away and hauls you there, and you cling on with 15% more dodge chance."
+  },
+  {
+   "name": "Lodged Barbs",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 4,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land lodges a venomed barb in the target, up to 4. At 4 they all tear free at once, striking that enemy for 34% of your weapon damage per barb. Unfed, a barb falls out every 4 seconds."
+  }
+ ]
+}

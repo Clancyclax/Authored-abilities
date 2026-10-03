@@ -1,0 +1,78 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "name": "Pick at the Rivets",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "desc": "Picks at the target's armour for 6 damage, leaving it 8% easier to wound for 4 seconds. It holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Cold Clanging Spin",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "speedDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spins with a cold weight in each fist, dealing 28 damage that ignores armour to every enemy within 3 tiles and leaving each [Leaden] for 6 seconds."
+  },
+  {
+   "name": "Cold Shoulder",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 5,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "cooldown": 120,
+   "desc": "For 5 seconds, blows that reach you deal no damage and no condition can take hold of you. You move 20% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Tempered by Near Misses",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you dodge a blow, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

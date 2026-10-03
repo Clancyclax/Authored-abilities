@@ -1,0 +1,88 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Picked to the Bone",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "desc": "Strikes a target at or below 30% health, dealing 22 damage, leaving it 20% easier to wound for 6 seconds and healing you for 20% of the damage dealt.",
+   "base": 22,
+   "cooldown": 14,
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "leech": 0.2,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Nesting Bites",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "resource",
+   "desc": "Costs 5% of your maximum health to loose 3 rats from your plate, spread apart, each dealing 7 damage with a 30% chance to leave the target [Diseased] for 6 seconds.",
+   "base": 7,
+   "cooldown": 1.0,
+   "hpCostPct": 0.05,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 6,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Swarm in the Seams",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "desc": "Releases a swarm from your plate for 12 seconds that bites enemies within 3 tiles for 3 damage every second.",
+   "summonKind": "swarm",
+   "summonDuration": 12,
+   "summonDmg": 3,
+   "summonInterval": 1,
+   "summonRange": 96,
+   "castTime": 0.5,
+   "cooldown": 45
+  },
+  {
+   "name": "Outlast the Wreck",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 30%, you regain 4 health a second for 5 seconds. Once every 60 seconds."
+  }
+ ]
+}

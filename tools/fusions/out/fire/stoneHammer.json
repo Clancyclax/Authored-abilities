@@ -1,0 +1,81 @@
+{
+ "essence": "fire",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "While It's Hot",
+   "template": "stackStrike",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0,
+   "executeLadder": false,
+   "consumeAffliction": true,
+   "desc": "A hammering blow that deals 9 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the hit. Usable only on an enemy carrying one of your afflictions."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Forge Quake",
+   "template": "aoeRing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Brings the hammer down in a ring of heat that deals 30 damage to every enemy within 3.5 tiles, ignoring armour, and sets each [Burning] for 3 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "element": "fire",
+   "name": "Sparks off the Anvil",
+   "template": "thornsBuff",
+   "buffDuration": 8,
+   "thornsFrac": 0.3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "cooldown": 30,
+   "desc": "For 8 seconds, 30% of the damage you take is dealt back to whoever dealt it, and it sets them [Burning] for 2 damage a second for 3 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "element": "fire",
+   "name": "Rhythm of the Forge",
+   "template": "stacking",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you land a hit, heat builds on you, up to 8 stacks. The next ability you use spends them all: you deal 3% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

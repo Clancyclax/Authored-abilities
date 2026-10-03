@@ -1,0 +1,79 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Snip the Last Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "maxMult": 1.3,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "desc": "Usable only on a target at or below 25% health. Thrusts at it from up to 6 tiles away for 20 damage, rising to 1.3 times that at full reach."
+  },
+  {
+   "name": "Strand to Strand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a threaded point that deals 8 damage, then runs along the thread to 2 more enemies within 3.5 tiles for 60% of that. Usable only on a target carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Woven Close",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 20,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.05,
+   "desc": "Weaves a barrier that absorbs the next 20 damage and holds for 6 seconds, and raises your armour by 5%."
+  },
+  {
+   "name": "Spun and Sewn",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every hit you land spins a stack on you, up to 8. When you reach 8, they all spend at once and heal you for 5% of your maximum health per stack (40% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

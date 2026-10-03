@@ -1,0 +1,80 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Herd Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 192,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "Drives a surge of hooves through a wide cone ahead of you, dealing 26 damage to everything caught in it, and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Shouldering Trot",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A shoulder barge that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. Its damage rises 10% for each ally within 5.5 tiles of you (max 30%)."
+  },
+  {
+   "name": "Lost in the Herd",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.4,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "party",
+   "cooldown": 45,
+   "desc": "Veils you and your allies for 6 seconds, and you all move 20% faster while it holds. Enemies notice you far later, and the veil breaks for whoever attacks."
+  },
+  {
+   "name": "Grazing on the Move",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "Each time you regain health, you also regain 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

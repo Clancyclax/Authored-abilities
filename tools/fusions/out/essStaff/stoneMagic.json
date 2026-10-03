@@ -1,0 +1,77 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Lengthwise Bolt",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 70,
+   "speed": 500,
+   "radius": 9,
+   "reachUnits": 384,
+   "rangeBand": "long",
+   "ignoreResist": true,
+   "castTime": 1,
+   "desc": "You gather power down the length of the staff and loose it as a bolt at the first enemy within 12 tiles, dealing 30 damage that ignores resistances."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sparking Ferrule",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "expose",
+    "chance": 0.15,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You rap the butt of the staff on the ground and sparks fly in a ring, dealing 4 damage to every enemy within 2 tiles with a 15% chance to leave each [Exposed] for 4 seconds."
+  },
+  {
+   "name": "Drawn Up the Wood",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "resource": "mana",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 6,
+   "cooldown": 30,
+   "desc": "You plant the staff and draw raw power up through it, restoring 4 mana a second for 6 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Overspill",
+   "element": "arcane",
+   "cooldown": 4,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 7,
+    "range": 288
+   },
+   "desc": "When you spend mana, a spark leaps from the head of the staff to the nearest enemy within 9 tiles, dealing 7 damage. Once every 4 seconds."
+  }
+ ]
+}

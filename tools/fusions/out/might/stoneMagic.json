@@ -1,0 +1,79 @@
+{
+ "essence": "might",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Unrefined Torrent",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "large",
+   "ignoreResist": true,
+   "desc": "Pours raw arcana through a narrow cone 5 tiles long, which deals 30 damage to everything in it, ignoring resistances."
+  },
+  {
+   "name": "Overcharged Knuckles",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "arcane",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Unravelling"
+   },
+   "debuff": {
+    "key": "expose",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. The strike deals 9 damage and leaves the target [Unravelling] for 2 damage a second for 3 seconds, with a 30% chance to leave it [Exposed] for 5 seconds."
+  },
+  {
+   "name": "Wring Out the Reserve",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 45,
+   "resource": "mana",
+   "restoreAmount": 25,
+   "desc": "Forces raw arcana back into you, restoring 25 mana at once."
+  },
+  {
+   "name": "Mana Into Muscle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you spend mana, your physical damage rises 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

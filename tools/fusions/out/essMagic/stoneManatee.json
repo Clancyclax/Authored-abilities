@@ -1,0 +1,79 @@
+{
+ "essence": "essMagic",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Drifting Orb",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 1.0,
+   "spammable": true,
+   "speed": 140,
+   "radius": 12,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Releases a slow orb of arcana that deals 5 damage, with a 25% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Gentle Tide",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 15
+   },
+   "desc": "Sends a slow wave of arcana out from you that deals 26 damage to every enemy within 4 tiles. When it hits, every ally near you deals 15% more damage for 15 seconds."
+  },
+  {
+   "name": "Unhurried Moment",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "water",
+   "cooldown": 60,
+   "freezeDuration": 3,
+   "freezeRadius": 128,
+   "aoeBand": "medium",
+   "castTime": 1,
+   "desc": "Takes 1 second to cast, then holds every creature within 4 tiles in place for 3 seconds."
+  },
+  {
+   "name": "Calm Waters",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your mana is full, you regain 3 health a second for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

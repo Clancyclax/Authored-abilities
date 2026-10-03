@@ -1,0 +1,76 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Second Tine",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.7
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.7,
+   "desc": "Throws a point that deals 7 damage to the first enemy it meets, then splits off to 1 more enemy within 3.5 tiles for 70% of that. Holds up to 4 charges; kills give charges back."
+  },
+  {
+   "name": "Both Ways at Once",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 10,
+   "stunOnHit": 1,
+   "volleyCount": 2,
+   "volleySpread": 0.6,
+   "speed": 360,
+   "radius": 6,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "desc": "Looses 2 points that fly apart, each dealing 11 damage and stunning what it hits for 1 second."
+  },
+  {
+   "name": "Prong After Prong",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "piercing",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "desc": "Increases your attack speed by 25% for 10 seconds."
+  },
+  {
+   "name": "Both Points Tried",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

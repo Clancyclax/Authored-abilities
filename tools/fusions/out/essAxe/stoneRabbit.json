@@ -1,0 +1,80 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Kick Clear",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "knockback": 96,
+   "desc": "A chop and a hind kick that deals 13 damage, leaves the target 10% easier to wound for 5 seconds and knocks it back 3 tiles."
+  },
+  {
+   "name": "Parting Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "Throws a hatchet over your shoulder that deals 4 damage to the first enemy it meets. Your movement speed rises 15% for 2 seconds after you use it."
+  },
+  {
+   "name": "Quick Feet, Quick Hands",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Increases your attack speed by 30% for 10 seconds. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Running Start",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover raises your critical hit chance by 30% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

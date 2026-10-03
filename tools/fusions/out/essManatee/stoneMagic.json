@@ -1,0 +1,85 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Drifting Mote",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 160,
+   "radius": 7,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Releases a slow mote of arcana that deals 4 damage to the first enemy it meets, with a 30% chance to leave it [Muddled] for 4 seconds."
+  },
+  {
+   "name": "Tide of Arcana",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3.5 tiles is dealt 28 damage that ignores resistances and left [Stalled] for 8 seconds."
+  },
+  {
+   "name": "Slow-Spun Ward",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "arcane",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 20 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Pooled Arcana",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your mana is full, your next spell deals 30% more damage. Once every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "name": "Tangle Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings a snarl of strands that deals 7 damage, up to 1.5 times as much at its full reach of 6 tiles, with a 40% chance to leave the target [Slowed] for 4 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Bristle Storm",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "volleyCount": 4,
+   "volleySpread": 0.45,
+   "speed": 420,
+   "radius": 6,
+   "range": 256,
+   "isAoe": true,
+   "ignoreArmor": true,
+   "desc": "Looses 4 stiff quills at once, spread apart, each dealing 26 damage and ignoring armour."
+  },
+  {
+   "name": "Prickled Nest",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "thornsFrac": 0.4,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "For 8 seconds, 40% of the damage you take is dealt back to whoever dealt it. You move 20% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Twitching Whiskers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When you are hurt by anything but fire, your physical damage rises by 20% for 4 seconds. Once every 10 seconds. Your dodge chance rises by 5%."
+  }
+ ]
+}

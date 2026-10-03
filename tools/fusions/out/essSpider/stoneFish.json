@@ -1,0 +1,94 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Shoal of Needles",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 340,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 venomed needles in a spread out to 6 tiles, each of which deals 3 damage, with a 30% chance to leave its target [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Ripple Along the Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "spreadAfflictions": 128,
+   "desc": "Snaps a wet line at an enemy up to 7 tiles away, which deals 12 damage, rising to 1.5 times that at full reach. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Air Film",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 16,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "cooldown": 24,
+   "desc": "Wraps you in a film of air that absorbs the next 16 damage and holds for 6 seconds."
+  },
+  {
+   "name": "Surface Skater",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you skate it faster than you cross ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "manaRegen",
+     "amount": 0.2,
+     "text": "and every ripple on it reaches you"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.1,
+     "text": "and nothing that has to wade can reach you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 12% faster over it, from silver your mana recovers 20% faster, and from gold your dodge chance rises by 10%."
+  }
+ ]
+}

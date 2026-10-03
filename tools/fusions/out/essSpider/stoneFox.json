@@ -1,0 +1,77 @@
+{
+ "essence": "essSpider",
+ "stone": "stoneFox",
+ "fusions": [
+  {
+   "name": "Turned Venom",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 380,
+   "radius": 7,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "confuse": {
+    "chance": 0.3,
+    "duration": 2
+   },
+   "desc": "Flicks a bead of venom that deals 8 damage to the first enemy it meets, with a 30% chance to turn it against its allies for 2 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Whose Fault",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "confuse": {
+    "chance": 0.4,
+    "duration": 4
+   },
+   "desc": "Lashes every enemy within 4 tiles, which deals 26 damage, always as a critical hit, and leaves each [Poisoned] for 3 damage a second for 5 seconds. Each has a 40% chance to turn against its allies for 4 seconds."
+  },
+  {
+   "name": "Feigned Death",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "immunityDuration": 3,
+   "cooldown": 60,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "For 3 seconds, blows that reach you deal no damage and no condition can take hold of you. Your movement speed rises 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Never Where Expected",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dodge",
+   "amount": 0.1,
+   "desc": "Against an enemy carrying one of your afflictions, your dodge chance rises by 10%."
+  }
+ ]
+}

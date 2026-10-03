@@ -1,0 +1,73 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Darning Darts",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "volleyCount": 2,
+   "volleySpread": 0.12,
+   "speed": 480,
+   "radius": 5,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.25,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 2 fine darts close together, each dealing 6 damage with a 25% chance to leave the target [Exposed] for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Last Stitch",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "desc": "A single exact thrust that deals 20 damage and consumes every affliction on the target, adding 1.4 times their remaining damage to the hit. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Steady Hand",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.2,
+   "buffDuration": 12,
+   "castTime": 0.5,
+   "cooldown": 45,
+   "desc": "After 0.5 seconds of stillness, increases your critical hit chance by 20% for 12 seconds."
+  },
+  {
+   "name": "Through the Weave",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "piercing",
+   "pierceElement": "piercing",
+   "armorIgnore": 0.15,
+   "desc": "Your piercing attacks ignore 15% of the target's armour."
+  }
+ ]
+}

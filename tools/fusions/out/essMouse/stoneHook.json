@@ -1,0 +1,90 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Reel Yourself In",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 14,
+   "range": 224,
+   "maxMult": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Snags a target up to 7 tiles away and hauls you to it, dealing 13 damage and leaving it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Catch and Tear",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A barbed bite that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds. Anything struck moves 15% slower for 2 seconds."
+  },
+  {
+   "name": "Snag Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 24,
+   "pullForce": 32,
+   "cooldown": 24,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Strings a line 6 tiles long for 6 seconds that drags every enemy near it inward. Anything struck moves 20% slower for 2 seconds, and you move 20% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Caught Fast",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every time you hit an enemy, a stack builds on it, up to 5. At 5 they all spend at once: a blow strikes that enemy for 34% of your weapon damage per stack (170% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

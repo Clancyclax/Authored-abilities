@@ -1,0 +1,91 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Through the Rivet Hole",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "desc": "A precise thrust between the plates that deals 24 damage to a target at or below 25% health, a threshold that rises with each rank, consuming every affliction on it and adding 1.5 times their remaining damage. It leaves the target [Sundered] for 6 seconds.",
+   "base": 24,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "debuff": {
+    "key": "sunder",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Loosed Pins",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "basic",
+   "desc": "Looses 3 steel pins at once, spread apart, each dealing 4 damage with a 15% chance to leave the target [Pinned] for 1 second.",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "volleyCount": 3,
+   "volleySpread": 0.25,
+   "isAoe": true,
+   "speed": 360,
+   "radius": 5,
+   "range": 220,
+   "reachUnits": 220,
+   "rangeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.15,
+    "duration": 1,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Tacked Lining",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "piercing",
+   "desc": "Tacks a barrier into your plate that absorbs the next 4 hits, up to 20 damage, for 8 seconds.",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "cooldown": 28
+  },
+  {
+   "name": "Closing Stitch",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 5
+   },
+   "desc": "When you land a critical hit, you gain a shield worth 12% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

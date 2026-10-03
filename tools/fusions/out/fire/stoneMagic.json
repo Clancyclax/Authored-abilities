@@ -1,0 +1,81 @@
+{
+ "essence": "fire",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Spilled Arcana",
+   "template": "volley",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 4,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "speed": 300,
+   "radius": 6,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.2,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 sparks of raw mana and flame that spread apart, each dealing 6 damage, with a 20% chance to leave the target [Exposed] for 5 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Unstable Ignition",
+   "template": "projectileBall",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 16,
+   "consumeAfflictionsPer": 0.6,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Throws a mote of unstable mana that deals 18 damage and uses up every affliction you have on the target, dealing 60% more damage for each one."
+  },
+  {
+   "kind": "active",
+   "category": "buff",
+   "element": "fire",
+   "name": "Raw Infusion",
+   "template": "statBuff",
+   "buffStat": "dmg_fire",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Increases your fire damage by 30% for 12 seconds."
+  },
+  {
+   "name": "Brimming",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your mana is full, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

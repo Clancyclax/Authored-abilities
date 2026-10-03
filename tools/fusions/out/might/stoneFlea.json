@@ -1,0 +1,74 @@
+{
+ "essence": "might",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Bounding Haymaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargeTo": 224,
+   "desc": "You leap up to 7 tiles onto the target and land with your full weight, which deals 14 damage, rising to 1.5 times that at full range."
+  },
+  {
+   "name": "Skip and Stomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Hops and stamps down, which deals 4 damage to every enemy within 2 tiles, and your movement speed rises 10% for 2 seconds."
+  },
+  {
+   "name": "Spring-Loaded Thighs",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 10,
+   "dashDist": 256,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "One push of your legs carries you 8 tiles forward, and your movement speed rises 20% for 3 seconds."
+  },
+  {
+   "name": "Weight on Landing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When you have covered a stretch of ground, your next ability deals 40% more damage. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "essence": "essSword",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lulling Ripple",
+   "kind": "active",
+   "category": "attack",
+   "template": "weakenRing",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 1.0,
+   "spammable": true,
+   "range": 64,
+   "reachUnits": 64,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "slowPct": 0.2,
+   "desc": "Sweeps the blade slowly around you, dealing 3 damage to every enemy within 2 tiles, stripping 5% of their armour for 3 seconds and slowing them by 20%."
+  },
+  {
+   "name": "Unhurried Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 160,
+   "maxMult": 1.5,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "knockback": 96,
+   "desc": "A long thrust at an enemy up to 5 tiles away that deals 14 damage, rising to 1.5 times that at full reach, and knocks it back 3 tiles."
+  },
+  {
+   "name": "Slow Guard",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "water",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 10,
+   "desc": "Reduces the damage you take by 25% for 10 seconds."
+  },
+  {
+   "name": "Long Calm",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you heal for 5% of your maximum health per stack (30% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

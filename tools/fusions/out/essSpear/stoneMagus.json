@@ -1,0 +1,82 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "name": "Interrupting Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 256,
+   "maxMult": 1.6,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A throw that deals 12 damage, rising to 1.6 times that at full range, stuns the target for 1.2 seconds and leaves it [Muddled] for 5 seconds."
+  },
+  {
+   "name": "Rote Bolt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Throws a drilled point of force that deals 5 arcane damage to the first enemy it meets. Its damage rises 8% per affliction the target carries, up to 32%."
+  },
+  {
+   "name": "Measured Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "cooldown": 40,
+   "resource": "mana",
+   "restoreAmount": 20,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "Restores 20 mana at once. You move 15% faster for 3 seconds after you use it."
+  },
+  {
+   "name": "Word Ready",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "fullMana",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When your mana is full, your next ability deals 30% more damage. Once every 12 seconds."
+  }
+ ]
+}

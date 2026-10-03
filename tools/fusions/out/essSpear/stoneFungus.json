@@ -1,0 +1,86 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Seeding Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A shallow jab that deals 3 poison damage and leaves spores in the wound, [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Fruiting Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 16,
+   "consumeAfflictionsPer": 0.6,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Throws a point into the bloom that deals 16 poison damage and uses up every affliction you have on the target, adding 60% more damage for each one."
+  },
+  {
+   "name": "Planted Sporestaff",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "cooldown": 45,
+   "summonKind": "turret",
+   "summonDmg": 4,
+   "summonDuration": 12,
+   "summonInterval": 1.5,
+   "summonRange": 128,
+   "castTime": 0.5,
+   "debuff": {
+    "key": "poison",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Plants a shaft that stands for 12 seconds and puffs spores at an enemy within 4 tiles for 4 poison damage every 1.5 seconds, each puff with a 40% chance to leave it [Poisoned] for 5 seconds."
+  },
+  {
+   "name": "Mycelium-Bound Haft",
+   "kind": "passive",
+   "category": "weapon summon",
+   "template": "summonWeapon",
+   "element": "poison",
+   "weaponDmgPct": 0.08,
+   "itemBuffs": [
+    {
+     "stat": "resist_poison",
+     "amount": 0.1
+    }
+   ],
+   "strikeDot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Conjures a shaft threaded through with mycelium. It increases your weapon damage by 8% and your poison resistance by 10%, and every strike with it leaves the target [Poisoned] for 1 damage a second for 4 seconds."
+  }
+ ]
+}

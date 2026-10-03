@@ -1,0 +1,84 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "name": "Lingering Prick",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A slow prick that deals 3 damage and leaves the target [Bleeding] for 1 damage a second for 8 seconds, with a 20% chance to leave it [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Drifting Mine",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "speed": 140,
+   "radius": 8,
+   "reachUnits": 300,
+   "rangeBand": "long",
+   "desc": "Sends a point drifting slowly forward that deals 26 damage to the first enemy it meets and 80% of that to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Calming Points",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "melee",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Slow Tide In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls below 35%, you regain 4 health a second for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

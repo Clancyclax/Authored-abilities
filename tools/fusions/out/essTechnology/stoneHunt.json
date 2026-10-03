@@ -1,0 +1,69 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Tracker Dart",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "marked",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires a homing tracker dart that deals 4 damage to the first enemy it meets and leaves it [Marked] for 8 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Closing Jaws",
+   "template": "stackStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.5,
+   "executeLadder": false,
+   "desc": "Usable only on an enemy at or below 25% health. A spring-jaw strike that deals 22 damage and consumes every affliction on the target, adding 1.5 times their remaining damage to the blow."
+  },
+  {
+   "name": "Target Scope",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "light",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "castTime": 0,
+   "desc": "Snaps a ranging scope over your eye that raises your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Pursuit Algorithm",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

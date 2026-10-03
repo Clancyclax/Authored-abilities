@@ -1,0 +1,75 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Nibble the Pasture",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 380,
+   "radius": 6,
+   "reachUnits": 96,
+   "leech": 0.2,
+   "desc": "A quick nibble that deals 4 damage, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Herd Panic",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "desc": "Darts between the legs of the herd, dealing 28 damage to every enemy within 3.5 tiles. Its damage rises 8% for each ally near you (max 32%), and every ally deals 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Lost Among Flanks",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "nature",
+   "stealthDuration": 6,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 0,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "healOnUse": 12,
+   "desc": "Veils you for 6 seconds and restores 12 health. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Mouthful at a Time",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "nature",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 8,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.8,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you hit an enemy, a stack builds on you, up to 8. At 8 they all spend at once and heal you for 4% of your maximum health per stack (32% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

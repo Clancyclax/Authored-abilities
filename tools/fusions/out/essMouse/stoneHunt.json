@@ -1,0 +1,65 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 128,
+   "maxMult": 1,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "A lunge that deals 18 damage and uses up every affliction you have on the target, dealing 60% more damage for each."
+  },
+  {
+   "name": "Scent Mark",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 420,
+   "radius": 6,
+   "reachUnits": 160,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.3,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A darting nip that deals 4 damage, with a 30% chance to leave the target [Marked] for 8 seconds."
+  },
+  {
+   "name": "Closing Gap",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "shadow",
+   "teleportRange": 160,
+   "cooldown": 10,
+   "dodgeBonus": 0.1,
+   "desc": "Steps you instantly to a point up to 5 tiles away and gives you 10% more dodge chance."
+  },
+  {
+   "name": "Smell of Weakness",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "dodgeBonus": 0.04,
+   "desc": "Against a target low on health, you deal 12% more damage. Your dodge chance rises by 4%."
+  }
+ ]
+}

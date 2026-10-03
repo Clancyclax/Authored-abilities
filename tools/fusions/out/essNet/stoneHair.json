@@ -1,0 +1,82 @@
+{
+ "essence": "essNet",
+ "stone": "stoneHair",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Loose Strands",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "volleyCount": 4,
+   "volleySpread": 0.6,
+   "speed": 380,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.15,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 4 strands of conjured hair out in a spread, each dealing 3 damage, with a 15% chance to leave the target [Slowed] for 2 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Garrotte of Tresses",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 15,
+   "range": 128,
+   "maxMult": 1.2,
+   "reachUnits": 128,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.25,
+   "desc": "Whips a braided cord of hair around an enemy at or below 25% health up to 4 tiles away and pulls it tight, dealing 24 damage, up to 1.2 times that at full reach."
+  },
+  {
+   "name": "Cocoon of Braids",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 5,
+   "shieldDuration": 8,
+   "cooldown": 30,
+   "desc": "Wraps you in a cocoon of woven hair that absorbs the next 20 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Strand by Strand",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "hit",
+   "stackPay": "power",
+   "stackCap": 10,
+   "stackDecay": 8,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every hit you land weaves a strand of hair onto you, up to 10. The next ability you use spends them all: you deal 6% more damage per strand (60% at full) for 6 seconds. Unfed, a strand falls away every 6 seconds."
+  }
+ ]
+}

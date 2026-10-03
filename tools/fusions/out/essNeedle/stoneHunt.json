@@ -1,0 +1,76 @@
+{
+ "essence": "essNeedle",
+ "stone": "stoneHunt",
+ "fusions": [
+  {
+   "name": "Pricked Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "debuff": {
+    "key": "marked",
+    "chance": 0.25,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A quick prick that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds, with a 25% chance to leave it [Marked] for 8 seconds."
+  },
+  {
+   "name": "Run to Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.3,
+   "speed": 450,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "desc": "Usable only on a target at or below 30% health. Throws a point into it that deals 22 damage."
+  },
+  {
+   "name": "Quarry in Sight",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "cooldown": 60,
+   "powerMult": 1.25,
+   "buffDuration": 15,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "castTime": 0,
+   "desc": "Increases your damage by 25% for 15 seconds, and your movement speed rises 15% for 5 seconds."
+  },
+  {
+   "name": "Kill Is Near",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below 50% health, you deal 12% more damage."
+  }
+ ]
+}

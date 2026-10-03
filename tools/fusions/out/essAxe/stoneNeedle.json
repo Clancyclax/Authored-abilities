@@ -1,0 +1,74 @@
+{
+ "essence": "essAxe",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Point-First Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 256,
+   "maxMult": 1.5,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Throws the blade point-first at a target up to 8 tiles away, dealing 30 damage, rising to 1.5 times that at full reach. It ignores armour."
+  },
+  {
+   "name": "Into the Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A precise chop into an open wound that deals 8 damage, makes the target [Bleeding] for 2 damage a second for 3 seconds and leaves it 10% easier to wound for 4 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Steady the Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Pinpricked Seams",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "piercing",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land marks a weak point on that enemy, up to 5. Your next critical hit on it spends them all and strikes it for 34% of your weapon damage per mark (170% at full). Unfed, a mark fades every 4 seconds."
+  }
+ ]
+}

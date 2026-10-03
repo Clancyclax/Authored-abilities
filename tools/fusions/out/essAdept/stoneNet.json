@@ -1,0 +1,84 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Wide Cast",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 128,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a weighted mesh 4 tiles ahead of you that deals 10 damage to everything under it, stuns them for 1 second and leaves them [Slowed] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drawn Tight",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "requiresTargetBelow": 0.3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a drawstring loop that deals 20 damage to the first enemy it meets and leaves it [Pinned] for 3 seconds. Usable only on an enemy at or below 30% health."
+  },
+  {
+   "name": "Haul the Catch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "tauntRadius": 192,
+   "tauntDuration": 4,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "cooldown": 20,
+   "desc": "A practised heave that drags up to 5 enemies within 6 tiles onto you and holds their attention for 4 seconds."
+  },
+  {
+   "name": "Caught Flat",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "When you inflict a condition on an enemy, your critical hit chance rises by 15% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

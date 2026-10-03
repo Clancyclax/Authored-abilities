@@ -1,0 +1,73 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "name": "Barbed Withdrawal",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "consumeAffliction": true,
+   "desc": "Tears the barb back out, dealing 8 damage and leaving the target [Bleeding] for 2 damage a second for 4 seconds. Needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Harpoon Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 440,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Throws a barbed harpoon that deals 13 damage to the first enemy it meets, stuns it for 1.2 seconds and leaves it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Reel Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "piercing",
+   "cooldown": 20,
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 3,
+   "threatMult": 1,
+   "desc": "Pulls up to 3 enemies within 6 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Snagged Already",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "You deal 10% more damage to enemies carrying your afflictions."
+  }
+ ]
+}

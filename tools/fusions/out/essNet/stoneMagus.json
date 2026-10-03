@@ -1,0 +1,73 @@
+{
+ "essence": "essNet",
+ "stone": "stoneMagus",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Spoken Knot",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "speed": 400,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Speaks a knot of mesh into being on the first enemy it meets, dealing 4 damage. Its damage rises 8% for each affliction the target carries, up to 40%."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Word of Closing",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 128,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1,
+   "desc": "You speak the closing word and a mesh snaps shut through a cone 4 tiles ahead, dealing 12 damage to everything in it and stunning each for 1 second."
+  },
+  {
+   "name": "Binding Recital",
+   "kind": "active",
+   "category": "buff",
+   "template": "timeFreeze",
+   "element": "arcane",
+   "freezeDuration": 3,
+   "freezeRadius": 160,
+   "aoeBand": "large",
+   "castTime": 1.5,
+   "cooldown": 60,
+   "desc": "After a 1.5-second incantation, your mesh closes on every creature within 5 tiles and holds them in place for 3 seconds."
+  },
+  {
+   "name": "Ward Between the Words",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 4
+   },
+   "desc": "When you spend mana, the practised words knot a ward of mesh around you that absorbs 10% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

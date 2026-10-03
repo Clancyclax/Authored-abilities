@@ -1,0 +1,83 @@
+{
+ "essence": "essNet",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slack Line",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "range": 160,
+   "maxMult": 1.2,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "chargesMax": 3,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 2
+   },
+   "desc": "Pays out a slack line of mesh up to 5 tiles that deals 7 damage, up to 1.2 times that at full reach, and slows the target by 30% for 2 seconds. Holds 3 charges; kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slow Sinking",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 18,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.3,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 8
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Settles your full weight on an enemy at or below 30% health and lets your mesh sink it, dealing 22 damage and leaving it [Soaked] and 10% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Drift Together",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "healScope": "ally",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "cooldown": 30,
+   "desc": "Draws the ally who needs it most into your drifting mesh, restoring 3 health a second to them for 8 seconds."
+  },
+  {
+   "name": "Unhurried Return",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When one of your conditions on an enemy runs out, your mesh drifts slack back to you and you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

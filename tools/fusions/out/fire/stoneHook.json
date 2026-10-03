@@ -1,0 +1,79 @@
+{
+ "essence": "fire",
+ "stone": "stoneHook",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Hauled Onto the Coals",
+   "template": "barrierWall",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 30,
+   "stunOnHit": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "Casts a 5-tile line of red-hot barbs ahead of you for 5 seconds that drags nearby enemies inward. It deals 12 damage to each one it catches, stuns it for 1 second and sets it [Burning] for 2 damage a second for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Barb Left In",
+   "template": "imbueStrike",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "chargesMax": 3,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 8,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "desc": "A barbed strike that deals 7 damage and sets the target [Burning] for 1 damage a second for 8 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "element": "fire",
+   "name": "Reel In",
+   "template": "tauntPull",
+   "tauntRadius": 192,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "cooldown": 24,
+   "desc": "Hooks up to 4 enemies within 6 tiles and pulls them onto you for 5 seconds. A ring of flame fights beside you for 8 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "kind": "passive",
+   "category": "passive buff",
+   "element": "fire",
+   "name": "Barbs Still Burning",
+   "template": "passiveConditional",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies carrying your afflictions, you deal 12% more damage."
+  }
+ ]
+}

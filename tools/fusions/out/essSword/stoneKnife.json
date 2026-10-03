@@ -1,0 +1,75 @@
+{
+ "essence": "essSword",
+ "stone": "stoneKnife",
+ "fusions": [
+  {
+   "name": "Second Edge Follows",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "A follow-up cut that deals 8 damage and leaves the target [Bleeding] for 2 damage a second for 3 seconds. Usable only on an enemy carrying one of your afflictions, and uses one of them up."
+  },
+  {
+   "name": "Thrown Off-Hand",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "speed": 480,
+   "radius": 6,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Throws the off-hand blade at the first enemy within 6 tiles, dealing 16 damage and using up every affliction you have on it, dealing 60% more damage for each one."
+  },
+  {
+   "name": "Blade Under the Cloak",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 24,
+   "stealthDuration": 5,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 5 seconds: enemies notice you 60% later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Edge Behind the Edge",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next ability deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

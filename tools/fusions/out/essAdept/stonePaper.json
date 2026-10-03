@@ -1,0 +1,77 @@
+{
+ "essence": "essAdept",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Leaf Cuts",
+   "template": "volley",
+   "element": "slashing",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 360,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks 3 stiffened leaves at once, spread apart, each dealing 3 damage with a 20% chance to leave the target [Bleeding] for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Struck Through",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "A single ruled cut on a target up to 5 tiles away that deals 16 damage, rising to 1.3 times that at full reach. It uses up every affliction you have on the target and deals 50% more for each one."
+  },
+  {
+   "name": "Turn to the Page",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "arcane",
+   "resetCount": 1,
+   "cooldown": 90,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Annotated Forms",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "arcane",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every ability you use builds a stack on you, up to 4. The next ability you use spends them all: you deal 6% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

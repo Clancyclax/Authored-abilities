@@ -1,0 +1,79 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFlea",
+ "fusions": [
+  {
+   "name": "Nip and Spring",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 2
+   },
+   "desc": "A quick jab that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 3 seconds. You move 15% faster for 2 seconds after."
+  },
+  {
+   "name": "Rides the Giant Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 288,
+   "maxMult": 2,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "bossPct": 0.05,
+   "desc": "A leaping throw that deals 28 damage, rising to 2 times that at full range, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Over the Table",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "physical",
+   "cooldown": 9,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Vaults you to a point up to 6 tiles away in an instant. You move 20% faster for 3 seconds after."
+  },
+  {
+   "name": "Coiled to Jump",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.12,
+    "duration": 4
+   },
+   "desc": "When you spend stamina, your critical hit chance rises by 12% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

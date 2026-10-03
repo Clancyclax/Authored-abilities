@@ -1,0 +1,72 @@
+{
+ "essence": "essAdept",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Pinning Cast",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 12,
+   "speed": 480,
+   "radius": 7,
+   "reachUnits": 256,
+   "rangeBand": "long",
+   "knockback": 80,
+   "desc": "Hurls a javelin that deals 15 damage to the first enemy it meets and drives it back 2.5 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Set Against the Charge",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "A braced thrust at full reach that deals 30 damage and leaves the target 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Lengthened Grip",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "rangeMult": 1.3,
+   "buffDuration": 15,
+   "castTime": 0,
+   "cooldown": 50,
+   "desc": "For 15 seconds, your attacks and spells reach 30% further."
+  },
+  {
+   "name": "Fresh Arm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When your stamina is full, your physical damage rises by 25% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

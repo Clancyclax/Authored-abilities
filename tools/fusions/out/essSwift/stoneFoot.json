@@ -1,0 +1,77 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "name": "Kick at Journey's End",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.06,
+   "scaleCap": 0.3,
+   "desc": "A kick that deals 26 damage and leaves the target 12% easier to wound for 6 seconds. Against a boss or an elite it also deals 5% of their maximum health. Its damage rises 6% for every 100 paces you have run since you last used it (max 30%)."
+  },
+  {
+   "name": "Blistered Stomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.04,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Stamps down, dealing 8 damage to every enemy within 2 tiles, and you move 20% faster for 3 seconds afterwards. Also costs 4% of your maximum health."
+  },
+  {
+   "name": "Forced March",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "speedMult": 1.25,
+   "buffDuration": 20,
+   "cooldown": 60,
+   "desc": "Increases your movement speed by 25% for 20 seconds."
+  },
+  {
+   "name": "Calloused Stride",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "Each time you cover a long stretch of ground on foot, you regain 10 stamina. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneHammer",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drop Forge",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "bossPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "desc": "Releases a drop-forge weight onto the target, which deals 30 damage and leaves it 20% easier to wound for 8 seconds. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Shockwave Anvil",
+   "template": "aoeRing",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1.2,
+   "desc": "Slams a steam hammer onto a portable anvil, which deals 14 damage to every enemy within 3 tiles and stuns them for 1.2 seconds."
+  },
+  {
+   "name": "Beaten Scrap Plate",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "blunt",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 20,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "armorBonus": 0.06,
+   "cooldown": 24,
+   "desc": "Beats a plate of scrap flat across your chest that absorbs the next 20 damage and holds for 6 seconds, and your armour rises by 6%."
+  },
+  {
+   "name": "Counterweight Swing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "Each critical hit drops a counterweight: your physical damage rises by 25% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

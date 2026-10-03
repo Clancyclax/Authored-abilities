@@ -1,0 +1,78 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Blood from the Eyes",
+   "template": "breathCone",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. Squirts blood from your eyes in a cone 3 tiles long that deals 8 damage to everything in it, with a 40% chance of [Blunted] for 4 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Venom Jaw",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 25,
+   "cooldown": 15,
+   "range": 72,
+   "reachUnits": 72,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Usable only on a target at or below 25% health. Bites it for 25 damage, leaves it 10% easier to wound for 6 seconds and [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "New Tail by Dusk",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "cooldown": 25,
+   "desc": "Restores 4 health a second to you for 6 seconds."
+  },
+  {
+   "name": "High Noon Rock",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "fire",
+   "condition": "day",
+   "bonusKind": "dmg",
+   "amount": 0.1,
+   "desc": "In daylight, your damage rises by 10%."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneFork",
+ "fusions": [
+  {
+   "name": "Branching Cast",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "speed": 420,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "desc": "Throws a light point that deals 4 damage to the first enemy it meets, then splits to 1 more enemy within 3 tiles for 50% of that."
+  },
+  {
+   "name": "Prongs Apart",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "medium",
+   "base": 11,
+   "cooldown": 14,
+   "range": 112,
+   "coneAngle": 0.45,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Drives the tines through a narrow cone 3.5 tiles long, dealing 11 damage to everything in it, with a 50% chance to leave each enemy [Bleeding] for 5 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Turned the Other Way",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "piercing",
+   "cooldown": 27,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 9,
+   "desc": "For 9 seconds, each affliction laid on you has a 50% chance to be sent back to whoever laid it."
+  },
+  {
+   "name": "Second Tine",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "piercing",
+   "rerollKind": "crit",
+   "rerollKinds": [
+    "crit"
+   ],
+   "rerollCooldown": 8,
+   "desc": "Once every 8 seconds, a strike that fails to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

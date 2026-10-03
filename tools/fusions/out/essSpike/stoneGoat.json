@@ -1,0 +1,70 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Horn-First",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "desc": "A head-down gore that deals 14 damage, leaves the target 15% easier to wound for 6 seconds and knocks it back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ledge-Clearing Toss",
+   "template": "breathCone",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 75,
+   "range": 96,
+   "coneAngle": 1.2,
+   "aoeBand": "medium",
+   "isAoe": true,
+   "ignoreArmor": true,
+   "desc": "Tosses your head through a cone ahead of you, dealing 30 damage to every enemy within 3 tiles. It ignores armour."
+  },
+  {
+   "name": "Sure Purchase",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "earth",
+   "immunityDuration": 4,
+   "cooldown": 60,
+   "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Butt Back",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.2,
+    "duration": 4
+   },
+   "desc": "When you take damage from anything but fire, your physical damage rises by 20% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

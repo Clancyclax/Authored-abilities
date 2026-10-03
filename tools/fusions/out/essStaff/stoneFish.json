@@ -1,0 +1,83 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Slid Through the Palms",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "desc": "You let the staff run through your hands to jab an enemy up to 5 tiles away. It deals 4 damage, rising to 1.5 times that at the far end of its reach."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Silver Darts",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 320,
+   "radius": 7,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "knockback": 80,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You flick the wet tip of the staff three times, sending 3 darts of water in a fan out to 6 tiles. Each deals 10 damage, knocks the enemy 2.5 tiles back and leaves it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Wet Grip Turn",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "water",
+   "reflectKind": "debuff",
+   "reflectChance": 0.4,
+   "reflectFrac": 0.4,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "You spin the staff in a slick blur. For 8 seconds, each condition laid on you has a 40% chance to slide off the haft and land on whoever laid it instead."
+  },
+  {
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "isTriggered": true,
+   "name": "Slithers Down the Haft",
+   "element": "water",
+   "cooldown": 8,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Your guard with the staff gives you +5% dodge chance. When a blow that is not fire lands on you, it slides down the haft and you restore 8 stamina, once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "essence": "essLizard",
+ "stone": "stoneHand",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Gecko Clutch",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "strikes": 1,
+   "stunOnHit": 1.2,
+   "bindOnHit": {
+    "slowPct": 0.3,
+    "duration": 3
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Clamps the target in clinging toes and strikes with your weapon in a blow that deals 12 damage, stunning it for 1.2 seconds and leaving it [Poisoned] for 2 damage a second for 4 seconds. It moves 30% slower for 3 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Never Let Go",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 26,
+   "cooldown": 15,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.2,
+   "requiresTargetBelow": 0.2,
+   "bindOnHit": {
+    "slowPct": 0.4,
+    "duration": 2
+   },
+   "desc": "Usable only on a target at or below 20% health. Grabs it from up to 6 tiles away with a blow that deals 26 damage, rising to 1.2 times that at full reach, and it moves 40% slower for 2 seconds."
+  },
+  {
+   "name": "Fingers Grown Back",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "life",
+   "healAmount": 18,
+   "healScope": "self",
+   "critChance": 0.05,
+   "cooldown": 25,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you. Its healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Clinging Hold",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.1,
+    "duration": 3
+   },
+   "desc": "When you strike an enemy, 10% of the damage you deal heals you for the next 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Edge-First Bash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "basic",
+   "desc": "Bashes with the rim of your shield, dealing 5 damage and leaving the target 6% easier to wound for 3 seconds.",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "sunder": {
+    "amount": 0.06,
+    "duration": 3
+   },
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee"
+  },
+  {
+   "name": "Skipping Rim",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blunt",
+   "role": "medium",
+   "desc": "Hurls your shield into the first enemy it meets, dealing 11 damage and knocking it 2.5 tiles back. It then leaps to 1 more enemy within 3.5 tiles, dealing 60% of the original damage.",
+   "base": 11,
+   "cooldown": 14,
+   "speed": 340,
+   "radius": 10,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "knockback": 80,
+   "chain": {
+    "count": 1,
+    "radius": 112,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 112,
+   "chainDamagePct": 0.6
+  },
+  {
+   "name": "Braced Cover",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blunt",
+   "desc": "Reduces the damage you take by 30% for 8 seconds.",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.3,
+   "buffDuration": 8,
+   "cooldown": 30
+  },
+  {
+   "name": "Guard Between Swings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blunt",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.1,
+    "duration": 3
+   },
+   "desc": "When you strike an enemy, you gain a shield worth 10% of your maximum health for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

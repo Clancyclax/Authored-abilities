@@ -1,0 +1,68 @@
+{
+ "essence": "essTechnology",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Mana Slug",
+   "template": "rangeStrike",
+   "element": "arcane",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1,
+   "knockback": 96,
+   "desc": "An arcane coil fires a slug of condensed mana at an enemy up to 6 tiles away, which deals 14 damage and knocks it back 3 tiles."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Raw Venting",
+   "template": "breathCone",
+   "element": "arcane",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "hpCostPct": 0.05,
+   "desc": "Vents unrefined mana through an open valve across a cone 3 tiles long, which deals 8 damage to everything in it. Each use costs 5% of your maximum health."
+  },
+  {
+   "name": "Mana Condenser",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "resource": "mana",
+   "restoreAmount": 20,
+   "cooldown": 45,
+   "desc": "Condenses loose arcana into 20 mana for you."
+  },
+  {
+   "name": "Overflow Arc",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 3,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 3
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 192
+   },
+   "desc": "Each time you spend mana, the excess arcs to the nearest enemy within 6 tiles and deals 5 damage. Once every 3 seconds."
+  }
+ ]
+}

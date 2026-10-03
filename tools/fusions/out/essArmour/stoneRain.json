@@ -1,0 +1,89 @@
+{
+ "essence": "essArmour",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Rust Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "water",
+   "role": "long",
+   "desc": "A strike that deals 28 damage and ignores the target's armour, leaving it [Soaked] for 8 seconds, [Corroded] for 2 damage a second for 5 seconds, and 15% easier to wound for 10 seconds.",
+   "base": 28,
+   "cooldown": 75,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Corroded"
+   },
+   "range": 86,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "sunder": {
+    "amount": 0.15,
+    "duration": 10
+   }
+  },
+  {
+   "name": "Run-Off Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "basic",
+   "desc": "Shakes the rain off your plate in a cone 3 tiles ahead, dealing 4 damage, with a 30% chance to leave each target [Soaked] for 4 seconds.",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "coneAngle": 0.7,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   }
+  },
+  {
+   "name": "Grey Respite",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "desc": "Restores 10 health at once and 3 stamina a second for 8 seconds.",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "healOnUse": 10,
+   "cooldown": 30
+  },
+  {
+   "name": "Oiled Against Weather",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "water",
+   "desc": "Your armour rises by 8%, and you have 12% water resistance.",
+   "buffKind": "armor",
+   "amount": 0.08,
+   "resist": {
+    "element": "water",
+    "amount": 0.12
+   }
+  }
+ ]
+}

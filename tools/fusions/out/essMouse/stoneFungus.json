@@ -1,0 +1,89 @@
+{
+ "essence": "essMouse",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Mouldy Tooth",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 6,
+   "reachUnits": 224,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits a tuft of spores that deals 3 damage and leaves the target [Poisoned] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rummage the Bed",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 3
+   },
+   "desc": "Scurries through the spore bed, dealing 10 damage to every enemy within 3 tiles with a 50% chance to leave each [Diseased] for 8 seconds. Your afflictions on them spread to enemies within 4 tiles, and you move 20% faster for 3 seconds afterward."
+  },
+  {
+   "name": "Puffball Cache",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "poison",
+   "summonKind": "trap",
+   "summonDmg": 18,
+   "summonDuration": 40,
+   "summonInterval": 0,
+   "summonRange": 64,
+   "summonCharges": 2,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.8,
+   "cooldown": 120,
+   "debuff": {
+    "key": "poison",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hides a puffball at the nearest enemy. It waits up to 40 seconds, and the first 2 enemies to come within 2 tiles take 18 damage in a burst of spores that leaves them [Poisoned] for 6 seconds."
+  },
+  {
+   "name": "Gets In Everywhere",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "dodgeBonus": 0.05,
+   "desc": "Your afflictions take hold on an enemy that is immune to them. Your dodge chance rises by 5%."
+  }
+ ]
+}

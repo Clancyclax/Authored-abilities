@@ -1,0 +1,76 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneHeidel",
+ "fusions": [
+  {
+   "name": "Flung Clod",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "enervate",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks back a clod that deals 8 damage, up to 1.5 times as much at its full reach of 6 tiles, with a 30% chance to leave the target [Enervated] for 6 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Trampling Circuit",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "small",
+   "spreadAfflictions": 112,
+   "desc": "Tramples a slow circle, dealing 12 damage to every enemy within 3 tiles. Your afflictions on each spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Long Ride Home",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "earth",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 25,
+   "cooldown": 80,
+   "desc": "Increases your stamina recovery by 50% for 25 seconds."
+  },
+  {
+   "name": "Second Wind Under Saddle",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 6
+   },
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

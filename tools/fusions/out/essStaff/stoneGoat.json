@@ -1,0 +1,76 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneGoat",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Butting Thrust",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "knockback": 112,
+   "desc": "You ram the end of the staff into an enemy, dealing 14 damage, knocking it 3.5 tiles back and leaving it 15% easier to wound for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Ledge Sweep",
+   "template": "breathCone",
+   "element": "rock",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "From planted feet, you sweep the staff low through a cone 3 tiles long, dealing 4 damage to everything in it with a 20% chance to leave each enemy [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Wedged on the Crag",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "rock",
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "cooldown": 36,
+   "desc": "You wedge the staff against the ground and brace on it, raising your armour by 25% for 10 seconds."
+  },
+  {
+   "name": "Gives No Ground",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "rock",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "desc": "Each time you take damage while braced on the staff, a stack builds on you, up to 6. At 6 they all spend at once and you gain a shield that soaks 7% of your maximum health per stack (42% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

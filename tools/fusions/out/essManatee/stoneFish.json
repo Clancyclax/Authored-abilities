@@ -1,0 +1,92 @@
+{
+ "essence": "essManatee",
+ "stone": "stoneFish",
+ "fusions": [
+  {
+   "name": "Silver Followers",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.35,
+   "speed": 180,
+   "radius": 6,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "leechOverTime": {
+    "frac": 0.15,
+    "duration": 6,
+    "label": "Mending"
+   },
+   "desc": "Looses 3 silver darts that drift slowly outward, spread apart, each dealing 4 damage. 15% of the damage dealt comes back to you as healing over 6 seconds."
+  },
+  {
+   "name": "Shoal Wheels Round",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 260,
+   "radius": 10,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "partyBuffOnHit": {
+    "pct": 0.15,
+    "dur": 12
+   },
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a packed shoal into the first enemy it meets, dealing 28 damage and leaving it [Slowed] for 6 seconds. On a hit, you and your allies deal 15% more damage for 12 seconds."
+  },
+  {
+   "name": "Sheltering Belly",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "water",
+   "tauntRadius": 192,
+   "tauntDuration": 8,
+   "tauntMax": 4,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 3,
+    "interval": 1.2,
+    "duration": 6
+   },
+   "cooldown": 30,
+   "desc": "Pulls up to 4 enemies within 6 tiles onto you for 8 seconds. For 6 seconds, the shoal sheltering under you darts out beside you, striking for 3 every 1.2 seconds."
+  },
+  {
+   "name": "Slick Among Many",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "dodge",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 6,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackFortune",
+   "desc": "Every blow you avoid builds a stack on you, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

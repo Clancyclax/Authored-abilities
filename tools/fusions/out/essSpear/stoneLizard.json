@@ -1,0 +1,74 @@
+{
+ "essence": "essSpear",
+ "stone": "stoneLizard",
+ "fusions": [
+  {
+   "name": "Lunge From Stillness",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "strikes": 1,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "ignoreResist": true,
+   "desc": "A sudden lunge that deals 28 poison damage, ignores the target's resistances and leaves it [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Flicked Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.04,
+    "duration": 3
+   },
+   "desc": "A tongue-quick flick that deals 4 damage and leaves the target 4% easier to wound for 3 seconds."
+  },
+  {
+   "name": "Basking",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "fire",
+   "cooldown": 30,
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Cold Blood, Long Wait",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "poison",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "heal",
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackScale": 0.8,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 5. At 5 they all spend at once: you heal for 4% of your maximum health per stack (20% at full). Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}

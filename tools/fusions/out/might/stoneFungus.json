@@ -1,0 +1,75 @@
+{
+ "essence": "might",
+ "stone": "stoneFungus",
+ "fusions": [
+  {
+   "name": "Burst the Cap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "strikes": 1,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. The blow deals 8 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Rot Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "poison",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "debuff": {
+    "key": "disease",
+    "chance": 0.5,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "A rotting blow that deals 16 damage, leaves the target 15% easier to wound for 6 seconds and has a 50% chance to leave it [Diseased] for 10 seconds. Your afflictions on it then spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Swell Overnight",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 70,
+   "buffStat": "maxHp",
+   "buffAmount": 0.25,
+   "buffDuration": 20,
+   "desc": "Your maximum health rises 25% for 20 seconds."
+  },
+  {
+   "name": "Creeping Mass",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%, and you regenerate 0.5 health a second."
+  }
+ ]
+}

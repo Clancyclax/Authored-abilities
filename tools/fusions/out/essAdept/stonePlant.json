@@ -1,0 +1,71 @@
+{
+ "essence": "essAdept",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Thorn Prick",
+   "template": "imbueStrike",
+   "element": "plant",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 3,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A thorned jab that deals 7 damage and leaves the target [Poisoned] for 2 damage a second for 4 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Taproot Sweep",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 15,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "From a rooted stance, deals 13 damage to every enemy within 3 tiles and leaves them [Pinned] for 2 seconds. Your afflictions on each enemy hit spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Rooted Breathing",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Years of Growth",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 0.08,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 8%, and you regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

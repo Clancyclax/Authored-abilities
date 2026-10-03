@@ -1,0 +1,96 @@
+{
+ "essence": "fire",
+ "stone": "stoneIron",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Slag Fling",
+   "template": "rangeStrike",
+   "role": "basic",
+   "spammable": true,
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 160,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "maxMult": 1.4,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Burning"
+   },
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 1
+   },
+   "desc": "Flings molten slag up to 5 tiles that deals 4 damage, up to 1.4 times as much at full reach, sets the target [Burning] for 1 damage a second for 3 seconds and slows it by 15% for 1 second."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "element": "fire",
+   "name": "Hot Rivets",
+   "template": "volley",
+   "role": "long",
+   "base": 25,
+   "cooldown": 90,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 420,
+   "radius": 6,
+   "range": 256,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "isAoe": true,
+   "castTime": 0,
+   "ignoreArmor": true,
+   "debuff": {
+    "key": "burn",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Fires 3 red-hot rivets that spread apart, each dealing 25 damage that ignores armour and setting the target [Burning] for 5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "defensive",
+   "element": "fire",
+   "name": "Glowing Plate",
+   "template": "reflectWard",
+   "reflectKind": "damage",
+   "reflectFrac": 0.3,
+   "reflectChance": 1,
+   "buffDuration": 6,
+   "armorBonus": 0.1,
+   "resist": {
+    "element": "fire",
+    "amount": 0.15
+   },
+   "cooldown": 30,
+   "desc": "For 6 seconds, 30% of the damage you take is dealt back to whoever dealt it. Your armour rises by 10%, and you have 15% fire resistance."
+  },
+  {
+   "kind": "passive",
+   "category": "stacking",
+   "element": "fire",
+   "name": "Heat in the Bulwark",
+   "template": "stacking",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, heat builds on you, up to 8 stacks. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

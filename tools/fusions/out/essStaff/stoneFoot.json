@@ -1,0 +1,83 @@
+{
+ "essence": "essStaff",
+ "stone": "stoneFoot",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Stamp and Plant",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "small",
+   "stunOnHit": 1,
+   "desc": "You stamp down and drive the butt of the staff into the ground, dealing 14 damage to every enemy within 2.5 tiles and stunning each for 1 second."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Every Mile in It",
+   "template": "rangeStrike",
+   "element": "blunt",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "maxMult": 1.3,
+   "bossPct": 0.05,
+   "scaleOn": "distanceTravelled",
+   "scalePer": 0.05,
+   "scaleCap": 0.4,
+   "desc": "A long overhand swing at an enemy within 3 tiles that deals 28 damage plus 5% of a boss's or elite's maximum health, up to 1.3 times that at full reach. Its damage rises 5% for every 100 paces you have covered since you last used it, up to 40%."
+  },
+  {
+   "name": "Leaning Rest",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "cooldown": 30,
+   "desc": "You lean your weight on the staff and restore 4 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Road Legs",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "attrBoost",
+   "element": "physical",
+   "attr": "speed",
+   "raisesCap": 1,
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.05,
+     "text": "the road ends sooner"
+    },
+    {
+     "rank": "silver",
+     "stat": "dodgeChance",
+     "amount": 0.04,
+     "text": "the staff takes the stumble"
+    },
+    {
+     "rank": "gold",
+     "stat": "attackSpeed",
+     "amount": 0.06,
+     "text": "the walking rhythm carries into the swing"
+    }
+   ],
+   "desc": "Raises your Speed by 1 and your Speed ceiling by 1. From bronze you move 5% faster, from silver the staff gives you 4% dodge chance, and from gold you attack 6% faster."
+  }
+ ]
+}

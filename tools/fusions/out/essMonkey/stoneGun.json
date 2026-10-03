@@ -1,0 +1,77 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneGun",
+ "fusions": [
+  {
+   "name": "Fanned Shots",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 6,
+   "cooldown": 1,
+   "chargesMax": 5,
+   "volleyCount": 2,
+   "volleySpread": 0.2,
+   "speed": 520,
+   "radius": 5,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "isAoe": true,
+   "desc": "Fires 2 shots at once, slightly apart, each dealing 6 damage up to 9 tiles away. It holds 5 charges, and each kill gives one back."
+  },
+  {
+   "name": "Sudden Report",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "fire",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "ignoreArmor": true,
+   "speed": 640,
+   "radius": 6,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 4
+   },
+   "desc": "Fires a single shot up to 10 tiles that deals 32 damage, ignoring armour. You move 30% faster for 4 seconds after firing."
+  },
+  {
+   "name": "Itchy Trigger Finger",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "fire",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your attack speed by 30% for 12 seconds."
+  },
+  {
+   "name": "Spare Pistol",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "fire",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 288
+   },
+   "desc": "When you strike, a shot leaps to the nearest enemy within 9 tiles, dealing 6 damage. Once every 4 seconds."
+  }
+ ]
+}

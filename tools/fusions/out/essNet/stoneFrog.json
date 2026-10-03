@@ -1,0 +1,83 @@
+{
+ "essence": "essNet",
+ "stone": "stoneFrog",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Sticky Lash",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "basic",
+   "spammable": true,
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 160,
+   "maxMult": 1.2,
+   "reachUnits": 160,
+   "rangeBand": "medium",
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 1.5
+   },
+   "desc": "Lashes out a sticky line of mesh up to 5 tiles, dealing 5 damage, up to 1.2 times that at full reach, and slowing the target by 20% for 1.5 seconds."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Plunge from the Reeds",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 112,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "You spring up and come down in a dripping mesh, dealing 28 damage to every enemy within 3.5 tiles plus 5% of a boss's or elite's maximum health, and leaving each [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Lily-Pad Snarl",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "water",
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 30,
+   "cooldown": 20,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Lays a sticky mesh 5 tiles long ahead of you for 5 seconds, dragging every enemy near it inward; anything struck moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Toad in the Rigging",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "water",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.4,
+   "familiarFamily": "frog",
+   "familiarCreatureName": "Mesh Toad",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "Calls a bonded toad that rides your mesh and lashes enemies within 5 tiles with its tongue, striking for 4 damage and slowing them by 15% for 2 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essSwift",
+ "stone": "stoneMagic",
+ "fusions": [
+  {
+   "name": "Unspooled Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 15,
+   "speed": 700,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Sends a streak of raw arcana that deals 16 damage to the first enemy it meets and uses up every affliction you have on it, dealing 50% more damage for each."
+  },
+  {
+   "name": "Overspill",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "arcane",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "hasteOnUse": {
+    "pct": 0.3,
+    "duration": 5
+   },
+   "desc": "Lets loose the arcana you have built up, dealing 30 damage that ignores resistances to every enemy within 4 tiles. You move 30% faster for 5 seconds afterwards."
+  },
+  {
+   "name": "Quick Draught",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "arcane",
+   "resource": "mana",
+   "overTime": false,
+   "restoreAmount": 20,
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Restores 20 mana at once. You move 25% faster for 4 seconds afterwards."
+  },
+  {
+   "name": "Crackling Reflexes",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 3
+   },
+   "desc": "Each time you spend mana, your critical hit chance rises by 15% for 3 seconds. Once every 8 seconds."
+  }
+ ]
+}

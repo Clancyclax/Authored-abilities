@@ -1,0 +1,82 @@
+{
+ "essence": "essMonkey",
+ "stone": "stoneGrazen",
+ "fusions": [
+  {
+   "name": "Troop Closes In",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blunt",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 15,
+   "requiresTargetBelow": 0.25,
+   "range": 80,
+   "reachUnits": 80,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.08,
+   "scaleCap": 0.32,
+   "desc": "Usable only on an enemy at or below 25% health: deals 22 damage and leaves it 10% easier to wound for 4 seconds. Its damage rises 8% for each ally near you (max +32%)."
+  },
+  {
+   "name": "Warmth Thief",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "life",
+   "role": "basic",
+   "spammable": true,
+   "base": 3,
+   "cooldown": 0.9,
+   "range": 64,
+   "isAoe": true,
+   "aoeBand": "small",
+   "leech": 0.3,
+   "desc": "Swats every enemy within 2 tiles for 3 damage and heals you for 30% of the damage dealt."
+  },
+  {
+   "name": "Herd Grooming",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "life",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 40,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Removes up to 3 conditions from you. Fighting beside others pays: +10% per ally within 5.5 tiles, capped at 4."
+  },
+  {
+   "name": "Fed and Rested",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "dodgeBonus": 0.05,
+   "desc": "Each time you are healed, you regain 4 stamina. Once every 4 seconds. You also have 5% more dodge chance."
+  }
+ ]
+}

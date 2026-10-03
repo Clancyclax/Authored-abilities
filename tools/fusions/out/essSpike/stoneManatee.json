@@ -1,0 +1,79 @@
+{
+ "essence": "essSpike",
+ "stone": "stoneManatee",
+ "fusions": [
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Drifting Barb",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 192,
+   "reachUnits": 192,
+   "rangeBand": "medium",
+   "maxMult": 1.3,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sends a barb drifting at an enemy up to 6 tiles away that deals 7 damage, rising to 1.3 times as much at full reach, and leaves it [Slowed] for 3 seconds. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "kind": "active",
+   "category": "attack",
+   "name": "Settling Weight",
+   "template": "weakenRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 112,
+   "reachUnits": 112,
+   "rangeBand": "medium",
+   "sunder": {
+    "amount": 0.12,
+    "duration": 8
+   },
+   "slowPct": 0.3,
+   "bossPct": 0.05,
+   "desc": "Settles your spined bulk onto everything within 3.5 tiles, dealing 26 damage plus 5% of a boss's or elite's maximum health, stripping 12% of their armour for 8 seconds and slowing each by 30%."
+  },
+  {
+   "name": "Long Float",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "water",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "healScope": "self",
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Layered Bristles",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackWard",
+   "armorBonus": 0.05,
+   "desc": "Every time you take damage, a stack builds on you, up to 6. At 6 they all spend at once: you gain a shield that soaks 7% of your maximum health per stack (42% at full) before your health takes damage. Unfed, a stack fades every 10 seconds. Your armour rises by 5% at all times."
+  }
+ ]
+}
