@@ -1,66 +1,74 @@
 {
- "essence": "essChicken",
- "stone": "stoneShip",
- "fusions": [
-  {
-   "name": "Gale Heave",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "wind",
-   "role": "medium",
-   "base": 14,
-   "cooldown": 16,
-   "speed": 360,
-   "radius": 8,
-   "knockback": 96,
-   "scaleOn": "distanceTravelled",
-   "scalePer": 0.08,
-   "scaleCap": 0.4,
-   "desc": "Heaves a gust that deals 14 damage and knocks the target back 3 tiles. Its damage rises with the distance you have travelled, +8% per step up to 40%."
-  },
-  {
-   "name": "Tailwind Flap",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "wind",
-   "role": "long",
-   "base": 24,
-   "cooldown": 90,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "range": 200,
-   "coneAngle": 0.76,
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 12
-   },
-   "desc": "Beats a gust ahead of you, dealing 24 damage to everything in the cone. Allies strike 20% harder for 12 seconds after it hits."
-  },
-  {
-   "name": "Make Sail",
-   "kind": "active",
-   "category": "movement",
-   "template": "movementHaste",
-   "element": "wind",
-   "cooldown": 45,
-   "speedMult": 1.3,
-   "buffDuration": 10,
-   "blinkOnUse": 64,
-   "dodgeBonus": 0.08,
-   "desc": "Increases your movement speed by 30% for 10 seconds. You finish it 2 tiles from where you stood, with 8% more dodge chance while it holds."
-  },
-  {
-   "name": "Ballast",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "wind",
-   "buffKind": "maxHp",
-   "amount": 0.08,
-   "regenPerSec": 0.5,
-   "desc": "Your maximum health rises by 8%. It also regenerates 0.5 health a second, permanently."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneShip",
+  "fusions": [
+    {
+      "name": "Gale Heave",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "wind",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "speed": 360,
+      "radius": 8,
+      "knockback": 96,
+      "scaleOn": "distanceTravelled",
+      "scalePer": 0.08,
+      "scaleCap": 0.4,
+      "desc": "Heaves a gust that deals 14 damage and knocks the target back 3 tiles. Its damage rises 8% for every 100 paces you have run since you last used it, up to 40%."
+    },
+    {
+      "name": "Tailwind Flap",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "wind",
+      "role": "long",
+      "base": 24,
+      "cooldown": 90,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "range": 200,
+      "coneAngle": 0.76,
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "desc": "Beats a gust ahead of you, dealing 24 damage to everything in the cone. Allies strike 20% harder for 12 seconds after it hits."
+    },
+    {
+      "name": "Make Sail",
+      "kind": "active",
+      "category": "movement",
+      "template": "movementHaste",
+      "element": "wind",
+      "cooldown": 45,
+      "speedMult": 1.3,
+      "buffDuration": 10,
+      "blinkOnUse": 64,
+      "dodgeBonus": 0.08,
+      "desc": "Increases your movement speed by 30% for 10 seconds. You finish it 2 tiles from where you stood, with 8% more dodge chance while it holds."
+    },
+    {
+      "name": "Sea Legs",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "wind",
+      "desc": "When you cover a stretch of ground, you gain a ward that absorbs 12% of your maximum health for 5 seconds. Once every 15 seconds.",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.12,
+        "duration": 5
+      }
+    }
+  ]
 }

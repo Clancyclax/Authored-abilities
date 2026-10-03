@@ -1,96 +1,93 @@
 {
- "essence": "essChicken",
- "stone": "stoneOctopus",
- "fusions": [
-  {
-   "name": "Ink Flurry",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "water",
-   "role": "basic",
-   "base": 4,
-   "cooldown": 0.8,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "sunder": {
-    "amount": 0.05,
-    "duration": 3
-   },
-   "debuff": {
-    "key": "critChanceDown",
-    "chance": 0.3,
-    "duration": 6,
-    "stacks": 1,
-    "potency": 1
-   },
-   "confuse": true,
-   "confuseChance": 0.2,
-   "confuseDuration": 3,
-   "desc": "Lashes out with ink that deals 4 damage and has a 30% chance of [Blunted] for 6 seconds, lowering the target's critical hit chance. Each hit also has a 20% chance to confuse the target for 3 seconds. The target is also 5% easier to wound for 3 seconds.",
-   "spammable": true
-  },
-  {
-   "name": "Eight-Way Scuffle",
-   "kind": "active",
-   "category": "attack",
-   "template": "aoeRing",
-   "element": "water",
-   "role": "medium",
-   "base": 11,
-   "cooldown": 18,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "range": 96,
-   "knockback": 64,
-   "debuff": {
-    "key": "slowMove",
-    "chance": 0.5,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "scaleOn": "alliesNear",
-   "scalePer": 0.1,
-   "scaleCap": 0.4,
-   "desc": "Lashes in every direction, dealing 11 damage to every enemy within 3 tiles and knocking them back 2 tiles. Each hit has a 50% chance of [Slowed] for 4 seconds. Its damage rises 10% for each ally within 5.5 tiles, up to 40%."
-  },
-  {
-   "name": "Shed the Snare",
-   "kind": "active",
-   "category": "restore",
-   "template": "cleanse",
-   "element": "water",
-   "cooldown": 30,
-   "cleanseCount": 2,
-   "healScope": "self",
-   "hasteOnUse": {
-    "pct": 0.25,
-    "duration": 4
-   },
-   "desc": "Removes two conditions from you. Your movement speed rises 25% for 4 seconds after you use it."
-  },
-  {
-   "name": "Reserve Arms",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "water",
-   "isTriggered": true,
-   "cooldown": 30,
-   "trigger": {
-    "on": "emptyStamina",
-    "cooldown": 30
-   },
-   "effect": {
-    "kind": "restoreResourceOverTime",
-    "resource": "stamina",
-    "perSec": 3,
-    "duration": 5
-   },
-   "dodgeBonus": 0.05,
-   "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 30 seconds. Your dodge chance is also 5% higher at all times."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneOctopus",
+  "fusions": [
+    {
+      "name": "Inkblot Jab",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 0.3,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "confuse": true,
+      "confuseChance": 0.2,
+      "confuseDuration": 3,
+      "desc": "Lashes out with ink that deals 4 damage, leaves the target 5% easier to wound for 3 seconds and has a 30% chance of [Blunted] for 6 seconds, lowering its critical hit chance. Each hit also has a 20% chance to confuse the target for 3 seconds.",
+      "spammable": true,
+      "sunder": {
+        "amount": 0.05,
+        "duration": 3
+      }
+    },
+    {
+      "name": "Eightfold Lash",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "water",
+      "role": "medium",
+      "base": 11,
+      "cooldown": 18,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "range": 96,
+      "knockback": 64,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.5,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Lashes in every direction, dealing 11 damage to every enemy within 3 tiles and knocking them back 2 tiles. Each hit has a 50% chance of [Slowed] for 4 seconds."
+    },
+    {
+      "name": "Shed the Snare",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "water",
+      "cooldown": 30,
+      "cleanseCount": 2,
+      "healScope": "self",
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 4
+      },
+      "desc": "Removes two conditions from you. Your movement speed rises 25% for 4 seconds after you use it."
+    },
+    {
+      "name": "Reserve Arms",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 3,
+        "duration": 5
+      },
+      "dodgeBonus": 0.05,
+      "desc": "When your stamina runs out, you regain 3 stamina a second for 5 seconds. Once every 30 seconds. Your dodge chance is also 5% higher at all times."
+    }
+  ]
 }

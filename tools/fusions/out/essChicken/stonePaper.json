@@ -1,76 +1,75 @@
 {
- "essence": "essChicken",
- "stone": "stonePaper",
- "fusions": [
-  {
-   "name": "Writ of Pecking",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "long",
-   "base": 30,
-   "cooldown": 120,
-   "speed": 360,
-   "radius": 8,
-   "bossPct": 0.05,
-   "partyBuffOnHit": {
-    "pct": 0.2,
-    "dur": 15
-   },
-   "debuff": {
-    "key": "curse",
-    "chance": 1,
-    "duration": 8,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Serves a writ that deals 30 damage and curses the target, plus 5% of the maximum health of a boss or elite it hits. Allies strike 20% harder for 15 seconds after it hits."
-  },
-  {
-   "name": "Loose Leaves",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "physical",
-   "role": "resource",
-   "base": 6,
-   "cooldown": 1.0,
-   "isAoe": true,
-   "volleySpread": 0.36,
-   "speed": 265,
-   "radius": 7,
-   "range": 220,
-   "volleyCount": 3,
-   "chargesMax": 4,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 3
-   },
-   "desc": "Flutters 3 pages at once, each dealing 6 damage. Your movement speed rises 15% for 3 seconds. It holds 4 charges, and a kill gives one back."
-  },
-  {
-   "name": "Fine Print",
-   "kind": "active",
-   "category": "defensive",
-   "template": "reflectWard",
-   "element": "physical",
-   "cooldown": 30,
-   "reflectKind": "debuff",
-   "reflectFrac": 0.2,
-   "reflectChance": 0.5,
-   "buffDuration": 8,
-   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
-  },
-  {
-   "name": "Standing Orders",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "cooldownPassive",
-   "element": "physical",
-   "cooldownReduction": 0.08,
-   "armorBonus": 0.08,
-   "desc": "Every ability you have comes round 8% sooner. Your armour rises by 8%."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stonePaper",
+  "fusions": [
+    {
+      "name": "Writ of Summons",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "long",
+      "base": 30,
+      "cooldown": 120,
+      "speed": 360,
+      "radius": 8,
+      "bossPct": 0.05,
+      "debuff": {
+        "key": "curse",
+        "chance": 1,
+        "duration": 8,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Serves a writ that deals 30 damage and curses the target, plus 5% of the maximum health of a boss or elite it hits."
+    },
+    {
+      "name": "Sheaf Flutter",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "medium",
+      "base": 5,
+      "cooldown": 14,
+      "isAoe": true,
+      "volleySpread": 0.36,
+      "speed": 265,
+      "radius": 7,
+      "range": 220,
+      "volleyCount": 3,
+      "desc": "Flutters 3 pages at once, each dealing 5 damage, knocking its target back 2 tiles and leaving it [Bleeding] for 1 damage a second for 3 seconds.",
+      "knockback": 64,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 3,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      }
+    },
+    {
+      "name": "Fine Print",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "physical",
+      "cooldown": 30,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.5,
+      "buffDuration": 8,
+      "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+    },
+    {
+      "name": "Standing Orders",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "cooldownPassive",
+      "element": "physical",
+      "cooldownReduction": 0.08,
+      "armorBonus": 0.08,
+      "desc": "Every ability you have comes round 8% sooner. Your armour rises by 8%."
+    }
+  ]
 }

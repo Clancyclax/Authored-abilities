@@ -1,76 +1,75 @@
 {
- "essence": "essChicken",
- "stone": "stoneShovel",
- "fusions": [
-  {
-   "name": "Spade Bash",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "earth",
-   "role": "medium",
-   "base": 15,
-   "cooldown": 18,
-   "range": 86,
-   "reachUnits": 86,
-   "rangeBand": "melee",
-   "stunOnHit": 1.0,
-   "sunder": {
-    "amount": 0.2,
-    "duration": 6
-   },
-   "desc": "Brings the flat down and deals 15 damage, leaving the target 20% easier to wound for 6 seconds and stunned for 1 second."
-  },
-  {
-   "name": "Clod Barrage",
-   "kind": "active",
-   "category": "attack",
-   "template": "volley",
-   "element": "earth",
-   "role": "resource",
-   "base": 6,
-   "cooldown": 1.0,
-   "isAoe": true,
-   "volleySpread": 0.36,
-   "speed": 265,
-   "radius": 7,
-   "range": 220,
-   "volleyCount": 3,
-   "chargesMax": 4,
-   "hasteOnUse": {
-    "pct": 0.15,
-    "duration": 3
-   },
-   "desc": "Throws 3 clods at once, each dealing 6 damage. Your movement speed rises 15% for 3 seconds. It holds 4 charges, and a kill gives one back."
-  },
-  {
-   "name": "Raised Berm",
-   "kind": "active",
-   "category": "defensive",
-   "template": "barrierWall",
-   "element": "earth",
-   "cooldown": 30,
-   "wallKind": "block",
-   "wallLength": 160,
-   "wallDuration": 8,
-   "wallThickness": 28,
-   "escort": {
-    "dmg": 4,
-    "interval": 1.4,
-    "duration": 10
-   },
-   "desc": "Heaps a bank of earth 5 tiles long for 8 seconds. Nothing crosses it. An escort of chicks fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
-  },
-  {
-   "name": "Hardpacked",
-   "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "earth",
-   "buffKind": "armor",
-   "amount": 0.12,
-   "regenPerSec": 0.3,
-   "desc": "Your armour rises by 12%. It also regenerates 0.3 health a second, permanently."
-  }
- ]
+  "essence": "essChicken",
+  "stone": "stoneShovel",
+  "fusions": [
+    {
+      "name": "Spade Bash",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "earth",
+      "role": "medium",
+      "base": 15,
+      "cooldown": 18,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "stunOnHit": 1,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 6
+      },
+      "desc": "Brings the flat down and deals 15 damage, leaving the target 20% easier to wound for 6 seconds and stunned for 1 second."
+    },
+    {
+      "name": "Heaped Load",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "earth",
+      "role": "long",
+      "base": 28,
+      "cooldown": 80,
+      "isAoe": true,
+      "speed": 340,
+      "radius": 8,
+      "desc": "Heaves a shovelful of earth at the first enemy in line for 28 damage. It bursts on impact, dealing 80% of that to every enemy within 3 tiles.",
+      "reachUnits": 224,
+      "rangeBand": "medium",
+      "explodeRadius": 96,
+      "splashFrac": 0.8
+    },
+    {
+      "name": "Raised Berm",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "earth",
+      "cooldown": 30,
+      "wallKind": "block",
+      "wallLength": 160,
+      "wallDuration": 8,
+      "wallThickness": 28,
+      "desc": "Heaps a bank of earth 5 tiles long for 8 seconds. Nothing crosses it."
+    },
+    {
+      "name": "Dug In",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "earth",
+      "desc": "When your health is full, you gain a ward that absorbs 15% of your maximum health for 8 seconds. Once every 30 seconds.",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "fullHealth",
+        "cooldown": 30
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.15,
+        "duration": 8
+      }
+    }
+  ]
 }

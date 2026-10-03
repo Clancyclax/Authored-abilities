@@ -1,80 +1,80 @@
 {
- "essence": "essCloth",
- "stone": "stoneShield",
- "fusions": [
-  {
-   "name": "Buckler Bash",
-   "kind": "active",
-   "category": "attack",
-   "template": "sunderStrike",
-   "element": "physical",
-   "role": "medium",
-   "cooldown": 12,
-   "base": 14,
-   "range": 86,
-   "sunder": {
-    "amount": 0.15,
-    "duration": 6
-   },
-   "knockback": 96,
-   "desc": "A bash that deals 14 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds."
-  },
-  {
-   "name": "Skimming Throw",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "physical",
-   "role": "basic",
-   "cooldown": 0.8,
-   "base": 4,
-   "speed": 360,
-   "radius": 8,
-   "spammable": true,
-   "chain": {
-    "count": 2,
-    "radius": 110,
-    "frac": 0.6
-   },
-   "chainCount": 2,
-   "chainRange": 110,
-   "chainDamagePct": 0.6,
-   "desc": "Throws a woven disc that deals 4 damage. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
-  },
-  {
-   "name": "Ward Stitch",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "physical",
-   "cooldown": 40,
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 28,
-   "shieldStrikes": 4,
-   "shieldDuration": 10,
-   "desc": "Raises a barrier that absorbs the next 28 damage and holds for 10 seconds."
-  },
-  {
-   "name": "Guard Seam",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "physical",
-   "isTriggered": true,
-   "cooldown": 60,
-   "trigger": {
-    "on": "hpBelow",
-    "cooldown": 60
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.3,
-    "duration": 6
-   },
-   "armorBonus": 0.08,
-   "desc": "When your health falls below 50%, you gain a ward that soaks 30% of your maximum health for 6 seconds. Once every 60 seconds. Your armour is 8% higher."
-  }
- ]
+  "essence": "essCloth",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Buckler Bash",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "cooldown": 12,
+      "base": 14,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "knockback": 96,
+      "desc": "A bash that deals 14 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Skimming Throw",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "cooldown": 0.8,
+      "base": 4,
+      "speed": 360,
+      "radius": 8,
+      "spammable": true,
+      "chain": {
+        "count": 2,
+        "radius": 110,
+        "frac": 0.6
+      },
+      "chainCount": 2,
+      "chainRange": 110,
+      "chainDamagePct": 0.6,
+      "desc": "Throws a woven disc that deals 4 damage. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+    },
+    {
+      "name": "Quilted Bulwark",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 40,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 28,
+      "shieldStrikes": 4,
+      "shieldDuration": 10,
+      "desc": "Raises a barrier that absorbs the next 28 damage and holds for 10 seconds."
+    },
+    {
+      "name": "Last Resort Lining",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "strike",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "armorBonus": 0.08,
+      "desc": "When you land a weapon strike, you gain a ward that soaks 10% of your maximum health for 4 seconds. Once every 12 seconds. Your armour is 8% higher."
+    }
+  ]
 }
