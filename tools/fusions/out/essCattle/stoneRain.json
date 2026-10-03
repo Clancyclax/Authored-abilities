@@ -1,0 +1,75 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Drizzle Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.4,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lobs a drop that deals 5 damage with a 40% chance of [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Cloudburst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "The sky opens, dealing 30 damage to every enemy within 3.5 tiles, with a splash of 80% of that to enemies within 3.5 tiles of each."
+  },
+  {
+   "name": "Falling Grey",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "range": 110,
+   "healAmount": 14,
+   "healScope": "party",
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles."
+  },
+  {
+   "name": "Steady Downpour",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you spend stamina, you regain 2 stamina a second for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

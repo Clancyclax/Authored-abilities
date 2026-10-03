@@ -1,0 +1,83 @@
+{
+  "essence": "essCat",
+  "stone": "stoneMonkey",
+  "fusions": [
+    {
+      "name": "Pocket Flick",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "consumeAffliction": true,
+      "desc": "Flicks a stolen trinket that deals 8 damage. It needs one of your afflictions on the target and uses it up."
+    },
+    {
+      "name": "Fumbled Cache",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "volleySpread": 0.36,
+      "isAoe": true,
+      "speed": 265,
+      "radius": 7,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "spammable": true,
+      "volleyCount": 3,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.3,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Flings 3 scraps at once, spread apart, each dealing 4 damage. Each hit has a 30% chance of [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Lifted Spark",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "physical",
+      "cooldown": 30,
+      "resource": "mana",
+      "restoreAmount": 18,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Restores 18 mana to you. You move 20% faster for 3 seconds after using it."
+    },
+    {
+      "name": "Sticky Paws",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 4
+      },
+      "desc": "Each time you inflict a condition, you recover 4 stamina. Once every 6 seconds."
+    }
+  ]
+}

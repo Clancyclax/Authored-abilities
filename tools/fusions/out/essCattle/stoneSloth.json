@@ -1,0 +1,69 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Plodding Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "hpCostPct": 0.04,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 8
+   },
+   "desc": "A heavy, unhurried blow that deals 9 damage and leaves the target 15% easier to wound for 8 seconds. It costs 4% of your maximum health."
+  },
+  {
+   "name": "Inevitable",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "A crushing blow on every enemy within 3.5 tiles, dealing 28 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Slow Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 12,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 12 seconds."
+  },
+  {
+   "name": "Unhurried Recovery",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "When you are hurt, healing you receives is 30% stronger for 8 seconds. Once every 15 seconds."
+  }
+ ]
+}

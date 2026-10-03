@@ -1,0 +1,77 @@
+{
+ "essence": "essChain",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Thrown Scrap",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 224,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 3,
+   "desc": "Hurls a scrap of link that deals 7 damage, up to 1.5 times that at maximum range. Holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Plague Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 12,
+   "strikes": 1,
+   "spreadAfflictions": 128,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "A strike that deals 9 damage and makes the target [Diseased] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Tethered Pack",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 50,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 14,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 3,
+   "desc": "Takes 0.5 seconds to loose a swarm tethered to you for 14 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 3 health."
+  },
+  {
+   "name": "Gnawed Reserves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 60
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 10
+   },
+   "desc": "When your stamina runs out, you regain 10 stamina. Once every 60 seconds."
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Brine Downpour",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "speed": 360,
+   "radius": 8,
+   "explodeRadius": 96,
+   "splashFrac": 0.8,
+   "debuff": {
+    "key": "wet",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lobs a heavy drop of brine that deals 30 damage to the first enemy it meets and 80% of that to every enemy within 3 tiles of it, leaving the target [Soaked] for 8 seconds."
+  },
+  {
+   "name": "Slow Drip",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.4,
+   "hpCostPct": 0.05,
+   "desc": "Drips brine on an enemy up to 5 tiles away, dealing 9 damage, rising to 1.4 times that at full reach. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Sheltering Rainfall",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "healAmount": 14,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 24,
+   "desc": "Restores 14 health to you and every ally within 4 tiles, 1% more for every 1% cast speed you have."
+  },
+  {
+   "name": "Quenched",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "Each time you are hurt by anything other than fire, you regain 3 health a second for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

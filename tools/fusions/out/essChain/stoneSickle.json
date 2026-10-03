@@ -1,0 +1,67 @@
+{
+ "essence": "essChain",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 10,
+   "cooldown": 1,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "leech": 0.2,
+   "desc": "Swings a curved link around you, dealing 10 damage to every enemy within 3.5 tiles. You heal for 20% of the damage dealt. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Hooked Reap",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "strikes": 1,
+   "chargeTo": 160,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You rush to the target and strike, dealing 14 damage and leaving it [Bleeding] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Gathered In",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 16,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 16 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Ripe for the Cut",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Against enemies below half health, you deal 12% more damage."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Scything Tail",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Sweeps your tail around you, dealing 8 damage to every enemy within 3.5 tiles. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Reaper's Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 160,
+   "maxMult": 1.4,
+   "guaranteedCrit": true,
+   "leech": 0.2,
+   "desc": "Lunges at a target up to 5 tiles away, dealing 30 damage, up to 1.4 times that at full range. Every hit is a critical hit, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Reaped Vigour",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "life",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Gleaned Strength",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you kill an enemy, you regain 8 stamina. Once every 4 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Patient Fang",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 9,
+   "speed": 360,
+   "radius": 8,
+   "consumeAffliction": true,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Needs one of your afflictions on the target and uses it up. Deals 9 damage and leaves the target [Poisoned] for 3 damage a second for 5 seconds."
+  },
+  {
+   "name": "Coiled Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "cooldown": 14,
+   "base": 18,
+   "range": 84,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Consumes every affliction on the target and adds 1.4 times their remaining damage to a strike that deals 18 damage. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Steady Aim",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "poison",
+   "cooldown": 45,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "name": "Venom Memory",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "When you land a critical hit, a bolt leaps to the next nearest enemy within 8 tiles, dealing 6 lightning damage and leaving it [Poisoned] for 2 damage a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

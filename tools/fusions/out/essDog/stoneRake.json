@@ -1,0 +1,76 @@
+{
+ "essence": "essDog",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Dust Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 192,
+   "maxMult": 1.8,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks up a clod that deals 4 damage, up to 1.8 times as much at its maximum range, with a 30% chance of [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Cached Bone",
+   "kind": "active",
+   "category": "attack",
+   "template": "corpseMine",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "range": 300,
+   "corpse": true,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "mineSeconds": 30,
+   "desc": "Primes up to 3 bodies in reach. Each bursts for 30 damage to enemies within 3.5 tiles the moment an enemy comes near it."
+  },
+  {
+   "name": "Round Them Up",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 5,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "desc": "Pulls up to 6 enemies within 8 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Gleaned Scraps",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "lifeOnKill": 2,
+   "desc": "When you kill an enemy, you regain 8 stamina and 2 health. Once every 6 seconds."
+  }
+ ]
+}

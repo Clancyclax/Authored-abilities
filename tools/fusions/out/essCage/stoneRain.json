@@ -1,0 +1,78 @@
+{
+ "essence": "essCage",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Pelting Streaks",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.4,
+   "speed": 280,
+   "radius": 6,
+   "range": 200,
+   "castTime": 0,
+   "isAoe": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 4 streams at once, spread apart, each dealing 3 damage. Each hit has a 30% chance of [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Cloudburst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "speed": 360,
+   "radius": 8,
+   "ignoreResist": true,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "isAoe": true,
+   "desc": "Drops a heavy bolt of rain on the first enemy it meets, dealing 30 damage to it and 80% of that to every enemy within 3.5 tiles, ignoring resistances."
+  },
+  {
+   "name": "Steady Downpour",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 25,
+   "range": 110,
+   "healAmount": 18,
+   "healScope": "party",
+   "desc": "Restores 18 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Collected Drops",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "heal",
+   "stackCap": 6,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you cast, a stack builds on you, up to 6. When you reach 6, they all spend at once and heal you. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

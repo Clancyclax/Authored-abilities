@@ -1,0 +1,83 @@
+{
+ "essence": "essChain",
+ "stone": "stoneShip",
+ "fusions": [
+  {
+   "name": "Ramming Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "chargeTo": 224,
+   "desc": "You rush to the target and heave into it, dealing 16 damage and leaving it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Full Broadside",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 36,
+   "cooldown": 90,
+   "range": 256,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "large",
+   "guaranteedCrit": true,
+   "desc": "Looses every link at once in a cone 8 tiles long, dealing 36 damage to everything caught in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Anchor Aweigh",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 15,
+   "cooldown": 60,
+   "desc": "Increases your attack speed by 25% for 15 seconds."
+  },
+  {
+   "name": "Steady Swell",
+   "kind": "passive",
+   "category": "movement",
+   "template": "waterWalk",
+   "element": "water",
+   "isMovement": true,
+   "source": "essence",
+   "riders": [
+    {
+     "rank": "bronze",
+     "stat": "moveSpeed",
+     "amount": 0.12,
+     "text": "you cross it faster than ground"
+    },
+    {
+     "rank": "silver",
+     "stat": "staminaRegen",
+     "amount": 0.15,
+     "text": "and the crossing rests you"
+    },
+    {
+     "rank": "gold",
+     "stat": "dodgeChance",
+     "amount": 0.08,
+     "text": "and nothing that has to wade can reach you"
+    }
+   ],
+   "desc": "You walk on water and swamp as on solid ground. From bronze rank you move 12% faster over it, from silver your stamina recovers 15% faster, and from gold your dodge chance rises by 8%."
+  }
+ ]
+}

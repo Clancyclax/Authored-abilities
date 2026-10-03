@@ -1,0 +1,80 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Circling Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 4
+   },
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "leech": 0.15,
+   "desc": "Bites the target for 9 damage, leaves it 8% easier to wound for 4 seconds and [Bleeding] for 2 damage a second for 5 seconds, and you heal for 15% of the damage dealt. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Finishing Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.8,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Consumes every affliction on the target, dealing 16 damage plus 1.8 times their remaining damage. It only strikes a target at or below 25% health, and that threshold rises with each rank."
+  },
+  {
+   "name": "Taste of Blood",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "blood",
+   "cooldown": 25,
+   "healAmount": 18,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 18 health to you. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Scent Trail",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "When you land a critical hit, you heal for 15% of the damage you deal for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

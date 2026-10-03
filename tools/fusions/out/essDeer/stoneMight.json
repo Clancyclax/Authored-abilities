@@ -1,0 +1,68 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Rearing Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "A rearing kick that deals 14 damage, knocks the target back 3 tiles and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Stamping Ground",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Stamps the ground, dealing 28 damage to every enemy within 3 tiles. The blow ignores armour."
+  },
+  {
+   "name": "Spooked Strength",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "powerMult": 1.3,
+   "buffDuration": 10,
+   "cooldown": 45,
+   "desc": "Increases your damage by 30% for 10 seconds."
+  },
+  {
+   "name": "Cornered Fury",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 8
+   },
+   "desc": "When your health falls low, your physical damage rises 40% for 8 seconds. Once every 40 seconds."
+  }
+ ]
+}

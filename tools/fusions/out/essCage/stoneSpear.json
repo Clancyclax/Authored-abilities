@@ -1,0 +1,68 @@
+{
+ "essence": "essCage",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Hurled Lance",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 35,
+   "cooldown": 100,
+   "range": 260,
+   "maxMult": 2.0,
+   "bossPct": 0.05,
+   "desc": "A thrown blow that deals 35 damage, hitting harder the further it travels, up to 2 times its damage at maximum range, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Doorward Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 100,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "hpCostPct": 0.05,
+   "desc": "Thrusts for 9 damage and leaves the target 10% easier to wound for 4 seconds. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Long Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 90,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "castTime": 0,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Aimed Reply",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "Each time you strike with your weapon, your critical hit chance rises by 15% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

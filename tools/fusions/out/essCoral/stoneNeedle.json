@@ -1,0 +1,87 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Through the Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 28,
+   "cooldown": 75,
+   "range": 80,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "ignoreArmor": true,
+   "desc": "A thrust that deals 28 damage that ignores armour and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Spicule Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 6,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "range": 224,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "expose",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 spicules at once, spread apart, each dealing 5 damage with a 35% chance to leave the target [Exposed] for 4 seconds. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Spined Palisade",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "piercing",
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 26,
+   "cooldown": 30,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Raises a wall of spicules 5 tiles long that blocks enemies for 8 seconds. Enemies that touch it are [Bleeding] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Sealed Over",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When you land a critical hit, a shield worth 20% of your maximum health closes over you for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

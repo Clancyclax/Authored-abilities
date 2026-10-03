@@ -1,0 +1,79 @@
+{
+ "essence": "essChain",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Raking Tangle",
+   "kind": "active",
+   "category": "attack",
+   "template": "confuseTurn",
+   "element": "physical",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 18,
+   "range": 114,
+   "confuseDuration": 5,
+   "duration": 5,
+   "maxTargets": 3,
+   "confuseDamageFrac": 1,
+   "confuseDamagePct": 1,
+   "knockback": 64,
+   "reachUnits": 114,
+   "rangeBand": "melee",
+   "desc": "Turns up to 3 enemies within 3.5 tiles against each other for 5 seconds, dealing 8 damage to each and knocking each back 2 tiles."
+  },
+  {
+   "name": "Furrowing Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "strikes": 1,
+   "hpCostPct": 0.05,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Drags a link across the target, dealing 9 damage and leaving it [Bleeding] for 2 damage a second for 6 seconds. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Leavings Heap",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 160,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "desc": "Heaps a rampart 5 tiles long ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Gleanings",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 2 stamina a second for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

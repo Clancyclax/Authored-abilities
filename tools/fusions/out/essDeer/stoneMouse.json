@@ -1,0 +1,71 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Skitter Nip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 70,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "desc": "A quick nip that deals 4 damage and leaves the target 5% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Underfoot Scatter",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "short",
+   "chargesMax": 4,
+   "desc": "Darts through the pack, dealing 7 damage to every enemy within 2.5 tiles. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Freeze Still",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "stealthDuration": 5,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 20,
+   "stealthScope": "self",
+   "cooldown": 30,
+   "desc": "Veils you for 5 seconds. Enemies notice you far later, and you move 20% faster while veiled. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Quiet Hooves",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "duration": 4
+   },
+   "desc": "When you cover ground, your critical hit chance rises 15% for 4 seconds. Once every 12 seconds."
+  }
+ ]
+}

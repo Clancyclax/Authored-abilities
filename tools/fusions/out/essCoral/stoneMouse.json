@@ -1,0 +1,78 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Nettle Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 160,
+   "maxMult": 1.6,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Flicks a stinging cell up to 5 tiles that deals 4 damage, rising to 1.6 times that at full reach, and leaves the target [Poisoned] for 1 damage a second for 3 seconds."
+  },
+  {
+   "name": "Out of the Crevice",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 80,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "chargeTo": 192,
+   "desc": "You dart up to 6 tiles to the target and strike for 14 damage, leaving it 12% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Behind the Frondwork",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "stealthDuration": 5,
+   "stealthAlpha": 0.35,
+   "aggroMult": 0.4,
+   "stealthSpeedPct": 20,
+   "stealthScope": "party",
+   "cooldown": 30,
+   "desc": "Shelters you and your allies for 5 seconds: enemies notice you 60% later and you move 20% faster. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Last Hole Left",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 8
+   },
+   "desc": "Once your health falls below 30%, a shield worth 30% of your maximum health closes over you for 8 seconds. Once every 60 seconds."
+  }
+ ]
+}

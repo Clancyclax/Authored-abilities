@@ -1,0 +1,75 @@
+{
+  "essence": "essCat",
+  "stone": "stonePaper",
+  "fusions": [
+    {
+      "name": "Folded Darts",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "resource",
+      "base": 4,
+      "cooldown": 1,
+      "volleySpread": 0.36,
+      "isAoe": true,
+      "speed": 265,
+      "radius": 7,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "volleyCount": 5,
+      "chargesMax": 4,
+      "desc": "Looses 5 folded darts at once, spread apart, each dealing 4 damage. It holds 4 charges, and kills give charges back."
+    },
+    {
+      "name": "Fine Edge",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "spreadAfflictions": 96,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "sunder": {
+        "amount": 0.05,
+        "duration": 4
+      },
+      "desc": "A slicing swipe that deals 12 damage and makes the target [Bleeding] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+    },
+    {
+      "name": "Slipped Fold",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "physical",
+      "cooldown": 12,
+      "teleportRange": 224,
+      "desc": "Steps you instantly to a point up to 7 tiles away."
+    },
+    {
+      "name": "Rewritten Odds",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "fateReroll",
+      "element": "physical",
+      "rerollKind": "crit",
+      "rerollCooldown": 10,
+      "rerollKinds": [
+        "crit"
+      ],
+      "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "essence": "essCage",
+  "stone": "stoneRabbit",
+  "fusions": [
+    {
+      "name": "Thump Warning",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "small",
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 3
+      },
+      "desc": "Every enemy within 2.5 tiles takes 4 damage. For 3 seconds after using it, you move 20% faster."
+    },
+    {
+      "name": "Bolt Through",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 130,
+      "chargeTo": 256,
+      "desc": "You rush up to 8 tiles to the target and strike it for 14 damage, hitting harder the further it travels, up to 1.5 times its damage at maximum range.",
+      "maxMult": 1.5
+    },
+    {
+      "name": "Slipped Snare",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "physical",
+      "cooldown": 30,
+      "cleanseCount": 2,
+      "cleanseTag": "control",
+      "healScope": "self",
+      "hasteOnUse": {
+        "pct": 0.3,
+        "duration": 5
+      },
+      "desc": "Removes up to 2 control conditions from you. Your movement speed rises 30% for 5 seconds after you use it."
+    },
+    {
+      "name": "Frightened Feet",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 5,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 5
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.15,
+        "duration": 4
+      },
+      "desc": "Every 6 tiles you cover, a shield worth 15% of your maximum health closes over you for 4 seconds. Once every 5 seconds."
+    }
+  ]
+}

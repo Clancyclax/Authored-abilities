@@ -1,0 +1,87 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Sticky Threads",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 14,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 144,
+   "desc": "Spins sticky threads that deal 10 damage to every enemy within 3 tiles, leave each [Slowed] for 5 seconds and [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to every enemy within 4.5 tiles."
+  },
+  {
+   "name": "Silk Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "chargesMax": 3,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shoots a silk line at the first enemy it meets, dealing 8 damage with a 40% chance to leave it [Pinned] for 2 seconds. Holds 3 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Anchored Lines",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "nature",
+   "buffStat": "damageReduction",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "cooldown": 40,
+   "desc": "Reduces damage you take by 20% for 10 seconds."
+  },
+  {
+   "name": "Patient Strike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "duration": 8
+   },
+   "desc": "When you go a while without a critical hit, your critical chance rises by 25% for 8 seconds. Once every 20 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+  "essence": "essBird",
+  "stone": "stoneRabbit",
+  "fusions": [
+    {
+      "name": "Springing Strike",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "range": 80,
+      "chargeTo": 192,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 5
+      },
+      "desc": "Bolts up to 6 tiles onto the target and strikes for 12 damage, leaving it 10% easier to wound for 4 seconds. For 5 seconds after, you move 20% faster."
+    },
+    {
+      "name": "Double Kick",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "physical",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.7,
+      "spammable": true,
+      "volleyCount": 2,
+      "volleySpread": 0.2,
+      "isAoe": true,
+      "speed": 320,
+      "radius": 7,
+      "range": 140,
+      "desc": "Looses 2 quick strikes spread apart, each dealing 3 damage."
+    },
+    {
+      "name": "Bolt Hole",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "wind",
+      "dashDist": 160,
+      "cooldown": 18,
+      "hasteOnUse": {
+        "pct": 0.25,
+        "duration": 5
+      },
+      "desc": "A short burst of movement that carries you 5 tiles forward. For 5 seconds after, you move 25% faster."
+    },
+    {
+      "name": "Flushed Out",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "strikes": 1
+      },
+      "desc": "Every few paces you cover, your next strike gains 15% critical hit chance. Once every 6 seconds."
+    }
+  ]
+}

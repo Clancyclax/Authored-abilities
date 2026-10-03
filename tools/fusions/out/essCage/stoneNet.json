@@ -1,0 +1,81 @@
+{
+ "essence": "essCage",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Drawn Tight",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "range": 260,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "large",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Casts a wide mesh ahead of you that deals 9 damage to everything caught in it. Each hit has a 60% chance of [Slowed] for 4 seconds, and your afflictions on a target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Dragnet Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 5,
+   "cooldown": 1.0,
+   "speed": 340,
+   "radius": 7,
+   "chargesMax": 4,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Casts a weighted line into the first enemy it meets, dealing 5 damage. It then leaps to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage. It holds up to 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Snare Set",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 120,
+   "summonKind": "trap",
+   "summonDuration": 40,
+   "summonDmg": 20,
+   "summonInterval": 0,
+   "summonRange": 96,
+   "summonCharges": 2,
+   "summonBlast": 96,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Takes 1 second to set a snare at the nearest enemy. It waits up to 40 seconds, and the first 2 enemies to come within 3 tiles set it off: it deals 20 damage in a blast around it."
+  },
+  {
+   "name": "Mesh Advantage",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises by 12% against any enemy carrying a condition."
+  }
+ ]
+}

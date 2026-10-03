@@ -1,0 +1,67 @@
+{
+ "essence": "essChain",
+ "stone": "stoneNeedle",
+ "fusions": [
+  {
+   "name": "Threading Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 40,
+   "cooldown": 90,
+   "range": 320,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "maxMult": 1.8,
+   "ignoreArmor": true,
+   "desc": "Hurls a single link that deals 40 damage, up to 1.8 times that at maximum range. It ignores armour."
+  },
+  {
+   "name": "Stitch Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "spreadAfflictions": 96,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.7
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.7,
+   "desc": "Casts a link that deals 14 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 70% of that. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Long Cast",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 70,
+   "rangeMult": 1.4,
+   "buffDuration": 20,
+   "desc": "For 20 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Thin Seam",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "piercing",
+   "buffKind": "crit",
+   "amount": 0.1,
+   "desc": "Your critical strike chance rises by 10%."
+  }
+ ]
+}

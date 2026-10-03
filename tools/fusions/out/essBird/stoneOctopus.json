@@ -1,0 +1,79 @@
+{
+  "essence": "essBird",
+  "stone": "stoneOctopus",
+  "fusions": [
+    {
+      "name": "Eightfold Lash",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "water",
+      "role": "resource",
+      "base": 3,
+      "cooldown": 1.1,
+      "volleyCount": 8,
+      "volleySpread": 0.7,
+      "isAoe": true,
+      "speed": 300,
+      "radius": 7,
+      "range": 180,
+      "hpCostPct": 0.04,
+      "desc": "Looses 8 strikes spread wide, each dealing 3 damage. Spends 4% of your maximum health."
+    },
+    {
+      "name": "Murk Spit",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "dark",
+      "role": "medium",
+      "base": 10,
+      "cooldown": 16,
+      "speed": 360,
+      "radius": 8,
+      "knockback": 64,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.5,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Spits ink at the first enemy it meets, dealing 10 damage, pushing it back 2 tiles and giving it a 50% chance of [Hindered] for 5 seconds."
+    },
+    {
+      "name": "Vanishing Ink",
+      "kind": "active",
+      "category": "defensive",
+      "template": "stealthVeil",
+      "element": "dark",
+      "cooldown": 30,
+      "stealthDuration": 6,
+      "stealthAlpha": 0.3,
+      "aggroMult": 0.4,
+      "stealthSpeedPct": 20,
+      "stealthScope": "self",
+      "desc": "Veils you for 6 seconds. Enemies notice you 60% later and you move 20% faster, and the veil breaks the moment you attack."
+    },
+    {
+      "name": "Slipped Grasp",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 30,
+        "frac": 0.35
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 4,
+        "duration": 5
+      },
+      "desc": "Once your health falls below 35%, you regain 4 health a second for 5 seconds. Once every 30 seconds."
+    }
+  ]
+}

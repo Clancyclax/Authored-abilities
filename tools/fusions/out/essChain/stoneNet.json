@@ -1,0 +1,92 @@
+{
+ "essence": "essChain",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Casting Mesh",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Throws a spread of links in a cone 5 tiles long, dealing 12 damage to everything caught in it and stunning each for 1.2 seconds."
+  },
+  {
+   "name": "Draw Taut",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "consumeAffliction": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Needs one of your afflictions on the target and uses it up. Deals 9 damage, then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of that."
+  },
+  {
+   "name": "Snare Line",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 120,
+   "summonKind": "trap",
+   "summonDmg": 14,
+   "summonDuration": 40,
+   "summonInterval": 0,
+   "summonRange": 96,
+   "summonCharges": 2,
+   "summonBlast": 88,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 1,
+   "desc": "Takes 1 second to lay a snare at the nearest enemy. It waits up to 40 seconds, and the first 2 enemies to come within 3 tiles take 14 damage in a blast 2.75 tiles across."
+  },
+  {
+   "name": "Tightening Mesh",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 5,
+    "range": 256
+   },
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "When you inflict a condition, a bolt leaps to the nearest enemy within 8 tiles, dealing 5 damage, then to 2 more enemies within 3 tiles for 50% of that. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+  "essence": "essCage",
+  "stone": "stoneSloth",
+  "fusions": [
+    {
+      "name": "Inevitable Blow",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "long",
+      "base": 40,
+      "cooldown": 150,
+      "range": 86,
+      "sunder": {
+        "amount": 0.2,
+        "duration": 8
+      },
+      "desc": "A slow, heavy blow that deals 40 damage, always lands as a critical hit, and leaves the target 20% easier to wound for 8 seconds.",
+      "guaranteedCrit": true
+    },
+    {
+      "name": "Drawn-Out Lob",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 300,
+      "radius": 7,
+      "debuff": {
+        "key": "slowAttack",
+        "chance": 0.5,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Lobs a weight that deals 4 damage and has a 50% chance to leave the target [Hindered] for 4 seconds."
+    },
+    {
+      "name": "Slow Mend",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHot",
+      "element": "life",
+      "cooldown": 70,
+      "hotPerSec": 3,
+      "hotDuration": 20,
+      "healScope": "self",
+      "desc": "Restores 3 health a second to you for 20 seconds."
+    },
+    {
+      "name": "Unhurried Bulk",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveBuff",
+      "element": "physical",
+      "buffKind": "maxHp",
+      "amount": 0.12,
+      "regenPerSec": 0.8,
+      "desc": "Your maximum health rises by 12%. It also regenerates 0.8 health a second, permanently."
+    }
+  ]
+}

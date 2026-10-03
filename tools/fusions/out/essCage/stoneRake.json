@@ -1,0 +1,66 @@
+{
+ "essence": "essCage",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Gather In",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "wallKind": "pull",
+   "wallLength": 160,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "spreadAfflictions": 112,
+   "desc": "Drags every enemy near a line 5 tiles long inward for 5 seconds, dealing 10 damage. Your afflictions on a target spread to enemies within 3.5 tiles."
+  },
+  {
+   "name": "Tidy Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 120,
+   "maxMult": 1.5,
+   "consumeAffliction": true,
+   "desc": "A raking blow that deals 8 damage to a target carrying one of your afflictions, and uses that affliction up."
+  },
+  {
+   "name": "Leavings Pile",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 4,
+   "restoreDuration": 8,
+   "desc": "Restores 4 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Gleaning",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "kill",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 12,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackFortune",
+   "desc": "Every kill builds a stack on you, up to 5. When you reach 5, they all spend at once and heal you. Unfed, a stack fades every 12 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+  "essence": "essBird",
+  "stone": "stoneRain",
+  "fusions": [
+    {
+      "name": "Misting Spray",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "water",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 340,
+      "radius": 7,
+      "debuff": {
+        "key": "wet",
+        "chance": 0.3,
+        "duration": 5,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a spray into the first enemy it meets, dealing 4 damage, with a 30% chance of [Soaked] for 5 seconds."
+    },
+    {
+      "name": "Cloudburst",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "water",
+      "role": "long",
+      "base": 7,
+      "cooldown": 90,
+      "volleyCount": 6,
+      "volleySpread": 0.5,
+      "isAoe": true,
+      "speed": 300,
+      "radius": 7,
+      "range": 220,
+      "ignoreResist": true,
+      "desc": "Looses 6 bolts spread apart, each dealing 7 damage and ignoring resistances."
+    },
+    {
+      "name": "Sheltering Cloud",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "water",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 24,
+      "shieldStrikes": 4,
+      "shieldDuration": 8,
+      "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds."
+    },
+    {
+      "name": "Washed Clean",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.1,
+        "duration": 4
+      },
+      "desc": "When a condition on you runs out, a shield worth 10% of your maximum health closes over you for 4 seconds. Once every 10 seconds."
+    }
+  ]
+}

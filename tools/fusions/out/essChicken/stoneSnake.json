@@ -1,0 +1,80 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Coiled Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "poison",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 160,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "chargesMax": 4,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Strikes from a coil, dealing 7 damage, up to 1.5 times that at maximum range, and making the target [Poisoned] for 3 damage a second for 6 seconds. It holds 4 charges, and a kill gives one back."
+  },
+  {
+   "name": "Hissing Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "base": 26,
+   "cooldown": 100,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 200,
+   "coneAngle": 0.76,
+   "ignoreResist": true,
+   "desc": "Hisses a cloud ahead of you, dealing 26 damage to everything in the cone that ignores resistances. Your movement speed rises 20% for 4 seconds."
+  },
+  {
+   "name": "Venomed Patience",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "poison",
+   "cooldown": 45,
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 15
+   },
+   "desc": "Increases your critical hit chance by 30% for 12 seconds. An escort of chicks fights beside you for 15 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Slow Burn",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "poison",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When a condition you inflicted runs its course, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

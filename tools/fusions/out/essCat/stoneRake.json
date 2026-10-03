@@ -1,0 +1,70 @@
+{
+  "essence": "essCat",
+  "stone": "stoneRake",
+  "fusions": [
+    {
+      "name": "Combing Claws",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 14,
+      "wallKind": "pull",
+      "wallLength": 192,
+      "wallThickness": 26,
+      "wallDuration": 6,
+      "desc": "Rakes a line for 6 seconds that drags every enemy near it inward, dealing 12 damage and stunning it for 1 second.",
+      "stunOnHit": 1
+    },
+    {
+      "name": "Gleaned Strike",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "consumeAffliction": true,
+      "desc": "Flicks gathered debris that deals 9 damage. It needs one of your afflictions on the target and uses it up."
+    },
+    {
+      "name": "Tidied Ground",
+      "kind": "active",
+      "category": "defensive",
+      "template": "barrierWall",
+      "element": "physical",
+      "cooldown": 24,
+      "wallKind": "block",
+      "wallLength": 160,
+      "wallDuration": 6,
+      "wallThickness": 26,
+      "desc": "Rakes a barrier up for 6 seconds, 5 tiles long, that enemies cannot cross."
+    },
+    {
+      "name": "Leavings Pile Up",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "duration": 6
+      },
+      "desc": "When you kill an enemy, your critical chance rises 15% for 6 seconds. Once every 6 seconds."
+    }
+  ]
+}

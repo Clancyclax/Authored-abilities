@@ -1,0 +1,75 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Quick Jab",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 86,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "desc": "A snap blow that deals 4 damage and leaves the target 5% easier to wound for 3 seconds. You move 15% faster for 3 seconds after using it."
+  },
+  {
+   "name": "Spooked Stampede",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 18,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Bolts through enemies within 3.5 tiles, dealing 13 damage and knocking them back 3 tiles."
+  },
+  {
+   "name": "Burst Start",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 14,
+   "dashDist": 160,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "A short burst of movement that carries you 5 tiles forward. You move 25% faster for 4 seconds after using it."
+  },
+  {
+   "name": "Building Speed",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you have run a good distance, your damage rises 30% for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+  "essence": "essCat",
+  "stone": "stoneSickle",
+  "fusions": [
+    {
+      "name": "Reaping Sweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 4,
+      "desc": "A sweeping swipe that deals 8 damage to every enemy within 3 tiles. It holds 4 charges, and kills give charges back."
+    },
+    {
+      "name": "Crescent Slash",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 16,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "sunder": {
+        "amount": 0.1,
+        "duration": 5
+      },
+      "desc": "Slashes the target for 13 damage, knocks it back 3 tiles and makes it [Bleeding] for 2 damage a second for 6 seconds.",
+      "knockback": 96
+    },
+    {
+      "name": "Whetted Edge",
+      "kind": "active",
+      "category": "buff",
+      "template": "statBuff",
+      "element": "physical",
+      "cooldown": 45,
+      "buffStat": "critDamage",
+      "buffAmount": 0.3,
+      "buffDuration": 12,
+      "desc": "Your critical damage rises by 30% for 12 seconds."
+    },
+    {
+      "name": "Cull the Weak",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "passiveConditional",
+      "element": "physical",
+      "condition": "targetLowHp",
+      "bonusKind": "dmg",
+      "amount": 0.15,
+      "desc": "Your damage rises by 15% against targets at low health."
+    }
+  ]
+}

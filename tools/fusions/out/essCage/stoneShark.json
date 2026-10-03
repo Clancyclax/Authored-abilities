@@ -1,0 +1,69 @@
+{
+ "essence": "essCage",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Blood Scent Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 110,
+   "maxMult": 1.5,
+   "leech": 0.3,
+   "hpCostPct": 0.05,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "A lunging bite that deals 9 damage and heals you for 30% of the damage dealt. It deals more the more afflictions the target carries, up to 40% more. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Maw Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 80,
+   "range": 200,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "A snapping cone deals 26 damage to everything in it, ignoring resistances."
+  },
+  {
+   "name": "Circling Hunger",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "cooldown": 45,
+   "powerMult": 1.3,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 5,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "familiarFamily": "fish",
+   "familiarCreatureName": "Reef Shark",
+   "desc": "Increases your damage by 30% for 12 seconds. While it lasts, an escort of reef sharks fights beside you for 8 seconds, striking for 5 every 1.4 seconds."
+  },
+  {
+   "name": "Wounded Wake",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "targetLowHp",
+   "bonusKind": "dmg",
+   "amount": 0.15,
+   "desc": "Your damage rises by 15% against any enemy below 40% health."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Buried Thread",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "long",
+   "cooldown": 90,
+   "base": 30,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "bossPct": 0.05,
+   "desc": "A heavy overhead blow that deals 30 damage, also deals 5% of a boss's or elite's maximum health, and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Foundation Cut",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "rock",
+   "role": "execute",
+   "cooldown": 15,
+   "base": 16,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.3,
+   "executeLadder": true,
+   "desc": "Consumes every affliction on the target and adds 1.5 times their remaining damage to a blow that deals 16 damage. It only strikes a target at or below 30% health."
+  },
+  {
+   "name": "Earthwork Hem",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "rock",
+   "cooldown": 40,
+   "buffDuration": 10,
+   "thornsFrac": 0.6,
+   "desc": "For 10 seconds, 60% of the damage you take is dealt back to whoever dealt it."
+  },
+  {
+   "name": "Spadework",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "armorBonus": 0.06,
+   "desc": "When you spend stamina, you deal 25% more physical damage for 5 seconds. Once every 15 seconds. Your armour is 6% higher."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essCage",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Flung Padlocks",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "castTime": 0,
+   "isAoe": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.2,
+    "duration": 1.5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 padlocks at once, spread apart, each dealing 4 damage. Each hit has a 20% chance of [Pinned], holding the target where it stands for 1.5 seconds."
+  },
+  {
+   "name": "Spring the Latch",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "consumeAffliction": true,
+   "desc": "Throws a key that deals 9 damage to a target carrying one of your afflictions, and uses that affliction up."
+  },
+  {
+   "name": "Turn the Key",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.2,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each condition laid on you has a 50% chance to be sent back to whoever inflicted it instead."
+  },
+  {
+   "name": "Quick Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you afflict an enemy, you regain 6 stamina. Once every 8 seconds."
+  }
+ ]
+}

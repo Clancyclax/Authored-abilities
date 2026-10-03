@@ -1,0 +1,74 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Gathered Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "cooldown": 1,
+   "base": 9,
+   "range": 200,
+   "maxMult": 1.6,
+   "consumeAffliction": true,
+   "desc": "Needs one of your afflictions on the target and uses it up. Draws a thread rake across it for 9 damage, up to 1.6 times that at maximum range."
+  },
+  {
+   "name": "Combing Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 0.9,
+   "base": 3,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3.5 tiles of you takes 3 damage. Each hit has a 25% chance to leave the target [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Drawing Pull",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Leavings Kept",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 8
+   },
+   "desc": "When you kill an enemy, you regain 8 mana. Once every 4 seconds."
+  }
+ ]
+}

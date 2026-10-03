@@ -1,0 +1,79 @@
+{
+ "essence": "essChain",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Swinging Link",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Flicks a link at the first enemy it meets, dealing 4 damage, then swings to 1 more enemy within 3 tiles for 60% of that."
+  },
+  {
+   "name": "Pocket Knots",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 100,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.0,
+   "desc": "Ties up every enemy within 3 tiles, dealing 12 damage and stunning each for 1 second."
+  },
+  {
+   "name": "Slip the Knot",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "physical",
+   "cleanseCount": null,
+   "healScope": "self",
+   "cooldown": 40,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 4
+   },
+   "desc": "Removes every condition from you. Your movement speed rises by 25% for 4 seconds after you use it."
+  },
+  {
+   "name": "Light Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 4,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 4
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 3
+   },
+   "desc": "When you inflict a condition on an enemy, you regain 3 stamina. Once every 4 seconds."
+  }
+ ]
+}

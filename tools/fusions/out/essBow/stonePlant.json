@@ -1,0 +1,86 @@
+{
+ "essence": "essBow",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Seed Arrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 380,
+   "radius": 7,
+   "desc": "Looses an arrow that deals 4 damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Seedfall",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "medium",
+   "base": 7,
+   "cooldown": 18,
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "isAoe": true,
+   "speed": 360,
+   "radius": 7,
+   "range": 240,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "Looses 3 arrows at once, spread apart, each dealing 7 damage, and each hit has a 25% chance to leave the target [Caged] for 3 seconds. Your afflictions on a target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Fletching Bed",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "life",
+   "cooldown": 40,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Tends a patch of growth 3 tiles across for 10 seconds. You and your allies inside it regain 3 health a second."
+  },
+  {
+   "name": "Roots Drink",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

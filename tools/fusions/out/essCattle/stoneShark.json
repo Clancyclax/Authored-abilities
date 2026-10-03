@@ -1,0 +1,78 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Scent Trail",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "hpCostPct": 0.05,
+   "leech": 0.25,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Sends a bolt that deals 9 damage and heals you for 25% of the damage dealt. Its damage rises 10% per affliction on the target (max 40%). It costs 5% of your maximum health."
+  },
+  {
+   "name": "Circling Rush",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 20,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You rush to the target and strike every enemy within 3.5 tiles, dealing 13 damage and making them [Bleeding] for 2 damage a second for 5 seconds."
+  },
+  {
+   "name": "Blood in the Water",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 12,
+   "desc": "Increases your attack speed by 30% for 12 seconds."
+  },
+  {
+   "name": "Lurking Strike",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 8,
+    "seconds": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.4,
+    "strikes": 1
+   },
+   "desc": "After 8 seconds without a critical hit, your next strike has 40% more critical chance."
+  }
+ ]
+}

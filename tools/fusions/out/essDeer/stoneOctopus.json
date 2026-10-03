@@ -1,0 +1,79 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Ink Jet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "dark",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 340,
+   "radius": 8,
+   "knockback": 80,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Squirts a jet of ink that deals 12 damage, knocks the target back 2.5 tiles and has a 60% chance to leave it [Blunted] for 6 seconds."
+  },
+  {
+   "name": "Eightfold Kicks",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 8,
+   "volleySpread": 0.7,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 160,
+   "castTime": 0.3,
+   "desc": "Lashes out with 8 kicks at once, spread wide, each dealing 3 damage."
+  },
+  {
+   "name": "Cloud of Ink",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "dark",
+   "stealthDuration": 4,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 30,
+   "stealthScope": "self",
+   "cooldown": 25,
+   "desc": "Veils you in ink for 4 seconds. Enemies notice you far later, and you move 30% faster while veiled. The veil breaks the moment you attack."
+  },
+  {
+   "name": "Shaken Loose",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.12,
+    "duration": 6
+   },
+   "desc": "When a condition on you expires, your critical hit chance rises 12% for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

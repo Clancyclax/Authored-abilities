@@ -1,0 +1,82 @@
+{
+  "essence": "essCattle",
+  "stone": "stoneSkunk",
+  "fusions": [
+    {
+      "name": "Fair Warning",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "resource",
+      "base": 6,
+      "cooldown": 1,
+      "speed": 360,
+      "radius": 8,
+      "hpCostPct": 0.04,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 6,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Sends a bolt that deals 6 damage and makes the target [Poisoned] for 2 damage a second for 6 seconds. It costs 4% of your maximum health."
+    },
+    {
+      "name": "Foul Cone",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "poison",
+      "role": "medium",
+      "base": 8,
+      "cooldown": 16,
+      "range": 160,
+      "coneAngle": 0.7,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1.2,
+      "debuff": {
+        "key": "critChanceDown",
+        "chance": 0.4,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses a reeking cone 5 tiles long, dealing 8 damage to everything in it, stunning it for 1.2 seconds and with a 40% chance of [Blunted] for 6 seconds."
+    },
+    {
+      "name": "Spray Back",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "physical",
+      "cooldown": 30,
+      "reflectKind": "debuff",
+      "reflectFrac": 0.25,
+      "reflectChance": 0.5,
+      "buffDuration": 8,
+      "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source, for 8 seconds."
+    },
+    {
+      "name": "Nobody Twice",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "boltNearest",
+        "damage": 8,
+        "range": 192
+      },
+      "desc": "When you are hurt, a bolt leaps to the nearest enemy within 6 tiles, dealing 8 damage. Once every 10 seconds."
+    }
+  ]
+}

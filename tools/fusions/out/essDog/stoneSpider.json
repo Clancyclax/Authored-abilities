@@ -1,0 +1,86 @@
+{
+ "essence": "essDog",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Web Scuttle",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Scuttles through every enemy within 3 tiles, dealing 4 damage, with a 50% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Drop on Prey",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "speed": 360,
+   "radius": 8,
+   "chargeTo": 160,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes 5 tiles to the target and deals 14 damage, leaving it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Silk Drag",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 24,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 5,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.2,
+    "duration": 2
+   },
+   "desc": "Spins a line of silk 6 tiles across ahead of you for 5 seconds that drags every enemy near it inward. Anything it catches moves 20% slower for 2 seconds."
+  },
+  {
+   "name": "Tangle Rewards",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "conditionExpired",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 4
+   },
+   "desc": "When one of your afflictions lifts, you gain a shield worth 15% of your maximum health for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

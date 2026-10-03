@@ -1,0 +1,78 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Gnaw and Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "Flings a gnawed scrap that deals 4 damage and sickens the target [Diseased] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Swarm Flush",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "base": 4,
+   "cooldown": 18,
+   "volleyCount": 5,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 200,
+   "castTime": 0.4,
+   "stunOnHit": 0.8,
+   "desc": "Looses 5 gnawed scraps at once, spread wide, each dealing 4 damage and stunning the target for 0.8 seconds."
+  },
+  {
+   "name": "Scurry for Cover",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "physical",
+   "reflectKind": "debuff",
+   "reflectFrac": 0.25,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "cooldown": 30,
+   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+  },
+  {
+   "name": "Dying Burrow",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 4,
+    "duration": 5
+   },
+   "desc": "When your health falls low, you regain 4 health a second for 5 seconds. Once every 45 seconds."
+  }
+ ]
+}

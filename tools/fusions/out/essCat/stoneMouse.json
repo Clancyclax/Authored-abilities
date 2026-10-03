@@ -1,0 +1,81 @@
+{
+ "essence": "essCat",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Crumb Gnaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 70,
+   "reachUnits": 70,
+   "rangeBand": "melee",
+   "spammable": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   },
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A quick bite that deals 4 damage and leaves the target 5% easier to wound for 4 seconds, with a 30% chance to make it [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Skirting Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "range": 80,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Circles you at speed, dealing 7 damage to every enemy within 2.5 tiles. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Under the Floorboards",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 40,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.2,
+   "aggroMult": 0.2,
+   "stealthSpeedPct": 25,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds. Enemies notice you far later, you move 25% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Last Crumb",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 15
+   },
+   "dodgeBonus": 0.08,
+   "desc": "When your stamina runs out, you recover 15 stamina and gain 8% dodge chance. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "essence": "essCat",
+ "stone": "stoneSkunk",
+ "fusions": [
+  {
+   "name": "Musk Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 300,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "large",
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a cone of musk that deals 4 damage to everything caught in it. Each hit has a 40% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Lingering Glob",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "spreadAfflictions": 96,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Lobs a glob that deals 12 damage and makes the target [Poisoned] for 2 damage a second for 6 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Stand-off Stance",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "poison",
+   "cooldown": 28,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.3,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source for 8 seconds."
+  },
+  {
+   "name": "Not Twice",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 10% poison resistance."
+  }
+ ]
+}

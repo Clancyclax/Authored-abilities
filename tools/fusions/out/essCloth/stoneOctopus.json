@@ -1,0 +1,70 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Reaching Arm",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 12,
+   "range": 210,
+   "maxMult": 1.5,
+   "stunOnHit": 1.0,
+   "desc": "Reaches out a thread-wrapped arm that deals 12 damage, up to 1.5 times that at maximum range, and stuns the target for 1 second."
+  },
+  {
+   "name": "Eightfold Loom",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "cooldown": 1,
+   "base": 3,
+   "volleyCount": 8,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 200,
+   "spammable": true,
+   "desc": "Looses 8 threads at once, spread apart, each dealing 3 damage."
+  },
+  {
+   "name": "Many Hands",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "physical",
+   "cooldown": 24,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles, and more the faster you cast."
+  },
+  {
+   "name": "Spare Arm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "spendStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 5
+   },
+   "desc": "When you spend stamina, you regain 2 stamina a second for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

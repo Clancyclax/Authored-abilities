@@ -1,0 +1,81 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Handed Along",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 2,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Tosses a polyp that deals 4 damage to the first enemy it meets, then passes to 2 more enemies within 3.5 tiles, each hit dealing 60% of the original damage."
+  },
+  {
+   "name": "Prised Open",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "piercing",
+   "role": "execute",
+   "base": 18,
+   "cooldown": 14,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": false,
+   "debuff": {
+    "key": "powerDown",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Pries at the target with quick fingers, dealing 18 damage and drawing out every affliction on it, adding 1.5 times their remaining damage to the hit, then leaves it [Weakened] for 6 seconds. Usable only on an enemy at or below 25% health."
+  },
+  {
+   "name": "Picked Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 35,
+   "desc": "Cleaner polyps pick up to 3 conditions off you and restore 12 health."
+  },
+  {
+   "name": "Sleight of Frond",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "Each time you afflict something, you regain 4 stamina. Once every 8 seconds."
+  }
+ ]
+}

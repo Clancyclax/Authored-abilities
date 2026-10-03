@@ -1,0 +1,69 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Hurled Point",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 240,
+   "maxMult": 2,
+   "bossPct": 0.06,
+   "desc": "Hurls a point that deals 30 damage, up to 2 times that at maximum range, plus 6% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Barbed Salvo",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 320,
+   "radius": 6,
+   "range": 220,
+   "castTime": 0.4,
+   "chargesMax": 3,
+   "desc": "Looses 3 barbs at once, spread apart, each dealing 8 damage. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Aim at the Door",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "piercing",
+   "critChanceBonus": 0.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "desc": "Increases your critical hit chance by 30% for 12 seconds."
+  },
+  {
+   "name": "Thrown Instinct",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you cover ground, your physical damage rises 30% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

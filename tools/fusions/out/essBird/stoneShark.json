@@ -1,0 +1,75 @@
+{
+  "essence": "essBird",
+  "stone": "stoneShark",
+  "fusions": [
+    {
+      "name": "Blood-Scent Strike",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "blood",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1.0,
+      "speed": 380,
+      "radius": 8,
+      "consumeAffliction": true,
+      "leech": 0.2,
+      "desc": "Dives on an afflicted enemy for 9 damage and uses up one of your afflictions on it. You heal for 20% of the damage dealt. It needs an affliction on the target."
+    },
+    {
+      "name": "Wake Chase",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 80,
+      "chargeTo": 224,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Glides up to 7 tiles onto the target and strikes for 14 damage, making it [Bleeding] for 2 damage a second for 5 seconds."
+    },
+    {
+      "name": "Frenzy Window",
+      "kind": "active",
+      "category": "buff",
+      "template": "selfCritBuff",
+      "element": "blood",
+      "critChanceBonus": 0.3,
+      "buffDuration": 12,
+      "cooldown": 45,
+      "desc": "Increases your critical hit chance by 30% for 12 seconds."
+    },
+    {
+      "name": "Scent on the Wind",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blood",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "lifedrainBuff",
+        "amount": 0.15,
+        "duration": 4
+      },
+      "desc": "When you afflict something, 15% of the damage you deal heals you for the next 4 seconds. Once every 8 seconds."
+    }
+  ]
+}

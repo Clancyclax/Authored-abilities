@@ -1,0 +1,70 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "cooldown": 14,
+   "base": 20,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.3,
+   "leech": 0.2,
+   "desc": "Only strikes a target at or below 30% health. Deals 20 damage and leaves the target 10% easier to wound for 4 seconds, and you heal for 20% of the damage dealt."
+  },
+  {
+   "name": "Swath",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "cooldown": 1.2,
+   "base": 8,
+   "range": 260,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Holds 4 charges, one spent on each cut and one returned by each kill. Cuts a cone that deals 8 damage to everything caught in it."
+  },
+  {
+   "name": "Gleaner's Edge",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Late Harvest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "critDrought",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you go too long without a critical hit, your critical hit chance rises by 30% for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

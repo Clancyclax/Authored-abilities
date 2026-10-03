@@ -1,0 +1,82 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Drizzle Weave",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "cooldown": 1,
+   "base": 3,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 220,
+   "spammable": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 5 drops at once, spread apart, each dealing 3 damage. Each hit has a 30% chance to leave the target [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Sodden Drag",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 64,
+   "desc": "A waterlogged lash that deals 12 damage, knocks the target back 2 tiles and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Weighted Veil",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "water",
+   "cooldown": 32,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Waterproofing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When you take non-fire damage, you gain a ward that soaks 20% of your maximum health for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

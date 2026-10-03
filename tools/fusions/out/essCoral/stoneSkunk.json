@@ -1,0 +1,87 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneSkunk",
+ "fusions": [
+  {
+   "name": "Musk Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "debuff": {
+    "key": "powerDown",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a stinging musk that deals 3 damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 5 seconds. It has a 40% chance to leave the target [Weakened] for 4 seconds."
+  },
+  {
+   "name": "Fouled Waters",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "poison",
+   "role": "long",
+   "base": 24,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "huge",
+   "range": 192,
+   "coneAngle": 0.9,
+   "ignoreResist": true,
+   "debuff": {
+    "key": "expose",
+    "chance": 1,
+    "duration": 10,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Releases a cone of foul brine 6 tiles ahead that deals 24 damage that ignores resistances to everything caught in it and leaves each [Exposed] for 10 seconds."
+  },
+  {
+   "name": "Bitter Coating",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "poison",
+   "buffDuration": 10,
+   "thornsFrac": 0.4,
+   "cooldown": 40,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "For 10 seconds, 40% of the damage you take is dealt back to whoever dealt it, and the attacker is [Poisoned] for 2 damage a second for 4 seconds."
+  },
+  {
+   "name": "Lingering Notice",
+   "kind": "passive",
+   "category": "affliction",
+   "template": "virulence",
+   "element": "poison",
+   "resist": {
+    "element": "poison",
+    "amount": 0.1
+   },
+   "desc": "Your afflictions take hold on an enemy that is immune to them. You carry 10% poison resistance for as long as you carry it."
+  }
+ ]
+}

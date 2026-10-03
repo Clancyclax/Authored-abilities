@@ -1,0 +1,82 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Heavy Settling",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.2,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "hpCostPct": 0.05,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "A weighty peck that deals 9 damage, leaving the target 20% easier to wound for 5 seconds, and costs 5% of your maximum health."
+  },
+  {
+   "name": "Inevitable End",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 24,
+   "cooldown": 18,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "executeLadder": true,
+   "stackMult": 1.4,
+   "requiresTargetBelow": 0.3,
+   "consumeAfflictionsPer": 0.5,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A strike that deals 24 damage to a target at or below 30% health, consuming every affliction on it and adding 1.4 times their remaining damage to the blow. Its damage rises 10% for each ally within 5.5 tiles, up to 30%."
+  },
+  {
+   "name": "Settle In",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 40,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 4
+   },
+   "desc": "Restores 3 stamina a second for 8 seconds. Your movement speed rises 10% for 4 seconds after you use it."
+  },
+  {
+   "name": "Unhurried Calm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your stamina is full, you regain 3 health a second for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

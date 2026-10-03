@@ -1,0 +1,79 @@
+{
+ "essence": "essCat",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Ink Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "shadow",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 300,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "large",
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a cone of ink that deals 8 damage to everything caught in it. It costs 4% of your maximum health, and each hit has a 40% chance of [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Arm Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 64,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Wraps the target in lashing arms, dealing 14 damage and knocking it back 2 tiles. It is left 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Boneless Fade",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 7,
+   "stealthAlpha": 0.25,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 7 seconds. Enemies notice you far later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Jetting Away",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "ledger",
+   "stackBuild": "dodge",
+   "stackPay": "ward",
+   "stackCap": 5,
+   "stackDecay": 8,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.0,
+   "stackIcon": "stackWard",
+   "desc": "Every time you dodge, a stack builds on you, up to 5. When you reach 5, they all spend at once: you gain a shield that soaks part of your maximum health. Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}

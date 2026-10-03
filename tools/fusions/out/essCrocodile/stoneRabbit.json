@@ -1,0 +1,71 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Burst From Reeds",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "chargeTo": 256,
+   "desc": "Rushes up to 8 tiles to the target and bites, dealing 12 damage and leaving it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Startled Whump",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 96,
+   "spammable": true,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Thumps your tail in a cone 3 tiles ahead, dealing 4 damage to everything caught in it."
+  },
+  {
+   "name": "Startled Dash",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 25,
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 40% for 8 seconds. You finish it 2 tiles from where you stood, with +10% dodge chance for it."
+  },
+  {
+   "name": "Pounce Pace",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.25,
+    "strikes": 1
+   },
+   "desc": "Every 6 tiles you cover, your crit chance rises by 25% for your next strike. Once every 6 seconds."
+  }
+ ]
+}

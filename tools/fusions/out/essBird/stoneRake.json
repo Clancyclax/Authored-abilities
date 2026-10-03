@@ -1,0 +1,76 @@
+{
+  "essence": "essBird",
+  "stone": "stoneRake",
+  "fusions": [
+    {
+      "name": "Combed Through",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1.0,
+      "range": 84,
+      "sunder": {
+        "amount": 0.08,
+        "duration": 4
+      },
+      "desc": "Rakes the target for 8 damage, leaving it 8% easier to wound for 4 seconds. Spends 4% of your maximum health.",
+      "hpCostPct": 0.04
+    },
+    {
+      "name": "Tine Drag",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 4,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Bleeding"
+      },
+      "desc": "Drags a cone 4 tiles long that deals 4 damage to everything in it and leaves it [Bleeding] for 1 damage a second for 4 seconds."
+    },
+    {
+      "name": "Smoothed Plumage",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "wind",
+      "cooldown": 24,
+      "cleanseCount": 2,
+      "healScope": "self",
+      "desc": "Removes 2 conditions from you."
+    },
+    {
+      "name": "Gleaned Strength",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 8
+      },
+      "desc": "When you kill an enemy, you regain 8 stamina. Once every 6 seconds."
+    }
+  ]
+}

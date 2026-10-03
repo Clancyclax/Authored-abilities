@@ -1,0 +1,83 @@
+{
+  "essence": "essCat",
+  "stone": "stoneNet",
+  "fusions": [
+    {
+      "name": "Snare Toss",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 16,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "stunOnHit": 1,
+      "debuff": {
+        "key": "pinned",
+        "chance": 1,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Hurls a snare that deals 14 damage and stuns the target for 1 second. The target is left [Pinned] for 3 seconds."
+    },
+    {
+      "name": "Drag Line",
+      "kind": "active",
+      "category": "attack",
+      "template": "barrierWall",
+      "element": "physical",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "wallKind": "pull",
+      "wallLength": 192,
+      "wallThickness": 26,
+      "wallDuration": 6,
+      "bossPct": 0.05,
+      "desc": "Strings a line of mesh for 6 seconds that drags every enemy near it inward and deals 30 damage, plus 5% of a boss's or elite's maximum health."
+    },
+    {
+      "name": "Slipped Mesh",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 30,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 22,
+      "shieldStrikes": 3,
+      "shieldDuration": 8,
+      "desc": "Throws a mesh around you that soaks 22 damage for 8 seconds."
+    },
+    {
+      "name": "Caught Mid-Leap",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "strike",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "duration": 4
+      },
+      "bindOnHit": {
+        "slowPct": 0.25,
+        "duration": 2
+      },
+      "desc": "When you strike, the target moves 25% slower for 2 seconds and your critical chance rises 15% for 4 seconds. Once every 8 seconds."
+    }
+  ]
+}

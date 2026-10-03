@@ -1,0 +1,64 @@
+{
+ "essence": "essCage",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Decree of Judgement",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "radiant",
+   "role": "long",
+   "base": 40,
+   "cooldown": 150,
+   "speed": 400,
+   "radius": 8,
+   "bossPct": 0.05,
+   "desc": "Hurls a bolt of authority into the first enemy it meets, dealing 40 damage, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Halt Order",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "radiant",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "stunOnHit": 1.2,
+   "desc": "Every enemy within 3.5 tiles takes 12 damage and is stunned for 1.2 seconds."
+  },
+  {
+   "name": "Writ of Sanctuary",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "radiant",
+   "cooldown": 240,
+   "immunityDuration": 6,
+   "desc": "For 6 seconds, blows that reach you deal no damage and no condition can take hold of you."
+  },
+  {
+   "name": "Command Presence",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "radiant",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.4,
+    "charges": 1
+   },
+   "desc": "When you kill an enemy, your next spell deals 40% more damage. Once every 10 seconds."
+  }
+ ]
+}

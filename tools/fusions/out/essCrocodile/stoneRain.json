@@ -1,0 +1,82 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Drizzle Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 7,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a jet of water that deals 3 damage and has a 30% chance of leaving the target [Soaked] for 5 seconds."
+  },
+  {
+   "name": "Flash Flood",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "wet",
+    "chance": 0.6,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Floods the ground around you, dealing 30 damage to every enemy within 3.5 tiles and giving each a 60% chance of [Soaked] for 8 seconds. The blow ignores resistances."
+  },
+  {
+   "name": "Washed Clean",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 24,
+   "healAmount": 16,
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "desc": "Restores 16 health to you and every ally within 4 tiles."
+  },
+  {
+   "name": "Cold Soak",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "Each time you are hurt by anything other than fire, you regain 3 health a second for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

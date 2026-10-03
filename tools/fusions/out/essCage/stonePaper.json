@@ -1,0 +1,88 @@
+{
+  "essence": "essCage",
+  "stone": "stonePaper",
+  "fusions": [
+    {
+      "name": "Razor Slips",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "slashing",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.8,
+      "spammable": true,
+      "volleyCount": 5,
+      "volleySpread": 0.5,
+      "speed": 300,
+      "radius": 6,
+      "range": 200,
+      "castTime": 0,
+      "isAoe": true,
+      "debuff": {
+        "key": "bleed",
+        "chance": 0.25,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses 5 slips at once, spread apart, each dealing 3 damage. Each hit has a 25% chance of [Bleeding] for 4 seconds."
+    },
+    {
+      "name": "Binding Writ",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "arcane",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "speed": 340,
+      "radius": 8,
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "debuff": {
+        "key": "pinned",
+        "chance": 1.0,
+        "duration": 2,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sends a writ into the first enemy it meets, dealing 30 damage and [Pinning] it for 2 seconds. Allies deal 20% more damage for 12 seconds after it lands."
+    },
+    {
+      "name": "Posted Notice",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "arcane",
+      "cooldown": 45,
+      "range": 160,
+      "buffDuration": 12,
+      "partyPower": 0,
+      "partyDmgPct": 0.2,
+      "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds."
+    },
+    {
+      "name": "Closed Account",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "arcane",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 12
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 6
+      },
+      "desc": "When a condition on you runs out, a shield worth 20% of your maximum health closes over you for 6 seconds. Once every 12 seconds."
+    }
+  ]
+}

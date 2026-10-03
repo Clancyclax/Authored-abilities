@@ -1,0 +1,68 @@
+{
+ "essence": "essChain",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Patient Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "poison",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "range": 96,
+   "reachUnits": 96,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "desc": "Consumes every affliction on the target, adding 1.6 times their remaining damage to this blow. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Paralytic Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 9,
+   "cooldown": 14,
+   "knockback": 64,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "speed": 380,
+   "radius": 8,
+   "reachUnits": 256,
+   "rangeBand": "medium",
+   "desc": "Casts a link that deals 9 damage, leaves the target [Poisoned] for 2 damage a second for 5 seconds and knocks it back 2 tiles."
+  },
+  {
+   "name": "Coil and Wait",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Increases your critical hit chance by 25% for 12 seconds."
+  },
+  {
+   "name": "Venom Gets Through",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "elementPierce",
+   "element": "poison",
+   "pierceElement": "poison",
+   "armorIgnore": 0.25,
+   "cooldownReduction": 0.05,
+   "desc": "Your poison attacks ignore 25% of the target's armour. It also reduces the cooldown of every other ability you have by 5%."
+  }
+ ]
+}

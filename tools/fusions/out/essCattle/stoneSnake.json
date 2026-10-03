@@ -1,0 +1,83 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneSnake",
+ "fusions": [
+  {
+   "name": "Waiting Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A coiled strike that deals 9 damage and makes the target [Poisoned] for 2 damage a second for 6 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Venom Spread",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "poison",
+   "role": "medium",
+   "base": 8,
+   "cooldown": 16,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 144,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Every enemy within 3.5 tiles takes 8 damage and is [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on each target spread to enemies within 4.5 tiles."
+  },
+  {
+   "name": "Coiled Tension",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "critDamage",
+   "buffAmount": 0.4,
+   "buffDuration": 10,
+   "desc": "Increases your critical damage by 40% for 10 seconds."
+  },
+  {
+   "name": "Warm Side",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you inflict a condition, you heal for 20% of the damage you deal for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

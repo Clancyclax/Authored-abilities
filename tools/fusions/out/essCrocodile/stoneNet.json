@@ -1,0 +1,75 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Closing Ring",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 96,
+   "desc": "Whips the water into a ring that deals 12 damage to every enemy within 3 tiles, with a 40% chance of [Pinned] for 2 seconds. Your afflictions on each spread to every enemy within 3 tiles of it."
+  },
+  {
+   "name": "Cinching Pull",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "desc": "Snaps at a target carrying one of your afflictions, dealing 8 damage, using that affliction up and leaving it 10% easier to wound for 4 seconds.",
+   "consumeAffliction": true
+  },
+  {
+   "name": "Reed Fence",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "plant",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 28,
+   "desc": "Weaves a wall of reeds 6 tiles long across the ground ahead of you for 8 seconds. Nothing crosses it."
+  },
+  {
+   "name": "Caught Thread",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "heal",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "full",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackVenom",
+   "desc": "Every hit you land builds a stack on that enemy, up to 5. At 5 they all spend at once: you are healed for 5% of your maximum health per stack (25% at full). Unfed, a stack fades every 4 seconds."
+  }
+ ]
+}

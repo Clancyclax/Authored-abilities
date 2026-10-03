@@ -1,0 +1,87 @@
+{
+ "essence": "essDeer",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Burrowed Thorn",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 70,
+   "sunder": {
+    "amount": 0.04,
+    "duration": 4
+   },
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "A thorn jab that deals 4 damage, poisons the target [Poisoned] for 1 damage a second for 5 seconds and leaves it 4% easier to wound for 4 seconds."
+  },
+  {
+   "name": "Seed Pods",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "nature",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 20,
+   "volleyCount": 3,
+   "volleySpread": 0.4,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 200,
+   "castTime": 0.4,
+   "stunOnHit": 0.8,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 seed pods at once, spread apart, each dealing 5 damage and stunning the target for 0.8 seconds. Each hit has a 50% chance to leave the target [Caged] for 5 seconds."
+  },
+  {
+   "name": "Quiet Browse",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "healScope": "self",
+   "hotPerSec": 3,
+   "hotDuration": 8,
+   "cooldown": 30,
+   "desc": "Restores 3 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Green Recovery",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "nature",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essChicken",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Rolling Rebuff",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 200,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "maxMult": 1.8,
+   "knockback": 80,
+   "desc": "Rolls into the target from afar, dealing 14 damage, up to 1.8 times that at maximum range, and knocking it back 2.5 tiles."
+  },
+  {
+   "name": "Barrel About",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 80,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Barrels around you, dealing 4 damage to every enemy within 2.5 tiles. Your movement speed rises 10% for 2 seconds after each roll.",
+   "spammable": true
+  },
+  {
+   "name": "Huddle Under",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 40,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 12
+   },
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds, and hardens your armour by 10%. An escort of chicks fights beside you for 12 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Seams Closing",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 1.1,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 8% of your maximum health per stack (62% at full) before your health takes damage. Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

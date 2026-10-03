@@ -1,0 +1,81 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Mud Heave",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 5
+   },
+   "knockback": 112,
+   "desc": "Heaves a mass of earth into the target, dealing 14 damage, knocking it 3.5 tiles back and leaving it 15% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Clod Volley",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "earth",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 200,
+   "castTime": 0.2,
+   "desc": "Looses 3 clods of silt in a spread, each dealing 3 damage."
+  },
+  {
+   "name": "Dug-In Pit",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 16,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to dig a pit that stays armed for 30 seconds. The first enemy to come within 2 tiles sets it off, and it deals 16 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Burrow In",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "Once your health falls below 35%, a shield worth 20% of your maximum health closes over you for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

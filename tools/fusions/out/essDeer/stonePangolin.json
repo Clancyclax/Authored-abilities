@@ -1,0 +1,66 @@
+{
+ "essence": "essDeer",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Curled Tumble",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "desc": "You tumble in a ball, dealing 12 damage to every enemy within 3 tiles and knocking them back 2 tiles."
+  },
+  {
+   "name": "Shed Plate",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "hpCostPct": 0.05,
+   "desc": "Costs 5% of your maximum health and flings a plate that deals 8 damage to the first enemy it meets."
+  },
+  {
+   "name": "Scale Roll",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "physical",
+   "armorBonus": 0.25,
+   "buffDuration": 10,
+   "dodgeBonus": 0.1,
+   "cooldown": 36,
+   "desc": "Raises your armour by 25% for 10 seconds, with +10% dodge chance while it lasts."
+  },
+  {
+   "name": "Overlapping Seams",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health falls low, you gain a ward that absorbs 30% of your maximum health for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+  "essence": "essBird",
+  "stone": "stoneSloth",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Settling Weight",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "long",
+      "base": 36,
+      "cooldown": 100,
+      "speed": 300,
+      "radius": 8,
+      "explodeRadius": 112,
+      "splashFrac": 0.8,
+      "desc": "Drops on the first enemy it meets, dealing 36 damage and bursting for 80% of that on every enemy within 3.5 tiles."
+    },
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Lulling Glide",
+      "template": "rangeStrike",
+      "element": "wind",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 192,
+      "maxMult": 1.5,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.35,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "A glide from range that deals 4 damage, up to 1.5 times that at maximum range, with a 35% chance of [Slowed] for 4 seconds."
+    },
+    {
+      "name": "Settled Roost",
+      "kind": "active",
+      "category": "buff",
+      "template": "immunityBuff",
+      "element": "physical",
+      "immunityDuration": 4,
+      "cooldown": 90,
+      "desc": "For 4 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+    },
+    {
+      "name": "Banked Slumber",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 40,
+      "trigger": {
+        "on": "emptyStamina",
+        "cooldown": 40
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 20
+      },
+      "desc": "When your stamina runs out, you regain 20 stamina. Once every 40 seconds."
+    }
+  ]
+}

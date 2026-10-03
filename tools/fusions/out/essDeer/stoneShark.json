@@ -1,0 +1,85 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Circling Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "blood",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "range": 86,
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "You rush the target and bite for 12 damage, make it [Bleeding] for 2 damage a second for 5 seconds and leave it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Taste of Blood",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "blood",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 140,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "leech": 0.2,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.3,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 5% of your maximum health. A cone of spray that deals 9 damage to everything caught in it, heals you for 20% of the damage dealt and has a 30% chance to leave targets [Bleeding] for 5 seconds."
+  },
+  {
+   "name": "Cornered Hide",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "thornsFrac": 0.6,
+   "buffDuration": 8,
+   "lifeOnKill": 4,
+   "cooldown": 30,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 4 health."
+  },
+  {
+   "name": "Scent of Weakness",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.15,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, you heal for 15% of the damage you deal for 5 seconds. Once every 12 seconds."
+  }
+ ]
+}

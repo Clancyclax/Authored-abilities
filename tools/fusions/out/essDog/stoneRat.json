@@ -1,0 +1,73 @@
+{
+ "essence": "essDog",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Swarm Over",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "guaranteedCrit": true,
+   "desc": "Swarms every enemy within 3.5 tiles, dealing 30 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Survivor's Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 4
+   },
+   "hpCostPct": 0.05,
+   "desc": "Snaps for 9 damage and leaves the target 12% easier to wound for 4 seconds. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Fill the Hold",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 60,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 160,
+   "castTime": 0.5,
+   "desc": "Calls a pack of hounds for 15 seconds. They bite an enemy within 5 tiles every 1 second, dealing 3 damage."
+  },
+  {
+   "name": "Last Off the Ship",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 30%, you gain a shield worth 25% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

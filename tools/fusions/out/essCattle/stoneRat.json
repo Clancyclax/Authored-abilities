@@ -1,0 +1,74 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Gnaw Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 96,
+   "maxMult": 1.2,
+   "spammable": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.3,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A snapping blow that deals 4 damage, with a 30% chance of [Diseased] for 6 seconds."
+  },
+  {
+   "name": "Swarm Surge",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "base": 3,
+   "cooldown": 15,
+   "volleyCount": 6,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 265,
+   "radius": 7,
+   "range": 160,
+   "stunOnHit": 0.8,
+   "desc": "Looses 6 darting strikes in a spread, each dealing 3 damage and stunning the target for 0.8 seconds."
+  },
+  {
+   "name": "Last Off",
+   "kind": "active",
+   "category": "buff",
+   "template": "immunityBuff",
+   "element": "physical",
+   "cooldown": 240,
+   "immunityDuration": 6,
+   "desc": "For 6 seconds, blows that reach you deal no damage and no condition can take hold of you. Transcendent damage still lands."
+  },
+  {
+   "name": "Not Going Down",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 120,
+   "trigger": {
+    "on": "emptyHealth",
+    "cooldown": 120
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 8,
+    "duration": 4
+   },
+   "desc": "When your health runs out, you regain 8 health a second for 4 seconds. Once every 120 seconds."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Heavy Swell",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "rock",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 80,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A crushing blow that deals 16 damage, knocks the target back 3 tiles, leaves it 15% easier to wound for 6 seconds and [Slowed] for 8 seconds."
+  },
+  {
+   "name": "Seabed Drop",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "rock",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 110,
+   "ignoreArmor": true,
+   "desc": "Brings the weight of the reef down on every enemy within 3.5 tiles, dealing 30 damage that ignores armour."
+  },
+  {
+   "name": "Heaving Tide",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "water",
+   "powerMult": 1.3,
+   "buffDuration": 12,
+   "cooldown": 45,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Increases your damage by 30% for 12 seconds. While it lasts, a mass of reef fights beside you for 8 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Gathering Mass",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you strike an enemy, your physical damage rises by 30% for 6 seconds. Once every 10 seconds."
+  }
+ ]
+}

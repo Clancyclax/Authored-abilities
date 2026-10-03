@@ -1,0 +1,80 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Silk Snare",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Spits a strand of silk that deals 10 damage and leaves the target [Slowed] for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Tangled Brood",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 96,
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Spins a web out around you, dealing 7 damage to every enemy within 3 tiles. Each ally within 5.5 tiles adds 10% damage, up to 30%. It holds 4 charges, and a kill gives one back."
+  },
+  {
+   "name": "Roost Web",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 180,
+   "summonKind": "trap",
+   "summonDuration": 60,
+   "summonDmg": 20,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 96,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "desc": "Spins a trap that waits 60 seconds, and the first 2 enemies to come within 3 tiles take 20 damage in a blast around it."
+  },
+  {
+   "name": "Strand by Strand",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "mark",
+   "stackBuild": "hit",
+   "stackPay": "burst",
+   "stackCap": 5,
+   "stackDecay": 4,
+   "stackSpend": "crit",
+   "stackOn": "enemy",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every hit you land ties a strand to that enemy, up to 5. Your next critical hit on it spends them all: the strands pull tight and strike it for 34% of your weapon damage per strand (170% at full). Unfed, a strand fades every 4 seconds."
+  }
+ ]
+}

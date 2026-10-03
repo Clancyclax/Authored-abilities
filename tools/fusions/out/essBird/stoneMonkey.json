@@ -1,0 +1,67 @@
+{
+  "essence": "essBird",
+  "stone": "stoneMonkey",
+  "fusions": [
+    {
+      "kind": "active",
+      "category": "attack",
+      "name": "Aerial Snatch",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 256,
+      "maxMult": 1.5,
+      "stunOnHit": 1.2,
+      "desc": "Snatches a target up to 8 tiles away, dealing 12 damage, up to 1.5 times that at maximum range, and stuns it for 1.2 seconds."
+    },
+    {
+      "name": "Lifted Venom",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "resource",
+      "base": 9,
+      "cooldown": 1.0,
+      "speed": 360,
+      "radius": 8,
+      "consumeAffliction": true,
+      "desc": "Strikes an afflicted enemy for 9 damage and uses up one of your afflictions on it. It needs an affliction on the target."
+    },
+    {
+      "name": "Branch Hop",
+      "kind": "active",
+      "category": "movement",
+      "template": "teleport",
+      "element": "nature",
+      "teleportRange": 224,
+      "cooldown": 18,
+      "hasteOnUse": {
+        "pct": 0.2,
+        "duration": 5
+      },
+      "desc": "Steps you instantly to a point up to 7 tiles away. Using it increases your movement speed by 20% for 5 seconds."
+    },
+    {
+      "name": "Nimble Takings",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "crit",
+        "cooldown": 8
+      },
+      "effect": {
+        "kind": "restoreResource",
+        "resource": "stamina",
+        "amount": 6
+      },
+      "desc": "When you land a critical hit, you regain 6 stamina. Once every 8 seconds."
+    }
+  ]
+}

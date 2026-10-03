@@ -1,0 +1,77 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Slow Cinch",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "long",
+   "cooldown": 120,
+   "base": 40,
+   "range": 86,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 8
+   },
+   "guaranteedCrit": true,
+   "desc": "A slow heavy blow that deals 40 damage as a guaranteed critical hit and leaves the target 20% easier to wound for 8 seconds."
+  },
+  {
+   "name": "Dragging Weight",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 20,
+   "base": 10,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 96,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3.5 tiles takes 10 damage, with a 50% chance each of being [Stalled] for 6 seconds. Your afflictions on each target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Settled Mend",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 45,
+   "hotPerSec": 3,
+   "hotDuration": 12,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 12 seconds."
+  },
+  {
+   "name": "Unhurried Hem",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 6
+   },
+   "desc": "When you run out of stamina, you regain 3 stamina a second for 6 seconds. Once every 30 seconds."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+  "essence": "essBird",
+  "stone": "stoneSpear",
+  "fusions": [
+    {
+      "name": "Long Fall",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "piercing",
+      "role": "medium",
+      "base": 14,
+      "cooldown": 14,
+      "range": 288,
+      "maxMult": 2.2,
+      "knockback": 64,
+      "desc": "A dive from range that deals 14 damage, up to 2.2 times that at maximum range, and pushes the target back 2 tiles."
+    },
+    {
+      "name": "Skewering Stoop",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "piercing",
+      "role": "long",
+      "base": 32,
+      "cooldown": 80,
+      "speed": 420,
+      "radius": 7,
+      "bossPct": 0.06,
+      "desc": "Strikes the first enemy it meets for 32 damage and an extra 6% of a boss's or elite's maximum health."
+    },
+    {
+      "name": "Longer Lance",
+      "kind": "active",
+      "category": "buff",
+      "template": "rangeBuff",
+      "element": "piercing",
+      "rangeMult": 1.2727,
+      "buffDuration": 20,
+      "cooldown": 75,
+      "desc": "For 20 seconds, your attacks and spells reach 40% further."
+    },
+    {
+      "name": "Aimed Hold",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "piercing",
+      "isTriggered": true,
+      "cooldown": 12,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 12,
+        "seconds": 6
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 4
+      },
+      "desc": "After 6 seconds without a critical hit, your physical damage rises by 30% for 4 seconds. Once every 12 seconds."
+    }
+  ]
+}

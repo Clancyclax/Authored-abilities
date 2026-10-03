@@ -1,0 +1,69 @@
+{
+  "essence": "essCage",
+  "stone": "stoneSickle",
+  "fusions": [
+    {
+      "name": "Crescent Sweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "slashing",
+      "role": "resource",
+      "base": 7,
+      "cooldown": 1.0,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "chargesMax": 4,
+      "desc": "Every enemy within 3 tiles takes 7 damage. It holds up to 4 charges, and each kill gives one back."
+    },
+    {
+      "name": "Harvest Home",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "slashing",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 14,
+      "range": 90,
+      "stackMult": 1.6,
+      "requiresTargetBelow": 0.25,
+      "consumeAfflictionsPer": 0.6,
+      "executeLadder": true,
+      "desc": "Consumes every affliction on the target, adding 1.6 times their remaining damage to a blow that deals 16 damage. It only strikes a target at or below 25% health."
+    },
+    {
+      "name": "Reaped Vigor",
+      "kind": "active",
+      "category": "healing",
+      "template": "selfHeal",
+      "element": "life",
+      "cooldown": 25,
+      "healAmount": 22,
+      "critChance": 0.15,
+      "healScope": "self",
+      "desc": "Restores 22 health to you, with a 15% chance to heal critically."
+    },
+    {
+      "name": "Standing Grain",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "slashing",
+      "isTriggered": true,
+      "cooldown": 6,
+      "trigger": {
+        "on": "kill",
+        "cooldown": 6
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 3,
+        "duration": 4
+      },
+      "desc": "When you kill an enemy, you regain 3 stamina a second for 4 seconds. Once every 6 seconds."
+    }
+  ]
+}

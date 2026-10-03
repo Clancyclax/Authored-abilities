@@ -1,0 +1,67 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Scrape Together",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.6,
+   "consumeAffliction": true,
+   "desc": "A dragging strike that needs one of your afflictions on the target and uses it up, dealing 8 damage, up to 1.6 times that at maximum range."
+  },
+  {
+   "name": "Gather the Fleeing",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 96,
+   "desc": "Sweeps in a circle, dealing 12 damage to every enemy within 3.5 tiles. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Gleaned Breath",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 7,
+   "cooldown": 30,
+   "desc": "Restores 3 stamina a second for 7 seconds."
+  },
+  {
+   "name": "Leavings Tidied",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 1
+   },
+   "desc": "When you strike, your next spell deals 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

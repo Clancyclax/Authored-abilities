@@ -1,0 +1,75 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Dragging Tines",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "rock",
+   "role": "long",
+   "base": 24,
+   "cooldown": 90,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "ignoreResist": true,
+   "desc": "Sets a line of reef tines 6 tiles long for 6 seconds, dealing 24 damage that ignores resistances to every enemy it catches and pulling them toward it."
+  },
+  {
+   "name": "Gleaning Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "nature",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "strikes": 1,
+   "chargesMax": 4,
+   "leech": 0.15,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 3,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rakes the target, dealing 7 damage and leaving it [Bleeding] for 1 damage a second for 3 seconds, and you heal for 15% of the damage dealt. Holds 4 charges; each use spends one, and each kill restores one."
+  },
+  {
+   "name": "Tidied Shallows",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "nature",
+   "cleanseCount": 2,
+   "healScope": "self",
+   "healOnUse": 12,
+   "cooldown": 30,
+   "desc": "Clears up to 2 conditions from you and restores 12 health."
+  },
+  {
+   "name": "Salvaged Shell",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 8
+   },
+   "desc": "When you kill an enemy, a shield worth 15% of your maximum health closes over you for 8 seconds. Once every 10 seconds."
+  }
+ ]
+}

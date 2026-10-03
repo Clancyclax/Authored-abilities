@@ -1,0 +1,70 @@
+{
+ "essence": "essDog",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reap the Hunted",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 90,
+   "requiresTargetBelow": 0.25,
+   "stackMult": 1.6,
+   "executeLadder": true,
+   "desc": "Strikes a target at or below 25% health and deals 20 damage, plus 1.6 times the remaining damage of every affliction on it, which are used up."
+  },
+  {
+   "name": "Crescent Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "desc": "Sweeps every enemy within 3 tiles for 8 damage. You hold up to 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Harvest Home",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 30,
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 4 health a second to you for 8 seconds. The healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Gleaner's Rush",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, your physical damage rises by 25% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

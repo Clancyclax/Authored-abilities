@@ -1,0 +1,63 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Barbed Thrust",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 2,
+   "chargesMax": 3,
+   "desc": "Lunges at a target up to 6 tiles away, dealing 9 damage, up to 2 times that at full range. Holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Doorway Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 90,
+   "guaranteedCrit": true,
+   "speed": 380,
+   "radius": 7,
+   "desc": "Sends a piercing bolt into the first enemy it meets, dealing 30 damage. Every hit is a critical hit."
+  },
+  {
+   "name": "Waiting Launch",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "piercing",
+   "cooldown": 12,
+   "desc": "Launches you 6 tiles forward in a burst.",
+   "dashDist": 192
+  },
+  {
+   "name": "Aimed Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you land a critical hit, your next ability deals 25% more damage. Once every 6 seconds."
+  }
+ ]
+}

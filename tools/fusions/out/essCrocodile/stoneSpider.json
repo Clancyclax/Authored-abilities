@@ -1,0 +1,68 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Silk Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "stunOnHit": 1.2,
+   "speed": 340,
+   "radius": 8,
+   "desc": "Spits a glob of silk that deals 12 damage and wraps the target, stunning it for 1.2 seconds."
+  },
+  {
+   "name": "Wrapped Meal",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.5,
+   "desc": "Bites a target at or below 25% health, dealing 20 damage and leaving it 10% easier to wound for 4 seconds. It uses up every affliction on the target, and each adds 50% more damage."
+  },
+  {
+   "name": "Lure Lines",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Web Warden",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "insect",
+   "familiarCreatureName": "Weaver",
+   "bindOnHit": {
+    "slowPct": 0.15,
+    "duration": 2
+   },
+   "desc": "A bonded spider fights beside you, biting an enemy within 5 tiles for 4 damage every 1.2 seconds; each enemy it bites moves 15% slower for 2 seconds."
+  }
+ ]
+}

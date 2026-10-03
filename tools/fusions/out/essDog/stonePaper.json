@@ -1,0 +1,73 @@
+{
+ "essence": "essDog",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Rolled Newspaper",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 15,
+   "range": 86,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "stunOnHit": 1.0,
+   "desc": "Swats the target for 12 damage and stuns it for 1 second. It is left 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Nick and Run",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "strikes": 1,
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Bites for 4 damage and makes the target [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Posted Orders",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 50,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "taunt": true,
+   "tauntDuration": 5,
+   "tauntMax": 4,
+   "tauntRadius": 160,
+   "desc": "Increases your attack speed by 25% for 12 seconds. Enemies within 5 tiles are pulled onto you for 5 seconds, up to 4 of them."
+  },
+  {
+   "name": "Errand Runner",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 3,
+   "familiarRange": 128,
+   "familiarInterval": 1.6,
+   "familiarFamily": "dog",
+   "familiarCreatureName": "Courier",
+   "lifeOnKill": 3,
+   "desc": "A bonded courier hound follows you and nips enemies within 4 tiles for 3 damage every 1.6 seconds. Each kill restores 3 health."
+  }
+ ]
+}

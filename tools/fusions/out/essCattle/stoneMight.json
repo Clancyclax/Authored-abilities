@@ -1,0 +1,71 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Run-Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 12,
+   "range": 86,
+   "chargeTo": 192,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "You rush to the target and strike it, dealing 16 damage and leaving it 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Ground Breaker",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Slams the ground, dealing 32 damage to every enemy within 3.5 tiles. The blow ignores armour."
+  },
+  {
+   "name": "Weight of Numbers",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "cooldown": 45,
+   "range": 160,
+   "buffDuration": 12,
+   "partyPower": 1,
+   "partyDmgPct": 0.2,
+   "desc": "Every ally within 5 tiles strikes 20% harder for 12 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Cornered Fury",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 40,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 40,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.5,
+    "duration": 8
+   },
+   "desc": "When your health falls below 35%, your damage rises 50% for 8 seconds. Once every 40 seconds."
+  }
+ ]
+}

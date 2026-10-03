@@ -1,0 +1,80 @@
+{
+ "essence": "essDog",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Shake Off",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 224,
+   "coneAngle": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Shakes out a cone of spray that deals 12 damage to everything caught in it and knocks it back 2 tiles, with a 40% chance of [Slowed] for 4 seconds."
+  },
+  {
+   "name": "Scent Through Storm",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 192,
+   "maxMult": 1.6,
+   "hpCostPct": 0.04,
+   "desc": "Lunges from afar for 8 damage, up to 1.6 times as much at its maximum range. Costs 4% of your maximum health."
+  },
+  {
+   "name": "Soaked Through",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 12,
+   "healScope": "party",
+   "range": 128,
+   "reachUnits": 128,
+   "rangeBand": "melee",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 12 health to you and every ally within 4 tiles. You move 15% faster for 4 seconds."
+  },
+  {
+   "name": "Wet Weather Gait",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 4
+   },
+   "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

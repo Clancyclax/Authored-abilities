@@ -1,0 +1,71 @@
+{
+ "essence": "essDog",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Haul Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "range": 86,
+   "sunder": {
+    "amount": 0.15,
+    "duration": 6
+   },
+   "knockback": 96,
+   "desc": "A heavy lunge that deals 16 damage, knocks the target back 3 tiles and leaves it 15% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Pack Press",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spammable": true,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Shoulders into every enemy within 3 tiles, dealing 5 damage. The damage rises 10% for each ally within 5.5 tiles, up to 40%."
+  },
+  {
+   "name": "Heave Together",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "cooldown": 60,
+   "powerMult": 1.3,
+   "buffDuration": 15,
+   "desc": "Increases your damage by 30% for 15 seconds."
+  },
+  {
+   "name": "Vise Grip",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 5
+   },
+   "desc": "When you land a critical hit, your physical damage rises by 30% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

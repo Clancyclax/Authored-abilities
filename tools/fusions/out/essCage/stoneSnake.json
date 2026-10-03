@@ -1,0 +1,77 @@
+{
+  "essence": "essCage",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Coiled Fang",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1.0,
+      "speed": 360,
+      "radius": 6,
+      "chargesMax": 3,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Spits a fang that deals 8 damage and leaves the target [Poisoned] for 2 damage a second for 5 seconds. It holds up to 3 charges, and each kill gives one back."
+    },
+    {
+      "name": "Venom Spreads",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "poison",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 15,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "spreadAfflictions": 128,
+      "desc": "Every enemy within 3.5 tiles takes 12 damage. Your afflictions on a target spread to enemies within 4 tiles."
+    },
+    {
+      "name": "Shed Venom",
+      "kind": "active",
+      "category": "restore",
+      "template": "cleanse",
+      "element": "poison",
+      "cooldown": 30,
+      "cleanseCount": 3,
+      "cleanseTag": "poison",
+      "healScope": "self",
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 4
+      },
+      "desc": "Removes up to 3 poison conditions from you. Your movement speed rises 15% for 4 seconds after you use it."
+    },
+    {
+      "name": "Tightening Coil",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "inflictCondition",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.15,
+        "duration": 5
+      },
+      "desc": "When you afflict an enemy, your critical hit chance rises by 15% for 5 seconds. Once every 10 seconds."
+    }
+  ]
+}

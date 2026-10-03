@@ -1,0 +1,79 @@
+{
+ "essence": "essCat",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Closing Pass",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 12,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Rushes up to 7 tiles to the target and deals 16 damage, making it [Bleeding] for 2 damage a second for 6 seconds."
+  },
+  {
+   "name": "Feeding Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "blood",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "hpCostPct": 0.05,
+   "leech": 0.35,
+   "desc": "A snap that deals 9 damage and heals you for 35% of the damage dealt. It costs 5% of your maximum health."
+  },
+  {
+   "name": "Scent Trail",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfCritBuff",
+   "element": "water",
+   "cooldown": 45,
+   "critChanceBonus": 0.25,
+   "buffDuration": 12,
+   "desc": "Your critical chance rises by 25% for 12 seconds."
+  },
+  {
+   "name": "Frenzied Turn",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "When you kill an enemy, you heal for 30% of the damage you deal for 8 seconds. Once every 12 seconds."
+  }
+ ]
+}

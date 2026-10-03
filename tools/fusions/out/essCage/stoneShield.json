@@ -1,0 +1,70 @@
+{
+  "essence": "essCage",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Rim Bash",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 15,
+      "cooldown": 14,
+      "range": 86,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 5
+      },
+      "knockback": 96,
+      "desc": "Smashes the target for 15 damage and throws it back 3 tiles, leaving it 15% easier to wound for 5 seconds."
+    },
+    {
+      "name": "Skipped Disc",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "range": 200,
+      "maxMult": 1.5,
+      "desc": "Skips the shield for 5 damage, hitting harder the further it travels, up to 1.5 times its damage at maximum range."
+    },
+    {
+      "name": "Bastion",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "physical",
+      "cooldown": 40,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 30,
+      "shieldStrikes": 4,
+      "shieldDuration": 10,
+      "armorBonus": 0.1,
+      "desc": "Raises a barrier that absorbs the next 30 damage and holds for 10 seconds. Your armour rises by 10% while it lasts."
+    },
+    {
+      "name": "Braced",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "ledger",
+      "stackBuild": "taken",
+      "stackPay": "ward",
+      "stackCap": 6,
+      "stackDecay": 10,
+      "stackSpend": "full",
+      "stackOn": "self",
+      "stackScale": 0.8,
+      "stackIcon": "stackWard",
+      "desc": "Every time you take damage, a stack builds on you, up to 6. When you reach 6, they all spend at once: you gain a shield that soaks a share of your maximum health. Unfed, a stack fades every 10 seconds."
+    }
+  ]
+}

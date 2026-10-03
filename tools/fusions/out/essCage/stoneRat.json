@@ -1,0 +1,79 @@
+{
+ "essence": "essCage",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Plague Gnaw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "necrotic",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 6,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Diseased"
+   },
+   "desc": "Spits a bite that deals 4 damage and leaves the target [Diseased] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Cornered Bite",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 14,
+   "cooldown": 15,
+   "range": 84,
+   "stackMult": 1.5,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.5,
+   "executeLadder": true,
+   "desc": "Consumes every affliction on the target, adding 1.5 times their remaining damage to a blow that deals 14 damage. It only strikes a target at or below 25% health."
+  },
+  {
+   "name": "Stowaways",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "necrotic",
+   "cooldown": 50,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 192,
+   "castTime": 0.5,
+   "lifeOnKill": 4,
+   "desc": "Takes 0.5 seconds to loose a swarm for 15 seconds that bites an enemy within 6 tiles for 3 damage every second. Each kill you make while it is out restores 4 health."
+  },
+  {
+   "name": "Last Ones Aboard",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 5,
+    "duration": 6
+   },
+   "desc": "Once your health falls below 30%, you regain 5 health a second for 6 seconds. Once every 60 seconds."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "essence": "essDog",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Spinning Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spammable": true,
+   "desc": "Rolls into every enemy within 3 tiles, dealing 4 damage."
+  },
+  {
+   "name": "Rolling Block",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "range": 86,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "knockback": 80,
+   "desc": "Slams into the target for 14 damage, knocks it back 2.5 tiles and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Standing Watch",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 36,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.06,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds. A guard escort fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Curl Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.12,
+    "duration": 4
+   },
+   "desc": "Each time you are hurt by anything other than fire, you gain a shield worth 12% of your maximum health for 4 seconds. Once every 15 seconds."
+  }
+ ]
+}

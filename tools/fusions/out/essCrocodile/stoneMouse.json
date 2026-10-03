@@ -1,0 +1,76 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Nip and Slip",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 86,
+   "spammable": true,
+   "desc": "Snaps at the target, dealing 4 damage, leaving it 5% easier to wound for 4 seconds and giving you 15% more movement speed for 3 seconds.",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 3
+   },
+   "sunder": {
+    "amount": 0.05,
+    "duration": 4
+   }
+  },
+  {
+   "name": "Dust Cloud",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 12,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 64,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Kicks up a cone of silt 3 tiles ahead that deals 10 damage, knocks enemies 2 tiles back and gives each a 50% chance of [Blunted] for 5 seconds."
+  },
+  {
+   "name": "Under the Surface",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "water",
+   "cooldown": 30,
+   "stealthDuration": 6,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 6 seconds. Enemies notice you far later, you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Dark Water",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "water",
+   "condition": "night",
+   "bonusKind": "dodge",
+   "amount": 0.12,
+   "cooldownReduction": 0.05,
+   "desc": "At night, your dodge chance rises by 12%. Your other abilities come round 5% sooner."
+  }
+ ]
+}

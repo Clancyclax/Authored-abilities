@@ -1,0 +1,75 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Lazy Snap",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "range": 86,
+   "spammable": true,
+   "sunder": {
+    "amount": 0.05,
+    "duration": 3
+   },
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Snaps at the target, dealing 4 damage, leaving it 5% easier to wound for 3 seconds and giving it a 30% chance of [Hindered] for 3 seconds."
+  },
+  {
+   "name": "Inevitable Crush",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "range": 96,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Crushes everything in a cone 3 tiles ahead, dealing 30 damage. The blow ignores armour."
+  },
+  {
+   "name": "Settle In",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 40,
+   "buffStat": "damageReduction",
+   "buffAmount": 0.25,
+   "buffDuration": 12,
+   "desc": "Reduces the damage you take by 25% for 12 seconds."
+  },
+  {
+   "name": "Unhurried Build",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "power",
+   "stackCap": 4,
+   "stackDecay": 6,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 1,
+   "stackIcon": "stackEye",
+   "desc": "Every ability you use builds a stack on you, up to 4. The next ability you use spends them all: you deal 6% more damage per stack (24% at full) for 6 seconds. Unfed, a stack fades every 6 seconds."
+  }
+ ]
+}

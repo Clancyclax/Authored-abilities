@@ -1,0 +1,87 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Smelled Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "spreadAfflictions": 96,
+   "desc": "Lunges at the target and deals 15 damage, making it [Bleeding] for 3 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 3 tiles. The target is left 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Scent Chase",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "consumeAffliction": true,
+   "hasteOnUse": {
+    "pct": 0.25,
+    "duration": 3
+   },
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Needs one of your afflictions on the target and uses it up, dealing 9 damage. Your movement speed rises 25% for 3 seconds. Its damage rises 10% for each ally within 5.5 tiles, up to 30%."
+  },
+  {
+   "name": "Draw First Blood",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 20,
+   "critChance": 0.1,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Restores 20 health to you, with a 10% chance to critically heal. Its healing rises 8% for every 10% of your health already gone, up to 40%."
+  },
+  {
+   "name": "Frenzied Pack",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "When you strike, you heal for 25% of the damage you deal for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

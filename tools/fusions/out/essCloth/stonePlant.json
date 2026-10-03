@@ -1,0 +1,80 @@
+{
+ "essence": "essCloth",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Creeping Stitch",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "plant",
+   "role": "medium",
+   "cooldown": 12,
+   "base": 12,
+   "range": 210,
+   "maxMult": 1.4,
+   "spreadAfflictions": 112,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Sends out a vine of thread that deals 12 damage, up to 1.4 times that at maximum range, and leaves the target [Poisoned] for 3 damage a second for 5 seconds. Your afflictions on it spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Strangling Weave",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "long",
+   "cooldown": 90,
+   "base": 26,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.5,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Every enemy within 3.5 tiles takes 26 damage that ignores resistance, with a 50% chance each of being [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Mending Roots",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "plant",
+   "cooldown": 30,
+   "hotPerSec": 4,
+   "hotDuration": 8,
+   "healScope": "self",
+   "desc": "Restores 4 health a second to you for 8 seconds."
+  },
+  {
+   "name": "Taproot Hem",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 18,
+   "trigger": {
+    "on": "gainHealth",
+    "cooldown": 18
+   },
+   "effect": {
+    "kind": "healingTakenBuff",
+    "amount": 0.3,
+    "duration": 6
+   },
+   "desc": "When you gain health, healing you receive is 30% stronger for 6 seconds. Once every 18 seconds."
+  }
+ ]
+}

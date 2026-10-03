@@ -1,0 +1,69 @@
+{
+ "essence": "essChain",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Wrenching Haul",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 288,
+   "reachUnits": 288,
+   "rangeBand": "medium",
+   "maxMult": 2,
+   "knockback": 96,
+   "desc": "Hurls a link that deals 16 damage, up to 2 times that at maximum range, and knocks the target back 3 tiles."
+  },
+  {
+   "name": "Crushing Squeeze",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 34,
+   "cooldown": 120,
+   "range": 128,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Tightens a ring of links around you, dealing 34 damage to every enemy within 4 tiles. It ignores armour."
+  },
+  {
+   "name": "Drag Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 24,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 6,
+   "threatMult": 1,
+   "desc": "Hauls up to 6 enemies within 8 tiles onto you for 6 seconds."
+  },
+  {
+   "name": "Taut Line",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.4,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your physical damage rises by 40% for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

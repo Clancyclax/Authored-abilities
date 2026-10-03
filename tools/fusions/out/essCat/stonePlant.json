@@ -1,0 +1,74 @@
+{
+ "essence": "essCat",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Thorn Spit",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "nature",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "spammable": true,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "desc": "Spits a thorn that deals 4 damage and makes the target [Poisoned] for 1 damage a second for 5 seconds."
+  },
+  {
+   "name": "Rooting Pounce",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "nature",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 20,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.6,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Rushes up to 6 tiles to the target and deals 12 damage to every enemy within 3 tiles. Each hit has a 60% chance of [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Sun-Basking",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "nature",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Quiet Roots",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "nature",
+   "buffKind": "maxHp",
+   "amount": 0.1,
+   "regenPerSec": 1,
+   "desc": "Your maximum health rises by 10%. You also regenerate 1 health a second, permanently."
+  }
+ ]
+}

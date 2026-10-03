@@ -1,0 +1,83 @@
+{
+  "essence": "essCat",
+  "stone": "stoneRain",
+  "fusions": [
+    {
+      "name": "Mizzle Scatter",
+      "kind": "active",
+      "category": "attack",
+      "template": "volley",
+      "element": "water",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "volleySpread": 0.8,
+      "isAoe": true,
+      "speed": 265,
+      "radius": 7,
+      "range": 220,
+      "reachUnits": 220,
+      "rangeBand": "medium",
+      "spammable": true,
+      "volleyCount": 6,
+      "debuff": {
+        "key": "wet",
+        "chance": 0.5,
+        "duration": 6,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses 6 droplets at once, spread apart, each dealing 3 damage. Each hit has a 50% chance of [Wet] for 6 seconds."
+    },
+    {
+      "name": "Storm Drop",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "water",
+      "role": "long",
+      "base": 30,
+      "cooldown": 75,
+      "range": 210,
+      "reachUnits": 210,
+      "rangeBand": "medium",
+      "maxMult": 2,
+      "bossPct": 0.05,
+      "desc": "A strike from afar that deals 30 damage and up to 2 times as much at maximum range, plus 5% of a boss's or elite's maximum health."
+    },
+    {
+      "name": "Soft Downpour",
+      "kind": "active",
+      "category": "healing",
+      "template": "aoeHealPulse",
+      "element": "water",
+      "cooldown": 20,
+      "healAmount": 14,
+      "healScope": "party",
+      "range": 110,
+      "reachUnits": 110,
+      "rangeBand": "melee",
+      "desc": "Restores 14 health to you and every ally within 3.5 tiles."
+    },
+    {
+      "name": "Washed Clean",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "water",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "conditionExpired",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "restoreResourceOverTime",
+        "resource": "stamina",
+        "perSec": 2,
+        "duration": 5
+      },
+      "desc": "When a condition expires on you, you recover 2 stamina a second for 5 seconds. Once every 10 seconds."
+    }
+  ]
+}

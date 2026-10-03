@@ -1,0 +1,71 @@
+{
+ "essence": "essBow",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Weighted Fan",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 18,
+   "volleyCount": 3,
+   "volleySpread": 0.36,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 7,
+   "range": 240,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.5,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "spreadAfflictions": 112,
+   "desc": "Looses 3 arrows at once, spread apart, each dealing 6 damage, and each hit has a 50% chance to leave the target [Slowed] for 5 seconds. Your afflictions on a target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Draw It Tight",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 224,
+   "maxMult": 1.4,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "consumeAffliction": true,
+   "desc": "Looses an arrow at a target up to 7 tiles away that deals 8 damage, rising to 1.4 times that at full reach. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Mesh Line",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 30,
+   "wallKind": "block",
+   "wallLength": 192,
+   "wallDuration": 8,
+   "wallThickness": 24,
+   "desc": "Raises a wall of mesh 6 tiles long that blocks enemies for 8 seconds."
+  },
+  {
+   "name": "Nothing Slips Through",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "piercing",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.12,
+   "desc": "Your damage rises 12% against enemies suffering an affliction."
+  }
+ ]
+}

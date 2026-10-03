@@ -1,0 +1,71 @@
+{
+  "essence": "essBird",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Buckler Slam",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "medium",
+      "base": 13,
+      "cooldown": 14,
+      "range": 80,
+      "knockback": 96,
+      "sunder": {
+        "amount": 0.1,
+        "duration": 4
+      },
+      "desc": "A wing-first slam that deals 13 damage, pushes the target back 3 tiles and leaves it 10% easier to wound for 4 seconds."
+    },
+    {
+      "name": "Wing Flap",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "wind",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 80,
+      "isAoe": true,
+      "aoeBand": "close",
+      "desc": "Beats a ring of wind that deals 3 damage to every enemy within 2.5 tiles."
+    },
+    {
+      "name": "Turned Aside",
+      "kind": "active",
+      "category": "defensive",
+      "template": "reflectWard",
+      "element": "physical",
+      "reflectKind": "debuff",
+      "reflectFrac": 0.2,
+      "reflectChance": 0.5,
+      "buffDuration": 8,
+      "cooldown": 30,
+      "desc": "Turns afflictions back on whoever inflicts them: each debuff laid on you has a 50% chance to be sent back to its source instead, for 8 seconds."
+    },
+    {
+      "name": "Wingfold",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 30,
+      "trigger": {
+        "on": "hpBelow",
+        "cooldown": 30,
+        "frac": 0.4
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 5
+      },
+      "desc": "Once your health falls below 40%, a shield worth 20% of your maximum health closes over you for 5 seconds. Once every 30 seconds."
+    }
+  ]
+}

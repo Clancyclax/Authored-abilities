@@ -1,0 +1,75 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Long Reach Peck",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "long",
+   "base": 36,
+   "cooldown": 90,
+   "range": 256,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "guaranteedCrit": true,
+   "desc": "A thrown point that deals 36 damage, up to 2 times that at maximum range. Every hit is a critical hit."
+  },
+  {
+   "name": "Skewering Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Throws a point that deals 5 damage, then leaps to 1 more enemy within 3.5 tiles, dealing 60% of the original damage. Your movement speed rises 10% for 2 seconds after each throw.",
+   "spammable": true
+  },
+  {
+   "name": "Stretch the Line",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "piercing",
+   "cooldown": 45,
+   "rangeMult": 1.4,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 15
+   },
+   "desc": "For 12 seconds, your attacks and spells reach 40% further. An escort of chicks fights beside you for 15 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Door-Facing Instinct",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "piercing",
+   "buffKind": "crit",
+   "amount": 0.1,
+   "regenPerSec": 0.3,
+   "desc": "Your critical strike chance rises by 10%. It also regenerates 0.3 health a second, permanently."
+  }
+ ]
+}

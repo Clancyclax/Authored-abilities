@@ -1,0 +1,69 @@
+{
+ "essence": "essDeer",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Page Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 200,
+   "maxMult": 1.8,
+   "desc": "Flicks a sheet that deals 4 damage, up to 1.8 times that at maximum range."
+  },
+  {
+   "name": "Rustling Leaves",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "wind",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 200,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "debuff": {
+    "key": "slowCast",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a cone of loose pages that deals 28 damage to everything caught in it, ignoring resistances. Each hit has a 50% chance to leave the target [Muddled] for 6 seconds."
+  },
+  {
+   "name": "Written Warning",
+   "kind": "active",
+   "category": "buff",
+   "template": "partyBuff",
+   "element": "physical",
+   "partyPower": 1,
+   "partyDmgPct": 0.15,
+   "buffDuration": 10,
+   "range": 160,
+   "cooldown": 40,
+   "desc": "Every ally within 5 tiles strikes 15% harder for 10 seconds, and fights with 1 more power while it holds."
+  },
+  {
+   "name": "Second Draft",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollCooldown": 10,
+   "rerollKinds": [
+    "crit"
+   ],
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

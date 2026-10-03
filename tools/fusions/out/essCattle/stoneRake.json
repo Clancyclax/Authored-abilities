@@ -1,0 +1,67 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Gathered Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1,
+   "speed": 360,
+   "radius": 8,
+   "chargesMax": 3,
+   "desc": "Sends a bolt that deals 7 damage. It holds 3 charges, and each kill gives one back."
+  },
+  {
+   "name": "Clean Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "range": 224,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "desc": "Sweeps a cone 7 tiles long ahead of you, dealing 26 damage to everything in it. The sweep ignores armour."
+  },
+  {
+   "name": "Gleaned Wind",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 50,
+   "buffStat": "regenStamina",
+   "buffAmount": 0.5,
+   "buffDuration": 15,
+   "desc": "Increases your stamina recovery by 50% for 15 seconds."
+  },
+  {
+   "name": "Gleaning",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 30
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 20
+   },
+   "desc": "When you run out of stamina, you regain 20 stamina. Once every 30 seconds."
+  }
+ ]
+}

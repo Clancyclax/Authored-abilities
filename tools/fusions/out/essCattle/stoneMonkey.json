@@ -1,0 +1,75 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Flung Muck",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flings muck that deals 4 damage, with a 30% chance of [Hindered] slowing the target's attacks for 4 seconds."
+  },
+  {
+   "name": "Scatter Kick",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "range": 200,
+   "coneAngle": 0.76,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "desc": "Kicks out in a wide cone 6 tiles long, dealing 14 damage to everything caught in it and knocking it back 2.5 tiles."
+  },
+  {
+   "name": "Decoy Trot",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "summonAnimal": "monkey",
+   "tauntRadius": 256,
+   "tauntDuration": 8,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 6
+   },
+   "desc": "A challenge that pulls up to 5 enemies within 8 tiles onto you for 8 seconds. While it lasts, a troop of monkeys fights beside you for 6 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Spare Hands",
+   "kind": "passive",
+   "category": "summon",
+   "template": "summonBonded",
+   "element": "physical",
+   "familiarDmg": 4,
+   "familiarRange": 160,
+   "familiarInterval": 1.2,
+   "familiarFamily": "monkey",
+   "familiarCreatureName": "Macaque",
+   "desc": "Calls a bonded macaque that fights beside you, striking for 4 damage every 1.2 seconds against enemies within 5 tiles."
+  }
+ ]
+}

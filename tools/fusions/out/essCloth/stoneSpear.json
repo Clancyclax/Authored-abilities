@@ -1,0 +1,74 @@
+{
+ "essence": "essCloth",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Thrown Seam",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "long",
+   "cooldown": 90,
+   "base": 30,
+   "range": 240,
+   "maxMult": 2.0,
+   "bossPct": 0.05,
+   "desc": "A thrown spear that deals 30 damage, up to 2 times that at maximum range, and also deals 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Pinning Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "cooldown": 14,
+   "base": 12,
+   "speed": 360,
+   "radius": 8,
+   "stunOnHit": 1.2,
+   "debuff": {
+    "key": "pinned",
+    "chance": 1,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Hurls a spear that deals 12 damage, stuns the target for 1.2 seconds and leaves it [Pinned] for 3 seconds."
+  },
+  {
+   "name": "Thrown Step",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "physical",
+   "cooldown": 6,
+   "dashDist": 128,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "A short burst of movement that carries you 4 tiles forward. Your movement speed rises by 20% for 4 seconds after you use it."
+  },
+  {
+   "name": "Skewer Line",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 8,
+    "range": 256
+   },
+   "desc": "When you kill an enemy, a spear flies to the nearest enemy within 8 tiles, dealing 8 damage. Once every 6 seconds."
+  }
+ ]
+}

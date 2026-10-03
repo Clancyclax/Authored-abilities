@@ -1,0 +1,84 @@
+{
+ "essence": "essCoral",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Settling Silt",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "large",
+   "range": 128,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A heavy settling of silt deals 26 damage to every enemy within 4 tiles and leaves each [Slowed] for 8 seconds. Against a boss or elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Ponderous Lob",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1,
+   "range": 160,
+   "maxMult": 1.4,
+   "hpCostPct": 0.04,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 1,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lobs a clod of reef up to 5 tiles that deals 9 damage, rising to 1.4 times that at full reach, and leaves the target [Hindered] for 4 seconds. It costs 4% of your maximum health."
+  },
+  {
+   "name": "Slow Setting",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "rock",
+   "healScope": "self",
+   "hotPerSec": 4,
+   "hotDuration": 12,
+   "resist": {
+    "element": "physical",
+    "amount": 0.15
+   },
+   "cooldown": 45,
+   "desc": "Restores 4 health a second to you for 12 seconds and raises your physical resistance by 15% while it lasts."
+  },
+  {
+   "name": "Unhurried Shell",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "rock",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.15,
+    "duration": 8
+   },
+   "desc": "While you are at full health, a shield worth 15% of your maximum health closes over you for 8 seconds. Once every 20 seconds."
+  }
+ ]
+}

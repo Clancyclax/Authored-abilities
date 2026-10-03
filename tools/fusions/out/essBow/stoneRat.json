@@ -1,0 +1,80 @@
+{
+ "essence": "essBow",
+ "stone": "stoneRat",
+ "fusions": [
+  {
+   "name": "Plague Arrow",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "debuff": {
+    "key": "disease",
+    "chance": 0.35,
+    "duration": 8,
+    "stacks": 1,
+    "potency": 1
+   },
+   "speed": 380,
+   "radius": 7,
+   "desc": "Looses an arrow that deals 4 damage to the first enemy it meets, with a 35% chance to leave it [Diseased] for 8 seconds."
+  },
+  {
+   "name": "Scatter Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 15,
+   "volleyCount": 4,
+   "volleySpread": 0.6,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 6,
+   "range": 240,
+   "spreadAfflictions": 112,
+   "desc": "Looses 4 arrows at once, spread apart, each dealing 5 damage. Your afflictions on a target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Gnawing Horde",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 50,
+   "summonKind": "swarm",
+   "summonDmg": 3,
+   "summonDuration": 15,
+   "summonInterval": 1,
+   "summonRange": 128,
+   "castTime": 1,
+   "desc": "Summons a swarm for 15 seconds that gnaws enemies within 4 tiles for 3 damage every 1 second."
+  },
+  {
+   "name": "Last One Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 60,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 60,
+    "frac": 0.3
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.3,
+    "duration": 8
+   },
+   "desc": "When your health falls below 30%, you heal for 30% of the damage you deal for 8 seconds. Once every 60 seconds."
+  }
+ ]
+}

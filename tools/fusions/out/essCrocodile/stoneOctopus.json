@@ -1,0 +1,75 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Ink Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 320,
+   "radius": 10,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "desc": "Sends a bolt of ink into the first enemy it meets, dealing 28 damage and bursting for 80% of that to every enemy within 3.5 tiles of it."
+  },
+  {
+   "name": "Quad Spurt",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 200,
+   "castTime": 0.2,
+   "desc": "Looses 4 jets of water in a spread, each dealing 3 damage."
+  },
+  {
+   "name": "Jet Away",
+   "kind": "active",
+   "category": "movement",
+   "template": "dash",
+   "element": "water",
+   "cooldown": 12,
+   "dashDist": 160,
+   "desc": "Carries you 5 tiles forward in a burst."
+  },
+  {
+   "name": "Many Arms",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 6,
+    "bindOnHit": {
+     "slowPct": 0.2,
+     "duration": 2
+    }
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 128
+   },
+   "desc": "Each time you strike with your weapon, an arm lashes the nearest enemy within 4 tiles, deals 6 damage and slows it by 20% for 2 seconds. Once every 6 seconds."
+  }
+ ]
+}

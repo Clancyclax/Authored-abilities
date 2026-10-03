@@ -1,0 +1,74 @@
+{
+  "essence": "essBird",
+  "stone": "stonePlant",
+  "fusions": [
+    {
+      "name": "Bitter Seed",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "plant",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 340,
+      "radius": 7,
+      "dot": {
+        "dmgPerTick": 1,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Drops a seed that deals 4 damage to the first enemy it meets and leaves it [Poisoned] for 1 damage a second for 5 seconds."
+    },
+    {
+      "name": "Rooting Descent",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "plant",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 22,
+      "range": 100,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1.2,
+      "desc": "Drives down roots that deal 12 damage to every enemy within 3 tiles and stun them for 1.2 seconds."
+    },
+    {
+      "name": "Sown Glade",
+      "kind": "active",
+      "category": "healing",
+      "template": "bloomField",
+      "element": "plant",
+      "healPerSec": 3,
+      "fieldDuration": 10,
+      "range": 125,
+      "cooldown": 32,
+      "healScope": "party",
+      "desc": "Raises a growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+    },
+    {
+      "name": "Seed on the Wind",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "plant",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "moveDistance",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "regenBurst",
+        "perSec": 3,
+        "duration": 4
+      },
+      "desc": "Every few paces you cover, you regain 3 health a second for 4 seconds. Once every 10 seconds."
+    }
+  ]
+}

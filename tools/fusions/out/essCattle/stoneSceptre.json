@@ -1,0 +1,73 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneSceptre",
+ "fusions": [
+  {
+   "name": "Decree Blow",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 16,
+   "range": 86,
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "A commanding blow that deals 16 damage, stuns the target for 1.2 seconds and leaves it 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Sovereign Charge",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 150,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "partyBuffOnHit": {
+    "pct": 0.2,
+    "dur": 12
+   },
+   "desc": "A charge through every enemy within 3.5 tiles, dealing 28 damage. Your party's damage rises 20% for 12 seconds."
+  },
+  {
+   "name": "Command Presence",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 40,
+   "tauntRadius": 224,
+   "tauntDuration": 10,
+   "tauntMax": 6,
+   "threatMult": 1.5,
+   "desc": "A challenge that pulls up to 6 enemies within 7 tiles onto you for 10 seconds, drawing 1.5 times the usual threat."
+  },
+  {
+   "name": "Presiding Calm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "fullHealth",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.3,
+    "duration": 6
+   },
+   "desc": "When your health is full, you gain a ward that soaks 30% of your maximum health for 6 seconds. Once every 20 seconds."
+  }
+ ]
+}

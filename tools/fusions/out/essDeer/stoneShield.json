@@ -1,0 +1,72 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Buckler Skim",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 13,
+   "cooldown": 16,
+   "speed": 340,
+   "radius": 8,
+   "knockback": 96,
+   "desc": "Skims a buckler that deals 13 damage to the first enemy it meets and knocks it back 3 tiles."
+  },
+  {
+   "name": "Rebound Stamp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "hpCostPct": 0.04,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "desc": "Costs 4% of your maximum health. A kick that deals 8 damage and leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Turn Aside",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 8,
+   "armorBonus": 0.08,
+   "cooldown": 30,
+   "desc": "Raises a barrier that absorbs the next 24 damage and holds for 8 seconds. Your armour rises by 8%."
+  },
+  {
+   "name": "Thrown Wide",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, you gain a ward that absorbs 20% of your maximum health for 6 seconds. Once every 15 seconds."
+  }
+ ]
+}

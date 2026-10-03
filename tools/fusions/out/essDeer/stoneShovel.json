@@ -1,0 +1,65 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Churned Turf",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 18,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 80,
+   "desc": "Kicks up the ground, dealing 12 damage to every enemy within 3 tiles and knocking them back 2.5 tiles."
+  },
+  {
+   "name": "Clod Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "earth",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 200,
+   "maxMult": 1.6,
+   "desc": "Hurls a clod that deals 5 damage, up to 1.6 times that at maximum range."
+  },
+  {
+   "name": "Dig In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "armorBuff",
+   "element": "earth",
+   "armorBonus": 0.2,
+   "buffDuration": 12,
+   "cooldown": 40,
+   "desc": "Raises your armour by 20% for 12 seconds."
+  },
+  {
+   "name": "Fresh Footing",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.3,
+    "charges": 2
+   },
+   "desc": "When you strike, your next 2 spells deal 30% more damage. Once every 10 seconds."
+  }
+ ]
+}

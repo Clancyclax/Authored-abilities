@@ -1,0 +1,69 @@
+{
+  "essence": "essBird",
+  "stone": "stoneSceptre",
+  "fusions": [
+    {
+      "name": "Royal Edict",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "radiant",
+      "role": "long",
+      "base": 30,
+      "cooldown": 90,
+      "speed": 380,
+      "radius": 8,
+      "partyBuffOnHit": {
+        "pct": 0.2,
+        "dur": 12
+      },
+      "desc": "Strikes the first enemy it meets for 30 damage. When it hits, allies strike 20% harder for 12 seconds."
+    },
+    {
+      "name": "Proclamation",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "radiant",
+      "role": "basic",
+      "base": 3,
+      "cooldown": 0.9,
+      "spammable": true,
+      "range": 128,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "debuff": {
+        "key": "dampen",
+        "chance": 0.3,
+        "duration": 4,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Calls out in a cone 4 tiles long that deals 3 damage to everything in it, each with a 30% chance of [Damped] for 4 seconds."
+    },
+    {
+      "name": "Rallying Overflight",
+      "kind": "active",
+      "category": "buff",
+      "template": "partyBuff",
+      "element": "radiant",
+      "cooldown": 45,
+      "range": 192,
+      "buffDuration": 10,
+      "partyPower": 1,
+      "partyDmgPct": 0.2,
+      "desc": "Every ally within 6 tiles strikes 20% harder for 10 seconds, and fights with 1 more power while it holds."
+    },
+    {
+      "name": "Orderly Skies",
+      "kind": "passive",
+      "category": "passive buff",
+      "template": "cooldownPassive",
+      "element": "radiant",
+      "cooldownReduction": 0.08,
+      "armorBonus": 0.05,
+      "desc": "Every ability you have comes round 8% sooner. Your armour rises by 5%."
+    }
+  ]
+}

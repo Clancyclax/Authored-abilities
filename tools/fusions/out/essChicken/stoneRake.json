@@ -1,0 +1,86 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Flung Dirt",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "speed": 360,
+   "radius": 8,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 1,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "hasteOnUse": {
+    "pct": 0.1,
+    "duration": 2
+   },
+   "desc": "Scratches up a clod and flings it, dealing 4 damage and leaving the target [Slowed] for 2 seconds. Your movement speed rises 10% for 2 seconds after each throw.",
+   "spammable": true
+  },
+  {
+   "name": "Sweep the Yard",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 12,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 150,
+   "coneAngle": 0.76,
+   "knockback": 96,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Rakes a wide arc ahead of you, dealing 12 damage to everything in it and knocking it back 3 tiles. Its damage rises 10% for each ally within 5.5 tiles, up to 30%."
+  },
+  {
+   "name": "Tidy Furrows",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "earth",
+   "cooldown": 24,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "ally",
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 10
+   },
+   "desc": "Restores 4 health a second to the ally who needs it most, for 6 seconds. An escort of chicks fights beside you for 10 seconds, striking for 4 every 1.4 seconds."
+  },
+  {
+   "name": "Gleaned Grain",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "earth",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 8
+   },
+   "desc": "When you kill an enemy, you regain 8 stamina. Once every 6 seconds."
+  }
+ ]
+}

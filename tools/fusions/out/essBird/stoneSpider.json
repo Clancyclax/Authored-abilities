@@ -1,0 +1,90 @@
+{
+ "essence": "essBird",
+ "stone": "stoneSpider",
+ "fusions": [
+  {
+   "name": "Spun Fang",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "poison",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "spreadAfflictions": 128,
+   "desc": "Strikes the first enemy it meets for 12 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Strand Flurry",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 200,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.2,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 strands spread apart, each dealing 3 damage with a 20% chance of [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Hung Snare",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "summonKind": "trap",
+   "summonDuration": 120,
+   "cooldown": 360,
+   "summonDmg": 28,
+   "summonRange": 96,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 88,
+   "summonArmDelay": 0.1,
+   "trapDelivery": "spawned",
+   "castTime": 1.6,
+   "desc": "Conjures a snare onto the nearest enemy. It waits 2 minutes, and the first 2 enemies to come within 3 tiles take 28 damage in a blast around it."
+  },
+  {
+   "name": "Felt Tremor",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.15,
+    "strikes": 1
+   },
+   "desc": "Each time you afflict something, your next strike gains 15% critical hit chance. Once every 8 seconds."
+  }
+ ]
+}

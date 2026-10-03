@@ -1,0 +1,73 @@
+{
+  "essence": "essCattle",
+  "stone": "stoneMouse",
+  "fusions": [
+    {
+      "name": "Quick Trample",
+      "kind": "active",
+      "category": "attack",
+      "template": "rangeStrike",
+      "element": "physical",
+      "role": "resource",
+      "base": 8,
+      "cooldown": 1,
+      "range": 160,
+      "maxMult": 1.5,
+      "chargesMax": 4,
+      "desc": "A stamping blow that deals 8 damage, up to 1.5 times as much at its maximum range of 5 tiles. It holds 4 charges, and each kill gives one back."
+    },
+    {
+      "name": "Startling Stamp",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 20,
+      "range": 110,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "stunOnHit": 1.2,
+      "desc": "A thunderous stamp that deals 12 damage to every enemy within 3.5 tiles and stuns them for 1.2 seconds."
+    },
+    {
+      "name": "Rind Lure",
+      "kind": "active",
+      "category": "defensive",
+      "template": "tauntPull",
+      "element": "physical",
+      "desc": "A challenge that pulls up to 4 enemies within 6 tiles onto you for 6 seconds. While it lasts, a pack of mice fights beside you for 5 seconds, striking for 3 every 1.2 seconds.",
+      "summonAnimal": "mouse",
+      "cooldown": 30,
+      "tauntRadius": 192,
+      "tauntDuration": 6,
+      "tauntMax": 4,
+      "threatMult": 1,
+      "escort": {
+        "dmg": 3,
+        "interval": 1.2,
+        "duration": 5
+      }
+    },
+    {
+      "name": "Scurry Clear",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 15,
+      "trigger": {
+        "on": "hurtNonFire",
+        "cooldown": 15
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.2,
+        "duration": 6
+      },
+      "desc": "When you are hurt, you gain a ward that soaks 20% of your maximum health for 6 seconds. Once every 15 seconds."
+    }
+  ]
+}

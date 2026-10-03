@@ -1,0 +1,76 @@
+{
+  "essence": "essBird",
+  "stone": "stoneSnake",
+  "fusions": [
+    {
+      "name": "Quick Fang",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "poison",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "spammable": true,
+      "speed": 380,
+      "radius": 7,
+      "dot": {
+        "dmgPerTick": 2,
+        "ticks": 5,
+        "tickMs": 1000,
+        "critChance": 0.05,
+        "label": "Poisoned"
+      },
+      "desc": "Strikes the first enemy it meets for 4 damage and leaves it [Poisoned] for 2 damage a second for 5 seconds."
+    },
+    {
+      "name": "Venom Settled",
+      "kind": "active",
+      "category": "attack",
+      "template": "stackStrike",
+      "element": "poison",
+      "role": "execute",
+      "base": 16,
+      "cooldown": 14,
+      "range": 84,
+      "stackMult": 1.8,
+      "requiresTargetBelow": 0.3,
+      "executeLadder": true,
+      "desc": "Falls on a target at or below 30% health, consuming every affliction on it and adding 1.8 times their remaining damage to a blow that deals 16 damage."
+    },
+    {
+      "name": "Lunging Glide",
+      "kind": "active",
+      "category": "movement",
+      "template": "dash",
+      "element": "poison",
+      "dashDist": 160,
+      "cooldown": 14,
+      "hasteOnUse": {
+        "pct": 0.15,
+        "duration": 4
+      },
+      "desc": "A short burst of movement that carries you 5 tiles forward. For 4 seconds after, you move 15% faster."
+    },
+    {
+      "name": "Coiled Wait",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "poison",
+      "isTriggered": true,
+      "cooldown": 8,
+      "trigger": {
+        "on": "critDrought",
+        "cooldown": 8,
+        "seconds": 8
+      },
+      "effect": {
+        "kind": "critChance",
+        "amount": 0.4,
+        "strikes": 1
+      },
+      "desc": "After 8 seconds without a critical hit, your crit chance rises by 40% for your next strike. Once every 8 seconds."
+    }
+  ]
+}

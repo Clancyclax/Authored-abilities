@@ -1,0 +1,82 @@
+{
+ "essence": "essCoral",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Seeded Cannon",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "long",
+   "base": 28,
+   "cooldown": 90,
+   "speed": 360,
+   "radius": 8,
+   "bossPct": 0.05,
+   "debuff": {
+    "key": "verdantCage",
+    "chance": 1,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Launches a seed that takes root, dealing 28 damage to the first enemy it meets and leaving it [Caged] for 6 seconds. Against a boss or elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Crowding Growth",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "plant",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 96,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprouts fronds around you, dealing 3 damage to every enemy within 3 tiles, each with a 40% chance to be [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Sown Shallows",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "healPerSec": 3,
+   "fieldDuration": 12,
+   "range": 125,
+   "reachUnits": 125,
+   "rangeBand": "melee",
+   "healScope": "party",
+   "cooldown": 45,
+   "allyScaling": {
+    "per": 0.1,
+    "max": 4,
+    "range": 180
+   },
+   "allyRange": 180,
+   "allyMax": 4,
+   "desc": "Sows a thriving bed where you stand. For 12 seconds it restores 3 health a second to you and any ally within 4 tiles of it. Every ally within 5.5 tiles makes it 10% stronger, up to 4."
+  },
+  {
+   "name": "Rootbound",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveBuff",
+   "element": "plant",
+   "buffKind": "maxHp",
+   "amount": 16,
+   "regenPerSec": 0.5,
+   "desc": "Your maximum health rises by 16. You also regenerate 0.5 health a second, permanently."
+  }
+ ]
+}

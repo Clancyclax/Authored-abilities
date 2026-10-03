@@ -1,0 +1,82 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Gleaning Reap",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "reachUnits": 84,
+   "rangeBand": "melee",
+   "executeLadder": true,
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.6,
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 5
+   },
+   "desc": "A strike that deals 20 damage to a target at or below 25% health, consuming every affliction on it and adding 1.6 times their remaining damage to the blow. You move 15% faster for 5 seconds afterwards."
+  },
+  {
+   "name": "Crescent Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 150,
+   "coneAngle": 0.76,
+   "chargesMax": 4,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "Cuts a wide arc ahead of you, dealing 9 damage to everything in it. It holds 4 charges, and a kill gives one back. Its damage rises 10% for each ally within 5.5 tiles, up to 30%."
+  },
+  {
+   "name": "Stored Grain",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 24,
+   "hotPerSec": 4,
+   "hotDuration": 6,
+   "healScope": "self",
+   "hasteOnUse": {
+    "pct": 0.15,
+    "duration": 4
+   },
+   "desc": "Restores 4 health a second to you for 6 seconds. Your movement speed rises 15% for 4 seconds after you use it."
+  },
+  {
+   "name": "Harvest Fervour",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 6
+   },
+   "desc": "When you kill an enemy, your critical hit chance rises by 20% for 6 seconds. Once every 8 seconds."
+  }
+ ]
+}

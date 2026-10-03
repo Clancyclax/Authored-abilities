@@ -1,0 +1,87 @@
+{
+  "essence": "essCat",
+  "stone": "stoneSpider",
+  "fusions": [
+    {
+      "name": "Silk Spit",
+      "kind": "active",
+      "category": "attack",
+      "template": "projectileBall",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.8,
+      "speed": 360,
+      "radius": 8,
+      "reachUnits": 288,
+      "rangeBand": "long",
+      "spammable": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.6,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Spits silk that deals 4 damage, with a 60% chance of [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Binding Spray",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "physical",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 18,
+      "range": 300,
+      "coneAngle": 0.76,
+      "isAoe": true,
+      "aoeBand": "large",
+      "debuff": {
+        "key": "pinned",
+        "chance": 0.5,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Looses a cone of silk that deals 12 damage to everything caught in it and knocks it back 2 tiles. Each hit has a 50% chance of [Pinned] for 3 seconds.",
+      "knockback": 64
+    },
+    {
+      "name": "Anchor Line",
+      "kind": "active",
+      "category": "summon",
+      "template": "activeSummon",
+      "element": "physical",
+      "cooldown": 40,
+      "summonKind": "trap",
+      "summonDuration": 12,
+      "summonDmg": 20,
+      "summonRange": 96,
+      "summonInterval": 0,
+      "summonCharges": 2,
+      "summonBlast": 88,
+      "summonArmDelay": 0.5,
+      "trapDelivery": "spawned",
+      "desc": "Spins a snare onto the nearest enemy that waits 12 seconds. The first 2 enemies to come within 3 tiles trigger a blast that deals 20 damage."
+    },
+    {
+      "name": "Waiting Threads",
+      "kind": "passive",
+      "category": "stacking",
+      "template": "stacking",
+      "element": "physical",
+      "stackShape": "mark",
+      "stackBuild": "hit",
+      "stackPay": "burst",
+      "stackCap": 4,
+      "stackDecay": 6,
+      "stackSpend": "crit",
+      "stackOn": "enemy",
+      "stackScale": 1,
+      "stackIcon": "stackEye",
+      "desc": "Every hit you land ties a strand to that enemy, up to 4. Your next critical hit on it spends them all: the strands pull tight and strike it for part of your weapon damage per strand. Unfed, a strand fades every 6 seconds."
+    }
+  ]
+}

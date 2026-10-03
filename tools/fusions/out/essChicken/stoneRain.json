@@ -1,0 +1,85 @@
+{
+ "essence": "essChicken",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Falling Grey",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "range": 220,
+   "reachUnits": 200,
+   "rangeBand": "medium",
+   "maxMult": 1.6,
+   "hpCostPct": 0.04,
+   "scaleOn": "alliesNear",
+   "scalePer": 0.1,
+   "scaleCap": 0.3,
+   "desc": "A drop from above that deals 8 damage, up to 1.6 times that at maximum range, and costs 4% of your maximum health. Its damage rises 10% for each ally within 5.5 tiles, up to 30%."
+  },
+  {
+   "name": "Storm Front",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "long",
+   "base": 26,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 200,
+   "coneAngle": 0.76,
+   "guaranteedCrit": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.6,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Beats a gale of rain ahead of you, dealing 26 damage to everything in the cone. Every hit is a critical hit, and the target has a 60% chance of [Slowed] for 5 seconds."
+  },
+  {
+   "name": "Soaked Brood",
+   "kind": "active",
+   "category": "healing",
+   "template": "aoeHealPulse",
+   "element": "water",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "party",
+   "range": 110,
+   "reachUnits": 110,
+   "rangeBand": "melee",
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 5
+   },
+   "desc": "Restores 14 health to you and every ally within 3.5 tiles. Your movement speed rises 20% for 5 seconds after you use it."
+  },
+  {
+   "name": "Damp Feathers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "When you are hurt by something other than fire, you gain a ward that absorbs 20% of your maximum health for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

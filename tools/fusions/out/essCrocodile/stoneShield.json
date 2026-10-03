@@ -1,0 +1,71 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Bulwark Slam",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "knockback": 96,
+   "desc": "Slams the ground around you, dealing 12 damage to every enemy within 3 tiles and knocking each 3 tiles back."
+  },
+  {
+   "name": "Hard Rebuke",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "range": 86,
+   "spammable": true,
+   "desc": "Cracks the target with your armoured jaw, dealing 5 damage, leaving it 6% easier to wound for 4 seconds and healing you for 10% of the damage dealt.",
+   "sunder": {
+    "amount": 0.06,
+    "duration": 4
+   },
+   "leech": 0.1
+  },
+  {
+   "name": "Raised Guard",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 28,
+   "shieldDuration": 8,
+   "shieldStrikes": 4,
+   "desc": "Raises a barrier that absorbs the next 28 damage and holds for 8 seconds."
+  },
+  {
+   "name": "Battered Hide",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "physical",
+   "stackShape": "ledger",
+   "stackBuild": "taken",
+   "stackPay": "ward",
+   "stackCap": 8,
+   "stackDecay": 10,
+   "stackSpend": "full",
+   "stackOn": "self",
+   "stackScale": 0.5,
+   "stackIcon": "stackWard",
+   "desc": "Every time you take damage, a stack builds on you, up to 8. When you reach 8, they all spend at once: you gain a shield that soaks 4% of your maximum health per stack (28% at full). Unfed, a stack fades every 10 seconds."
+  }
+ ]
+}

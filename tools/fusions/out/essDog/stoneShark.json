@@ -1,0 +1,75 @@
+{
+ "essence": "essDog",
+ "stone": "stoneShark",
+ "fusions": [
+  {
+   "name": "Circle and Strike",
+   "kind": "active",
+   "category": "attack",
+   "template": "imbueStrike",
+   "element": "blood",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "strikes": 1,
+   "chargeTo": 224,
+   "dot": {
+    "dmgPerTick": 3,
+    "ticks": 6,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Rushes 7 tiles to the target and bites for 14 damage, making it [Bleeding] for 3 damage a second for 6 seconds."
+  },
+  {
+   "name": "Blood in the Water",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "blood",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "hpCostPct": 0.05,
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "desc": "Snaps at every enemy within 3 tiles, dealing 8 damage. The damage rises 8% for each affliction on the target, up to 40%. Costs 5% of your maximum health."
+  },
+  {
+   "name": "Feeding Pace",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "blood",
+   "cooldown": 40,
+   "buffStat": "attackSpeed",
+   "buffAmount": 0.3,
+   "buffDuration": 10,
+   "desc": "Increases your attack speed by 30% for 10 seconds."
+  },
+  {
+   "name": "Fed by the Chase",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "blood",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "lifedrainBuff",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you kill something, you heal for 25% of the damage you deal for 5 seconds. Once every 8 seconds."
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "essence": "essCrocodile",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Snatch Lunge",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "range": 192,
+   "maxMult": 1,
+   "chargeTo": 192,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.6,
+    "duration": 2,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Lunges up to 6 tiles to the target and clamps down, dealing 12 damage with a 60% chance to leave it [Pinned] for 2 seconds."
+  },
+  {
+   "name": "Spit Jet",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "chain": {
+    "count": 1,
+    "radius": 110,
+    "frac": 0.6
+   },
+   "chainCount": 1,
+   "chainRange": 110,
+   "chainDamagePct": 0.6,
+   "desc": "Spits a jet of muddy water that deals 4 damage, then hops to 1 more enemy within 3.5 tiles for 60% of that damage."
+  },
+  {
+   "name": "Branch Swing",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "physical",
+   "cooldown": 36,
+   "buffStat": "dodgeChance",
+   "buffAmount": 0.2,
+   "buffDuration": 10,
+   "blinkOnUse": 96,
+   "desc": "Increases your dodge chance by 20% for 10 seconds and swings you 3 tiles from where you stood."
+  },
+  {
+   "name": "Light Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you afflict an enemy, you regain 6 stamina. Once every 5 seconds."
+  }
+ ]
+}

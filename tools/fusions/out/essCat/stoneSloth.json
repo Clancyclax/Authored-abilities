@@ -1,0 +1,79 @@
+{
+  "essence": "essCat",
+  "stone": "stoneSloth",
+  "fusions": [
+    {
+      "name": "Eventual Blow",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "physical",
+      "role": "long",
+      "base": 40,
+      "cooldown": 120,
+      "range": 86,
+      "reachUnits": 86,
+      "rangeBand": "melee",
+      "bossPct": 0.05,
+      "sunder": {
+        "amount": 0.15,
+        "duration": 6
+      },
+      "desc": "A slow blow that deals 40 damage, plus 5% of a boss's or elite's maximum health. The target is left 15% easier to wound for 6 seconds."
+    },
+    {
+      "name": "Drowsy Sweep",
+      "kind": "active",
+      "category": "attack",
+      "template": "aoeRing",
+      "element": "physical",
+      "role": "basic",
+      "base": 4,
+      "cooldown": 0.9,
+      "range": 96,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "spammable": true,
+      "debuff": {
+        "key": "slowMove",
+        "chance": 0.5,
+        "duration": 3,
+        "stacks": 1,
+        "potency": 1
+      },
+      "desc": "Sweeps a lazy arc, dealing 4 damage to every enemy within 3 tiles. Each hit has a 50% chance of [Slowed] for 3 seconds."
+    },
+    {
+      "name": "Long Doze",
+      "kind": "active",
+      "category": "restore",
+      "template": "resourceRestore",
+      "element": "physical",
+      "cooldown": 40,
+      "resource": "stamina",
+      "overTime": true,
+      "restorePerSec": 4,
+      "restoreDuration": 8,
+      "desc": "Restores 4 stamina a second for 8 seconds."
+    },
+    {
+      "name": "Waking Stretch",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "physical",
+      "isTriggered": true,
+      "cooldown": 20,
+      "trigger": {
+        "on": "fullStamina",
+        "cooldown": 20
+      },
+      "effect": {
+        "kind": "physicalDamageMult",
+        "amount": 0.3,
+        "duration": 8
+      },
+      "desc": "When your stamina is full, your physical damage rises 30% for 8 seconds. Once every 20 seconds."
+    }
+  ]
+}

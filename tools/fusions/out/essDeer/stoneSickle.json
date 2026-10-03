@@ -1,0 +1,74 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Scything Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "slashing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 20,
+   "range": 100,
+   "coneAngle": 1.2,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 112,
+   "debuff": {
+    "key": "bleed",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wide curved cut that deals 14 damage to everything caught in it, with a 40% chance to leave targets [Bleeding] for 5 seconds. Your afflictions on the target spread to every enemy within 3.5 tiles."
+  },
+  {
+   "name": "Harvest Toll",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "slashing",
+   "role": "long",
+   "base": 30,
+   "cooldown": 120,
+   "range": 200,
+   "maxMult": 1.5,
+   "bossPct": 0.05,
+   "desc": "A thrown cut that deals 30 damage, up to 1.5 times that at maximum range, plus 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Gleaner's Rest",
+   "kind": "active",
+   "category": "buff",
+   "template": "statBuff",
+   "element": "nature",
+   "buffStat": "regenStamina",
+   "buffAmount": 0.4,
+   "buffDuration": 15,
+   "cooldown": 50,
+   "desc": "Increases your stamina recovery by 40% for 15 seconds."
+  },
+  {
+   "name": "Reaper's Pause",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you restore 6 stamina. Once every 6 seconds."
+  }
+ ]
+}

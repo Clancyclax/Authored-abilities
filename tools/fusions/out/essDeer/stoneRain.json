@@ -1,0 +1,79 @@
+{
+ "essence": "essDeer",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Squall Barrage",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "water",
+   "role": "medium",
+   "base": 5,
+   "cooldown": 18,
+   "volleyCount": 5,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 280,
+   "radius": 6,
+   "range": 220,
+   "castTime": 0.5,
+   "knockback": 64,
+   "desc": "Looses 5 streams of rain at once, spread apart, each dealing 5 damage and knocking the target back 2 tiles."
+  },
+  {
+   "name": "Puddle Stomp",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "water",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1,
+   "range": 86,
+   "hpCostPct": 0.04,
+   "sunder": {
+    "amount": 0.08,
+    "duration": 5
+   },
+   "debuff": {
+    "key": "wet",
+    "chance": 0.6,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Costs 4% of your maximum health. A wet kick that deals 8 damage, leaves the target 8% easier to wound for 5 seconds and has a 60% chance to leave it [Soaked] for 6 seconds."
+  },
+  {
+   "name": "Washed Clean",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "water",
+   "cleanseCount": 3,
+   "healScope": "self",
+   "cooldown": 45,
+   "desc": "Removes up to 3 conditions from you."
+  },
+  {
+   "name": "Smell of Storm",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "hurtNonFire",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "When you are hurt by something other than fire, you gain a ward that absorbs 20% of your maximum health for 5 seconds. Once every 20 seconds."
+  }
+ ]
+}

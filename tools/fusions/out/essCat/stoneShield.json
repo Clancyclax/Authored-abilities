@@ -1,0 +1,85 @@
+{
+ "essence": "essCat",
+ "stone": "stoneShield",
+ "fusions": [
+  {
+   "name": "Buckler Check",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "range": 86,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "desc": "A hard check that deals 14 damage, knocks the target back 3 tiles and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Rebounding Toss",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 288,
+   "rangeBand": "long",
+   "chargesMax": 3,
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.6
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.6,
+   "desc": "Throws a guard that deals 8 damage and then leaps to 2 more enemies within 3 tiles, each hit dealing 60% of the original damage. It holds 3 charges, and kills give charges back."
+  },
+  {
+   "name": "Narrow Miss",
+   "kind": "active",
+   "category": "defensive",
+   "template": "absorbShield",
+   "element": "physical",
+   "cooldown": 30,
+   "shieldKind": "timed",
+   "shieldSource": "own",
+   "shieldCostPerPoint": 1,
+   "shieldAmount": 24,
+   "shieldStrikes": 4,
+   "shieldDuration": 6,
+   "dodgeBonus": 0.1,
+   "desc": "Raises a guard that soaks 24 damage for 6 seconds. You gain 10% dodge chance while it lasts."
+  },
+  {
+   "name": "Guard Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.5
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 5
+   },
+   "desc": "When your health falls below 50%, you gain a ward that soaks 25% of your maximum health for 5 seconds. Once every 30 seconds."
+  }
+ ]
+}

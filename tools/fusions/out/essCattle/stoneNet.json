@@ -1,0 +1,86 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Hobbling Throw",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.9,
+   "range": 140,
+   "maxMult": 1.4,
+   "spammable": true,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.35,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A lashing throw that deals 5 damage, with a 35% chance of [Slowed] reducing the target's movement for 4 seconds."
+  },
+  {
+   "name": "Corral",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 10,
+   "cooldown": 18,
+   "range": 110,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spreadAfflictions": 128,
+   "debuff": {
+    "key": "pinned",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Closes in on every enemy within 3.5 tiles, dealing 10 damage with a 40% chance of [Pinned] for 3 seconds. Your afflictions on each target spread to enemies within 4 tiles."
+  },
+  {
+   "name": "Paddock",
+   "kind": "active",
+   "category": "defensive",
+   "template": "barrierWall",
+   "element": "physical",
+   "cooldown": 20,
+   "wallKind": "pull",
+   "wallLength": 210,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "bindOnHit": {
+    "slowPct": 0.16,
+    "duration": 2
+   },
+   "desc": "Raises a line of force 6.5 tiles long ahead of you for 6 seconds, dragging every enemy near it inward. Anything struck moves 16% slower for 2 seconds."
+  },
+  {
+   "name": "Tightening Mesh",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 5
+   },
+   "desc": "When you inflict a condition, your damage rises 25% for 5 seconds. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "essence": "essCattle",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Stroke",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 20,
+   "cooldown": 14,
+   "range": 84,
+   "executeLadder": true,
+   "stackMult": 0.5,
+   "requiresTargetBelow": 0.25,
+   "consumeAfflictionsPer": 0.6,
+   "desc": "Consumes every affliction on the target, adding 0.5 times their remaining damage to this blow. It only strikes a target at or below 25% health, and that threshold rises with each rank. The blow deals 20 damage."
+  },
+  {
+   "name": "Wide Swath",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "range": 160,
+   "coneAngle": 0.9,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "spammable": true,
+   "desc": "Cuts a cone 5 tiles long ahead of you, dealing 4 damage to everything in it."
+  },
+  {
+   "name": "Chewed Over",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHeal",
+   "element": "physical",
+   "cooldown": 20,
+   "healAmount": 14,
+   "healScope": "self",
+   "scaleOn": "selfDepletion",
+   "scalePer": 0.08,
+   "scaleCap": 0.4,
+   "critChance": 0.1,
+   "desc": "Restores 14 health to you, with a 10% chance of a critical heal. Its healing rises +8% for every 10% of your health already gone (max +40%)."
+  },
+  {
+   "name": "Harvest Home",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When you kill an enemy, you regain 3 health a second for 5 seconds. Once every 5 seconds."
+  }
+ ]
+}

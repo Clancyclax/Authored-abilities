@@ -1,0 +1,79 @@
+{
+ "essence": "essBow",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Raking Fire",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "piercing",
+   "role": "medium",
+   "base": 6,
+   "cooldown": 20,
+   "volleyCount": 4,
+   "volleySpread": 0.5,
+   "isAoe": true,
+   "speed": 380,
+   "radius": 7,
+   "range": 240,
+   "spreadAfflictions": 128,
+   "desc": "Looses 4 arrows at once, spread apart, each dealing 6 damage. Your afflictions on a target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Scratch Line",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "piercing",
+   "role": "basic",
+   "base": 5,
+   "cooldown": 0.8,
+   "spammable": true,
+   "range": 224,
+   "maxMult": 1.3,
+   "reachUnits": 224,
+   "rangeBand": "medium",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Looses an arrow at a target up to 7 tiles away that deals 5 damage and leaves it [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Draw Them In",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 30,
+   "tauntRadius": 256,
+   "tauntDuration": 6,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Pulls up to 5 enemies within 8 tiles into focusing on you for 6 seconds."
+  },
+  {
+   "name": "Reclaim Arrows",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you restore 6 stamina. Once every 5 seconds."
+  }
+ ]
+}
