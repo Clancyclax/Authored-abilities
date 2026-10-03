@@ -1,0 +1,76 @@
+{
+ "essence": "essHand",
+ "stone": "stoneSloth",
+ "fusions": [
+  {
+   "name": "Slow Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "bossPct": 0.05,
+   "range": 110,
+   "desc": "Sweeps wide, dealing 30 damage to every enemy within 3.5 tiles. Against a boss or an elite it also deals 5% of their maximum health."
+  },
+  {
+   "name": "Idle Prod",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a pebble that deals 4 damage, with a 40% chance to leave the target [Hindered] for 4 seconds."
+  },
+  {
+   "name": "Eventually Mended",
+   "kind": "active",
+   "category": "healing",
+   "template": "selfHot",
+   "element": "physical",
+   "cooldown": 40,
+   "hotPerSec": 3,
+   "hotDuration": 10,
+   "healScope": "self",
+   "desc": "Restores 3 health a second to you for 10 seconds."
+  },
+  {
+   "name": "Eventual Rest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 3,
+    "duration": 8
+   },
+   "desc": "When your stamina runs out, you regain 3 stamina a second for 8 seconds. Once every 20 seconds."
+  }
+ ]
+}

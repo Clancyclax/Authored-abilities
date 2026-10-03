@@ -1,0 +1,79 @@
+{
+ "essence": "essEye",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Sleight of Sight",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "arcane",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 240,
+   "castTime": 0,
+   "debuff": {
+    "key": "cooldownSlow",
+    "chance": 0.25,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses 3 flicks of arcana at once, spread apart, each dealing 4 damage. Each hit has a 25% chance to leave the target [Stalled] for 4 seconds."
+  },
+  {
+   "name": "Lifted Opening",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "range": 220,
+   "maxMult": 2.0,
+   "consumeAffliction": true,
+   "desc": "A thrown flick that deals 9 damage, up to 2 times that at maximum range. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Swapped Place",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "arcane",
+   "cooldown": 20,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. Using it increases your movement speed by 20% for 4 seconds."
+  },
+  {
+   "name": "Picked Pocket",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 5,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 5
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you regain 6 stamina. Once every 5 seconds."
+  }
+ ]
+}

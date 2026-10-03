@@ -30,7 +30,7 @@
    "cooldown": 0.8,
    "spammable": true,
    "range": 96,
-   "coneAngle": 1.0,
+   "coneAngle": 1,
    "isAoe": true,
    "aoeBand": "medium",
    "desc": "Shoves a short cone 3 tiles ahead, dealing 4 damage to everything caught in it."
@@ -54,12 +54,21 @@
   {
    "name": "Narrow Miss",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "buffKind": "armor",
-   "amount": 0.12,
-   "desc": "Your armour is permanently increased by 12%."
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "desc": "When you travel a good distance, you gain a shield that soaks 20% of your maximum health for 5 seconds. Once every 15 seconds."
   }
  ]
 }

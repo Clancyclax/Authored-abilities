@@ -1,0 +1,75 @@
+{
+ "essence": "essEye",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Margin Note",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "arcane",
+   "role": "resource",
+   "base": 7,
+   "cooldown": 1.1,
+   "speed": 360,
+   "radius": 7,
+   "chargesMax": 4,
+   "debuff": {
+    "key": "marked",
+    "chance": 0.5,
+    "duration": 6,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Throws a slip that deals 7 damage and has a 50% chance to leave the target [Marked] for 6 seconds. It holds 4 charges, and kills give charges back."
+  },
+  {
+   "name": "Fine Print",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "light",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "range": 300,
+   "coneAngle": 0.75,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreResist": true,
+   "desc": "Looses a wide cone that deals 28 damage to everything caught in it, ignoring resistances."
+  },
+  {
+   "name": "Returned to Sender",
+   "kind": "active",
+   "category": "defensive",
+   "template": "reflectWard",
+   "element": "arcane",
+   "cooldown": 30,
+   "reflectKind": "debuff",
+   "reflectFrac": 0.23,
+   "reflectChance": 0.5,
+   "buffDuration": 8,
+   "desc": "For 8 seconds, each debuff laid on you has a 50% chance to be sent back to its source instead."
+  },
+  {
+   "name": "Marginalia",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "arcane",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "spendMana",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "nextSpellDamage",
+    "amount": 0.25,
+    "charges": 1
+   },
+   "desc": "When you spend mana, your next spell deals 25% more damage. Once every 10 seconds."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "essence": "essEye",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Mote Flick",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "shadow",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 360,
+   "radius": 7,
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Flicks a mote that deals 4 damage and has a 30% chance to leave the target [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Unseen Shot",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "shadow",
+   "role": "long",
+   "base": 36,
+   "cooldown": 90,
+   "range": 260,
+   "maxMult": 2.0,
+   "guaranteedCrit": true,
+   "desc": "A thrown shot that deals 36 damage, up to 2 times that at maximum range. It is always a critical hit."
+  },
+  {
+   "name": "Wainscot Hush",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "shadow",
+   "cooldown": 40,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds. Enemies notice you far later and you move 15% faster, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Scurry Ward",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "shadow",
+   "isTriggered": true,
+   "cooldown": 30,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 30,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.2,
+    "duration": 5
+   },
+   "dodgeBonus": 0.05,
+   "desc": "When your health falls below 35%, a shield worth 20% of your maximum health covers you for 5 seconds. Once every 30 seconds. You have 5% more dodge chance."
+  }
+ ]
+}

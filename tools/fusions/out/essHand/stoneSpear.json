@@ -1,0 +1,72 @@
+{
+ "essence": "essHand",
+ "stone": "stoneSpear",
+ "fusions": [
+  {
+   "name": "Thrown to the Door",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "piercing",
+   "role": "long",
+   "base": 36,
+   "cooldown": 100,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 480,
+   "rangeBand": "long",
+   "ignoreArmor": true,
+   "desc": "Hurls a spear a long way, dealing 36 damage that ignores armour."
+  },
+  {
+   "name": "Skewer",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "piercing",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 14,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "spreadAfflictions": 96,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 6
+   },
+   "range": 86,
+   "desc": "Thrusts through the target, dealing 14 damage and leaving it 12% easier to wound for 6 seconds. Your afflictions on the target spread to every enemy within 3 tiles."
+  },
+  {
+   "name": "Set Against the Charge",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "piercing",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.6,
+   "lifeOnKill": 4,
+   "desc": "For 8 seconds, 60% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 4 health."
+  },
+  {
+   "name": "Point of Order",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "piercing",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "boltNearest",
+    "damage": 6,
+    "range": 256
+   },
+   "desc": "When you strike with your weapon, a spear flies at the nearest enemy within 8 tiles and deals 6 damage. Once every 8 seconds."
+  }
+ ]
+}

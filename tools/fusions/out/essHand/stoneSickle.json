@@ -1,0 +1,71 @@
+{
+ "essence": "essHand",
+ "stone": "stoneSickle",
+ "fusions": [
+  {
+   "name": "Reaping Arc",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "slashing",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "chargesMax": 4,
+   "range": 110,
+   "desc": "Cuts a full arc, dealing 8 damage to every enemy within 3.5 tiles. Holds 4 charges, and each kill gives one back."
+  },
+  {
+   "name": "Cut Down",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "slashing",
+   "role": "execute",
+   "base": 22,
+   "cooldown": 14,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "requiresTargetBelow": 0.25,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 5
+   },
+   "range": 86,
+   "desc": "Can only be used on a target at or below 25% health. It deals 22 damage and leaves the target 10% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Weed Out",
+   "kind": "active",
+   "category": "restore",
+   "template": "cleanse",
+   "element": "plant",
+   "cooldown": 30,
+   "cleanseCount": 3,
+   "cleanseTag": "poison",
+   "healScope": "self",
+   "desc": "Removes up to 3 poison conditions from you."
+  },
+  {
+   "name": "Harvest Tally",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "slashing",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you kill an enemy, your physical damage rises 30% for 4 seconds. Once every 6 seconds."
+  }
+ ]
+}

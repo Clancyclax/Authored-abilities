@@ -20,7 +20,7 @@
    "desc": "A slow, heavy blow that deals 30 damage, plus 5% of a boss's or elite's maximum health, and leaves the target 15% easier to wound for 10 seconds."
   },
   {
-   "name": "Idle Sip",
+   "name": "Lazy Spit",
    "kind": "active",
    "category": "attack",
    "template": "projectileBall",
@@ -41,7 +41,7 @@
     "stacks": 1,
     "potency": 1
    },
-   "desc": "Drools a slow bolt that deals 7 damage with a 40% chance to leave the target [Hindered] for 4 seconds, and heals you for 20% of the damage dealt. It holds 3 charges, and kills give charges back."
+   "desc": "Spits a slow bolt that deals 7 damage with a 40% chance to leave the target [Hindered] for 4 seconds, and heals you for 20% of the damage dealt. It holds 3 charges, and kills give charges back."
   },
   {
    "name": "Unhurried Rest",
@@ -56,14 +56,23 @@
    "desc": "Increases your health recovery by 50% for 15 seconds."
   },
   {
-   "name": "Slow Stores",
+   "name": "Sleeping It Off",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveBuff",
-   "element": "physical",
-   "buffKind": "maxHp",
-   "amount": 0.1,
-   "desc": "Your maximum health rises by 10%."
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "life",
+   "isTriggered": true,
+   "cooldown": 20,
+   "trigger": {
+    "on": "emptyStamina",
+    "cooldown": 20
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 3,
+    "duration": 5
+   },
+   "desc": "When your stamina runs out, you regain 3 health a second for 5 seconds. Once every 20 seconds."
   }
  ]
 }

@@ -47,15 +47,23 @@
    "desc": "Launches you 5 tiles forward. For 4 seconds after using it, you move 25% faster."
   },
   {
-   "name": "Overbalancing",
+   "name": "Launch Pad",
    "kind": "passive",
-   "category": "passive buff",
-   "template": "passiveConditional",
+   "category": "triggered",
+   "template": "triggeredPassive",
    "element": "physical",
-   "condition": "vsDebuffed",
-   "bonusKind": "dmg",
-   "amount": 0.15,
-   "desc": "Against an enemy carrying a condition, you deal 15% more damage."
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When you travel a good distance, your critical hit chance rises by 20% for 5 seconds. Once every 12 seconds."
   }
  ]
 }

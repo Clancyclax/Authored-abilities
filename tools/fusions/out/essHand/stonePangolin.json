@@ -1,0 +1,73 @@
+{
+ "essence": "essHand",
+ "stone": "stonePangolin",
+ "fusions": [
+  {
+   "name": "Scale Splitter",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 14,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "knockback": 80,
+   "sunder": {
+    "amount": 0.18,
+    "duration": 6
+   },
+   "range": 86,
+   "desc": "Drives the heel of the grip into the target, dealing 15 damage, knocking it back 2.5 tiles and leaving it 18% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Tucked Roll",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 8,
+   "cooldown": 1.0,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 1.5,
+   "hpCostPct": 0.04,
+   "range": 210,
+   "desc": "A thrown blow that deals 8 damage, up to 1.5 times that at maximum range. It costs 4% of your maximum health."
+  },
+  {
+   "name": "Seams Vanish",
+   "kind": "active",
+   "category": "defensive",
+   "template": "thornsBuff",
+   "element": "physical",
+   "cooldown": 30,
+   "buffDuration": 8,
+   "thornsFrac": 0.5,
+   "lifeOnKill": 5,
+   "desc": "For 8 seconds, 50% of the damage you take is dealt back to whoever dealt it. Each kill you make while it is active restores 5 health."
+  },
+  {
+   "name": "Curled Against Danger",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 45,
+   "trigger": {
+    "on": "hpBelow",
+    "cooldown": 45,
+    "frac": 0.35
+   },
+   "effect": {
+    "kind": "wardBurst",
+    "frac": 0.25,
+    "duration": 6
+   },
+   "desc": "When your health falls below 35%, you gain a ward that absorbs 25% of your maximum health for 6 seconds. Once every 45 seconds."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "essence": "essHand",
+ "stone": "stoneNet",
+ "fusions": [
+  {
+   "name": "Cast Mesh",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "stunOnHit": 1.0,
+   "desc": "Hurls a weighted mesh that deals 12 damage and stuns the target for 1 second."
+  },
+  {
+   "name": "Drawn Seine",
+   "kind": "active",
+   "category": "attack",
+   "template": "barrierWall",
+   "element": "physical",
+   "role": "long",
+   "base": 28,
+   "cooldown": 100,
+   "wallKind": "pull",
+   "wallLength": 192,
+   "wallDuration": 6,
+   "wallThickness": 26,
+   "pullForce": 32,
+   "ignoreResist": true,
+   "desc": "Draws a line of mesh 6 tiles long that stands for 6 seconds, dragging every enemy near it inward and dealing 28 damage that ignores resistances to each enemy it catches."
+  },
+  {
+   "name": "Gather the Slack",
+   "kind": "active",
+   "category": "defensive",
+   "template": "tauntPull",
+   "element": "physical",
+   "cooldown": 20,
+   "tauntRadius": 224,
+   "tauntDuration": 5,
+   "tauntMax": 5,
+   "threatMult": 1,
+   "desc": "Pulls up to 5 enemies within 7 tiles onto you for 5 seconds."
+  },
+  {
+   "name": "Knot Tied Off",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you inflict a condition on an enemy, you regain 4 stamina. Once every 6 seconds."
+  }
+ ]
+}

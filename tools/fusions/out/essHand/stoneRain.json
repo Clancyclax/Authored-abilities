@@ -1,0 +1,76 @@
+{
+ "essence": "essHand",
+ "stone": "stoneRain",
+ "fusions": [
+  {
+   "name": "Squall Front",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 16,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "range": 128,
+   "knockback": 64,
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.4,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "A wall of falling water deals 14 damage to every enemy within 4 tiles, knocks each back 2 tiles and has a 40% chance to leave each [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Dropped from Height",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 30,
+   "cooldown": 100,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2.0,
+   "bossPct": 0.05,
+   "range": 210,
+   "desc": "A thrown blow that deals 30 damage, up to 2 times that at maximum range, and also 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Cupped Palms",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "water",
+   "cooldown": 30,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 8,
+   "desc": "Restores 3 stamina a second for 8 seconds."
+  },
+  {
+   "name": "Grey Spell Breaks",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 15,
+   "trigger": {
+    "on": "fullStamina",
+    "cooldown": 15
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.2,
+    "duration": 5
+   },
+   "desc": "When your stamina is full, your critical hit chance rises by 20% for 5 seconds. Once every 15 seconds."
+  }
+ ]
+}

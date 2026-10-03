@@ -1,0 +1,71 @@
+{
+ "essence": "essHand",
+ "stone": "stonePaper",
+ "fusions": [
+  {
+   "name": "Thin Slice",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.7,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 4,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "desc": "Flicks a folded edge that deals 4 damage and leaves the target [Bleeding] for 1 damage a second for 4 seconds."
+  },
+  {
+   "name": "Fine Print",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "resource",
+   "base": 9,
+   "cooldown": 1.0,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "consumeAffliction": true,
+   "sunder": {
+    "amount": 0.1,
+    "duration": 4
+   },
+   "range": 86,
+   "desc": "A quick blow that deals 9 damage and leaves the target 10% easier to wound for 4 seconds. It needs one of your afflictions on the target and uses it up."
+  },
+  {
+   "name": "Second Draft",
+   "kind": "active",
+   "category": "buff",
+   "template": "cooldownReset",
+   "element": "physical",
+   "cooldown": 120,
+   "resetCount": 1,
+   "desc": "Clears the cooldown on one of your other abilities, chosen at random from those still waiting."
+  },
+  {
+   "name": "Revised Edition",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "physical",
+   "rerollKind": "crit",
+   "rerollCooldown": 10,
+   "rerollKinds": [
+    "crit"
+   ],
+   "desc": "Once every 10 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

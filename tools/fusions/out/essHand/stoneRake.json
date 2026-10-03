@@ -1,0 +1,78 @@
+{
+ "essence": "essHand",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Raked Together",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "spreadAfflictions": 128,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "dot": {
+    "dmgPerTick": 2,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Bleeding"
+   },
+   "range": 86,
+   "desc": "Drags the tines across the target, dealing 12 damage, leaving it [Bleeding] for 2 damage a second for 5 seconds and 12% easier to wound for 5 seconds. Your afflictions on the target spread to every enemy within 4 tiles."
+  },
+  {
+   "name": "Clean Sweep",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "isAoe": true,
+   "coneAngle": 1.6,
+   "aoeBand": "medium",
+   "range": 128,
+   "guaranteedCrit": true,
+   "desc": "Sweeps a wide cone 4 tiles long, dealing 30 damage to everything in it. Every hit is a critical hit."
+  },
+  {
+   "name": "Buried Tines",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "physical",
+   "cooldown": 130,
+   "summonKind": "trap",
+   "summonDuration": 40,
+   "summonDmg": 18,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 2,
+   "summonBlast": 64,
+   "summonArmDelay": 1,
+   "trapDelivery": "spawned",
+   "castTime": 0.8,
+   "desc": "Sets a trap at the nearest enemy that waits up to 40 seconds. The first 2 enemies to come within 2 tiles take 18 damage in a blast around it."
+  },
+  {
+   "name": "Firmly Gathered",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "passiveConditional",
+   "element": "physical",
+   "condition": "vsDebuffed",
+   "bonusKind": "dmg",
+   "amount": 0.14,
+   "desc": "Against enemies carrying your afflictions, you deal 14% more damage."
+  }
+ ]
+}

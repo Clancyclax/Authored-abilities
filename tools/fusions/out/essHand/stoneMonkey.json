@@ -1,0 +1,76 @@
+{
+ "essence": "essHand",
+ "stone": "stoneMonkey",
+ "fusions": [
+  {
+   "name": "Pocketed Pebble",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 1,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 1,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Flicks a pebble that deals 4 damage, then hops to 1 more enemy within 3 tiles for 50% of that damage."
+  },
+  {
+   "name": "Swinging Heel",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 14,
+   "isAoe": true,
+   "aoeBand": "small",
+   "range": 96,
+   "stunOnHit": 0.8,
+   "desc": "Spins off a rope and kicks out, dealing 12 damage to every enemy within 3 tiles and stunning each for 0.8 seconds."
+  },
+  {
+   "name": "Long Reach",
+   "kind": "active",
+   "category": "buff",
+   "template": "rangeBuff",
+   "element": "physical",
+   "cooldown": 60,
+   "rangeMult": 1.4,
+   "buffDuration": 15,
+   "castTime": 0.3,
+   "desc": "For 15 seconds, your attacks and spells reach 40% further."
+  },
+  {
+   "name": "Sticky Fingers",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "crit",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "stamina",
+    "amount": 4
+   },
+   "desc": "When you land a critical hit, you regain 4 stamina. Once every 8 seconds."
+  }
+ ]
+}

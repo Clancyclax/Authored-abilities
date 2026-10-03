@@ -1,0 +1,78 @@
+{
+ "essence": "essEye",
+ "stone": "stoneShovel",
+ "fusions": [
+  {
+   "name": "Buried Fact",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "earth",
+   "role": "medium",
+   "base": 15,
+   "cooldown": 12,
+   "range": 160,
+   "sunder": {
+    "amount": 0.12,
+    "duration": 5
+   },
+   "knockback": 80,
+   "desc": "A heaving blow that deals 15 damage, knocks the target back 2.5 tiles and leaves it 12% easier to wound for 5 seconds."
+  },
+  {
+   "name": "Dirt Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "earth",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 200,
+   "coneAngle": 0.6,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.25,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Looses a narrow cone of earth that deals 4 damage to everything caught in it and has a 25% chance to leave each target [Blunted] for 3 seconds."
+  },
+  {
+   "name": "Pit Marker",
+   "kind": "active",
+   "category": "summon",
+   "template": "activeSummon",
+   "element": "earth",
+   "cooldown": 90,
+   "summonKind": "trap",
+   "summonDuration": 30,
+   "summonDmg": 14,
+   "summonRange": 64,
+   "summonInterval": 0,
+   "summonCharges": 1,
+   "summonBlast": 64,
+   "summonArmDelay": 0.5,
+   "trapDelivery": "spawned",
+   "castTime": 0.5,
+   "desc": "Takes 0.5 seconds to dig a pit trap that stays armed for 30 seconds. The first enemy to come within 2 tiles of it sets it off, and it deals 14 damage to every enemy within 2 tiles."
+  },
+  {
+   "name": "Second Look",
+   "kind": "passive",
+   "category": "passive buff",
+   "template": "fateReroll",
+   "element": "earth",
+   "rerollKind": "crit",
+   "rerollCooldown": 12,
+   "rerollKinds": [
+    "crit"
+   ],
+   "desc": "Once every 12 seconds, a strike that failed to crit is rolled a second time, and the second roll stands."
+  }
+ ]
+}

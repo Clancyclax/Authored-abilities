@@ -1,0 +1,75 @@
+{
+ "essence": "essEye",
+ "stone": "stoneRake",
+ "fusions": [
+  {
+   "name": "Sweeping Pile",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.9,
+   "spammable": true,
+   "range": 96,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "debuff": {
+    "key": "slowMove",
+    "chance": 0.3,
+    "duration": 3,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Deals 4 damage to every enemy within 3 tiles, each with a 30% chance to be left [Slowed] for 3 seconds."
+  },
+  {
+   "name": "Heap Burst",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "earth",
+   "role": "long",
+   "base": 30,
+   "cooldown": 80,
+   "speed": 320,
+   "radius": 9,
+   "explodeRadius": 112,
+   "splashFrac": 0.8,
+   "desc": "Throws a clod that deals 30 damage and 80% of that to every enemy within 3.5 tiles of the target."
+  },
+  {
+   "name": "Tidy Habits",
+   "kind": "active",
+   "category": "restore",
+   "template": "resourceRestore",
+   "element": "physical",
+   "cooldown": 24,
+   "resource": "stamina",
+   "overTime": true,
+   "restorePerSec": 3,
+   "restoreDuration": 7,
+   "desc": "Restores 3 stamina a second for 7 seconds."
+  },
+  {
+   "name": "Gleaned Scrap",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "kill",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "restoreResource",
+    "resource": "mana",
+    "amount": 6
+   },
+   "desc": "When you kill an enemy, you regain 6 mana. Once every 6 seconds."
+  }
+ ]
+}

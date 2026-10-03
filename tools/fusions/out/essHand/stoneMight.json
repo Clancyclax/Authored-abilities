@@ -1,0 +1,75 @@
+{
+ "essence": "essHand",
+ "stone": "stoneMight",
+ "fusions": [
+  {
+   "name": "Vise Clench",
+   "kind": "active",
+   "category": "attack",
+   "template": "sunderStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 16,
+   "cooldown": 14,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stunOnHit": 1.2,
+   "sunder": {
+    "amount": 0.2,
+    "duration": 6
+   },
+   "range": 86,
+   "desc": "Seizes the target in a crushing grip that deals 16 damage, stuns it for 1.2 seconds and leaves it 20% easier to wound for 6 seconds."
+  },
+  {
+   "name": "Wrench Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "aoeRing",
+   "element": "physical",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "isAoe": true,
+   "aoeBand": "medium",
+   "ignoreArmor": true,
+   "range": 110,
+   "desc": "Wrenches at everything within 3.5 tiles, dealing 32 damage to each enemy. The force ignores armour."
+  },
+  {
+   "name": "Heavy Lifting",
+   "kind": "active",
+   "category": "buff",
+   "template": "selfPower",
+   "element": "physical",
+   "cooldown": 60,
+   "powerMult": 1.3,
+   "buffDuration": 12,
+   "escort": {
+    "dmg": 4,
+    "interval": 1.4,
+    "duration": 8
+   },
+   "desc": "Increases your damage by 30% for 12 seconds. While it lasts, a pair of grasping hands fights beside you, striking for 4 every 1.4 seconds for 8 seconds."
+  },
+  {
+   "name": "Jar Lid Habit",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "strike",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.3,
+    "duration": 4
+   },
+   "desc": "When you strike with your weapon, your physical damage rises 30% for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

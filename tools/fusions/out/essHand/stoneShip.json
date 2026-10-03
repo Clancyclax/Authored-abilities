@@ -1,0 +1,76 @@
+{
+ "essence": "essHand",
+ "stone": "stoneShip",
+ "fusions": [
+  {
+   "name": "Broadside",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "medium",
+   "base": 12,
+   "cooldown": 16,
+   "isAoe": true,
+   "speed": 300,
+   "radius": 7,
+   "range": 220,
+   "reachUnits": 260,
+   "rangeBand": "medium",
+   "castTime": 0.4,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "knockback": 64,
+   "desc": "Looses 3 heavy shots at once, spread apart, each dealing 12 damage and knocking the target back 2 tiles."
+  },
+  {
+   "name": "Cut Loose",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "water",
+   "role": "long",
+   "base": 32,
+   "cooldown": 80,
+   "reachUnits": 210,
+   "rangeBand": "medium",
+   "maxMult": 2.2,
+   "guaranteedCrit": true,
+   "range": 210,
+   "desc": "A thrown blow that deals 32 damage, up to 2.2 times that at maximum range. Every hit is a critical hit."
+  },
+  {
+   "name": "Wind in the Rigging",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "wind",
+   "cooldown": 40,
+   "speedMult": 1.4,
+   "buffDuration": 10,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 40% for 10 seconds. You finish it 2 tiles from where you stood, with +10% dodge chance for it."
+  },
+  {
+   "name": "Leaning Into It",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "water",
+   "isTriggered": true,
+   "cooldown": 12,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 12
+   },
+   "effect": {
+    "kind": "restoreResourceOverTime",
+    "resource": "stamina",
+    "perSec": 2,
+    "duration": 6
+   },
+   "desc": "After you cover a stretch of ground, you regain 2 stamina a second for 6 seconds. Once every 12 seconds."
+  }
+ ]
+}

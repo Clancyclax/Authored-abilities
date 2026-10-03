@@ -1,0 +1,76 @@
+{
+ "essence": "essEye",
+ "stone": "stonePlant",
+ "fusions": [
+  {
+   "name": "Seeding Glance",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "plant",
+   "role": "basic",
+   "base": 4,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 340,
+   "radius": 7,
+   "dot": {
+    "dmgPerTick": 1,
+    "ticks": 5,
+    "tickMs": 1000,
+    "critChance": 0.05,
+    "label": "Poisoned"
+   },
+   "scaleOn": "targetAfflictions",
+   "scalePer": 0.1,
+   "scaleCap": 0.4,
+   "desc": "Fires a seed that deals 4 damage and poisons the target for 1 damage a second for 5 seconds. Its damage rises by 10% per affliction the target carries, to a maximum of 40%."
+  },
+  {
+   "name": "Taproot Stare",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "plant",
+   "role": "long",
+   "base": 32,
+   "cooldown": 90,
+   "range": 250,
+   "maxMult": 2.0,
+   "bossPct": 0.05,
+   "desc": "A thrown thorn that deals 32 damage, up to 2 times that at maximum range, and deals 5% of a boss's or elite's maximum health."
+  },
+  {
+   "name": "Held Ground",
+   "kind": "active",
+   "category": "healing",
+   "template": "bloomField",
+   "element": "plant",
+   "cooldown": 30,
+   "healPerSec": 3,
+   "fieldDuration": 10,
+   "range": 125,
+   "healScope": "party",
+   "desc": "Raises a growth where you stand. For 10 seconds it restores 3 health a second to you and any ally inside it."
+  },
+  {
+   "name": "Patient Harvest",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "plant",
+   "isTriggered": true,
+   "cooldown": 8,
+   "trigger": {
+    "on": "inflictCondition",
+    "cooldown": 8
+   },
+   "effect": {
+    "kind": "regenBurst",
+    "perSec": 2,
+    "duration": 4
+   },
+   "desc": "Each time you afflict an enemy, you regain 2 health a second for 4 seconds. Once every 8 seconds."
+  }
+ ]
+}

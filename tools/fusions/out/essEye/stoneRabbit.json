@@ -1,0 +1,71 @@
+{
+ "essence": "essEye",
+ "stone": "stoneRabbit",
+ "fusions": [
+  {
+   "name": "Flushed Out",
+   "kind": "active",
+   "category": "attack",
+   "template": "rangeStrike",
+   "element": "physical",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 12,
+   "range": 240,
+   "maxMult": 1.6,
+   "chargeTo": 192,
+   "desc": "You rush to the target and strike it for 14 damage, up to 1.6 times that at maximum range."
+  },
+  {
+   "name": "Twitch Barrage",
+   "kind": "active",
+   "category": "attack",
+   "template": "volley",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.7,
+   "spammable": true,
+   "volleyCount": 3,
+   "volleySpread": 0.3,
+   "isAoe": true,
+   "speed": 360,
+   "radius": 6,
+   "range": 220,
+   "castTime": 0,
+   "desc": "Looses 3 flicks at once, spread apart, each dealing 3 damage."
+  },
+  {
+   "name": "Bolt Hole",
+   "kind": "active",
+   "category": "movement",
+   "template": "movementHaste",
+   "element": "physical",
+   "cooldown": 30,
+   "speedMult": 1.4,
+   "buffDuration": 8,
+   "blinkOnUse": 64,
+   "dodgeBonus": 0.1,
+   "desc": "Increases your movement speed by 40% for 8 seconds. You finish it 2 tiles from where you stood, with 10% more dodge chance for it."
+  },
+  {
+   "name": "Ears Up",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 6,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 6
+   },
+   "effect": {
+    "kind": "critChance",
+    "amount": 0.3,
+    "strikes": 1
+   },
+   "desc": "Every few paces you cover, your next strike gains 30% critical hit chance. Once every 6 seconds."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "essence": "essHand",
+ "stone": "stoneMouse",
+ "fusions": [
+  {
+   "name": "Gnawed Through",
+   "kind": "active",
+   "category": "attack",
+   "template": "stackStrike",
+   "element": "physical",
+   "role": "execute",
+   "base": 16,
+   "cooldown": 14,
+   "reachUnits": 86,
+   "rangeBand": "melee",
+   "stackMult": 1.6,
+   "requiresTargetBelow": 0.25,
+   "executeLadder": true,
+   "range": 86,
+   "desc": "Strikes a target at or below 25% health, consuming every affliction on it and adding 1.6 times their remaining damage to this blow that deals 16 damage."
+  },
+  {
+   "name": "Skirting Dust",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "physical",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.9,
+   "spammable": true,
+   "isAoe": true,
+   "coneAngle": 0.9,
+   "aoeBand": "small",
+   "debuff": {
+    "key": "critChanceDown",
+    "chance": 0.3,
+    "duration": 4,
+    "stacks": 1,
+    "potency": 1
+   },
+   "range": 96,
+   "desc": "Kicks up a cone of dust 3 tiles long, dealing 3 damage to everything in it, with a 30% chance to leave each [Blunted] for 4 seconds."
+  },
+  {
+   "name": "Behind the Wainscot",
+   "kind": "active",
+   "category": "defensive",
+   "template": "stealthVeil",
+   "element": "physical",
+   "cooldown": 30,
+   "stealthDuration": 8,
+   "stealthAlpha": 0.3,
+   "aggroMult": 0.3,
+   "stealthSpeedPct": 15,
+   "stealthScope": "self",
+   "desc": "Veils you for 8 seconds and speeds you up by 15% while it holds. Enemies notice you far later, and the veil breaks the moment you attack."
+  },
+  {
+   "name": "Quick Scamper",
+   "kind": "passive",
+   "category": "triggered",
+   "template": "triggeredPassive",
+   "element": "physical",
+   "isTriggered": true,
+   "cooldown": 10,
+   "trigger": {
+    "on": "moveDistance",
+    "cooldown": 10
+   },
+   "effect": {
+    "kind": "physicalDamageMult",
+    "amount": 0.25,
+    "duration": 4
+   },
+   "desc": "After you cover a stretch of ground, your physical damage rises 25% for 4 seconds. Once every 10 seconds."
+  }
+ ]
+}

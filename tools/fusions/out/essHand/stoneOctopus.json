@@ -1,0 +1,84 @@
+{
+ "essence": "essHand",
+ "stone": "stoneOctopus",
+ "fusions": [
+  {
+   "name": "Reaching Lash",
+   "kind": "active",
+   "category": "attack",
+   "template": "projectileBall",
+   "element": "water",
+   "role": "basic",
+   "base": 3,
+   "cooldown": 0.8,
+   "spammable": true,
+   "speed": 360,
+   "radius": 8,
+   "reachUnits": 320,
+   "rangeBand": "long",
+   "chain": {
+    "count": 2,
+    "radius": 96,
+    "frac": 0.5
+   },
+   "chainCount": 2,
+   "chainRange": 96,
+   "chainDamagePct": 0.5,
+   "desc": "Snaps out an arm of water that deals 3 damage, then lashes 2 more enemies within 3 tiles, each hit dealing 50% of the original damage."
+  },
+  {
+   "name": "Ink Spray",
+   "kind": "active",
+   "category": "attack",
+   "template": "breathCone",
+   "element": "water",
+   "role": "medium",
+   "base": 14,
+   "cooldown": 18,
+   "isAoe": true,
+   "coneAngle": 0.8,
+   "aoeBand": "medium",
+   "range": 128,
+   "knockback": 64,
+   "debuff": {
+    "key": "slowAttack",
+    "chance": 0.4,
+    "duration": 5,
+    "stacks": 1,
+    "potency": 1
+   },
+   "desc": "Sprays a cone of ink 4 tiles long that deals 14 damage to everything in it and knocks each back 2 tiles, with a 40% chance to leave each [Hindered] for 5 seconds."
+  },
+  {
+   "name": "Jet Away",
+   "kind": "active",
+   "category": "movement",
+   "template": "teleport",
+   "element": "water",
+   "cooldown": 14,
+   "teleportRange": 192,
+   "hasteOnUse": {
+    "pct": 0.2,
+    "duration": 4
+   },
+   "desc": "Steps you instantly to a point up to 6 tiles away. For 4 seconds after, you move 20% faster."
+  },
+  {
+   "name": "Arms Everywhere",
+   "kind": "passive",
+   "category": "stacking",
+   "template": "stacking",
+   "element": "water",
+   "stackShape": "boon",
+   "stackBuild": "cast",
+   "stackPay": "haste",
+   "stackCap": 8,
+   "stackDecay": 8,
+   "stackSpend": "nextCast",
+   "stackOn": "self",
+   "stackScale": 0.6,
+   "stackIcon": "stackFortune",
+   "desc": "Every time you use an ability, a stack builds on you, up to 8. The next ability you use spends them all: you move and attack 3% faster per stack (24% at full) for 6 seconds. Unfed, a stack fades every 8 seconds."
+  }
+ ]
+}
