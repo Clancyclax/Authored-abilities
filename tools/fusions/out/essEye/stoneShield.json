@@ -1,77 +1,75 @@
 {
- "essence": "essEye",
- "stone": "stoneShield",
- "fusions": [
-  {
-   "name": "Held Line",
-   "kind": "active",
-   "category": "attack",
-   "template": "breathCone",
-   "element": "blunt",
-   "role": "medium",
-   "base": 12,
-   "cooldown": 16,
-   "range": 260,
-   "coneAngle": 0.8,
-   "isAoe": true,
-   "aoeBand": "medium",
-   "knockback": 96,
-   "desc": "Looses a wide cone that deals 12 damage to everything caught in it and knocks each back 3 tiles."
-  },
-  {
-   "name": "Warding Glint",
-   "kind": "active",
-   "category": "attack",
-   "template": "projectileBall",
-   "element": "blunt",
-   "role": "basic",
-   "base": 5,
-   "cooldown": 0.8,
-   "spammable": true,
-   "speed": 360,
-   "radius": 7,
-   "debuff": {
-    "key": "powerDown",
-    "chance": 0.3,
-    "duration": 4,
-    "stacks": 1,
-    "potency": 1
-   },
-   "desc": "Flicks a glint that deals 5 damage and has a 30% chance to leave the target [Weakened] for 4 seconds."
-  },
-  {
-   "name": "Interposed Notice",
-   "kind": "active",
-   "category": "defensive",
-   "template": "absorbShield",
-   "element": "blunt",
-   "cooldown": 40,
-   "shieldKind": "timed",
-   "shieldSource": "own",
-   "shieldCostPerPoint": 1,
-   "shieldAmount": 28,
-   "shieldStrikes": 4,
-   "shieldDuration": 10,
-   "desc": "Raises a barrier that absorbs the next 28 damage and holds for 10 seconds."
-  },
-  {
-   "name": "Turned Aside",
-   "kind": "passive",
-   "category": "triggered",
-   "template": "triggeredPassive",
-   "element": "blunt",
-   "isTriggered": true,
-   "cooldown": 10,
-   "trigger": {
-    "on": "moveDistance",
-    "cooldown": 10
-   },
-   "effect": {
-    "kind": "wardBurst",
-    "frac": 0.08,
-    "duration": 4
-   },
-   "desc": "Every few paces you cover, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 10 seconds."
-  }
- ]
+  "essence": "essEye",
+  "stone": "stoneShield",
+  "fusions": [
+    {
+      "name": "Phalanx Push",
+      "kind": "active",
+      "category": "attack",
+      "template": "breathCone",
+      "element": "blunt",
+      "role": "medium",
+      "base": 12,
+      "cooldown": 16,
+      "range": 260,
+      "coneAngle": 0.8,
+      "isAoe": true,
+      "aoeBand": "medium",
+      "knockback": 96,
+      "desc": "Looses a wide cone that deals 12 damage to everything caught in it and knocks each back 3 tiles."
+    },
+    {
+      "name": "Rim Check",
+      "kind": "active",
+      "category": "attack",
+      "template": "sunderStrike",
+      "element": "blunt",
+      "role": "basic",
+      "base": 5,
+      "cooldown": 0.8,
+      "spammable": true,
+      "desc": "A quick bash that deals 5 damage and leaves the target 5% easier to wound for 3 seconds.",
+      "range": 96,
+      "reachUnits": 96,
+      "rangeBand": "melee",
+      "sunder": {
+        "amount": 0.05,
+        "duration": 3
+      }
+    },
+    {
+      "name": "Brace for It",
+      "kind": "active",
+      "category": "defensive",
+      "template": "absorbShield",
+      "element": "blunt",
+      "cooldown": 40,
+      "shieldKind": "timed",
+      "shieldSource": "own",
+      "shieldCostPerPoint": 1,
+      "shieldAmount": 28,
+      "shieldStrikes": 4,
+      "shieldDuration": 10,
+      "desc": "Raises a barrier that absorbs the next 28 damage and holds for 10 seconds."
+    },
+    {
+      "name": "Turned Aside",
+      "kind": "passive",
+      "category": "triggered",
+      "template": "triggeredPassive",
+      "element": "blunt",
+      "isTriggered": true,
+      "cooldown": 10,
+      "trigger": {
+        "on": "spendStamina",
+        "cooldown": 10
+      },
+      "effect": {
+        "kind": "wardBurst",
+        "frac": 0.08,
+        "duration": 4
+      },
+      "desc": "Each time you spend stamina, you gain a shield worth 8% of your maximum health for 4 seconds. Once every 10 seconds."
+    }
+  ]
 }
